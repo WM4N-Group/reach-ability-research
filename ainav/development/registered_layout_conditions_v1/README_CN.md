@@ -1,6 +1,19 @@
 # G2有限登记布局条件源：可直接接原caller，未分配数据组或物理scope
 
-## 本次具体阻塞与实现
+## 当前优先级覆盖（2026-11-15 02:36，北京时间）
+
+**当前仅接续Data已冻结/已开始的full-2 left→right source资格gate；full-4 center/upper-entry方案派发前暂停，不并行要求另一批。** 以Reach `G2-scene-disjoint-admission/PRIORITY_AND_SPLIT_POLICY_CN.md` 与Data `g2-full2-46308-20261115-v1/evaluation-inputs/G2_SCENE_GATE_PROTOCOL.json` 为当前问题原件，非本文历史提议。完整总计划仍G1→G6。
+
+Data新owned `prepare_prefix.build_plan` 已实际调用本模块的 `LayoutCondition('full-2', side, 'original')`，同时消费返回的native/config/精确3请求；原helper SHA **458ec66e0e65e573c7e98a91e8c496b0ad8449ebcaec686e6ff338486010dcff** 未变。实际lane −1.9，left/right NAV y为−1.75/−2.05，PUSH(2.3,−1.9,0)，CLIMB .2，original准备；原max_requests3/exact3、SDK/Actor/原门均保留。02:34:57只读原件显示left自身zero1后main1已派发，right zero0/main0；不是动态成功或信息资格结论，不重复派发。
+
+- 两个scope分别固定程序 **6ee69a5f…** / **b0c2d41b…**；旧G1 closed不复开。原center固定包作为历史/暂停备选原字节保留，不是新运行指令。
+- 未来whole-scene/祖先隔离要求同scene所有prefix/arm/attempt同split；旧四prefix2/1/1草案不满足此要求。未来full-4 TRAIN/full-2 CAL仅来源设想，第三个任务相关source scene未合格，不能开正式三split训练；本gate仍DEV，绝不转fit。
+- 现有 `scripts/measure_g1_public_boundary.py` 只额外放行这两个**精确scope+已冻结program SHA**，不泛化任意world；原首次PREPARE→exact intent/Observation、public-only/无GT规则未变。闭合后按原journal/ledger核验再测量。
+- `scripts/compare_g1_public_values.py --pair-family G2_full2_v1` 显式指定新pair，默认仍旧G1；跨layout/cohort或左右倒置拒绝。layout/family仅metadata、不入45D/critic槽。原始RGBD/NPZ仍在远端。
+
+下文中的“当前caller仍硬full-4／优先center”描述均为02:24及以前的**历史资格与提议**，已由本节覆盖；不删除其证据，也不把软件资格冒物理结果。
+
+## 最初具体阻塞与实现（历史）
 
 G1新端同设备left/right已实际PASS/closed，公开边界不是完全相同；这不证明重复性或critic可学。G2旧24main草案缺合法条件source，当前Data `prepare_prefix.build_plan`仍硬选full-4且`make_planner`只接受旧两份full-4 requests。**不能仅把condition名字/seed/UUID改成8种，也不能只换case却保留旧PUSH y=−2。**
 
@@ -57,7 +70,7 @@ planner = types.RequestedPlanner(deepcopy(requests), journal, max_requests=3)
 
 云端/服务器代码按用户指定code-only方式同步；原始数据、权重、环境/大产物不入Git。G1不重开，G2不自动开始fit或24main；合格后持续G3→G4→G5/G6，不以模块完成当研究目标完成。
 
-## 当前Reach具体请求优先：同full-4 center/upper-entry源gate
+## 02:24历史请求：同full-4 center/upper-entry源gate（已在派发前暂停）
 
 本模块同样直接对接Reach已发布的`G2-registered-source-cardinality-gate`，**不把采用full-2布局作为这项已明确gate的前置**。full-4的prefix key现允许原left/right/center/upper-entry；full-2仍只允许left/right，避免自动把所有组合派出去。字段`prefix_side`保原API名字，值upper-entry表示离散reference key，不表示新增任意侧向控制。
 

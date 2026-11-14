@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""One fixed G1v2 pair: exact public-array equality + component statistic delta.
+"""One fixed G1-full4 or G2-full2 pair: public equality + component statistic delta.
 
 No fitting/thresholds or joint-unit score; full45D block statistics belong to Reach.
 """
 from pathlib import Path
 import argparse,datetime,hashlib,json,sys
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('--left',type=Path,required=True);p.add_argument('--right',type=Path,required=True);a=p.parse_args();blocked=[]
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--left',type=Path,required=True);p.add_argument('--right',type=Path,required=True)
+p.add_argument('--pair-family',choices=('G1_full4_v2','G2_full2_v1'),default='G1_full4_v2',help='Explicit fixed pair, never mix layouts or cohorts')
+a=p.parse_args();blocked=[]
+pair_templates={'G1_full4_v2':'data-46308-native-prefix-{side}-PUSH-CLIMB-20261115-v2',
+ 'G2_full2_v1':'data-46308-G2-full2-{side}-PUSH-CLIMB-20261115-v1'}
 def fence(event,args):
  if event=='import' and str(args[0]).split('.')[0] in ('torch','mujoco','onnxruntime'):
   blocked.append(str(args[0]));raise RuntimeError('No native/model import')
@@ -19,12 +23,12 @@ from PIL import Image
 sha=lambda f:hashlib.sha256(Path(f).read_bytes()).hexdigest();data=[];pins={}
 for side,path in [('left',a.left),('right',a.right)]:
  j=json.loads(path.read_bytes());pins[str(path)]=sha(path)
- assert j['scope_id']==f'data-46308-native-prefix-{side}-PUSH-CLIMB-20261115-v2'
+ assert j['scope_id']==pair_templates[a.pair_family].format(side=side),'No cross-layout/cohort or reversed pair'
  assert j['training_or_fit_allowed'] is False and j['role']=='NEW_DEV_AUDIT_ONLY_NOT_ONLINE_REPLAY_OR_FIT'
  for f,h in j['inputs_sha256'].items():assert sha(f)==h;pins[f]=h
  data.append(j)
 result={'at':datetime.datetime.now().astimezone().isoformat(),'role':'NEW_DEV_AUDIT_ONLY_NOT_TRAIN_CALIBRATION_OR_TEST',
- 'query_denominator':2,'statuses':[j['boundary_status'] for j in data],'paired_values_available':False,
+ 'pair_family_metadata_not_state':a.pair_family,'query_denominator':2,'statuses':[j['boundary_status'] for j in data],'paired_values_available':False,
  'robust_condition_family_or_critic_learning_or_policy_gain_certified':False,'training_or_fit':False}
 if all(j['boundary_status']=='FIRST_PREPARE_EXACT_PUBLIC_VALUES_MEASURED' for j in data):
  v=[j['public_features'] for j in data];keys=('q','dq','gravity','angular_velocity','linear_velocity')
