@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-15T00:00:33.687478+08:00",
+  "plan_version": "2026-11-14 23:45",
+  "plan_sha256": "53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40",
+  "old_left_scope": "data-native-prefix-left-PUSH-CLIMB-20261114-v1",
+  "old_zero_used": 1,
+  "old_main_used": 1,
+  "old_final_outcome": "UNKNOWN_UNREACHABLE",
+  "administrative_stop_tracking_per_new_user_decision": true,
+  "old_remote_process_death_or_lock_release_proven": false,
+  "old_host_reconnects_from_Reach": 0,
+  "new46308_cohort_explicitly_allowed_by_latest_plan": true,
+  "new_left_right_main_upper_bound": 2,
+  "old_left_not_reopened_or_erased": true,
+  "new_cohort_not_pairing_old_left_with_new_right": true,
+  "training_dataset_generated": false,
+  "fit_started": false,
+  "new_physical_dispatch_from_Reach": false,
+  "source_pins": {
+    "/home/yuanyue/main/汇总/各小组下一步研究计划.md": "53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40",
+    "/home/yuanyue/main/work/data-team/manifests/server-switch-46308-20261114-v1/server-target-and-code-custody-status.json": "734a5d1e9edd9690f67fcb997c6af927fe3fca63d0ba124859643365ddad5fb5",
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-condition-pilot-20261114-v1/native_NAV_prefix_left/zero-result.json": "333c26cdc6c4e1fa1eb385dc16db15545cc7f8a8b3afeb9fc4e7f4be94fe8393",
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-condition-pilot-20261114-v1/native_NAV_prefix_left/actual-zero-cold-validation.json": "8aa561b925ecb57bbe00356328201962ddeb59dd8bc916b77f1caa18c793a4d4",
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-condition-pilot-20261114-v1/native_NAV_prefix_left/CAS-main.json": "ff358b91d7c22d7f001383c6c99d83d30848b2f0183c9c297db24c99d904c0d9",
+    "/home/yuanyue/main/work/ainav/manifests/native_sdk_recovery_46308_20261114_v1/DATA_EXPECTED_PINS_MATCH_AND_RECOVERY_ACTION.json": "61e00181413d96f8f898928a9fa4eee9d97d08a5153763526875014498da6471",
+    "/home/yuanyue/main/work/ainav/manifests/native_sdk_recovery_46308_20261114_v1/REMOTE_EXISTING_SDK_VERIFIED.json": "ff4a0a6b0aea29c0569c0bc322bcb277f1d7864d3b5a3f90e3608290a5a3e70e"
+  },
+  "SDK_and_env_reports_are_consumed_not_native_qualification": true
+}

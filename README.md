@@ -46,3 +46,7 @@ python3 -m unittest \
 完整历史/接续见 `docs/AGENT_HANDOFF_CN.md`。原始工程 README/AGENTS 保存在 `provenance/`，其中旧机器/在途快照不能覆盖本文件的新存储与机器决定。
 
 少量冻结协议另保存在 `protocols/`：未来新数据 critic 用途/协议、原生前驱两条件 DEV 问题及 Reach 后果前分析。它们逐字节保留来源 SHA，不含数据或权重，也不是新机器执行 authority。
+
+### 23:45计划接续（覆盖旧机器恢复前置）
+
+最新用户明确停追旧46174，不等待旧端CAS/锁/结果恢复。旧left的zero1/main1已消耗、终态UNKNOWN和全部已知/未知花费保留；新46308按独立同设备cohort完整left/right各一次，不重开旧root或与旧left拼配。新端已有Data的Python3.11.16环境候选及逐148成员同pin的SDK/四Actor，不再因本组此前另一个3.11.13 probe要求全栈重装。仍须Data新authority/设备程序绑定与实际own-zero。见 `protocols/2026-11-14/LONG_TERM_PLAN_2345_CN.md` 和 `native-prefix/NEW_HOST_G1_CONTINUATION_CN.md`。

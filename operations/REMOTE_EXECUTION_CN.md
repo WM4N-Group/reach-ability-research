@@ -34,3 +34,7 @@ SSH：`ssh -p 46308 root@180.97.68.228`（凭据不在仓库）。
 ## 已完成部署核验
 
 代码e716e6d在该节点27项软件检查通过，CUDA available/2 devices，MuJoCo3.3.2导入成功；无tensor/Actor/MjModel/MjData/Runtime/physics构造。首轮绝对路径导致的11项软件错误保留后，已仅改test loader并复测。MIGRATION_20261114.json记录小型摘要，不含原数据/权重/凭据；这不是native运行资格或真实模型训练。
+
+## 23:45用户决定与已有资产/环境（覆盖前述迁移候选缺口）
+
+停止探测旧46174，新端不再以旧远端CAS/锁/进程回执为前置。Data已报告新端既有`/mnt/yuanyue/data-team/env-native-v1`为Python3.11.16/所需依赖匹配；AINav已逐148成员核`/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle`及4Actor与Data pins相同。此前本probe测到3.11.13的另一环境仍为真实历史报告，但不代表必须重装全栈或从旧端搬资产。只核owner实际绑定/Host/Actor/GL/新设备lease/新freeze和自身zero，不冒已经执行。

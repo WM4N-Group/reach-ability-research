@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 00:01：接续23:45 G1—G6持久计划；旧left已耗zero/main且终态UNKNOWN，停追旧端，新端明确独立完整两条件
+
+- 完整计划SHA `53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40`：用户明确旧服务器不再纠结，停止对46174恢复/SSH/进程锁/资产回传追查；不再把旧端CAS/锁释放作新端前置。旧left真实23:05:10 main已派发、zero1/main1都消耗，旧终态UNKNOWN_UNREACHABLE/最终费用未知，行政停止追踪不冒native失败或物理进程已死。已核本地原zero/cold/CAS和Data原发布，纠正本组此前根据滞后顶层STATUS泛称“main0/无新scope”的旧快照；本轮旧端连接0。
+- 旧zero aux6.505sim/42.510914ledger wall；main失联前最后usage93.635sim含aux/681.323241wall/142731645bytes不是最终成功cost或完整费用。原final-ledger文件名不能当main闭合证据；原件/失败未知分母保留。新计划明确在46308独立同设备cohort执行left/right各一次、总2main，带旧left谱系/全部成本，不恢复旧root或以旧left+新right拼对；若新端已有在途/closed先消费、不建第二批。
+- AINav已核148成员原SDK/4Actor就在新端`/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle`且与Data pins一致，Data另有`/mnt/yuanyue/data-team/env-native-v1` Python3.11.16/版本匹配候选；已消费原报告，不重跑它们或下载权重，不再要求旧端取回/因此前另一3.11.13 probe重装。仍需Data新设备authority/实际加载路径/Host/Actor/GL/lease/新freeze/自身zero，代码/import不签物理资格。
+- 正在做G1：新端两条件首次PREPARE/45D按单位/decoded RGBD/原component与direct READY/失败/缺材料分母，原后果前判据不变。下一项：可用则G2新用途分组数据→G3真实critic/常量与均值基线→G4固定/greedy/successor同域在线→G5两布局/每链≥3有效决策机会→G6复现结论；不可辨则一次有真实caller依据的新条件源最小验证，不重复left/right/seed追胜。独立备选：G3指标/弃权分母设计，不空fit/旧audit调阈值/新wrapper。
+- 入口`/home/yuanyue/reach-ability-research/protocols/2026-11-14/native-prefix/NEW_HOST_G1_CONTINUATION_CN.md`。本次新研究数值/新仿真/真实fit0，不新建Goal/自动化/agent或接管Data；dirty/closed/原门/旧audit不fit/TEST0/主要贡献未证保持。长期任务未完成，不以pilot或代码部署收尾。
+
 ### 2026-11-14 23:23：用户指定46308计算端与新GitHub代码保管；代码已推送/远端部署，27软件检查通过，尚未真实仿真/训练
 
 - 用户最新位置决定：以后仿真/训练在`root@180.97.68.228:46308`，代码保管GitHub `WM4N-Group/reach-ability-research`＋本地精简`/home/yuanyue/reach-ability-research`，远端代码`/mnt/yuanyue/reach-ability-research`，运行/资产分置`/mnt/yuanyue/reach-runs`和`/mnt/yuanyue/reach-assets`。旧工作区全部dirty/原HEAD4c998be/origin/index保留，不删旧数据、不改closed；新仓库是独立code-only历史，不假称原clean commit。
