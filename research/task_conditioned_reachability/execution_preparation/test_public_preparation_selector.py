@@ -1,6 +1,8 @@
 """Deterministic branch tests, not extra seeds/physical H1 or trained models."""
 from dataclasses import asdict,replace
 import importlib.util
+import hashlib
+import os
 from pathlib import Path
 import sys
 import unittest
@@ -9,14 +11,26 @@ from .public_preparation_selector import (PublicReference,build_problem,choose,
     materialize_fresh_plan,IDS,CompleteSuccessorEstimate)
 from .successor_aware_choice import Estimate,Costs,Bounds
 
-OWNER=Path('/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/climb_preparation_candidates.py')
+# Relocatable software test input; exact original API source, not a fixture port.
+# The existing worktree has the owner delivery; the custody repo includes its
+# code-only copy. Neither location confers native runtime qualification.
+_REPO_API=Path(__file__).resolve().parents[3]/'owner_snapshot/native-prefix-20261114/inputs/AINav/climb_preparation_candidates.py'
+_LEGACY_API=Path('/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/climb_preparation_candidates.py')
+OWNER=Path(os.environ['REACH_AINAV_PUBLIC_API']) if 'REACH_AINAV_PUBLIC_API' in os.environ else (_REPO_API if _REPO_API.is_file() else _LEGACY_API)
+OWNER_SHA='1c40a748bd1d93e3684853b60f2dc038e673f019976d60cf33eb8195ff9942d0'
 
 
 def owner_api():
     name='_Reach_selector_test_actual_AINav_public_API'
     if name in sys.modules:return sys.modules[name]
+    if hashlib.sha256(OWNER.read_bytes()).hexdigest()!=OWNER_SHA:
+        raise ValueError('Software test requires exact original AINav public API source')
     spec=importlib.util.spec_from_file_location(name,OWNER)
-    module=importlib.util.module_from_spec(spec);sys.modules[name]=module;spec.loader.exec_module(module)
+    module=importlib.util.module_from_spec(spec);sys.modules[name]=module
+    try:spec.loader.exec_module(module)
+    except BaseException:
+        sys.modules.pop(name,None)
+        raise
     return module
 
 
