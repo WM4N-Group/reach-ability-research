@@ -1,0 +1,32 @@
+{
+  "schema": "piper-state-height-matched-development-v1",
+  "role": "new_posthoc_state_conditioned_static_development_NOT_navigation_rollouts",
+  "parent_task_protocol": "research/task_conditioned_reachability/piper_task_protocol_v1.json",
+  "parent_task_protocol_sha256": "e4bf7d8f80031588d814f176842508a2f52678ffef59d2a9a314647d18e3c624",
+  "reused_control": {
+    "height_m": 0.33,
+    "study_dir": "evidence/2026-10-20/piper-source-task-static-v1",
+    "queries_sha256": "cd6d96d1a05eca416fe378a65c9ec4819ff89bc0fb50e24c9b38598c1eddd045",
+    "robot_contract_sha256": "2f906e77236897f1405591c69635ad9e7105c8a0d6f828c5b75b7ddf22611325",
+    "rerun_control": false
+  },
+  "new_state_heights_m": [0.28, 0.38],
+  "combined_state_heights_m": [0.28, 0.33, 0.38],
+  "height_is": "observed_or_hypothetical_condition_NOT_executable_NAV_action_or_supported_stance",
+  "unchanged": ["source_task_target_and_orientation", "75_SE2_candidates_per_state", "shared13_orientation_pool", "90percent_reference_limits", "two_fixed_seeds", "2mm_1degree_80iterations", "single_quintic_21phase_path", "35mm_protected_body_clearance"],
+  "P3": "annotate_all_candidates_but_do_not_skip_shared_queries_in_this_development_run; no_false_speedup_claim",
+  "comparisons": "per_height_only; do_not_optimize_over_height_without_actual_executable_height_action",
+  "not_checked": ["physical_stance", "ground", "actual_navigation_route", "navigation_actor_or_goal_handoff", "box_contact", "support", "torque", "actuator_delay", "continuous_intersample_clearance"],
+  "resources": {
+    "new_candidates": 150,
+    "reused_candidates": 75,
+    "max_new_pose_queries": 1950,
+    "max_new_IK_attempts": 3900,
+    "max_new_path_samples": 3150,
+    "max_cpu_wall_s": 180,
+    "physics_steps": 0,
+    "actor_or_training_runs": 0,
+    "retry_or_grid_extension": false
+  },
+  "completion": "save all outcomes/unknowns, per-state endpoint/path coverage, analytic exclusion contradictions and measured new-query cost; no positive result required"
+}

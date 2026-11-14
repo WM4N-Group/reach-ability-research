@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-14T18:44:59.883282+08:00",
+  "files_sha256": {
+    "SOURCE_CHANGE_AND_INVERSE.json": "325a381f5ce9cc561430fe18d1b7f7b212a5a7d89a98657180f2ca5cca9cff9a",
+    "FIXED_TWO_CONDITIONS.json": "b4bd121f237209868ff6c8cbb5bcccad754f6b83a9ad8f282159c7b8f80b5922",
+    "EXPERIMENT_CN.md": "a3c7a1e6a443196334144b15d5172747f4c15578e4113c8a20917323e0ee8123",
+    "source-delta/probe_execution_judge.py": "133fd5933193f96dc2a6399d0f8305699519b3f758cd3c952528ac573a9dded5"
+  },
+  "result_sha256": "6ee060b3efff9a7455b81d01b97d42e3ac3b58fdb4fb89d6bece34d217a584c8",
+  "historical_source_unmodified": true,
+  "new_physical_dispatch_or_fit": false,
+  "new_condition_family_or_original_motor_variation_proven": false
+}

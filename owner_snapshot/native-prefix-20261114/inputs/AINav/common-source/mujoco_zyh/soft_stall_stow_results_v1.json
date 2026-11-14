@@ -1,0 +1,730 @@
+{
+  "schema": "mujoco-failed-push-protected-compact-stow-results-v1",
+  "timestamp": "2026-10-24T22:40:15.052982+08:00",
+  "execution_source_commit": "8fe6aa52985c01b774827828ac9c79dce4c3d269",
+  "upstream_source_commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "backend": "mujoco",
+  "scope": "Single-seed independent20kg/friction.45 PUSH probe -> attempt insufficient initial progress -> actual unload/retreat -> protected INTERIOR compact stow. NO NAV_READY/B/full-route/WM effectiveness acceptance.",
+  "status": "single_seed_recovery_interface_pass_not_general_skill_certification",
+  "formal_host": "go2-root-yuanyue",
+  "formal_root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7",
+  "local_artifacts": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/soft-stall-stow-20261024-v7",
+  "task_success": true,
+  "original_PUSH_attempt_success": false,
+  "original_goal_and_history_preserved": true,
+  "sim_seconds": 40.22000000000212,
+  "wall_seconds": 83.26218233630061,
+  "physical_motor_steps": 8044,
+  "RGBD_frames": 403,
+  "reset_after_initial": 0,
+  "auxiliary_native_calibration": {
+    "worlds": 1,
+    "sim_seconds": 6.5049999999998835,
+    "source": "original zyh reference_stance + settle",
+    "main_world_unchanged": true,
+    "separate_initialization_state_adjustments_not_task_recovery": true,
+    "used_as_training_episode": false
+  },
+  "CPU_tests_passed": 173,
+  "CPU_tests_skipped": 0,
+  "zero_step_preflight_passed": true,
+  "trained_skill_weights_modified": false,
+  "training_runs": 0,
+  "WM_forwards": 0,
+  "WM_control": 0,
+  "failure": {
+    "time_s": 15.560000000001033,
+    "box_dx_contact_window_m": -2.6919749718246067e-07,
+    "contact_window_s": 0.06000000000000938,
+    "original_goal": [
+      [
+        1.7000000476837158,
+        0.0,
+        0.10000000149011612
+      ]
+    ],
+    "native_goal_success": false,
+    "unissued_current_policy_proposal_retained": true,
+    "unissued_policy_target": [
+      0.13380453884601592,
+      0.9998755633831025,
+      -1.2107208967208862,
+      0.01183003038167954,
+      0.9293682008981705,
+      -1.4978602416813374,
+      -0.026751874387264257,
+      1.0423334278166294,
+      -1.8363638818264008,
+      -0.006361165642738337,
+      1.1671060770750046,
+      -1.2565938383340836,
+      0.18372072279453278,
+      2.4408557415008545,
+      -1.6145379543304443,
+      1.365662693977356,
+      -0.37152543663978577,
+      -1.1872812509536743
+    ],
+    "last_actually_issued_target": [
+      0.09737866520881652,
+      0.9900705993175507,
+      -1.2260336875915527,
+      0.008105395734310156,
+      0.9359014511108399,
+      -1.4429360628128052,
+      -0.02363072186708451,
+      1.0356904827058315,
+      -1.7804670929908752,
+      0.02203794419765473,
+      1.1294796168804169,
+      -1.3154408186674118,
+      0.18259075284004211,
+      2.441936731338501,
+      -1.6103696823120117,
+      1.3674566745758057,
+      -0.37633663415908813,
+      -1.1867374181747437
+    ]
+  },
+  "recovery": {
+    "phase": "STOW_VERIFIED",
+    "stow_verified": true,
+    "native_PUSH_attempt_failed": true,
+    "NO_NAV_or_B_admission": true,
+    "original_goal_preserved": true,
+    "retired_PUSH_history_preserved": true,
+    "actual_motor_reference_seed": {
+      "position": [
+        0.18259075284004211,
+        2.441936731338501,
+        -1.6103696823120117,
+        1.3674566745758057,
+        -0.37633663415908813,
+        -1.1867374181747437
+      ],
+      "reference_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_last_two_positions": [
+        [
+          0.18259075284004211,
+          2.441936731338501,
+          -1.6103696823120117,
+          1.3674566745758057,
+          -0.37633663415908813,
+          -1.1867374181747437
+        ],
+        [
+          0.18259075284004211,
+          2.441936731338501,
+          -1.6103696823120117,
+          1.3674566745758057,
+          -0.37633663415908813,
+          -1.1867374181747437
+        ]
+      ],
+      "actual_PD_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "events": [
+      {
+        "time": 15.560000000001033,
+        "event": "failed_PUSH_authority_retired_actual_queue_preserved",
+        "pending_queue": {
+          "screen_pass": true,
+          "failures": [],
+          "immutable_prefix_axis_samples": 72,
+          "queue_or_delay_modified": false,
+          "constant_velocity_screen_only": true,
+          "actual_dynamic_safety_certified": false,
+          "actuator_command_authorized": false
+        }
+      },
+      {
+        "time": 15.73500000000106,
+        "event": "actual_loaded_stationary_feet_reference_captured"
+      },
+      {
+        "time": 18.645000000000575,
+        "event": "actual_unloaded_supported_retreat_and_full_path_checked"
+      },
+      {
+        "time": 20.0350000000003,
+        "event": "actual_safe_arm_waypoint_0"
+      },
+      {
+        "time": 31.214999999998074,
+        "event": "actual_safe_arm_waypoint_1"
+      },
+      {
+        "time": 31.214999999998074,
+        "event": "actual_arm_compact_safe_pose_reached"
+      },
+      {
+        "time": 35.21499999999956,
+        "event": "failed_PUSH_stow_1s_plus3s_verified_NO_NAV"
+      }
+    ],
+    "metrics": {
+      "hand_force_N": 0.0,
+      "legal_hand_contact": false,
+      "foot_normal_N": [
+        36.103615444983205,
+        29.801839581680152,
+        75.80707013937456,
+        71.80213437579708
+      ],
+      "base_linear_speed": 1.3473752066942957e-05,
+      "base_angular_speed": 3.666397279346229e-05,
+      "tilt_rad": 0.004820649978287505,
+      "max_foot_speed": 7.11365129912628e-06,
+      "box_linear_speed": 9.881460536365387e-16,
+      "box_angular_speed": 1.0605679662830497e-15,
+      "standoff_m": 0.6580521773750837,
+      "arm_error": 6.926116249022233e-06,
+      "arm_speed": 2.538279656846735e-06,
+      "base_retreat_m": 0.13987111712216818,
+      "base_horizontal_displacement_m": 0.13998644565548943
+    },
+    "stow_arm_reference": [
+      0.0,
+      0.18,
+      -0.18,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "minimum_body_clearance_m": 0.04689757208762796,
+    "minimum_other_clearance_m": 0.0053645748623249775,
+    "reference_speed_limit": 0.45,
+    "reference_acceleration_limit": 1.0,
+    "initial_required_face_retreat_m": 0.1268189949762636,
+    "measured_face_target_m": 0.645,
+    "retreat_velocity_limit_m_s": 0.05,
+    "leg_posture_regularization": 0.0,
+    "actual_stationary_support_reference_captured": true,
+    "full_internal_COM_velocity_compensated": true,
+    "signed_base_gap_servo": true,
+    "synchronized_nominal_waypoints": true,
+    "nominal_speed": 0.4,
+    "nominal_acceleration": 0.8,
+    "native_arm_gains_unchanged": true,
+    "unload_PD_velocity_zero": true,
+    "gravity_support_bumpless_reconciliation": true,
+    "leg_posture_reference": "actual entry support stance retained",
+    "native_QP_max_residual": 0.006567271132101708
+  },
+  "safety_measured": {
+    "angle_violations_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "speed_exceeded_steps": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "torque_saturation_steps": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "independent_audit": {
+      "schema": "independent-mujoco-stall-stow-audit-v1",
+      "audit_pass": true,
+      "errors": [],
+      "checks": 931225,
+      "source_execution_commit": "8fe6aa52985c01b774827828ac9c79dce4c3d269",
+      "physics_steps_performed_by_audit": 0,
+      "WM_forwards": 0,
+      "training_runs": 0,
+      "soft_failure_time_s": 15.560000000001033,
+      "soft_failure_dx_m": -2.6919749718246067e-07,
+      "original_goal": [
+        [
+          1.7000000476837158,
+          0.0,
+          0.10000000149011612
+        ]
+      ],
+      "actual_recovery_steps": 4932,
+      "phase_steps": {
+        "UNLOAD_CAPTURE": 616,
+        "PROTECTED_STOW": 2514,
+        "STOW_VERIFY": 800,
+        "STOW_VERIFIED": 1002
+      },
+      "max_issued_reference_speed": 0.4499000000000031,
+      "max_issued_reference_acceleration": 0.9990000000037469,
+      "independent200Hz_body_clearance_m": 0.046897572087627896,
+      "independent200Hz_other_robot_clearance_m": 0.005364574862325122,
+      "independent10Hz_environment_clearance_m": 0.07983987802183568,
+      "trailing_valid_actual_hold_s": 9.5,
+      "force_and_base_gates": "200Hz recorded runtime metrics, not independently reconstructed contact forces",
+      "scope": "single-seed failed PUSH safe compact stow ONLY; NO NAV_READY/B/full-task/WM validity"
+    },
+    "strict_general_safety_certified": false
+  },
+  "native_source_postflight_verified_files": 148,
+  "total_dynamic_episode_and_review_bytes": 42038598,
+  "dynamic_MiB": 40.09113121032715,
+  "shared_static_model_separate_not_per_episode_bytes": 43398511,
+  "video": {
+    "full": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/complete-scene-review.mp4",
+    "focus": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/push-failure-to-stow-review.mp4",
+    "provenance": {
+      "schema": "actual-composite-scene-review-v1",
+      "source_root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7",
+      "source_id": "mujoco-soft-stall-stow-20261024-v7",
+      "episode_id": "mujoco-soft-stall-stow-20261024-v7-episode0",
+      "source_report_sha256": "23e88f361362a387137d11e0252197de99b24afbf63a4de6b7a3927937859bde",
+      "source_state_closure_sha256": "e164dc1f471c98713289a1b8d7ef772b673b1fa887c59c6d01404ef00f832042",
+      "source_visual_index_sha256": "bc08f28ae8fdb827b3d88c4e328513a9f9cb02b54b57840eb6e0936e21001a4f",
+      "frames": 403,
+      "fps": 10.0,
+      "first_source_sim_s": 0.0,
+      "last_source_sim_s": 40.20000000000211,
+      "main_final_sim_s": 40.22000000000212,
+      "review_video": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/complete-scene-review.mp4",
+      "review_video_sha256": "7e5ae0283efc4126df1c75544417b646bb0cbaa6d1c2bae8acd14d24e5e20788",
+      "screenshots": [
+        "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/scene-000.0s.png",
+        "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/scene-020.0s.png",
+        "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/scene-029.0s.png"
+      ],
+      "native_route_success": false,
+      "failed_PUSH_stow_only": {
+        "abort": {
+          "time_s": 15.560000000001033,
+          "box_dx_contact_window_m": -2.6919749718246067e-07,
+          "contact_window_s": 0.06000000000000938,
+          "original_goal": [
+            [
+              1.7000000476837158,
+              0.0,
+              0.10000000149011612
+            ]
+          ],
+          "native_goal_success": false,
+          "unissued_current_policy_proposal_retained": true,
+          "unissued_policy_target": [
+            0.13380453884601592,
+            0.9998755633831025,
+            -1.2107208967208862,
+            0.01183003038167954,
+            0.9293682008981705,
+            -1.4978602416813374,
+            -0.026751874387264257,
+            1.0423334278166294,
+            -1.8363638818264008,
+            -0.006361165642738337,
+            1.1671060770750046,
+            -1.2565938383340836,
+            0.18372072279453278,
+            2.4408557415008545,
+            -1.6145379543304443,
+            1.365662693977356,
+            -0.37152543663978577,
+            -1.1872812509536743
+          ],
+          "last_actually_issued_target": [
+            0.09737866520881652,
+            0.9900705993175507,
+            -1.2260336875915527,
+            0.008105395734310156,
+            0.9359014511108399,
+            -1.4429360628128052,
+            -0.02363072186708451,
+            1.0356904827058315,
+            -1.7804670929908752,
+            0.02203794419765473,
+            1.1294796168804169,
+            -1.3154408186674118,
+            0.18259075284004211,
+            2.441936731338501,
+            -1.6103696823120117,
+            1.3674566745758057,
+            -0.37633663415908813,
+            -1.1867374181747437
+          ]
+        },
+        "recovery": {
+          "phase": "STOW_VERIFIED",
+          "stow_verified": true,
+          "native_PUSH_attempt_failed": true,
+          "NO_NAV_or_B_admission": true,
+          "original_goal_preserved": true,
+          "retired_PUSH_history_preserved": true,
+          "actual_motor_reference_seed": {
+            "position": [
+              0.18259075284004211,
+              2.441936731338501,
+              -1.6103696823120117,
+              1.3674566745758057,
+              -0.37633663415908813,
+              -1.1867374181747437
+            ],
+            "reference_velocity": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_last_two_positions": [
+              [
+                0.18259075284004211,
+                2.441936731338501,
+                -1.6103696823120117,
+                1.3674566745758057,
+                -0.37633663415908813,
+                -1.1867374181747437
+              ],
+              [
+                0.18259075284004211,
+                2.441936731338501,
+                -1.6103696823120117,
+                1.3674566745758057,
+                -0.37633663415908813,
+                -1.1867374181747437
+              ]
+            ],
+            "actual_PD_velocity": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "events": [
+            {
+              "time": 15.560000000001033,
+              "event": "failed_PUSH_authority_retired_actual_queue_preserved",
+              "pending_queue": {
+                "screen_pass": true,
+                "failures": [],
+                "immutable_prefix_axis_samples": 72,
+                "queue_or_delay_modified": false,
+                "constant_velocity_screen_only": true,
+                "actual_dynamic_safety_certified": false,
+                "actuator_command_authorized": false
+              }
+            },
+            {
+              "time": 15.73500000000106,
+              "event": "actual_loaded_stationary_feet_reference_captured"
+            },
+            {
+              "time": 18.645000000000575,
+              "event": "actual_unloaded_supported_retreat_and_full_path_checked"
+            },
+            {
+              "time": 20.0350000000003,
+              "event": "actual_safe_arm_waypoint_0"
+            },
+            {
+              "time": 31.214999999998074,
+              "event": "actual_safe_arm_waypoint_1"
+            },
+            {
+              "time": 31.214999999998074,
+              "event": "actual_arm_compact_safe_pose_reached"
+            },
+            {
+              "time": 35.21499999999956,
+              "event": "failed_PUSH_stow_1s_plus3s_verified_NO_NAV"
+            }
+          ],
+          "metrics": {
+            "hand_force_N": 0.0,
+            "legal_hand_contact": false,
+            "foot_normal_N": [
+              36.103615444983205,
+              29.801839581680152,
+              75.80707013937456,
+              71.80213437579708
+            ],
+            "base_linear_speed": 1.3473752066942957e-05,
+            "base_angular_speed": 3.666397279346229e-05,
+            "tilt_rad": 0.004820649978287505,
+            "max_foot_speed": 7.11365129912628e-06,
+            "box_linear_speed": 9.881460536365387e-16,
+            "box_angular_speed": 1.0605679662830497e-15,
+            "standoff_m": 0.6580521773750837,
+            "arm_error": 6.926116249022233e-06,
+            "arm_speed": 2.538279656846735e-06,
+            "base_retreat_m": 0.13987111712216818,
+            "base_horizontal_displacement_m": 0.13998644565548943
+          },
+          "stow_arm_reference": [
+            0.0,
+            0.18,
+            -0.18,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "minimum_body_clearance_m": 0.04689757208762796,
+          "minimum_other_clearance_m": 0.0053645748623249775,
+          "reference_speed_limit": 0.45,
+          "reference_acceleration_limit": 1.0,
+          "initial_required_face_retreat_m": 0.1268189949762636,
+          "measured_face_target_m": 0.645,
+          "retreat_velocity_limit_m_s": 0.05,
+          "leg_posture_regularization": 0.0,
+          "actual_stationary_support_reference_captured": true,
+          "full_internal_COM_velocity_compensated": true,
+          "signed_base_gap_servo": true,
+          "synchronized_nominal_waypoints": true,
+          "nominal_speed": 0.4,
+          "nominal_acceleration": 0.8,
+          "native_arm_gains_unchanged": true,
+          "unload_PD_velocity_zero": true,
+          "gravity_support_bumpless_reconciliation": true,
+          "leg_posture_reference": "actual entry support stance retained",
+          "native_QP_max_residual": 0.006567271132101708
+        },
+        "scope": "failed PUSH unload/compact safe stow only, NO NAV/B/full route",
+        "reset_after_initial": 0
+      },
+      "nav_efficiency_adaptation": null,
+      "scope": "Fixed PUSH probe; physics labels reviewer-only, not model input",
+      "raw_full_states": true,
+      "actual_onboard_RGB_inset": true,
+      "root_pose_reconstructed_or_interpolated": false,
+      "independent_display_data_only": true,
+      "new_physics_starts": 0,
+      "mj_step_calls": 0,
+      "actor_forwards": 0,
+      "WM_forwards": 0,
+      "model_or_actuator_control_changed_by_rendering": false,
+      "strict_safety_acceptance": false,
+      "full_state_joints_match_actual_proprio": true,
+      "max_object_pose_reconstruction_error_m": 0.0,
+      "actual_recorded_world_pose_not_inferred_from_ego_velocity": true,
+      "warning": "Source-native strict speed/joint-range diagnostics must be reported separately. Offline mj_forward values are NOT newly measured forces."
+    },
+    "focus_clip": {
+      "source": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/complete-scene-review.mp4",
+      "source_sha256": "7e5ae0283efc4126df1c75544417b646bb0cbaa6d1c2bae8acd14d24e5e20788",
+      "clip": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7/review-video/push-failure-to-stow-review.mp4",
+      "clip_sha256": "e03427c552c262a4e895f298836f5c3d1e3c4ec39edee15ece2f2cf65c5ec01f",
+      "first_actual_frame": 145,
+      "last_actual_frame": 402,
+      "source_sim_seconds": [
+        14.5,
+        40.2
+      ],
+      "frames": 258,
+      "fps": 10,
+      "playback_speed": 1,
+      "interpolation": false,
+      "new_physics_steps": 0
+    }
+  },
+  "all_attempts": {
+    "timestamp": "2026-10-24T22:38:54.131042+08:00",
+    "roots": [
+      {
+        "version": 1,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v1",
+        "execution_source_commit": "f9fe9e7d9fa3e7079d23d77fc75cc893f5c38be3",
+        "sim_seconds": 0.13000000000000003,
+        "success": false,
+        "error": "RuntimeError('actual_strict_joint_range_violation')",
+        "launcher_pid": 1369803,
+        "collector_pid": 1369804,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 2,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v2",
+        "execution_source_commit": "9a082b833f313ef75b626d96fff11d50fdc39a44",
+        "sim_seconds": 0.2200000000000001,
+        "success": false,
+        "error": "RuntimeError('actual_strict_joint_range_violation')",
+        "launcher_pid": 1369868,
+        "collector_pid": 1369869,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 3,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v3",
+        "execution_source_commit": "5c655392971fa254c8668ee41f6f4c57c0ce4cad",
+        "sim_seconds": 16.120000000001077,
+        "success": false,
+        "error": "RuntimeError('actual_stow_geometry:base_link:link5:0.03469m')",
+        "launcher_pid": 1369935,
+        "collector_pid": 1369936,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 4,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v4",
+        "execution_source_commit": "c67480eb1cf9df9e4d5dc6fa82ff65671baaf352",
+        "sim_seconds": 20.565000000000193,
+        "success": false,
+        "error": "RuntimeError('actual_unload_capture_5s_timeout')",
+        "launcher_pid": 1369983,
+        "collector_pid": 1369984,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 5,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v5",
+        "execution_source_commit": "0bab72b0a55f245be067c8ca10abaa325de9c079",
+        "sim_seconds": 19.82500000000034,
+        "success": false,
+        "error": "RuntimeError('measured_unload_retreat_outside_original_envelope')",
+        "launcher_pid": 1370033,
+        "collector_pid": 1370034,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 6,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v6",
+        "execution_source_commit": "78dee3ba4322aecbfbd5cd237e6dc38aca6ba062",
+        "sim_seconds": 30.18499999999828,
+        "success": false,
+        "error": "RuntimeError('empty_coupled_reference_interval:2')",
+        "launcher_pid": 1370112,
+        "collector_pid": 1370113,
+        "pids_still_present": [],
+        "launcher_exit_code": 2,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      },
+      {
+        "version": 7,
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/soft-stall-stow-20261024-v7",
+        "execution_source_commit": "8fe6aa52985c01b774827828ac9c79dce4c3d269",
+        "sim_seconds": 40.22000000000212,
+        "success": true,
+        "error": null,
+        "launcher_pid": 1370202,
+        "collector_pid": 1370203,
+        "pids_still_present": [],
+        "launcher_exit_code": 0,
+        "claim_consumed": true,
+        "attempts_remaining": 0,
+        "source_inputs_changed": [],
+        "dispatch_lock_released": true,
+        "data_audit": []
+      }
+    ],
+    "canonical_renderer_physics_locks_released": true,
+    "old_roots_must_not_restart": true,
+    "new_physics_for_closure": 0
+  },
+  "prior_failed_attempts_preserved": true,
+  "automatic_retry": false,
+  "remaining_attempts": 0,
+  "active_physics_or_training_jobs": false,
+  "new_physics_for_render_or_audit": 0,
+  "evidence_sha256": {
+    "report.json": "23e88f361362a387137d11e0252197de99b24afbf63a4de6b7a3927937859bde",
+    "freeze.json": "f9355896a7e5897a87a515dc1a7ef016cf0135a1c762802c2b434d800e974dd5",
+    "data-audit.json": "2ab446206d99d818fd55edcc1270ad06676491bc66e152a7ad62efffd94b50bc",
+    "independent-stow-audit.json": "6b4756ec0b04a7633442d01bf23c1f62a7c0842ba07ad241aec5889b40b7c53a",
+    "all-attempts-closure.json": "81ce4a9f209f780578f02bdf4980b442c6ccbd2e0a5e5b8fe8803f4e2e17742f",
+    "review-video/review-provenance.json": "bca086a71e8b6cce0ae86ead10c8c76e3b96c7d4eaa121c579d4be2a05862c1a",
+    "review-video/focus-clip-provenance.json": "29a39a49ee61234632e22c4737036cd9771e74250cded8c2ad0baf001d767e4f",
+    "review-video/complete-scene-review.mp4": "7e5ae0283efc4126df1c75544417b646bb0cbaa6d1c2bae8acd14d24e5e20788",
+    "review-video/push-failure-to-stow-review.mp4": "e03427c552c262a4e895f298836f5c3d1e3c4ec39edee15ece2f2cf65c5ec01f"
+  },
+  "next_action": "User video inspection. Do NOT rerun completed recovery or widen to NAV/B/WM training before separate plan/admission.",
+  "independent_auditor_sha256": "7382b44708e533baf227c9459c25b998027e2d73ea3f44b323fe372df5fb4e55"
+}

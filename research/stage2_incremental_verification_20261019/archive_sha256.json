@@ -1,0 +1,27 @@
+{
+  "schema": "rev021-bundled-archive-sha256-v1",
+  "scope": "This subtree except this checksum file; external-only evidence not claimed vendored.",
+  "files": {
+    "README.md": "e8a9d853476ba953ad99d7b985eeaf25297e39a445d9b4619ab878ce4e8a3bec",
+    "canonical_checkers/REV017_independent_delta_audit.py": "62880c0e3f79171c0d6657e893f4b3e2fc3114c33f285e0adfac4fa41803d253",
+    "canonical_checkers/REV018_R2_audit_executable_delta.py": "ee6102161b9407d18cf463d0e1190944c326a2d082f9a9f8701a45224a375eda",
+    "canonical_checkers/REV018_R3_audit_new_sdk_originals.py": "1f829d84c3d6a14a000310598518bae086a526660e4b97bace4cefbd633ba835",
+    "canonical_checkers/REV018_R3_audit_pgid_delta.py": "3cabbc83bca66c968d03273bf1b40330f10ba5d4834a01c90f7dfd596f87b24e",
+    "canonical_checkers/REV019_audit_terminal.py": "98b03170360381de52fdf31d5d73a3a0ff684e14679916ae6022720b1b7b9521",
+    "canonical_checkers/REV020_verify_offline_prefix.py": "72f1699edcefc1d54d9f9a04aa185d2c5bc1f659a8f31663fb475719f68267f6",
+    "canonical_evidence_index.json": "8941854be458680a919755ca2557378cc1a8a5df418cef204522ece8c244bff0",
+    "cpu_evidence/REV017_independent_delta_result.json": "103d199324f4b42f29ceeb626579a43c37586ca9e00e43b27ae95a135cb18753",
+    "cpu_evidence/REV018_R2_independent_cpu_result.json": "f510f0ca9dd495c399c9893bdb7f47101936efa8afa890eacb594e214fcf2e2a",
+    "cpu_evidence/REV018_R3_pgid_delta_result.json": "0746910c8c4663de62c8915d922d05c8ead1c014e0d1e576ec39877848750c08",
+    "cpu_evidence/REV020_comparison_result.json": "67487d9c5f0c880f9efee167be062bab40cce47d764a79c7fa7fac67aa8bded0",
+    "offline_checks.py": "6cf35d9f71c68a0835b497072d41f3ccccd04c75e42022622377c73f546f3e4a",
+    "receipts/REV017_REVIEW.json": "61e1c803c26887384d0bc0943a362c15cd1b02f666103ae34f75c58098395898",
+    "receipts/REV018_R2_REVIEW.json": "68a4df60c5c128e7009ec5a06306a8a90bf9f63bc2decbdbb626953b7555e1bd",
+    "receipts/REV018_R2_SDK_envelope.json": "7eb59d5615199c333ac2affc371b119818832a99c1a6dff431808e6438e44750",
+    "receipts/REV018_R3_REVIEW.json": "2fbc16d4a77091ac0b42e87bfdc8063a459f453aedcf7a6281f6ad0b105ad363",
+    "receipts/REV018_R3_SDK_envelope.json": "6eb394d66fc9c12510cc848b4de6653ea513774dd2a258bf82adab4cf6e79a44",
+    "receipts/REV019_REVIEW.json": "ca907d0d99b73b50d4d165e0d5159bb0cdd021e40f0e7ad77a32684fe44c68e5",
+    "receipts/REV020_REVIEW.json": "bdf066790d16d483fcce2a4fe2a3374357540880d98aac397f7cadeaf77bfcf4",
+    "workspace_intake.json": "32cc34fa8193eff1bd83dbfc860b5a602ea853c1da788533905f729975c0d814"
+  }
+}

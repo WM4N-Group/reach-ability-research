@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-11-14T18:41:36.205527+08:00",
+  "purpose": "Prospective finite condition-generator qualification, not critic training or optimizer comparison",
+  "conditions": [
+    {
+      "condition_id": "native_NAV_prefix_left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.85,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "condition_observability_at_later_PREPARE_proven": false
+    },
+    {
+      "condition_id": "native_NAV_prefix_right",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:right",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.15,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "condition_observability_at_later_PREPARE_proven": false
+    }
+  ],
+  "new_main_upper_bound": 2,
+  "per_condition_main_attempts": 1,
+  "fixed_full_course_class": "ExecutionJudgedFullCourse",
+  "fixed_scene_case": "full-4",
+  "fixed_seed": 4301,
+  "fixed_initialization": "original stall_stow.initial_base/initial_posture; NO replacement initializer",
+  "old_three_branch_rerun": false,
+  "TRAIN_CALIBRATION_TEST_assignment": null,
+  "data_role": "NEW_DEV_AUDIT_ONLY_UNLESS_SEPARATELY_SOURCE_AND_USE_QUALIFIED",
+  "scope_ids_allocated": false,
+  "physical_admission": false,
+  "dispatch": false,
+  "no_source_or_control_change_in_current_closed_program": true
+}

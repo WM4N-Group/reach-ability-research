@@ -1,0 +1,166 @@
+{
+  "schema": "mujoco-no-reset-recovery-design-results-v1",
+  "as_of": "2026-10-24T15:17:12+08:00",
+  "status": "DESIGN_CPU_SOURCE_CHECK_PASS_CONTROLLER_AND_PHYSICAL_VALIDATION_NOT_DONE",
+  "base_repository_commit": "f9b7a50483a36cb6c58dbf349f3d415468b4881b",
+  "implementation": [
+    "scripts/piper_world_model/mujoco_zyh/recovery_design.py",
+    "scripts/piper_world_model/mujoco_zyh/preflight_recovery_design.py",
+    "scripts/piper_world_model/mujoco_zyh/test_recovery_design.py",
+    "scripts/piper_world_model/mujoco_zyh/no_reset_recovery_protocol_v1.json"
+  ],
+  "source_definition_pin": {
+    "schema": "pinned-zyh-mujoco-source-v1",
+    "repository": "WM4N-Group/go2-piper-RL-Sim2Sim2Real",
+    "commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+    "sha256sums_sha256": "aa97f14736885648f99853385c145de30a34b753903d9a51a872f7d407653150",
+    "manifest_sha256": "b7669886794092acb6ed17a2f6428b1bf4a9e218de601c860207d6c367ed09be",
+    "verified_files": 148,
+    "root": "/mnt/yuanyue/data/go2-piper-world-model/zyh-mujoco-source-340d7d8-v1",
+    "skills": {
+      "nav": "original210D",
+      "climb": "V1/900",
+      "push": "v212-dual"
+    },
+    "original_source_or_weights_modified": false,
+    "formal_skill_acceptance": false
+  },
+  "protocol_schema": "piper-mujoco-no-reset-recovery-design-v1",
+  "CPU": {
+    "host": "go2-root-yuanyue",
+    "python": "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/bin/python",
+    "new_tests": 35,
+    "reused_component_regression_tests": 44,
+    "schema": "mujoco-recovery-design-CPU-closure-v1",
+    "tests": 79,
+    "passed": true,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "native_physics_steps": 0,
+    "model_or_simulator_modules_loaded": [],
+    "actor_forwards": 0,
+    "WM_forwards": 0,
+    "training_runs": 0,
+    "source_inputs_pre_post_matching": 14,
+    "own_sources_sha256": {
+      "recovery_design.py": "4ea51bc66ecf63457e8004d15f9a83cd8f1c03cd74eac6d35ce2c92fb53bb6e0",
+      "preflight_recovery_design.py": "af9749ccd3f7fbf4a239517cda4afb0e1a43ea7003e2a1eacd74b71bfc8c9f9a",
+      "test_recovery_design.py": "b6fae5e3979569eb426c0394d03efeba396ac6ea6793836dc6a239bab069b683",
+      "no_reset_recovery_protocol_v1.json": "f6213abf89a5c13734f63b6360125cc5fcdef08684b3612d232fded7c7635177"
+    }
+  },
+  "source_preflight": {
+    "native_consumers": 14,
+    "source_witnesses": {
+      "failed_goal_rejected": {
+        "path": "push/finish.py",
+        "line": 229,
+        "marker": "self.fail('finish_box_left_goal')"
+      },
+      "native_brake_wait": {
+        "path": "push/finish.py",
+        "line": 175,
+        "marker": "if now-self.started<.5:return"
+      },
+      "native_brake_speed": {
+        "path": "push/finish.py",
+        "line": 177,
+        "marker": "if np.linalg.norm(sim.data.qvel[:3])>.08:return"
+      },
+      "native_zero_reference_velocity": {
+        "path": "push/finish.py",
+        "line": 147,
+        "marker": "self.arm_velocity_reference = np.zeros(6)"
+      },
+      "planned_four_contact_QP": {
+        "path": "push/finish.py",
+        "line": 242,
+        "marker": "self.qp.solve(np.ones(4,dtype=bool)"
+      },
+      "all_compiled_collision_geoms": {
+        "path": "push/finish.py",
+        "line": 68,
+        "marker": "geoms = [i for i in range(model.ngeom)"
+      }
+    },
+    "reused_contracts": {
+      "initial_contact_progress_monitor.py": "5ef4e31c077951ea57969923dba19056e149818f3fc9b0c4c88a869f8b4df8f4",
+      "recovery_reference_intersection.py": "9c98e1e8474b59ce470ad2c2b63cc2b7f5be9653a3f58231405330dfe2f41737",
+      "failure_exit_backoff_contract.py": "038866373431599ca355d52f8dc6ed5e63c01df66febe09b1be185cf4eed4b8d",
+      "contact_failure_exit_contract.py": "a86b71aa39a6467af979ea78acd6004a2cbfc6f000b86dc41836fcd307df2d96"
+    },
+    "no_native_Controller_or_Runtime_executed": true
+  },
+  "main_design": [
+    "initial60ms legal-contact/ready with<2mm forward progress requests this-attempt failure; not global immovability",
+    "latch original A failure/goal; retire PUSH command lease without deleting actuators, action/observation history or queues",
+    "genuine FF/delay-aware unload+brake with actual foot support; preserve native+strict200Hz protections",
+    "actual>=12N per foot capture plus unloaded hand and low actual speed/slip; hold.2s",
+    "fresh full-arm/scene sweep; original measured backoff envelope only if needed, actual retreat then recapture/replan",
+    "protected stow with actual issued derivative, original limits,10mrad reference interior and90%-40ms effort envelope including motor velocity/FF/latency",
+    "native1s+3s stable/verify semantics under a DISTINCT recovery outcome, never failed PUSH=Finish.success",
+    "original210D NN NAV actual movement on checked>=.25m route, actual travel>=.1m,3 fresh acquired control frames",
+    "arrival capture and new NAV-issued reference epoch/stow; current-goal real NAV_READY continuous.5s"
+  ],
+  "critical_non_equivalences": [
+    "Native Finish triggers only after box_settled and fails finish_box_left_goal when error>=.12m; unchanged success controller cannot be injected into failed A",
+    "Native brake only waits.5s and base speed<=.08 before arm path; lacks explicit hand-unload/capture admission required here",
+    "Native constructor arm_velocity_reference=zeros is not proof of zero actual last-issued reference derivative",
+    "Motor effort screen must account for target velocity and FF separately from measured dq, plus immutable per-axis delay prefix; clipping does not certify reserve",
+    "Original zero stow/NAV target lies on joint2/3 bounds; candidate[0,.01,-.01,0,0,0] is reference-only, not a path/dynamic certification",
+    "Current10Hz private catalog cannot replay60ms detector; new private50Hz recovery samples and200Hz guard evidence must be implemented"
+  ],
+  "forward_kinematics_scope": "Isolated FK/geometry candidate data copies may be evaluated; no candidate qpos/qvel may be committed back to the actual task world",
+  "proposed_budget": {
+    "episodes": 1,
+    "max_sim_seconds": 180,
+    "max_wall_seconds": 900,
+    "grace_seconds": 10,
+    "auxiliary_calibration_worlds": 1,
+    "auxiliary_max_sim_seconds": 10.5,
+    "max_payload_bytes": 134217728,
+    "reset_after_initial_main_allowed": 0,
+    "automatic_retry": false,
+    "training_runs": 0,
+    "max_recovery_private_log_bytes": 33554432,
+    "max_total_episode_bytes": 201326592
+  },
+  "outstanding_live_dependencies": [
+    "strict startup/NAV velocity and actual angle-range admission unresolved from native1kg run",
+    "early-abort command lease and single native termination query per tick not integrated",
+    "feedforward/delay-aware unloaded supported controller and immutable queue-prefix feasibility not implemented live",
+    "actual full-scene backoff/swept stow and fresh arrival reference epoch not implemented live",
+    "NAV inward arm adapter/current-goal3-tick/.5s READY proof not implemented live",
+    "private50Hz contact/progress/force/foot evidence and200Hz guard coverage logs not yet wired;10Hz catalog cannot replay60ms detector",
+    "independent new protocol/freeze/preflight/one-shot claim not prepared; no design dispatcher"
+  ],
+  "live_unload_stow_retreat_NAV_adapter_implemented": false,
+  "recovery_physics_pass": false,
+  "strict_startup_and_NAV_admission": false,
+  "selected_B_admission": false,
+  "controller_dispatchable": false,
+  "existing_native1kg_episode_not_replayed": true,
+  "existing_Isaac45a_episode_not_replayed": true,
+  "new_physics_starts": 0,
+  "actor_forwards": 0,
+  "WM_forwards": 0,
+  "WM_control_calls": 0,
+  "training_runs": 0,
+  "launch_command": null,
+  "PID": null,
+  "physical_dispatch_root_created": false,
+  "development_only": true,
+  "CPU_fixture_pass_is_not_recovery_or_world_model_efficacy_evidence": true,
+  "intermediate_logs_preserved": [
+    "local-cpu-v1.log",
+    "local-cpu-v2.log",
+    "local-cpu-final.log",
+    "formal/cpu-final.log",
+    "formal/cpu-closure.json"
+  ],
+  "intermediate_debugging": "Source inventory initially named a nonexistent native begin_retraction; corrected to actual _arm_step/__init__/CollisionGuard.segment. First formal packaging omitted replay_initial_contact_progress; added unchanged dependency. No physical start/threshold relaxation.",
+  "evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/mujoco-no-reset-recovery-design-20261024-v1",
+  "source_preflight_receipt": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/mujoco-no-reset-recovery-design-20261024-v1/formal/source-preflight-final.json",
+  "CPU_log": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/mujoco-no-reset-recovery-design-20261024-v1/formal/cpu-final-v2.log"
+}

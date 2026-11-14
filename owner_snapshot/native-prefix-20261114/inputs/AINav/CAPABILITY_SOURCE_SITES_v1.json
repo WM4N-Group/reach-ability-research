@@ -1,0 +1,72 @@
+{
+  "placement_catalogue": {
+    "path": "ainav/native/execution_judged_course.py",
+    "source_sha256": "22a10aad8c59cc79fb209ec5c6ce58f5cfd946bff1162762301834159e0f8fd9",
+    "function": "ExecutionJudgedFullCourse.intent_catalogue",
+    "start_line": 78,
+    "end_line": 96
+  },
+  "prepare_caller": {
+    "path": "ainav/native/execution_judged_course.py",
+    "source_sha256": "22a10aad8c59cc79fb209ec5c6ce58f5cfd946bff1162762301834159e0f8fd9",
+    "function": "ExecutionJudgedFullCourse._native_nav",
+    "start_line": 115,
+    "end_line": 125
+  },
+  "original_READY": {
+    "path": "ainav/native/execution_judge.py",
+    "source_sha256": "048ea275f10c3d5fac56a2fe163a65a462761ea72ebce35e8a35b8607c3206c1",
+    "function": "judge_entry",
+    "start_line": 62,
+    "end_line": 76
+  },
+  "placement_contract": {
+    "path": "ainav/native/full_verified_placement.py",
+    "source_sha256": "a6bad3159921a6d5a6feafea4eacc2852bb1dfddfb281b82c0cc0ecb488bc925",
+    "function": "placement_declaration",
+    "start_line": 15,
+    "end_line": 19
+  },
+  "actual_nav_factory": {
+    "path": "ainav/native/full_verified_placement.py",
+    "source_sha256": "a6bad3159921a6d5a6feafea4eacc2852bb1dfddfb281b82c0cc0ecb488bc925",
+    "function": "PlacementCourseFactory.__call__",
+    "start_line": 139,
+    "end_line": 153
+  },
+  "actual_registered_NAV": {
+    "path": "ainav/native/registered_compact_nav.py",
+    "source_sha256": "bd173adeb4d31f651f5d8d5a9c2e37c6129421aa21c39edd09e5e986ac501361",
+    "function": "RegisteredCompactNav.__init__",
+    "start_line": 71,
+    "end_line": 102
+  },
+  "original_support_goal": {
+    "path": "ainav/native/registered_compact_nav.py",
+    "source_sha256": "bd173adeb4d31f651f5d8d5a9c2e37c6129421aa21c39edd09e5e986ac501361",
+    "function": "validate_support_and_goal",
+    "start_line": 14,
+    "end_line": 23
+  },
+  "body_xy_controller": {
+    "path": "mujoco_zyh/nav_efficiency.py",
+    "source_sha256": "878fe53241784c6f2dfbd8125b0664a1607033460766847f0876c7f1c64d0efd",
+    "function": "EfficientNav.update",
+    "start_line": 32,
+    "end_line": 69
+  },
+  "original_stow": {
+    "path": "mujoco_zyh/stall_stow.py",
+    "source_sha256": "ffbab28c81de7909fb8092f28a8917782e6918cdad53bcacbb0925e31589a28f",
+    "function": "ProtectedStow.update",
+    "start_line": 295,
+    "end_line": 347
+  },
+  "public_observation": {
+    "path": "ainav/native/observation.py",
+    "source_sha256": "0db148c54b4697c0de196aba29755a620258b6ed6f6bb52c19432ccfefb4c5c6",
+    "function": "AcquisitionPublisher.publish",
+    "start_line": 12,
+    "end_line": 73
+  }
+}

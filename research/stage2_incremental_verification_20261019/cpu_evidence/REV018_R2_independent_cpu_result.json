@@ -1,0 +1,87 @@
+{
+  "schema": "rev018-v001r2-executable-delta-cpu-v1",
+  "source_manifest_sha256": "6ea9b36cb0f083cc8911c01e358b1586461eb332a99829d5f908e7473c7fbf6d",
+  "cases": [
+    {
+      "name": "manifest_layout_inherited_copies_and_transitive_helper",
+      "status": "PASS",
+      "members": 20,
+      "inherited_copy_hashes_matched": 8,
+      "old23_matrix_rerun": false,
+      "runtime_index_membership_114_inherited": true,
+      "adjacent_helpers_and_Git714_transitive_helper": true,
+      "local_iy_symlink": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/climb-swing-time-full-20261007-iy/train",
+      "remote_argv_mapping": true
+    },
+    {
+      "name": "actual_snapshot_collector_explicit_component_status",
+      "status": "PASS",
+      "actual_collector_code_executed_with_CPU_command_stubs": true,
+      "three_separate_calls": true,
+      "failed_apps_status_preserved_and_rejected": true
+    },
+    {
+      "name": "owned_PGID_python_c_exemption_reproduction",
+      "status": "CONFIRMED_BLOCKER",
+      "blocking_reproduction": true,
+      "owner_pgid": 100,
+      "live_descendant_pid": 101,
+      "collector_pid": 9,
+      "ordinary_owned_child_quiet": false,
+      "python_c_owned_child_quiet": true,
+      "python_c_owned_leader_quiet": true,
+      "GPU_apps_successfully_empty": true,
+      "source_line": 52
+    },
+    {
+      "name": "wait_returns_on_live_owned_python_c",
+      "status": "CONFIRMED_BLOCKER",
+      "blocking_reproduction": true,
+      "actual_wait_stopped_returned_before_live_owned_group_stopped": true,
+      "notification_calls": 0,
+      "sleep_calls": 0,
+      "shared_lock_touched": false
+    },
+    {
+      "name": "wall_origin_budget_and_guard_alias_static",
+      "status": "PASS",
+      "local_origin_before_gates": true,
+      "remote_origin_accounts_for_preparation": true,
+      "timeout_and_cleanup_reserve_present": true,
+      "budgets_preserved": true,
+      "guard_direct_submodule_alias_static": true,
+      "original_cfg_point60_and_event_point50_preserved": true,
+      "dynamic_SDK_success_not_asserted": true
+    },
+    {
+      "name": "baseline_raw_stop_reduction",
+      "status": "PASS",
+      "raw_failure": "first_step_only",
+      "baseline_first_step_event_achieved": true,
+      "raw_bytes_unchanged": true,
+      "current_goal_completed": false,
+      "spawn_mocked_no_SDK": true,
+      "PGID_TERM_KILL_mocked": true,
+      "returncode": 0
+    },
+    {
+      "name": "baseline_original_fault_not_relabelled",
+      "status": "PASS",
+      "raw_failure": "original_fault",
+      "baseline_first_step_event_achieved": false,
+      "raw_bytes_unchanged": true,
+      "current_goal_completed": false,
+      "spawn_mocked_no_SDK": true,
+      "PGID_TERM_KILL_mocked": true,
+      "returncode": 1
+    }
+  ],
+  "passed": 5,
+  "confirmed_counterexamples": 2,
+  "audit_errors": 0,
+  "SDK_started": false,
+  "physics_started": false,
+  "producer_suite_rerun": false,
+  "old23_pin_matrix_rerun": false,
+  "shared_lock_touched": false
+}

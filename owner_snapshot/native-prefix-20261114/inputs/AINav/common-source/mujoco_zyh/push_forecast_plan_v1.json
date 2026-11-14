@@ -1,0 +1,204 @@
+{
+  "schema": "piper-narrow-push-study-plan-v1",
+  "date": "2026-10-24",
+  "authority": "User: 收窄到这个问题，快速推进，采集训练并验证",
+  "purpose": "Pilot fixed-native-PUSH continuation box displacement, not full RSSM/planner, not source safety approval",
+  "cases": [
+    {
+      "id": "train-00",
+      "split": "train",
+      "mass_kg": 0.5,
+      "friction": 0.15,
+      "seed": 4100
+    },
+    {
+      "id": "train-01",
+      "split": "train",
+      "mass_kg": 0.5,
+      "friction": 0.45,
+      "seed": 4101
+    },
+    {
+      "id": "train-02",
+      "split": "train",
+      "mass_kg": 1.0,
+      "friction": 0.15,
+      "seed": 4102
+    },
+    {
+      "id": "train-03",
+      "split": "train",
+      "mass_kg": 1.0,
+      "friction": 0.45,
+      "seed": 4103
+    },
+    {
+      "id": "train-04",
+      "split": "train",
+      "mass_kg": 2.0,
+      "friction": 0.15,
+      "seed": 4104
+    },
+    {
+      "id": "train-05",
+      "split": "train",
+      "mass_kg": 2.0,
+      "friction": 0.45,
+      "seed": 4105
+    },
+    {
+      "id": "train-06",
+      "split": "train",
+      "mass_kg": 4.0,
+      "friction": 0.15,
+      "seed": 4106
+    },
+    {
+      "id": "train-07",
+      "split": "train",
+      "mass_kg": 4.0,
+      "friction": 0.45,
+      "seed": 4107
+    },
+    {
+      "id": "train-08",
+      "split": "train",
+      "mass_kg": 8.0,
+      "friction": 0.15,
+      "seed": 4108
+    },
+    {
+      "id": "train-09",
+      "split": "train",
+      "mass_kg": 8.0,
+      "friction": 0.45,
+      "seed": 4109
+    },
+    {
+      "id": "validation-00",
+      "split": "validation",
+      "mass_kg": 0.8,
+      "friction": 0.25,
+      "seed": 4110
+    },
+    {
+      "id": "validation-01",
+      "split": "validation",
+      "mass_kg": 3.0,
+      "friction": 0.35,
+      "seed": 4111
+    },
+    {
+      "id": "validation-02",
+      "split": "validation",
+      "mass_kg": 6.0,
+      "friction": 0.25,
+      "seed": 4112
+    },
+    {
+      "id": "validation-03",
+      "split": "validation",
+      "mass_kg": 10.0,
+      "friction": 0.35,
+      "seed": 4113
+    },
+    {
+      "id": "test-00",
+      "split": "test",
+      "mass_kg": 0.65,
+      "friction": 0.2,
+      "seed": 4114
+    },
+    {
+      "id": "test-01",
+      "split": "test",
+      "mass_kg": 1.5,
+      "friction": 0.4,
+      "seed": 4115
+    },
+    {
+      "id": "test-02",
+      "split": "test",
+      "mass_kg": 3.5,
+      "friction": 0.2,
+      "seed": 4116
+    },
+    {
+      "id": "test-03",
+      "split": "test",
+      "mass_kg": 6.5,
+      "friction": 0.4,
+      "seed": 4117
+    },
+    {
+      "id": "test-04",
+      "split": "test",
+      "mass_kg": 9.0,
+      "friction": 0.2,
+      "seed": 4118
+    },
+    {
+      "id": "test-05",
+      "split": "test",
+      "mass_kg": 12.0,
+      "friction": 0.4,
+      "seed": 4119
+    }
+  ],
+  "episodes": 20,
+  "max_main_sim_seconds_total": 700,
+  "auxiliary_calibration_worlds": 20,
+  "max_aux_sim_total": 210,
+  "max_collection_wall_seconds": 1800,
+  "per_case_wall_s": 65,
+  "grace_seconds": 10,
+  "automatic_retry": false,
+  "reset_after_initial_per_case": 0,
+  "max_dataset_dynamic_bytes": 1073741824,
+  "model_training_runs": 1,
+  "max_closed_form_model_fits": 8,
+  "max_training_wall_seconds": 300,
+  "model": "Ridge-regression supervised fixed-skill consequence baseline; causal public RGBD/proprio plus ordered full past issued/delayed motor-command projection. NOT M/RSSM efficacy.",
+  "horizons_s": [
+    0.4,
+    0.8
+  ],
+  "history_frames": 8,
+  "query_stride_visual_frames": 2,
+  "target": "actual box world displacement projected into actual query body XY; only observed native PUSH continuation",
+  "gate": "Every query-to-label physical step within unchanged joint range/speed; same PUSH NN phase; no retract/native safety-stop/padding across endpoint. Prefix violations reported, never certified safe.",
+  "minimum_eligible_queries": {
+    "train": 60,
+    "validation": 15,
+    "test": 20
+  },
+  "minimum_eligible_episodes": {
+    "train": 3,
+    "validation": 2,
+    "test": 3
+  },
+  "baselines": [
+    "zero displacement",
+    "train-only mean per horizon",
+    "public RGBD ego-compensated constant velocity",
+    "public kinematics ridge"
+  ],
+  "selection": "Episode-balanced train weights, train-only scaling; validation-only episode-balanced RMSE alpha/baseline selection. Test evaluated once after checkpoint freeze, episode-cluster bootstrap plus moving/stationary subsets.",
+  "physics_conditions_as_model_input": false,
+  "case_ids_roles_private": true,
+  "unexecuted_branches_have_no_labels": true,
+  "late_unsafe_or_terminated_windows": "record explicit censor reason, never zero-label them",
+  "same_appearance_all_conditions": true,
+  "source_pin": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "no_A_B_C_identity_or_alias_changes": true,
+  "strict_limits_not_relaxed": true,
+  "training_authority_scope": "Only newly collected plan cases; old source training_allowed=false unchanged; train split of new release only, never old composite episodes",
+  "max_new_static_model_cache_bytes": 1073741824,
+  "review_videos_case_ids": [
+    "train-00",
+    "train-09",
+    "test-05"
+  ],
+  "review": "All episodes retain actual complete world states and synchronized RGBD; representative real-case full-scene videos with reviewer-only physics labels, not model inputs.",
+  "primary_comparison": "Validation-selected best learned model (public kinematics ridge or richer full-history ridge) vs validation-selected strongest nonlearned baseline. Both selections frozen before ONE test read. Richer full model vs kinematics is separate complexity ablation."
+}

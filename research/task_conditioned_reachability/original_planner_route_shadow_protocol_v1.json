@@ -1,0 +1,14 @@
+{
+  "schema": "original-planner-route-shadow-development-v1",
+  "role": "synthetic_geometry_input_to_original_Astar_NOT_physical_NAV_episode",
+  "state_pose_query": "source nominal initial xy=(0,0),yaw=0, explicit independent h=.28/.33/.38 conditions; no claimed settled stance",
+  "task_geometry": "same source-bound box center=(1.1,0,.1),size=(1.2,1.2,.2),yaw0; no excluded target obstacle",
+  "planner": "original OraclePlanner._path_between/default GridConfig and original Capability footprint",
+  "cost": "sum Euclidean segment lengths of ORIGINAL returned grid-cell-center path / 1m; no straight-line substitution or yaw-cost invention",
+  "cost_limitations": ["cell-center discretization", "no exact endpoint connector certification", "no yaw effort cost", "no dynamic/ground/actual tracking guarantee"],
+  "candidate_source": "closed three-height study pose/path records, reused without FK/IK; 25 unique xy costs shared across yaw and states",
+  "ablation_modes": ["nav_only", "task_ik", "endpoint", "path", "path_margin", "path_margin_gate"],
+  "resources": {"max_unique_Astar_calls": 25, "max_cpu_wall_s": 10, "FK_IK_queries": 0, "physics_steps": 0, "actor_runs": 0},
+  "execution_authorized": false,
+  "completion": "save original paths/costs, route exclusions, all static shadow selections and exact original NAV type construction; unknown physical outcomes remain null"
+}

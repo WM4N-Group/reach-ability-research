@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "source_manifest_sha256": "6ea9b36cb0f083cc8911c01e358b1586461eb332a99829d5f908e7473c7fbf6d",
+  "actual_SDK_AppLauncher": true,
+  "AppLauncher_constructor_calls": 1,
+  "counts": {
+    "environments_created": 0,
+    "physics_steps": 0,
+    "actor_forwards": 0,
+    "actor_loads": 0
+  },
+  "forbidden_attempts": [],
+  "process_returncode": 0,
+  "remote_exit_code": 0,
+  "error": null,
+  "result": {
+    "path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env-result.original.json",
+    "sha256": "959c9bf2e3113a428622edc4d6ecc88c06890525fce3940484970132b5828170"
+  },
+  "log": {
+    "path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env.original.log",
+    "sha256": "43297aedafedad965dd4877f67b7cb756ecaad2d8294bf25508b4806e7768a70"
+  },
+  "wall_elapsed_s": 24.91299970098771,
+  "SDK_environment": "one explicitly approved additional AppLauncher of repaired v001r2 in independent sandbox",
+  "remote_evidence": "/mnt/yuanyue/data/go2-piper/sim2sim-current-20261008-a/validation-sandbox-dev018-old714-r2/extra-sdk0env-20261019-a",
+  "physical_source_start": false,
+  "source_deployed_formally": false,
+  "RUN_authorized": false
+}

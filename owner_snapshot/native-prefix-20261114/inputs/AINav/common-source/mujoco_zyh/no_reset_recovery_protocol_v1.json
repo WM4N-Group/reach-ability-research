@@ -1,0 +1,241 @@
+{
+  "schema": "piper-mujoco-no-reset-recovery-design-v1",
+  "status": "DESIGN_CPU_SCREEN_ONLY_NOT_DISPATCHABLE",
+  "owner": "world_models",
+  "upstream_commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "proven_reference": {
+    "backend": "Isaac",
+    "source_commit": "45a55b57c5fd2442258ffc92889f09740b19815a",
+    "reset0_NAV_READY_time_s": 63.4,
+    "not_replayed": true,
+    "not_MuJoCo_evidence": true
+  },
+  "native_MuJoCo_reference": {
+    "source_commit": "04b5170a0104090cf247751f3db5f06ca31730af",
+    "role": "one already-exposed native1kg success-route engineering episode",
+    "sim_seconds": 118.96,
+    "recovery_after_failure_validated": false
+  },
+  "dispatchable": false,
+  "controller_implemented": false,
+  "physical_dispatch_started": false,
+  "training_authorized": false,
+  "current_attempt_failure_only": true,
+  "global_immovability_claim": false,
+  "object_identity": {
+    "A": {
+      "opaque_id": "light",
+      "scene_key": "box",
+      "MuJoCo_body": "push_box",
+      "mass_kg_private": 20.0
+    },
+    "B": {
+      "opaque_id": "middle",
+      "scene_key": "wm_object_middle",
+      "mass_kg_private": 0.5
+    },
+    "C": {
+      "opaque_id": "heavy",
+      "scene_key": "wm_object_heavy",
+      "mass_kg_private": 1.0
+    }
+  },
+  "invariants": {
+    "same_task_world_and_monotonic_physics_clock": true,
+    "no_physical_reset_after_initial": true,
+    "no_qpos_qvel_object_pose_or_velocity_writes": true,
+    "no_actuator_queue_clear_or_delay_rewrite": true,
+    "preserve_failed_A_original_goal_outcome_and_history": true,
+    "no_native_settled_or_success_forgery": true,
+    "no_global_scene_alias_or_pose_exchange": true,
+    "all_actual_strict_limits_and_native_hard_guards_retained": true,
+    "no_new_or_retrained_skills": true,
+    "WM_training_forward_control_zero": true,
+    "same_control_and_RGBD_causal_stream": true,
+    "no_old_completed_root_or_claim_reuse": true
+  },
+  "boundaries": {
+    "contact_window_s": 0.06,
+    "minimum_progress_m": 0.002,
+    "unloaded_force_N": 3.0,
+    "support_capture_min_foot_N": 12.0,
+    "capture_hold_s": 0.2,
+    "body_clearance_m": 0.035,
+    "other_clearance_m": 0.002,
+    "arm_reference_speed_rad_s": 0.45,
+    "arm_reference_acceleration_rad_s2": 1.0,
+    "inner_joint_reference_margin_rad": 0.01,
+    "effort_prediction_reserve": 0.9,
+    "effort_prediction_horizon_s": 0.04,
+    "native_arm_effort_hard_ratio": 0.98,
+    "uncaptured_bridge_max_s": 0.12,
+    "unload_brake_max_s": 1.0,
+    "stow_stable_s": 1.0,
+    "stow_verify_s": 3.0,
+    "NAV_READY_hold_s": 0.5,
+    "minimum_real_NAV_travel_m": 0.1,
+    "minimum_registered_NAV_route_m": 0.25,
+    "minimum_distinct_NAV_observations": 3
+  },
+  "state_edges": {
+    "MONITOR_PUSH": [
+      "SOFT_ABORT_LATCH",
+      "NATIVE_SUCCESS_SEPARATE",
+      "FAIL_CENSOR"
+    ],
+    "SOFT_ABORT_LATCH": [
+      "UNLOAD_BRAKE",
+      "FAIL_CENSOR"
+    ],
+    "UNLOAD_BRAKE": [
+      "SUPPORT_CAPTURE",
+      "FAIL_CENSOR"
+    ],
+    "SUPPORT_CAPTURE": [
+      "PLAN_STOW",
+      "FAIL_CENSOR"
+    ],
+    "PLAN_STOW": [
+      "SHORT_RETREAT",
+      "PROTECTED_STOW",
+      "FAIL_CENSOR"
+    ],
+    "SHORT_RETREAT": [
+      "RECAPTURE_REPLAN",
+      "FAIL_CENSOR"
+    ],
+    "RECAPTURE_REPLAN": [
+      "PROTECTED_STOW",
+      "FAIL_CENSOR"
+    ],
+    "PROTECTED_STOW": [
+      "STOW_VERIFY",
+      "FAIL_CENSOR"
+    ],
+    "STOW_VERIFY": [
+      "NAV_HANDOFF_WARMUP",
+      "FAIL_CENSOR"
+    ],
+    "NAV_HANDOFF_WARMUP": [
+      "NATIVE_NAV_MOVE",
+      "FAIL_CENSOR"
+    ],
+    "NATIVE_NAV_MOVE": [
+      "ARRIVAL_CAPTURE_STOW",
+      "FAIL_CENSOR"
+    ],
+    "ARRIVAL_CAPTURE_STOW": [
+      "FINAL_READY_HOLD",
+      "FAIL_CENSOR"
+    ],
+    "FINAL_READY_HOLD": [
+      "RECOVERED_NAV_READY",
+      "FAIL_CENSOR"
+    ],
+    "RECOVERED_NAV_READY": [],
+    "NATIVE_SUCCESS_SEPARATE": [],
+    "FAIL_CENSOR": []
+  },
+  "states": {
+    "MONITOR_PUSH": "Original native hard guards first; native success stays on its original path. Reuse continuous60ms legal-contact/motion_ready/<2mm initial-progress monitor, near-goal excluded; Oracle X only, never WM input.",
+    "SOFT_ABORT_LATCH": "Lock failed attempt and original A goal/outcome/history. Retire PUSH forward/arm force authority at this control boundary before another PUSH actor command. Do not clear queues/caches or claim box_settled.",
+    "UNLOAD_BRAKE": "Measured full issued+delayed motor epoch, raw-torque/FF-aware compliant arm PD and bounded native-support QP handoff. No zero-action=PUSH stop assumption. Actual contact pattern, no np.ones(4) false support. Positive4-foot bridge at most120ms; genuine unload/brake deadline1s.",
+    "SUPPORT_CAPTURE": "Actual hand legal contact false, selected and all-candidate hand loads<3N, box speed<.02/angular<.1, base speed<.02/angular<.1/tilt<.1, four normal loads>=12N, actual contact-point slip<.03; continuous.2s. Foot-center rolling velocity is not contact slip.",
+    "PLAN_STOW": "Reuse CollisionGuard.segment for full-arm versus all compiled collision geoms (including A/B/C/platform), and separately prove body/leg retreat corridor under same-boundary actual configuration. Keep35mm body/2mm other margins. Direct stow only with fresh clear sweep; otherwise one measured physical retreat.",
+    "SHORT_RETREAT": "Reuse MeasuredBackoff(.63m standoff,.05m/s requested,max.15m/s measured,.18m travel,8s). Request is intent only, NOT negative PUSH-gait validation. Independently implement native-support wrench/body translation from actual state; actual backoff required.",
+    "RECAPTURE_REPLAN": "Physically brake and recapture after retreat, remeasure/reseed from actual commands and velocity, repeat full fresh swept-path proof. No old READY/path receipt; no unbounded retreat retries.",
+    "PROTECTED_STOW": "Original native reverse route is a geometric candidate only. Explicit .45rad/s,1rad/s2 references with actual nonzero issued derivative, measured q/dq, real FF/delay and unchanged torque/geometry guards. Candidate interior arm target must be validated, not blindly arm_pose=zeros.",
+    "STOW_VERIFY": "Measured arm path complete/pose error<.04rad/arm speed<.12rad/s, supported/unloaded/strict limits. Preserve native1s stable +3s verification semantics under distinct failure-recovery flags, not Finish.success=PUSH success.",
+    "NAV_HANDOFF_WARMUP": "Fresh software NAV goal/reference epoch from actual last issued commands; original actor/leg policy frozen. Source per-skill history initialization declared, but require3 actual consecutive acquired control boundaries. Admitted inward arm safety adapter needed; motor queue and full observer/action streams continue.",
+    "NATIVE_NAV_MOVE": "Run original frozen210D NAV on checked route>=.25m and actual progress>=.1m; original position/yaw/stop gates apply. No pose writes, zero-idle-as-NAV, or world-origin/scene alias shift.",
+    "ARRIVAL_CAPTURE_STOW": "Native arrival brake; new arrival reference epoch from last two actually issued NAV targets and real velocity. Recheck swept arm path and bounded stow from actual arrival pose; do not reuse old PUSH seeds.",
+    "FINAL_READY_HOLD": "Fresh current-goal native arrived gates + actual stowed/support/unloaded/strict limits continuously.5s after arrival stow. Any original hard failure stops; do not certify READY from model score or stale receipt.",
+    "RECOVERED_NAV_READY": "Only recovery success; A native_PUSH_success remains false. Fresh RGBD may follow, but B PUSH is not authorized by this protocol.",
+    "NATIVE_SUCCESS_SEPARATE": "Unmodified successful native PUSH/exit branch; never relabel a failed attempt.",
+    "FAIL_CENSOR": "Original hard stop/unsafe prefix/nonfinite/stale receipt/empty reference intersection/timeout: stop the physical loop and preserve actual outcome/data. No auto retry, no force fold after hard stop."
+  },
+  "priority": [
+    "every200Hz actual native+strict limits/velocity/collision/effort guard",
+    "one native termination/predicate sample per actual50Hz boundary, not twice",
+    "native success path",
+    "new initial-progress soft abort",
+    "bounded recovery stage admission"
+  ],
+  "live_adapter_requirements": [
+    "Pre-PUSH startup strictly admitted: current native zero-arm run already has real angle/speed exceedances; no claim that startup is safe",
+    "Intercept native PUSH actor before next command after failure latch; do not run Machine.update plus a second stateful termination query",
+    "Do not instantiate native FinishController unchanged at failed contact: box_settled-only trigger, no explicit unload gate, assumes planned4-foot support",
+    "Full18-axis immutable delayed command prefix must remain viable; prospective effort uses raw PD+velocity target+FF, not clipped torque alone",
+    "Source default arm zero lies on joint2 lower/joint3 upper bounds; 10mrad inward candidate needs fresh sweep and registered NAV arm adapter, not changed physical state",
+    "Actual all-candidate contact and full-scene swept guards, bounded support/backoff executor, actual arrival-stow epoch and fresh READY required",
+    "Native Runtime/observer/200Hz action stream source freeze and same-episode video; preserve native failed PUSH and strict-limit labels separately",
+    "Recovery must have a separate session/outcome enum, NOT machine.finish.phase=success; otherwise native Machine would record failed PUSH as successful",
+    "Initial-contact60ms/2mm is an inherited exposed engineering candidate, not calibrated MuJoCo or hardware threshold; later stalls require another protocol",
+    "No repeated PushSettled/LowPosture calls to manufacture elapsed time; substep raw flags and original predicate snapshots have one sampling owner",
+    "No fold/NAV command until current measured startup and immutable queue prefix are inside registered domains; failed design screens end/censor rather than restart PUSH",
+    "Native FinishController.command explicitly fails finish_box_left_goal if A is>=.12m from original goal; new failure-exit branch must replace that SUCCESS dependency with actual unloaded/stationary safety gates, never change A goal",
+    "Native FinishController seeds arm_velocity_reference=zeros. New entry must preserve actual position/velocity/gain/FF epoch and jointly slew FF/reference while keeping raw effort feasible, not just copy actual q and zero reference velocity",
+    "Native CollisionGuard already enumerates arm-versus-all compiled collision geoms, so reuse it with the research model; it is not a full-body/leg backoff sweep by itself",
+    "Add private50Hz recovery measurements and200Hz instantaneous guard coverage/event records; current10Hz private catalog cannot independently replay a60ms failure detector. Do not increase RGBD frequency or leak these fields into WM input",
+    "Keep new NAV arm safety adapter observation semantics explicit: actual issued/delayed commands remain in the data stream, raw actor proposal and native policy previous_action are not silently interchanged"
+  ],
+  "max_recovery_without_NAV_s": 45.0,
+  "max_NAV_phase_s": 60.0,
+  "proposed_budget_NOT_DISPATCHED": {
+    "episodes": 1,
+    "max_sim_seconds": 180,
+    "max_wall_seconds": 900,
+    "grace_seconds": 10,
+    "auxiliary_calibration_worlds": 1,
+    "auxiliary_max_sim_seconds": 10.5,
+    "max_payload_bytes": 134217728,
+    "reset_after_initial_main_allowed": 0,
+    "automatic_retry": false,
+    "training_runs": 0,
+    "max_recovery_private_log_bytes": 33554432,
+    "max_total_episode_bytes": 201326592
+  },
+  "auxiliary_calibration": "Only original separately-budgeted source calibration world, never a recovery snapshot or training episode; main world untouched",
+  "acceptance": [
+    "genuine A attempt fails before native hard stop and keeps original goal/outcome",
+    "real unload, brake, supported capture, any necessary actual retreat, full protected stow",
+    "original frozen NN NAV actually moves and arrives; arrival reference re-captured and arm stowed",
+    "current-goal NAV_READY remains actually true.5s; independent native200Hz/strict/queue/RGBD audit",
+    "no B/CLIMB/40cm/full-task/WM efficacy claim"
+  ],
+  "completion_status": {
+    "physics_admission": false,
+    "strict_limit_admission": false,
+    "live_binding": false,
+    "selected_B_authorized": false
+  },
+  "new_physics_starts": 0,
+  "PID": null,
+  "launch_command": null,
+  "WM_forwards": 0,
+  "training_runs": 0,
+  "WM_control_calls": 0,
+  "measurement_semantics": {
+    "contact_monitor_rate_hz": 50,
+    "native_and_strict_hard_guard_rate_hz": 200,
+    "RGBD_rate_hz": 10,
+    "all_candidate_hand_force_N": "sum of individual contact-force magnitudes over all relevant hand links/candidates; never norm of cancelling resultant",
+    "normal_foot_forces_N": "actual contact-frame normal loads, not planned support mask",
+    "foot_slip": "actual tangential velocity at loaded contact points, not sphere-foot center velocity",
+    "clock": "one monotonic main-world clock, not resettable per-skill episode_length_buf",
+    "reference_epoch": "two actual successive issued MotorCommands and their native timestamps, real q/dq, complete5-command queue/per-axis delays; no zero-velocity seed",
+    "recovery_executor_private_sample_hz": 50,
+    "instantaneous_guard_coverage_hz": 200,
+    "private_log_fields": [
+      "actual selected-body pose/velocity and original goal",
+      "legal contact/native flags sampled once per control tick",
+      "per-candidate/per-hand-link contact-force magnitudes",
+      "four measured foot normal loads and actual contact-point slip",
+      "current stage/authority/reference epoch and raw MotorCommand gains/FF",
+      "actual queue prefix and per-axis lag receipt",
+      "fresh current-goal NAV/arrival receipt"
+    ],
+    "private_logs_never_model_input": true,
+    "existing_RGBD10Hz_catalog_insufficient_for_60ms_detector_replay": true
+  }
+}

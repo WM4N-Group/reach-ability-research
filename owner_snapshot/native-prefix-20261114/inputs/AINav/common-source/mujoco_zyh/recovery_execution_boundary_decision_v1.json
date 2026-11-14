@@ -1,0 +1,36 @@
+{
+  "schema": "recovery-execution-boundary-major-decision-v1",
+  "status": "AWAIT_USER_CONFIRMATION_BEFORE_CHANGING_PUSH_CONTROL",
+  "basis": {
+    "known_condition": "20kg probe / former train-5 geometry and seed, NOT frozen research A/B/C",
+    "exit_time_s": 15.560000000001033,
+    "exit_base_speed_m_s": 0.14756101909761932,
+    "terminal_time_s": 15.570000000001034,
+    "terminal_base_speed_m_s": 0.15045016681476936,
+    "unchanged_recovery_speed_gate_m_s": 0.15,
+    "all_axis_command_delay_s": 0.02,
+    "no_new_recovery_command_applied_before_observed_speed_refusal": true,
+    "all_motor_channels_bitwise_equal_to_known_development_prefix": true
+  },
+  "logical_scope": "For THIS measured initial state and immutable queued commands, new motor controls issued only after failure cannot alter the observed first10ms plant trajectory before20ms latency. Keeping the same exit/gates therefore cannot avoid THIS refusal merely by changing post-failure motor control.",
+  "not_claimed": [
+    "Not every20kg box or seed is unrecoverable",
+    "Measured instantaneous acceleration is not a certified future bound",
+    "No proof that a new PUSH governor makes recovery universally safe"
+  ],
+  "options": {
+    "A": {
+      "name": "Preserve original PUSH execution; domain-limited recovery",
+      "effect": "Keep original control and all failures. Recover only admitted domain; outside-domain episodes censor. Do not claim general recovery/full-task acceptance."
+    },
+    "B": {
+      "name": "Frozen skill weights plus explicit protection/braking layer DURING PUSH",
+      "effect": "Change the executed option protocol while PUSH still owns authority, before its immutable pending commands make recovery infeasible. Needs separate source/protocol/data-distribution/label and new heldout validation; all old failures/goals/history preserved, no threshold relaxation."
+    }
+  },
+  "recommendation": "B if the requirement is broader continuous no-reset recovery; A if strict original-PUSH execution and narrow fixed-option prediction remain the priority.",
+  "governor_implemented": false,
+  "governor_training_or_physics_dispatched": false,
+  "new_physics_or_training_before_decision_allowed": false,
+  "old_gates_goals_data_roles_and_failures_must_remain": true
+}

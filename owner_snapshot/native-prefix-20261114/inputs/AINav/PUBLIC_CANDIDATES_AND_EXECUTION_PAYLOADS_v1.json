@@ -1,0 +1,97 @@
+{
+  "schema": "AINav-public-reference-finite-preparation-candidate-examples-v1",
+  "role": "CLOSED_SEEN_DEV_PUBLIC_MAP_SCHEMA_EXAMPLE_NOT_OUTCOME_FIT",
+  "public_observation_sha256": "dc45bd0a684436070cd0a385d6c40c5f4ada1c2c8637559ae6c0e420adbdba3d",
+  "used_fields": [
+    "declared_map.anchors.target_ref",
+    "declared_map.anchors.position_xyz_m"
+  ],
+  "not_used": [
+    "private_catalog",
+    "actual base qpos",
+    "private feet/forces",
+    "future native stop report",
+    "measured successor cost"
+  ],
+  "registered_CLIMB_flag_source": "ORIGINAL_STATIC_HOST_REFERENCE_DECLARATION_NOT_DYNAMIC_ADMISSION",
+  "candidates": [
+    {
+      "candidate_id": "original",
+      "target_ref": "cuboid-2:upper-entry",
+      "original_approach_xy": [
+        0.050000000000000044,
+        -2.0
+      ],
+      "NAV_goal_xy": [
+        0.050000000000000044,
+        -2.0
+      ],
+      "source_surface_height_m": 0.0,
+      "lateral_offset_m": 0.0,
+      "information_source": "PUBLIC_REGISTERED_TASK_REFERENCE_ONLY",
+      "original_CLIMB_READY_goal_unchanged": true,
+      "actual_native_admission_or_motor_difference_proven": false,
+      "predicted_current_cost_s": null,
+      "predicted_complete_successor_cost_s": null,
+      "physical_execution_authorized": false
+    },
+    {
+      "candidate_id": "lateral_plus_0p04",
+      "target_ref": "cuboid-2:upper-entry",
+      "original_approach_xy": [
+        0.050000000000000044,
+        -2.0
+      ],
+      "NAV_goal_xy": [
+        0.050000000000000044,
+        -1.96
+      ],
+      "source_surface_height_m": 0.0,
+      "lateral_offset_m": 0.04,
+      "information_source": "PUBLIC_REGISTERED_TASK_REFERENCE_ONLY",
+      "original_CLIMB_READY_goal_unchanged": true,
+      "actual_native_admission_or_motor_difference_proven": false,
+      "predicted_current_cost_s": null,
+      "predicted_complete_successor_cost_s": null,
+      "physical_execution_authorized": false
+    },
+    {
+      "candidate_id": "lateral_minus_0p04",
+      "target_ref": "cuboid-2:upper-entry",
+      "original_approach_xy": [
+        0.050000000000000044,
+        -2.0
+      ],
+      "NAV_goal_xy": [
+        0.050000000000000044,
+        -2.04
+      ],
+      "source_surface_height_m": 0.0,
+      "lateral_offset_m": -0.04,
+      "information_source": "PUBLIC_REGISTERED_TASK_REFERENCE_ONLY",
+      "original_CLIMB_READY_goal_unchanged": true,
+      "actual_native_admission_or_motor_difference_proven": false,
+      "predicted_current_cost_s": null,
+      "predicted_complete_successor_cost_s": null,
+      "physical_execution_authorized": false
+    }
+  ],
+  "execution_payloads": [
+    {
+      "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+      "target_ref": "cuboid-2:upper-entry",
+      "candidate_id": "original"
+    },
+    {
+      "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+      "target_ref": "cuboid-2:upper-entry",
+      "candidate_id": "lateral_plus_0p04"
+    },
+    {
+      "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+      "target_ref": "cuboid-2:upper-entry",
+      "candidate_id": "lateral_minus_0p04"
+    }
+  ],
+  "actual_native_continuous_domain_proven": false
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "reach-capture32-local-milestone-v1",
+  "purpose": "Reviewer-owned data checker + contract + lightweight evidence index, not a controller/replay implementation",
+  "repository_head_before": "0281653bc9eccc4c03226a49f383147abaa943c0",
+  "branch_before": "feature/go2-piper-reachability-p0",
+  "worktree_porcelain_before": "",
+  "index_diff_before": "",
+  "clean_before": true,
+  "user_authorized_operation": "One explicit-path local commit only; no push",
+  "source_files_sha256_before": {
+    "replay_checker.py": "a6b9703191078486edecf5a4d4bd9e68378c2bb8eb8014d25cb5eb6b5cccd37d",
+    "audit_delivered_npz.py": "db09b50165d5e4fba85dc3a8c2fefe7bbcc595b7e9f5ab619b7968246c94c932",
+    "test_checker.py": "ebaf005cc48194868058a5285a6d88255bb5b54502d79571dea9b7123fe9f413",
+    "input_contract.json": "4671265ad219f3018be4c97b39d32e65757e6398e0ad8e912c38f4c7fd623f20"
+  },
+  "historical_review_state": "Accepted exact recorded masks/return and CPU decomposition; no native CUDA float equality or physical/control authorization",
+  "scope": "New research/capture32_replay_verification subtree only; no old dirty files/logs/raw/NPZ/media/weights/producer code",
+  "validation": {
+    "stdlib_unit_tests": 24,
+    "stdlib_unit_tests_passed": 24,
+    "ported_NPZ_CLI_data_only_check": "PASS; existing fcf13 inputs only, matches prior own numerical/mask/return/dependency results",
+    "missing_evidence_CLI": "PASS exit2 with no output or fallback computation",
+    "planner_or_FK_IK_or_SDK_GPU_physical_runs": 0,
+    "external_evidence_modified": false,
+    "NumPy_test_interpreter": "existing isolated go2-arx5-nav Python; no installation",
+    "porting_fix": "Restored copy import needed by the synthetic test fixture after initial unit test failure; no validation predicate changed."
+  }
+}

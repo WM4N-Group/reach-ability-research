@@ -1,0 +1,107 @@
+{
+  "schema": "s2-rev020-bounded-offline-decision-review-v1",
+  "reviewer": "verification",
+  "independent": true,
+  "at": "2026-10-19T19:12:22.887654+08:00",
+  "decision": "CONFIRMED_RECORDED_PREFIX_MATCH_RUNTIME_BUDGET_PRIORITY",
+  "scope": "Two actual input SHA/indices, recorded95 event prefix and seven common checkpoint fields, existing SDK timing only; no historical success re-audit or experiment design.",
+  "inputs": {
+    "current_progress": {
+      "path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/old714_v001r3_run_terminal_20261019/originals/attempt/progress.json",
+      "sha256": "726cdf222814be219daa7d734df7e6cca3224dfd30afda10cdc4c5e13c799ed5",
+      "matches_REV019_independent_remote_copy": true
+    },
+    "old_v13_report": {
+      "path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/integrated-course-20261012-v13/full-01/report.json",
+      "sha256": "9c837273663e8a28c00531f1c0b2597a486062a6b09146b3388e36f94bda3a60"
+    }
+  },
+  "event_prefix": {
+    "type_sensitive_all_JSON_values_equal": true,
+    "event_array_order_and_sim_times_equal": true,
+    "difference_count": 0,
+    "current_canonical_prefix_sha256": "88c2af43cf73bba8b6d5410aa67fa655a9aa346b421658ccf428c403c2f234b3",
+    "old_canonical_prefix_sha256": "88c2af43cf73bba8b6d5410aa67fa655a9aa346b421658ccf428c403c2f234b3"
+  },
+  "checkpoint": {
+    "current_step_label": 15500,
+    "current_sim_label_s": 310.0,
+    "old_pointer": "/trace/3100",
+    "common_keys": [
+      "phase",
+      "base",
+      "box_speed_mps",
+      "base_speed_mps",
+      "hand_box_contact",
+      "platform_feet",
+      "climb_diagnostics"
+    ],
+    "all_seven_type_sensitive_equal": true,
+    "diagnostics_null_is_not_extra_state_proof": true
+  },
+  "existing_timing": {
+    "scene_creation_s": 4.003728,
+    "scene_line": 61,
+    "simulation_start_s": 6.034743,
+    "simulation_start_line": 69,
+    "combined_explicit_nonterrain_time_s": 10.038471,
+    "terrain_nested_s": 0.044094,
+    "terrain_not_added_again": true,
+    "after_sim_start_warning_line": 70,
+    "after_sim_start_warning_UTC": "2026-10-19T10:17:06+00:00",
+    "stop_line": 211,
+    "stop_UTC": "2026-10-19T10:55:22Z",
+    "subsequent_window_s": 2296.0,
+    "these_completed_creation_spans_cannot_account_for_later_2296s": true,
+    "entire_2296s_attributed_to_action_loop": false,
+    "CPU_GPU_actor_or_planner_bottleneck_identified": false
+  },
+  "decision_boundary": {
+    "stop_treating_control_wiring_or_physics_parameters_as_established_root_cause": true,
+    "no_control_or_loading_patch_supported_by_this_comparison": true,
+    "prioritize_runtime_wall_budget_and_throughput_question": true,
+    "all_possible_unrecorded_control_problems_ruled_out": false,
+    "success_with_more_wall_proved": false,
+    "bounded_attempt_outcome": "FAILED_WALL_TIMEOUT_BASELINE_NOT_COMPLETED",
+    "attempts": 1,
+    "successes": 0,
+    "included_in_success_rate_denominator": true
+  },
+  "unrecorded_suffix_or_NAV_success_proved": false,
+  "continuous_full_state_equivalence_proved": false,
+  "budget_failure_preserved": true,
+  "REV019_success_rate_accounting": {
+    "attempts": 1,
+    "successes": 0,
+    "included_in_success_rate_denominator": true,
+    "excluded_as_censored_or_unknown": false
+  },
+  "control_or_loading_patch_supported": false,
+  "specific_performance_bottleneck_identified": false,
+  "source_or_producer_originals_modified": false,
+  "historical_success_audit_repeated": false,
+  "producer_script_executed": false,
+  "new_framework_or_simulation_designed": false,
+  "SDK_or_physics_or_remote_calls": 0,
+  "new_source_or_RUN_authorized": false,
+  "details_file": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_020_old714_offline_prefix/README.md",
+  "input_sha256": {
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/s2_dev020_offline_prefix_delivery.json": "24e53a5408de4fa6ef6c14c54906b6f5b18f8efb77ba77e937c3c081de6abe63",
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev020_offline_comparison/DEV020_CN.md": "682237f751b896eb4738c57b0fde56620a34dc6fa029b9382a12882780a60e42",
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev020_offline_comparison/comparison.json": "096bc2a95e93c6aab2e636890ec087661430df4b6ebabe28c81e258dd47ea57a",
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev020_offline_comparison/evidence-manifest.json": "1ba669d620af972e62281b4904a7c336169da055b940ec5111e9f053db7e8820",
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/old714_v001r3_run_terminal_20261019/originals/attempt/progress.json": "726cdf222814be219daa7d734df7e6cca3224dfd30afda10cdc4c5e13c799ed5",
+    "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/integrated-course-20261012-v13/full-01/report.json": "9c837273663e8a28c00531f1c0b2597a486062a6b09146b3388e36f94bda3a60",
+    "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/old714_v001r3_run_terminal_20261019/originals/SDK.original.log": "b370f44c642c61402a3531c9507e697de986535b1849148204fc46461d7cc2b5"
+  },
+  "evidence_sha256": {
+    "README.md": "7aab21931b2a6471831dc70ca57884739f6e75460622a9d2785026f77cd1184b",
+    "comparison_result.json": "67487d9c5f0c880f9efee167be062bab40cce47d764a79c7fa7fac67aa8bded0",
+    "parser_correction.json": "cb1b3de3a97dcba490de669dec40977778b3c96f58391f2803e894d456a1f93f",
+    "verification.initial.stderr.log": "17d5010e56a310413bf2a8c38b2619b63c78e9f3d53bec3c1ca891aa81a43069",
+    "verification.log": "90d8c8dfd7937115652800ebec69ba2679e5d42d33d3a47ccedae7c38dc102b7",
+    "verification.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verify_offline_prefix.initial_parser.py": "f87f7475638eef473b20139a8f1f3b43cf30c2206b363d71754372d8c7a788a7",
+    "verify_offline_prefix.py": "72f1699edcefc1d54d9f9a04aa185d2c5bc1f659a8f31663fb475719f68267f6"
+  }
+}

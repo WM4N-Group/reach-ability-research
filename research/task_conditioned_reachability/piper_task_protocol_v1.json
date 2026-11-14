@@ -1,0 +1,70 @@
+{
+  "schema": "piper-task-pose-and-self-path-protocol-v1",
+  "role": "new_source_bound_static_task_geometry_development_NOT_physical_validation",
+  "source_task": {
+    "Piper_Isaac_configuration": "Go2PiperBoxPushHybridEnvCfg.__post_init__",
+    "reference_MuJoCo_mode": "make_episode(skill=push,push_ik_mode=pose),explicit_opt_in_not_default_position_mode",
+    "not_claimed": "NOT_frozen_v212_or_any_latest_actor_run_contract",
+    "end_effector_body": "end_effector",
+    "hand_offset_m": [0.0, 0.0, 0.0],
+    "hand_pitch_box_rad": 0.8,
+    "box_position_world_m": [1.10, 0.0, 0.10],
+    "box_size_m": [1.20, 1.20, 0.20],
+    "box_quaternion_world_wxyz": [1.0, 0.0, 0.0, 0.0],
+    "precontact_face_distance_m": 0.03,
+    "phase": "before_approached,no_press,no_physics"
+  },
+  "candidate_body_positions_world": {
+    "x_m": [-0.10, 0.30, 5],
+    "y_m": [-0.20, 0.20, 5],
+    "yaw_rad": [-0.15, 0.15, 3],
+    "height_m": 0.33,
+    "roll_pitch_rad": [0.0, 0.0],
+    "actual_supported_stance": false
+  },
+  "matched_IK": {
+    "common_orientation_pool": "same12_tool_axis_orientations_in_base_PLUS_exact_source_task_orientation_13_queries_for_every_candidate",
+    "task_weight": "weight1_for_exact_task_orientation,weight0_for_other12;defined_from_task_source_before_solving",
+    "original_reference_limit_fraction": 0.90,
+    "seed_policy": "original_default_clipped_to_same90percent_limits_then_midpoint,stop_at_first_found",
+    "position_tolerance_m": 0.002,
+    "orientation_tolerance_rad": 0.017453292519943295,
+    "max_iterations_per_seed": 80,
+    "not_found_is_not_certified_unreachable": true
+  },
+  "nominal_path": {
+    "construction": "single_componentwise_quintic_joint_interpolation_from_clipped_default_to_first_found_task_IK_solution",
+    "samples": 21,
+    "axis": "normalized_phase_NOT_physical_seconds",
+    "fixed_body_and_nominal_legs": true,
+    "collision_geometry": "repository_USD_collision_profile",
+    "protected_body_set": "original_PiperArmClearanceChecker.PROTECTED_BODY_NAMES_base_and_front_legs",
+    "self_clearance_required_m": 0.035,
+    "clearance_normalization_m": 0.035,
+    "hard_joint_margin_required_rad": 0.0,
+    "joint_margin_normalization_rad": 0.10,
+    "not_checked": ["arm_to_box", "ground", "full_self_collision", "support", "torque_and_task_wrench", "actuators_and_delay", "continuous_intersample_clearance", "base_navigation", "contact_success"]
+  },
+  "comparison": {
+    "wide_direction_fraction": "mean_found_of_shared13",
+    "task_direction_fraction": "exact_task_found_indicator_from_shared13",
+    "no_fit_or_threshold_selection": true,
+    "historical025_fraction_report_only": true,
+    "endpoint_vs_path": "same_constructed_path_same_35mm_and_joint_terms",
+    "reference_cost_on_constructed_subset": "0.5_alignment_cost+0.5*(1-wide_fraction),same_for_endpoint_and_path",
+    "margin_weight": 0.10,
+    "unknown_unconstructed_candidates_not_physical_failure": true,
+    "not_original_complete_OmniNav_reproduction": true
+  },
+  "resources": {
+    "candidate_count": 75,
+    "max_pose_queries": 975,
+    "max_IK_attempts": 1950,
+    "max_path_samples": 1575,
+    "max_cpu_wall_s": 180,
+    "physics_steps": 0,
+    "actor_or_training_runs": 0,
+    "GPU_or_remote": false,
+    "retry_or_grid_extension": false
+  }
+}

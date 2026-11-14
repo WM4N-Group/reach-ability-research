@@ -1,0 +1,33 @@
+{
+  "schema": "AINav-successor-preparation-public-information-permissions-v1",
+  "proposal_information": [
+    "declared_map.anchors target_ref/position_xyz_m of original static task reference",
+    "original declared registered CLIMB reference and source support height",
+    "explicit immutable preparation candidate_id"
+  ],
+  "existing_legal_observation_fields": [
+    "current RGB image and acquired depth/calibration",
+    "current measured bbox/descriptor with unknown dynamic geometry",
+    "public_state.q",
+    "public_state.dq",
+    "public_state.gravity",
+    "public_state.angular_velocity",
+    "public_state.linear_velocity",
+    "categorical public_state.support_surface/task_status",
+    "actual public receipts/events already exposed by original host"
+  ],
+  "not_currently_exposed_as_public_features": [
+    "simulator base world XY/quaternion",
+    "world feet positions/forces",
+    "private exact current box poses or docking gap",
+    "contact/QP/Actor hidden state",
+    "unexecuted candidate outcome",
+    "post-hoc stop cost or raw audit-only arrays"
+  ],
+  "standalone_PublicNavigationState_module_not_wired_as_current_host_world_pose": true,
+  "execution_gate_private_inputs_remain_original_NATIVE_ONLY_NOT_SELECTOR": true,
+  "geometry_and_dynamic_cost_prediction_unknown": true,
+  "old_audit_only_data_fit_allowed": false,
+  "training_allowed": false,
+  "world_model_inference_allowed": false
+}

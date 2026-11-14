@@ -1,0 +1,17 @@
+{
+  "schema": "v316-v317-exposed-history-source-and-mechanism-binding-v1",
+  "role": "retrospective_development_evidence_NOT_new_or_independent_ablation",
+  "outcomes_known_before_analysis": true,
+  "source_root": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a",
+  "versions": {
+    "316": {"directory": "transition-arm-entry-v316", "plan_sha256": "503cd71ec49724c6e02358c8150e9e8db9af1d68f7d31c46b50f9d7c7eead451", "summary_sha256": "07988c0c260a5a214640f18fdead86aa3ee4edc2678595eead2ac697014049f6"},
+    "317": {"directory": "transition-arm-entry-v317", "plan_sha256": "4753fa761aea0054cf98d6d720afcf553bb825b71a972a55d6d12084bce0b9e1", "summary_sha256": "e178607c5b0bfdf0f6f19b902c8b738afe719d5fa74925599175efbca70c5e73"}
+  },
+  "case_ids": [3701,3702,3703,3704,3705,3706,3707,3708],
+  "all_cases_included": true,
+  "actual_query_binding": {"version":317,"seed":3701,"selection_rule":"first_numeric_case_for_source_binding_not_best_outcome","event":"transition_ready","raw_prefix_stop":"matched entry_state step, no later semantic trajectory read"},
+  "mechanism_prefix": {"seed":3703,"selection_reason":"sole already-known changed outcome; explicitly posthoc","end_step":"min paired prospective_support_integrated_into_final_center step +50","fields":["step","time_s","root_position","root_quaternion","q","dq","pd_target","native_action","applied_joint_command","phase"]},
+  "compare": ["whole original NAV-PUSH-stow-NAV outcome under same96s source horizon", "common-success times separately from failures", "96s failure-penalized time explicitly a new descriptive secondary metric", "actual executed geometry+support bundle rather than a pure one-line formula ablation", "source/policy and startup/safety bindings with missing fields preserved"],
+  "resources": {"report_files":16,"max_semantic_control_rows":3200,"max_cpu_wall_s":60,"new_FK_IK":0,"new_physics_or_actor_or_training":0},
+  "not_allowed": ["change original owner files or ledgers", "read reserved outcomes", "fit/calibrate/select seeds or thresholds", "call old probe/AppLauncher", "recollect closed cases", "treat other-engine SkillAction bridge as compatible executor", "fill missing recorded box pose from defaults"]
+}

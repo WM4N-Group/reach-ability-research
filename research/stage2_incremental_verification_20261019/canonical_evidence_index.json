@@ -1,0 +1,290 @@
+{
+  "schema": "rev021-canonical-and-bundled-SHA-index-v1",
+  "policy": "Canonical strings in historical receipts are immutable provenance, not runnable relocated paths. No SDK/runner launch, dataset recreation or fallback lookup.",
+  "canonical_sources_preserved": true,
+  "external_only_large_data_not_copied": true,
+  "entries": {
+    "REV017_receipt": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_017_gravity_probe_review/REVIEW.json",
+      "sha256": "61e1c803c26887384d0bc0943a362c15cd1b02f666103ae34f75c58098395898",
+      "bytes": 6758,
+      "kind": "independent_canonical_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV017_REVIEW.json",
+      "archived_sha256": "61e1c803c26887384d0bc0943a362c15cd1b02f666103ae34f75c58098395898",
+      "byte_exact_copy": true
+    },
+    "REV018_R2_receipt": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r2/REVIEW.json",
+      "sha256": "68a4df60c5c128e7009ec5a06306a8a90bf9f63bc2decbdbb626953b7555e1bd",
+      "bytes": 6726,
+      "kind": "independent_canonical_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV018_R2_REVIEW.json",
+      "archived_sha256": "68a4df60c5c128e7009ec5a06306a8a90bf9f63bc2decbdbb626953b7555e1bd",
+      "byte_exact_copy": true
+    },
+    "REV018_R3_receipt": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r3/REVIEW.json",
+      "sha256": "2fbc16d4a77091ac0b42e87bfdc8063a459f453aedcf7a6281f6ad0b105ad363",
+      "bytes": 5867,
+      "kind": "independent_canonical_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV018_R3_REVIEW.json",
+      "archived_sha256": "2fbc16d4a77091ac0b42e87bfdc8063a459f453aedcf7a6281f6ad0b105ad363",
+      "byte_exact_copy": true
+    },
+    "REV019_receipt": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_019_old714_firststep_terminal/REVIEW.json",
+      "sha256": "ca907d0d99b73b50d4d165e0d5159bb0cdd021e40f0e7ad77a32684fe44c68e5",
+      "bytes": 12814,
+      "kind": "independent_canonical_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV019_REVIEW.json",
+      "archived_sha256": "ca907d0d99b73b50d4d165e0d5159bb0cdd021e40f0e7ad77a32684fe44c68e5",
+      "byte_exact_copy": true
+    },
+    "REV020_receipt": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_020_old714_offline_prefix/REVIEW.json",
+      "sha256": "bdf066790d16d483fcce2a4fe2a3374357540880d98aac397f7cadeaf77bfcf4",
+      "bytes": 6063,
+      "kind": "independent_canonical_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV020_REVIEW.json",
+      "archived_sha256": "bdf066790d16d483fcce2a4fe2a3374357540880d98aac397f7cadeaf77bfcf4",
+      "byte_exact_copy": true
+    },
+    "REV017_CPU_evidence": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_017_gravity_probe_review/independent_delta_result.json",
+      "sha256": "103d199324f4b42f29ceeb626579a43c37586ca9e00e43b27ae95a135cb18753",
+      "bytes": 4047,
+      "kind": "previously_executed_small_CPU_result",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "cpu_evidence/REV017_independent_delta_result.json",
+      "archived_sha256": "103d199324f4b42f29ceeb626579a43c37586ca9e00e43b27ae95a135cb18753",
+      "byte_exact_copy": true
+    },
+    "REV018_R2_CPU_evidence": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r2/independent_cpu_result.json",
+      "sha256": "f510f0ca9dd495c399c9893bdb7f47101936efa8afa890eacb594e214fcf2e2a",
+      "bytes": 2999,
+      "kind": "previously_executed_small_CPU_result",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "cpu_evidence/REV018_R2_independent_cpu_result.json",
+      "archived_sha256": "f510f0ca9dd495c399c9893bdb7f47101936efa8afa890eacb594e214fcf2e2a",
+      "byte_exact_copy": true
+    },
+    "REV018_R3_CPU_evidence": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r3/pgid_delta_result.json",
+      "sha256": "0746910c8c4663de62c8915d922d05c8ead1c014e0d1e576ec39877848750c08",
+      "bytes": 5010,
+      "kind": "previously_executed_small_CPU_result",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "cpu_evidence/REV018_R3_pgid_delta_result.json",
+      "archived_sha256": "0746910c8c4663de62c8915d922d05c8ead1c014e0d1e576ec39877848750c08",
+      "byte_exact_copy": true
+    },
+    "REV020_CPU_evidence": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_020_old714_offline_prefix/comparison_result.json",
+      "sha256": "67487d9c5f0c880f9efee167be062bab40cce47d764a79c7fa7fac67aa8bded0",
+      "bytes": 6318,
+      "kind": "previously_executed_small_CPU_result",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "cpu_evidence/REV020_comparison_result.json",
+      "archived_sha256": "67487d9c5f0c880f9efee167be062bab40cce47d764a79c7fa7fac67aa8bded0",
+      "byte_exact_copy": true
+    },
+    "REV017_checker_independent_delta_audit.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_017_gravity_probe_review/independent_delta_audit.py",
+      "sha256": "62880c0e3f79171c0d6657e893f4b3e2fc3114c33f285e0adfac4fa41803d253",
+      "bytes": 11637,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV017_independent_delta_audit.py",
+      "archived_sha256": "62880c0e3f79171c0d6657e893f4b3e2fc3114c33f285e0adfac4fa41803d253",
+      "byte_exact_copy": true
+    },
+    "REV018_R2_checker_audit_executable_delta.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r2/audit_executable_delta.py",
+      "sha256": "ee6102161b9407d18cf463d0e1190944c326a2d082f9a9f8701a45224a375eda",
+      "bytes": 9723,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV018_R2_audit_executable_delta.py",
+      "archived_sha256": "ee6102161b9407d18cf463d0e1190944c326a2d082f9a9f8701a45224a375eda",
+      "byte_exact_copy": true
+    },
+    "REV018_R3_checker_audit_pgid_delta.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r3/audit_pgid_delta.py",
+      "sha256": "3cabbc83bca66c968d03273bf1b40330f10ba5d4834a01c90f7dfd596f87b24e",
+      "bytes": 6122,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV018_R3_audit_pgid_delta.py",
+      "archived_sha256": "3cabbc83bca66c968d03273bf1b40330f10ba5d4834a01c90f7dfd596f87b24e",
+      "byte_exact_copy": true
+    },
+    "REV018_R3_checker_audit_new_sdk_originals.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r3/audit_new_sdk_originals.py",
+      "sha256": "1f829d84c3d6a14a000310598518bae086a526660e4b97bace4cefbd633ba835",
+      "bytes": 5118,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV018_R3_audit_new_sdk_originals.py",
+      "archived_sha256": "1f829d84c3d6a14a000310598518bae086a526660e4b97bace4cefbd633ba835",
+      "byte_exact_copy": true
+    },
+    "REV019_checker_audit_terminal.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_019_old714_firststep_terminal/audit_terminal.py",
+      "sha256": "98b03170360381de52fdf31d5d73a3a0ff684e14679916ae6022720b1b7b9521",
+      "bytes": 13701,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV019_audit_terminal.py",
+      "archived_sha256": "98b03170360381de52fdf31d5d73a3a0ff684e14679916ae6022720b1b7b9521",
+      "byte_exact_copy": true
+    },
+    "REV020_checker_verify_offline_prefix.py": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_020_old714_offline_prefix/verify_offline_prefix.py",
+      "sha256": "72f1699edcefc1d54d9f9a04aa185d2c5bc1f659a8f31663fb475719f68267f6",
+      "bytes": 6325,
+      "kind": "literal_checker_source_NOT_DIRECTLY_EXECUTABLE_IN_ARCHIVE",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "canonical_checkers/REV020_verify_offline_prefix.py",
+      "archived_sha256": "72f1699edcefc1d54d9f9a04aa185d2c5bc1f659a8f31663fb475719f68267f6",
+      "byte_exact_copy": true
+    },
+    "REV018_R2_SDK_envelope": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env-envelope.json",
+      "sha256": "7eb59d5615199c333ac2affc371b119818832a99c1a6dff431808e6438e44750",
+      "bytes": 1326,
+      "kind": "genuine_small_SDK_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV018_R2_SDK_envelope.json",
+      "archived_sha256": "7eb59d5615199c333ac2affc371b119818832a99c1a6dff431808e6438e44750",
+      "byte_exact_copy": true
+    },
+    "REV018_R2_SDK_original_result": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env-result.original.json",
+      "sha256": "959c9bf2e3113a428622edc4d6ecc88c06890525fce3940484970132b5828170",
+      "bytes": 2500,
+      "kind": "external_only_original_SDK_result",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "REV018_R2_SDK_original_log": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env.original.log",
+      "sha256": "43297aedafedad965dd4877f67b7cb756ecaad2d8294bf25508b4806e7768a70",
+      "bytes": 7146,
+      "kind": "external_only_original_SDK_log",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "REV018_R3_SDK_envelope": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev019_evidence/r3_sdk0env_20261019_a/SDK0env-envelope.json",
+      "sha256": "6eb394d66fc9c12510cc848b4de6653ea513774dd2a258bf82adab4cf6e79a44",
+      "bytes": 1302,
+      "kind": "genuine_small_SDK_receipt",
+      "digest_basis": "rehash_at_REV021_archive",
+      "archived_relative_path": "receipts/REV018_R3_SDK_envelope.json",
+      "archived_sha256": "6eb394d66fc9c12510cc848b4de6653ea513774dd2a258bf82adab4cf6e79a44",
+      "byte_exact_copy": true
+    },
+    "REV018_R3_SDK_original_result": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev019_evidence/r3_sdk0env_20261019_a/SDK0env-result.original.json",
+      "sha256": "571d4c88c3834728b26176f9e137d1a2eaee51a27f6a74b33c5e97fd5a6b1704",
+      "bytes": 2500,
+      "kind": "external_only_original_SDK_result",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "REV018_R3_SDK_original_log": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev019_evidence/r3_sdk0env_20261019_a/SDK0env.original.log",
+      "sha256": "6b9169ec2c2615b57862ae0cd1b7902a4be4481c164b36f64660a478ce6db345",
+      "bytes": 7146,
+      "kind": "external_only_original_SDK_log",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r2g_source_manifest": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-gravity-order-probe-v023r2g/source-manifest.json",
+      "sha256": "fa3712e778523fe09a72275c54c5247730944ee6a9b309fa5ca702b8ac2a689e",
+      "bytes": 1609,
+      "kind": "external_only_frozen_source_manifest",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r2g_runner": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-gravity-order-probe-v023r2g/probe_runner.py",
+      "sha256": "15b004e7d000b97ba997bfda17595ff17e7a025f964ea86ef5a73275fbb82145",
+      "bytes": 33626,
+      "kind": "external_only_frozen_runner",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r2_source_manifest": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2/package-manifest.json",
+      "sha256": "6ea9b36cb0f083cc8911c01e358b1586461eb332a99829d5f908e7473c7fbf6d",
+      "bytes": 2485,
+      "kind": "external_only_frozen_source_manifest",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r2_runner": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2/run_source.py",
+      "sha256": "059d3f16467beae45ee7ce630877b4bf8ba29254a43386972c6cd18911a6a8f8",
+      "bytes": 15823,
+      "kind": "external_only_frozen_runner",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r3_source_manifest": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r3/package-manifest.json",
+      "sha256": "1fa50a30f008c00e7dde7199a86e283bf854f49e9bfe534fde6fde8295413a8a",
+      "bytes": 2737,
+      "kind": "external_only_frozen_source_manifest",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "r3_runner": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r3/run_source.py",
+      "sha256": "a0779c3cc5dd38c6166f6844788caa1c801c68404c409305c28eed6599e26b19",
+      "bytes": 15840,
+      "kind": "external_only_frozen_runner",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "formal_progress": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_019_old714_firststep_terminal/remote_originals/attempt/progress.json",
+      "sha256": "726cdf222814be219daa7d734df7e6cca3224dfd30afda10cdc4c5e13c799ed5",
+      "bytes": 231194,
+      "kind": "external_only_run_original",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "formal_SDK_log": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_019_old714_firststep_terminal/remote_originals/SDK.original.log",
+      "sha256": "b370f44c642c61402a3531c9507e697de986535b1849148204fc46461d7cc2b5",
+      "bytes": 13938,
+      "kind": "external_only_run_original",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "formal_terminal": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_019_old714_firststep_terminal/remote_originals/terminal.json",
+      "sha256": "c5202fac02ce50c8363043a29494acce0986bc4b01ee299322fce9291788ec85",
+      "bytes": 558,
+      "kind": "external_only_run_original",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "formal_main_authority": {
+      "canonical_path": "/home/yuanyue/main/work/agent_team_runtime/main_s2_dev018_old714_RUN_authorization.json",
+      "sha256": "4c2e06ae7b2c1daecfcc8bda5fedd2ed729b3e50aca84f9d484e053508ffd172",
+      "bytes": 2157,
+      "kind": "external_only_historical_main_authority_NOT_REUSABLE",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "formal_closure": {
+      "canonical_path": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r3-run-preparation-a/closure.json",
+      "sha256": "c2592988bc4f7dee73d3d1dc2cd2027e6703355b5115efab06e1af942f6bcbd9",
+      "bytes": 951,
+      "kind": "external_only_run_closure",
+      "digest_basis": "rehash_at_REV021_archive"
+    },
+    "v13_report": {
+      "canonical_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/integrated-course-20261012-v13/full-01/report.json",
+      "sha256": "9c837273663e8a28c00531f1c0b2597a486062a6b09146b3388e36f94bda3a60",
+      "bytes": 45056142,
+      "kind": "external_only_large_report_NOT_VENDORED",
+      "digest_basis": "REV020_independently_verified_digest_not_large_file_rehashed_in_REV021"
+    }
+  }
+}

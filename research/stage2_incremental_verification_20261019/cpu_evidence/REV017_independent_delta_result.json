@@ -1,0 +1,131 @@
+{
+  "schema": "rev017-independent-increment-cpu-audit-v1",
+  "producer_tests_imported": false,
+  "sdk_started": false,
+  "physics_started": false,
+  "shared_lock_touched": false,
+  "source_modified": false,
+  "cases": [
+    {
+      "name": "manifest_budget_static_reachability",
+      "status": "PASS",
+      "source_manifest_match": true,
+      "unchanged_inherited_members": [
+        "probe_math.py",
+        "audit_result.py",
+        "cache_boundary.py",
+        "test_probe_math.py",
+        "test_audit_result.py",
+        "test_cache_boundary.py"
+      ],
+      "constants_preserved": true,
+      "app_before_native_import": true,
+      "raw_tick_flush_fsync_present": true,
+      "default_inspect": {
+        "source_id": "sim2real-s2-gravity-order-v023r2g-3701-env0",
+        "source_manifest_sha256": "fa3712e778523fe09a72275c54c5247730944ee6a9b309fa5ca702b8ac2a689e",
+        "checks": {
+          "frozen_source": true
+        },
+        "launch_ready": false,
+        "missing": [
+          "independent probe review absent",
+          "fixed main diagnostic RUN receipt absent",
+          "fixed main send_input dispatch record absent"
+        ],
+        "physics_started": false,
+        "diagnostic_not_task_success": true
+      }
+    },
+    {
+      "name": "TERM_cleanup_false_then_fresh_empty_reap",
+      "status": "PASS",
+      "decision": "TIMEOUT_TERMINATED",
+      "child_reaped": true,
+      "survivors": {},
+      "wait_timeout_s": 0.52,
+      "synthetic_only": true
+    },
+    {
+      "name": "TERM_cleanup_false_and_fresh_survivor_keeps_UNKNOWN",
+      "status": "PASS",
+      "decision": "UNRESOLVED_CHILDREN",
+      "child_reaped": false,
+      "survivors": {
+        "95101": {
+          "state": "poll_running_or_unknown",
+          "ppid": 749006,
+          "pgid": 95101
+        }
+      },
+      "wait_timeout_s": 0.52,
+      "synthetic_only": true
+    },
+    {
+      "name": "immutable_UNKNOWN_fresh_stop_failed_closure",
+      "status": "PASS",
+      "status_observed": "FAILED",
+      "immutable_originals_preserved": true,
+      "missing_progress_unknown": true,
+      "ledger_closed": true
+    },
+    {
+      "name": "normal_unknown_path_retains_wait",
+      "status": "PASS",
+      "live_detached_survivor_not_closed": true,
+      "unenumerated_survivor_not_closed": true,
+      "actionable_record_present": true
+    },
+    {
+      "name": "fsync_partial_progress_boundaries",
+      "status": "PASS",
+      "fsync_calls": 6,
+      "partial_tail_preserves_prior_observations": true,
+      "returned_substep_not_promoted_to_tick": true,
+      "missing_file_stays_unknown": true
+    },
+    {
+      "name": "unknown_record_IO_failure_unwinds_owner",
+      "status": "CONFIRMED",
+      "blocking_reproduction": true,
+      "exception": "OSError(28, 'injected diagnostic record filesystem full')",
+      "transport_unknown": true,
+      "temporary_owner_lock_released": true,
+      "shared_owner_lock_touched": false,
+      "branch": "record"
+    },
+    {
+      "name": "unknown_stdout_failure_unwinds_owner",
+      "status": "CONFIRMED",
+      "blocking_reproduction": true,
+      "exception": "BrokenPipeError('injected stdout broken')",
+      "transport_unknown": true,
+      "temporary_owner_lock_released": true,
+      "shared_owner_lock_touched": false,
+      "branch": "stdout"
+    },
+    {
+      "name": "failed_ps_hidden_by_final_cat",
+      "status": "CONFIRMED",
+      "blocking_reproduction": true,
+      "failed_inventory": "ps",
+      "compound_shell_exit_status": 0,
+      "returned_stop_confirmed": true,
+      "failure_only": false,
+      "incomplete_inventory_was_accepted": true
+    },
+    {
+      "name": "failed_GPU_apps_query_hidden_by_final_cat",
+      "status": "CONFIRMED",
+      "blocking_reproduction": true,
+      "failed_inventory": "gpu",
+      "compound_shell_exit_status": 0,
+      "returned_stop_confirmed": true,
+      "failure_only": false,
+      "incomplete_inventory_was_accepted": true
+    }
+  ],
+  "passed": 6,
+  "confirmed_blocking_reproductions": 4,
+  "audit_errors": 0
+}

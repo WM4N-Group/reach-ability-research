@@ -1,0 +1,12 @@
+{
+  "schema": "piper-height-bound-positive-controls-v1",
+  "role": "model_positive_witness_development_NOT_task_success_or_independent_generalization",
+  "configurations": "cartesian joint2={reference_low,midpoint,reference_high}; joint3={reference_low,reference_high}; joint5={reference_low,reference_high}; other joints=reference_midpoint",
+  "reference_limit_fraction": 0.9,
+  "pose_source": "one original repository FK per prelisted legal joint configuration; full end_effector origin pose",
+  "bounds_checked": ["same90percent_reference", "native_hard"],
+  "position_tolerance_m": 0.002,
+  "orientation_tolerance_rad": 0.017453292519943295,
+  "resources": {"FK_queries": 12, "IK_queries": 0, "max_cpu_wall_s": 10, "physics_steps": 0, "actor_or_training": 0},
+  "completion": "all12 generated poses must be non-excluded by both necessary bounds; private state/time restored; preserve any failure; no configuration extension or retry"
+}

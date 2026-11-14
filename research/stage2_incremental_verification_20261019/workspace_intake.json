@@ -1,0 +1,19 @@
+{
+  "schema": "rev021-archive-workspace-intake-v1",
+  "at": "2026-10-19T19:17:32.930514+08:00",
+  "repository": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL",
+  "branch_before": "feature/go2-piper-reachability-p0",
+  "HEAD_before": "186be0f3a6cfa31c8b91bef05267a4282f647a3a",
+  "status_porcelain_before": "",
+  "index_paths_before": [],
+  "preexisting_dirty_paths": [],
+  "dirty_preservation": "Initially clean; no preexisting changes staged, altered or removed. Unrelated later changes must remain outside this commit.",
+  "docs_file_count_before": 5,
+  "results_before_sha256": "f4b74459206d992a627ce9bfa58377e77e45566b382a7883d751e48f56e183fd",
+  "write_scope": [
+    "research/stage2_incremental_verification_20261019",
+    "evidence/2026-10-19/rev021-stage2-verification-local-milestone.json",
+    "docs/RESULTS_CN.md"
+  ],
+  "commit_policy": "One explicit-path local commit, no push; no new agent/SDK/physical/tests of prior suites."
+}

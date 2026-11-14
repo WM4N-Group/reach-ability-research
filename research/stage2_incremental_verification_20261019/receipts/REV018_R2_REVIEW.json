@@ -1,0 +1,142 @@
+{
+  "schema": "s2-rev018-dev018-v001r2-independent-executable-review-v1",
+  "reviewer": "verification",
+  "independent": true,
+  "at": "2026-10-19T18:00:52.620776+08:00",
+  "task": "S2-REV-018",
+  "decision": "BLOCKED_NOT_ACCEPTED_FOR_BASELINE_RUN",
+  "blocking_findings": [
+    "REV018-PGID-01"
+  ],
+  "source_id": "sim2real-old714-firststep-v001r2-8101-env0",
+  "candidate_version": "wm07-old714-firststep-baseline-v001r2",
+  "source_directory": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2",
+  "source_manifest_sha256": "6ea9b36cb0f083cc8911c01e358b1586461eb332a99829d5f908e7473c7fbf6d",
+  "protocol_sha256": "01bc111a7e2f1bf3046284a4783c7351325a46df7717b881acc507b420c84e01",
+  "sdk_envelope_sha256": "7eb59d5615199c333ac2affc371b119818832a99c1a6dff431808e6438e44750",
+  "sdk_envelope_path": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/control_dev/dev018_evidence/r2_sdk0env_extra_20261019_a/SDK0env-envelope.json",
+  "sdk_binding_decision": "ACCEPTED_CONFIGURATION_ONLY",
+  "sdk_binding_accepted": true,
+  "SDK_original_result_sha256": "959c9bf2e3113a428622edc4d6ecc88c06890525fce3940484970132b5828170",
+  "SDK_original_log_sha256": "43297aedafedad965dd4877f67b7cb756ecaad2d8294bf25508b4806e7768a70",
+  "findings": [
+    {
+      "id": "REV018-PGID-01",
+      "priority": 1,
+      "file": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2/run_source.py",
+      "start_line": 51,
+      "end_line": 53,
+      "consequential_return_line": 64,
+      "title": "Broad python3 -c exemption bypasses owned PID/PGID stop veto",
+      "observed": "A valid snapshot containing a live non-collector python3 -c worker in the recorded owned PGID returns quiet=True; actual wait_stopped returns immediately. Ordinary same-PGID worker.py control correctly returns False.",
+      "fixture_identity": {
+        "collector_pid": 9,
+        "recorded_owner_pid": 100,
+        "recorded_pgid": 100,
+        "live_child_pid": 101,
+        "process_stat": "S",
+        "GPU_apps": "successful empty inventory"
+      },
+      "counterexample_cases": [
+        "owned_PGID_python_c_exemption_reproduction",
+        "wait_returns_on_live_owned_python_c"
+      ],
+      "real_hidden_survivor_observed": false,
+      "existing_contract_only": true,
+      "minimal_fix": "Apply live owned PID/PGID veto before command-text exclusions; retain zombie handling and justified actual-collector exclusion. Focused owned python -c and real-collector controls, no new proof archive/supervisor/control rewrite."
+    }
+  ],
+  "accepted_preparation_receipt_sha256": "d3edfd594f661a107f8724f7d91a0b06c0ae0702939c65ddfa7b71bb55908e48",
+  "inherited23_historical_pin_review_rerun": false,
+  "manifest_members_verified": 20,
+  "remote_references_verified": 114,
+  "transitive_helper_Git714_matched": true,
+  "GPU_binding": {
+    "physical_gpu": 1,
+    "UUID": "GPU-8d80b743-a2bb-fc25-37e1-8710fa364809",
+    "logical_device": "cuda:0",
+    "remote_identity_query_matched": true
+  },
+  "accepted_SDK_facts": {
+    "this_authorization_AppLauncher_calls": 1,
+    "cumulative_DEV018_real_AppLauncher_calls": 2,
+    "counts": {
+      "environments_created": 0,
+      "physics_steps": 0,
+      "actor_forwards": 0,
+      "actor_loads": 0
+    },
+    "forbidden_attempts": [],
+    "original_result_success": true,
+    "process_returncode": 0,
+    "remote_exit_code": 0,
+    "exact_config_prefix_last_line": 313,
+    "stopped_before_output_mkdir_line": 315,
+    "original_main_executed": false,
+    "scene_objects": 13,
+    "original_iy_module_origins": true,
+    "frozen_pending_metadata_is_precheck_only": true,
+    "old_r1_failure_preserved": true
+  },
+  "original_control_contract": {
+    "cfg_push_distance_m": 0.6,
+    "actual_push_event_min_dx_m": 0.5,
+    "first_step_distance_m": 0.15,
+    "minimum_supports": 3,
+    "original_raw_not_relabelled": true,
+    "original_fault_has_priority": true,
+    "current_precision_or_settling_certified": false
+  },
+  "budgets": {
+    "sim_s": 468,
+    "core_wall_s": 2340,
+    "reporting_reserve_s": 60,
+    "outer_wall_s": 2400,
+    "physical_gpu": 1,
+    "num_envs": 1,
+    "seed": 8101,
+    "maximum_starts": 1,
+    "maximum_retries": 0
+  },
+  "independent_CPU_cases": {
+    "positive_controls": 5,
+    "confirmed_counterexamples": 2,
+    "distinct_blocking_findings": 1,
+    "fixture_errors": 0,
+    "producer_suites_rerun": false
+  },
+  "reviewer_execution": {
+    "SDK_started": false,
+    "physics_started": false,
+    "actor_loads": 0,
+    "shared_lock_operations": 0,
+    "remote_calls": "one bounded read-only stdlib reference/hash/identity audit; no remote SDK import",
+    "source_control_modified": false,
+    "nested_delegation": false,
+    "commit_or_push": false
+  },
+  "formal_source_started": false,
+  "source_ledger_events": 0,
+  "local_run_preparation_exists": false,
+  "final_main_RUN_authority_exists": false,
+  "run_authorized": false,
+  "launch_authorized_by_this_receipt": false,
+  "full_control_chain_accepted": false,
+  "full_task_success": false,
+  "current_goal_completed": false,
+  "r2g_reused_or_repaired": false,
+  "disposition": "Do not RUN this exact source; SDK0env binding itself is accepted. Repair only stop exclusion ordering in a new frozen increment. Preserve source and SDK originals; do not auto-repeat SDK, rewrite bindings or change current goal/data identity. Main controls any next binding/authorization decision.",
+  "details_file": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_018_old714_firststep_review/executable_v001r2/README.md",
+  "evidence_sha256": {
+    "README.md": "e477ba5d292850b143d90a53da0717fe0517769c92a483b8293f7bc54b0875c6",
+    "audit_executable_delta.py": "ee6102161b9407d18cf463d0e1190944c326a2d082f9a9f8701a45224a375eda",
+    "audit_sdk_receipt.py": "54b5ed03c204a325d81f43b932a139203334f1d993ee7c0ae850c1e32c55444f",
+    "independent_cpu_audit.log": "f510f0ca9dd495c399c9893bdb7f47101936efa8afa890eacb594e214fcf2e2a",
+    "independent_cpu_result.json": "f510f0ca9dd495c399c9893bdb7f47101936efa8afa890eacb594e214fcf2e2a",
+    "remote_reference_audit.py": "9c17191d2a668db26119b690118559e6ea468eda1e5b70d624b37f3903f660a0",
+    "remote_reference_result.json": "28534d52f9a36d4eade9b6536a32341567705209db4fc279f739f3b95c1d2621",
+    "remote_reference_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sdk_receipt_audit.log": "7938ed88989664f5905a67399f8d5cf05af1e947dd2ae8acd35d09bfb1b7f617",
+    "sdk_receipt_audit_result.json": "e9c6a39142ff142681286238f9eac0ef6eaaa973758d8181b7648a40f1dadde7"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "rev018-dev019-pgid-delta-independent-v1",
+  "at": "2026-10-19T18:11:07.095024+08:00",
+  "source_id": "sim2real-old714-firststep-v001r3-8101-env0",
+  "source_manifest_sha256": "1fa50a30f008c00e7dde7199a86e283bf854f49e9bfe534fde6fde8295413a8a",
+  "source_members_verified": 22,
+  "only_runner_function_changed": [
+    "quiet"
+  ],
+  "whole_runner_AST_otherwise_equal": true,
+  "SDK_machine_gate_AST_unchanged": true,
+  "unchanged_member_hashes_inherited": {
+    "binding.py": "4c6ecf208b7ea5a43e0b9170852b537b040933f2038b544781d595686837dfdc",
+    "check_sdk0env.py": "b6e1eadb0142a3c61d11fd3c9e2b40c55c46d3e28a49bf3c6f4fff7476e074be",
+    "climb-jobs/jobs.json": "ce59b20e541dac8b1645a04e703fa35600b9e54f6106bfdc7754e64ea2cddcac",
+    "climb-jobs/stage-bank.json": "b5e5be3bc90bf3db399903606f8c4baedbd188519fa3a5e94b314ad549baf484",
+    "paths.json": "246ae193a9aa4ec8ecc18072e7ecb2e177233e3a6dcb06f086c4dc390e9b1e4f",
+    "runtime-index.json": "8eebcd129229f0cd5dda26c37ccbb964d2bc7050867b3334af88b434baf4be67",
+    "scene.json": "353fe14ebff12434c72a1f689d39cea3a15ec8cdcf4625e95a6e1557c4828d46",
+    "source/causal_bridge_scene.py": "d0e828d407d492d3c63767bcf1c1e4eb9f05be3915fb5cec670c88f27590ff31",
+    "source/entry_pose_planner.py": "58ab2716a7af114a10507ef6a0ba0a80e6aae4ff9c90aac0a53eeabb3322e43c",
+    "source/four_support_body.py": "ea57f0972201acc098b8870e2f7ded27663903b92b7a2ce3bdcda704f1e7ed48",
+    "source/loaded_entry_hold.py": "a21915bce092a271b23132fdb9cbd29011c777e35716915ea7d1ae024e58efcf",
+    "source/piper_integrated_scene_v2.py": "81c3d580f65541ab0decdfa50eb0d2a11d16f79b5f0b8d5a7fa79db96dda406c",
+    "source/run_piper_integrated_course_v2.py": "c999fdb2497adc41fd3db256df50f8c31ca7f57fd11065903e00f3ec4ff7f1f0",
+    "test_increment.py": "ac6e192f8c04f75e60282c9021e33a6f55a4a2380ad38d686ec2336299cfdbb8"
+  },
+  "protocol_identity_precheck_metadata_delta": {
+    "SDK0env_allowed_once": {
+      "old": true,
+      "new": false
+    },
+    "parent_executable_manifest_sha256": {
+      "old": "b19ec79d5058df03f620a97f838c437684bfaa3da91cd6cbfd68e3845b95d2cb",
+      "new": "6ea9b36cb0f083cc8911c01e358b1586461eb332a99829d5f908e7473c7fbf6d"
+    },
+    "version": {
+      "old": "wm07-old714-firststep-baseline-v001r2",
+      "new": "wm07-old714-firststep-baseline-v001r3"
+    },
+    "source_id": {
+      "old": "sim2real-old714-firststep-v001r2-8101-env0",
+      "new": "sim2real-old714-firststep-v001r3-8101-env0"
+    },
+    "formal_remote_package": {
+      "old": "/mnt/yuanyue/data/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2",
+      "new": "/mnt/yuanyue/data/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r3"
+    },
+    "formal_remote_run": {
+      "old": "/mnt/yuanyue/data/go2-piper-sim2real-user-tests/sim2real-old714-firststep-v001r2-8101-env0",
+      "new": "/mnt/yuanyue/data/go2-piper-sim2real-user-tests/sim2real-old714-firststep-v001r3-8101-env0"
+    },
+    "SDK0env_status": {
+      "old": "r1 one real constructor; checker guard namespace AttributeError before exact config prefix. Counts 0env/0physics/0actor-load/0actor-forward. r2 repair static-only; extra AppLauncher requires explicit main permission.",
+      "new": "Exact genuine SDK configuration evidence was executed on r2 and independently accepted. r3 has no SDK execution. File/config read-set inheritance proposed to reviewer; unchanged machine SDK gate still requires exact current digest."
+    },
+    "local_run_preparation": {
+      "old": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r2-run-preparation-a",
+      "new": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-old714-firststep-baseline-v001r3-run-preparation-a"
+    }
+  },
+  "configuration_argv_and_budget_unchanged": true,
+  "counterexamples": [
+    {
+      "case": "noncollector_owned_group_c_worker",
+      "r2_quiet": true,
+      "r3_quiet": false,
+      "finding_closed": true
+    },
+    {
+      "case": "owned_leader_different_group_c",
+      "r2_quiet": true,
+      "r3_quiet": false,
+      "finding_closed": true
+    }
+  ],
+  "positive_controls": [
+    "actual_collector",
+    "owned_zombie",
+    "no_owned_rows",
+    "unowned_inventory_shell"
+  ],
+  "wait_sequence": {
+    "gets": 3,
+    "sleeps": 2,
+    "notifications": 1,
+    "notification_ENOSPC_and_BrokenPipe_did_not_return_early": true,
+    "returned_only_after_quiet_snapshot": true
+  },
+  "finding_status": {
+    "REV018-PGID-01": "CLOSED_BY_INDEPENDENT_FOCUSED_CPU_DELTA"
+  },
+  "producer11_suite_rerun": false,
+  "old23_or_readset_or_old_suites_reaudited": false,
+  "SDK_started_by_verification": false,
+  "physics_started_by_verification": false,
+  "shared_lock_touched": false,
+  "SDK_inheritance_gate_relaxed": false,
+  "SDK_r3_status": "PENDING_DELIVERED_NEW_ACTUAL_SDK_ORIGINALS",
+  "final_source_acceptance": "PENDING_NEW_R3_SDK_RECEIPT_NO_PREACCEPTANCE",
+  "run_authorized": false
+}

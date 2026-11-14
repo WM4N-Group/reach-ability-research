@@ -1,0 +1,101 @@
+{
+  "schema": "navigation-chapter-controlled-ablation-DRAFT-v1",
+  "role": "paper_chapter_plan_NOT_execution_authorization",
+  "research_question": "Does state/task-conditioned operational-goal selection improve overall navigation through manipulation-required scenes under unchanged frozen NAV/PUSH/CLIMB execution and safety?",
+  "method_scope": "navigation target selection and evaluation only; no new actor or controller",
+  "original_integration_points": {
+    "planner": "mujoco/reconfigurable_navigation/oracle_planner.py::OraclePlanner._push_plan",
+    "target_type": "mujoco/reconfigurable_navigation/representations.py::SkillAction(NAV,[x,y,yaw])",
+    "tracking": "mujoco/reconfigurable_navigation/skills/navigate.py::NavigateSkill",
+    "runtime": "mujoco/reconfigurable_navigation/locomotion_runtime.py::LocomotionRuntime.step(velocity_command,ee_command)",
+    "body_height_command_delivered": false,
+    "source_reference_NOT_latest_frozen_actor_contract": true
+  },
+  "controlled_core_arms": [
+    {
+      "id": "N0",
+      "description": "same SE2 candidate set and actual original-planner route cost; no new reachability filter"
+    },
+    {
+      "id": "N1",
+      "description": "N0 plus exact task pose IK under measured state and same bounded solver budget"
+    },
+    {
+      "id": "N2",
+      "description": "N1 plus original joint/self-clearance endpoint conditions"
+    },
+    {
+      "id": "N3",
+      "description": "N2 plus same nominal path sampled conditions; path increment may be zero"
+    }
+  ],
+  "separate_optional_arms": [
+    {
+      "id": "M",
+      "description": "N3 plus prior frozen rho preference; do not claim gain from tiny static clearance changes"
+    },
+    {
+      "id": "G",
+      "description": "same selector P3 off/on CPU shadow efficiency benchmark; fixed candidate/IK budgets, no saved-budget reinvestment"
+    },
+    {
+      "id": "O",
+      "description": "unaltered original fixed-approach planner for external reference, NOT the controlled matched-domain N0"
+    }
+  ],
+  "paired_conditions": [
+    "same initial scene/state per arm",
+    "same NAV/PUSH/CLIMB policy and normalizer SHA",
+    "same candidate and path generator",
+    "same goal/task/physics and original horizon",
+    "same information timing and source",
+    "same maximum solver budget",
+    "all native safety and success predicates remain enabled",
+    "all initial cases including refusals, exceptions and early safety stops remain in denominators"
+  ],
+  "primary_outcome": "actual original overall navigation goal completion from initial state, not IK validity or NAV arrival alone",
+  "secondary_outcomes": [
+    "actual operational handoff and stage completion",
+    "original safety events",
+    "failure-penalized total time under shared original horizon",
+    "actual travel path length",
+    "replan/failed handoff count",
+    "end-to-end compute including rejected queries",
+    "abstention and unknown coverage"
+  ],
+  "paper_evidence_rule": "static model studies and unit fixtures never populate physical navigation-success/safety fields; absent increments must be reported, not tuned away",
+  "candidate_pilot_budget_proposal": {
+    "initial_states": 4,
+    "arms": [
+      "N0",
+      "N1",
+      "N2",
+      "N3"
+    ],
+    "max_new_physical_starts": 16,
+    "engine": "remote_go2-root-yuanyue_MuJoCo_only_for_initial_pilot",
+    "allocated": false,
+    "not_taken_from_old_frozen_shared_budget": true,
+    "automatic_expansion": false,
+    "paper_generalization_claim": false
+  },
+  "later_confirmatory_design": "only after viable pilot: independently preregister scene-family groups and paired initial states, report per-group paired effects and uncertainty; no automatic new budget",
+  "execution_readiness": {
+    "ready": false,
+    "missing": [
+      "exact compatible frozen end-to-end Go2+Piper NAV-to-manipulation run package and policy/normalizer/source SHA",
+      "actual current-state query and original safety/fallback/overall-success bindings",
+      "actual original-planner route cost on the compatible frozen live snapshot; static synthetic Astar bridge is already validated but is not this live binding",
+      "separate allocated physical-start/time budget and remote isolation"
+    ],
+    "responsibility": "Reachability prepares selection/evaluation; existing skill execution source remains with its original implementation, no replacement controller",
+    "single_binding_question": "Which frozen compatible Go2+Piper NAV-to-manipulation package is the baseline for this chapter?"
+  },
+  "pilot_completion_conditions": [
+    "all4 initial states and 4 arms explicitly registered under a NEW source/budget protocol before any start; original old data roles retained",
+    "all16 starts or explicit original-safety early-stops accounted for with source, initial state, selected id, native action consumption, phase/time, terminal and original predicates",
+    "confirm selected SE2 goal is actually consumed by original NavigateSkill and actual fresh arrival state is used by the unmodified manipulation entry; non-execution is not a failed hypothesis",
+    "report paired overall goal outcomes, native safety, full cost and missingness without dropping refusals/aborts; no generic paper success claim from four cases",
+    "no automatic additional seeds/variants, threshold/role changes or physical budget expansion after a negative or incomplete pilot"
+  ]
+}

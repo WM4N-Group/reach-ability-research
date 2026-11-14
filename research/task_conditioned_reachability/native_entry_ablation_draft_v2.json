@@ -1,0 +1,110 @@
+{
+  "schema": "native-v317-entry-theory-ablation-DRAFT-v2",
+  "role": "new_same_caller_design_NOT_executed_or_budget_allocated",
+  "supersedes_as_next_physical_candidate": "navigation_chapter_ablation_draft_v1.json generic MuJoCo N0-N3 proposal; preserve v1 and static evidence, no claim v1 ran",
+  "baseline": {
+    "engine": "IsaacLab on remote go2-root-yuanyue",
+    "existing_module_owner": "original Sim2Real/skill source; Reachability formalizes/evaluates, does not claim new authorship of v317 implementation",
+    "v317_plan_sha256": "4753fa761aea0054cf98d6d720afcf553bb825b71a972a55d6d12084bce0b9e1",
+    "v317_probe_sha256": "fd1f8ff8246cd508c3ed61216d18fffbfe2b96b72bfe325c0634fde98b7a1d49",
+    "NAV_policy_sha256": "72d9f22c633081e8d4b9693e6fda54dba6cdd036a102f330c1bfe096e43b4da8",
+    "PUSH_actor_checkpoint_sha256": "4d1a4616928b4d06002285e870a1d6dd114e27b8cafcdd9a41dbdae1aceed419",
+    "two_waypoint_safe_approach_sha256": "9c6db3af65afe62ace57f5d85f3a773666074b381383d037db4fa3df62162cbc",
+    "not_latest_16_waypoint_other_package": true,
+    "new_policy_or_controller": false,
+    "PUSH_frozen_leg_hook_sha256": "b1ebb8abb5370dcd98debab85d70e05a004bb1e59b5b00710460f575174c7721",
+    "native_config_declares_hand_pitch_rad": 1.0
+  },
+  "single_method_interface": "finite tip cloud -> minimum_shift_m request -> EXISTING prospective_support/native_entry_process/final measured check/continuous READY; no state/PD/history/clock write",
+  "common_across_arms": [
+    "same copied frozen v317 caller and support-only bookkeeping",
+    "same actor/observation/preprocessing and native guard sources",
+    "same original 41 nominal samples and 64 residual corners when full cloud is requested",
+    "same original forecast5mm with nominal_translation and0 at measured recheck; planning5mm unchanged",
+    "same 0..40mm 5mm support grid plus original post-grid reserve",
+    "same original measured final recheck and .5s READY",
+    "same original96s whole-chain horizon and1800s per-start wall timeout",
+    "no extra FK/seed/candidate budget for only the proposed variant",
+    "original return-navigation timeout16s; goal_error<.05, heading_error<.12, travel>=.20, native exit/retracted-ready gates and stable>=.5s stay identical"
+  ],
+  "arms": [
+    {
+      "id": "E0",
+      "tip_shift_request": "zero; support-only under COMMON v317 bookkeeping",
+      "not_same_as": "historical whole v316 code, which has additional bookkeeping differences"
+    },
+    {
+      "id": "E1",
+      "tip_shift_request": "endpoint-only residual-corner cloud, same margins; original fixed lateral gate"
+    },
+    {
+      "id": "E2",
+      "tip_shift_request": "full41x64 finite cloud, same margins; original v317 fixed lateral gate"
+    },
+    {
+      "id": "E3",
+      "tip_shift_request": "same full cloud/margins; swept lateral-membership sufficient bound only"
+    }
+  ],
+  "new_required_observation_fields": [
+    "exact predecision step/time/source and gate state",
+    "recorded root/box world positions and wxyz quaternions at the SAME query",
+    "named q/dq and frozen waypoint/reference ids",
+    "actual finite tip cloud or reproducible FK inputs with source/hand/box FK cross-check",
+    "method request, actual support-selected/issued shift and source-id consumption",
+    "final measured verification and actual continuous READY/native PUSH activation",
+    "whole original terminal/outcome and native safety/time ledger"
+  ],
+  "unknown_handling": "missing box/cloud/frame -> not_ready; no default state imputation; no sufficient request within cap -> unknown/refusal via original guarded caller, NOT proof global robot infeasibility; all started refusals/errors remain in denominator",
+  "outcomes": {
+    "primary": "PROPOSED new protocol: shared preregistered world goal [-0.25,0,0yaw] for every arm, native position/yaw/retracted-stable criteria and original96s horizon unchanged; NOT the historical state-relative return goal",
+    "secondary": [
+      "native safety events",
+      "common-success time separately",
+      "failure-penalized time with shared96s cap",
+      "preparation delay and actual shift",
+      "failed handoff/replans",
+      "full compute including finite-cloud construction",
+      "unknown/refusal/missing-terminal coverage"
+    ],
+    "historical_cycle_scope": "historical v316/v317 keep original relative return goal and outcomes; their7/8->8/8 is NOT a score for the proposed fixed-world-goal task"
+  },
+  "proposed_resource_ceiling": {
+    "new_initial_states": 4,
+    "arms": 4,
+    "max_new_physical_starts": 16,
+    "max_sim_s_per_start": 96,
+    "original_wall_timeout_s_per_start": 1800,
+    "allocated": false,
+    "case_ids_registered": [],
+    "automatic_expansion": false,
+    "old_shared_or_release_budget_reused": false,
+    "new_SDK0env_App_proposal": 1,
+    "max_SDK0env_wall_s_proposal": 180
+  },
+  "readiness": {
+    "ready": false,
+    "remote_actor_probe_waypoint_hashes_verified": true,
+    "actual_historical_entry_robot_state_bound": true,
+    "full_source_and_new_feature_flag_SDK_admission": false,
+    "actual_query_box_and_finite_cloud_recorded": false,
+    "separate_physical_budget_allocated": false,
+    "common_fixed_world_goal_source_binding_implemented": false
+  },
+  "historical_evidence_scope": "v3167/8 vs v3178/8 is exposed tuned development and a geometry/support bookkeeping bundle; NOT a result for E0-E3, not independent confirmation, not novel module execution by this group",
+  "final_paper_global_navigation_requirement": "The proposed common world goal makes the pilot comparable; still preregister independent scene families and confirmatory allocation separately after mechanism/coverage pilot. No automatic expansion.",
+  "shared_global_goal_proposal": {
+    "target_se2_world": [
+      -0.25,
+      0.0,
+      0.0
+    ],
+    "registered_before_any_variant": true,
+    "caller_delta": "one COMMON target-argument binding for all E0-E3 at original return stage, instead of reached-stow-state-relative target; no physical-state/history/controller write",
+    "native_policy_safety_tolerances_and_horizon_unchanged": true,
+    "new_task_protocol_not_original_v317_reproduction": true,
+    "implemented": false,
+    "approved_or_allocated": false
+  },
+  "historical_other_negative_evidence_preserved": "Prior v317/v319 return-program choice screen found no extra completion/time benefit; this direct-parent geometry-bundle history does not overwrite it or prove online variant-choice value."
+}

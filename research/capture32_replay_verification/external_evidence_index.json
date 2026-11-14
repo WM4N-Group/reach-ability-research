@@ -1,0 +1,146 @@
+{
+  "schema": "reach-capture32-external-evidence-index-v1",
+  "location_policy": "Supply roots by CLI; paths below are root-relative. No external raw, NPZ, oracle, logs, model or producer source is vendored.",
+  "source_id": "sim2real-main-team-v022r2-fresh-ground-fallback-a",
+  "capture_id": 32,
+  "simulation_step": 9411,
+  "role": "original",
+  "historical_review_decision": "ACCEPTED_WITHIN_EXACT_RECORDED_MASK_RETURN_AND_CPU_DECOMPOSITION_SCOPE",
+  "evidence": [
+    {
+      "root": "control",
+      "relative_path": "package-manifest.json",
+      "sha256": "b8703a23c3372786818b6dac51f9c03387f8a52c535e8e0715701784b177e567",
+      "bytes": 71722
+    },
+    {
+      "root": "control",
+      "relative_path": "fresh_ground_fallback.py",
+      "sha256": "218baa61957bffc99941d0d4ac7af46a4902d673209d1c2d6c0d7bbeb247a40a",
+      "bytes": 18721
+    },
+    {
+      "root": "run",
+      "relative_path": "run-files-manifest.json",
+      "sha256": "a537eec248ea47d4480284d63b3afd1f6f49515e82f37482eb93863b2c1fa0a4",
+      "bytes": 2797
+    },
+    {
+      "root": "run",
+      "relative_path": "native-small/attempt/controllers/floor-aware-planning-events.jsonl",
+      "sha256": "8ac5b98832d4af5f17f519cd558996ccc79ff943d2f1348a27ea30389c7e4acf",
+      "bytes": 633144
+    },
+    {
+      "root": "run",
+      "relative_path": "native-small/attempt/controllers/planner-masks-complete.jsonl",
+      "sha256": "cd4e126b59bab7afa56fcbb9255a9c8a8964fef8298aa1ecd64f55cd0a9a1a4d",
+      "bytes": 134348
+    },
+    {
+      "root": "terminal_review",
+      "relative_path": "complete_mask_pair_index.json",
+      "sha256": "10960f276ddf14388412f702e450a16996b3bcdfd337e6da8625b9662ff2771e",
+      "bytes": 116781
+    },
+    {
+      "root": "terminal_review",
+      "relative_path": "last_native_control_line.jsonl",
+      "sha256": "8ce59afb8e1a8d626b3aa32b17c81f27d3203f1b21962a7836c1a057293c4671",
+      "bytes": 32695
+    },
+    {
+      "root": "verification",
+      "relative_path": "original_oracle.json",
+      "sha256": "caf13905d13e09365ada338a5f8a3de2aaba6618d416d3cc6995116e158c5d0a",
+      "bytes": 88646
+    },
+    {
+      "root": "verification",
+      "relative_path": "input_contract.json",
+      "sha256": "4671265ad219f3018be4c97b39d32e65757e6398e0ad8e912c38f4c7fd623f20",
+      "bytes": 7900
+    },
+    {
+      "root": "verification",
+      "relative_path": "actual_review_fcf13d30_02/review_receipt.json",
+      "sha256": "868c486060789306ef03a108c7b6872c53e50068c62ad280a1029bbe9f0bae59",
+      "bytes": 15354
+    },
+    {
+      "root": "verification",
+      "relative_path": "actual_review_fcf13d30_02/review_receipt.md",
+      "sha256": "42757ea5b2780958c907b321448b61439536c2a179b84a66e541ec5584069f47",
+      "bytes": 11799
+    },
+    {
+      "root": "verification",
+      "relative_path": "actual_review_fcf13d30_02/result.json",
+      "sha256": "94156b00b240c3e27bcadeeea2a828cc08c4c6d0374c9a2b798b96178b8663df",
+      "bytes": 17802
+    },
+    {
+      "root": "verification",
+      "relative_path": "npz_adapter_correction.json",
+      "sha256": "081509785f69874d5b998d0d0b588b485f6995b95bc39962fff63f407e9422bc",
+      "bytes": 556
+    },
+    {
+      "root": "candidate",
+      "relative_path": "diagnostic-manifest.json",
+      "sha256": "fcf13d3081ed837de14cd778aa9b3ed092c4079f625f72ce419b24fffb2355a8",
+      "bytes": 3075
+    },
+    {
+      "root": "candidate",
+      "relative_path": "cpu_replay_01/replay-arrays.npz",
+      "sha256": "10180021624e36f551ec16e6cde3981a0e553ca559419f83cd15ac6fadd93b01",
+      "bytes": 9950422
+    },
+    {
+      "root": "candidate",
+      "relative_path": "cpu_replay_01/gate-components.npz",
+      "sha256": "c2b05784cc285de355ecfe8ba6b94cdcf8d143da1b316582076483ba7be7b177",
+      "bytes": 37384
+    },
+    {
+      "root": "candidate",
+      "relative_path": "cpu_decomposition_02/independent-cumulative-and-localization.npz",
+      "sha256": "c5f6b0d6afcf698a6e24a027f1b08e2b0302fb990e8499ef16ff8bee47dcea7e",
+      "bytes": 290037
+    }
+  ],
+  "porting_origin": [
+    {
+      "root": "verification",
+      "relative_path": "replay_checker.py",
+      "sha256": "a6b9703191078486edecf5a4d4bd9e68378c2bb8eb8014d25cb5eb6b5cccd37d"
+    },
+    {
+      "root": "verification",
+      "relative_path": "audit_delivered_npz.py",
+      "sha256": "db09b50165d5e4fba85dc3a8c2fefe7bbcc595b7e9f5ab619b7968246c94c932"
+    },
+    {
+      "root": "verification",
+      "relative_path": "test_checker.py",
+      "sha256": "ebaf005cc48194868058a5285a6d88255bb5b54502d79571dea9b7123fe9f413"
+    },
+    {
+      "root": "verification",
+      "relative_path": "INPUT_REQUIREMENTS.md",
+      "sha256": "59583943590266c1fdde1f23c2c20d304a055f933bd7738d43f1bcd6879b3384"
+    },
+    {
+      "root": "verification",
+      "relative_path": "DEPENDENCY_AND_GATE_ACCEPTANCE.md",
+      "sha256": "7c634b7218ba36ca643f20ea7853962a4076a41acc5958c8af8069b93ee9571a"
+    }
+  ],
+  "limitations": [
+    "External evidence and NumPy are not bundled; missing roots/files must fail closed.",
+    "Historic JSON may contain absolute provenance paths; trusted CLI role mappings resolve actual reads without rewriting historical files.",
+    "Exact recorded masks/ordered indices/return are not CUDA intermediate float equality or new physical evidence.",
+    "This repository milestone is neither a planner implementation nor a physical/control/Goal-completion authorization."
+  ]
+}

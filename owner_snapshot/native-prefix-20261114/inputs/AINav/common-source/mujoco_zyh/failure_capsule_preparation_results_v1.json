@@ -1,0 +1,80 @@
+{
+  "schema": "mujoco-private-failure-capsule-preparation-results-v1",
+  "status": "OPT_IN_READER_AND_BEFORE_RAISE_HOOKS_CPU_READY_NOT_LIVE_VALIDATED",
+  "prepared_at": "2026-10-25T03:50:39.809723+08:00",
+  "diagnostic_reader_implemented": true,
+  "before_raise_hooks_implemented": true,
+  "recovery_brake_controller_implemented": false,
+  "new_physical_dispatch_protocol_registered": false,
+  "formal_protocol_freeze_complete": false,
+  "dispatchable": false,
+  "physical_failure_capsule_validated": false,
+  "local_evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/failure-capsule-preparation-20261025-v1",
+  "formal_host_evidence_root": "/mnt/yuanyue/data/go2-piper-world-model/failure-capsule-preparation-20261025-v1",
+  "primary_CPU_source": "source-admitted",
+  "source_sha256": {
+    "mujoco_zyh/failure_capsules.py": "d234fbc799944c9331e4d91ba42906778f1835105967d579f05db79a25be9f85",
+    "mujoco_zyh/test_failure_capsules.py": "b50e18a78a636a903ffcecdf9c9f454ecf207d804540e8d2080d0891f286d68a",
+    "mujoco_zyh/stall_stow.py": "5f02110bf1e2626ace07bb6562460108423ebe09d145b52b11f99dde547cc3eb",
+    "mujoco_zyh/reselect_B.py": "4fc68bb503f9f6fd036cd3786f3ce35f3f4f7bd6b29e659557e22a7eedf19973",
+    "mujoco_zyh/collect.py": "985b9c8a2322fff2645a2fec10587019eccac47ab14803136489aedddb39c01d",
+    "preflight_mujoco_failure_capsules.py": "8adea2144e737d07bf44ed7555857d428d040e8949e9518b37c914563961f76d"
+  },
+  "CPU_unit_tests": {
+    "total": 199,
+    "passed": 199,
+    "skipped": 0,
+    "new_capsule_tests_included": 22,
+    "log": "cpu-tests-admitted.log"
+  },
+  "actual_compiled_A_B_C_zero_step_reader_pass": true,
+  "actual_zero_step_contacts_per_read": [
+    14,
+    14,
+    14
+  ],
+  "source_native_sensor_channels_per_selected_view": 25,
+  "contact_component_synthetic_fixtures": 11,
+  "capsule_payload_bytes_for_three_zero_step_states": 128639,
+  "capsule_limits": {
+    "max_capsules": 8,
+    "max_compressed_payload_bytes": 2097152,
+    "max_contacts_per_capsule": 256,
+    "closure_metadata_not_counted_as_compressed_capsule_payload": true,
+    "future_physical_protocol_must_budget_total_episode_bytes": true
+  },
+  "original_A_alias_goal_FIFO_and_actual_integration_preserved": true,
+  "reader_mj_step_mj_forward_setState_reset_refresh_observation_termination_calls": 0,
+  "frozen_unload_math_synthetic_parity": {
+    "unique_cases": 200,
+    "bitwise_identical_feasible_outputs": 160,
+    "original_exception_class_and_text_unchanged_refusals": 40,
+    "rejected_call_actual_inputs_attached_not_recomputed": true
+  },
+  "new_main_or_calibration_physics_steps": 0,
+  "research_model_fits_or_WM_forwards_or_heldout_prediction_loads": 0,
+  "training_runs": 0,
+  "frozen_skill_weights_modified": false,
+  "CPU_frozen_actor_interface_forwards": {
+    "total": 12,
+    "reason": "Inherited four-actor zero-step interface regression ran in each of three successful package test runs; no physics or training. The new recorder/preflight itself did0.",
+    "in_admitted_199_test_run": 4
+  },
+  "old_protocols_automatically_install_recorder": false,
+  "old_root_claim_failure_or_source_modified": false,
+  "old_study_formal_shared_resource_admission_pass": false,
+  "prior_failed_CPU_invocations_preserved": true,
+  "next_required_work": [
+    "200Hz recoverable-exit/committed-prefix admission while PUSH still owns control; no threshold relaxation or FIFO clearing.",
+    "Actual bounded unload/brake bridge and admission design; CPU/source-matched feasibility before physical execution.",
+    "Only then independently registered new protocol, complete freeze and preflight/canonical shared locks; explicit install before FIRST task step. No old root revival or automatic retries.",
+    "Validate exact soft/hard/refusal capsules on NEW authorized physics; current14contact rows are ZERO-STEP scene evidence,11component fixtures are synthetic, NOT a live offending-B step."
+  ],
+  "evidence_sha256": {
+    "preflight-admitted/zero-step-preflight.json": "6d880c41f6811460784e7b9908aeba830fad93eed45d485fe251f79a272ef589",
+    "math-source-parity.json": "7c772339d205b65cc8d579644b57e18307ed0bbc7211d5c9c701f8c8b835e4a0",
+    "math-source-parity-reproducible.json": "f22b28886bd6a956b3eb79ec5542b0a278f67b0497efe24987054171f317f0ca",
+    "source-snapshot.json": "12ed932b54d4b97037590dd61c94e1e7406685e80099091944095b4e450fdf9d",
+    "cpu-tests-admitted.log": "e054d696cee95a48a89f79034eb15d4c4232043910492c25182352dc29ec75d7"
+  }
+}

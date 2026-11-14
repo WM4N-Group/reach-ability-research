@@ -1,0 +1,43 @@
+{
+  "schema": "piper-static-orientation-map-protocol-v1",
+  "role": "new_static_model_baseline_development_NOT_independent_robot_trials",
+  "frame": "base_link_xyz_m",
+  "target_body": "end_effector",
+  "target_offset_m": [0.0, 0.0, 0.0],
+  "grid": {
+    "x_m": [-0.10, 0.70, 5],
+    "y_m": [-0.35, 0.35, 5],
+    "z_m": [0.05, 0.65, 5],
+    "training_positions": "Cartesian endpoints-inclusive grid125",
+    "validation_positions": "Cartesian cell centers64; not used for fit or tuning"
+  },
+  "orientations": "tool_x_along_6_base_axes_times_roll_0_pi_over_2_12_total_not_uniform_SO3",
+  "IK": {
+    "position_tolerance_m": 0.002,
+    "orientation_tolerance_rad": 0.017453292519943295,
+    "max_iterations_per_seed": 80,
+    "seeds": ["default", "joint_range_midpoint"],
+    "stop_at_first_valid_seed": true,
+    "failure_label": "bounded_solver_not_found_NOT_unreachable_proof",
+    "warm_start_from_previous_query": false
+  },
+  "fit": {
+    "positive_success_fraction_threshold": 0.25,
+    "minimum_positive_points": 4,
+    "method": "training_positive_covariance_outer_cover_and_concentric_sample_empty_inner",
+    "covariance_regularizer_m2": 1e-8,
+    "quadratic_numeric_tolerance": 1e-10,
+    "scope": "one_fixed_approximation_not_exact_original_OmniNav_fitting_or_a_true_workspace_certificate"
+  },
+  "resources": {
+    "max_queries": 2268,
+    "max_IK_attempts": 4536,
+    "max_cpu_wall_s": 300,
+    "physical_steps": 0,
+    "actor_loads_or_forwards": 0,
+    "training_or_real_trace_reads": 0,
+    "GPU_or_remote_run": false,
+    "automatic_retry_or_grid_extension": false
+  },
+  "not_included": ["self_or_environment_collision", "support", "force_or_torque_limits", "actuator_delay", "physical_base_stance", "task_trajectory", "new_A0_A1_A2_robot_outcomes"]
+}

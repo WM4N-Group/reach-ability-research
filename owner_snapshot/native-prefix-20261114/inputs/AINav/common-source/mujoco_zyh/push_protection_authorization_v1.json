@@ -1,0 +1,12 @@
+{
+  "schema": "user-authorized-PUSH-protective-brake-layer-v1",
+  "recorded_at": "2026-10-25T09:13:10.308482+08:00",
+  "authorization": "技能权重继续冻结，但允许在PUSH期间增加显式支撑／速度保护制动层，在危险命令进入延迟队列之前介入。",
+  "supersedes_waiting_decision": "recovery_execution_boundary_decision_v1.json",
+  "original_native_skill_weights_frozen": true,
+  "new_protective_control_during_PUSH_authorized": true,
+  "WM_training_or_control_authorized": false,
+  "original_gates_goals_failed_histories_and_old_dataset_roles_preserved": true,
+  "no_reset_or_task_state_write_or_FIFO_clear": true,
+  "recovery_reliability_now_high_priority": true
+}

@@ -1,0 +1,199 @@
+{
+  "schema": "user-authorized-PUSH-protection-progress-results-v1",
+  "timestamp": "2026-10-25T09:31:51.175668+08:00",
+  "status": "EARLY_INTERCEPTION_IMPLEMENTED_PILOT_FAILED_IN_REAL_ARM_HANDOFF_DOMAIN_NOT_RELIABLE_YET",
+  "authorization": "push_protection_authorization_v1.json",
+  "execution_source_commit": "8baa5459689f1cc986465350a08026f1db07b6cd",
+  "pilot_root_formal": "/mnt/yuanyue/data/go2-piper-world-model/protected-recovery-prequeue-20261025-v1",
+  "local_evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-protection-preparation-20261025-v1",
+  "first_pilot": {
+    "main_episodes": 1,
+    "sim_seconds": 11.175000000000347,
+    "physical_steps": 2235,
+    "auxiliary_calibration": {
+      "worlds": 1,
+      "sim_seconds": 6.5049999999998835,
+      "source": "original zyh reference_stance + settle",
+      "main_world_unchanged": true,
+      "separate_initialization_state_adjustments_not_task_recovery": true,
+      "used_as_training_episode": false
+    },
+    "RGBD_frames": 112,
+    "payload_bytes_including_diagnostics": 7667813,
+    "task_success": false,
+    "actual_error": "RuntimeError('actual_issued_reference_seed_too_fast')",
+    "before_box_contact": true,
+    "actual60ms_no_progress_exit": false,
+    "complete_recovery": false,
+    "reset_after_initial": 0,
+    "automatic_retry": false
+  },
+  "independent_audit": {
+    "schema": "actual-prequeue-PUSH-protection-independent-audit-v1",
+    "engineering_data_and_intervention_audit_pass": true,
+    "formal_canonical_resource_admission_pass": true,
+    "protection_interface_complete": false,
+    "actual_error": "RuntimeError('actual_issued_reference_seed_too_fast')",
+    "original60ms_no_progress_recovery_success": false,
+    "protective_recovery_after_observed_legal_contact": false,
+    "early_protective_abort_before_contact": true,
+    "NOT_reliability_or_generalization_acceptance": true,
+    "new_independent_generalization_samples": 0,
+    "execution_source_commit": "8baa5459689f1cc986465350a08026f1db07b6cd",
+    "sim_seconds": 11.175000000000347,
+    "reset_after_initial": 0,
+    "exact_intervention_time_s": 11.175000000000347,
+    "intervention_reasons": [
+      "measured_acceleration_warning_NOT_future_bound"
+    ],
+    "actual_base_speed_at_intervention_m_s": 0.07118624372308942,
+    "all_motor_channels_before_intervention_equal_known_training_prefix": {
+      "issued": true,
+      "delayed": true,
+      "torque": true,
+      "raw_torque": true,
+      "q_before": true,
+      "dq_before": true,
+      "physical_tick": true,
+      "time_s": true
+    },
+    "actual_prequeue_checks": 24,
+    "rejected_proposal_NOT_first_issued_protected_command": true,
+    "pending_FIFO_preserved": true,
+    "original_goal_history_preserved": true,
+    "observed_actual_arm_reference_seed_rate_rad_s": [
+      0.0015233386646288818,
+      0.622568837869994,
+      -1.145687460750494,
+      -0.0013997368169841153,
+      -0.5718321142253291,
+      -0.0003492431233099075
+    ],
+    "no_protected_command_issued_before_handoff_refusal": true,
+    "measured_stable_terminal_hold_s": 0.0,
+    "actual_terminal_metrics": null,
+    "exact_capsule_events": [
+      {
+        "event": "prequeue_protective_retirement",
+        "time_s": 11.175000000000347
+      },
+      {
+        "event": "terminal_exception",
+        "time_s": 11.175000000000347
+      }
+    ],
+    "actual_claim_PID_exited": true,
+    "all_locks_currently_released": [
+      "/mnt/yuanyue/data/go2-piper-world-model/protected-recovery-prequeue-20261025-v1/dispatch.lock",
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock",
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock"
+    ],
+    "physics_actor_WM_training_calls_by_audit": 0
+  },
+  "actual_native_contract_handoff_domain": {
+    "schema": "actual-failed-handoff-native-contract-domain-diagnosis-v2",
+    "capsule_path": "/mnt/yuanyue/data/go2-piper-world-model/protected-recovery-prequeue-20261025-v1/private-failure-capsules/000000-prequeue_protective_retirement.npz",
+    "capsule_sha256": "c21701a74a42a56bd4613ea919355d2f0816b28b845b3dabb33f2ad39e0942dd",
+    "original_error": "RuntimeError('actual_issued_reference_seed_too_fast')",
+    "actual_time_s": 11.175000000000347,
+    "inner_reference_limits": [
+      [
+        -2.3461999797821047,
+        2.3461999797821047
+      ],
+      [
+        0.16700006484985352,
+        2.9729998016357424
+      ],
+      [
+        -2.808649768829346,
+        -0.15835000038146974
+      ],
+      [
+        -1.5604998970031738,
+        1.5604998970031738
+      ],
+      [
+        -1.087999930381775,
+        1.087999930381775
+      ],
+      [
+        -1.8749596977233887,
+        1.8749596977233887
+      ]
+    ],
+    "native_contract_path": "/mnt/yuanyue/data/go2-piper-world-model/zyh-mujoco-source-340d7d8-v1/push/policy/contract.json",
+    "native_contract_sha256": "672d82e74e39a31d8e44e146d9485e1c95a3fcc16c2ea2725a743da9110c08cc",
+    "matches_executed_zero_step_preflight_inner_limits_exactly": true,
+    "actual_admission": {
+      "direct_existing_stow_handoff_admitted": false,
+      "required_next_stage": "REAL_BRAKE_CAPTURE_BRIDGE_REQUIRED_NOT_IMPLEMENTED",
+      "actual_reference_velocity_rad_s": [
+        0.0015233386646288818,
+        0.622568837869994,
+        -1.145687460750494,
+        -0.0013997368169841153,
+        -0.5718321142253291,
+        -0.0003492431233099075
+      ],
+      "reference_speed_violations_zero_based": [
+        1,
+        2,
+        4
+      ],
+      "actual_q_outside_inner_domain_zero_based": [
+        1,
+        2
+      ],
+      "last_reference_outside_inner_domain_zero_based": [
+        1,
+        2
+      ],
+      "nominal_seed_or_measured_q_or_queue_changed": false,
+      "actual_future_brake_safety_certified": false,
+      "physical_control_authorized": false
+    },
+    "old_approximate_physical95percent_diagnosis_retained_not_authoritative": true,
+    "correction": "Actual source contract soft limits are NOT naively95percent of physical ranges. Final uses named sixarm slots from native contract and exact intersection/margin; no physical/screen/controller/threshold/data role was changed.",
+    "new_physics_steps": 0
+  },
+  "CPU_evidence": {
+    "executed_pilot_preflight_pass": true,
+    "pilot_source_tests_passed": 242,
+    "postfailure_candidate_tests_passed": 262,
+    "skipped": 0,
+    "postfailure_tests_NOT_actual_physics_or_new_brake_validation": true,
+    "source_domain_uses_actual_native_contract_named_joint_limits_not_guessed95percent_physical": true,
+    "original_frozen_actor_zero_step_regression_forwards_across3CPU_runs": 12
+  },
+  "historical_six_soft_failure_results_unchanged": {
+    "attempts": 6,
+    "completed": 2,
+    "not_updated_with_precontact_pilot": true
+  },
+  "current_end_to_end_NEW_protection_pilot_tally": {
+    "all_registered_starts": 1,
+    "completed_recoveries": 0,
+    "precontact_admission_or_interface_refusals": 1,
+    "contact_exposures": 0,
+    "postcontact_success_rate_estimate_available": false
+  },
+  "next_design": "from_start_brake_capture_design_v1.json",
+  "next_control_integrated": false,
+  "next_physical_protocol_registered": false,
+  "queued_or_active_new_physics_training": false,
+  "skill_weights_frozen": true,
+  "WM_training_forwards_and_control": 0,
+  "old_roots_failures_roles_and_goals_preserved": true,
+  "reliability_target": ">=95% within explicit supported domain, prospective independent acceptance required; NOT achieved, no universal guarantee",
+  "evidence_sha256": {
+    "independent-pilot-audit-final.json": "70f8033aedd6ecd68def5efd20ae89fcbe8ce2cf43a593228a93cd8be96872cc",
+    "actual-handoff-domain-native-contract-final.json": "708cc0226ac975f86804648d7a5dee32c29cc322c7bd28b51757050a4dbace42",
+    "execution-closure.json": "b8e67b8fdecf78874c6b4ba0b8ee74c0667726009bb587b48fe9e1e3bbe452a1",
+    "cpu-tests.log": "5542084967a27db02856414d38e940f3e5f2c99d184f3fa0b609ab1d2e8b12be",
+    "native-domain-cpu-tests.log": "b68e32f24e23df39db0c9ac08f26aa2ddb52de39f4f32aec5cf1c562f8791a40",
+    "pilot-preflight.json": "722ab117f13f3c11d97b0eee45820f77d4d34f115484ae414e9c4370c725f904",
+    "review-provenance.json": "7496a87b92c9e76617ed5d44f811b0e5792600fd7b31087504f55d1c386352a0"
+  },
+  "review_video": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-protection-preparation-20261025-v1/actual-first-pilot-onboard-FAILED.mp4"
+}

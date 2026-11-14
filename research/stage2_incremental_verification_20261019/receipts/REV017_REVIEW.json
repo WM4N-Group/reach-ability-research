@@ -1,0 +1,123 @@
+{
+  "schema": "s2-rev-017-dev015-independent-increment-review-v1",
+  "reviewer": "verification",
+  "independent": true,
+  "decision": "BLOCKED_NOT_ACCEPTED_FOR_PROBE",
+  "blocking_findings": [
+    "REV017-OWNER-01",
+    "REV017-STOP-02"
+  ],
+  "source_id": "sim2real-s2-gravity-order-v023r2g-3701-env0",
+  "candidate_version": "wm07-gravity-order-probe-v023r2g",
+  "source_manifest_sha256": "fa3712e778523fe09a72275c54c5247730944ee6a9b309fa5ca702b8ac2a689e",
+  "protocol_sha256": "1646f57b03caf961405d6d62862189a807300bb18dff95a9cd65518455cc3121",
+  "at": "2026-10-19T17:20:24.217678+08:00",
+  "scope": "Independent incremental CPU/read-only startup, watchdog, stop, owner, closure and progress review; not scientific re-adjudication or RUN authority",
+  "reviewer_runtime": {
+    "requested_model": "GPT-6.1 Sol",
+    "requested_reasoning_effort": "high",
+    "model_and_effort_independently_verified": false,
+    "reason": "No trustworthy model/effort introspection or switching API exposed to this session",
+    "nested_delegation": false,
+    "old_Euler_restored": false
+  },
+  "findings": [
+    {
+      "id": "REV017-OWNER-01",
+      "priority": 1,
+      "file": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-gravity-order-probe-v023r2g/probe_runner.py",
+      "start_line": 426,
+      "end_line": 438,
+      "call_site_line": 514,
+      "title": "Notification I/O error unwinds UNKNOWN owner wait",
+      "reproduction_cases": [
+        "unknown_record_IO_failure_unwinds_owner",
+        "unknown_stdout_failure_unwinds_owner"
+      ],
+      "observed": "With unknown remote status, ENOSPC/BrokenPipeError escapes wait_stopped, unwinding its caller ownership context before confirmed stop. Actual shared lock was never touched.",
+      "existing_a537_boundary": "Attention-record/stdout errors are best-effort and cannot release UNKNOWN owner. Post-confirmed-stop reporting errors need not retain ownership indefinitely.",
+      "inherited_edge_not_claimed_new_regression": true
+    },
+    {
+      "id": "REV017-STOP-02",
+      "priority": 1,
+      "file": "/home/yuanyue/re-nav -piper-deploy/artifacts/go2-piper/sim2sim-current-20261008-a/wm07-gravity-order-probe-v023r2g/probe_runner.py",
+      "start_line": 406,
+      "end_line": 423,
+      "title": "Final cat masks process/GPU inventory failure",
+      "reproduction_cases": [
+        "failed_ps_hidden_by_final_cat",
+        "failed_GPU_apps_query_hidden_by_final_cat"
+      ],
+      "observed": "Failed mandatory component (exit 7/9) plus later successful cat produces shell exit 0; missing output is interpreted as empty inventory and wait_stopped returns confirmed stop.",
+      "required_existing_boundary": "All already-required quiescence components must have succeeded; incomplete observation remains UNKNOWN and holds owner, not even FAILED closure.",
+      "inherited_edge_not_claimed_new_regression": true
+    }
+  ],
+  "confirmed_portions": [
+    "TERM race bounded child reap and fresh survivor decision",
+    "immutable UNKNOWN plus successfully observed fresh full stop closes FAILED only without rewriting originals",
+    "normal live or unenumerated survivors remain unclosed",
+    "startup/env/substep/tick fsync and partial-tail observation semantics",
+    "exact local/remote manifest and frozen parent/SDK hashes",
+    "actual Python3.10 read-only sandbox; formal source/run/prep absent",
+    "static CLI/wrapper/AppLauncher/native/config/env construction links",
+    "180s diagnostic, 8ticks/32substeps, core2340/outer2400, original safety, one start/zero retry"
+  ],
+  "independent_tests": {
+    "local_cases": 10,
+    "local_positive_controls": 6,
+    "local_confirmed_counterexamples": 4,
+    "fixture_errors": 0,
+    "remote_new_counterexamples_python310": 4,
+    "producer_suites_rerun": false,
+    "old_math_Jacobian_fcf_full_suites_rerun": false
+  },
+  "remote_readonly": {
+    "python_version": "3.10.12",
+    "sandbox_manifest_matches": true,
+    "formal_source_exists": false,
+    "formal_run_exists": false,
+    "remote_writes": false,
+    "SDK_imported": false
+  },
+  "sdk_started": false,
+  "physics_started": false,
+  "r2g_environment_starts_by_reviewer": 0,
+  "shared_owner_lock_touched": false,
+  "run_authorized": false,
+  "launch_authorized_by_this_receipt": false,
+  "full_control_chain_accepted": false,
+  "scientific_gravity_result": false,
+  "full_task_success": false,
+  "r2g_local_run_preparation_exists": false,
+  "r2g_ledger_events": 0,
+  "prior_r2f": {
+    "starts": 1,
+    "retries": 0,
+    "terminal": "FAILED_INCONCLUSIVE_STARTUP_TIMEOUT_NO_PROBE_RESULT",
+    "sdk_started": true,
+    "environment_created": "unknown",
+    "physics_ticks": "unknown",
+    "gravity_result": false,
+    "watchdog_unresolved_originals_preserved": true,
+    "REV016_unchanged": true
+  },
+  "minimal_repair_scope": "Guard notification/record exceptions without unwinding UNKNOWN wait; propagate mandatory snapshot component failures into UNKNOWN. Deliver a separately frozen/reviewable repair without executing or editing historical records. No new proof archive, math review, physical run, retry, or 60s gate required.",
+  "details_file": "/home/yuanyue/main/work/agent_team_runtime/stage2_joint_gate_20261018/verification/s2_rev_017_gravity_probe_review/README.md",
+  "evidence_sha256": {
+    "README.md": "01b9558b99456cc296207d30aa813f1a65511db5cb8ca4adffad608bbc6ed549",
+    "independent_delta_audit.log": "103d199324f4b42f29ceeb626579a43c37586ca9e00e43b27ae95a135cb18753",
+    "independent_delta_audit.py": "62880c0e3f79171c0d6657e893f4b3e2fc3114c33f285e0adfac4fa41803d253",
+    "independent_delta_result.json": "103d199324f4b42f29ceeb626579a43c37586ca9e00e43b27ae95a135cb18753",
+    "intake.json": "c57eee419430f1fe50dbd8bb9ad2ac8e7a92a57ee4e96bd2a9296156ae6765e3",
+    "preservation.json": "dd10dc351fb710c410dadc6646ba5ee5625e73487ea4122db9a5f370e08e2294",
+    "remote_delta_readonly.py": "7d81a6f8ee7387c3b3c850355697df5d68100256cd39ecc67797cd034b3317ba",
+    "remote_delta_readonly_result.json": "341a37801102029c5c7ecbbe76b853af138e16668782002fc202c48c409305b8",
+    "remote_delta_readonly_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote_readonly_audit.py": "3d895608cb4a418fb4ae328896f55e6fb6791e70b98e881d6eea18026260ac04",
+    "remote_readonly_snapshot.json": "efe302b414751cf36aea4cb0d7deb4f9c65a943198e706b3907648ec0442633a",
+    "remote_readonly_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "preserved": "Source/control/old dirty/frozen/history retained. No SDK/physical execution, source authorization, nested agent, commit or push. Main retains stage/route/run decisions; probe is not CLIMB/NAV/full-stage success."
+}
