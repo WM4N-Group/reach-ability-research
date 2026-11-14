@@ -1,0 +1,11 @@
+{
+  "schema": "ainav-active-vlm-profile-v1",
+  "provider": "sol_gateway",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "base_url": "http://43.133.198.249:3000/v1",
+  "api_key_environment": "AINAV_VLM_API_KEY",
+  "vision_verification_file": "sol_vision_verification.json",
+  "transport_TLS": false,
+  "fallback_provider": null
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "five-easy-scene-engineering-plan-v5",
+  "date": "2026-10-26",
+  "user_authorization": "Prioritize existing-skill world-model data; easier scenes, relaxed joint safety gates, include CLIMB and actual bridge, five distinct passing geometries before collection.",
+  "cases": [
+    {
+      "case_id": "platform20-wide",
+      "family": "side_platform",
+      "platform_height_m": 0.2,
+      "platform_width_m": 2.0,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.0
+    },
+    {
+      "case_id": "platform12-shortlane",
+      "family": "side_platform",
+      "platform_height_m": 0.12,
+      "platform_width_m": 1.8,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.2
+    },
+    {
+      "case_id": "platform16-detour",
+      "family": "side_platform",
+      "platform_height_m": 0.16,
+      "platform_width_m": 1.8,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.4
+    },
+    {
+      "case_id": "bridge15-wide",
+      "family": "bridge",
+      "platform_height_m": 0.2,
+      "box_length_m": 3.6,
+      "box_width_m": 1.4,
+      "box_mass_kg": 1.0,
+      "gap_near_x_m": 4.1499999999999995,
+      "gap_width_m": 0.15,
+      "finish_x_m": 4.85,
+      "push_distance_m": 1.0,
+      "climb_standoff_m": 1.05,
+      "ramp_entry": true,
+      "ramp_length_m": 2.1,
+      "ramp_width_m": 1.2,
+      "ramp_landing_end_x_m": 2.9
+    },
+    {
+      "case_id": "bridge25-long",
+      "family": "bridge",
+      "platform_height_m": 0.2,
+      "box_length_m": 3.8,
+      "box_width_m": 1.6,
+      "box_mass_kg": 1.0,
+      "gap_near_x_m": 4.35,
+      "gap_width_m": 0.25,
+      "finish_x_m": 5.05,
+      "push_distance_m": 1.0,
+      "climb_standoff_m": 1.05,
+      "ramp_entry": true,
+      "ramp_length_m": 2.1,
+      "ramp_width_m": 1.2,
+      "ramp_landing_end_x_m": 2.9
+    }
+  ],
+  "one_bounded_start_per_root": true,
+  "automatic_retry": false,
+  "data_collection_begins_only_after_all_five_pass": true,
+  "skills_frozen": true,
+  "WM_control": false,
+  "revision_reason": "Simplify the source-known difficult dynamic box climb: third fixed16cm platform; real push bridge cases use a fixed side ramp and native NAV across the actual gap. CLIMB remains executed in three platform scenes."
+}

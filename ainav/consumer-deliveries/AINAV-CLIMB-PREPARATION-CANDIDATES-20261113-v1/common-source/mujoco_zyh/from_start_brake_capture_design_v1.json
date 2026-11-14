@@ -1,0 +1,35 @@
+{
+  "schema": "from-start-protected-PUSH-brake-capture-next-design-v1",
+  "status": "CPU_BUILDING_BLOCKS_ONLY_NOT_NEW_DISPATCH_PROTOCOL",
+  "basis": "protected-recovery-prequeue-20261025-v1 stopped before contact11.175sim at old fold reference-rate admission; early speed warning worked but direct ProtectedStow was not phase-compatible.",
+  "new_PHYSICAL_reliability_claim": false,
+  "controller_integration_complete": false,
+  "dispatchable": false,
+  "reuse_existing": [
+    "reselect_B.compile_entry_and_machine: exact source-matched compact arm entry/activation adaptation",
+    "resume_nav.NAV_ARM [0,.30,-.30,0,0,0]: explicit compact target already used in real priorNAV/B interface",
+    "ProtectedStow/nativeWholeBodyQP and all original capture/retreat/geometry/range/effort gates",
+    "failure_capsules: actual typed seven-term histories, exact lastissued/FIFO/COM/contacts"
+  ],
+  "required_changes": [
+    "Use existing compact-entry adapter to reach inner reference domain by REAL motion before first protected NN PUSH command; leave initialization/failure-world qpos untouched. Do not rewrite .05actual q into .167 or pretend a .3reference means actual arrival.",
+    "Keep reference derivative in original.45rad/s/1rad/s2 domain FROM FIRST protectedPUSH motor command; CPU feasible position-PD step uses zero target velocity and actual FF at0/60ms, must be combined with fullarmgeometry and effort screens.",
+    "Check LAST ACTUALLY ISSUED derivative and currentarmq/innerlimits before allowing direct stow takeover. If incompatible, require realbrake/capturestage, never zero derivative/clearFIFO.",
+    "Plan true support/velocity brake/capture separately from final folding; permit folding only after actualstablesupport/unload/innerdomain.",
+    "Log originalNNproposal, transformedproposal and issuedcommand separately so newactorcommand interface/actionhistory truth is explicit; preserve originalweights and real observations.",
+    "Before any v2 physical run: source-matchedCPU/actualnonemptyzero-step/preflight/newprotocol/freeze/newroot/canonical locks, bounded budget,no auto retries."
+  ],
+  "CPU_blocks": [
+    "arm_takeover_admission",
+    "arm_reference_rate_step",
+    "protected_position_reference_step"
+  ],
+  "CPU_pass_does_NOT_certify": [
+    "geometric sweep",
+    "floatingbase support/contact dynamics",
+    "future acceleration bound",
+    "general recovery success",
+    "protected PUSH task success"
+  ],
+  "new_physics_or_training_by_design": 0
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "registered-known-development-recovery-exit-capsule-diagnostics-v1",
+  "registered_date": "2026-10-25",
+  "purpose": "Obtain missing exact soft-exit base/COM state and original refusal inputs BEFORE developing or validating a new brake. Instrumentation only, expected refusal remains FAILURE.",
+  "authorized_scope": "User autonomous continuation of recovery engineering; NOT new model study or retry-until-success.",
+  "case_ids": [
+    "joint2",
+    "base-speed"
+  ],
+  "new_roots": [
+    "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-joint2-20261025-v1",
+    "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-base-speed-20261025-v1"
+  ],
+  "known_development_conditions": [
+    "terminated-option-20261025-v2/train-3",
+    "terminated-option-20261025-v2/train-5"
+  ],
+  "new_independent_generalization_samples": false,
+  "old_source_episode_role_goal_or_claim_modified": false,
+  "expected_refusals": [
+    "unload_coupled_reference_intersection_empty:1",
+    "measured_unload_retreat_outside_original_envelope"
+  ],
+  "training_runs": 0,
+  "WM_forwards": 0,
+  "WM_control": false,
+  "automatic_retry": false,
+  "reset_after_initial_allowed": 0,
+  "main_episodes_allowed": 2,
+  "max_sim_seconds_each": 22,
+  "max_wall_seconds_each": 600,
+  "grace_seconds_each": 10,
+  "auxiliary_worlds_allowed": 2,
+  "auxiliary_max_sim_seconds_each": 10.5,
+  "total_episode_payload_cap_bytes": 134217728,
+  "static_MJB_or_external_state_review_saved": false,
+  "canonical_shared_resource_dir": "/mnt/yuanyue/data/go2-piper-world-model",
+  "gates_unchanged": true,
+  "brake_controller_change": false,
+  "prospective_requirements": [
+    "New committed source + final CPU pass",
+    "Exact per-case canonical-locked zero-step actual RGBD and capsule reader preflight",
+    "Independent per-root freeze/source SHA and single consumed claim; no old root reuse",
+    "Scoped bounded sequential launcher; record expected FAILURE returncode, never retry or turn it into success",
+    "After execution independently validate data/FIFO/capsule exact time/state/selected-contact identity and actual canonical lock evidence; no training."
+  ]
+}

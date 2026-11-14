@@ -1,0 +1,50 @@
+{
+  "schema": "mujoco-recovery-exit-domain-diagnostic-results-v1",
+  "status": "READONLY_CPU_DIAGNOSIS_NOT_CONTROLLER_FIX_OR_PHYSICS_ADMISSION",
+  "generated_at": "2026-10-25T02:40:15.148149+08:00",
+  "local_evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/recovery-exit-domain-diagnostic-20261025-v1",
+  "formal_host_evidence_root": "/mnt/yuanyue/data/go2-piper-world-model/recovery-exit-domain-diagnostic-20261025-v1",
+  "input_study": "/mnt/yuanyue/data/go2-piper-world-model/terminated-option-forecast-study-20261025-v2",
+  "input_execution_source_commit": "bf00c12",
+  "diagnostic_report": "diagnostic-boundary-clarified.json",
+  "diagnostic_sha256": "a3dcbabb1b7386fd95ab874bcfe5b2fc25b4ee655d0694d76d304f74eadb055e",
+  "cpu_tests": {
+    "unique_tests": 21,
+    "passed": 21,
+    "skipped": 0,
+    "log": "cpu-tests-boundary-clarified.log",
+    "source_sha256": {
+      "test_audit_mujoco_recovery_exit_domain.py": "8dc0a62fa226a56cc6f682002cf2026cdf0c9b83c9f93e98a16200ac1625b4a9",
+      "audit_mujoco_recovery_exit_domain.py": "a0cb07769f704104315da712a4f22583070573ef64d8aba563fe349d759132ce"
+    }
+  },
+  "summary": {
+    "soft_exits": 6,
+    "recovery_completed": 2,
+    "recovery_refused": 4,
+    "refusals_before_first_recovery_command_applied": 4,
+    "all_axis_delay_steps": 4,
+    "first_recovery_motor_integration_after_exit_s": [
+      0.02,
+      0.025
+    ],
+    "exact_boundary_base_velocity_not_logged": true
+  },
+  "unchanged_input_files_checked_pre_post": 187,
+  "new_physics_steps": 0,
+  "new_actor_or_WM_forwards": 0,
+  "new_training_runs": 0,
+  "models_or_heldout_predictions_loaded": false,
+  "actual_controller_or_original_thresholds_changed": false,
+  "physical_recovery_admission_pass": false,
+  "inherited_formal_resource_admission_pass": false,
+  "dispatchable": false,
+  "next_admission_requirements": [
+    "Keep all original gates. Add exact before-raise and soft-exit full state/COM/raw contacts/actual FIFO/last-issued reference capsules with separate private byte budget.",
+    "Evaluate recoverable exit domain while PUSH still has authority, at actual 200Hz, before unavoidable committed motor prefix crosses a recovery envelope.",
+    "Design a real bounded unload/brake bridge for measured capture domain; no queue clear, state reset, grace-threshold relaxation or success relabel.",
+    "Prove source-matched CPU bounds then new standalone freeze/preflight/protocol/root/canonical locks before ANY new physical episode."
+  ],
+  "interpretation": "All four refusals occur before NEW recovery commands reach the motors, confirmed from full5x18 channel ancestry and actual torque reconstruction. This does not prove an alternative bridge would succeed, or infer missing exact boundary base velocity/gravity.",
+  "preserved_first_analysis": "diagnostic.json/source/cpu-tests.log remain immutable; clarified version distinguishes motor integration START20ms from END25ms, not a new physical run or changed scientific conclusion."
+}

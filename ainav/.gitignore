@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+outputs/
+datasets/
+checkpoints/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.mjb
+*.mjb.gz
+*.mp4

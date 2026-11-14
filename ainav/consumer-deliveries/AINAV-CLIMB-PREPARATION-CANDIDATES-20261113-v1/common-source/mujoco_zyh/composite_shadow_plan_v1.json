@@ -1,0 +1,22 @@
+{
+  "schema": "piper-mujoco-composite-shadow-study-v1",
+  "purpose": "Collect fresh native NAV-PUSH-NAV-CLIMB RGBD/action streams and train a causal short-horizon shadow consequence model. Not the three-box 40cm research task.",
+  "source_recipe": "zyh_native_single_box",
+  "executor": "frozen zyh actors plus previously disclosed post-PUSH NAV adapter",
+  "model_input": "8 past actual RGBD/proprio/action frames, 140 complete past issued and delayed motor steps, elapsed time, current declared skill; no private catalog, mass, future action or capsule",
+  "labels": "0.4s and 0.8s root and box body-frame XY displacement only while the same skill remains active and all measured joint range/speed gates pass",
+  "roles_frozen_before_physics": true,
+  "heldout_sealed_until_after_training": true,
+  "automatic_retry": false,
+  "training_runs_allowed": 1,
+  "WM_control": false,
+  "cases": [
+    {"case_id":"train-0","role":"train","seed":3711,"delay_ms":10},
+    {"case_id":"train-1","role":"train","seed":3712,"delay_ms":15},
+    {"case_id":"train-2","role":"train","seed":3713,"delay_ms":20},
+    {"case_id":"validation-0","role":"validation","seed":3714,"delay_ms":20},
+    {"case_id":"test-0","role":"test","seed":3715,"delay_ms":5}
+  ],
+  "limits": {"per_case_sim_s":90,"per_case_wall_s":900,"grace_s":10,"total_wall_s":2400,"max_payload_bytes_per_case":134217728},
+  "scope_limit": "Single native 1kg/20cm geometry with delay variation; five sources cannot validate broad generalization or full-task planning benefit. Earlier engineering review data stays excluded."
+}

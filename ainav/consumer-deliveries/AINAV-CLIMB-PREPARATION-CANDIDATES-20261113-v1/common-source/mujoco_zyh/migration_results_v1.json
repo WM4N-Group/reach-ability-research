@@ -1,0 +1,322 @@
+{
+  "schema": "piper-worldmodel-zyh-mujoco-migration-results-v1",
+  "as_of": "2026-10-24T14:17:04+08:00",
+  "status": "NATIVE_COLLECTION_MIGRATION_EXECUTED_DATA_AUDIT_PASS_RESEARCH_AND_STRICT_SAFETY_ADMISSION_NOT_COMPLETE",
+  "current_collection_backend": "mujoco",
+  "backend_change_authority": "User explicitly requested using zyh skills/switches and migrating collection to MuJoCo on2026-10-24; supersedes previous Isaac-only collection direction, not historical evidence",
+  "collector_execution_commit": "04b5170a0104090cf247751f3db5f06ca31730af",
+  "upstream_source": {
+    "schema": "pinned-zyh-mujoco-source-v1",
+    "repository": "WM4N-Group/go2-piper-RL-Sim2Sim2Real",
+    "commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+    "sha256sums_sha256": "aa97f14736885648f99853385c145de30a34b753903d9a51a872f7d407653150",
+    "manifest_sha256": "b7669886794092acb6ed17a2f6428b1bf4a9e218de601c860207d6c367ed09be",
+    "verified_files": 148,
+    "root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-source-340d7d8-v1",
+    "skills": {
+      "nav": "original210D",
+      "climb": "V1/900",
+      "push": "v212-dual"
+    },
+    "original_source_or_weights_modified": false,
+    "formal_skill_acceptance": false
+  },
+  "implementation_directory": "scripts/piper_world_model/mujoco_zyh",
+  "frozen_skill_actor_sha256": {
+    "climb/policy/actor.pt": "8285bb4e40b7cddbac141786d10e9a7864057f63c0c77fce1ff2ab748ccddb8e",
+    "nav/policy/actor.pt": "e0c53bd102d2ac89afd5317d134ae8d84ebf820cfd7dce61e21408fdc2d870b2",
+    "push/policy/arm_actor.pt": "45e8f418aa90fa41e1ea386d412b91ca2a7f642ded0e86145b244872d3e6ca7a",
+    "push/policy/leg_actor.pt": "2f7ff820441a0ee5cde18f79bcbd1c27885a4b158ad9448ee5ce50d3ac410799"
+  },
+  "runtime": {
+    "python": "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/bin/python",
+    "versions": {
+      "mujoco": "3.3.2",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "osqp": "1.1.3",
+      "torch": "2.7.0+cu128"
+    },
+    "isolated_overlay": true,
+    "original_Isaac_and_existing_MuJoCo_environments_not_modified": true
+  },
+  "preflight": {
+    "CPU_tests_passed": 27,
+    "skipped": 0,
+    "native_observation_interfaces": {
+      "nav": 210,
+      "push": 226,
+      "climb": 923
+    },
+    "frozen_actor_interfaces_checked": 4,
+    "zero_step_real_RGBD_pass": true,
+    "zero_step_depth_valid_fraction": 0.6020914713541666,
+    "original_runtime_inverse_source_check": true,
+    "constructor_hooks": 3,
+    "research_A20_B05_C1_and40cm_platform_compiled_no_physics": true
+  },
+  "physical_episode": {
+    "registered_episodes": 1,
+    "actual_main_episodes": 1,
+    "scene": "zyh native1kg upstream_demo, NOT research A20 or selected B",
+    "sequence": [
+      "nav",
+      "push",
+      "nav",
+      "nav",
+      "nav",
+      "climb"
+    ],
+    "native_route_success": true,
+    "outcome": "native_sequence_complete_and_hold",
+    "main_sim_seconds": 118.9599999999643,
+    "collector_wall_seconds": 106.43462477624416,
+    "launcher_start": "2026-10-24T14:03:07+08:00",
+    "launcher_end": "2026-10-24T14:04:59+08:00",
+    "auxiliary_calibration": {
+      "worlds": 1,
+      "sim_seconds": 6.5049999999998835,
+      "source": "original zyh reference_stance + settle",
+      "main_world_unchanged": true,
+      "separate_initialization_state_adjustments_not_task_recovery": true,
+      "used_as_training_episode": false
+    },
+    "reset_after_initial_main_episode": 0,
+    "complete_at_sim_seconds": 113.95999999996884,
+    "post_success_hold_s": 5.0,
+    "native_guard_or_switch_algorithms_modified": false,
+    "physical_pose_or_queue_reset_at_switch": false,
+    "skill_software_history_epochs": "Original zyh per-skill reinitialization retained and declared; not old Isaac history-equivalence evidence"
+  },
+  "data": {
+    "contract": "piper-mujoco-visual-action-stream-v2",
+    "actual_RGBD_frames": 1190,
+    "RGBD_resolution": [
+      192,
+      128
+    ],
+    "RGBD_hz": 10,
+    "native_control_hz": 50,
+    "full_issued_delayed_motor_command_hz": 200,
+    "actual_physical_command_steps": 23792,
+    "compressed_payload_bytes": 86549726,
+    "compressed_payload_MiB": 82.54025077819824,
+    "episode_apparent_bytes": 92740371,
+    "visual_chunks": 38,
+    "motor_chunks": 119,
+    "v1_loader_compatible": false,
+    "complete_intervening_actions_required": true,
+    "model_fields": 8,
+    "private_truth_or_mass_in_model_input": false,
+    "training_allowed": false,
+    "role": "already-exposed engineering development",
+    "independent_evaluation": false
+  },
+  "independent_audit": {
+    "schema": "piper-mujoco-closed-data-audit-v2",
+    "data_integrity_pass": true,
+    "errors": [],
+    "actual_physical_command_steps": 23792,
+    "actual_visual_frames": 1190,
+    "full_intervening_actions_checked": true,
+    "max_PD_recompute_error": 0.0,
+    "max_torque_clip_error": 0.0,
+    "last_visual_tick": 5945,
+    "streaming_chunk_read": true,
+    "actor_or_WM_forwards": 0,
+    "task_success_inferred": false,
+    "actual_task_outcome": "native_sequence_complete_and_hold"
+  },
+  "strict_limit_admission": {
+    "schema": "zyh-mujoco-strict-limit-diagnostic-v1",
+    "scope": "Diagnostic on actual recorded200Hz pre-step states, not an alternative source success predicate",
+    "strict_zero_exceedance_admission_pass": false,
+    "speed_exceeded_substeps": [
+      0,
+      0,
+      29,
+      0,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      27,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "maximum_joint_range_overshoot_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.008620500145773497,
+      0.008212433972438217,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "maximum_speed_rad_s": [
+      6.306030592101904,
+      18.445875298058475,
+      26.391993189557258,
+      7.319862473601925,
+      14.139883097928294,
+      14.722047412698492,
+      10.16414066018033,
+      10.910130934529388,
+      25.02114129105088,
+      6.129167033630091,
+      16.191723028042194,
+      30.360215785991688,
+      2.1437543584878056,
+      2.2563050849621717,
+      1.581119275669205,
+      1.5057512994788338,
+      3.018317140579416,
+      1.1019350538675352
+    ],
+    "joint_names": [
+      "FR_hip_joint",
+      "FR_thigh_joint",
+      "FR_calf_joint",
+      "FL_hip_joint",
+      "FL_thigh_joint",
+      "FL_calf_joint",
+      "RR_hip_joint",
+      "RR_thigh_joint",
+      "RR_calf_joint",
+      "RL_hip_joint",
+      "RL_thigh_joint",
+      "RL_calf_joint",
+      "joint1",
+      "joint2",
+      "joint3",
+      "joint4",
+      "joint5",
+      "joint6"
+    ],
+    "raw_native_task_success": true,
+    "production_collection_or_real_hardware_authorized": false,
+    "thresholds_not_relaxed": true
+  },
+  "strict_limit_events_by_stage": {
+    "startup/startup": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 2311,
+      "max_joint_range_overshoot_rad": 0.004570054319313193
+    },
+    "nav/blend": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 168,
+      "max_joint_range_overshoot_rad": 0.0016051093083668602
+    },
+    "nav/run": {
+      "speed_exceeded_joint_substeps": 23,
+      "angle_exceeded_joint_substeps": 8920,
+      "max_joint_range_overshoot_rad": 0.008620500145773497
+    },
+    "push/prepare": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 782,
+      "max_joint_range_overshoot_rad": 0.0017987253154117407
+    },
+    "push/blend": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 1,
+      "max_joint_range_overshoot_rad": 1.680137433447114e-07
+    },
+    "push/run": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 97,
+      "max_joint_range_overshoot_rad": 0.00011314752726859499
+    },
+    "climb/blend": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 48,
+      "max_joint_range_overshoot_rad": 0.0008729257656402539
+    },
+    "climb/run": {
+      "speed_exceeded_joint_substeps": 52,
+      "angle_exceeded_joint_substeps": 1019,
+      "max_joint_range_overshoot_rad": 0.006723239076639377
+    },
+    "climb/complete": {
+      "speed_exceeded_joint_substeps": 0,
+      "angle_exceeded_joint_substeps": 0,
+      "max_joint_range_overshoot_rad": 0.0
+    }
+  },
+  "provenance": {
+    "own_frozen_files_matching": 17,
+    "upstream_payloads_matching": 148,
+    "all_local_chunk_SHA_matching": true,
+    "historical_Isaac_source45a_and_A_failure_unmodified": true,
+    "old_dispatcher_claim_or_budget_flags_changed": false
+  },
+  "current_admission": {
+    "native_collection_pipeline": true,
+    "native_demo_route": true,
+    "strict_zero_limit_exceedance": false,
+    "research_threebox_failed_A_reset0_recovery_B_reselection": false,
+    "full_platform_or_bridge": false,
+    "formal_cross_sim_skill_acceptance": false,
+    "real_hardware": false,
+    "batch_research_collection": false
+  },
+  "budgets": {
+    "main_max_sim_s": 120,
+    "wall_s": 900,
+    "grace_s": 10,
+    "compressed_payload_max_bytes": 134217728,
+    "auxiliary_worlds_allowed": 1,
+    "auxiliary_max_sim_s": 10.5,
+    "claim_consumed": true,
+    "remaining_episodes": 0,
+    "automatic_retry": false
+  },
+  "completion": {
+    "schema": "zyh-mujoco-collection-completion-v1",
+    "native_PID": 1366789,
+    "native_process_exited": true,
+    "locks_available": {
+      "dispatch.lock": true,
+      "../native-observer-physics-gpu1.lock": true,
+      "../native-observer-sdk-gpu1.lock": true
+    },
+    "episode_claim_consumed": 1,
+    "episodes_remaining": 0,
+    "automatic_retry": false,
+    "new_training_runs": 0
+  },
+  "training_runs": 0,
+  "WM_forwards": 0,
+  "WM_control_calls": 0,
+  "comparison_warning": "Not a controlled speed comparison with Isaac: camera resolution/rate, storage format, runtime and task differ.",
+  "remaining_work": [
+    "Register strict velocity/joint-range treatment before batch admission; preserve source-native success and actual violations separately, never relax thresholds or relabel failure",
+    "Port no-reset failed-A recovery and explicit B controller/observation/contact/goal binding onto this native MuJoCo runtime; not supplied by the zyh demo",
+    "Complete engine-separated v2 action-interval training consumer/labels and research scene protocol; no training or bulk sampling before admission"
+  ],
+  "evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-migration-20261024-v1",
+  "formal_run_root": "/mnt/yuanyue/data/go2-piper-world-model/zyh-mujoco-collection-20261024-v1",
+  "actual_onboard_video": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-migration-20261024-v1/run/actual-onboard-rgb-10fps.mp4",
+  "actual_camera_samples": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-migration-20261024-v1/run/actual-onboard-samples.png",
+  "environment_isolation_receipt": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-migration-20261024-v1/preparation/environment-isolation.json",
+  "evidence_manifest": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/zyh-mujoco-migration-20261024-v1/SHA256SUMS.json"
+}

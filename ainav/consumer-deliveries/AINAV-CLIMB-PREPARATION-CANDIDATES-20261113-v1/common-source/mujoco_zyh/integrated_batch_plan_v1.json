@@ -1,0 +1,192 @@
+{
+  "schema": "integrated-course-collection-and-training-plan-v1",
+  "cases": [
+    {
+      "case_id": "train-01",
+      "role": "train",
+      "geometry_group": "integrated-gap-160mm",
+      "seed": 61101,
+      "geometry": {
+        "case_id": "train-01",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.16,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "train-02",
+      "role": "train",
+      "geometry_group": "integrated-gap-190mm",
+      "seed": 61102,
+      "geometry": {
+        "case_id": "train-02",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.19,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "train-03",
+      "role": "train",
+      "geometry_group": "integrated-gap-240mm",
+      "seed": 61103,
+      "geometry": {
+        "case_id": "train-03",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.24,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "train-04",
+      "role": "train",
+      "geometry_group": "integrated-gap-280mm",
+      "seed": 61104,
+      "geometry": {
+        "case_id": "train-04",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.28,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "validation-01",
+      "role": "validation",
+      "geometry_group": "integrated-gap-175mm",
+      "seed": 61105,
+      "geometry": {
+        "case_id": "validation-01",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.175,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "validation-02",
+      "role": "validation",
+      "geometry_group": "integrated-gap-265mm",
+      "seed": 61106,
+      "geometry": {
+        "case_id": "validation-02",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.265,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "test-01",
+      "role": "test",
+      "geometry_group": "integrated-gap-225mm",
+      "seed": 61107,
+      "geometry": {
+        "case_id": "test-01",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.225,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    },
+    {
+      "case_id": "test-02",
+      "role": "test",
+      "geometry_group": "integrated-gap-285mm",
+      "seed": 61108,
+      "geometry": {
+        "case_id": "test-02",
+        "lane_y_m": -2.0,
+        "gap_width_m": 0.285,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      }
+    }
+  ],
+  "automatic_retry": false,
+  "bootstrap_summary_sha256": "7dadb63979428bdad7698f0808aa5a2075fc77137e175e2a0d315a0abf275399",
+  "bootstrap_new_training_authorization": "User 2026-10-26 explicitly authorized the accepted five complete seen-development episodes as training bootstrap. Old files/roles remain unchanged; never validation/test.",
+  "collection": {
+    "new_episodes": 8,
+    "bootstrap_episodes": 5,
+    "max_sim_seconds_per_episode": 420,
+    "max_wall_seconds_per_episode": 2400,
+    "max_bytes_per_episode": 536870912,
+    "policy_weights_frozen": true,
+    "reset_after_initial": 0,
+    "WM_control": false
+  },
+  "training": {
+    "model": "RGBD-proprio recurrent action-conditioned world-model v1",
+    "image_height": 64,
+    "image_width": 96,
+    "context_frames": 5,
+    "rollout_frames": 20,
+    "frame_dt_s": 0.1,
+    "action_substeps_per_frame": 20,
+    "issued_action_channels": 90,
+    "batch_size": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "updates": 1000,
+    "seed": 61200,
+    "max_wall_seconds": 1800,
+    "device": "cuda:0",
+    "model_selection": "fixed final checkpoint; validation descriptive only",
+    "test_used_for_selection": false,
+    "evaluate_test_once_after_checkpoint_frozen": true,
+    "future_recorded_actions": "Explicit conditional offline dynamics only; no future observations/proprio, no closed-loop control",
+    "official_DINO_WM_or_Dreamer_replication_claimed": false
+  }
+}

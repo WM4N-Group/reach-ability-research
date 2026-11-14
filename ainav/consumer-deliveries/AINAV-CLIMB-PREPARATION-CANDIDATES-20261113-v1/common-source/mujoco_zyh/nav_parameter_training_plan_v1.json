@@ -1,0 +1,33 @@
+{
+  "schema": "controlled-native-NAV_STEP-training-plan-v1",
+  "purpose": "Fill the explicitly identified +/-2cm first-NAV action support gap with matched complete continuous TRAIN episodes, not another unmodified model retry.",
+  "native_controller_parent_revision": 16,
+  "geometry_case": "full-4 known-development",
+  "shared_seed": 62271,
+  "cases": [
+    {
+      "case_id": "back-2cm",
+      "nav_step_delta_world_x_m": -0.02
+    },
+    {
+      "case_id": "nominal-control",
+      "nav_step_delta_world_x_m": 0.0
+    },
+    {
+      "case_id": "forward-2cm",
+      "nav_step_delta_world_x_m": 0.02
+    }
+  ],
+  "public_body_stream_hz": 50,
+  "physics_starts_allowed": 3,
+  "max_sim_seconds_each": 420,
+  "max_wall_seconds_each": 2400,
+  "model_updates_allowed": 0,
+  "WM_control": false,
+  "automatic_retry": false,
+  "old_split_and_source_roles_unchanged": true,
+  "all_new_sources_role": "train",
+  "intervention_scope": "Only first NAV_STEP goal_world_x; CLIMB targets and all later goals unchanged",
+  "model_readout": "Source assignment is a training intervention, never a learned choice or planning benefit.",
+  "protocol_gate": "Independent frozen source, CPU regression and each exact nonempty zero-step preflight before one bounded new-root start; preserve all outcomes."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "prospective-protected-recovery-reliability-plan-v1",
+  "status": "ENGINEERING_TARGET_NOT_ACHIEVED_OR_GUARANTEED",
+  "authorization_file": "push_protection_authorization_v1.json",
+  "user_priority": "PUSH失败→真实退避→完整收臂成功率，而不是单条演示或扩大WM训练",
+  "historical_evidence": {
+    "soft_exits": 6,
+    "completed_recoveries": 2,
+    "not_iid_representative_rate_estimate": true,
+    "old_failures_and_test_roles_remain": true
+  },
+  "end_to_end_success_requires": [
+    "No reset/task physical state write or FIFO clear",
+    "All original hard/range/speed/effort/contact gates throughout",
+    "Observed real unloading and measured retreat",
+    "Actual load-bearing support capture before full protected stow",
+    "Compact arm target4sverification+5s hold",
+    "Preserve original failed/protectively-aborted PUSH outcome and goal/history"
+  ],
+  "report_separate_counts": [
+    "all_pre_registered_episode_starts_including_admission_refusals",
+    "actual_PUSH_contact_exposures",
+    "original60ms_soft_no_progress_exits",
+    "protective_early_retirements_before_and_after_contact",
+    "hard_exits_and_censored_runs",
+    "complete_recoveries_and_end_to_end_success_fraction_over_all_starts",
+    "conditional_recovery_fraction_plus_domain_coverage_no_hidden_denominator"
+  ],
+  "phases": [
+    {
+      "name": "CPU_and_preflight",
+      "scope": "Actual200Hz current and full5x18 proposals/immutable queue prefix; warn screens are not certified dynamics bounds"
+    },
+    {
+      "name": "one_known_development_pilot",
+      "scope": "Exactly ONE newly frozen pilot; no retry/autofill. Conservative early protection may precede contact and must be reported as such, NOT an immovable-box recovery success."
+    },
+    {
+      "name": "development_regression",
+      "scope": "Only oldTRAIN3/4/5known conditions, failures retained; do not tune using exposed test conditions. New budgets/versions required."
+    },
+    {
+      "name": "sealed_reliability_acceptance",
+      "scope": "New prospectively registered supported mass/friction/offset/yaw/initialvelocity/delay/contact domains; independent fresh seeds, source frozen before tests; no test-driven tuning or replacement episodes."
+    }
+  ],
+  "engineering_target": {
+    "recovery_fraction_at_least": 0.95,
+    "conditional_on_explicit_supported_domain": true,
+    "zero_failures_60_independent_pre_registered_cases_one_sided95_lower_bound": 0.9512970866899025,
+    "claim_requires_domain_coverage_and_all_starts_reported": true,
+    "not_a_physical_universal_safety_guarantee": true
+  },
+  "unsupported_case_policy": "Record precondition rejection/hard censor as non-success in end-to-end tally; never call skipped/censored/early-abort-before-contact a successful failed-PUSH recovery.",
+  "no_new_WM_training": true,
+  "new_physics_started": false
+}

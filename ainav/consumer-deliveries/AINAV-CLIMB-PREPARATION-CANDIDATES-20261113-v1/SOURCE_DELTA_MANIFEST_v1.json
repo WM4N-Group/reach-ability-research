@@ -1,0 +1,18 @@
+{
+  "schema": "AINav-finite-CLIMB-preparation-one-caller-delta-v1",
+  "original_source_path": "ainav/native/execution_judged_course.py",
+  "original_caller_sha256": "22a10aad8c59cc79fb209ec5c6ce58f5cfd946bff1162762301834159e0f8fd9",
+  "changed_original_functions": [
+    "ExecutionJudgedFullCourse._native_nav"
+  ],
+  "files_sha256": {
+    "climb_preparation_candidates.py": "1c40a748bd1d93e3684853b60f2dc038e673f019976d60cf33eb8195ff9942d0",
+    "source-delta/ainav/native/execution_judged_course.py": "a49c9065eabec561c34606fb3b8a57afde25fbc7922c2a734f5e6009f9c351ac",
+    "selected-native-nav-caller.patch": "6464e0a4a52c44032744def03fdef97825c842333df0756a5bb7a7ad39ac2b19"
+  },
+  "default_enabled": false,
+  "actual_native_geometry_or_motor_or_physical_qualification": false,
+  "not_a_whole_program_freeze": true,
+  "can_layer_only_after_explicit_current283_fork_pins_checked": true,
+  "old_scopes_and_reference_source_unchanged": true
+}

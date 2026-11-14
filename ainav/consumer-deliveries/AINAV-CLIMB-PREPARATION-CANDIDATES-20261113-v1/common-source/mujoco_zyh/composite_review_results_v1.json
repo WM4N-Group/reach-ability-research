@@ -1,0 +1,228 @@
+{
+  "schema": "piper-mujoco-composite-review-results-v1",
+  "as_of": "2026-10-24T16:13:37.542583+08:00",
+  "status": "ONE_NATIVE_COMPOSITE_CAPTURE_COMPLETE_VIDEO_AND_DATA_AUDIT_PASS_STRICT_SAFETY_NOT_ACCEPTED",
+  "collector_execution_commit": "2378452d22e63c284cdfc9ac95e6ea71371050a6",
+  "upstream_commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "formal_host": "go2-root-yuanyue",
+  "backend": "mujoco",
+  "user_request": "采集一条完整的综合场景给我检查",
+  "scope": "Native1kg upstream_demo box +20cm platform; not A20kg failure/no-reset recovery/B reselection/40cm research scene",
+  "seed": 3701,
+  "source_group": "mujoco-zyh-340d7d8-native-route-development",
+  "independent_sample": false,
+  "training_allowed": false,
+  "main_episode": {
+    "success": true,
+    "outcome": "native_sequence_complete_and_hold",
+    "sim_seconds": 118.9599999999643,
+    "collector_wall_seconds": 116.47299036756158,
+    "reset_after_initial": 0,
+    "automatic_retry": false,
+    "registered_attempts": 1,
+    "remaining_attempts": 0,
+    "auxiliary_calibration": {
+      "worlds": 1,
+      "sim_seconds": 6.5049999999998835,
+      "source": "original zyh reference_stance + settle",
+      "main_world_unchanged": true,
+      "separate_initialization_state_adjustments_not_task_recovery": true,
+      "used_as_training_episode": false
+    }
+  },
+  "timeline": [
+    {
+      "start_s": 0,
+      "end_s": 6.02,
+      "stage": "native startup"
+    },
+    {
+      "start_s": 6.02,
+      "end_s": 10.18,
+      "stage": "original NN NAV"
+    },
+    {
+      "start_s": 10.18,
+      "end_s": 15.14,
+      "stage": "native PUSH entry support preparation"
+    },
+    {
+      "start_s": 15.14,
+      "end_s": 21.74,
+      "stage": "v212 PUSH"
+    },
+    {
+      "start_s": 21.74,
+      "end_s": 30.6,
+      "stage": "native PUSH exit retract/stabilize"
+    },
+    {
+      "start_s": 30.6,
+      "end_s": 105.62,
+      "stage": "three original NN NAV detour waypoints"
+    },
+    {
+      "start_s": 105.62,
+      "end_s": 113.96,
+      "stage": "CLIMB V1/900"
+    },
+    {
+      "start_s": 113.96,
+      "end_s": 118.96,
+      "stage": "post-success hold"
+    }
+  ],
+  "data": {
+    "actual_RGBD_frames": 1190,
+    "resolution": [
+      192,
+      128
+    ],
+    "RGBD_hz": 10,
+    "control_hz": 50,
+    "motor_stream_hz": 200,
+    "physical_motor_records": 23792,
+    "compressed_payload_bytes": 86549726,
+    "bytes_by_dynamic_folder": {
+      "episode": 92741254,
+      "review-state": 1040282,
+      "review-video": 2480421
+    },
+    "total_dynamic_bytes_including_video": 96261957,
+    "shared_static_model_cached_once_bytes": 43398597,
+    "static_model_repeated_in_each_episode": false,
+    "all_dynamic_storage_within_registered_cap": true,
+    "private_full_states_model_input_allowed": false
+  },
+  "video": {
+    "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/composite-scene-review-20261024-v1/run/review-video/complete-scene-review.mp4",
+    "sha256": "f6d732be56b25d643edfea0c4dec8e44784cd2cfd69093340adc4f7ce2a4b6e1",
+    "frames": 1190,
+    "fps": 10.0,
+    "last_actual_sample_sim_s": 118.89999999996435,
+    "main_final_sim_s": 118.9599999999643,
+    "complete_world_states_recorded": true,
+    "actual_synchronized_onboard_RGB_inset": true,
+    "offline_display_copy_only": true,
+    "new_physics_or_actor_forwards_for_video": 0,
+    "interpolation_or_root_estimation": false,
+    "terminal_padding": false,
+    "full_state_joints_match_actual_proprio": true,
+    "max_object_pose_error_m": 0.0
+  },
+  "independent_data_audit": {
+    "schema": "piper-mujoco-closed-data-audit-v2",
+    "data_integrity_pass": true,
+    "errors": [],
+    "actual_physical_command_steps": 23792,
+    "actual_visual_frames": 1190,
+    "full_intervening_actions_checked": true,
+    "max_PD_recompute_error": 0.0,
+    "max_torque_clip_error": 0.0,
+    "last_visual_tick": 5945,
+    "streaming_chunk_read": true,
+    "actor_or_WM_forwards": 0,
+    "task_success_inferred": false,
+    "actual_task_outcome": "native_sequence_complete_and_hold"
+  },
+  "strict_safety": {
+    "passed": false,
+    "speed_exceeded_joint_substeps": 75,
+    "speed_exceeded_per_joint": [
+      0,
+      0,
+      29,
+      0,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      27,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "joint_angle_violation_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.008620500145773497,
+      0.008212433972438217,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_joint_angle_violation_rad": 0.008620500145773497,
+    "native_completion_is_not_strict_safety_acceptance": true,
+    "production_or_hardware_or_training_admission": false
+  },
+  "preparation": {
+    "final_CPU_tests_passed": 114,
+    "skipped": 0,
+    "native_zero_step_preflight_passed": true,
+    "failed_CPU_preparation_logs_retained": [
+      "cpu-v1.log",
+      "cpu-v2.log"
+    ],
+    "reason": "Large static compiled model exceeded original dynamic-only quota; separate explicit content-addressed static cache budget, no physics launched before final passing preflight"
+  },
+  "closure": {
+    "schema": "composite-review-closure-v1",
+    "as_of": "2026-10-24T16:12:06.072769+08:00",
+    "own_frozen_inputs_verified": 27,
+    "upstream_frozen_files_verified": 148,
+    "collector_source_commit": "2378452d22e63c284cdfc9ac95e6ea71371050a6",
+    "launcher_pid": 1367028,
+    "collector_pid": 1367029,
+    "pids_exited": {
+      "1367028": true,
+      "1367029": true
+    },
+    "locks_available": {
+      "/mnt/yuanyue/data/go2-piper-world-model/composite-scene-review-20261024-v1/dispatch.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock": true
+    },
+    "launcher_exit_code": 0,
+    "claim_consumed": true,
+    "main_episodes_allowed": 1,
+    "main_episodes_remaining": 0,
+    "automatic_retry": false,
+    "bytes_by_dynamic_folder": {
+      "episode": 92741254,
+      "review-state": 1040282,
+      "review-video": 2480421
+    },
+    "total_dynamic_episode_and_review_bytes": 96261957,
+    "max_total_dynamic_bytes": 201326592,
+    "shared_static_model_bytes": 43398597,
+    "shared_static_model_sha256": "c806606e0091d1e6ec863d6b06b8fd20af9581b02b0c8e986f078578b0d5554f",
+    "shared_static_model_path": "/mnt/yuanyue/data/go2-piper-world-model/compiled-review-models/72f60fc446582ba8ff0a924c29e3c92ca3f54f8ec74ecebfa17b6f3e1d1f70ec.mjb.gz",
+    "no_static_model_duplicate_inside_episode": true,
+    "training_runs": 0,
+    "WM_forwards": 0,
+    "WM_control": 0
+  },
+  "evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/composite-scene-review-20261024-v1",
+  "WM_training_runs": 0,
+  "WM_forwards": 0,
+  "WM_control": 0,
+  "recovery_controller_implemented": false,
+  "research_A_failure_B_reselection_validated": false
+}

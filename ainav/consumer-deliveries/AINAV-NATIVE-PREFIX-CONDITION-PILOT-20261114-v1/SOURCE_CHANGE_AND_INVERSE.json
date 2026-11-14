@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-14T18:41:36.205438+08:00",
+  "original_file": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/common-source/probe_execution_judge.py",
+  "original_sha256": "eecbf79b3c1ad215ec3ac625307ab95f6e0c8a7d10bb53c81d964f5cb521bb73",
+  "new_file": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/source-delta/probe_execution_judge.py",
+  "new_sha256": "133fd5933193f96dc2a6399d0f8305699519b3f758cd3c952528ac573a9dded5",
+  "old_fragment": "    def __init__(self,requests,journal):\n        self.requests=tuple(requests);self.journal=journal;self.index=0;self.pending=None\n        if not 1<=len(self.requests)<=2:raise ValueError('One/two explicit bounded engineering requests required')",
+  "new_fragment": "    def __init__(self,requests,journal,*,max_requests=2):\n        self.requests=tuple(requests);self.journal=journal;self.index=0;self.pending=None\n        if type(max_requests) is not int or max_requests not in (2,3):raise ValueError('Explicit bounded request capacity 2 or 3 required')\n        if not 1<=len(self.requests)<=max_requests:raise ValueError('One/two explicit bounded engineering requests required' if max_requests==2 else 'One/two/three explicit bounded engineering requests required')",
+  "inverse_restores_original_bytes": true,
+  "default_capacity": 2,
+  "optional_capacity": 3,
+  "all_select_reject_observe_and_native_logic_unchanged": true,
+  "current_frozen_program_edited": false,
+  "physical_admission": false
+}

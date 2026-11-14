@@ -1,0 +1,93 @@
+{
+  "schema": "five-scene-bootstrap-platform20-entry-fix-v2",
+  "date": "2026-10-26",
+  "user_authorization": "Prioritize existing-skill world-model data; easier scenes, relaxed joint safety gates, include CLIMB and actual bridge, five distinct passing geometries before collection.",
+  "cases": [
+    {
+      "case_id": "platform20-wide",
+      "family": "side_platform",
+      "platform_height_m": 0.2,
+      "platform_width_m": 2.0,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.0,
+      "data_role": "train",
+      "prepare_climb": false
+    },
+    {
+      "case_id": "platform12-shortlane",
+      "family": "side_platform",
+      "platform_height_m": 0.12,
+      "platform_width_m": 1.8,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.2,
+      "data_role": "train",
+      "prepare_climb": true
+    },
+    {
+      "case_id": "platform16-detour",
+      "family": "side_platform",
+      "platform_height_m": 0.16,
+      "platform_width_m": 1.8,
+      "box_mass_kg": 1.0,
+      "push_lane_y_m": -2.4,
+      "data_role": "train",
+      "prepare_climb": true
+    },
+    {
+      "case_id": "bridge15-wide",
+      "family": "bridge",
+      "platform_height_m": 0.2,
+      "box_length_m": 3.6,
+      "box_width_m": 1.4,
+      "box_mass_kg": 1.0,
+      "gap_near_x_m": 4.1499999999999995,
+      "gap_width_m": 0.15,
+      "finish_x_m": 4.85,
+      "push_distance_m": 1.0,
+      "climb_standoff_m": 1.05,
+      "ramp_entry": false,
+      "ramp_length_m": 2.1,
+      "ramp_width_m": 1.2,
+      "ramp_landing_end_x_m": 2.9,
+      "bridge_goal": "construction_and_stow",
+      "data_role": "train",
+      "prepare_climb": true
+    },
+    {
+      "case_id": "bridge25-long",
+      "family": "bridge",
+      "platform_height_m": 0.2,
+      "box_length_m": 3.8,
+      "box_width_m": 1.6,
+      "box_mass_kg": 1.0,
+      "gap_near_x_m": 4.35,
+      "gap_width_m": 0.25,
+      "finish_x_m": 5.05,
+      "push_distance_m": 1.0,
+      "climb_standoff_m": 1.05,
+      "ramp_entry": false,
+      "ramp_length_m": 2.1,
+      "ramp_width_m": 1.2,
+      "ramp_landing_end_x_m": 2.9,
+      "bridge_goal": "construction_and_stow",
+      "data_role": "train",
+      "prepare_climb": true
+    }
+  ],
+  "one_bounded_start_per_root": true,
+  "automatic_retry": false,
+  "data_collection_begins_only_after_all_five_pass": true,
+  "skills_frozen": true,
+  "WM_control": false,
+  "revision_reason": "The new common QP entry caused actual base contact in20cm data. Restore the directly validated native CLIMB entry for this geometry; retain the failed v1 data. One new fixed-source rollout only.",
+  "readiness": {
+    "path": "/mnt/yuanyue/data/go2-piper-world-model/five-scene-review-20261026-v1/readiness.json",
+    "sha256": "30a2011e3c2d6e0dd42d267f4d4d42008a659452aa46bea6afdc5c17c7ecdf59"
+  },
+  "roles": "All five new sources are training-only bootstrap; no held-out score or independent geometry claim.",
+  "physical_starts_allowed": 1,
+  "training_runs_in_collection": 0,
+  "active_case_ids": [
+    "platform20-wide"
+  ]
+}

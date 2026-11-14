@@ -1,0 +1,18 @@
+{
+  "schema": "ainav-authorized-gateway-actual-vision-high-verification-v1",
+  "recorded_at": "2026-10-30T23:20:45.548298+08:00",
+  "endpoint": "http://43.133.198.249:3000/v1/chat/completions",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning_effort": "high",
+  "vision_high_probe_passed": true,
+  "proof_sha256": "1914b6afa8a8baea87a9210e5b0434bad4850d367f2157848bb8627da0580ef4",
+  "actual_response_model": "gpt-6.1-sol",
+  "synthetic_visual_answer_correct": true,
+  "reasoning_tokens_reported": 69,
+  "server_echoed_effort": false,
+  "high_effort_request_accepted": true,
+  "upstream_effort_or_weights_independently_verified": false,
+  "no_native_or_physics_or_task_success_claim": true,
+  "transport_TLS": false,
+  "HTTP_risk_disclosed": true
+}
