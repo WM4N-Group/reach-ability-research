@@ -47,6 +47,6 @@ Data新根：`/mnt/yuanyue/data-team/deployments/46308-20261114`。
 
 ## 新端实际启动故障与有限修正（2026-11-15）
 
-v1真实own-zero在原source_robot.xml解析前失败：MuJoCo导入后系统libexpat2.5已占SONAME，Python3.11.16 pyexpat要求XML_SetAllocTrackerActivationThreshold。v1左zero1/main0已失败closed并保15.156688wall/6831bytes及usage_known=false；右0/0未执行，绝不重启其root。
+v1真实own-zero在原source_robot.xml解析前失败：MuJoCo导入后系统libexpat2.4.7已占SONAME，Python3.11.16 pyexpat要求XML_SetAllocTrackerActivationThreshold。v1左zero1/main0已失败closed并保15.156688wall/6831bytes及usage_known=false；右0/0未执行，绝不重启其root。
 
 已只读复用既有私有基座Expat2.8.1的同字节库，复制到Data私有overlay，SHA c995a803…；只用单进程LD_PRELOAD，不改系统/共享环境、不降级parser或控制器。实际torch→mujoco→pyexpat→原XML CPU链与/proc/maps绑定已通过，非native资格。v2是明确不同的本地动态库解析配置，新程序prepare先验加载SHA/版本/路径和原XML再claim；需新的完整freeze与自身zero。仅允许一个修正程序版本，每版本zero各一次，G1新端两main总上限仍2（v1 main0）；若v2启动再失败则停，不自动v3/换ID追跑。G1条件/Actor/4301/目标/场景/安全成功门未改，旧失联与v1启动失败都不抹账。

@@ -15,5 +15,20 @@
   "required_shared_inputs": "owner_snapshot/native-prefix-20261114/inputs",
   "input_release_sha256": "bc03afc0a3bdc7964546edac8d1de89ed8e354ee9b5d4c01f3fee90449f35f17",
   "private_native_library_binary_not_in_Git": true,
-  "custody_not_run_authorization": true
+  "custody_not_run_authorization": true,
+  "program_control_files_sha256": {
+    "freeze_remote.py": "385136a64fa2a07df741aad776a9ab40bd0434a83aad7723e52f2324ebede58d",
+    "phase_control_remote.py": "17548c3f2b2aa94022d22676a417e9938cbb5e4e00ef6d18a0c1cb7a6527b1fb",
+    "run_freeze.py": "39c10e926aee1a8a6c686077a0a59e93d6ffcfd2ccc23f7da928fb0a61c84571",
+    "control.py": "1cb19906f49a586a95b5bb12287e0fd5c394d867b3b9355c424d4d48723f6f1e",
+    "mirror_H.py": "536475c2d1ebe7823e57d90d175b986a8c0516a4858764092952ae5bfeb326a8",
+    "run_prepare.py": "fab7201a40f1b9a28398fd6d9137a1739a8fb5bc8259ee5d4b547d15b819a4ed",
+    "launch_phase.py": "704cc11857fa27a0a42fc2154ea218244747bcbb0cd6527eff467a699ce7b459",
+    "run_cold.py": "37e91bcf719b6c91ba11cf7a28e295eba1e2437629968334b8c1a78f51b316f9",
+    "zero_cold_readonly.py": "9fdc6cdcbaee57819026db9f68f7d345f77e3db1707a64339aaea9e891b9ff46",
+    "audit_main_readonly.py": "b5369e6bff1cf32f53c18d749a2596768de0b1a7bc953cb97f8d557398deff7b",
+    "fetch_result.py": "df083b6dfa57bc79baa3f39fde3971187ad6b2447b4ccac65a60fa5bab68dc34",
+    "adopted_optional_journal_bridge.py": "4013453725cc923dd012cf34a06e69540d2b5bd4fd11ab5831fbd0bdfbbe4252",
+    "JOURNAL_RECORD_BRIDGE_RELEASE_v1.json": "060b87e6812746f74ce76ecf85425a959b5598ebfde319daf5eb11995b723845"
+  }
 }

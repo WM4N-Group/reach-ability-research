@@ -1,7 +1,7 @@
 {
   "schema": "Data-bounded-corrected-native-library-program-qualification-v2",
   "main_plan_sha256": "53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40",
-  "reason": "Real v1 own-zero failed before source_robot.xml parsing/model construction because MuJoCo import loaded system libexpat2.5 before pyexpat3.11.16 which requires2.8.1 symbols.",
+  "reason": "Real v1 own-zero failed before source_robot.xml parsing/model construction because MuJoCo import loaded system libexpat2.4.7 before pyexpat3.11.16 which requires2.8.1 symbols.",
   "changed_runtime_binding_only": {
     "LD_PRELOAD": "/mnt/yuanyue/data-team/deployments/46308-20261114/dependencies/native-expat-overlay-20261115-v1/lib/libexpat.so.1",
     "library_sha256": "c995a80395904d85c4d35f4a185c3bae2fcdc562141dd6106c8ebe29571d33b3",
