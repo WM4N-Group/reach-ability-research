@@ -1,0 +1,14 @@
+{
+  "execution_program_code_commit": "d986ac6d99928fc5467ad9a8634eff04ecef3b11",
+  "later_readonly_publication_does_not_change_execution_code": true,
+  "Data_reader_sha256": "dec9d769ccd4c4d4a80c2cfe707227236ba2905bb0c50bbb9fb0cded7700ec2a",
+  "source_files_sha256": {
+    "data_owner/shared_readers/ainav_records.py": "dec9d769ccd4c4d4a80c2cfe707227236ba2905bb0c50bbb9fb0cded7700ec2a",
+    "data_owner/native-prefix-46308-20261115-v2/publication/export_closed_left_public.py": "f5c333cd935d9d51696453febdf4dbee24fad7514dbfd6e32bd1b81c0dafb17b",
+    "data_owner/native-prefix-46308-20261115-v2/publication/build_complete_composition.py": "df9168a6881080269cfb0e14c72c565854a376c8d6b382e339e71b04cdff82b6",
+    "data_owner/native-prefix-46308-20261115-v2/publication/compare_control_footprints_bitwise_verify.py": "a59c3b1e254caea5e2f337f5c0beaf1d2898a7229f3a0de35d9ad33674ddd11b",
+    "data_owner/native-prefix-46308-20261115-v2/publication/compare_actual_control_footprints.py": "afc7a58a8cba3733456234bf7dd59c12a3a64d5c4cbb259cd0a0bdef4252b9eb",
+    "data_owner/native-prefix-46308-20261115-v2/publication/export_closed_right_public.py": "b542ebb1475bba3f5f06335b4c75ac21c1c61292e3fd0776ef9d412a1474e9fb"
+  },
+  "code_only_no_actual_query_arrays_weights_or_authority_files": true
+}

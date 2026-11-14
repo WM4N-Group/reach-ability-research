@@ -50,3 +50,9 @@ Data新根：`/mnt/yuanyue/data-team/deployments/46308-20261114`。
 v1真实own-zero在原source_robot.xml解析前失败：MuJoCo导入后系统libexpat2.4.7已占SONAME，Python3.11.16 pyexpat要求XML_SetAllocTrackerActivationThreshold。v1左zero1/main0已失败closed并保15.156688wall/6831bytes及usage_known=false；右0/0未执行，绝不重启其root。
 
 已只读复用既有私有基座Expat2.8.1的同字节库，复制到Data私有overlay，SHA c995a803…；只用单进程LD_PRELOAD，不改系统/共享环境、不降级parser或控制器。实际torch→mujoco→pyexpat→原XML CPU链与/proc/maps绑定已通过，非native资格。v2是明确不同的本地动态库解析配置，新程序prepare先验加载SHA/版本/路径和原XML再claim；需新的完整freeze与自身zero。仅允许一个修正程序版本，每版本zero各一次，G1新端两main总上限仍2（v1 main0）；若v2启动再失败则停，不自动v3/换ID追跑。G1条件/Actor/4301/目标/场景/安全成功门未改，旧失联与v1启动失败都不抹账。
+
+## G1新端实际数据交付已闭合，转G2（2026-11-15）
+
+修正库配置执行版commit d986ac6…两条件各自zero/main真实PASS/closed、原九流cold全过。完整原件组合release77748185…显式引用两子包，9原public queries；控制六流首差已核（uint8再次确认），不是完整hidden-state或稳健条件族资格。只读Data reader与发布/足迹源码归档在data_owner，实际query/NPZ/视频/权重/authority继续不入Git。旧失联与v1失败及发布/reader errata全保，未物理重跑。
+
+G1有限“是否数值完全归并”已由AINav/Reach独立回答为未完全归并，接G2源基数而非停工/自动24main。Reach已有center/upper-entry两新注册NAV前驱DEV gate，源caller/固定包仍待AINav确认；新scope未建，不重复G1 left/right。四条件2/1/1仅弱原型选项，训练协议另冻，G1/本DEV gate不fit；全项目G1—G6尚未验收。
