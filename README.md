@@ -44,3 +44,5 @@ python3 -m unittest \
 高层小型后继 critic 仅获授权使用**未来新预登记数据**训练与离线评价。旧 audit/隔离 GT 不转 fit，当前合规新数据仍0；没有真实训练中的模型。Actor/WM/DINO/真机不因迁移自动开放。
 
 完整历史/接续见 `docs/AGENT_HANDOFF_CN.md`。原始工程 README/AGENTS 保存在 `provenance/`，其中旧机器/在途快照不能覆盖本文件的新存储与机器决定。
+
+少量冻结协议另保存在 `protocols/`：未来新数据 critic 用途/协议、原生前驱两条件 DEV 问题及 Reach 后果前分析。它们逐字节保留来源 SHA，不含数据或权重，也不是新机器执行 authority。

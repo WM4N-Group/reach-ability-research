@@ -1,0 +1,32 @@
+{
+  "protocols/2026-11-14/high-level-critic/USER_AUTHORIZATION.json": {
+    "source_sha256": "4dab4c18d041b228ebbcd77f241cb6003788a48f48f3be602e0b4546fae043e4",
+    "bytes": 1171,
+    "source": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-14/new-data-successor-critic-v1/USER_AUTHORIZATION.json"
+  },
+  "protocols/2026-11-14/high-level-critic/NEW_DATA_PROTOCOL.json": {
+    "source_sha256": "851ea4f9c7bbd7c45a6658cc0ceec20b3268624f5bab4d9081c914ee5f26979d",
+    "bytes": 7563,
+    "source": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-14/new-data-successor-critic-v1/NEW_DATA_PROTOCOL.json"
+  },
+  "protocols/2026-11-14/native-prefix/REACH_PREOUTCOME_ANALYSIS_CN.md": {
+    "source_sha256": "0c06066f8d58acffd778daf607b680b6a26fc770f8842a57395468a2d8bab508",
+    "bytes": 8021,
+    "source": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-14/native-prefix-observability-plan-v1/REACH_PREOUTCOME_ANALYSIS_CN.md"
+  },
+  "protocols/2026-11-14/native-prefix/EXPERIMENT_CN.md": {
+    "source_sha256": "a3c7a1e6a443196334144b15d5172747f4c15578e4113c8a20917323e0ee8123",
+    "bytes": 8544,
+    "source": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/EXPERIMENT_CN.md"
+  },
+  "protocols/2026-11-14/native-prefix/FIXED_TWO_CONDITIONS.json": {
+    "source_sha256": "b4bd121f237209868ff6c8cbb5bcccad754f6b83a9ad8f282159c7b8f80b5922",
+    "bytes": 2607,
+    "source": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/FIXED_TWO_CONDITIONS.json"
+  },
+  "protocols/2026-11-14/native-prefix/SOURCE_CHANGE_AND_INVERSE.json": {
+    "source_sha256": "325a381f5ce9cc561430fe18d1b7f7b212a5a7d89a98657180f2ca5cca9cff9a",
+    "bytes": 1556,
+    "source": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/SOURCE_CHANGE_AND_INVERSE.json"
+  }
+}

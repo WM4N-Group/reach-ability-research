@@ -1,0 +1,24 @@
+{
+  "schema": "Reach-user-grant-new-data-small-successor-critic-v1",
+  "at": "2026-11-14T14:30:52.725594+08:00",
+  "user_reply": "运行",
+  "context": "Direct reply to request to allow training/offline validation of a small high-level successor-success/time model using ONLY future newly preregistered data",
+  "approved_scope": [
+    "small high-level candidate-conditioned successor success and duration model",
+    "offline training/calibration/validation on future newly preregistered data"
+  ],
+  "excluded": [
+    "all existing audit-only datasets and public queries",
+    "bottom-level skill/Actor training",
+    "WM/DINO/four-route revival",
+    "real robot",
+    "second physical owner",
+    "closed-scope restart"
+  ],
+  "permission_for_old_data_relabelling": false,
+  "permission_for_extra_device": false,
+  "physical_owner": "Data",
+  "each_new_run_still_requires_qualified_source_preregistration_fresh_zero_canonical_lease_watchdog": true,
+  "training_or_sampling_already_started": false,
+  "previous_proposal": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-14/physical-predictor-features-dev-v1/README_CN.md"
+}
