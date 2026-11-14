@@ -2,6 +2,10 @@
 
 用户最新决定：仿真/获资格训练使用`root@180.97.68.228:46308`；代码持久保存在本地与本GitHub仓库；远程服务器保存环境/资产/运行大数据。凭据不写入本文件、Git、命令argv或日志。
 
+## 23:31追加：旧端连接中断，禁止把部署冒执行权威切换
+
+46174已派发的left main随后SSH返回255，fresh重连被关闭，最终result/ledger/进程状态尚未核到。zero/main各一次已消耗；最终outcome=UNKNOWN_UNREACHABLE，不作native成功/失败、不重派。旧H最后已知e3baa660…保持本机镜像；失联后未远端CAS，因此未假称执行权威已迁新端。46308已部署同318源SHA代码且环境metadata匹配，但SDK148资产流式传输被旧端断连打断，尚未完整核资产，未启动新仿真/训练或取得run lease。先核旧尝试收束/按原证据保失联censor、补齐精确资产和新主机freeze/自身zero，不在两端双派。
+
 ## 代码保管
 
 - Data本地精简checkout：`/home/yuanyue/main/code/reach-ability-research`，Data增量分支`data-team-development`；不清理/替换原工作目录或其他组dirty。
