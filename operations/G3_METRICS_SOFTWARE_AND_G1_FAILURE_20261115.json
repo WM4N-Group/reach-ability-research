@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-15T00:32:33.126978+08:00",
+  "G3_change": "FIXED_UNCALIBRATED_DIAGNOSTICS_AND_EXPLICIT_UNKNOWN_DENOMINATORS",
+  "tests": {
+    "remote_total": 31,
+    "new_critic_tests": 4,
+    "existing_critic_tests": 16,
+    "existing_feature_tests": 11,
+    "research_samples": 0
+  },
+  "code_tested_commit": "44b6742193d335cac11a17701d2344b3b949755a",
+  "real_data_fit": false,
+  "research_model_export": false,
+  "physical_execution_from_Reach": false,
+  "Data_G1_new46308_v1": {
+    "left_zero_consumed": 1,
+    "left_main_consumed": 0,
+    "right_zero_consumed": 0,
+    "right_main_consumed": 0,
+    "zero_status": "FAILED_NO_RETRY",
+    "error_class": "ImportError",
+    "error_symbol": "XML_SetAllocTrackerActivationThreshold",
+    "ledger_wall_s": 15.156687535112724,
+    "ledger_output_highwater_bytes": 6831,
+    "ledger_sim_s": 0.0,
+    "usage_known": false,
+    "not_a_native_task_failure_or_success": true,
+    "old46174_unknown_attempts_not_erased": true,
+    "v1_shared_stopped_per_owner_CAS": {
+      "before_H_sha256": "5d5ab1501507afd562ab001e62daade7c8a07547674afca0e010b38a9e9f0023",
+      "after_H_sha256": "5503d7763afa072d77f720a76f6e55977929c568e3048524c2c4241c7feca0bf",
+      "left_zero1_main0_preserved": true,
+      "right_zero0_main0_unexecuted": true,
+      "all_original_ledger_and_result_files_unchanged": true,
+      "old_46174_admin_unknown_preserved": true
+    },
+    "main_not_dispatched_by_Reach": true,
+    "owner_environment_diagnosis_in_progress_not_claimed_qualified": true
+  },
+  "source_pins": {
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-46308-20261115-v1/native_NAV_prefix_left/zero-result.json": "bb100dc71ffef6243a36b457cc6c97f7aed04977cc4d8d4335bbab8061dc0540",
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-46308-20261115-v1/native_NAV_prefix_left/final-ledger.json": "9101dcfa65c64185810197e5505d445ef664a561363288da6c3f0634adc3bb6b",
+    "/home/yuanyue/main/work/data-team/manifests/native-prefix-46308-20261115-v1/v1-shared-startup-stop-CAS.json": "b681cc83c3b531af4079f9d678f0b9b4dc106b66a2d1ee8681f14f4bc605b3c3"
+  },
+  "learner_source_pins": {
+    "successor_critic.py": "3cd58adc03a928cb0b650b0d063e18e02d84c72f7dafb5b278e677d0fa457623",
+    "test_successor_critic.py": "0f2214b03c9bc5eeaa48dbf1bcca107fe020bf4df62c2071b966dd3168be71e0"
+  }
+}

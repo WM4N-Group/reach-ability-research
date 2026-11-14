@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 00:33：G1新端v1真实zero启动失败已收束；G3独立备选补齐失败漏报/UNKNOWN分母，31远端软件检查过
+
+- 计划仍23:45/G1—G6。未仅看滞后STATUS：已核Data新目录native-prefix-46308-20261115-v1原zero-result/ledger/CAS。Data已在GPU1新authority/freeze后执行left zero1，因pyexpat undefined symbol XML_SetAllocTrackerActivationThreshold在构造XML时FAILED_NO_RETRY；left main0、right zero0/main0，v1共同启动版本已按owner CAS停住，不重复该attempt。ledger15.156688wall/6831bytes，sim记录0但usage_known=false，不能报总仿真/成本已知0或native任务失败。旧46174失联UNKNOWN/耗次分开保留，不旧端重连。本组不代改Data环境/worker/authority，修复/新版本真实资格归owner，当前CPU诊断过不签zero。
+- 独立备选[G3]在既有successor_critic中补固定raw score≥.5诊断（非概率校准/部署阈值）：native失败漏报以真实失败为分母、误拒以真实success为分母、scored-success中失败比例另分母；无分母报None非0，resource censor不归失败。train-only常量score同规则对照；READY时间MAE/均值基线，完整后继UNKNOWN rows/fraction单列，仍qualified PASS0，不将高score接执行。
+- 46308上20critic（16旧+4新定向）＋11既有features共31检查通过，代码44b6742；仅显式SOFTWARE内存算术，不读真实数据/导出模型，不增加研究样本或重复空训练入口。原工作区/portable副本先核旧bytes再镜像本组2文件，不覆盖他组修改。真实新训练数据/fit0、G3研究验收未完成。
+- 正在做[G1]：消费owner环境修复新版本的真实zero/main及首次PREPARE；下一[G1→G2]按条件结论转有限新数据/或一次新源最小验证，G2→G3→G4三策略→G5多决策→G6接续保持。无需外组备选[G3指标定义]本次软件部分已落地，后续只在合格真实组数据评价，不再刷fixture次数。原保护门/dirty/closed/失败未知账/TEST0/主要贡献未证保持。
+- 入口`/home/yuanyue/reach-ability-research/operations/G3_OFFLINE_METRICS_CN.md`与`/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-15/G3-offline-metrics-software-v1/CHECK_AND_G1_ACTUAL_FAILURE_CONSUMED.json`。本轮未新开world/训练、未旧端探测或跨chat派发，软件改动不作Data新前置。
+
 ### 2026-11-15 00:01：接续23:45 G1—G6持久计划；旧left已耗zero/main且终态UNKNOWN，停追旧端，新端明确独立完整两条件
 
 - 完整计划SHA `53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40`：用户明确旧服务器不再纠结，停止对46174恢复/SSH/进程锁/资产回传追查；不再把旧端CAS/锁释放作新端前置。旧left真实23:05:10 main已派发、zero1/main1都消耗，旧终态UNKNOWN_UNREACHABLE/最终费用未知，行政停止追踪不冒native失败或物理进程已死。已核本地原zero/cold/CAS和Data原发布，纠正本组此前根据滞后顶层STATUS泛称“main0/无新scope”的旧快照；本轮旧端连接0。
