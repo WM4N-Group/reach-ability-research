@@ -56,7 +56,7 @@ class RegisteredLayoutSourceTests(unittest.TestCase):
    side=c['condition_id'].rsplit('_',1)[1];v=self.build(side=side)
    self.assertEqual(v['requested_intents'],c['requested_intents']);self.assertEqual(v['runtime_config']['integrated_case']['case_id'],'full-4')
  def test_full2_ground_goals_match_original_source_catalogue(self):
-  for side in api.SIDES:
+  for side in api.PREFIXES_BY_LAYOUT['full-2']:
    v=self.build('full-2',side);opts,state=actual_catalogue_for_software_case(v['original_native_protocol']['integrated_case'])
    for req in v['requested_intents']:
     matches=[x for x in opts if x.skill==req['skill'] and x.target_ref==req['target_ref'] and dict(x.parameters)==req['parameters']]
@@ -65,13 +65,13 @@ class RegisteredLayoutSourceTests(unittest.TestCase):
    self.assertEqual(v['declared_CLIMB_reference_xy'],list(next(x for x in state.references if x.ref=='cuboid-2:upper-entry').xy))
  def test_all_finite_candidates_use_existing_payload_API(self):
   for layout in api.LAYOUTS:
-   for side in api.SIDES:
+   for side in api.PREFIXES_BY_LAYOUT[layout]:
     for candidate in api.CANDIDATES:
      v=self.build(layout,side,candidate);selected=candidates.selection_from_payload(v['preparation_payload'])
      self.assertEqual(selected.candidate_id,candidate);self.assertEqual(tuple(x['candidate_id'] for x in v['public_prepare_candidates']),api.CANDIDATES)
      self.assertFalse(v['scope_allocated'] or v['physical_admission'] or v['dispatch'] or v['qualified_dynamic_domain'] or v['source_grouping_or_training_roles_assigned'])
  def test_no_other_case_continuous_side_or_candidate(self):
-  for args in [('full-1','left','original'),('full-3','left','original'),('full-4','center','original'),('full-2',.15,'original'),('full-2','right','winner'),(True,'left','original')]:
+  for args in [('full-1','left','original'),('full-3','left','original'),('full-2','center','original'),('full-2',.15,'original'),('full-2','right','winner'),(True,'left','original')]:
    with self.assertRaises(ValueError):api.LayoutCondition(*args)
  def test_same_materials_seed_and_device_only_overlay(self):
   a=self.build();b=self.build('full-2')
@@ -91,11 +91,20 @@ class RegisteredLayoutSourceTests(unittest.TestCase):
   with self.assertRaises(ValueError):api.build_condition(selection=api.LayoutCondition('full-2','left'),source_root=SOURCE,integrated=integrated,host_profile=ForeignProfile(),candidate_api=candidates,enabled=True)
  def test_real_optin3_planner_constructor_accepts_new_exact_requests(self):
   for layout in api.LAYOUTS:
-   for side in api.SIDES:
+   for side in api.PREFIXES_BY_LAYOUT[layout]:
     v=self.build(layout,side);p=planner.RequestedIntentPlanner(copy.deepcopy(v['requested_intents']),lambda row:'SOFTWARE-fixture',**v['planner_constructor_keyword'])
     self.assertEqual(len(p.requests),3);self.assertEqual(p.index,0);self.assertIsNone(p.pending);self.assertFalse(p.complete)
     # Default remains original2. This checks only new request compatibility.
     with self.assertRaises(ValueError):planner.RequestedIntentPlanner(v['requested_intents'],lambda row:'SOFTWARE-fixture')
+ def test_reach_two_new_registered_prefixes_match_original_catalogue(self):
+  fixture=json.loads((Path(__file__).parent/'source_gate_requests.json').read_bytes())
+  mapping={'registered_center_prefix':'center','registered_upper_entry_NAV_prefix':'upper-entry'}
+  for condition in fixture['conditions']:
+   v=self.build('full-4',mapping[condition['condition_id']]);self.assertEqual(v['requested_intents'],condition['requested_intents'])
+   opts,state=actual_catalogue_for_software_case(v['original_native_protocol']['integrated_case'])
+   for req in v['requested_intents']:
+    self.assertEqual(sum(x.skill==req['skill'] and x.target_ref==req['target_ref'] and dict(x.parameters)==req['parameters'] for x in opts),1)
+   self.assertFalse(v['physical_admission'] or v['dispatch'])
  def test_foreign_protocol_callable_is_not_accepted(self):
   foreign=ModuleType('g2_foreign_protocol');foreign.__dict__.update(integrated.__dict__);foreign.protocol=lambda case:None
   with self.assertRaisesRegex(ValueError,'callable namespace'):api.build_condition(selection=api.LayoutCondition('full-2','left'),source_root=SOURCE,integrated=foreign,host_profile=self.profile,candidate_api=candidates,enabled=True)

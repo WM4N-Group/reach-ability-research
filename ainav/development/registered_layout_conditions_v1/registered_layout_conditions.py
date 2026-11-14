@@ -9,7 +9,8 @@ from pathlib import Path
 import hashlib,inspect
 
 LAYOUTS=('full-4','full-2')
-SIDES=('left','right')
+SIDES=('left','right','center','upper-entry')
+PREFIXES_BY_LAYOUT={'full-4':SIDES,'full-2':('left','right')}
 CANDIDATES=('original','lateral_plus_0p04','lateral_minus_0p04')
 PINS={
  'mujoco_zyh/integrated_course.py':'4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb',
@@ -31,7 +32,7 @@ class LayoutCondition:
  candidate_id:str='original'
  def __post_init__(self):
   need(type(self.layout_id) is str and self.layout_id in LAYOUTS,'Exact registered full-4/full-2, not arbitrary scene floats')
-  need(type(self.prefix_side) is str and self.prefix_side in SIDES,'Only two original declared NAV side references')
+  need(type(self.prefix_side) is str and self.prefix_side in PREFIXES_BY_LAYOUT[self.layout_id],'Original prefix explicitly registered for this selected layout')
   need(type(self.candidate_id) is str and self.candidate_id in CANDIDATES,'Original finite CLIMB preparation candidate, not a continuous control')
 
 def build_condition(*,selection=None,source_root=None,integrated=None,host_profile=None,candidate_api=None,enabled=False):
@@ -67,9 +68,12 @@ def build_condition(*,selection=None,source_root=None,integrated=None,host_profi
  # Constants below are the EXACT pinned FullCourse entity/ref construction:
  # initial_front=.5; source0; side +/- .15; approach front-.58;
  # public dock goal=docked_front+length/2; upper-entry=docked_front-1.05.
- dy={'left':.15,'right':-.15}[selection.prefix_side]
- nav_ref='cuboid-2:approach:'+selection.prefix_side
- requests=[dict(skill='NAV',target_ref=nav_ref,parameters=dict(goal_world_x_m=.5-.58,goal_world_y_m=lane+dy,surface_height_m=0.)),
+ if selection.prefix_side=='upper-entry':
+  nav_ref='cuboid-2:upper-entry';nav_xy=(float(g['step_docked_front']-1.05),lane)
+ else:
+  dy={'left':.15,'right':-.15,'center':0.}[selection.prefix_side]
+  nav_ref='cuboid-2:approach:'+selection.prefix_side;nav_xy=(.5-.58,lane+dy)
+ requests=[dict(skill='NAV',target_ref=nav_ref,parameters=dict(goal_world_x_m=nav_xy[0],goal_world_y_m=nav_xy[1],surface_height_m=0.)),
   dict(skill='PUSH',target_ref='cuboid-2:approach:center',parameters=dict(goal_world_x_m=float(g['step_docked_front']+case['step_length_m']/2),goal_world_y_m=lane,surface_height_m=0.)),
   dict(skill='CLIMB',target_ref='cuboid-2:upper-entry',parameters=dict(surface_height_m=.2))]
  approach=[float(g['step_docked_front']-1.05),lane]

@@ -56,3 +56,17 @@ planner = types.RequestedPlanner(deepcopy(requests), journal, max_requests=3)
 最终10项本机stdlib差分检查通过（初版9项另保留，最终10含那9项，不算19）；包含同full-4原请求精确回归、新full-2原真实语义catalogue/source refs、有限候选/材料不变、source drift/foreign namespace拒绝和真实opt-in3 planner构造。它们都是软件fixture，物理/训练样本0。尚未被Data当前运行程序实际配置采用，不称full-2资格/新方法收益。
 
 云端/服务器代码按用户指定code-only方式同步；原始数据、权重、环境/大产物不入Git。G1不重开，G2不自动开始fit或24main；合格后持续G3→G4→G5/G6，不以模块完成当研究目标完成。
+
+## 当前Reach具体请求优先：同full-4 center/upper-entry源gate
+
+本模块同样直接对接Reach已发布的`G2-registered-source-cardinality-gate`，**不把采用full-2布局作为这项已明确gate的前置**。full-4的prefix key现允许原left/right/center/upper-entry；full-2仍只允许left/right，避免自动把所有组合派出去。字段`prefix_side`保原API名字，值upper-entry表示离散reference key，不表示新增任意侧向控制。
+
+- center为NAV `cuboid-2:approach:center`，(.5−.58,−2,0)。
+- upper-entry为**NAV** `cuboid-2:upper-entry`，(step_docked_front−1.05,−2,0)；source0，不是让NAV上.2。之后PUSH(2.3,−2,0)/CLIMB .2与原准备original不变。
+- 已与Reach精确请求文件逐字段比对，并执行原真实source reference构造/semantic catalogue和typed opt-in3 constructor（SOFTWARE fixture）。旧G1两个case不重跑，**新center/upper gate最多各一次main**来自其独立待准入问题；模块不分配scope或将有限目录所有case当已排队。
+
+**不能由目录/semantic catalogue推出upper-entry native admitted。** 原`FullCourse._entry('NAV')`对当前非READY-arm的compact路还核实际ProtectedStow owner的face-retreat≤.18m；upper-entry相对approach:center的X多.13m，当前A轴/位姿/owner/碰撞与movement READY必须由原动态门实测。不能用初始静态蓝图推定通过/失败，更不能换backend、伪造冷启动/owner或放宽.18门来让引用可执行。原门拒绝属于本有限source-cardinality问题的有效负结果，center也可能与原隐式PUSH准备等价。
+
+当前Data旧G1 `conditions()/make_planner`精确白名单仍只有left/right。新owned gate应按已发布新两条件声明替换白名单，保exact3终点/原门，调用本模块生成既有fields；不是热改旧closed程序。只需该gate必要接点，不要求新scene或更多wrapper/日志/消费回执。原full-2仅供后续布局/分组研究的可选源，不阻任何已合格现有同域cohort。
+
+最终检查现11项（前述10项加这一项请求/原目录回归，**不是累计21新项**）；本机与新端相同软件检查，动态和统计资格仍未声称。

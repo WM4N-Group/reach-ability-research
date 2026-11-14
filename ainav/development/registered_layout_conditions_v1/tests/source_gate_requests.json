@@ -1,0 +1,77 @@
+{
+  "role": "DECLARED_SOURCE_REQUEST_REGRESSION_NOT_PHYSICAL_DATA",
+  "source_proposal_path": "/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-registered-source-cardinality-gate/EXACT_TWO_REGISTERED_PREFIX_REQUESTS_NOT_DISPATCH.json",
+  "source_proposal_sha256": "1e8eb0e7d3f008c38a400fdf374e9b34d587705df14e0c3d539d545ee1c427c0",
+  "conditions": [
+    {
+      "condition_id": "registered_center_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false
+    },
+    {
+      "condition_id": "registered_upper_entry_NAV_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "goal_world_x_m": 0.050000000000000044,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false
+    }
+  ],
+  "new_main_upper_bound_from_proposal": 2,
+  "physical_dispatch": false
+}
