@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 03:17：full-2 left真实三请求PASS/closed，已测同left跨layout公开差；四格已消费3格，right终态未消费
+
+- full-2 left6ee69a5f…02:52:45 CAS closed/九流cold过，主episode119.000sim，首次PREPARE95.605→READY108.980=13.375，至请求成功终点23.395sim；scope132.010sim含zero/aux、836.637653ledger wall/highwater174466192bytes。非far-bank全任务/策略收益，不能拿与full-4 left121.085差2.085s报优化。
+- 按既定同prefix跨layout对照，full2-left vsfull4-left：q max差.184519649rad，decoded RGB/depth数值不同/K/T相同；原component有效4461 vs4016pixel，名义median L2差125.781mm，非WORLD/object/reference pose/精度保证/单几何参数因果，误差boundNone。只有本DEV单对，非稳健/独立/可学/候选排序证明。
+- 复用冻结full-4组件cache并逐输入/算法SHA核合，旧proposer重跑0/新full2帧仅1次；first PREPARE exact原query/Observation/Journal绑定，Data正式left release3b5e9a9f…声明成员SHA全核。远端CPU forbidden=[]，无私有catalog/GT/原NPZ/新capture/Actor/Runtime/fit；raw45D/逐通道差/数组不入Git，只存scalar摘要/代码。
+- 正在G2三格信息已消费，下一right真实闭合后只测新增right并补全四格，缺测/失败/direct READY不填0；right02:54:49唯一main已派，本组无终态不重发。第三source/whole-scene训练映射/新用途与功效停止仍未齐，TRAIN行0/fit0；后续G3—G6保持，不重跑已闭合/把源gate当总任务完成。入口`/home/yuanyue/reach-ability-research/operations/G2_FULL2_LEFT_MEASUREMENT_AND_NEXT_20261115_CN.md`与ignored evidence/G2-full2-left-crosslayout-v1。
+
 ### 2026-11-15 02:38：G2 full-2已被Data实际caller消费，left真实zero/cold通过、02:34:21唯一main已CAS派发；不再将其写成纯可选源
 
 - 计划仍23:45/53233939…。已核Data新g2-full2-46308-20261115-v1的build_plan实际调用AINav LayoutCondition('full-2',prefix_side,'original')并消费它的protocol/runtime_config/requests，检查case full-2/仅device overlay/seed4301。固定条件SHA64c92421…，两prefix NAV_y -1.75/-2.05、PUSH_y -1.9、CLIMB .2正确，不套full-4 -2。源码stage不是native证书，但当前已有新程序真实own-zero/cold通过。

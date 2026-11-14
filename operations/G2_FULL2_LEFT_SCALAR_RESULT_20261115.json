@@ -1,0 +1,158 @@
+{
+  "at": "2026-11-15T03:12:04.605773+08:00",
+  "role": "MATCHED_PREFIX_CROSS_LAYOUT_DEV_AUDIT_NOT_FIT_OR_POLICY_COMPARISON",
+  "comparison_axis": "full4_left_vs_full2_left_not_G1_left_vs_right",
+  "conditions": [
+    "data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2",
+    "data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1"
+  ],
+  "query_times_s": [
+    97.28499999998401,
+    95.60499999998554
+  ],
+  "source_pins": {
+    "/mnt/yuanyue/reach-runs/measure_full2_left_crosslayout-20261115.py": "74a4a77894adf81048d9c545a7a0882be69d9f635d403ab62a85d1d7c3abfadb",
+    "/mnt/yuanyue/reach-runs/G1-pair-public-comparison-20261115-v2.json": "c62b36c19e67e9bb65e21343935fdd189b46c4cc4e69f3d497244a9a52cadde5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/g2-full2-46308-20261115-v1/inputs/AINav/common-source/visual_box_proposals.py": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+    "/mnt/yuanyue/ainav-compute/code/7e445e75083652ba47d0d06689d02bc2338ef471/ainav/development/climb_preparation_v2/public_component_support.py": "0b66cbf44925722dedaea46cb3e5800cf69e7e7e39253ffb861299f837b1540b",
+    "/mnt/yuanyue/reach-runs/G1-left-public-boundary-20261115-v2.json": "9e60095344d265db9249f1e4c8fcfcb84fdbfef9998ad616488bc37da0ccedfe",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/intent-observation-0004.json": "57d2b601b22a5ce7b9aa5cbd4e6e2085e06c3edf39073f60026bfa8951761788",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/rgb.png": "aeec6001e38b3a67205296fe3a19118456cde9055e7f54caaefbc7c6981de0cc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/depth_m.npy": "5735152beaad7b31632be4b5d02e1a122fd84abda9a733145dc0e8748036ed35",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/calibration.json": "077498cc8743d03011f61fe4e93aa28f389fb2f3512a978735adcf1243c4aab8",
+    "/mnt/yuanyue/reach-runs/G2-full2-left-public-boundary-20261115-v1.json": "e18640234a0e599a5f07b1193dd148e5b97155eb38a4db286079efadfeff622d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1/main/intent-observation-0004.json": "e9e491d80d94e011a3f9a732f956299d9fc7dca0c6f296bce1f80241d63ad18d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1/main/query-observations/frame-000004/rgb.png": "7588e91f794b0b6b01dc125f7c380fb63e441a9c44579dbfa9c03841bf555524",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1/main/query-observations/frame-000004/depth_m.npy": "382ea878c83b29259dea05457c15cffd0c741062853ae774fac769e7757742ee",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1/main/query-observations/frame-000004/calibration.json": "3767a608598b15f6f083ff3f2bf44f1959c24aa04d512cb3d83d3318e0239399"
+  },
+  "public45D_blocks": {
+    "q": {
+      "unit": "rad",
+      "exact_numeric_equal": false,
+      "different_channels": 17,
+      "max_abs_delta": 0.18451964855194092,
+      "L2_delta": 0.2749523288935107
+    },
+    "dq": {
+      "unit": "rad/s",
+      "exact_numeric_equal": false,
+      "different_channels": 18,
+      "max_abs_delta": 2.8940339689143002e-05,
+      "L2_delta": 5.9127797954945993e-05
+    },
+    "gravity": {
+      "unit": "1",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 0.0008063939458224922,
+      "L2_delta": 0.0008684302043132602
+    },
+    "angular_velocity": {
+      "unit": "rad/s",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 6.9416473706951365e-06,
+      "L2_delta": 8.562459760081227e-06
+    },
+    "linear_velocity": {
+      "unit": "m/s",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 4.3603959056781605e-06,
+      "L2_delta": 4.787173373438732e-06
+    }
+  },
+  "all45D_exact_numeric_equal": false,
+  "decoded_RGB_exact_numeric_equal": false,
+  "depth_exact_numeric_equal_NaNs_equal": false,
+  "camera_K_exact_numeric_equal": true,
+  "T_base_optical_exact_numeric_equal": true,
+  "component_estimates": [
+    {
+      "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+      "valid_depth_pixels": 4016,
+      "nominal_visible_median_parent_base_m": [
+        0.6561849415955343,
+        0.05678535206243396,
+        -0.08111655195916312
+      ],
+      "component_pixels": 4016,
+      "public_native_matcher_conditioned": true,
+      "object_identity_or_reference_pose_certified": false
+    },
+    {
+      "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+      "nominal_visible_median_parent_base_m": [
+        0.667315341422917,
+        0.18164586027463278,
+        -0.0914581147979604
+      ],
+      "component_pixels": 4461,
+      "valid_depth_pixels": 4461
+    }
+  ],
+  "nominal_component_delta": {
+    "full2_minus_full4_XYZ_m": [
+      0.011130399827382731,
+      0.12486050821219882,
+      -0.01034156283879728
+    ],
+    "L2_m": 0.12578147810100962,
+    "physical_error_or_reference_relative_bound_m": null
+  },
+  "baseline_original_proposer_reexecutions": 0,
+  "new_full2_original_proposer_calls": 1,
+  "completed_grid_cells": 3,
+  "planned_grid_cells": 4,
+  "right_full2_result_unavailable_for_this_measurement": true,
+  "raw_point_difference_not_object_pose_world_motion_or_sensor_accuracy": true,
+  "native_filter_conditioned_population": true,
+  "condition_family_or_training_split_qualification": false,
+  "old_DEV_not_relabelled": true,
+  "old_host_connections": 0,
+  "new_simulator_capture_Actor_or_model_fit": false,
+  "forbidden_attempts": [],
+  "official_left_release_sha256": "3b5e9a9fd20971faa45fca7e53a0385118270bb607f67944fd04a7a49429b2c5",
+  "full2_left_main_result_sha256": "67ba358b39d74cf60d94c0bf9dfb04f35c0b6639ef67396a7231669cd1f6092c",
+  "full2_left_status": "REQUESTED_API0_PASS",
+  "full2_left_main_sim_s": 118.99999999996426,
+  "full2_left_first_PREPARE_s": 95.60499999998554,
+  "full2_left_PREPARE_to_READY_s": 13.374999999987836,
+  "full2_left_PREPARE_to_success_s": 23.394999999978722,
+  "zero_main_total_sim_including_aux_s": 132.00999999996404,
+  "final_ledger_wall_s": 836.6376531771384,
+  "scope_highwater_bytes": 174466192,
+  "selected_requested_intents": [
+    {
+      "skill": "NAV",
+      "target_ref": "cuboid-2:approach:left",
+      "parameters": {
+        "goal_world_x_m": -0.07999999999999996,
+        "goal_world_y_m": -1.75,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid-2:approach:center",
+      "parameters": {
+        "goal_world_x_m": 2.3,
+        "goal_world_y_m": -1.9,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid-2:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      }
+    }
+  ],
+  "whole_far_bank_mission_success_claimed": false,
+  "old_G1_baseline_original_not_rerun": true,
+  "G2_right_result_not_consumed": true,
+  "training_dataset_or_fit_qualified": false,
+  "training_role_rows": 0
+}
