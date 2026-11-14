@@ -120,3 +120,9 @@ reach-assets/
 *.tgz
 *.tar.gz
 *.zip
+
+# These are source-code packages/tests, not raw datasets.
+!mujoco/reconfigurable_navigation/data/
+!mujoco/reconfigurable_navigation/data/*.py
+!owner_snapshot/native-prefix-20261114/tests/
+!owner_snapshot/native-prefix-20261114/tests/*.py
