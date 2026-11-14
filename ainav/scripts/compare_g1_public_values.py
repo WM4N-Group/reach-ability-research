@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""One fixed G1v2 pair: exact public-array equality + component statistic delta.
+
+No fitting/thresholds or joint-unit score; full45D block statistics belong to Reach.
+"""
+from pathlib import Path
+import argparse,datetime,hashlib,json,sys
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--left',type=Path,required=True);p.add_argument('--right',type=Path,required=True);a=p.parse_args();blocked=[]
+def fence(event,args):
+ if event=='import' and str(args[0]).split('.')[0] in ('torch','mujoco','onnxruntime'):
+  blocked.append(str(args[0]));raise RuntimeError('No native/model import')
+ if event in ('socket.connect','socket.bind','socket.getaddrinfo','subprocess.Popen'):
+  blocked.append(event);raise RuntimeError('No network/child')
+ if event=='open' and isinstance(args[0],str) and ('/query-private-' in args[0] or args[0].endswith(('/catalog.json','/association.json','.npz','.mjb','.mjb.gz'))):
+  blocked.append('PRIVATE_OR_MOTOR_ARRAY');raise RuntimeError('PUBLIC values only')
+sys.addaudithook(fence)
+import numpy as np
+from PIL import Image
+sha=lambda f:hashlib.sha256(Path(f).read_bytes()).hexdigest();data=[];pins={}
+for side,path in [('left',a.left),('right',a.right)]:
+ j=json.loads(path.read_bytes());pins[str(path)]=sha(path)
+ assert j['scope_id']==f'data-46308-native-prefix-{side}-PUSH-CLIMB-20261115-v2'
+ assert j['training_or_fit_allowed'] is False and j['role']=='NEW_DEV_AUDIT_ONLY_NOT_ONLINE_REPLAY_OR_FIT'
+ for f,h in j['inputs_sha256'].items():assert sha(f)==h;pins[f]=h
+ data.append(j)
+result={'at':datetime.datetime.now().astimezone().isoformat(),'role':'NEW_DEV_AUDIT_ONLY_NOT_TRAIN_CALIBRATION_OR_TEST',
+ 'query_denominator':2,'statuses':[j['boundary_status'] for j in data],'paired_values_available':False,
+ 'robust_condition_family_or_critic_learning_or_policy_gain_certified':False,'training_or_fit':False}
+if all(j['boundary_status']=='FIRST_PREPARE_EXACT_PUBLIC_VALUES_MEASURED' for j in data):
+ v=[j['public_features'] for j in data];keys=('q','dq','gravity','angular_velocity','linear_velocity')
+ eq={k:v[0]['public_state_45D_blocks'][k]==v[1]['public_state_45D_blocks'][k] for k in keys}
+ images=[];depths=[]
+ for j in data:
+  rgb=next(Path(f) for f in j['inputs_sha256'] if f.endswith('/rgb.png'))
+  depth=next(Path(f) for f in j['inputs_sha256'] if f.endswith('/depth_m.npy'))
+  with Image.open(rgb) as im:assert im.mode=='RGB';images.append(np.asarray(im).copy())
+  depths.append(np.load(depth,allow_pickle=False))
+ assert all(x.shape==images[0].shape and x.dtype==images[0].dtype for x in images)
+ assert all(x.shape==depths[0].shape and x.dtype==depths[0].dtype for x in depths)
+ result.update(paired_values_available=True,public_45D_exact_equal=all(eq.values()),public_45D_block_exact_equal=eq,
+  RGB_decoded_values_exact_equal=bool(np.array_equal(*images)),depth_values_exact_equal_default_numpy=bool(np.array_equal(*depths)),
+  depth_NaN_locations_equal=bool(np.array_equal(np.isnan(depths[0]),np.isnan(depths[1]))),
+  depth_values_equal_treating_corresponding_NaN_as_missing=bool(np.array_equal(*depths,equal_nan=True)),
+  camera_K_exact_equal=bool(np.array_equal(v[0]['camera_K'],v[1]['camera_K'])),
+  T_base_optical_exact_equal=bool(np.array_equal(v[0]['T_base_optical'],v[1]['T_base_optical'])),
+  task_component_statuses=[x['task_component_status'] for x in v],
+  component_pixel_counts=[x.get('component_pixel_count') for x in v])
+ med=[x['component_visible_point_median_base_xyz_m'] for x in v]
+ if all(x is not None for x in med):
+  delta=np.asarray(med[1])-np.asarray(med[0]);result.update(right_minus_left_nominal_component_median_base_XYZ_m=delta.tolist(),nominal_component_median_delta_L2_m=float(np.linalg.norm(delta)))
+ result['interpretation']='Exact differences describe THIS two-run public representation only. No repeatability/noise/material threshold, object truth, candidate ranking, unseen evaluation or benefit follows.'
+for f,h in pins.items():assert sha(f)==h
+assert not blocked
+result.update(inputs_sha256=pins,forbidden_attempts=blocked,raw_arrays_remain_on_remote=True,new_capture_Runtime_Actor_Renderer_or_physics=False)
+print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
