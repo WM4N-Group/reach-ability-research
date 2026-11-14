@@ -48,8 +48,23 @@ def validate_dataset(data, authorization, protocol):
     need(type(unreached) is list and data.get('all_closed_attempts_accounted') is True and
          type(data.get('closed_attempt_count')) is int and
          data['closed_attempt_count']==len(rows)+len(unreached),'All acquisition/prefix failures must remain in the attempt denominator')
+    scene_isolation=protocol.get('require_source_scene_isolation',False)
+    need(type(scene_isolation) is bool,'Explicit scene-isolation policy')
+    scene_assignments=protocol.get('scene_split_assignments')
+    if scene_isolation or scene_assignments is not None:
+        need(scene_isolation is True and type(scene_assignments) is dict and
+             all(pin(k) and v in SPLITS for k,v in scene_assignments.items()) and
+             set(scene_assignments.values())==set(SPLITS),
+             'Source-scene isolation needs frozen valid scene-to-split assignments covering all three splits')
+    def verify_scene(record):
+        if not scene_isolation:return
+        scene=record.get('source_scene_sha256')
+        need(pin(scene) and scene in scene_assignments,'Exact source scene in preregistered split map')
+        need(record.get('split')==scene_assignments[scene],
+             'Whole source scene cannot cross train/calibration/validation, even with distinct condition IDs')
     scopes=set()
     for attempt in unreached:
+        verify_scene(attempt)
         need(type(attempt.get('scope_id')) is str and bool(attempt['scope_id'].strip()) and not any(s in attempt['scope_id'] for s in HISTORICAL_SCOPE_FRAGMENTS),
              'New predecision scope, not a closed historical attempt')
         need(attempt['scope_id'] not in scopes,'Each closed physical scope counted once across reached/unreached attempts')
@@ -63,6 +78,7 @@ def validate_dataset(data, authorization, protocol):
     names=protocol['feature_profile']['names'];need(len(names)==48,'Exact existing physical feature view')
     grouped={};groups={};seen=set();classes=set();state_signatures=set()
     for r in rows:
+        verify_scene(r)
         need(type(r['sample_id']) is str and r['sample_id'] not in seen,'Unique new sample')
         seen.add(r['sample_id']);scope=r['scope_id']
         need(type(scope) is str and bool(scope.strip()) and not any(s in scope for s in HISTORICAL_SCOPE_FRAGMENTS),
@@ -241,6 +257,7 @@ def fit_and_evaluate(data,authorization,protocol):
         metrics[split]=dict(rows=len(part),groups=len({r['condition_binding_sha256'] for r in part}),
             successes=sum(r['outcome']=='SUCCESS' for r in part),guard_failures=sum(r['outcome']=='NATIVE_GUARD_FAILURE' for r in part),
             censored=sum(r['outcome']=='CENSORED' for r in part),
+            source_scene_groups=None if not protocol.get('require_source_scene_isolation',False) else len({r['source_scene_sha256'] for r in part}),
             raw_score_diagnostic=_score_diagnostics([(r,p['uncalibrated_success_score']) for r,p in predictions]),
             train_only_constant_score_diagnostic=_score_diagnostics([(r,model['baseline_success_score']) for r in part]),
             full_successor_feasibility_prediction_rows=len(predictions),
@@ -257,6 +274,7 @@ def fit_and_evaluate(data,authorization,protocol):
     return dict(status='OFFLINE_FIT_COMPLETE_NOT_DEPLOYMENT_QUALIFIED',model=model,heldout_metrics=metrics,
         all_rows_and_failures_retained=len(rows),total_closed_attempts=data['closed_attempt_count'],
         unreached_decision_attempts=data.get('unreached_decision_attempts',[]),
+        grouping_enforcement='FROZEN_SOURCE_SCENE_AND_CONDITION' if protocol.get('require_source_scene_isolation',False) else 'CONDITION_ONLY_NOT_SCENE_ISOLATION',
         evaluation_population='Reached the preregistered decision; predecision failures separately retained, not fictitious model rows',
         censored_rows=sum(r['outcome']=='CENSORED' for r in rows),
         attempt_spending=spending,

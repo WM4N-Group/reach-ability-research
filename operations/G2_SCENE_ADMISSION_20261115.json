@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-15T02:08:15.810786+08:00",
+  "G2_priority": "SOURCE_OWNER_REGISTERED_FULL2_GATE_BEFORE_ANY_TRAINING_COHORT",
+  "source_proposal_path": "/home/yuanyue/main/work/ainav/manifests/g1_public_boundary_measurement_20261115_v1/G2_NEXT_REGISTERED_LAYOUT_SOURCE_OPTION_NOT_QUEUED.json",
+  "source_proposal_sha256": "4ea6158a944c1235df6db27d57384862019c3ab296d9ff4d4abec7fb08187e3b",
+  "previous_center_upper_entry_gate": "PAUSED_BEFORE_DISPATCH_NOT_DELETED_OR_EXECUTED",
+  "scene_disjoint_training_requires_three_qualified_scene_groups": true,
+  "newly_proposed_full2_dynamic_qualification": false,
+  "third_scene_source_resolved": false,
+  "source_scene_guard_software_tests": 3,
+  "remote_total_software_checks": 34,
+  "training_rows": 0,
+  "real_fit": false,
+  "new_physical_dispatch": false,
+  "mandatory_new_Data_logging_or_NN_table_contract": false,
+  "own_sources": {
+    "successor_critic.py": "15589f2daa7366c8dacba08f8499679cdc989f76567bec45d22c5d7fbafda308",
+    "test_successor_critic.py": "c38d3b5582d630a5eb73e908976226cd7bf700f99829ddbcab6afbc1cb308344"
+  },
+  "current_three_request_chain_observed_scene_count": 1,
+  "whole_far_bank_or_general_scene_qualification_claimed": false
+}

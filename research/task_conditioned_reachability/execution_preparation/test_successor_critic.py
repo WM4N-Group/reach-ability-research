@@ -206,6 +206,46 @@ class SuccessorCriticTests(unittest.TestCase):
         self.assertEqual(v['full_successor_feasibility_UNKNOWN_rows'],3)
         self.assertIsNone(v['raw_score_diagnostic']['native_failure_miss_rate'])
 
+    def scene_policy(self):
+        mapping={digest({'SOFTWARE_SCENE':split}):split for split in ('TRAIN','CALIBRATION','VALIDATION')}
+        self.protocol.update(require_source_scene_isolation=True,scene_split_assignments=mapping)
+        for row in self.data['rows']:
+            row['source_scene_sha256']=digest({'SOFTWARE_SCENE':row['split']})
+        self.data['preregistration_sha256']=digest(self.protocol)
+
+    def test_whole_scene_cannot_leak_across_splits_by_renaming_condition_groups(self):
+        self.scene_policy();self.validate()
+        self.data['rows'][-1]['source_scene_sha256']=self.data['rows'][0]['source_scene_sha256']
+        with self.assertRaisesRegex(ValueError,'Whole source scene'):self.validate()
+
+    def test_scene_policy_requires_frozen_all_three_split_map_and_source_pin(self):
+        self.scene_policy();self.protocol.pop('scene_split_assignments')
+        self.data['preregistration_sha256']=digest(self.protocol)
+        with self.assertRaisesRegex(ValueError,'covering all three'):self.validate()
+        self.data,self.auth,self.protocol=fixture();self.scene_policy()
+        del self.protocol['scene_split_assignments'][digest({'SOFTWARE_SCENE':'VALIDATION'})]
+        self.data['preregistration_sha256']=digest(self.protocol)
+        with self.assertRaisesRegex(ValueError,'covering all three'):self.validate()
+        self.data,self.auth,self.protocol=fixture();self.scene_policy()
+        self.data['rows'][0]['source_scene_sha256']='not-a-scene-pin'
+        with self.assertRaisesRegex(ValueError,'Exact source scene'):self.validate()
+
+    def test_scene_grouping_covers_unreached_attempts_without_becoming_model_features(self):
+        before=_fit_heads(self.validate());self.scene_policy()
+        self.assertEqual(before,_fit_heads(self.validate()))
+        attempt=dict(scope_id='NEW_SOFTWARE_SCENE_PREFIX',data_purpose=PURPOSE,old_audit_ancestor=False,
+            source_result_sha256='e'*64,captured_at='2020-01-03T00:00:00+00:00',
+            decision_reached=False,physical_features=None,spent_sim_s=7.,
+            source_scene_sha256=digest({'SOFTWARE_SCENE':'TRAIN'}),split='VALIDATION')
+        self.data['unreached_decision_attempts']=[attempt];self.data['closed_attempt_count']=13
+        with self.assertRaisesRegex(ValueError,'Whole source scene'):self.validate()
+        attempt['split']='TRAIN'
+        result=fit_and_evaluate(self.data,self.auth,self.protocol)
+        self.assertEqual(result['grouping_enforcement'],'FROZEN_SOURCE_SCENE_AND_CONDITION')
+        self.assertEqual(result['heldout_metrics']['VALIDATION']['source_scene_groups'],1)
+        self.assertEqual(result['attempt_spending']['unreached_decision']['known_spent_sim_s'],7.)
+        self.assertEqual(before,result['model'])
+
     def test_missing_group_or_wrong_protocol_or_future_clock_refused(self):
         self.data['rows']=[r for r in self.data['rows'] if r['split']!='CALIBRATION'];self.data['closed_attempt_count']=len(self.data['rows'])
         with self.assertRaisesRegex(ValueError,'Insufficient'):self.validate()

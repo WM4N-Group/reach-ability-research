@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 02:10：G2接续AINav full-2登记scene源，暂停未派发的同scene新prefix备选；whole-scene分组防泄漏已落地
+
+- 总计划仍23:45。G1有限正结论不重复：full-4两prefix未数值归并，但同scene的left/right不能分到TRAIN与未见scene评价；本组前一4-prefix2/1/1只是弱condition-disjoint选项，不满足现whole-scene目标。已将center/upper-entry gate在派发前暂停为备选（原件保留、scope0/attempt0），优先接续AINav01:30给的原registered full-2 source，不同时让Data跑两个gate。
+- 最小下一物理问题具体为full-2下left/right原前缀→同任务型PUSH/CLIMB original可执行及first-PREPARE信息，最多两新main各一次提议，未scope/未排队。full-2 lane -1.9，PUSH必须(2.3,-1.9,0)，不能套full-4 -2；原Actor/材料/控制同，几何case变化不是单前缀因果对照。当前caller硬选full-4，AINav需交实际scene/公开目标绑定，Data新freeze/own-zero/lease，静态case存在不冒动态资格。
+- G2正式训练cohort隔离：所有同scene prefix/arm/未到决策attempt归同split，不以frame/新UUID/reset计独立scene。未来TRAIN full-4、CAL full-2仅为待source资格的设计，第三相关scene尚未选定/合格，当前不能宣称3互斥scene分组可fit；不以full-3/5仅far-gap差或full-1默认材料变化假填独立性。此缺口不阻full-2缩小source测量，不空跑训练/旧DEV改用途。
+- 只修当前G2数据泄漏真阻塞：已有critic在新协议显式require_source_scene_isolation时核冻结scene→split map覆盖三split，row/unreached均随scene，condition改名不能绕过；sceneSHA仅Reach训练表metadata不入48物理特征、不要求Data新logger/NN表。旧协议不变且报告CONDITION_ONLY_NOT_SCENE_ISOLATION；heldout另列scene_groups，hash检查不认证真实场景/泛化。
+- 46308实跑3新＋31旧共34软件检查通过，参数fit与metadata无关/跨scene假拆拒绝；仅SOFTWAREfixture，无真实fit/模型输出/新物理/旧端连接。原/portable两文件核旧bytes后镜像，dirty/closed/原门保持。入口`/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-scene-disjoint-admission/PRIORITY_AND_SPLIT_POLICY_CN.md`与operations/G2_SCENE_ADMISSION_20261115.json。正在做G2source/分组；下一真实新用途数据→G3→G4→G5→G6，独立备选不再刷fixture，TEST0/主要贡献未证保持。
+
 ### 2026-11-15 01:42：G1两支真实PASS/closed，45D/视觉未数值归并；有限问题完成，转G2分组源基数gate而非停工/自动24main
 
 - 新端同GPU1两支exact3语义PASS/原cold全过，left121.085/right109.865主sim；PREPARE→READY13.460/13.485，PREPARE→成功23.800/23.285；这是不同condition的original动作，不套同condition候选反转/优化收益。v2两scope总256.970sim/1620.755407ledger wall/highwater339706466bytes，旧未知/v1失败账另保。
