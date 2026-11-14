@@ -23,7 +23,9 @@ for rel in sorted(files):
     content[rel]=data
 if total>16*1024*1024:raise SystemExit('Code-only export unexpectedly exceeds16MiB')
 for rel,data in content.items():
-    target=dest/'ainav'/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+    target=dest/'ainav'/rel
+    if target.is_symlink() or not target.resolve().is_relative_to(dest/'ainav'):raise SystemExit('Unsafe destination path')
+    target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
 head=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD'],text=True).strip()
 manifest={'role':'CURATED_AINAV_SOURCE_EXPORT_NOT_BULK_COMMIT_OF_INHERITED_DIRTY_TREE','development_HEAD_lineage':head,
  'selection':'Exact frozen299-member published source plus release; current owned development modules; fixed two-condition prefix package; export/deployment tools and docs',
@@ -31,4 +33,7 @@ manifest={'role':'CURATED_AINAV_SOURCE_EXPORT_NOT_BULK_COMMIT_OF_INHERITED_DIRTY
  'file_count':len(content),'content_bytes':total,'files_sha256':{str(rel):hashlib.sha256(data).hexdigest() for rel,data in content.items()}}
 (dest/'ainav/SOURCE_EXPORT.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 (dest/'ainav/.gitignore').write_text('__pycache__/\n*.py[cod]\n.env\n.env.*\noutputs/\ndatasets/\ncheckpoints/\nlogs/\n*.pt\n*.pth\n*.ckpt\n*.npz\n*.npy\n*.mjb\n*.mjb.gz\n*.mp4\n')
+checksum_files=[dest/'ainav'/rel for rel in sorted(content)]+[dest/'ainav/SOURCE_EXPORT.json',dest/'ainav/.gitignore']
+if (dest/'ainav/README.md').is_file():checksum_files.append(dest/'ainav/README.md')
+(dest/'CODE_SHA256SUMS').write_text(''.join(hashlib.sha256(path.read_bytes()).hexdigest()+'  '+str(path.relative_to(dest))+'\n' for path in sorted(checksum_files)))
 print(json.dumps({'files_exported':len(content),'content_bytes':total,'credential_patterns_found':0,'original_tree_staged_or_committed':False},sort_keys=True))
