@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 01:42：G1两支真实PASS/closed，45D/视觉未数值归并；有限问题完成，转G2分组源基数gate而非停工/自动24main
+
+- 新端同GPU1两支exact3语义PASS/原cold全过，left121.085/right109.865主sim；PREPARE→READY13.460/13.485，PREPARE→成功23.800/23.285；这是不同condition的original动作，不套同condition候选反转/优化收益。v2两scope总256.970sim/1620.755407ledger wall/highwater339706466bytes，旧未知/v1失败账另保。
+- 实际first-PREPARE left97.285/query4、right86.580/query3，以原journal/Observation/hash与正式77748185…组合包对齐。远端实际比较45D数值：q max差.0434556rad，decoded RGB/depth数值不同、K/T相同；原component4016/4004有效像素，可见median名义L2差7.678mm。不是路径/clock/UUID或PNG重编码差；GT/error bound/稳健可辨/critic/8组资格不冒出。
+- G1本次有限“是否完全归并”问题完成（没有数值完全归并），给G2候选source正证据，不修改旧qualified=false或audit用途。下一G2源gate已具体提议：原已登记ground NAV center和upper-entry另两前缀各一次、相同后续PUSH/CLIMB original，检验能否增加到至少4条件组；不是复跑left/right，不连续扫goal/seed，不把2条件凑旧8组。source/caller及新owned计划未资格/未派发，Data不替算法造特征/模型，原门保持。
+- 正在转G2数据准入/源基数；下一：源组可用后另冻未来新TRAIN用途/统计与停止规则，再G3真实critic和简单基线→G4三策略→G5多决策未见→G6。四组2/1/1仅弱原型设计选项，不是旧8组协议已过或12/24main已排。G3软件备选已完不刷重复；真实新训练行0/fit0/TEST0/主要贡献未证。
+- 入口`/home/yuanyue/reach-ability-research/operations/G1_PAIR_RESULT_AND_G2_NEXT_20261115_CN.md`及`protocols/2026-11-15/G2-registered-source-cardinality-gate/`。actual raw45D/逐通道差/数组不入Git，远端比较禁privateGT/NPZ/Runtime/Actor/新capture，forbidden=[]；旧端不重连，dirty/closed/失败分母/12N/4s/identity/guard/QP/FIFO/stop不变。
+
 ### 2026-11-15 01:06：G1新端v2 left三语义请求实际PASS/closed，97.285首次PREPARE公开输入已绑定；right main在途，成对结论待真实终态
 
 - 不再写仅启动失败/无真实仿真：Data v2有限私有expat库绑定修正后，left程序8da5a1f4… own-zero/cold/main通过并00:57:18 CAS closed。原REQUESTED_API0_PASS，exact3为NAV前驱/PUSH/CLIMB成功，两entry准备不冒意图；不是whole far-bank mission成功/Reach优化贡献。

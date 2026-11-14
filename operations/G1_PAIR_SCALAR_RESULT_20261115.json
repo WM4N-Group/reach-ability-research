@@ -1,0 +1,174 @@
+{
+  "at": "2026-11-15T01:37:32.459778+08:00",
+  "role": "G1_FINITE_DEV_INFORMATION_COMPARISON_NOT_FIT_OR_POLICY_EVALUATION",
+  "conditions": [
+    "data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2",
+    "data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2"
+  ],
+  "query_times_s": [
+    97.28499999998401,
+    86.57999999999375
+  ],
+  "source_pins": {
+    "/mnt/yuanyue/reach-runs/compare_G1_public_boundaries-20261115.py": "4b0b1b177776ce1df27c0123d0acad9f345cda0cb1db2b896d767f1d39441b8d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/native-prefix-46308-20261115-v2/inputs/AINav/common-source/visual_box_proposals.py": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+    "/mnt/yuanyue/ainav-compute/code/7e445e75083652ba47d0d06689d02bc2338ef471/ainav/development/climb_preparation_v2/public_component_support.py": "0b66cbf44925722dedaea46cb3e5800cf69e7e7e39253ffb861299f837b1540b",
+    "/mnt/yuanyue/reach-runs/G1-left-public-boundary-20261115-v2.json": "9e60095344d265db9249f1e4c8fcfcb84fdbfef9998ad616488bc37da0ccedfe",
+    "/mnt/yuanyue/reach-runs/G1-right-public-boundary-20261115-v2.json": "eccbbe7d8cf8d061fc61a62038ca87e77b38f6d1b51a0ccbf41295eb23d7075d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/intent-observation-0004.json": "57d2b601b22a5ce7b9aa5cbd4e6e2085e06c3edf39073f60026bfa8951761788",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/rgb.png": "aeec6001e38b3a67205296fe3a19118456cde9055e7f54caaefbc7c6981de0cc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/depth_m.npy": "5735152beaad7b31632be4b5d02e1a122fd84abda9a733145dc0e8748036ed35",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000004/calibration.json": "077498cc8743d03011f61fe4e93aa28f389fb2f3512a978735adcf1243c4aab8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2/main/intent-observation-0003.json": "a47306479cc4944c9361d2a70d65abb595ce3d5bc0173a987f31a740eb642a7e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000003/rgb.png": "e00fb7841849ac0a8f678996e84ab53545528bd0b23c24bedcf702c61de3bb69",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000003/depth_m.npy": "1ec739a9fbe8fbb2f07bc171c02e1f2358085ff192b4279118647cbd41fe82a1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2/main/query-observations/frame-000003/calibration.json": "6e6438c77d85d0fd3bef9f39e22ddf1f238a44c8998a23b1f3ae6a1c5475527b"
+  },
+  "public45D_blocks": {
+    "q": {
+      "unit": "rad",
+      "exact_numeric_equal": false,
+      "different_channels": 18,
+      "max_abs_delta": 0.04345560073852539,
+      "L2_delta": 0.06351341546063034
+    },
+    "dq": {
+      "unit": "rad/s",
+      "exact_numeric_equal": false,
+      "different_channels": 18,
+      "max_abs_delta": 1.0801733878906816e-05,
+      "L2_delta": 1.8635157605045006e-05
+    },
+    "gravity": {
+      "unit": "1",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 0.00025036434817593545,
+      "L2_delta": 0.0002504287031020089
+    },
+    "angular_velocity": {
+      "unit": "rad/s",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 2.23578535951674e-06,
+      "L2_delta": 2.5151331379077712e-06
+    },
+    "linear_velocity": {
+      "unit": "m/s",
+      "exact_numeric_equal": false,
+      "different_channels": 3,
+      "max_abs_delta": 1.7852230769221933e-06,
+      "L2_delta": 1.8106993440421499e-06
+    }
+  },
+  "all45D_exact_numeric_equal": false,
+  "action_offsets_same_original": [
+    0.0,
+    0.0
+  ],
+  "acquisition_ages_s": [
+    0.0,
+    0.0
+  ],
+  "decoded_RGB_exact_numeric_equal": false,
+  "depth_exact_numeric_equal_NaNs_equal": false,
+  "camera_K_exact_numeric_equal": true,
+  "T_base_optical_exact_numeric_equal": true,
+  "component_estimates": [
+    {
+      "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+      "valid_depth_pixels": 4016,
+      "nominal_visible_median_parent_base_m": [
+        0.6561849415955343,
+        0.05678535206243396,
+        -0.08111655195916312
+      ],
+      "component_pixels": 4016,
+      "public_native_matcher_conditioned": true,
+      "object_identity_or_reference_pose_certified": false
+    },
+    {
+      "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+      "valid_depth_pixels": 4004,
+      "nominal_visible_median_parent_base_m": [
+        0.6583487036074728,
+        0.04942484479397535,
+        -0.08081551564495965
+      ],
+      "component_pixels": 4004,
+      "public_native_matcher_conditioned": true,
+      "object_identity_or_reference_pose_certified": false
+    }
+  ],
+  "nominal_component_delta": {
+    "signed_right_minus_left_XYZ_m": [
+      0.0021637620119384637,
+      -0.007360507268458605,
+      0.0003010363142034733
+    ],
+    "L2_m": 0.007677861431141432,
+    "physical_error_or_tracking_uncertainty_bound_m": null,
+    "not_object_center_or_reference_relative_pose": true
+  },
+  "actual_original_proposer_calls": 2,
+  "old_query_indices_or_nearest_used": false,
+  "GT_or_private_association_used": false,
+  "all_refusals_preserved": true,
+  "full_condition_family_qualification_inferred": false,
+  "measurement_error_bound_or_statistical_power_claimed": false,
+  "candidate_ranking_or_optimizer_benefit_computed": false,
+  "new_fit_or_Runtime_or_physics": false,
+  "forbidden_attempts": [],
+  "official_composed_release_sha256": "77748185ec39a8bb4cc8a51945ba3e8ad5716ece4a0680e329957cd470276268",
+  "official_metadata_erratum_not_new_experiment": true,
+  "original_queries_binding_matches_official_release": true,
+  "results": [
+    {
+      "condition": "native_NAV_prefix_left",
+      "scope_id": "data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2",
+      "program_sha256": "8da5a1f4c4d12163d2588ba5166c087381ff3df5c0f3769471cd3222816ef682",
+      "status": "REQUESTED_API0_PASS",
+      "main_sim_s": 121.08499999996236,
+      "first_PREPARE_s": 97.28499999998401,
+      "READY_s": 110.74499999997177,
+      "PREPARE_to_READY_s": 13.459999999987758,
+      "PREPARE_to_success_s": 23.799999999978354,
+      "native_options": 5,
+      "raw_command_steps": 24217,
+      "RGBD_frames": 1211,
+      "zero_main_aux_sim_s": 134.09499999996214,
+      "ledger_wall_s": 866.5592004379723,
+      "scope_highwater_bytes": 177091729,
+      "main_result_sha256": "63868248ead2e75827307585d3b58e86e87326a86786ed51f34a0ec564b28770",
+      "closed_CAS_sha256": "b317666d3ebc2d0c224dfcdc24ac23e66d6ae3d4e3e17acd48bce2406422281f"
+    },
+    {
+      "condition": "native_NAV_prefix_right",
+      "scope_id": "data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2",
+      "program_sha256": "c663dabc280b6bd2ea95c1f350fcfec7af7a45dc9fe983667522468a7e724b33",
+      "status": "REQUESTED_API0_PASS",
+      "main_sim_s": 109.86499999997257,
+      "first_PREPARE_s": 86.57999999999375,
+      "READY_s": 100.06499999998148,
+      "PREPARE_to_READY_s": 13.484999999987735,
+      "PREPARE_to_success_s": 23.284999999978822,
+      "native_options": 4,
+      "raw_command_steps": 21973,
+      "RGBD_frames": 1099,
+      "zero_main_aux_sim_s": 122.87499999997233,
+      "ledger_wall_s": 754.1962067009881,
+      "scope_highwater_bytes": 162614737,
+      "main_result_sha256": "361bbcf1524fd00244f024305a36122b9e7ccc3ac2550be1742df51627746b6a",
+      "closed_CAS_sha256": "24e19f1b859f663e2b6ce4b5bc3f52ae9adc57636161f5a9a673c89f4816d363"
+    }
+  ],
+  "successful_v2_total_sim_including_zeros_and_aux_s": 256.9699999999345,
+  "successful_v2_total_ledger_wall_s": 1620.7554071389604,
+  "successful_v2_total_scope_highwater_bytes": 339706466,
+  "G1_limited_information_question": "NUMERICALLY_NONCOLLAPSED_LEGAL_NATIVE_PREFIX_SOURCE_IN_CURRENT_DEV_PAIR",
+  "G2_source_candidate": true,
+  "G2_dataset_group_count": 0,
+  "G2_training_role_new_rows": 0,
+  "robust_reproducible_or_8_group_family_qualification": false,
+  "new_captures_or_physical_trials_by_Reach": 0
+}

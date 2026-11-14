@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T01:39:30.353670+08:00",
+  "purpose": "G2_SOURCE_CARDINALITY_GATE_NOT_TRAINING_OR_OLD_G1_RETRY",
+  "problem": "G1 left/right survive as two numerically distinct public contexts, but cannot supply even a 2TRAIN+1CAL+1VAL condition-group split. Do TWO other already-registered ground NAV prefixes add distinct feasible pre-CLIMB public contexts?",
+  "existing_closed_G1_not_repeated": [
+    "native_NAV_prefix_left",
+    "native_NAV_prefix_right"
+  ],
+  "conditions": [
+    {
+      "condition_id": "registered_center_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false
+    },
+    {
+      "condition_id": "registered_upper_entry_NAV_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "goal_world_x_m": 0.050000000000000044,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false
+    }
+  ],
+  "generator_source": "owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/native/full_course.py",
+  "generator_source_sha256": "a1033e74482a04a5232d775b6f24bfd52f889d8b2876a5a8ef908d0b6d769327",
+  "source_sites": "ExecutionJudgedFullCourse.__init__: cuboid-2 approach center/left/right at source0; cuboid-2 upper-entry at same initial_bottom0; current RequestedPlanner opt-in3 -> original Host/judge/coordinator, not another initializer",
+  "fixed_scene": "full-4",
+  "fixed_seed": 4301,
+  "fixed_initialization": "unchanged native current source",
+  "same_actor_and_XML_library_configuration_as_successful_46308_v2": true,
+  "source_domain_rule": "AINav must bind the actual registered reference/declared NAV parameters in a new owned version. Reject mismatch/unsupported source; no numeric-goal fallback or private GT lookup.",
+  "new_main_upper_bound": 2,
+  "per_new_condition_main_attempts": 1,
+  "order": [
+    "registered_center_prefix",
+    "registered_upper_entry_NAV_prefix"
+  ],
+  "existing_G1_two_main_allowance_not_reused": true,
+  "not_automatically_added_to_previous_cohort": true,
+  "evaluation": "Same previously fixed first actual CLIMB PREPARE public45D/RGBD/original component; retain direct READY/rejection/failure/missing; no new geometry threshold or summary tuning",
+  "stop": "At most these two condition attempts; no retries, new offsets/seeds, unseen references, expanding to8 by renaming or assuming repeated reset gives independent groups. G2 admission remains No-Go if group separation/source evidence insufficient.",
+  "data_role": "FUTURE_DEV_AUDIT_CONDITION_SOURCE_GATE_ONLY_NOT_TRAIN_CAL_TEST",
+  "future_training_study_is_separate": "If the four legal contexts are usable, fix a NEW authorized TRAIN-purpose cohort, whole ancestor-condition split and sample/power/stop rules before outcomes. Do not fit this DEV gate or old G1.",
+  "prospective_minimal_group_plan_not_preregistered_for_dispatch": {
+    "TRAIN": [
+      "native_NAV_prefix_left",
+      "native_NAV_prefix_right"
+    ],
+    "CALIBRATION": [
+      "registered_center_prefix"
+    ],
+    "VALIDATION": [
+      "registered_upper_entry_NAV_prefix"
+    ],
+    "note": "Only four condition groups, no unseen-scene/TEST or statistical power claim. This 2/1/1 prototype alternative is NOT the old8-group4/2/2 protocol; latter remains immutable and unqualified.",
+    "potential_new_training_main_count": 12,
+    "training_main_count_reserved_or_authorized_by_this_request": 0
+  },
+  "condition_family_qualified": false,
+  "method_package_installed": false,
+  "new_scope_ids_allocated": false,
+  "physical_dispatch": false,
+  "Data_single_physical_owner": true,
+  "existing_native_safety_and_success_gates_unchanged": true,
+  "existing_per_scope_budget_reference": {
+    "sim_including_aux_s": 300.0,
+    "wall_s": 5400.0,
+    "output_bytes": 1610612736
+  },
+  "not_a_request_for_another_logging_schema_or_consumer_receipt": true
+}
