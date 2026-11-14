@@ -1,0 +1,108 @@
+{
+  "purpose": "G2_SOURCE_CARDINALITY_GATE_NOT_TRAINING_OR_OLD_G1_RETRY",
+  "conditions": [
+    {
+      "condition_id": "registered_center_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false,
+      "source_selection": {
+        "layout_id": "full-4",
+        "prefix_side": "center",
+        "candidate_id": "original"
+      },
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      }
+    },
+    {
+      "condition_id": "registered_upper_entry_NAV_prefix",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "goal_world_x_m": 0.050000000000000044,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ],
+      "max_requests": 3,
+      "CLIMB_preparation_candidate": "original",
+      "registered_source_support_height_m": 0.0,
+      "actual_native_admission_or_information_variation_proven": false,
+      "source_selection": {
+        "layout_id": "full-4",
+        "prefix_side": "upper-entry",
+        "candidate_id": "original"
+      },
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      }
+    }
+  ],
+  "order": [
+    "registered_center_prefix",
+    "registered_upper_entry_NAV_prefix"
+  ],
+  "new_main_upper_bound": 2,
+  "per_new_condition_main_attempts": 1,
+  "scene": "full-4",
+  "seed": 4301,
+  "data_role": "FUTURE_DEV_AUDIT_CONDITION_SOURCE_GATE_ONLY_NOT_TRAIN_CAL_TEST",
+  "physical_admission": false,
+  "physical_dispatch": false,
+  "new_scope_ids_allocated": false,
+  "condition_family_qualified": false,
+  "model_or_training_roles_assigned": false,
+  "binding_basis": "Exact original FullCourse refs + ExecutionJudged semantic catalogue and actual opt-in3 planner source; SOFTWARE validation only. Original runtime/native admission remains mandatory."
+}

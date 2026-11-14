@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-15T02:15:58.721800+08:00",
+  "Reach_request_path": "/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-registered-source-cardinality-gate/EXACT_TWO_REGISTERED_PREFIX_REQUESTS_NOT_DISPATCH.json",
+  "Reach_request_file_sha256": "1e8eb0e7d3f008c38a400fdf374e9b34d587705df14e0c3d539d545ee1c427c0",
+  "fixed_conditions_sha256": "ce572b3bc353f4ea415a3ae3da81e4758fe540494822f8354e695f81cae90bb8",
+  "source_files_sha256": {
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/common-source/ainav/native/full_course.py": "a1033e74482a04a5232d775b6f24bfd52f889d8b2876a5a8ef908d0b6d769327",
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/common-source/ainav/native/execution_judged_course.py": "a49c9065eabec561c34606fb3b8a57afde25fbc7922c2a734f5e6009f9c351ac",
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/common-source/probe_execution_judge.py": "eecbf79b3c1ad215ec3ac625307ab95f6e0c8a7d10bb53c81d964f5cb521bb73",
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/source-delta/probe_execution_judge.py": "133fd5933193f96dc2a6399d0f8305699519b3f758cd3c952528ac573a9dded5",
+    "/home/yuanyue/main/work/ainav/development/registered_layout_conditions_v1/registered_layout_conditions.py": "458ec66e0e65e573c7e98a91e8c496b0ad8449ebcaec686e6ff338486010dcff"
+  },
+  "actual_reference_constructor": "FullCourse.__init__ inherited by ExecutionJudgedFullCourse; original source0 NAV catalogue",
+  "actual_caller_fields": "Original build_plan runtime_config full4 unchanged; new exact conditions/requests; types.RequestedPlanner(...max_requests=3); same Host/coordinator/factory/executor; original exact3 success reader",
+  "current_G1_ids_not_admitted_as_new_gate_and_not_reopened": true,
+  "NativeRetreat_and_collision_and_support_admission_not_certified_by_semantic_match": true,
+  "source_only_local_final_checks": 11,
+  "source_only_remote_same_checks": 11,
+  "not_22_research_or_native_samples": true,
+  "cloud_source_commit": "753a6fc1a8e9960f29a0494a2af75ac78dc5fe22",
+  "native_or_data_scope_grant": false,
+  "full2_optional_source_NOT_a_prerequisite_or_part_of_this_gate": true
+}

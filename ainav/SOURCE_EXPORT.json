@@ -3,8 +3,8 @@
   "development_HEAD_lineage": "d595d007a467bc7b00ce4e34a1421612095a1059",
   "selection": "Exact frozen299-member published source plus release; current owned development modules; fixed two-condition prefix package; export/deployment tools and docs",
   "excluded": "Inherited outputs/manifests, raw RGBD/NPZ, checkpoints, environments/SDK binaries, credentials and pycache; original working tree unchanged",
-  "file_count": 325,
-  "content_bytes": 2687593,
+  "file_count": 329,
+  "content_bytes": 2696232,
   "files_sha256": {
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_CONTRACT_v1.json": "a0d562406bbd3cee57a6c7f57673986d211870d080bc4ed4e0f3bb2e61b62190",
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_RELEASE_v1.json": "0c17d2e70139a86a14b7a87fa9fb2cd6ed1bd37d8873a009a7b7613bea40718e",
@@ -306,6 +306,10 @@
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/reach_stow_choice/stow_path_choice.py": "f330cd5facba98922e995730ebd48ba4eb7a51a789b0ca9041a78758f2a97383",
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/selected-native-nav-caller.patch": "6464e0a4a52c44032744def03fdef97825c842333df0756a5bb7a7ad39ac2b19",
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/source-delta/ainav/native/execution_judged_course.py": "a49c9065eabec561c34606fb3b8a57afde25fbc7922c2a734f5e6009f9c351ac",
+    "consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1/FILES_SHA256.json": "55ff5bed8ca81a2106bf5d330052b24ed7d87e4c72d956da35447e072c1f7fc4",
+    "consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1/FIXED_CONDITIONS.json": "ce572b3bc353f4ea415a3ae3da81e4758fe540494822f8354e695f81cae90bb8",
+    "consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1/README_CN.md": "65bfce38904149ebdea4d02be9597e4e55263f809f4f5d0e20c5c3cd8ae54204",
+    "consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1/SOURCE_BINDING.json": "d32d36cc1c89d590dba3705ded407994f875efd2e39502e3cc8526cdd82e93ee",
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/EXPERIMENT_CN.md": "a3c7a1e6a443196334144b15d5172747f4c15578e4113c8a20917323e0ee8123",
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/FIXED_TWO_CONDITIONS.json": "b4bd121f237209868ff6c8cbb5bcccad754f6b83a9ad8f282159c7b8f80b5922",
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/SOURCE_CHANGE_AND_INVERSE.json": "325a381f5ce9cc561430fe18d1b7f7b212a5a7d89a98657180f2ca5cca9cff9a",
@@ -328,7 +332,7 @@
     "development/registered_layout_conditions_v1/tests/test_registered_layout_conditions.py": "042c79ae5667cc5400ade109bead3156aa64502596363f309f48bb4da9782283",
     "docs/REMOTE_EXECUTION_AND_CODE_STORAGE_20261114.md": "92a99830815a6d52efd085e2c38b156710f82c4f222984b3313fb4dbccb36db5",
     "scripts/compare_g1_public_values.py": "4c1a3e0169e36ff72245fa3bc37b09353618fa427ef30d93958516d1ae5ec8fd",
-    "scripts/export_cloud_code.py": "404cd8ddd2a7f058ffb5427319488369d7c8bf1d0dc4764b20bb89f0eabc6228",
+    "scripts/export_cloud_code.py": "98c256b2d59acf895a3e3c865043899085a70e234042ddd4dfb8da4504b4a9ef",
     "scripts/measure_g1_public_boundary.py": "67da6b3687fed3220bb80048b68f1b97592034e7d04b005662f73d309a3f3bf1",
     "scripts/remote_code_smoke.py": "36bd4039123bd29b5a8a17a334ac747b242b3c54876e213e39654a4912370d22"
   }
