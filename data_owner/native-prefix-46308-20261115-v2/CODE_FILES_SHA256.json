@@ -1,0 +1,19 @@
+{
+  "code_files_sha256": {
+    "gpu_observation.py": "4d2a0cb2f68a5bf86433570ea59bce62da09c57b77bbcf465854dc0ff1031273",
+    "raw_third_view.py": "5b54173004576cfb27f5d792560049294371b8a496ee1799ba38554442ac34c8",
+    "prepare_prefix.py": "193c005d8ec60118f89a9edd3640facd1ee3f122c8b89a26236d006a0ce3825d",
+    "full_host_worker.py": "2cf267f57e9b295243b3f1eb2cc12ee9da7e4e8c422ea99dec87aded149f9d6a",
+    "prefix_bindings.py": "d55d7d5f7e95e5757e7d3f02df247a1c1200aab984f63decb561dcf27cb0c435",
+    "cpu_prepare_and_binding_probe.py": "b33dcd924d213e7d82076212a94b212cc73eaf540907240a1476d1e11e766f20",
+    "model_identity.py": "30fe7fb6520f46e13fc6ccdf31e7ea75e618157c76dfe5084c7ae55744105ffe",
+    "third-view-camera.json": "8113a640f69321d8ffcc027a464ca5d88a01e466cf3da443861c6bcc63fb72d5",
+    "request_contract.py": "42b8ee2ba8ffcbdbc9de47a8996c8812e2697dabd06956524d378233ef0fcf3e",
+    "support.py": "b0505ae2727b7c74f99d46bde4c6273b31a6d5bb47dc612d8f2a71f70726bc22",
+    "tests/test_exact_requests.py": "2b400a769efb0b4b25b8a8ef9218d5cd16446318ec6d83734826fc129f463a90"
+  },
+  "required_shared_inputs": "owner_snapshot/native-prefix-20261114/inputs",
+  "input_release_sha256": "bc03afc0a3bdc7964546edac8d1de89ed8e354ee9b5d4c01f3fee90449f35f17",
+  "private_native_library_binary_not_in_Git": true,
+  "custody_not_run_authorization": true
+}
