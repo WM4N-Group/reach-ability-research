@@ -1,0 +1,6 @@
+{
+  "kind": "fixed_free", "width": 192, "height": 128,
+  "stride_physics_ticks": 20, "chunk_frames": 16, "max_bytes": 134217728,
+  "lookat": [1.0, -1.0, 0.35], "distance": 6.0,
+  "azimuth": 120.0, "elevation": -40.0
+}
