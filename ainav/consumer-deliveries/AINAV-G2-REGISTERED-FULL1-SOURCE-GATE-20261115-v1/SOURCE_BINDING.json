@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-15T03:33:15.289482+08:00",
+  "original_baseline": "ExecutionJudgedFullCourse/execution-judged-20261031-v6",
+  "original_283_source_manifest_sha256": "314b6650918cbf88c6bd7166ad3f2d26f9c3b30f92094db98d6f8832f8d1fd8c",
+  "source_files_sha256": {
+    "mujoco_zyh/integrated_course.py": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb",
+    "mujoco_zyh/integrated_course_plan_v1.json": "3449b3744ff46c7d0c99237303eca96aca5b72edcda6873a33e287272f19c842",
+    "mujoco_zyh/reselect_B_recorded_protocol_v2.json": "a37bdbb90b35a83a3cf1ea558c065ac6ea0f89b13103ffab9a632079e67d4b46",
+    "ainav/deployment.py": "b651fa5bbfc961db01ea09adc58e8b6b931722871524102d4a4c0358e3537200",
+    "ainav/native/full_course.py": "a1033e74482a04a5232d775b6f24bfd52f889d8b2876a5a8ef908d0b6d769327",
+    "ainav/native/execution_judged_course.py": "a49c9065eabec561c34606fb3b8a57afde25fbc7922c2a734f5e6009f9c351ac"
+  },
+  "proposal_written_before_full2_right_closed_at": "2026-11-15T03:13:12.468067+08:00",
+  "proposal_before_result_sha256": "350df86b133abfb5dc2cced5c8ba820ece542f4086713ea1d57554b5729731fc",
+  "fixed_condition_sha256": "c2ee7680acf7a51a146f815bb02e0b66581514585a898088b5542295d516535b",
+  "caller_recipe": "Select exact original full1 case -> integrated.protocol -> validate_protocol -> original HostProfile.runtime_config device-only overlay -> exact fixed requests -> same original opt-in3 planner/Host/coordinator; exact3 success, existing common-stow/original-preparation binding",
+  "old_full2_helper_still_rejects_full1": true,
+  "do_not_bypass_original_material_guard": true,
+  "materials_match_selected_full1_not_full4": true,
+  "Data_new_owned_fork_freeze_lease_own_zero_required": true,
+  "old_closed_roots_not_reopened": true,
+  "Data_installed_or_queued_or_dispatched_not_claimed": true,
+  "source_software_check_sha256": "5deefbb94017fcdaaa0951e70b424650291e097ddac676dfeb8b57f7fbdfcb9d"
+}

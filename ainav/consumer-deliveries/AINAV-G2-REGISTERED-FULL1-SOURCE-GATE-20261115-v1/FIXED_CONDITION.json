@@ -1,0 +1,73 @@
+{
+  "purpose": "G2_THIRD_REGISTERED_SCENE_SOURCE_AND_INFORMATION_GATE_NOT_RETRY_OR_FIT",
+  "condition_id": "g2_full1_native_NAV_prefix_left",
+  "layout_id": "full-1",
+  "prefix_side": "left",
+  "requested_intents": [
+    {
+      "skill": "NAV",
+      "target_ref": "cuboid-2:approach:left",
+      "parameters": {
+        "goal_world_x_m": -0.07999999999999996,
+        "goal_world_y_m": -1.6500000000000001,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid-2:approach:center",
+      "parameters": {
+        "goal_world_x_m": 2.3,
+        "goal_world_y_m": -1.8,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid-2:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      }
+    }
+  ],
+  "original_registered_case": {
+    "case_id": "full-1",
+    "lane_y_m": -1.8,
+    "gap_width_m": 0.2,
+    "step_length_m": 2.4,
+    "step_width_m": 1.4,
+    "bridge_length_m": 3.0,
+    "bridge_width_m": 1.6,
+    "bank_width_m": 2.8,
+    "bridge_offset_from_high_front_m": 2.2
+  },
+  "registered_materials": {
+    "A_bottom_mu": 0.15,
+    "B_bottom_mu": 0.4,
+    "C_bottom_mu": 0.3,
+    "C_mass_kg": 1.0,
+    "box_foot_mu": 0.8
+  },
+  "original_protocol_sha256_canonical": "7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55",
+  "declared_original_CLIMB_approach_xy": [
+    0.050000000000000044,
+    -1.8
+  ],
+  "planner_capacity": 3,
+  "terminal_exact_successful_semantic_requests": 3,
+  "preparation_payload": {
+    "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+    "target_ref": "cuboid-2:upper-entry",
+    "candidate_id": "original"
+  },
+  "seed": 4301,
+  "max_new_main": 1,
+  "per_condition_own_zero": 1,
+  "automatic_retry": false,
+  "role": "DEV_AUDIT_ONLY_NOT_FIT",
+  "material_change_part_of_original_case_not_geometry_only": true,
+  "scope_allocated": false,
+  "physical_dispatch": false,
+  "source_dynamic_or_information_qualified": false,
+  "TRAIN_CALIBRATION_VALIDATION_role_not_assigned": true
+}

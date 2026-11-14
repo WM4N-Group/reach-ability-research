@@ -1,0 +1,61 @@
+{
+  "role": "EXACT_ORIGINAL_SOURCE_AND_SEMANTIC_SOFTWARE_CHECK_ONLY",
+  "local": {
+    "role": "ONE_SOURCE_SOFTWARE_FIXTURE_NOT_NEW_RESEARCH_OR_NATIVE_SAMPLE",
+    "python": "3.12.3",
+    "canonical_original_protocol_sha256": "7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55",
+    "exact_original_catalogue_request_matches": [
+      1,
+      1,
+      1
+    ],
+    "wrong_full4_PUSH_goal_rejected": true,
+    "real_optin3_constructor_accepts": true,
+    "no_software_receipts_generated": true,
+    "original_host_device_only_overlay": true,
+    "existing_full2_helper_still_rejects_full1": true,
+    "full1_registered_materials": {
+      "A_bottom_mu": 0.15,
+      "B_bottom_mu": 0.4,
+      "C_bottom_mu": 0.3,
+      "C_mass_kg": 1.0,
+      "box_foot_mu": 0.8
+    },
+    "source_factors_not_geometry_only": true,
+    "original_candidate_declared_reference_accepted": true,
+    "forbidden_attempts": [],
+    "Runtime_Actor_world_or_training": false,
+    "source_scene_dynamically_qualified": false
+  },
+  "remote": {
+    "role": "ONE_SOURCE_SOFTWARE_FIXTURE_NOT_NEW_RESEARCH_OR_NATIVE_SAMPLE",
+    "python": "3.11.13",
+    "canonical_original_protocol_sha256": "7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55",
+    "exact_original_catalogue_request_matches": [
+      1,
+      1,
+      1
+    ],
+    "wrong_full4_PUSH_goal_rejected": true,
+    "real_optin3_constructor_accepts": true,
+    "no_software_receipts_generated": true,
+    "original_host_device_only_overlay": true,
+    "existing_full2_helper_still_rejects_full1": true,
+    "full1_registered_materials": {
+      "A_bottom_mu": 0.15,
+      "B_bottom_mu": 0.4,
+      "C_bottom_mu": 0.3,
+      "C_mass_kg": 1.0,
+      "box_foot_mu": 0.8
+    },
+    "source_factors_not_geometry_only": true,
+    "original_candidate_declared_reference_accepted": true,
+    "forbidden_attempts": [],
+    "Runtime_Actor_world_or_training": false,
+    "source_scene_dynamically_qualified": false
+  },
+  "not_two_research_samples": true,
+  "Data_caller_not_installed_or_dynamic_qualified": true,
+  "first_validation_harness_error": "Tuple reference container was mistakenly indexed by string in SOFTWARE harness; corrected to original PublicReference.ref and xy. Failed attempt retained; no production or physical state affected.",
+  "no_original_full2_source_or_guard_changed": true
+}
