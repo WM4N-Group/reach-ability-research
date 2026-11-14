@@ -4,7 +4,7 @@
   "selection": "Exact frozen299-member published source plus release; current owned development modules; fixed two-condition prefix package; export/deployment tools and docs",
   "excluded": "Inherited outputs/manifests, raw RGBD/NPZ, checkpoints, environments/SDK binaries, credentials and pycache; original working tree unchanged",
   "file_count": 329,
-  "content_bytes": 2699584,
+  "content_bytes": 2701235,
   "files_sha256": {
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_CONTRACT_v1.json": "a0d562406bbd3cee57a6c7f57673986d211870d080bc4ed4e0f3bb2e61b62190",
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_RELEASE_v1.json": "0c17d2e70139a86a14b7a87fa9fb2cd6ed1bd37d8873a009a7b7613bea40718e",
@@ -326,12 +326,12 @@
     "development/climb_preparation_v2/public_reference_semantics.py": "c737ac37e28cccf3afeb1e5063c2cde52607f40f01d83309f6dc22a159938091",
     "development/climb_preparation_v2/public_reobservation.py": "b12bea6a42bb6b36564d11ec5b43c25909f5cd6a25867446af758480e91ee372",
     "development/climb_preparation_v2/public_rgbd_geometry.py": "e442e3446bbb039f61e06e9e3dc2b713cec2854fa0246f410f36d6039d1e9f47",
-    "development/registered_layout_conditions_v1/README_CN.md": "a41dfadc2f1045c3f9170c52eb1fce29365b18260242df77c962e1638b95b8bf",
+    "development/registered_layout_conditions_v1/README_CN.md": "6dd0b93ffbe7d0e6dea446d433c9c85f5cf02ff623a3f40509336730d4e8864b",
     "development/registered_layout_conditions_v1/registered_layout_conditions.py": "458ec66e0e65e573c7e98a91e8c496b0ad8449ebcaec686e6ff338486010dcff",
     "development/registered_layout_conditions_v1/tests/source_gate_requests.json": "043e8c6a108229ba4b2a4566357581a814ff9f93b1eec02d7a4ca59174e8a929",
     "development/registered_layout_conditions_v1/tests/test_registered_layout_conditions.py": "042c79ae5667cc5400ade109bead3156aa64502596363f309f48bb4da9782283",
     "docs/REMOTE_EXECUTION_AND_CODE_STORAGE_20261114.md": "92a99830815a6d52efd085e2c38b156710f82c4f222984b3313fb4dbccb36db5",
-    "scripts/compare_g1_public_values.py": "258d6babb97c3149bce6aad95477d41b8107f2eb5c70332e310f7bbc78ec0ebb",
+    "scripts/compare_g1_public_values.py": "11fead2f65c28013fcd6bdb60b02a9e0733938d1e840adc38f54c7d39c5501f5",
     "scripts/export_cloud_code.py": "98c256b2d59acf895a3e3c865043899085a70e234042ddd4dfb8da4504b4a9ef",
     "scripts/measure_g1_public_boundary.py": "3f758e6a3d3320f83d02e60782cb355480498f1fb1634c14fbba0714db99b0ca",
     "scripts/remote_code_smoke.py": "36bd4039123bd29b5a8a17a334ac747b242b3c54876e213e39654a4912370d22"

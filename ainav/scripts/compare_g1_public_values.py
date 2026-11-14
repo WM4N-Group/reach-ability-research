@@ -6,10 +6,21 @@ No fitting/thresholds or joint-unit score; full45D block statistics belong to Re
 from pathlib import Path
 import argparse,datetime,hashlib,json,sys
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('--left',type=Path,required=True);p.add_argument('--right',type=Path,required=True)
-p.add_argument('--pair-family',choices=('G1_full4_v2','G2_full2_v1'),default='G1_full4_v2',help='Explicit fixed pair, never mix layouts or cohorts')
+p.add_argument('--pair-family',choices=('G1_full4_v2','G2_full2_v1','G2_cross_layout_left_v1','G2_cross_layout_right_v1'),default='G1_full4_v2',help='Explicit within-scene or declared SAME-prefix cross-layout pair; no arbitrary mixing')
 a=p.parse_args();blocked=[]
 pair_templates={'G1_full4_v2':'data-46308-native-prefix-{side}-PUSH-CLIMB-20261115-v2',
  'G2_full2_v1':'data-46308-G2-full2-{side}-PUSH-CLIMB-20261115-v1'}
+# Reach's pre-outcome four-cell protocol: two SAME-prefix cross-layout pairs.
+# CLI left/right identify ordered input slots here, not different prefix sides.
+# This is a whole registered-layout contrast, not a pure prefix causal effect.
+within_scene=a.pair_family in pair_templates
+if within_scene:
+ expected_scopes=[pair_templates[a.pair_family].format(side=s) for s in ('left','right')]
+ roles=['prefix_left','prefix_right']
+else:
+ prefix='left' if a.pair_family=='G2_cross_layout_left_v1' else 'right'
+ expected_scopes=[pair_templates['G1_full4_v2'].format(side=prefix),pair_templates['G2_full2_v1'].format(side=prefix)]
+ roles=['full4_'+prefix,'full2_'+prefix]
 def fence(event,args):
  if event=='import' and str(args[0]).split('.')[0] in ('torch','mujoco','onnxruntime'):
   blocked.append(str(args[0]));raise RuntimeError('No native/model import')
@@ -21,14 +32,14 @@ sys.addaudithook(fence)
 import numpy as np
 from PIL import Image
 sha=lambda f:hashlib.sha256(Path(f).read_bytes()).hexdigest();data=[];pins={}
-for side,path in [('left',a.left),('right',a.right)]:
+for slot,(side,path) in enumerate([('left',a.left),('right',a.right)]):
  j=json.loads(path.read_bytes());pins[str(path)]=sha(path)
- assert j['scope_id']==pair_templates[a.pair_family].format(side=side),'No cross-layout/cohort or reversed pair'
+ assert j['scope_id']==expected_scopes[slot],'Exact fixed within-scene or same-prefix cross-layout pair; no arbitrary/reversed mixing'
  assert j['training_or_fit_allowed'] is False and j['role']=='NEW_DEV_AUDIT_ONLY_NOT_ONLINE_REPLAY_OR_FIT'
  for f,h in j['inputs_sha256'].items():assert sha(f)==h;pins[f]=h
  data.append(j)
 result={'at':datetime.datetime.now().astimezone().isoformat(),'role':'NEW_DEV_AUDIT_ONLY_NOT_TRAIN_CALIBRATION_OR_TEST',
- 'pair_family_metadata_not_state':a.pair_family,'query_denominator':2,'statuses':[j['boundary_status'] for j in data],'paired_values_available':False,
+ 'pair_family_metadata_not_state':a.pair_family,'ordered_input_roles_metadata_not_state':roles,'scopes':[j['scope_id'] for j in data],'query_denominator':2,'statuses':[j['boundary_status'] for j in data],'paired_values_available':False,
  'robust_condition_family_or_critic_learning_or_policy_gain_certified':False,'training_or_fit':False}
 if all(j['boundary_status']=='FIRST_PREPARE_EXACT_PUBLIC_VALUES_MEASURED' for j in data):
  v=[j['public_features'] for j in data];keys=('q','dq','gravity','angular_velocity','linear_velocity')
@@ -51,7 +62,10 @@ if all(j['boundary_status']=='FIRST_PREPARE_EXACT_PUBLIC_VALUES_MEASURED' for j 
   component_pixel_counts=[x.get('component_pixel_count') for x in v])
  med=[x['component_visible_point_median_base_xyz_m'] for x in v]
  if all(x is not None for x in med):
-  delta=np.asarray(med[1])-np.asarray(med[0]);result.update(right_minus_left_nominal_component_median_base_XYZ_m=delta.tolist(),nominal_component_median_delta_L2_m=float(np.linalg.norm(delta)))
+  delta=np.asarray(med[1])-np.asarray(med[0])
+  key='right_minus_left_nominal_component_median_base_XYZ_m' if within_scene else 'full2_minus_full4_nominal_component_median_base_XYZ_m'
+  result.update({key:delta.tolist(),'nominal_component_median_delta_L2_m':float(np.linalg.norm(delta)),
+   'coordinate_frame_limitation':'Each point is in its own acquisition body frame; delta is NOT world motion, object truth or reference-relative error.'})
  result['interpretation']='Exact differences describe THIS two-run public representation only. No repeatability/noise/material threshold, object truth, candidate ranking, unseen evaluation or benefit follows.'
 for f,h in pins.items():assert sha(f)==h
 assert not blocked

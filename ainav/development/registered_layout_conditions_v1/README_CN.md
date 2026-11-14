@@ -11,6 +11,8 @@ Data新owned `prepare_prefix.build_plan` 已实际调用本模块的 `LayoutCond
 - 现有 `scripts/measure_g1_public_boundary.py` 只额外放行这两个**精确scope+已冻结program SHA**，不泛化任意world；原首次PREPARE→exact intent/Observation、public-only/无GT规则未变。闭合后按原journal/ledger核验再测量。
 - `scripts/compare_g1_public_values.py --pair-family G2_full2_v1` 显式指定新pair，默认仍旧G1；跨layout/cohort或左右倒置拒绝。layout/family仅metadata、不入45D/critic槽。原始RGBD/NPZ仍在远端。
 
+按Reach在full-2结果前固定的四格DEV规则，还提供显式`--pair-family G2_cross_layout_left_v1`/`G2_cross_layout_right_v1`：输入槽`--left`必须为旧full-4的同prefix，`--right`必须为新full-2的同prefix。这是**预声明的同prefix跨layout整场景对照**，并非任意混组；错误prefix/反向拒绝。输出角色明确为full4→full2，名义点差在各自acquisition body frame，不称world位移/物体真值/纯因果/优化收益。未声明的跨layout/cohort配对仍拒绝。
+
 下文中的“当前caller仍硬full-4／优先center”描述均为02:24及以前的**历史资格与提议**，已由本节覆盖；不删除其证据，也不把软件资格冒物理结果。
 
 ## 最初具体阻塞与实现（历史）
