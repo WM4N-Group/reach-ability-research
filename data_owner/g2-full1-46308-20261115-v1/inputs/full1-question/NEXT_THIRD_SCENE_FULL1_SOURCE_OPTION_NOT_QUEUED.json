@@ -1,0 +1,166 @@
+{
+  "at": "2026-11-15T03:13:12.468067+08:00",
+  "role": "SOURCE_FACT_AND_FINITE_SUCCESSOR_OPTION_NOT_RUN_OR_TRAINING_ADMISSION",
+  "predecessor": "Current full2 left/right gate; DO NOT RUN IN PARALLEL OR REPEAT IT",
+  "candidate_scene": "full-1",
+  "candidate_prefix": "left",
+  "original_source_sha256": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb",
+  "original_plan_sha256": "3449b3744ff46c7d0c99237303eca96aca5b72edcda6873a33e287272f19c842",
+  "exact_original_protocol_sha256_canonical": "7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55",
+  "registered_case": {
+    "case_id": "full-1",
+    "lane_y_m": -1.8,
+    "gap_width_m": 0.2,
+    "step_length_m": 2.4,
+    "step_width_m": 1.4,
+    "bridge_length_m": 3.0,
+    "bridge_width_m": 1.6,
+    "bank_width_m": 2.8,
+    "bridge_offset_from_high_front_m": 2.2
+  },
+  "registered_materials": {
+    "A_bottom_mu": 0.15,
+    "B_bottom_mu": 0.4,
+    "C_bottom_mu": 0.3,
+    "C_mass_kg": 1.0,
+    "box_foot_mu": 0.8
+  },
+  "requested_intents": [
+    {
+      "skill": "NAV",
+      "target_ref": "cuboid-2:approach:left",
+      "parameters": {
+        "goal_world_x_m": -0.07999999999999996,
+        "goal_world_y_m": -1.6500000000000001,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid-2:approach:center",
+      "parameters": {
+        "goal_world_x_m": 2.3,
+        "goal_world_y_m": -1.8,
+        "surface_height_m": 0.0
+      }
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid-2:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      }
+    }
+  ],
+  "declared_original_CLIMB_approach_xy": [
+    0.050000000000000044,
+    -1.8
+  ],
+  "seed": 4301,
+  "preparation": "original",
+  "material_difference_explicit_not_geometry_only": true,
+  "source_differences": {
+    "full-2": {
+      "case": {
+        "case_id": {
+          "candidate": "full-1",
+          "reference": "full-2"
+        },
+        "lane_y_m": {
+          "candidate": -1.8,
+          "reference": -1.9
+        },
+        "bridge_bottom_mu": {
+          "candidate": null,
+          "reference": 0.6
+        },
+        "bridge_offset_from_high_front_m": {
+          "candidate": 2.2,
+          "reference": 3.5
+        },
+        "bridge_mass_kg": {
+          "candidate": null,
+          "reference": 0.5
+        },
+        "step_width_m": {
+          "candidate": 1.4,
+          "reference": 1.5
+        },
+        "gap_width_m": {
+          "candidate": 0.2,
+          "reference": 0.15
+        }
+      },
+      "registered_materials": {
+        "C_mass_kg": {
+          "candidate": 1.0,
+          "reference": 0.5
+        },
+        "C_bottom_mu": {
+          "candidate": 0.3,
+          "reference": 0.6
+        }
+      }
+    },
+    "full-4": {
+      "case": {
+        "case_id": {
+          "candidate": "full-1",
+          "reference": "full-4"
+        },
+        "lane_y_m": {
+          "candidate": -1.8,
+          "reference": -2.0
+        },
+        "bridge_bottom_mu": {
+          "candidate": null,
+          "reference": 0.6
+        },
+        "bridge_offset_from_high_front_m": {
+          "candidate": 2.2,
+          "reference": 3.5
+        },
+        "bridge_mass_kg": {
+          "candidate": null,
+          "reference": 0.5
+        },
+        "bridge_length_m": {
+          "candidate": 3.0,
+          "reference": 3.2
+        }
+      },
+      "registered_materials": {
+        "C_mass_kg": {
+          "candidate": 1.0,
+          "reference": 0.5
+        },
+        "C_bottom_mu": {
+          "candidate": 0.3,
+          "reference": 0.6
+        }
+      }
+    }
+  },
+  "task_relevance_basis": "Original task B lane and absolute NAV/PUSH/CLIMB references change relative to SAME original robot/A initialization; not only distant far-gap or scene UUID. Whether it remains visible at PREPARE is an open measured question, not asserted.",
+  "not_a_pure_geometry_or_single_variable_effect": true,
+  "existing_full2_helper_should_still_reject_full1": true,
+  "no_bypass_of_material_guard": true,
+  "required_future_source_binding": "Use separate prospective owned caller with exact original full1 protocol+validator and coupled original goals; do not hot-edit current frozen full2 worker/helper",
+  "prospective_finite_design": {
+    "purpose": "Third registered source dynamic/public information qualification only after full2 closes and is reviewed",
+    "own_zero": 1,
+    "max_new_main": 1,
+    "automatic_retry": false,
+    "keep_rejection_failure_or_missing_PREPARE": true,
+    "data_role": "DEV_AUDIT_ONLY_NOT_FIT",
+    "not_registered_or_authorized_program": true
+  },
+  "source_dynamic_admitted": false,
+  "third_scene_qualified": false,
+  "scope_allocated": false,
+  "physical_dispatched": false,
+  "scene_split_role_not_assigned": true,
+  "TRAIN_CALIBRATION_VALIDATION_cohort_not_registered": true,
+  "original_protocol_contains_privileged_config_not_selector_features": true,
+  "Runtime_Actor_renderer_model_or_training_constructed": false
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "Data-G2-registered-full1-single-condition-v1",
+  "new_main_upper_bound": 1,
+  "per_condition_main_attempts": 1,
+  "conditions": [
+    {
+      "condition_id": "g2_full1_native_NAV_prefix_left",
+      "layout_id": "full-1",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.6500000000000001,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.8,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    }
+  ]
+}

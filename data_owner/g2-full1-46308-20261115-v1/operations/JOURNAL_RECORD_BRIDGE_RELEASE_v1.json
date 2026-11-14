@@ -1,0 +1,41 @@
+{
+  "kind": "ADDITIVE_OPTIONAL_JOURNAL_TO_EXISTING_Data_READER_NOT_NEW_HOST_OR_EXECUTION_GATE",
+  "recorded_at": "2026-11-13T13:07:59.603989+08:00",
+  "baseline_release_sha256": "3098297041dbfa50dd1928ee81ce28c68d3458ed544cc494dea7374177b7c49e",
+  "source_sha256": {
+    "consumer-deliveries/AINAV-ABSOLUTE-PLACEMENT-BASELINE-20261113-v1/journal_record_bridge.py": "4013453725cc923dd012cf34a06e69540d2b5bd4fd11ab5831fbd0bdfbbe4252",
+    "tests/test_absolute_journal_Data_bridge_CPU.py": "f7f57a840244db4de457f37ad11098cdd6f6bd65526273bbc5efb71032eb80f1",
+    "scripts/check_absolute_journal_Data_bridge_CPU.py": "cfb954a148850123167eaeae22d4d408963f3bcff5bd1d6aa3625fda1d9bd914"
+  },
+  "reader_sha256": "dec9d769ccd4c4d4a80c2cfe707227236ba2905bb0c50bbb9fb0cded7700ec2a",
+  "consumer_readme_sha256": "d0bd03581c392e72a490413ab7c643176e032fc3231c6d77693348b74e7e96f4",
+  "original_reference_manifest_sha256": "314b6650918cbf88c6bd7166ad3f2d26f9c3b30f92094db98d6f8832f8d1fd8c",
+  "same12_new_CPU_cases_both_hosts_passed": true,
+  "actual_physical_run_or_Data_current_adoption_claimed": false,
+  "exact_secondary_receipt_fallback_not_failure_inference": true,
+  "raw_journal_rewritten_or_native_receipt_redrained": false,
+  "optional_postprocessing_not_a_new_physical_prerequisite": true,
+  "evidence_sha256": {
+    "manifests/absolute_journal_Data_bridge_20261113_v1/CPU_SCOPE_v2_FIXTURE_ONLY.json": "405cb8864543d6876a4fa8e3c1852adf9874732a4524f69fb773e7f100f53b5f",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/SOURCE_ORDER_AND_IMMUTABLE_SCOPE_v1.json": "0afbbd8af24ace9bcff0514d285aa5faa37a797e69bd4d092cc5d598af94513a",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v1.exit": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-launch.stdout": "7bcc1ac68d97fa8715de07f5992cbe3f5db6d26eae6f9375ccd450fad82f3018",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v2.log": "ac751b0428148d0ff96d93aa6c2575ded4997a8639d003fe8aa55dd2b0101200",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-launch.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/test-before-public-opaque-fixture-correction-v1.py": "4f68b35dc439032a03f41b06ed6f9b2a7282cf614dae90096f3b806990d27b29",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-sync-files-v1.txt": "9ddbafe70334fa676fcbf23c0085939e56d4ae10a3f980c5e0e9d329a68c559d",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-launch.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/CPU_SCOPE_v1.json": "e634da86304f1cd5e4d278fa5940c76d4d026be0d76368aa8628eeb61fe7951d",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-before-CPU-claim-SHA-v1.json": "450fabc18dd7426d8e2beffbb55c469fe7b5d0f693dbf2184deff148ebfe5971",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v1.json": "a40aedc36737e6c6d5bab37745b428dfc7b90047826d6ac22d6c890d1c5467ae",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v2.json": "d1e3a817920902ae4d6a8f89289e00461dd9612c6a4b908f2f7b1959f717ef90",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v2.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/local_CPU_v1.log": "20527ca2f625827d4c7c2b559a4ab251a7edfb5b2f5f90a9c90ba1deb4fa2134",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/published-reference/Data-source-evidence-seal.json": "39271ce4b0663e5374d30e5f2eb5e77ae4b9dd39e230b4e137b83fe7f71adfbc",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/published-reference/ainav_records.py": "dec9d769ccd4c4d4a80c2cfe707227236ba2905bb0c50bbb9fb0cded7700ec2a",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-v1/started_once.txt": "c86f73245cf12cfd17ccebdc13eab993e9a7e1cf4ce2b80822b692d19ec6349c",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-v1/exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-v1/tests-v1.log": "efd92a4613fab9aff308f285f93e8116398ba8146f6cd5a006f6dda14a3032ee",
+    "manifests/absolute_journal_Data_bridge_20261113_v1/remote-CPU-v1/result.json": "400a45c85260fe0d57157857aaba555d72cf85d013a0475e35850c9be081b235"
+  }
+}
