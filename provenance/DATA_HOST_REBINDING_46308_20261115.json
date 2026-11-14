@@ -1,0 +1,34 @@
+{
+  "schema": "Data-new-host-existing-runner-rebinding-v1",
+  "new_root": "/mnt/yuanyue/data-team/deployments/46308-20261114",
+  "new_environment": "/mnt/yuanyue/data-team/env-native-v1",
+  "SDK_ROOT": "/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle",
+  "SDK_is_existing_readonly_byte_verified_asset": true,
+  "main_plan_sha256": "53233939a5df85d33aa3f31cb4a01f140f28d28e1f31b2d161bc45cadd0dad40",
+  "changed_files": {
+    "prepare_prefix.py": {
+      "old_sha256": "cfb26bd843a02b9fe390eac3a8ba0c37695c879f702b4fcd68d7ac324c29b1f5",
+      "new_sha256": "dfbd793008a5bfc84419a22d2b624d1b3308b616e545a6119479f7f6e3a195a3"
+    },
+    "support.py": {
+      "old_sha256": "62cff9a870a510d21b048ea7c809f89b73f4b796ccbfe34c7a1de855423c5d4f",
+      "new_sha256": "56bf4dee9bf36ebac9a6c2e1af6364dfc8e315c7762690160795b74616a3ef77"
+    },
+    "full_host_worker.py": {
+      "old_sha256": "6a3b169eb0ab3e056666ad11cf83192a471474078779415376f084770294ad99",
+      "new_sha256": "ca1977fa7722f0e8a93e579f10d15a3773f667efc4bdb91db89934c8036205cb"
+    },
+    "cpu_prepare_and_binding_probe.py": {
+      "old_sha256": "f1be1cd6c6072632c5377c231834026a093adf3e72dd20d32103f0d6de55b069",
+      "new_sha256": "b33dcd924d213e7d82076212a94b212cc73eaf540907240a1476d1e11e766f20"
+    }
+  },
+  "all_input_source_files_unchanged": true,
+  "old_runner_files_unchanged": true,
+  "Ledger_AST_unchanged": true,
+  "exact3_semantic_completion_unchanged": true,
+  "original_control_Actor_scene_seed_safety_success_gates_unchanged": true,
+  "new_left_lineage_old_infra_unknown_not_retry": true,
+  "new_cohort_same_device_both_conditions": true,
+  "physical_dispatches": 0
+}
