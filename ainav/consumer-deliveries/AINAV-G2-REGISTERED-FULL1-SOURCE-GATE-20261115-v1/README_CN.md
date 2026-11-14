@@ -4,7 +4,7 @@
 
 当前full-2 left/right两main均closed：left通过原三语义链，right在PUSH unload原reference/FF可行集合空而终止、没有CLIMB PREPARE。right不重跑、不换seed/goal直到通过，不改原effort/FIFO/QP/原12N与成功门。full-2内公开PREPARE pair和same-right跨layout均不可比较，不能按0差/CLIMB失败补标签；已有left跨layout125.781mm名义表征差不是优化收益。
 
-接续在右支结果前03:13已写的原full-1 source-option（本包保其原SHA），固定**原full-1 left一条件**：NAV(.5−.58,−1.8+.15,0)→PUSH(2.3,−1.8,0)→CLIMB upper-entry .2、准备original、seed4301。只问第三原登记scene能否按原门到首次PREPARE且有合法公开任务输入；不一口气采训练数据/两个prefix/扫参数。不以这一问题去修复/重试full-2 right。
+接续在本组消费右支终态前03:13已写的原full-1 source-option（本包保其原SHA；仅早于本组消费及03:24 CAS closed，不声称早于远端物理结果产生或盲法/确认性预注册），固定**原full-1 left一条件**：NAV(.5−.58,−1.8+.15,0)→PUSH(2.3,−1.8,0)→CLIMB upper-entry .2、准备original、seed4301。只问第三原登记scene能否按原门到首次PREPARE且有合法公开任务输入；不一口气采训练数据/两个prefix/扫参数。不以这一问题去修复/重试full-2 right。
 
 ## 必须诚实声明的source变化
 

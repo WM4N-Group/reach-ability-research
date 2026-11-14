@@ -20,5 +20,6 @@
   "Data_new_owned_fork_freeze_lease_own_zero_required": true,
   "old_closed_roots_not_reopened": true,
   "Data_installed_or_queued_or_dispatched_not_claimed": true,
-  "source_software_check_sha256": "5deefbb94017fcdaaa0951e70b424650291e097ddac676dfeb8b57f7fbdfcb9d"
+  "source_software_check_sha256": "5deefbb94017fcdaaa0951e70b424650291e097ddac676dfeb8b57f7fbdfcb9d",
+  "proposal_time_scope": "Before AINav read right outcome and before Data CAS closed 03:24; not claimed before remote physical result creation or as blind confirmatory preregistration"
 }
