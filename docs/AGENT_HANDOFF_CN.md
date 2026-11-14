@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 01:06：G1新端v2 left三语义请求实际PASS/closed，97.285首次PREPARE公开输入已绑定；right main在途，成对结论待真实终态
+
+- 不再写仅启动失败/无真实仿真：Data v2有限私有expat库绑定修正后，left程序8da5a1f4… own-zero/cold/main通过并00:57:18 CAS closed。原REQUESTED_API0_PASS，exact3为NAV前驱/PUSH/CLIMB成功，两entry准备不冒意图；不是whole far-bank mission成功/Reach优化贡献。
+- main121.085sim、NAV前驱17.625sim；首次CLIMB PREPARE97.285→READY110.745=13.460，至成功终点121.085=23.800sim。zero+main含各aux总134.095sim/866.559200ledger wall，scope输出highwater177091729bytes（取max不跨phase相加），24217命令/1211live帧。Data原cold检查过，本组不重算原NPZ/torque。
+- 已在46308复用原Journal.verify/Observation.create，只读实际CLIMB/preparation首事件→exact intent-observation/hash→同packet45D/RGB/depth/K/T，首次97.285/age0绑定，不套旧query号或_latest_public，不把历史audit伪装ONLINE/fit。forbidden=[]，无privatecatalog/GT/新capture/Actor/Runtime/physics。本地仅小报告/远端原数组，Git只存reader代码和scalar摘要。
+- right程序c663dabc…自身zero/cold通过，00:58:43唯一main CAS在途；无本组已接收终态，不重发。下一G1：right闭合即同cohort比较45D按单位、decoded RGBD/原component，direct READY/缺测/失败保分母；目前不宣告可辨/归并/可学。按结果转G2或一次新条件源验证，G3→G4→G5→G6持续；原旧失联/v1失败费用、原门/dirty/closed/TEST0保持，真实新训练数据/fit0。
+- 入口`/home/yuanyue/reach-ability-research/operations/G1_LEFT_ACTUAL_RESULT_AND_NEXT_20261115_CN.md`与`/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-15/G1-left-actual-intake-v2/LEFT_FIRST_PREPARE_AUDIT_ONLY.json`（后者不进Git）。本组不代派物理/不连接旧端，不以原AINav工程通过冒研究收益。
+
 ### 2026-11-15 00:33：G1新端v1真实zero启动失败已收束；G3独立备选补齐失败漏报/UNKNOWN分母，31远端软件检查过
 
 - 计划仍23:45/G1—G6。未仅看滞后STATUS：已核Data新目录native-prefix-46308-20261115-v1原zero-result/ledger/CAS。Data已在GPU1新authority/freeze后执行left zero1，因pyexpat undefined symbol XML_SetAllocTrackerActivationThreshold在构造XML时FAILED_NO_RETRY；left main0、right zero0/main0，v1共同启动版本已按owner CAS停住，不重复该attempt。ledger15.156688wall/6831bytes，sim记录0但usage_known=false，不能报总仿真/成本已知0或native任务失败。旧46174失联UNKNOWN/耗次分开保留，不旧端重连。本组不代改Data环境/worker/authority，修复/新版本真实资格归owner，当前CPU诊断过不签zero。
