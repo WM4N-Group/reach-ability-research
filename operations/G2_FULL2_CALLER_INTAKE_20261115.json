@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-15T02:36:44.418232+08:00",
+  "source_bound_layout": "full-2",
+  "two_exact_requests_source_sha256": "64c9242142a609e24205ffda2243fee38cd9851005a2dd3bbfba5ed23496f9d2",
+  "source_caller_actual_config_overlay_check": "case full-2, exact requested list, only actor_device, seed4301",
+  "left_own_zero_pass_reported": true,
+  "left_numeric_model_identity": "93869e1a736609cceed9ffefb85be1a4d0ba20c2dd26148a852d868f5e336a5e",
+  "numeric_model_difference_not_physical_parameter_truth_or_group_certificate": true,
+  "latest_local_published_phase_metadata": {
+    "g2_full2_native_NAV_prefix_left": {
+      "CAS-main.json": {
+        "at": "2026-11-15T02:34:21.609125+08:00",
+        "phase": "CAS_DISPATCHED_MAIN",
+        "program_sha256": "6ee69a5f2a08c8ed8e5212b2c22ead90daf54dc4bb581bd9e4a09712ab2535e1"
+      },
+      "actual-zero-cold-validation.json": {
+        "passed": true,
+        "program_sha256": "6ee69a5f2a08c8ed8e5212b2c22ead90daf54dc4bb581bd9e4a09712ab2535e1"
+      }
+    },
+    "g2_full2_native_NAV_prefix_right": {}
+  },
+  "center_upper_entry_gate_still_paused_not_parallel": true,
+  "extra_Data_receipt_or_logging_requirement": false,
+  "new_Runtime_world_capture_or_fit_from_Reach": false,
+  "old_host_connections": 0,
+  "source_pins": {
+    "/home/yuanyue/main/work/data-team/workers/g2-full2-46308-20261115-v1/prepare_prefix.py": "3b796937b651eee489ec47f58a4ce22da64b281178e3ccdbf180ba15ce254006",
+    "/home/yuanyue/main/work/data-team/workers/g2-full2-46308-20261115-v1/inputs/g2-question/FIXED_TWO_CONDITIONS.json": "64c9242142a609e24205ffda2243fee38cd9851005a2dd3bbfba5ed23496f9d2",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/source-staging.stdout": "4e3936fd6c44eb62a704e1a37b9d2035103eee57cd0fb57e299b71c52f81f888",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_left/zero-result.json": "9a4d27cc9c775ac7ce316ba6fefdf7d23be3ceca3ac7dbab01f3599ac1913786",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-scene-disjoint-admission/FULL2_ANALYSIS_BEFORE_MAIN_RESULT_CN.md": "f8468124a4b76eadb0f4d219587c2770cbdfb9eb3d5e535138e704df4ea4024b",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_left/CAS-main.json": "ce8547b364cf8c395b02b16a2ce2aa3c6d852953d502625933cb4bdb78ad6873",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_left/actual-zero-cold-validation.json": "610d64815fbe216afa3eb6acf49d8a1eba4867b9118630929cd779f5ec11fa2f"
+  }
+}

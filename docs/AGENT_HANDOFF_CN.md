@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 02:38：G2 full-2已被Data实际caller消费，left真实zero/cold通过、02:34:21唯一main已CAS派发；不再将其写成纯可选源
+
+- 计划仍23:45/53233939…。已核Data新g2-full2-46308-20261115-v1的build_plan实际调用AINav LayoutCondition('full-2',prefix_side,'original')并消费它的protocol/runtime_config/requests，检查case full-2/仅device overlay/seed4301。固定条件SHA64c92421…，两prefix NAV_y -1.75/-2.05、PUSH_y -1.9、CLIMB .2正确，不套full-4 -2。源码stage不是native证书，但当前已有新程序真实own-zero/cold通过。
+- left新程序6ee69a5f…/scope data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1，zero OWN_ZERO_PASS/world0、numeric93869e1a…，与full-4的7b9ed33e…不同只作来源证据不认证每项物理参数。02:34:21 CAS_DISPATCHED_MAIN，未见本组已接收终态；right无本组已接收zero/main派发，不补造结果或重发launcher。Data唯一owner，当前实际采用full-2 left/right，不与center/upper-entry备选并行、不在途换问题。
+- 已将跨layout分析明确到首PREPARE：四格full-4/full-2×left/right逐原事件/hash定位、45D分单位、decoded RGB/depth/K/T及原component；分别报同layout前缀差和同prefix跨layout差，缺PREPARE/direct READY/拒绝/失败保分母，无resize/后READY回填/GT。不用数值hash或scene标签单独证明加载正确/独立性；旧DEV后果曝光明确，不冒盲测/优化收益。
+- 正在做G2 source gate消费与分组；下一first-PREPARE/真实终态到达即现有reader评价，第三互斥scene/新TRAIN用途/功效与停止规则未齐仍不能fit，不阻这项最小source实验。独立备选scene泄漏保护34软件检查已完成，不重复刷测试/新wrapper/空训练。新训练行0/fit0、原dirty/closed/失败未知账与原门/TEST0保持。
+- 入口`/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-scene-disjoint-admission/FULL2_ANALYSIS_BEFORE_MAIN_RESULT_CN.md`与operations/G2_FULL2_CALLER_INTAKE_20261115.json。只消费source/zero/CAS原件，不新增物理/Actor/capture或跨chat派单，后续G3→G4→G5→G6接续不以gate完成收工。
+
 ### 2026-11-15 02:10：G2接续AINav full-2登记scene源，暂停未派发的同scene新prefix备选；whole-scene分组防泄漏已落地
 
 - 总计划仍23:45。G1有限正结论不重复：full-4两prefix未数值归并，但同scene的left/right不能分到TRAIN与未见scene评价；本组前一4-prefix2/1/1只是弱condition-disjoint选项，不满足现whole-scene目标。已将center/upper-entry gate在派发前暂停为备选（原件保留、scope0/attempt0），优先接续AINav01:30给的原registered full-2 source，不同时让Data跑两个gate。
