@@ -3,7 +3,7 @@ No dataset files, audit labels, actors or research model artifacts are consumed.
 """
 from copy import deepcopy
 import unittest
-from .successor_critic import PURPOSE,validate_dataset,_fit_heads,predict_offline,fit_and_evaluate
+from .successor_critic import PURPOSE,validate_dataset,_fit_heads,predict_offline,fit_and_evaluate,_score_diagnostics
 from .successor_aware_choice import digest
 
 
@@ -159,6 +159,52 @@ class SuccessorCriticTests(unittest.TestCase):
         for invalid in (float('nan'),float('inf'),-1.,True):
             self.data['rows'][0]['spent_sim_s']=invalid
             with self.assertRaisesRegex(ValueError,'missing is not zero'):self.validate()
+
+    def test_raw_diagnostic_failure_misses_have_failure_not_attempt_denominator(self):
+        pairs=[({'outcome':'SUCCESS'},.5),({'outcome':'NATIVE_GUARD_FAILURE'},.8),
+               ({'outcome':'NATIVE_GUARD_FAILURE'},.2),({'outcome':'CENSORED'},.99)]
+        d=_score_diagnostics(pairs)
+        self.assertEqual(d['known_outcome_rows'],3);self.assertEqual(d['censored_excluded'],1)
+        self.assertEqual(d['native_failures'],2);self.assertEqual(d['native_failures_scored_success'],1)
+        self.assertEqual(d['native_failure_miss_rate'],.5)
+        self.assertEqual(d['failure_fraction_among_scored_success'],.5)
+        self.assertEqual(d['success_false_refusal_rate'],0.)
+        self.assertFalse(d['threshold_is_deployment_rule'])
+
+    def test_absent_classes_or_no_scored_success_report_undefined_rates_not_zero(self):
+        only_success=_score_diagnostics([({'outcome':'SUCCESS'},.2)])
+        self.assertIsNone(only_success['native_failure_miss_rate'])
+        self.assertIsNone(only_success['failure_fraction_among_scored_success'])
+        self.assertEqual(only_success['success_false_refusal_rate'],1.)
+        only_failure=_score_diagnostics([({'outcome':'NATIVE_GUARD_FAILURE'},.2)])
+        self.assertEqual(only_failure['native_failure_miss_rate'],0.)
+        self.assertIsNone(only_failure['success_false_refusal_rate'])
+        only_censored=_score_diagnostics([({'outcome':'CENSORED'},.9)])
+        self.assertEqual(only_censored['known_outcome_rows'],0)
+        self.assertIsNone(only_censored['native_failure_miss_rate'])
+        self.assertIsNone(only_censored['success_false_refusal_rate'])
+
+    def test_heldout_raw_score_diagnostics_do_not_promote_unknown_to_native_pass(self):
+        result=fit_and_evaluate(self.data,self.auth,self.protocol)
+        for metrics in result['heldout_metrics'].values():
+            self.assertEqual(metrics['full_successor_feasibility_UNKNOWN_rows'],metrics['rows'])
+            self.assertEqual(metrics['full_successor_feasibility_UNKNOWN_fraction'],1.)
+            self.assertEqual(metrics['qualified_native_or_execution_PASS_predictions'],0)
+            self.assertEqual(metrics['raw_score_diagnostic']['raw_uncalibrated_score_threshold'],.5)
+            self.assertEqual(metrics['train_only_constant_score_diagnostic']['raw_uncalibrated_score_threshold'],.5)
+            self.assertFalse(metrics['raw_score_diagnostic']['threshold_is_deployment_rule'])
+            self.assertIsNotNone(metrics['current_READY_time_MAE_s'])
+            self.assertIsNotNone(metrics['train_only_mean_baseline_current_READY_time_MAE_s'])
+        self.assertFalse(result['execution_authorized']);self.assertFalse(result['model']['deployment_qualified'])
+
+    def test_censored_heldout_rows_remain_in_unknown_coverage_not_class_diagnostics(self):
+        row=self.data['rows'][-1];row.update(outcome='CENSORED',full_success_s=None)
+        result=fit_and_evaluate(self.data,self.auth,self.protocol);v=result['heldout_metrics']['VALIDATION']
+        self.assertEqual(v['raw_score_diagnostic']['known_outcome_rows'],2)
+        self.assertEqual(v['raw_score_diagnostic']['censored_excluded'],1)
+        self.assertEqual(v['full_successor_feasibility_prediction_rows'],3)
+        self.assertEqual(v['full_successor_feasibility_UNKNOWN_rows'],3)
+        self.assertIsNone(v['raw_score_diagnostic']['native_failure_miss_rate'])
 
     def test_missing_group_or_wrong_protocol_or_future_clock_refused(self):
         self.data['rows']=[r for r in self.data['rows'] if r['split']!='CALIBRATION'];self.data['closed_attempt_count']=len(self.data['rows'])

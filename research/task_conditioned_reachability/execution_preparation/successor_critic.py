@@ -189,6 +189,33 @@ def predict_offline(model,features):
         complete_successor_feasibility='UNKNOWN',execution_authorized=False)
 
 
+
+def _score_diagnostics(row_scores):
+    """Fixed raw-score diagnostic, NOT calibrated probability or admission.
+
+    This 0.5 diagnostic is conventional logistic sign classification only.
+    It is not chosen from heldout/audit outcomes, and cannot change the model,
+    UNKNOWN deployment feasibility, or the original native execution gates.
+    Resource censoring is excluded from both classes, never treated as failure.
+    """
+    known=[(r,score) for r,score in row_scores if r['outcome']!='CENSORED']
+    successes=sum(r['outcome']=='SUCCESS' for r,_ in known)
+    failures=len(known)-successes
+    missed_failures=sum(r['outcome']=='NATIVE_GUARD_FAILURE' and score>=.5 for r,score in known)
+    refused_successes=sum(r['outcome']=='SUCCESS' and score<.5 for r,score in known)
+    predicted_success=sum(score>=.5 for _,score in known)
+    return dict(raw_uncalibrated_score_threshold=.5,threshold_is_deployment_rule=False,
+        known_outcome_rows=len(known),censored_excluded=len(row_scores)-len(known),
+        native_failures=failures,successes=successes,
+        native_failures_scored_success=missed_failures,
+        native_failure_miss_rate=None if not failures else missed_failures/failures,
+        actual_successes_scored_failure=refused_successes,
+        success_false_refusal_rate=None if not successes else refused_successes/successes,
+        predicted_success_rows=predicted_success,
+        failure_fraction_among_scored_success=None if not predicted_success else missed_failures/predicted_success,
+        diagnostic_is_not_calibration_or_qualified_safety_test=True)
+
+
 def fit_and_evaluate(data,authorization,protocol):
     rows=validate_dataset(data,authorization,protocol)
     spending=attempt_spending(data)
@@ -197,6 +224,11 @@ def fit_and_evaluate(data,authorization,protocol):
         part=[r for r in rows if r['split']==split];known=[r for r in part if r['outcome']!='CENSORED']
         predictions=[(r,predict_offline(model,r['physical_features'])) for r in part]
         full_errors=[abs(p['conditional_successful_full_time_s']-r['full_success_s']) for r,p in predictions if r['outcome']=='SUCCESS']
+        current_errors=[abs(p['conditional_current_time_s']-r['current_READY_s']) for r,p in predictions
+                        if r.get('current_READY_s') is not None and p['conditional_current_time_s'] is not None]
+        baseline_current_errors=[abs(model['baseline_current_time_mean_s']-r['current_READY_s']) for r in part
+                                 if r.get('current_READY_s') is not None and model['baseline_current_time_mean_s'] is not None]
+        unknown=sum(p['complete_successor_feasibility']=='UNKNOWN' for _,p in predictions)
         log_losses=[];baseline_log_losses=[];baseline_full_errors=[]
         for r,p in predictions:
             if r['outcome']=='CENSORED':continue
@@ -209,6 +241,14 @@ def fit_and_evaluate(data,authorization,protocol):
         metrics[split]=dict(rows=len(part),groups=len({r['condition_binding_sha256'] for r in part}),
             successes=sum(r['outcome']=='SUCCESS' for r in part),guard_failures=sum(r['outcome']=='NATIVE_GUARD_FAILURE' for r in part),
             censored=sum(r['outcome']=='CENSORED' for r in part),
+            raw_score_diagnostic=_score_diagnostics([(r,p['uncalibrated_success_score']) for r,p in predictions]),
+            train_only_constant_score_diagnostic=_score_diagnostics([(r,model['baseline_success_score']) for r in part]),
+            full_successor_feasibility_prediction_rows=len(predictions),
+            full_successor_feasibility_UNKNOWN_rows=unknown,
+            full_successor_feasibility_UNKNOWN_fraction=None if not predictions else unknown/len(predictions),
+            qualified_native_or_execution_PASS_predictions=0,
+            current_READY_time_MAE_s=None if not current_errors else sum(current_errors)/len(current_errors),
+            train_only_mean_baseline_current_READY_time_MAE_s=None if not baseline_current_errors else sum(baseline_current_errors)/len(baseline_current_errors),
             uncalibrated_log_loss=None if not log_losses else sum(log_losses)/len(log_losses),
             successful_full_time_MAE_s=None if not full_errors else sum(full_errors)/len(full_errors),
             train_only_constant_baseline_log_loss=None if not baseline_log_losses else sum(baseline_log_losses)/len(baseline_log_losses),
