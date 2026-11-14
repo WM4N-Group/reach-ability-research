@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-14 23:23：用户指定46308计算端与新GitHub代码保管；代码已推送/远端部署，27软件检查通过，尚未真实仿真/训练
+
+- 用户最新位置决定：以后仿真/训练在`root@180.97.68.228:46308`，代码保管GitHub `WM4N-Group/reach-ability-research`＋本地精简`/home/yuanyue/reach-ability-research`，远端代码`/mnt/yuanyue/reach-ability-research`，运行/资产分置`/mnt/yuanyue/reach-runs`和`/mnt/yuanyue/reach-assets`。旧工作区全部dirty/原HEAD4c998be/origin/index保留，不删旧数据、不改closed；新仓库是独立code-only历史，不假称原clean commit。
+- 目标hostname`is-ddj7fmngzagfchvv-devmachine-0`，2张4090（GPU0 UUID297c1146…；GPU1 UUID6d66aa68…），23:06/23:19探测两卡各free24080MiB/total24564MiB，非持有lease/未来保证。旧46174/GPU8a965a92…的4039MiB HOLD不能当新机当前状态。用户名/端口不当设备身份，密码/私钥未存Git或部署脚本。
+- 已推云端main（本次代码/协议提交当前`656a17f17e42959823f73e2b324fc924ac9371cd`），代码commit e716e6d在新机完成27项软件检查、torch2.7.0+cu128/CUDA available/2devices、MuJoCo3.3.2 import；无tensor/Actor/MjModel/MjData/Runtime/physics构造。首次27中11项因测试绝对路径缺失失败原记录保留，已仅修测试为仓库内exact SHA API，27复测全过，不当研究样本/native资格。
+- 本地新repo约22MiB（含Git）；仅约12KiB远端小报告回传，大数据/视频/权重/环境不入Git、不批量回传。必要代码含Data-owned两条件四delta副本及少量冻结协议逐SHA，副本不迁移authority。每次换机部署commit/核资产，不再以运行服务器作代码唯一副本。
+- Data仍唯一物理owner：新GPU UUID、canonical锁/lease、owned运行根、SDK/冻结actor资产与依赖身份须迁移/新freeze/本程序own-zero再main，不复用旧UUID/inode/许可或sed绕门。既有新机Python3.11.13不满足旧worker精确3.11.16/prefix，不能冒ready。无新scope/真实仿真/训练fit；原两条件最多2main/后果前判据、旧audit/GT隔离、高层新数据授权/新样本0、原12N/4s/guard/QP/FIFO/stop与TEST0/主要贡献未证保持。
+- 入口`/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-14/server-migration-46308-code-custody-v1/MIGRATION_CHECK.json`、新仓库`/home/yuanyue/reach-ability-research/README.md`和`operations/REMOTE_EXECUTION_CN.md`。本次用户明确授权代码同步，已在新仓库做选择性code-only commit/push；不是在旧dirty仓库git add全部/commit或force-push。共享仅更新Reach段，未跨chat声称已派发Data。
+
 ### 2026-11-14 19:58：Data已接收两条件并完成新owned CPU接线；资源HOLD，非真实zero/派发
 
 - 增量消费Data19:39入口及19:36:33资源/CPU原件，SHA `1fe068aa44815e379451e4473ada271393c6ba33c00ef312b755d6d5a585da2f`。新owned四delta/显式max_requests3/exact三语义回执终点接线已由Data完成本机/新端软件核验；本组未重跑8项测试、不当研究样本，也不再写“Data未接收／尚未装入新worker”。

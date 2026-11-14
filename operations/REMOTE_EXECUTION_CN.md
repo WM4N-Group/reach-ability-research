@@ -30,3 +30,7 @@ SSH：`ssh -p 46308 root@180.97.68.228`（凭据不在仓库）。
 部署后只运行独立软件检查与依赖/设备可见性 probe；不构造原 Runtime、Actor 或物理世界，不启动真实数据训练，不重开旧 root。后续真实仿真和未来合规训练均在本目标服务器；本地仅维护代码与小报告。
 
 不可将 SSH 可连、CUDA 可见、软件测试通过，写成“仿真实验已跑/critic正在训练”。
+
+## 已完成部署核验
+
+代码e716e6d在该节点27项软件检查通过，CUDA available/2 devices，MuJoCo3.3.2导入成功；无tensor/Actor/MjModel/MjData/Runtime/physics构造。首轮绝对路径导致的11项软件错误保留后，已仅改test loader并复测。MIGRATION_20261114.json记录小型摘要，不含原数据/权重/凭据；这不是native运行资格或真实模型训练。
