@@ -21,6 +21,11 @@ class SemanticSourceTests(unittest.TestCase):
         nav=nav_declarations(v);self.assertEqual(len(nav),len({n['xy']for n in nav}));self.assertEqual(sum(n['target_ref']=='cx-goal'for n in nav),1)
         self.assertLess(len(nav)+6,128)
         self.assertEqual(len(s.load_scene()['objects']),2) # v1 preserved, not overwritten.
+        from terminal_stop import FinalSupportedStop
+        from types import SimpleNamespace
+        stop=FinalSupportedStop.__new__(FinalSupportedStop);stop.complete=True;stop.r=SimpleNamespace(sim=SimpleNamespace(data=SimpleNamespace(time=.5)))
+        stop.placements=SimpleNamespace(records={o['public_ref']:object()for o in v['objects']},scene=v)
+        self.assertEqual(stop.results[0]['original_placement_count'],3);self.assertEqual(stop.results[0]['required_reconstructions'],3);self.assertNotIn('two_original_placements',stop.results[0])
     def test_same_acquisition_private_entry_reference_never_changes_public_sensor(self):
         obs=Observation.create(dict(time_s=0.,rgb=dict(path='/SOFTWARE-NOT-EXPERIMENT/rgb.png',sha256='0'*64,time_s=0.,width=8,height=8),objects=[],public_state={},declared_map=dict(source_ref='SOFTWARE-only',anchors=[dict(target_ref='cuboid_a',description='declared INITIAL task reference only',position_xyz_m=[1.7,0.,0.],uncertainty_xyz_m=[0.,0.,0.])]),goal='SOFTWARE-only',events=[]))
         raw=obs.encoded;o=BehaviorOption('source','NAV','cuboid_a',tuple(sorted(dict(goal_world_x_m=-.08,goal_world_y_m=.006,surface_height_m=0.).items())),60.,'SOFTWARE-only')

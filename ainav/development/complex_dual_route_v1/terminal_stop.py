@@ -88,7 +88,7 @@ class FinalSupportedStop:
     @property
     def phase(self):return 'COMPLEX_TASK_VERIFIED'if self.complete else 'VERIFY_ORIGINAL_SUPPORTED_STOP'
     @property
-    def results(self):return [dict(skill='complex_task',successful=True,physical_time_s=float(self.r.sim.data.time),original_owner_hold=True,two_original_placements=True)]if self.complete else []
+    def results(self):return [dict(skill='complex_task',successful=True,physical_time_s=float(self.r.sim.data.time),original_owner_hold=True,original_placement_count=len(self.placements.records),required_reconstructions=self.placements.scene['task']['minimum_distinct_reconstructions'])]if self.complete else []
     def enter(self):self.native.enter()
     def update(self):self.native.update()
     def next_command(self):return self.native.next_command()
