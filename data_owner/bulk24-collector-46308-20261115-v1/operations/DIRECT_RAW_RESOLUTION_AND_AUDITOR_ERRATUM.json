@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-15T21:08:43.514644+08:00",
+  "role": "EXPLICIT_CAMERA_METADATA_AND_AUDITOR_ERRATUM_NOT_PHYSICAL_RETRY",
+  "scope_id": "data-46308-bulk24-01-g01-left-original-20261115-v1",
+  "frozen_camera_file": "workers/bulk24-collector-46308-20261115-v1/third-view-camera.json",
+  "actual_direct_third_view_width": 192,
+  "actual_direct_third_view_height": 128,
+  "actual_original_onboard_RGBD_width": 192,
+  "actual_original_onboard_RGBD_height": 128,
+  "not_HD": true,
+  "withdraw_previous_bulk_HD_wording": true,
+  "first_zero_cold_HD_label_was_inherited_metadata_name_not_resolution_assertion": true,
+  "actual_frozen_camera_not_changed": true,
+  "native_zero_main_pass_and_counts_unchanged": true,
+  "raw_capture_not_upscaled_rerendered_or_replaced": true,
+  "prior_readonly_audit_error": "Inherited T auditor hardcoded960x540, while this original TRAIN-family camera is192x128; first exit1/stderr retained. v2 binds actual frozen camera metadata.",
+  "current_GPU0_T_HD_camera_not_changed": true,
+  "not_T_success_master_or_method_advantage": true
+}
