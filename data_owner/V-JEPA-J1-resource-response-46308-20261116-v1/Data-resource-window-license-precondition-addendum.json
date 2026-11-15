@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-16T01:07:50.860691+08:00",
+  "current_plan_sha256": "bdfc613c98e266e2abf86883b67b5b3eb72bf7a7da535ec5a29f19a544cf38d8",
+  "original_response_sha256": "60c72a0ebffff30c6f555d5a4ad77b472a937c61144a1ec4305a567d904e5655",
+  "not_asserting_checkpoint_license_version_SHA_already_verified": true,
+  "checkpoint_download_condition": "J group must first verify this exact checkpoint independent weight license, exact revision and expected SHA; code repository license alone is insufficient",
+  "until_condition_met": "Metadata/primary-source license verification and own local code only; no checkpoint payload download or model load from unverified weight",
+  "no_extra_Data_signature_or_user_key_request_required_after_J_records_its_verification": true,
+  "original_expiry_resource_caps_priority_and_GPU_lease0_unchanged": true,
+  "Data_did_not_download_or_launch_J_job": true
+}

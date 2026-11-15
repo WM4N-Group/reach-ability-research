@@ -1,0 +1,478 @@
+{
+  "role": "PUBLIC_SOURCE_CAPABILITY_AND_REQUESTED_EFFECTS_NOT_COST_PROVIDER_OR_NATIVE_ADMISSION",
+  "effects": [
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-000",
+      "parameters": {
+        "goal_world_x_m": -0.08,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-001",
+      "parameters": {
+        "goal_world_x_m": -0.08,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-002",
+      "parameters": {
+        "goal_world_x_m": 4.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-003",
+      "parameters": {
+        "goal_world_x_m": 4.1,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-004",
+      "parameters": {
+        "goal_world_x_m": 7.5,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-005",
+      "parameters": {
+        "goal_world_x_m": 9.3,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-006",
+      "parameters": {
+        "goal_world_x_m": 9.3,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-007",
+      "parameters": {
+        "goal_world_x_m": 0.22,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-008",
+      "parameters": {
+        "goal_world_x_m": 0.37,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-009",
+      "parameters": {
+        "goal_world_x_m": 0.82,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-010",
+      "parameters": {
+        "goal_world_x_m": 4.72,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-011",
+      "parameters": {
+        "goal_world_x_m": 4.87,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-012",
+      "parameters": {
+        "goal_world_x_m": 5.32,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-013",
+      "parameters": {
+        "goal_world_x_m": 9.22,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-014",
+      "parameters": {
+        "goal_world_x_m": 9.37,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-015",
+      "parameters": {
+        "goal_world_x_m": 9.82,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.0,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.15,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.6,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 6.65,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 7.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.15,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.6,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "selected immutable placement goal only",
+      "source_height_m": 0.0,
+      "requires_actual_placement_and_STOW_VERIFIED": true,
+      "relative_action11_distance": null,
+      "relative_distance_missing_reason": "Absolute goal minus private/initial pose is not a causal public relative command"
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_a:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "requested destination support only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "selected_original_rise_m": 0.2,
+      "static_goal_deck_binding_qualified": false,
+      "complete_transition_qualified": false
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_b:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "requested destination support only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "selected_original_rise_m": 0.2,
+      "static_goal_deck_binding_qualified": false,
+      "complete_transition_qualified": false
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_c:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "requested destination support only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "selected_original_rise_m": 0.2,
+      "static_goal_deck_binding_qualified": false,
+      "complete_transition_qualified": false
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "goal_deck",
+      "parameters": {
+        "surface_height_m": 0.6
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "requested destination support only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.6,
+      "selected_original_rise_m": 0.2,
+      "static_goal_deck_binding_qualified": false,
+      "complete_transition_qualified": false
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-goal-elevated",
+      "parameters": {
+        "goal_world_x_m": 14.1,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.6
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.6,
+      "requires_actual_arrival_and_stow": true
+    }
+  ],
+  "preparation_exit_variants": {
+    "status": "NOT_YET_EXPORTED_OR_NATIVE_QUALIFIED",
+    "variants": [],
+    "missing_means_UNKNOWN_not_zero_or_no_cost": true
+  },
+  "private_state_or_route_or_evaluation_outcomes": false,
+  "WM_public60_target8_issued_history_not_fabricated": true,
+  "source_native_qualified": false
+}
