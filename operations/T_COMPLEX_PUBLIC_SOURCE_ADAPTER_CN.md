@@ -1,5 +1,7 @@
 # T-COMPLEX-01：实际公共source已接入模型与原select/feedback接点（仍非原生A/B）
 
+> **2026-11-15新入口：** AINav三箱v2公共source与原scene driver已出现；Reach新增source-bound factory/完整公共catalogue校验及原Coordinator接缝检查。见`operations/T_COMPLEX_01_SOURCE_V2_OWNER_ENTRY_CN.md`。下文v1/三箱仅提议是历史，不代表当前v2仍未实现source；v2动态资格/A-B/原片仍未过。
+
 已消费AINav `development/complex_dual_route_v1/PUBLIC_TASK.json` SHA630016fe…、FINITE_PLACEMENTS SHA575191d2…；部署source32efd758…。只读这两份公共文件，不读/import private static qualification、存在性路线、scene.json或真实私有pose。Data已14:00确认任务/资源准备（owner intake402ba333…），但场景整机/方法包未ready，未排队/派发/录像。旧“未确认收到任务”不再作为现状。
 
 ## 新实现

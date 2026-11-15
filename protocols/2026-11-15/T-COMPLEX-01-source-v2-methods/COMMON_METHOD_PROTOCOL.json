@@ -1,0 +1,70 @@
+{
+  "schema": "Reach-T-COMPLEX-01-common-method-protocol-v2",
+  "at": "2026-11-15T15:44:15.293526+08:00",
+  "role": "METHOD_FREEZE_NOT_NATIVE_PROGRAM_OR_DISPATCH_AUTHORITY",
+  "task_id": "T-COMPLEX-01",
+  "source_scene_id": "dual-route-three-reconstruction-v2",
+  "source_owner": "AINav",
+  "physical_owner": "Data",
+  "public_files": {
+    "PUBLIC_TASK_V2.json": "99d660dee6c044eb4f531cbf72877df7edbc29fcb6cbaf99273a839ab1bfab1d",
+    "FINITE_PLACEMENTS_V2.json": "fd295678be5a14c93be25c94ca7966d888413c9dfbd1f473ae5d232ef0cc2a0b"
+  },
+  "public_origin": "/home/yuanyue/main/work/ainav/development/complex_dual_route_v1",
+  "method_entrypoint": "research.task_conditioned_reachability.execution_preparation.complex_source_adapter:build_source_bound_planner",
+  "methods": {
+    "A": "greedy",
+    "B": "multistep"
+  },
+  "common_budget": {
+    "max_depth_decision_bundles": 4,
+    "max_examined_transitions": 256,
+    "max_planner_wall_s": 0.25
+  },
+  "common_model": {
+    "initial_DECLARED_reference_xy_m": [
+      -0.08,
+      0.0
+    ],
+    "nominal_envelope_radius_m": 0.45,
+    "original_approach_setback_m": 0.58,
+    "original_drive_offset_m": 0.11,
+    "original_drive_ceiling_m": 0.8,
+    "cost": "m_nominal_NAV_route_plus_box_translation",
+    "ties": "SOURCE_CATALOGUE_ORDER",
+    "native_gate_authority": false,
+    "nominal_state_is_not_measured_pose": true
+  },
+  "code_sha256": {
+    "research/task_conditioned_reachability/execution_preparation/finite_multistep_planner.py": "3a5eb184b9988371f0f05909bfa92e008b7eeb3b56eaef349b68416ef8a15bb9",
+    "research/task_conditioned_reachability/execution_preparation/complex_public_model.py": "e77d95a06a5da5e46ad2b03db9218b74d225382566b2d8af2f2f3b7434da23aa",
+    "research/task_conditioned_reachability/execution_preparation/complex_intent_planner.py": "aa69bc8d8daf5cbea42c89e94a354ef9e2994ca83612a26ba2df031f5ea17969",
+    "research/task_conditioned_reachability/execution_preparation/complex_source_adapter.py": "dd4f9122443f32144ff358d5b21e62f3000631c774f2d09381e4911eb76a2664"
+  },
+  "observation_domain": "ORIGINAL_PUBLIC_INTENT_BATCH_ONLY; EXACT_PUBLIC_DECLARATIONS_AND_ORIGINAL_INTERACTION_RECEIPTS",
+  "complete_catalogue_required": true,
+  "private_execution_batch_model_input": false,
+  "private_existence_route_model_input": false,
+  "no_nominal_goal_completion": true,
+  "terminal": "SOURCE_ORIGINAL_ALL_PLACEMENTS_REMOTE_REGION_PROTECTED_ARRIVAL_12N_AND_SUPPORTED_STOP",
+  "no_goal_within_horizon": "EXPLICIT_SAME_GREEDY_FALLBACK",
+  "incomplete_root": "ABSTAIN",
+  "native_rejection_or_failure": "FAIL_CLOSED_NO_RETRY",
+  "algorithm_is_standard_bounded_uniform_cost": true,
+  "algorithm_novelty_claim": false,
+  "critic_dependency": false,
+  "training_artifact_model_input": false,
+  "method_nominal_three_nonforced_choices_only": true,
+  "actual_three_meaningful_choices_proven": false,
+  "native_scene_qualification": false,
+  "native_AB_main_count": 0,
+  "video_count": 0,
+  "scope_policy": "NEW_SOURCE_NEW_PROGRAM_OWN_ZERO_AND_LEASE_BY_DATA; OLD_COMPONENT_FAILURE_CLOSED_NO_REOPEN",
+  "prior_component_failure_release": {
+    "path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-NATIVE-COMPONENT-FAIL-20261115-v1/release.json",
+    "sha256": "c9eaabe47a59869b6ed0adfa8b39dd3fdc5d881ad75e28d881b6ae9068c6c3b8",
+    "failure": "SOURCE_NATIVE_MODEL_CAMERA_ABI",
+    "not_method_AB_failure": true
+  },
+  "video_requirement": "DIRECT_LIVE_SAME_CAMERA_ORIGINAL_FRAMES_EACH_1X_AND_SAME_SIM_CLOCK_PAIR; NO_RERENDER_OR_RETRY_FOR_VIDEO"
+}

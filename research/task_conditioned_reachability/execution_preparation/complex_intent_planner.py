@@ -50,14 +50,21 @@ class ComplexIntentPlanner:
                    math.isfinite(x)and math.isfinite(y)and abs(x-y)<=1e-12 for x,y in zip(a,b))
 
     def _new_bundle(self):
-        out=propose(self.nominal_context,arcs=self.model.arcs,is_goal=self.model.is_goal,
+        root_arcs=None
+        def common_arcs(state):
+            nonlocal root_arcs
+            if state==self.nominal_context:
+                if root_arcs is None:root_arcs=tuple(self.model.arcs(state))
+                return root_arcs
+            return self.model.arcs(state)
+        out=propose(self.nominal_context,arcs=common_arcs,is_goal=self.model.is_goal,
                     state_key=self.model.key,method=self.method,
                     cost_unit='m_nominal_NAV_route_plus_box_translation',**self.limits)
         action=out['action']
         if action is None:
             self.failed_reason=out['status']
             raise RuntimeError('Public finite planner abstained: '+out['status'])
-        matches=[a for a in self.model.arcs(self.nominal_context)if a.action==action]
+        matches=[a for a in root_arcs if a.action==action]
         if len(matches)!=1:raise ValueError('Same common-domain decision identity')
         self.bundle=action;self.bundle_next=matches[0].next_state
         route=action.nominal_NAV_route_xy_m
@@ -72,6 +79,9 @@ class ComplexIntentPlanner:
         self.journal(dict(event='reach_complex_public_decision',method=self.method,
             decision_index=self.decision_count,nominal_action=action.__dict__,
             nominal_geometry_forecast_not_actual_world=True,counts_as_algorithm_decision=True,
+            common_nominal_root_candidate_count=len(root_arcs),
+            nonforced_nominal_reconstruction_choice=(len(root_arcs)>1 and action.kind=='PUSH_WITH_NAV_ROUTE'),
+            actual_three_meaningful_choices_NOT_proven=True,
             planned_native_request_count=len(self.queue),depth_units='DECISION_BUNDLES_NOT_NATIVE_SKILLS',
             planner_wall_s=out['planner_wall_s'],examined_transitions=out['examined_transitions'],
             fallback_to_shared_greedy=out['fallback_to_shared_greedy'],execution_authorized=False))
