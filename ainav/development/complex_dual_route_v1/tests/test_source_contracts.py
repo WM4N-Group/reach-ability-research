@@ -54,6 +54,8 @@ class ComplexSourceTests(unittest.TestCase):
         import native_construction as native
         self.assertIsNone(native.compile_static_asset());self.assertIsNone(native.construct_cold_components())
         with self.assertRaises(ValueError):native.compile_static_asset(enabled=True)
+        fake=SimpleNamespace(complete=True,actual_issued_steps=200)
+        with self.assertRaises(ValueError):native.completed_initial_witness(dict(runtime=SimpleNamespace(),capture=fake))
     def test_goal_dwell_requires_original_12N_two_reconstructions_and_no_clock_gaps(self):
         from terminal_stop import GoalDwell
         s=scene.load_scene();sample=dict(feet_world_m=[[8.8,-.2,.022],[9.2,-.2,.022],[8.8,.2,.022],[9.2,.2,.022]],foot_normal_N=[12.]*4,foot_speed_m_s=[0.]*4,base_linear_speed_m_s=0.,base_angular_speed_rad_s=0.,tilt_rad=0.)

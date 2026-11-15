@@ -65,9 +65,10 @@ def construct_cold_components(*,source_root=None,bundle=None,model_path=None,mod
 
 def completed_initial_witness(components):
     """After the owner actually issues original capture commands on its loop."""
-    from ainav.native.supported_capture import ActualCaptureWitness
+    from ainav.native.supported_capture import ActualCaptureWitness,SupportedCapture
     r=components['runtime'];capture=components['capture']
-    need(capture.r is r and capture.complete and capture.actual_issued_steps>=2,'No zero-step/forged cold owner')
+    need(type(capture)is SupportedCapture and capture.r is r and capture.s is r.sim and capture.complete and capture.actual_issued_steps>=2,'Actual original capture owner required, not a software flag')
+    need(r.step_count==capture.actual_issued_steps and abs(float(r.sim.data.time)-r.step_count*.005)<1e-7,'Actual capture must account for every physical task step; no zero-step witness')
     witness=ActualCaptureWitness(capture);witness.validate(r);return witness
 
 def build_common_execution_after_capture(components,*,source_root,bundle,guard,journal):
