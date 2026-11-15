@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 03:55：bulk24全批闭合与第四套完整三候选已核；失败None/用途/在线缺口保持
+
+- **bulk24固定批最终闭合，不再写余4在途：** 24正式原release/closed zero+main齐，10原链成功/14原生失败（FF6/settle6/base_collision2，resource censor0）；12到首CLIMB PREPARE/12未到，12不同full48/4 public45＋age状态，仍1 TRAIN祖先。未到12支features/CLIMB成本None，10/21真实CLIMB中碰撞无terminal，不造failed receipt/负类或以短时失败填成功成本。独立核Data最终release5367a3a1…及4小成员，03:39 authority proof全24 H closed/worker0/四锁释放，明确只快照不是Reach新lease；84原public query、scope含zero/aux2720.665sim/19005.873282551wall、known，非成功条件或项目总费。
+- **新第四套g09-left完整三候选：** original（21）R=13.435/C=None碰撞，+.04（05）13.440/23.380，−.04（13）13.465/23.605s；组内public45＋age/首PREPARE clock相等，RGBD/隐藏world克隆未证。此次实测局部min会选失败original，但仅快1tick=.005s，不能推期望greedy必败/在线方法收益。READY后4.300s/决策后17.735s是失败暴露时间，不是成功C。旧前三表/20行逐值保留，本轮只增21测量，不重提旧11行/重跑测试/评分/fit。
+- **产物精简与用途不变：** 新74,496bytes标量摘要`/home/yuanyue/reach-ability-research/operations/BULK24_FULL24_COMPLETE_CANDIDATE_TABLES_20261116.json` SHA d4e75b62…；完整报告877d69af…/964-entry pin inventory与48槽/数组/原片仍46308，说明追加至`operations/BULK24_COMPLETE_CANDIDATE_FINDINGS_20261116_CN.md`。原fit3371ac20…/model a8b1f165…、旧CAL/VAL、bulk不refit/不转J、全部dirty/closed/失败账保留。原采集成功归Data/AINav，不当Reach方法贡献。
+- **V4继续而非研究结束：** 总计划42c8a90d…未更新；legacy-common H五组共同底座政策14b77d69…已定，strict helper不再待决。五main/真实WM query-forward仍0；Reach继续合法bootstrap/真实grid+accepted owner/same96×64 anchor、完整名义后继cost/provider/准备退出域，不能把hindsight表喂在线。三箱已在原技能范围、数值diff为空；.20→.60原20cm域冲突/static deck/动态owner/完整终点及既有布局询问未获新决定，不擅改平台或复开closed。Data仍唯一物理owner，本轮不改他组source/H/锁/driver/环境/自动化。
+
 ### 2026-11-16 03:33：前20完整分母与3套真实三候选表已核；局部快100ms却完整慢180ms，现加性时间头有表达限制
 
 - **计划仍42c8a90d…，继续当前五组而非新WM/新arm：** 无平台/箱数值或模型用途新许可。本轮只读增量消费bulk11/13/17/18/19五个原成功的exact首PREPARE公开48槽/原READY/完整requested CLIMB端点，旧6行不重提/不重跑；未读取frozen模型/权重或调用predict_offline、WM、Actor、physics、API、fit/CAL评分。原fit3371ac20…/model a8b1f165…和旧CAL/VAL均保持。
