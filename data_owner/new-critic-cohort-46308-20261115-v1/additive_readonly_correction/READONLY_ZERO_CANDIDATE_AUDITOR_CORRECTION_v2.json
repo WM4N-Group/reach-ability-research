@@ -1,0 +1,11 @@
+{
+  "schema": "Data-additive-readonly-zero-auditor-exact-candidate-correction-v1",
+  "old_frozen_auditor_sha256": "a8d7e84968de2353871f13da84a1b19a91f56b093a14a4579d38b4cfc8b87fd1",
+  "new_readonly_auditor_sha256": "f91567a1c4088c8c438d1e1a46a14ba7152370c77863c3720f5b4247d33f0abe",
+  "correction": "Compare actual installed candidate to exact frozen preconstruction payload; not literal original. All prior cold storage/epoch/FIFO/INPUT8/model/closure checks unchanged.",
+  "physical_worker_program_or_frozen_operations_modified": false,
+  "failed_CPU_audit_logs_retained": true,
+  "actual_zero_already_passed": true,
+  "new_world_or_zero_or_main_retry": false,
+  "does_not_change_role_split_protocol_or_native_success_guards": true
+}

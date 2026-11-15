@@ -1,0 +1,9 @@
+# 13:30 bulk/scene coverage authorization: Data dual-GPU preparation
+
+Current frozen TRAIN6 remains its exact original protocol and gates. No concurrent extra world is started while its frozen phase control still globally scans all Data workers. GPU0 UUID297c… has new canonical device51 lock inodes3428729629/3428729630, binding50d6365e…; original GPU1 bindings/held scopes untouched. Minimal per-GPU resource Lease reuses original guards/accounting and keeps initialized PID unknown fail-closed. Eight software checks and a real GPU0 lock/counter-only probe pass, with lease released and no Runtime/Actor/GL/world. This is NOT native/GL qualification or actual dual-card sampling.
+
+Next batch starts with at most one independent worker perGPU under same Data owner, per-slot scope/phase/freeze/output/RNG/ledger and its own native zero/GL/resource qualification; raise concurrency only after actual peak/CPU/I/O measurement. This module is development resource code, not another scheduler/physical owner.
+
+Current40GiB cap and all promised old roots are retained. Conservative new two-slot wave fits; reserving all12-24 future roots does not. Admit rolling waves with fresh whole-owned/carryover/new reserve check and stop before capacity risk, retain required raw evidence. No raw is deleted/moved out of accounting; no quota/80GiB permission invented. Static compiled-model cache dedup requires its own concurrent write lock before any future use; no current scope/cache is modified.
+
+Next concrete source item is AINav finite batch matrix/assembly plus Reach new purpose/scene/init-ancestry split, planned repeats/coverage and stop rules. Need not wait all10 groups or critic, and no new economic/consumer signature/logger gate. Target100 attempts/10meaningful groups is a prospective work goal, not already qualified/populated. No new bulk scope/authority/native dispatch yet.
