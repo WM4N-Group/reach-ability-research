@@ -1,9 +1,10 @@
 {
   "role": "V4_FIVE_ARM_ASSET_AND_E_RULE_PARTIAL_SOURCE_NOT_DISPATCH_OR_FULL_METHOD_IDENTITY",
   "files_sha256": {
+    "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
     "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
-    "README_CN.md": "49304e97a2a33cc32b444a7ef24c5fddef125d10e6e0f23856e6c2044ee23a12",
+    "README_CN.md": "2746e6e1d16502ff10cf66579a2adcae1a40c03bd19d137a7ae5a14ee6b4bcca",
     "rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
     "FOUR_ARM_PROTOCOL_REFERENCE.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
     "FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
@@ -14,5 +15,6 @@
   "source_native_qualified": false,
   "physical_dispatches": 0,
   "full_five_arm_methods_integrated": false,
-  "old_FOUR_ARM_PROTOCOL_REFERENCE_is_historical_not_current": true
+  "old_FOUR_ARM_PROTOCOL_REFERENCE_is_historical_not_current": true,
+  "explicit_DeepSeek_provider_selected_no_secret_or_API_call": true
 }

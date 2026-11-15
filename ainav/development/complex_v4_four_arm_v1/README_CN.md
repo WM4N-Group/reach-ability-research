@@ -22,8 +22,8 @@
 ## VLM/WM身份与后续实现
 
 - 原AINav应复用冻结`AinavPlanner`的object/skill proposer、tree evaluator、advisor/arborist与replanning，不换成固定脚本或API0有限搜索。Reach负责A/B现有WM推理与B/D同一优化；此包尚未实现四个方法adapter，未调用WM/VLM。
-- 非秘密元数据核到两份provider配置不同：本机active profile为deepseek/deepseek-flash/TLS；选定旧完整source profile为历史sol_gateway/另一模型/非TLS。**不能猜用户本轮所指服务、无声切profile或把新key发送到旧HTTP网关。** 待一次明确Base URL/模型与既有受保护运行入口；不需要再次提供明文key。未读取key/env内容、未做任何API探针。
-- 新source当前仅资产/必要谓词与准确边界，不能提交五main派发请求或宣称共同可行链。下一实际工作：确认选定现有CLIMB能力/最小共享设计修订，继续surface-aware实际caller与终点/强baseline真实VLM接缝。基础场景/registry代码可先由Data纳入必要新端组件资格；本包不是该准入证明，也不要求额外收件签字。
+- **用户已明确本轮使用DeepSeek，provider疑问关闭，不重复索key。** `VLM_PROFILE.json`复用本机既有TLS官方endpoint/deepseek-flash图像模型配置，原DeepSeekBackend及RoleRunner/原AINav树保留，旧sol_gateway profile不用于新V4。只接受既有受保护的进程环境DEEPSEEK_API_KEY，不把聊天密钥写入代码/manifest/argv/日志，也未跨组传明文。当前未构造backend/发API，未声称用户提供的密钥已注入计算进程；未来在Data预冻程序的正常模型身份资格中验证实际served model，A—D同版/同采样/预算，E调用0。
+- 新source当前仅资产/必要谓词与准确边界，不能提交五main派发请求或宣称共同可行链。下一实际工作：确认选定现有CLIMB能力/最小共享设计修订，继续surface-aware实际caller与终点/已明确DeepSeek的强baseline真实VLM接缝。基础场景/registry代码可先由Data纳入必要新端组件资格；本包不是该准入证明，也不要求额外收件签字。
 
 软件14项只测原纯API/资产与拒绝边界，不是14研究样本或native资格。旧closed A/B/OBS根、bulk在途/冻结程序不改；WM只开放本任务既有推理，不恢复新训练/底层Actor/真机/第二物理owner。evaluation_ready=false、独立TEST0、五箱false保留。
 
