@@ -1,0 +1,42 @@
+{
+  "at": "2026-11-15T22:25:57.069655+08:00",
+  "original_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-T-OBS-THREE-FIXED-BOUNDARIES-COMPLETE-NOT-TASK-20261115-v1/release.json",
+  "original_release_sha256": "785bd9db046189228d72b3f607c0d1f74bae1285b4e6e120788d212d952f37ed",
+  "original_scope_id": "data-46308-T-COMPLEX-observability-only-20261115-v1",
+  "program_sha256": "9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad",
+  "source_owner_commit": "c3c695b5fa10daa826e85fcad04dd737b4810bc5",
+  "measurement_complete": true,
+  "task_success": false,
+  "AB_comparison": false,
+  "public_aliases_initial_left_right": [
+    [],
+    [
+      "cuboid_a"
+    ],
+    []
+  ],
+  "bulk_first_four_closed_PASS3_original_FF_failed1": true,
+  "original_metadata_CAS_rejection_preserved_and_reconciled_without_physics": true,
+  "remaining_suffix20_driver_only_unstarted_ordinals5_through24": true,
+  "original_actor_FF_12N_4s_QP_FIFO_CLIMB_stop_and_caps_unchanged": true,
+  "raw_MJB_weights_env_video_not_in_Git": true,
+  "not_a_physical_authority_or_current_critic_training_permission": true,
+  "code_files": {
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/export_second_boundary_readonly.py": "104cde1ddab4db3df7c061fc7b756eef6f7eb03c40090d58f7b4cb5f113a1593",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/run_export_second_boundary.py": "c96f33951e1c876a46ab6290cd4ec279c13aef95b71e4ae6df9f94a54777b8aa",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/audit_completed_study_readonly.py": "0c75ce9d894b87e635e47829ba15024508724d152e59b5bbd2f1766dc94803ee",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/run_completed_study_audit.py": "66830f3721f646d7a0b49ef8000f96ef5681adb20626c8239f93a84a44c3118e",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/audit_completed_study_readonly_v2.py": "fe967b68dffec98298bfe94ff17ed2b8b6779d35db4d9a70d32bead9728b4446",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/run_completed_study_audit_v2.py": "7308f75f4065b1a486bd56de33cb81aa353e3878dcfce8f4d182a970ee75cc27",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/close_completed_study_metadata_v2.py": "0a197b126d9dfa97ff9768d80fd38e95d98ba77e0f654f4cefddb2475b149cea",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/run_close_completed_study_metadata_v2.py": "4bd0d7dbeedc25cc862d1a70a344fab9d8e9255d8c74b9307f3809bb06299f1a",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/export_completed_study_readonly.py": "82c984dddd9ddf5f850088feb784ced31090d3e3f710ececeebc0389c2cb0778",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/run_export_completed_study.py": "541afef40ad23ed21fdfbdacaeb8440b55c5fd2ccea6eecb17b6da095e142aa7",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/publish_completed_study_and_bulk_current.py": "4cc7cdfb49e74313c39a41f4ee82c6f115a6aa0f18446eea78403b6319b4151a",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/operations/persist_completed_study_code.py": "30d1b7929dad61992d5fb3f72d293420f156ac8787c85a6baaafedd33a134612",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/reconcile_fourth_terminal_metadata_only.py": "9172134e1fc2dc0992eab94c994da1c85aee39fcc3277805016f5fb943a1e7d3",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/drive_unstarted_suffix20_once.py": "b830985f560c28343784673a89b4d42cb676fdd90607cf19dcb9c9cb8a9c185e",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/README.md": "6583a0c5aaf4c894afc1713dadc22e1524c3b29e0326f675021471a4c88c40c6",
+    "data_owner/bulk24-collector-46308-20261115-v1/README.md": "6583a0c5aaf4c894afc1713dadc22e1524c3b29e0326f675021471a4c88c40c6"
+  }
+}
