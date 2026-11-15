@@ -2,6 +2,18 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：V4 live observer／selected judge／原200Hz loop已接（source component，非任务准入）
+
+新增`live_driver.driver_class(source_root=..., enabled=True)`；默认OFF。Data在fresh zero-step qualified cold components/新authority/lease下实例化，传原writer、真实public planner、journal/guard。`step_one`实际走原SupportedCapture命令及记录→真capture后`execution_entry`→原IntentExecutionCoordinator/AinavLoop/NativeOptionExecutor；不是另一物理owner或新world，也不替方法选固定路线。E可传原`RuleBaseline`，A—D须传各自真实方法adapter；本模块不设置／假造VLM/WM/优化身份或发API。
+
+每次public acquisition只取原onboard packet＋resolver当前accepted descriptors，**重建**alias；新帧`[]`不会继承旧left alias，实例歧义不挑最大块。实际发布共同24 anchors／27语义候选（17 NAV／6 PUSH／4 CLIMB）。选中judge先核精确公共目录，再按真实private support／原12N／.16m／.25rad／placement／20cm几何检查，只在需要时发同support原NAV准备；当前画面无关联、源支撑未登记、static deck或40cm均明确拒绝。不读第三视角/private pose作planner输入。
+
+PUSH保原绝对goal→同次原resolver goal seal/private constructor映射。Movable CLIMB使用原完整course **B的front−1.05m固定工程entry**（精确原integrated_course SHA钉住），不是新可调standoff或整链可行证明；远处可先原NAV靠近，实际CLIMB bind仍保原current native-domain门。CLIMB要求选中物体原placement回执及当前required几何，public destination=.20和真正private native hash保留，原同参数检查不删。只记录真实成功CLIMB owner/receipt，绝不把READY／declared height冒成功。
+
+旧driver只复用7个逐method SHA核定、在当前dirty树和云端已提交版本**一致**的原stow/capture/200Hz command-writer/guard函数；不是继承其旧constructor/catalogue/judge/ground终点，也不发布后置shared-prefix dirty。owner guard显式False与异常均拒绝（同样补入execution_entry），不能把False当通过。新增13项严格SOFTWARE fixtures含真正原judge READY/PREPARE/12N边界执行；不调用native camera/Runtime/Actor/step/API。
+
+**仍非完整五组任务**：目前无post-CLIMB dynamic-box NAV、static/40cm或真正高台owner/contact/dwell终点。若未来仅收到final NAV成功，此component会显式报`...no_task_success`，不会调用E的自签完成；full_task_terminal_integrated=false。Data可对其必要新source做独立caller资格，但不能借19-source组件zero或称E已完成，当前不请求五main。原HD视频依旧由Data的actual writer直接采集，本源未实际录制任何任务片。Reach新anchor target8源已读，**本版尚未接其causal query/96×64 association port**；不把192×128 VLM alias／off-grid图／capture冒HOLD或masked0冒实际WM输入，restore1/真实forward0保持。
+
 ## 2026-11-16：实际capture之后的共享执行装配入口（未调用native）
 
 `execution_entry.build_after_actual_capture`默认OFF。Data在fresh程序/lease/guard下、真正原SupportedCapture已完成并逐步记账后，可把现成components接到原RegisteredBindingResolver、BehaviorSessionFactory、RegisteredPushAPI、NativeOptionExecutor及上一版V4TaskFactory。**不新建world、不step、不选策略、不创建所选controller、不签完整任务成功**；原helper检查真capture类型/同world/实际issued steps与200Hz时钟，普通`complete=True`对象或零步标志不算。场景须与已确认V4逐内容相同，goal必须goal_deck/.60，不能回退旧ground-only装配。

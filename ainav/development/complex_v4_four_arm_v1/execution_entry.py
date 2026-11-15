@@ -89,7 +89,7 @@ def build_after_actual_capture(components=None, *, source_root=None, bundle=None
     if not enabled:
         return None
     require(callable(guard) and callable(journal), 'Original Data owner guard/journal required')
-    guard()  # No source/native imports or resource work before the actual owner.
+    require(guard() is not False, 'Original Data owner/resource guard refused')  # Before native imports.
     original, _ = _exact_base()
     root = original._source(source_root)
     require(type(components) is dict and components['scene_sha256'] == SCENE_SHA256
@@ -123,7 +123,7 @@ def build_after_actual_capture(components=None, *, source_root=None, bundle=None
     world = (runtime.sim, runtime.sim.model, runtime.sim.data, runtime.sim.queue)
     owners = {}
     def guards():
-        guard()
+        require(guard() is not False, 'Original Data owner/resource guard refused')
         require(all(a is b for a, b in zip(world, (runtime.sim, runtime.sim.model,
                     runtime.sim.data, runtime.sim.queue))), 'Original same-world/FIFO aliases changed')
         selected, entered = _current_contact_owners(owners, runtime, registry, RegisteredClimbMachine)
