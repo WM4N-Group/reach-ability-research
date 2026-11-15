@@ -1,0 +1,14 @@
+{
+  "role": "CODE_ONLY_V4_PARTIAL_SOURCE_NOT_DISPATCH_OR_METHOD_IDENTITY",
+  "files_sha256": {
+    "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
+    "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+    "README_CN.md": "b64e4574cd77a9c4bef09ae983aa6da36af19a58a5f37b9a2e5b5acf8debc3a2",
+    "FOUR_ARM_PROTOCOL_REFERENCE.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
+    "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
+    "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4"
+  },
+  "source_native_qualified": false,
+  "physical_dispatches": 0,
+  "full_four_arm_methods_integrated": false
+}
