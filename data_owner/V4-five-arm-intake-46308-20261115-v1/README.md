@@ -9,3 +9,13 @@ A=VLM+WM/B=加共享优化/C=原AINav/D=加同一共享优化，B−A/D−C仍�
 Data已完成独立录制交付代码：development/V4-five-arm-video-postprocess-46308-20261115-v1，11项新版本纯软件检查过；支持E真实结束后先单独交1×，全五组到齐后五份＋同钟五栏。均非native资格/实际五组结果，不增加物理签字门。原四栏版本及9项软件结果留档。
 
 旧bulk24在途/483 freeze/次数/cap及全部closed原样保留，不为五组任务热改或复开；原成功/失败/UNKNOWN/费用不洗掉。原22:36/22:40接收记录在V4-four-arm-intake目录不覆盖，当前以本目录Data-plan-2253-five-arm-intake.json和新主计划为准。
+
+## 23:15已收到真正部分源码；完整V4存在能力硬缺口
+
+已接AINav正式SOURCE_OWNER_RECORD / immutable commit11d65aed…，在46308原部署核9个成员精确SHA并复制小源原件。其工作目录README已改而与发布pin不同，原拒绝保留，**改从immutable commit取回对应9成员，不放宽hash**。同时按Reach SOURCE_CALLER_HANDOFF_REQUEST/配置5dd0da5c…核并保存5个方法源码/协议；不重复20/79软件测试，不调用任何方法/WM/API或创建世界。详见source-intake-2313/Data-partial-source-intake-proof.json。源码实码已到，不再简单写“没有E/方法代码”。
+
+**不是现在即可按图执行：** 选定原scene_registry SHA1d5baefe…纯高度谓词接受0→0.20，却明确拒绝0.20→0.60的0.40增量；goal_deck static SurfaceSpec也不是原CLIMB当前RGBD可绑定对象，高台支撑owner/dwell/终点未闭合。这是精确当前路径的静态能力边界，不是实际动态试跑，更不证明所有其他技能都无40cm能力。E同样受共同native缺口约束，“可先于WM”不是绕过此门。
+
+需共同设计决定：保持当前原图并提供已有准确40cm技能/接口/资格，或明确允许另新版本加真实0.40m中间支撑，使0→.20→.40→.60三个原20cm增量；**后者改变用户确认布局，Data未擅改，也不能保证仅加支撑就解决static-surface/owner接续**。不把.2改.4、不用GT/伪平台freejoint、ground同XY或假CLIMB回执冒成功。当前V4五组仍zero0/main0。
+
+A—D实码仍缺完整公共后继cost/effect映射、V4因果WM IO/已核远端checkpoint与安全provider身份等部署接缝，由对应实现owner继续；Data只沿现runner集成稳定包。bulk照原freeze在途推进、旧closed全部保留。

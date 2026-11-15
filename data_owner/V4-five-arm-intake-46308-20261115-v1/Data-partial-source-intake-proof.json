@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-15T23:15:30.092938+08:00",
+  "role": "DATA_PARTIAL_REAL_SOURCE_INTAKE_NOT_NATIVE_ADMISSION",
+  "AINav_source_owner_record_sha256": "0b8e43e4da06873885c6366835430cb70f38e5716f32d4bcd27ebba702e48b6a",
+  "AINav_commit": "11d65aed164a043909b113f060ae4011dcc461d0",
+  "AINav_immutable_remote_9_members": {
+    "AINav_exact_remote_commit": "11d65aed164a043909b113f060ae4011dcc461d0",
+    "all9_source_members_SHA_match": true,
+    "no_native_or_import_calls": true
+  },
+  "local_development_README_drift_preserved_not_used": true,
+  "Reach_source_caller_handoff_sha256": "ae1c8ed7bb927c4e4a620835c5e2caa2f50bc9f3c1301e8bd9dab8087cccef48",
+  "Reach_method_config_sha256": "5dd0da5c883a7aed48623e33a7ddfad729cf1be186d1d8eacc353c8a54f52002",
+  "Reach_source_pins_before_after_identical": {
+    "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
+    "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "6e5cc1c52e8f80dd5ce84a742d2cffbe3cb737a131d365e3a192b54f06e4a0d4",
+    "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
+    "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
+    "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/SOURCE_CALLER_HANDOFF_REQUEST.json": "ae1c8ed7bb927c4e4a620835c5e2caa2f50bc9f3c1301e8bd9dab8087cccef48",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/SOURCE_INDEX.json": "15db1221c7b04f7391b6c8dcc7c520e080e9a6cf2bebf5121915f710f61aedb1",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/V4_METHOD_CONFIG.json": "5dd0da5c883a7aed48623e33a7ddfad729cf1be186d1d8eacc353c8a54f52002"
+  },
+  "no_repeat_source_CPU_tests": true,
+  "no_WM_API_compile_world_or_physics_calls": true,
+  "V4_zero0_main0": true,
+  "exact_source_static_height_boundary": {
+    "ground0_to_box0p20": true,
+    "box0p20_to_deck0p60": false,
+    "not_dynamic_validation": true,
+    "static_deck_RGBD_binding_and_owner_transition_still_unqualified": true
+  },
+  "native_first_main_blocker": "Current confirmed layout requires40cm successor rejected by selected original20cm skill. Real0.40m intermediate support requires explicit common layout decision, or provide qualified existing40cm skill. Neither assumed.",
+  "E_can_run_before_WM_only_after_common_native_gap_resolved": true,
+  "method_code_arrived_but_not_full_native_or_method_ready": true,
+  "checkpoint_causal_IO_and_nonsecret_provider_config_still_missing": true,
+  "H_not_written": true
+}
