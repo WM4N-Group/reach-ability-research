@@ -14,3 +14,9 @@
 现GPU1 bulk固定24用途/483源/所有cap/一次性未启动suffix滚动不热改，旧API0 pair和固定三观测OBS全部closed原样保留，不重命名四组；WM推理仅本对照获准，WM/Actor重训未恢复。
 
 原件见本目录source-owner-snapshot/；逐SHA和明确缺口见Data-readonly-intake.json。数据组工作目录/home/yuanyue/main/work/data-team，compute仅root@180.97.68.228:46308。
+
+## 22:40整体替换计划（当前优先）
+
+完整读取152行新计划ae2b8e6b…，此前22:36输入和SHA保留，不回写旧收件。research仅规划/汇总，不再代写执行代码或操作资源；**AINav主责V4场景/CLIMB与高台终点/真实VLM及AINav，Reach主责WM路线与B/D共享优化，Data沿现runner接稳定包，只修生命周期/资源/采样接线并唯一物理执行**。不等百级采集，不把方法问题转包给Data/research。
+
+新V4第三视角优先1280×720，资源资格下至少960×540；帧率/负载在完整源可用后、冻结前实测确定。四组完整原片/同钟四栏保全部失败；可选日志不作准入。当前bulk192×128及旧T960×540原件均不热改，不借补片重跑任何closed arm。明确服务endpoint/model由AINav一次确认/复用安全配置，不重复索明文key。新增推理许可不等训练许可；四组仍zero0/main0。

@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-15T22:45:08.473596+08:00",
+  "latest_main_plan_sha256": "ae2b8e6ba1681bc75af5b146033cac26d7f588f290721c593035b86dd0007f2d",
+  "previous_2236_plan_sha256": "ad0b589ba1aaf46a0de5faaf1002bc690f2df2c727195297460b30e291385dca",
+  "previous_intake_not_overwritten": true,
+  "full_152_line_replacement_plan_read": true,
+  "research_role": "planning_and_summary_only_no_execution_code_or_machine_operations",
+  "AINav_role": "V4_native_scene_candidates_CLIMB_support_terminal_and_true_VLM_AINav_backbone",
+  "Reach_role": "WM_backbone_and_shared_B_D_optimizer_and_evaluation",
+  "Data_role": "stable_packages_existing_runner_resources_lifecycle_ownzero_four_once_mains_direct_recording",
+  "new_WM_inference_this_task_only": true,
+  "new_WM_Actor_training": false,
+  "V4_video_preferred_px": [
+    1280,
+    720
+  ],
+  "V4_video_minimum_resource_qualified_px": [
+    960,
+    540
+  ],
+  "V4_frame_rate_to_measure_and_freeze_before_physics": true,
+  "optional_logs_not_admission_gates": true,
+  "V4_zero0_main0": true,
+  "no_new_API_or_WM_inference_or_world": true,
+  "H_not_written": true
+}
