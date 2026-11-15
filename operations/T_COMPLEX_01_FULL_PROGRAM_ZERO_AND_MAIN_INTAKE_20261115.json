@@ -1,0 +1,84 @@
+{
+  "at": "2026-11-15T17:08:01.746242+08:00",
+  "role": "REACH_EXACT_METHOD_AND_ZERO_INTAKE_MAIN_IN_PROGRESS_NOT_OUTCOME",
+  "protocol": {
+    "path": "/home/yuanyue/main/work/data-team/workers/T-COMPLEX-01-full-program-46308-20261115-v1/protocol.json",
+    "sha256": "e72ddbb2e33968fe8b997fb2918efd50551e59c4be069a067f2aeab0366d7d02",
+    "registered_at": "2026-11-15T16:45:19.768264+08:00"
+  },
+  "source_owner_commit": "b08f51bb0da753fd0327a699231ce254e9ba9c56",
+  "scene_sha256": "578bd75303ef00bfb3813a4cc32c3e93c17318e41801d98eb4414092bc56fb34",
+  "same_four_method_source_pins": {
+    "research/task_conditioned_reachability/execution_preparation/finite_multistep_planner.py": "3a5eb184b9988371f0f05909bfa92e008b7eeb3b56eaef349b68416ef8a15bb9",
+    "research/task_conditioned_reachability/execution_preparation/complex_public_model.py": "e77d95a06a5da5e46ad2b03db9218b74d225382566b2d8af2f2f3b7434da23aa",
+    "research/task_conditioned_reachability/execution_preparation/complex_intent_planner.py": "aa69bc8d8daf5cbea42c89e94a354ef9e2994ca83612a26ba2df031f5ea17969",
+    "research/task_conditioned_reachability/execution_preparation/complex_source_adapter.py": "dd4f9122443f32144ff358d5b21e62f3000631c774f2d09381e4911eb76a2664"
+  },
+  "original_method_protocol_sha256": "c0ecb8726e0f1adc51584e8a98bb4ca9d3f3ba21ebd4b5f93e7bb78a2433051c",
+  "arm_order": [
+    "A",
+    "B"
+  ],
+  "arms": {
+    "A": {
+      "method": "greedy",
+      "scope_id": "data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1",
+      "zero_limit": 1,
+      "main_limit": 1
+    },
+    "B": {
+      "method": "multistep",
+      "scope_id": "data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1",
+      "zero_limit": 1,
+      "main_limit": 1
+    }
+  },
+  "frozen_arm_program_sha256": {
+    "A": "626400b87c001800da53c7bf6f4050e7421a2a86dcecbd9a8f2bce61f8f231df",
+    "B": "0ba3839592bc733162a4d913dfff12de4e21147a6d1be0d4e2ca99b21cb34589"
+  },
+  "zero": {
+    "result_sha256": "15947a2e5e25a77cc12b120a89dad867c308987507d3a50d975ad26014d37cc9",
+    "program_sha256": "626400b87c001800da53c7bf6f4050e7421a2a86dcecbd9a8f2bce61f8f231df",
+    "own_actual_PID": 42481,
+    "passed": true,
+    "task_success": false,
+    "actual_task_steps": 0,
+    "original_INPUT8_recorded": true,
+    "complete_full_host_assembled": true,
+    "numeric_model_sha256": "febcd5921c880d3029778b15f3efe0f2193ddc6f0210aade037cffe2d072ba9e",
+    "own_aux_sim_s": 6.5049999999998835,
+    "ledger_wall_s": 36.037662184098735,
+    "result_entry_wall_s": 35.97801332408562,
+    "scope_output_highwater_bytes": 129935778,
+    "ledger_phase_closed": true,
+    "whole_scope_closed": false,
+    "own_GPU_peak_bytes": 767557632,
+    "worker_RSS_peak_bytes": 2630660096,
+    "direct_video_grid_complete": true,
+    "actual_recorded_visual_frames": 1
+  },
+  "published_owner_observation": {
+    "at": "2026-11-15T17:01:56.273385+08:00",
+    "path": "/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/current-remote-observation-20261115T170156.json",
+    "sha256": "9b3fd8dd2cae38cbf8ba8779fd6e8157236966528a7e2917d4e4d093d7ea92f1",
+    "main_PID": 42697,
+    "PID_existed_at_owner_observation": true,
+    "A_status": "DISPATCHED_MAIN",
+    "A_main_dispatch_count": 1,
+    "B_status": "FROZEN_PENDING_FULL_HOST_PREPARE",
+    "B_zero_dispatch_count": 0,
+    "B_main_dispatch_count": 0
+  },
+  "main_terminal_result_consumed": false,
+  "source_dynamic_full_plan_verified": false,
+  "actual_meaningful_choices_verified": false,
+  "native_AB_outcomes_or_advantage_claimed": false,
+  "task_videos_accepted": false,
+  "scopes_or_processes_relaunched": false,
+  "training_or_Data_authority_modified": false,
+  "unpublished_main_costs": null,
+  "component_zero_not_reused_for_full_program": true,
+  "old_closed_scopes_preserved": true,
+  "interpretation": "A own-zero phase closed is not whole-scope closed. Only Data continues its one main. Current capture/decision/terminal/video status is UNKNOWN until original main evidence closes; do not rerun zero from stale H."
+}

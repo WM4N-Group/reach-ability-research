@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前T执行状态（2026-11-15 17:09）
+
+完整Data A/B已按e72ddbb2…冻结，A原own-zero15947a2e…已PASS；17:01:56 owner快照的A唯一main已派/在途，B待自身zero/main。4方法SHA同本组，当前source为b08；不再写全程序未装配或重复派zero。未消费main终态/完整task/有效三选择/任务视频，不把in-progress当成功或原AINav工程当方法贡献。见operations/T_COMPLEX_01_FULL_PROGRAM_ZERO_AND_MAIN_INTAKE_20261115.json。
+
 ## 最新进展（2026-11-15 16:45）
 
 T三箱v2的原camera/冷Runtime/INPUT8/GPU0 CUDA-GL真实组件预检已PASS并closed（Data d48fba0e…），source d486四模块wrapper与本方法SHA一致；尚无完整SupportedCapture/task/A-B/原片资格，组件zero不能借给不同全程序。新用途bulk24已预登记0f9e0e03…：4几何×2prefix×3候选，全部同full4 TRAIN祖先，不refit当前model、不动CAL/VAL，T优先。见operations/T_COMPLEX_01_NATIVE_COMPONENT_PASS_INTAKE_20261115.json与BULK24_LANE_WIDTH_COLLECTION_CN.md。

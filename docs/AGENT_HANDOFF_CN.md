@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 17:09：T完整A/B程序冻结，A原own-zero PASS且唯一main在途；未有完整任务/方法结果
+
+- **完整程序已装配/冻结，A自己的zero已真过，不能继续写“等装配/组件zero待借用”：** 已核Data完整protocol e72ddbb2…/authority14399568…，A greedy program626400b8…、B multistep0ba38395…，新source明确b08f51bb…/三箱578bd753…/公共asset99d660de…与fd295678…；原method protocol c0ecb872…及Data inputs/Reach实际4方法文件SHA均同本组。A原zero result15947a2e…与closed phase ledger已核，OWN_ZERO_PASS/实际PID42481、完整host/原INPUT8/private catalog copy-only alias/同模型记录通过；numeric-model febcd592…、task0步/命令0/visual1，不是借旧camera组件zero。
+- **真实A main已由唯一owner启动，结果尚未知：** Data最后发布17:01:56 owner snapshot显示A zero/main派发1/1、CAS_DISPATCHED_MAIN/PID42697当时存在，B zero/main0/0仍FROZEN_PENDING_FULL_HOST_PREPARE。此为snapshot时点事实，不冒本组此刻独立PID/健康确认；不得因H旧CAS_DISPATCHED_ZERO或未闭合main重派zero/main。当前A的zero只是phase closed，完整scope尚未closed；未消费main终态/实际SupportedCapture完成/策略选择、原placement/最终停稳或完整视频，不补成本/结果为0，也不宣称已有有效原生A/B。
+- **原程序边界/共同规则保持：** 两臂按预定A→B、同GPU0/技能/公开域/原4bundle-256transition-.25s预算，各own-zero≤1/main≤1；原motor/RGBD/review/费用与同camera960×540/10Hz直接live hooks已装配。新full scope625sim/4800wall/3GiB、task600sim/zero180wall，是新程序事前cap，不热改旧TRAIN240或任何在途门。首次pair明确DEV source/method资格诊断，joint动态计划/≥3真正选择须原件，infra/common-domain失败不算方法赢；模型无arc弃权也不自动证明实际物理不可恢复死局。无新消费签字/NN表或额外fixture门阻止Data原main接续。
+- **已知费用只报实际phase：** A own-zero含aux6.505sim，ledger wall36.037662184s（result entry35.978013s，两口径不混）、scope highwater129935778bytes/usage_known=true、RSS2630660096/ownGPU峰767557632bytes。不是main/整scope/A-B成本，未发布main费用保持UNKNOWN。旧v1 camera失败、d486组件PASS及所有原cost/closed/未知原样保留，不为新b08/full程序重开旧实验。
+- **并行工作不抢资源/不改角色：** bulk24协议0f9e0e03…已被AINav实际接收，仍4几何/8context/1既有TRAIN祖先、最多24新main，不是24新数据/四独立holdout；Data新bulk scope/队列尚未本组核到，T资源优先。原TRAIN6/fit3371ac20…/model a8b1f165…保持，CAL07已消费1/3，08/09正式closed未消费，未做partial评分/refit/阈值调整/VAL放行。源/模型/48槽/原12N/4s/identity/immutable/support/guard/QP/FIFO/stop与旧dirty均保留。
+- **下一直接消费原件：** 原A main closure/result/ledger/原语义与native receipt、直接live格点→分类实际失败/未知与有效决策；B仅由Data按原冻结门接续，不修在途、不追胜或补片重跑。入口`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_FULL_PROGRAM_ZERO_AND_MAIN_INTAKE_20261115.json`；无新world/Actor/模型训练/他组源或H/锁/进程/Goal/agent/chat/自动化改动。
+
 ### 2026-11-15 16:45：T真实native组件PASS/四模块source接缝已核；新用途bulk24已预登记但未派，完整A/B仍未运行
 
 - **T原camera/Runtime/GPU0组件阻塞已真实解除，不再沿用旧“缺相机”状态：** 独立核Data新正式release d48fba0e…的8小成员SHA，采用AINav不可变d486ec48…/程序c43a4471…；三箱Model a901755c…、原onboard camera ABI/冷Runtime/INPUT8、GPU0 CUDA/GL与直接live960×540单帧PASS，组件scope已closed。Data实际aux6.505sim/task0步、wall17.605737142s/RSS2533969920/ownGPU624951296/output86425276bytes且usage_known=true；本组只消费metadata/方法绑定，不冒大MJB/原数组独立重审或本组新native运行。旧v1 CAMERA_ABI失败/未知sim账原样保留，不复开任一组件。
