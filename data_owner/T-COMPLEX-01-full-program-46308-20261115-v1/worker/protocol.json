@@ -1,0 +1,59 @@
+{
+  "schema": "Data-T-COMPLEX-first-native-DEV-source-method-pair-v1",
+  "registered_at": "2026-11-15T16:45:19.768264+08:00",
+  "task_id": "T-COMPLEX-01",
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+  "purpose": "FIRST_NATIVE_DEV_SOURCE_AND_METHOD_DIAGNOSTIC_PAIR_NOT_CONFIRMATORY_OR_TRAIN",
+  "source_owner_commit": "b08f51bb0da753fd0327a699231ce254e9ba9c56",
+  "source_owner_record_sha256": "639d65ce7d7c46e2b05b6f95f98343c0d08e06282910fb8777c914899d43f17d",
+  "scene_sha256": "578bd75303ef00bfb3813a4cc32c3e93c17318e41801d98eb4414092bc56fb34",
+  "method_protocol_sha256": "c0ecb8726e0f1adc51584e8a98bb4ca9d3f3ba21ebd4b5f93e7bb78a2433051c",
+  "GPU_UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+  "physical_GPU_index": 0,
+  "logical_actor_device": "cuda:0",
+  "EGL_device_id": 0,
+  "arms": {
+    "A": {
+      "method": "greedy",
+      "scope_id": "data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1",
+      "zero_limit": 1,
+      "main_limit": 1
+    },
+    "B": {
+      "method": "multistep",
+      "scope_id": "data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1",
+      "zero_limit": 1,
+      "main_limit": 1
+    }
+  },
+  "order": [
+    "A",
+    "B"
+  ],
+  "scope_caps": {
+    "sim_s": 625.0,
+    "wall_s": 4800.0,
+    "output_bytes": 3221225472
+  },
+  "task_sim_cap_s": 600.0,
+  "zero_wall_cap_s": 180.0,
+  "own_GPU_cap_bytes": 3221225472,
+  "own_RSS_cap_bytes": 4294967296,
+  "CPU_threads": 2,
+  "remaining_CAL_VAL_reserve_bytes": 8053063680,
+  "pair_root_storage_reserve_bytes": 6442450944,
+  "provider_quota_unknown": true,
+  "automatic_retry": false,
+  "training_allowed": false,
+  "fit_or_critic_model_input": false,
+  "old_scopes_reused": false,
+  "own_zero": "Own complete same-model source host/recorders/public factory at task0, real onboard and HD frame, no motor issue/capture witness",
+  "main": "Original source actual SupportedCapture then same-world private entry/goal/native executor and public IntentPlanner, no Data route, no state restore",
+  "success": "Only original source all3 distinct placements/stow/remote goal/original12N protected-arrival supported stop. Three actual meaningful choices independently evaluated from journals, not inferred from3 boxes.",
+  "dynamic_full_plan_qualified_before_first_main": false,
+  "preregistered_unknown": "Exact source/public nominal candidate-plan exists and actual component geometry/camera/cold qualification passed, but full same-world execution not yet known. First real pair is DEV qualification evidence; common-domain/infra failure is not an algorithm win. No claims of scenario capability or method advantage without actual original plan/choices evidence.",
+  "stop_rules": "No main without own complete zero/cold/model and fresh lease. Zero/integrity/shared resource failure stops pair, no retries/replacement. Ordinary native/main failure retained; independent other arm may proceed only same source/rules, no repair.",
+  "video": "Direct live960x540 every20 actual physics ticks=10Hz, same fixed camera, complete original raw grids incl failures; encode1x/paired only from raw, no replay/upscale/clip-for-victory",
+  "private_catalog_adapter": "Exact literal RegisteredObserver private catalog preserved sidecar; add model_input_allowed=False/actual_sim_time_s aliases on a copy solely for unchanged original recorder. INPUT8/native/model observations unmodified; both arms identical adapter.",
+  "no_native_controller_or_original_success_gate_changed": true
+}

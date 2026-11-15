@@ -1,0 +1,70 @@
+{
+  "schema": "Reach-T-COMPLEX-01-source-v2-method-release-v1",
+  "at": "2026-11-15T15:47:27.991062+08:00",
+  "role": "SOURCE_BOUND_METHOD_AND_SOFTWARE_RELEASE_NOT_NATIVE_AB_OR_DISPATCH",
+  "code_commit": "e04c2af1cec7cea5d3d16a4b44eab1b90661d307",
+  "method_protocol": {
+    "path": "protocols/2026-11-15/T-COMPLEX-01-source-v2-methods/COMMON_METHOD_PROTOCOL.json",
+    "sha256": "c0ecb8726e0f1adc51584e8a98bb4ca9d3f3ba21ebd4b5f93e7bb78a2433051c"
+  },
+  "source_helper_pins": {
+    "scene_driver.py": "b8291be0b48fb3e89a96507c7ab8f27b047002d25e3f3cbc7ea0b623f4ac2bda",
+    "complex_scene.py": "613a18e735addf31edfe448e6f46e58ad0c130f4066c9b4393a8720d686d78c0"
+  },
+  "original_pure_source_pins": {
+    "ainav/contracts.py": "7d995f5a1dcb7135e1ca16d36e391a511bb8c8cefa0aeafd27430eba0932a669",
+    "ainav/intents.py": "257d5df748a932bd8b274ea308e823478c17d17ed5cb8fb217cc1986b1f49b76",
+    "ainav/planner.py": "fef70edb687dd7e3c9597cb04df24c74795bfde6c77a667457210c0f8040543a",
+    "ainav/native/behavior_authority.py": "7acf5c36bbbe7ae08fde6031dc781a65a82102301e31d78e9e7d3e5adc96875c",
+    "ainav/native/intent_execution.py": "c6cafbac86e549fb76a038bdb9072975831179ac670a1aba5685ae4ddc5afb8e"
+  },
+  "local_check": {
+    "path": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL/evidence/2026-11-15/T-COMPLEX-source-v2-original-intent-adapter-v1/LOCAL_ORIGINAL_COORDINATOR_AND_SOURCE_HELPER_SOFTWARE_CHECK.json",
+    "sha256": "df026818c63e2907ad385aa04d2e6450ea16d7e8ee48f44a75dfa926da36992d",
+    "software_assertions": 87,
+    "includes_original_public_nav_helper": true
+  },
+  "remote_check": {
+    "path": "/mnt/yuanyue/reach-runs/T-COMPLEX-01-source-v2-adapter-20261115-v1/ORIGINAL_COORDINATOR_SOFTWARE_CHECK.json",
+    "sha256": "5d691be64f50f4810acaa5fcf2a79b76f7bbb4940f3bee3b445f5b98809cd3e3",
+    "software_assertions": 53,
+    "includes_original_public_nav_helper": false
+  },
+  "same_software_suite_subset_not_additive_samples": true,
+  "local_remote_directed_unittests_each": 13,
+  "scalar_results": {
+    "greedy": {
+      "status": "NO_KNOWN_POSSIBLE_ROOT_ARC_ABSTAIN",
+      "software_interactions": 7,
+      "software_preparations": 4,
+      "decision_bundles": 4,
+      "nonforced_nominal_reconstruction_choices": 3,
+      "actual_task_success": null,
+      "original_terminal_evidence_received": false
+    },
+    "multistep": {
+      "status": "SOFTWARE_AWAITING_ORIGINAL_TERMINAL_PROOF",
+      "software_interactions": 17,
+      "software_preparations": 3,
+      "decision_bundles": 4,
+      "nonforced_nominal_reconstruction_choices": 3,
+      "actual_task_success": null,
+      "original_terminal_evidence_received": false
+    }
+  },
+  "physical_dispatches_by_reach": 0,
+  "native_AB_main_count": 0,
+  "videos": 0,
+  "v2_native_dynamic_qualification": false,
+  "actual_three_meaningful_choices_proven": false,
+  "prior_component_zero_failure_closed": true,
+  "source_repair_owner": "AINav",
+  "physical_execution_owner": "Data",
+  "ready_for_owner_source_intake": true,
+  "owner_adoption_or_queue_claim": false,
+  "existing_real_TRAIN_fit": {
+    "refit_count_this_turn": 0,
+    "release": "/mnt/yuanyue/reach-runs/G3-TRAIN-only-20261115-v1/TRAIN_GATE_AND_FIT_RELEASE.json",
+    "sha256": "670d4eb5062f903ecdadb200acbd2744647388888f8070e1066a527a2813bdd3"
+  }
+}

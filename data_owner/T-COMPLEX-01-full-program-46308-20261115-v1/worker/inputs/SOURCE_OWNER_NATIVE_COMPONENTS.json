@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-15T16:14:03.538709+08:00",
+  "role": "NEW_SOURCE_REPAIR_DEPLOYED_SOFTWARE_ONLY_NOT_NATIVE_ADMISSION",
+  "code_only_cloud_commit": "b08f51bb0da753fd0327a699231ce254e9ba9c56",
+  "cloud_branch": "ainav-development",
+  "remote_root": "/mnt/yuanyue/ainav-compute/code/b08f51bb0da753fd0327a699231ce254e9ba9c56/ainav",
+  "source_files_sha256": {
+    "camera_abi.py": "3969490e368f47d944471f77c103e11cf369e9ff90726c2fbca9cf9dadad7617",
+    "native_construction.py": "6c3ee245cd54bfeeec0c64a53627ec2efbebba34775afcac7aab794a286b18cf",
+    "public_planner_binding.py": "8ce0e39e097281680d202c5786e2c6573a645e2ff83d8ee3f1adcc1a9473870a",
+    "semantic_factory.py": "52f2eb52dcda837067ad027782ec35465ac44b90aae4c09b4865c28877a869a2",
+    "scene_driver.py": "b8291be0b48fb3e89a96507c7ab8f27b047002d25e3f3cbc7ea0b623f4ac2bda",
+    "multi_goal_factory.py": "afbe3326015db0544a8714a565d53795f3cfd0f72a891529dd4d1b852f2e7070",
+    "terminal_stop.py": "461d4146aeed1622be01f1952a1b4d582eab631cbf14f9defbdc3e0a78099196",
+    "SOURCE_SELECTION_V2.json": "42f66015bf0218b70d942edd85fc8f26bd706a54eda81dabec3dbfbbd795cd82",
+    "REACH_METHOD_SOURCE_BINDING.json": "6528522ea21f60f1c5677d3be541f7a5ee8d490948c08f5ed36980ade2d259cf",
+    "OWNER_ENTRYPOINTS_V2_CN.md": "8ab0f4ea8bd6d2b38bfdfdbde95df29c659a98dc8bd8764ae5074e8b340ea1d0"
+  },
+  "checksum_entries": 361,
+  "checksum_passed": true,
+  "local_and_remote_software_checks": {
+    "base": 6,
+    "semantic": 3,
+    "camera_planner_seams": 7
+  },
+  "software_tests_are_not_scientific_samples": true,
+  "new_native_worlds_or_fits_by_AINav": 0,
+  "repair": "Pinned original scene.configure_scene camera-only branch, before new MJB compile; original camera parent/K/T/rotation/fovy asserted before publication. No arbitrary homonymous camera.",
+  "closed_original_failure_scope": "data-46308-T-COMPLEX-01-native-components-zero-20261115-v1",
+  "closed_failure_not_reopened": true,
+  "planner": "Actual Reach four-module source-bound public entry; full ordered catalogue, fixed common ceilings, no private source witness or ExecutionBatch in model.",
+  "qualification_pending": [
+    "new Data source/program freeze and fresh own-zero/lease",
+    "actual compiled camera ABI / cold Runtime and original onboard capture",
+    "same-world semantic driver and placements/stow/terminal dynamically legal plan",
+    "at least 3 actual meaningful choices; same-condition greedy/multistep each main once; live master videos"
+  ],
+  "actual_v2_native_qualification": false,
+  "actual_AB_main": 0,
+  "actual_task_videos": 0,
+  "source_handoff_is_not_queue_or_dispatch_acceptance": true,
+  "prior_repair_source_receipt": {
+    "name": "CAMERA_ABI_REPAIR_AND_SOURCE_BOUND_PLANNER_DEPLOYED_NOT_NATIVE_QUALIFIED.json",
+    "sha256": "de4b4888f760833495d2936d6e905205a9910b1015e2f1bc4ca8738aa6149ee7",
+    "preserved": true
+  },
+  "final_test_prefixes": [
+    "final-local-",
+    "final-remote-"
+  ],
+  "actual_terminal_count_telemetry": "Actual len(placements.records) and scene required_reconstructions, not the inherited two_original_placements label; source fixture verifies v2=3."
+}
