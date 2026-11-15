@@ -1,3 +1,7 @@
+## Latest priority: T-COMPLEX-01 (main plan file SHAb2fb786e…)
+
+Data has read and acknowledged the temporary complex A/B task; executable scene and real common-domain selectors are not yet delivered, so no complex scope/physics/video is claimed. Keep frozen TRAIN6 unchanged. First safe new resource window prioritizes the complex local-greedy vs finite-lookahead pair (new own-zero/main once each), complete direct live masters, no old warehouse/short-chain/replay or upscaled192x128 substituted for preferred960x540/≥10Hz. Native/GL/offscreen dimensions, camera covering new scene and storage load must be qualified/frozen with the actual new package; no assumption from this resource-only module. Broader bulk/scene goal remains active, not a claim that100attempts or10groups exist.
+
 # 13:30 bulk/scene coverage authorization: Data dual-GPU preparation
 
 Current frozen TRAIN6 remains its exact original protocol and gates. No concurrent extra world is started while its frozen phase control still globally scans all Data workers. GPU0 UUID297c… has new canonical device51 lock inodes3428729629/3428729630, binding50d6365e…; original GPU1 bindings/held scopes untouched. Minimal per-GPU resource Lease reuses original guards/accounting and keeps initialized PID unknown fail-closed. Eight software checks and a real GPU0 lock/counter-only probe pass, with lease released and no Runtime/Actor/GL/world. This is NOT native/GL qualification or actual dual-card sampling.
