@@ -2,6 +2,8 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+> 同阶段source自审修正：构造完成／仍在旧CLIMB边界待装配，不等于新NAV已installed/entered。report现分native_NAV_constructed、constructor_pending_at_source_boundary与实际active_native_NAV_owner，后者核executor当前session/owner/skill/entered/时钟/非failed。原12项＋新增pending/active回归共13项；旧source481ee5c未实际运行，此修正不改任何物理结果。
+
 ## 2026-11-16：typed live CLIMB→原NAV adapter源（尚未装入factory/目录）
 
 新增`climb_nav_adapter.nav_class`／`make_live_source_witness`默认OFF。它不是把上一版只读Observation直接加入NAV的accepted类型：新`LiveClimbNavSourceWitness`必须消费**同tick真CLIMB source观测＋保留的原成功PUSH placement/NN/STOW_VERIFIED/当前required geometry**，构造私有SceneRegistry view（原objects/goal不变，仅增唯一source surface），持两个原实发global18参考、原guard和软硬limit交集；不是cold Capture/failed-PUSH/HOLD。

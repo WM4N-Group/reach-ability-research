@@ -187,12 +187,23 @@ class LiveClimbNavSourceWitness:
         return frozenset((self.object_ref,))
 
     def report(self):
+        session=self.executor.session
+        active=bool(not self.revoked and self.nav_owner is not None and session is not None
+            and session is not self.source_session and session.runtime is self.r and session.entered
+            and getattr(session.machine,'native_nav',None)is self.nav_owner
+            and self.executor.option is not None and self.executor.option.skill=='NAV'
+            and self.executor.fatal is False and self.executor.last_outcome in(None,'succeeded')
+            and session.outcome in('running','succeeded')
+            and self.executor.previous_tick==self.r.step_count
+            and abs(float(self.r.sim.data.time)-self.r.step_count*.005)<=1e-7)
         return dict(kind='live_original_CLIMB_to_original_NAV_source_not_capture_or_failed_PUSH',
             support_ref=self.support_ref,actual_object_ref=self.object_ref,
             origin_CLIMB_time_s=self.origin.observed_time,origin_CLIMB_tick=self.origin.observed_tick,
             original_CLIMB_native_option_sha256=self.origin.original_option_sha256,
             source_height_m=self.origin.surface.top_z_m,construction_attempted=self.construction_attempted,
-            active_native_NAV_owner=self.nav_owner is not None,private_registry_view_not_global_mutation=True,
+            native_NAV_constructed=self.nav_owner is not None,active_native_NAV_owner=active,
+            constructor_pending_at_source_boundary=self.nav_owner is not None and session is self.source_session,
+            private_registry_view_not_global_mutation=True,
             original_gait_not_replaced_by_four_foot_stationary_hold=True,model_input=False)
 
 

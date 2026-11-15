@@ -98,6 +98,21 @@ class Tests(unittest.TestCase):
         witness.begin_constructor(SoftwareNav())
         with self.assertRaises(ValueError):witness.begin_constructor(SoftwareNav())
         self.assertEqual(len(seen),1)
+    def test_constructed_pending_NAV_is_not_reported_as_installed_active_owner(self):
+        self.fixture()
+        witness=c.LiveClimbNavSourceWitness.__new__(c.LiveClimbNavSourceWitness)
+        witness.origin=NS(observed_time=1.,observed_tick=200,original_option_sha256='f'*64,surface=NS(top_z_m=.2))
+        witness.r=self.runtime;witness.source_session=self.source;witness.executor=self.executor
+        witness.object_ref='SOFTWARE-object';witness.support_ref='SOFTWARE-support'
+        witness.nav_owner=self.nav;witness.construction_attempted=True;witness.revoked=False
+        report=witness.report();self.assertTrue(report['native_NAV_constructed'])
+        self.assertTrue(report['constructor_pending_at_source_boundary']);self.assertFalse(report['active_native_NAV_owner'])
+        self.executor.session=NS(runtime=self.runtime,entered=True,machine=NS(native_nav=self.nav),outcome='running')
+        self.executor.option=NS(skill='NAV');self.executor.last_outcome=None
+        self.assertTrue(witness.report()['active_native_NAV_owner'])
+        self.executor.fatal=True
+        self.assertFalse(witness.report()['active_native_NAV_owner'])
+
     def test_revoked_source_and_wrong_NAV_type_cannot_construct(self):
         witness=c.LiveClimbNavSourceWitness.__new__(c.LiveClimbNavSourceWitness)
         witness.revoked=True;witness.construction_attempted=False;witness.nav_type=NS
