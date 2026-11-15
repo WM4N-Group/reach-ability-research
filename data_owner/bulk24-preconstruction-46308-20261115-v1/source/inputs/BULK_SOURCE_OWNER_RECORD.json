@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-15T16:27:46.371105+08:00",
+  "role": "TEN_NEW_GEOMETRY_CONFIGS_IMPLEMENTED_NOT_NATIVE_OR_ACQUISITION_QUALIFICATION",
+  "cloud_commit": "0fff23aaf80d9a4ce0b3f34d7935df0ed1bab181",
+  "remote_code_root": "/mnt/yuanyue/ainav-compute/code/0fff23aaf80d9a4ce0b3f34d7935df0ed1bab181/ainav",
+  "files_sha256": {
+    "integrated_course_plan_bulk_v1.json": "515b4d7f6f781efbcebfd51cdf5ac932c47d4e76328fe58822ac8305a6c7a677",
+    "README_CN.md": "17157a87dd04e03c4bb576fded3e80d180f8319ac9619a681cff7ab1808d7439",
+    "bulk_registered_conditions.py": "a10caa098346434e92ead0acd4c56b41bba71905c6f666e31b048f4b59cbdd68",
+    "BULK_MATRIX.json": "84772f52501c9a216ab961e66f01eb4bfdef8353eb77a7e4001363ae0f6ee91c",
+    "tests/test_bulk_source.py": "0b3062d70400625cee69c179a983e8c35b01ac4a2e30787fa86e84c4375a1f64"
+  },
+  "checksum_entries": 366,
+  "local_and_remote_software_checks": 7,
+  "declared_geometries": 10,
+  "contexts": 20,
+  "potential_candidate_combinations": 60,
+  "actual_research_samples_or_physical_attempts": 0,
+  "shared_ancestor_families": 1,
+  "role_assigned": false,
+  "fit_or_dispatch_allowed": false,
+  "new_plan_delta": {
+    "target": "mujoco_zyh/integrated_course_plan_v1.json",
+    "replacement_file": "integrated_course_plan_bulk_v1.json",
+    "original_code_bytes_unchanged": true,
+    "new_fresh_source_snapshot_only": true,
+    "never_install_on_inflight_or_closed": true
+  },
+  "T_complex_frozen_d486_scope_not_changed": true,
+  "original_worktree_HEAD": "d595d007a467bc7b00ce4e34a1421612095a1059",
+  "original_dirty_and_index_not_staged": true,
+  "previous_source_receipt_sha256": "dc64a6449d41eb160b1d3ef02e47b5fc4130e0a2a48354837fb4202b9c89273a",
+  "task_goal_frame_change": "Declared original task goal-Y follows lane geometry; X/skill/success gates unchanged. Not an unchanged world-goal claim.",
+  "test_prefix": "final-goal-frame-"
+}

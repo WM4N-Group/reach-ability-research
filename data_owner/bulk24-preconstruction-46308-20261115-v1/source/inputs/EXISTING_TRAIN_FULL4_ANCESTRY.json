@@ -1,0 +1,36 @@
+{
+  "case_id": "full-4",
+  "split": "TRAIN",
+  "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+  "scene_ancestry_key": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+  "scene_key_canonical_payload": {
+    "schema": "Reach-whole-registered-scene-and-initialization-v1",
+    "integrated_case": {
+      "case_id": "full-4",
+      "lane_y_m": -2.0,
+      "gap_width_m": 0.2,
+      "step_length_m": 2.4,
+      "step_width_m": 1.4,
+      "bridge_length_m": 3.2,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 3.5,
+      "bridge_mass_kg": 0.5,
+      "bridge_bottom_mu": 0.6
+    },
+    "registered_materials": {
+      "A_bottom_mu": 0.15,
+      "B_bottom_mu": 0.4,
+      "C_bottom_mu": 0.6,
+      "C_mass_kg": 0.5,
+      "box_foot_mu": 0.8
+    },
+    "scene_recipe": "integrated_course",
+    "seed": 4301,
+    "initialization": "Before FIRST main physics step, after original separate auxiliary calibration: only robot leg positions/height from native reference_stance; arm native safe compact waypoint. No failed state, velocity, force, queue or policy history copied. Native six-second measured startup and physical PushEntry remain unchanged. Recovery NEVER writes physical state.",
+    "constructor_source_sha256": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb"
+  },
+  "original_native_protocol_sha256_canonical": "d829ce9dd047faad5434e2b7ffaa501d78ee2c4beeaf91d4b910a2900614c3a9",
+  "source_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-G1-46308-NATIVE-PREFIX-LEFT-ACTUAL-20261115-v1/release.json",
+  "source_release_sha256": "af81f3914c73d6546d2cc26e62b2fc0841021f11123d2e1fbc53db86e6a7dadc"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "Data-explicit-FOUR-source-delta-prefix-fork-v1",
+  "baseline_manifest_sha256": "314b6650918cbf88c6bd7166ad3f2d26f9c3b30f92094db98d6f8832f8d1fd8c",
+  "parent_three_delta_manifest_sha256": "db43081c7702047844dd7dde6eb7a6b4dbb439b9501925b091c831678e65b697",
+  "source_delta_sha256": {
+    "mujoco_zyh/stall_stow.py": "38b12bae7f6aa718801655e1ed82e272adf2bc18d5d7acb4872efa739e199f8c",
+    "ainav/native/current_stall_stow.py": "38b12bae7f6aa718801655e1ed82e272adf2bc18d5d7acb4872efa739e199f8c",
+    "ainav/native/execution_judged_course.py": "a49c9065eabec561c34606fb3b8a57afde25fbc7922c2a734f5e6009f9c351ac",
+    "probe_execution_judge.py": "133fd5933193f96dc2a6399d0f8305699519b3f758cd3c952528ac573a9dded5"
+  },
+  "original_source_manifest_is_lineage_only": true,
+  "all_four_deltas_must_invert": true,
+  "consumer_adapter_sha256": "8ba7683aa5eb8274cdfa44cfb6b424cc56e78a864a7d83221916479f3bd1421d",
+  "probe_change_and_inverse_sha256": "325a381f5ce9cc561430fe18d1b7f7b212a5a7d89a98657180f2ca5cca9cff9a",
+  "historical_package_untouched": true,
+  "physical_admission": false
+}

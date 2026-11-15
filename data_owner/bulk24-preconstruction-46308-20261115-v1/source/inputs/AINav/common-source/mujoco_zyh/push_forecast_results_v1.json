@@ -1,0 +1,1775 @@
+{
+  "schema": "piper-narrow-push-forecast-results-v1",
+  "as_of": "2026-10-24T18:42:14.349113+08:00",
+  "status": "COLLECTION_TRAINING_HELDOUT_PIPELINE_COMPLETE__NO_ADVANTAGE_OVER_STRONG_CLOCK_CONTROL__NO_SAFETY_OR_FULL_WM_ADMISSION",
+  "physical_and_primary_model_execution_commit": "27ff8a0405bebf278b64e820ca87ec01a3e546ec",
+  "supplemental_analysis_commit": "49514eb",
+  "upstream_commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "formal_host": "go2-root-yuanyue",
+  "backend": "MuJoCo3.3.2",
+  "user_authority": "收窄到这个问题，快速推进，采集训练并验证；生成的场景记得给我检查",
+  "scope": "Fixed native v212 PUSH continuation0.4/0.8s box XY displacement, valid observed windows only. New supervised ridge consequence baseline, NOT trained M/RSSM or full skills/planning.",
+  "cases": [
+    {
+      "id": "train-00",
+      "split": "train",
+      "mass_kg": 0.5,
+      "friction": 0.15,
+      "seed": 4100
+    },
+    {
+      "id": "train-01",
+      "split": "train",
+      "mass_kg": 0.5,
+      "friction": 0.45,
+      "seed": 4101
+    },
+    {
+      "id": "train-02",
+      "split": "train",
+      "mass_kg": 1.0,
+      "friction": 0.15,
+      "seed": 4102
+    },
+    {
+      "id": "train-03",
+      "split": "train",
+      "mass_kg": 1.0,
+      "friction": 0.45,
+      "seed": 4103
+    },
+    {
+      "id": "train-04",
+      "split": "train",
+      "mass_kg": 2.0,
+      "friction": 0.15,
+      "seed": 4104
+    },
+    {
+      "id": "train-05",
+      "split": "train",
+      "mass_kg": 2.0,
+      "friction": 0.45,
+      "seed": 4105
+    },
+    {
+      "id": "train-06",
+      "split": "train",
+      "mass_kg": 4.0,
+      "friction": 0.15,
+      "seed": 4106
+    },
+    {
+      "id": "train-07",
+      "split": "train",
+      "mass_kg": 4.0,
+      "friction": 0.45,
+      "seed": 4107
+    },
+    {
+      "id": "train-08",
+      "split": "train",
+      "mass_kg": 8.0,
+      "friction": 0.15,
+      "seed": 4108
+    },
+    {
+      "id": "train-09",
+      "split": "train",
+      "mass_kg": 8.0,
+      "friction": 0.45,
+      "seed": 4109
+    },
+    {
+      "id": "validation-00",
+      "split": "validation",
+      "mass_kg": 0.8,
+      "friction": 0.25,
+      "seed": 4110
+    },
+    {
+      "id": "validation-01",
+      "split": "validation",
+      "mass_kg": 3.0,
+      "friction": 0.35,
+      "seed": 4111
+    },
+    {
+      "id": "validation-02",
+      "split": "validation",
+      "mass_kg": 6.0,
+      "friction": 0.25,
+      "seed": 4112
+    },
+    {
+      "id": "validation-03",
+      "split": "validation",
+      "mass_kg": 10.0,
+      "friction": 0.35,
+      "seed": 4113
+    },
+    {
+      "id": "test-00",
+      "split": "test",
+      "mass_kg": 0.65,
+      "friction": 0.2,
+      "seed": 4114
+    },
+    {
+      "id": "test-01",
+      "split": "test",
+      "mass_kg": 1.5,
+      "friction": 0.4,
+      "seed": 4115
+    },
+    {
+      "id": "test-02",
+      "split": "test",
+      "mass_kg": 3.5,
+      "friction": 0.2,
+      "seed": 4116
+    },
+    {
+      "id": "test-03",
+      "split": "test",
+      "mass_kg": 6.5,
+      "friction": 0.4,
+      "seed": 4117
+    },
+    {
+      "id": "test-04",
+      "split": "test",
+      "mass_kg": 9.0,
+      "friction": 0.2,
+      "seed": 4118
+    },
+    {
+      "id": "test-05",
+      "split": "test",
+      "mass_kg": 12.0,
+      "friction": 0.4,
+      "seed": 4119
+    }
+  ],
+  "episodes": 20,
+  "reset_after_initial_per_episode": 0,
+  "automatic_retry": false,
+  "collection": {
+    "main_sim_seconds": 412.4400000000037,
+    "separate_auxiliary_calibration_sim_seconds": 130.09999999999766,
+    "separate_auxiliary_worlds": 20,
+    "wall_seconds": 1053.9785728231072,
+    "native_goal_boundary_count": 7,
+    "native_guard_termination_count": 13,
+    "native_failure_reasons": {
+      "RuntimeError('push:arm_effort_safety')": 12,
+      "RuntimeError('push:invalid_hand_contact')": 1
+    },
+    "native_goal_boundary_not_complete_retract_or_full_route": true,
+    "actual_RGBD_frames": 4133,
+    "actual_motor_steps": 82488
+  },
+  "dataset": {
+    "queries": {
+      "train": 207,
+      "validation": 72,
+      "test": 105
+    },
+    "episode_groups": {
+      "train": 10,
+      "validation": 4,
+      "test": 6
+    },
+    "total_queries": 384,
+    "query_stride_s": 0.2,
+    "history_frames": 8,
+    "RGBD_hz": 10,
+    "horizons_s": [
+      0.4,
+      0.8
+    ],
+    "complete_past_command_steps_per_query": 140,
+    "motor_hz": 200,
+    "coverage_pass": true,
+    "queries_are_overlapping_not_independent_episodes": true,
+    "strict_query_to_future_range_speed_violations": 0,
+    "censored_windows": 80,
+    "censor_rule": "No labels after native failure, PUSH boundary, incomplete future or strict physical limit violation; never zero-fill unexecuted continuation.",
+    "private_mass_or_state_in_features": false,
+    "old_training_disallowed_data_reused_for_fit": false
+  },
+  "training": {
+    "schema": "narrow-push-training-v1",
+    "model": "public full-history ridge consequence baseline, NOT M/RSSM",
+    "dataset_manifest_sha256": "fe6ddc89a03aa6dd4d42c055ed84101292136078a9825ff693f0e378674b9eab",
+    "fit_calls": 8,
+    "training_pipeline_runs": 1,
+    "training_query_count": 207,
+    "validation_query_count": 72,
+    "train_episodes": [
+      "train-00",
+      "train-01",
+      "train-02",
+      "train-03",
+      "train-04",
+      "train-05",
+      "train-06",
+      "train-07",
+      "train-08",
+      "train-09"
+    ],
+    "validation_episodes": [
+      "validation-00",
+      "validation-01",
+      "validation-02",
+      "validation-03"
+    ],
+    "selected": {
+      "full": {
+        "alpha": 0.0001,
+        "validation": {
+          "mean_abs_coordinate_m": 0.0036351165337212762,
+          "vector_RMSE_m": 0.008477192422965456,
+          "per_horizon_vector_RMSE_m": [
+            0.004945735498530351,
+            0.010920864577978365
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004508347660496594,
+              0.0001723043511086638
+            ],
+            [
+              0.009494070255543954,
+              0.0003657438677358959
+            ]
+          ],
+          "episode_balanced_vector_RMSE_m": 0.0079076262578619
+        },
+        "candidates": [
+          {
+            "alpha": 0.0001,
+            "validation": {
+              "mean_abs_coordinate_m": 0.0036351165337212762,
+              "vector_RMSE_m": 0.008477192422965456,
+              "per_horizon_vector_RMSE_m": [
+                0.004945735498530351,
+                0.010920864577978365
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004508347660496594,
+                  0.0001723043511086638
+                ],
+                [
+                  0.009494070255543954,
+                  0.0003657438677358959
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.0079076262578619
+            }
+          },
+          {
+            "alpha": 0.001,
+            "validation": {
+              "mean_abs_coordinate_m": 0.0036488535237320483,
+              "vector_RMSE_m": 0.010026454421364394,
+              "per_horizon_vector_RMSE_m": [
+                0.005435287725387626,
+                0.013096458447597418
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004395282649325019,
+                  0.00019922043954707588
+                ],
+                [
+                  0.009615084022970625,
+                  0.00038582698308547644
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.008938909663296697
+            }
+          },
+          {
+            "alpha": 0.01,
+            "validation": {
+              "mean_abs_coordinate_m": 0.00523772391377721,
+              "vector_RMSE_m": 0.019038749417094308,
+              "per_horizon_vector_RMSE_m": [
+                0.009122458659442487,
+                0.025332364807506235
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004490954840252185,
+                  0.00032070519397124587
+                ],
+                [
+                  0.015470195813733316,
+                  0.0006690398071520823
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.014605424528776003
+            }
+          },
+          {
+            "alpha": 0.1,
+            "validation": {
+              "mean_abs_coordinate_m": 0.015395061016317222,
+              "vector_RMSE_m": 0.04729755429176572,
+              "per_horizon_vector_RMSE_m": [
+                0.028097653969564262,
+                0.06070122836789781
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.01829071550087113,
+                  0.000633566033431052
+                ],
+                [
+                  0.041359420269760486,
+                  0.0012965422612061974
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.037306208447237074
+            }
+          }
+        ]
+      },
+      "kin": {
+        "alpha": 0.0001,
+        "validation": {
+          "mean_abs_coordinate_m": 0.0036700868541691186,
+          "vector_RMSE_m": 0.008975680523514442,
+          "per_horizon_vector_RMSE_m": [
+            0.0048901223798714505,
+            0.011713769027527958
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004400833884172604,
+              0.00017851683151700538
+            ],
+            [
+              0.009737219177418984,
+              0.0003637775235678829
+            ]
+          ],
+          "episode_balanced_vector_RMSE_m": 0.008369162362786198
+        },
+        "candidates": [
+          {
+            "alpha": 0.0001,
+            "validation": {
+              "mean_abs_coordinate_m": 0.0036700868541691186,
+              "vector_RMSE_m": 0.008975680523514442,
+              "per_horizon_vector_RMSE_m": [
+                0.0048901223798714505,
+                0.011713769027527958
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004400833884172604,
+                  0.00017851683151700538
+                ],
+                [
+                  0.009737219177418984,
+                  0.0003637775235678829
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.008369162362786198
+            }
+          },
+          {
+            "alpha": 0.001,
+            "validation": {
+              "mean_abs_coordinate_m": 0.003777847033753736,
+              "vector_RMSE_m": 0.010752651052294771,
+              "per_horizon_vector_RMSE_m": [
+                0.0055076614281186105,
+                0.014174084622932308
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004454496165776126,
+                  0.00020021068110319276
+                ],
+                [
+                  0.01007200897885339,
+                  0.000384672309282239
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.009604492870732737
+            }
+          },
+          {
+            "alpha": 0.01,
+            "validation": {
+              "mean_abs_coordinate_m": 0.00519795274186341,
+              "vector_RMSE_m": 0.018701789142475188,
+              "per_horizon_vector_RMSE_m": [
+                0.00851342776708029,
+                0.025040674549898043
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.004617434955109675,
+                  0.00024446112132221526
+                ],
+                [
+                  0.015308824900007869,
+                  0.000621089991013873
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.015079562526245928
+            }
+          },
+          {
+            "alpha": 0.1,
+            "validation": {
+              "mean_abs_coordinate_m": 0.011871928349747766,
+              "vector_RMSE_m": 0.04034279204506034,
+              "per_horizon_vector_RMSE_m": [
+                0.022241708893834873,
+                0.05253939593737138
+              ],
+              "per_coordinate_MAE_m": [
+                [
+                  0.013135926587673478,
+                  0.0005394020921179739
+                ],
+                [
+                  0.032672546578917765,
+                  0.001139838140281852
+                ]
+              ],
+              "episode_balanced_vector_RMSE_m": 0.03232657678773308
+            }
+          }
+        ]
+      }
+    },
+    "strongest_baseline_selected_on_validation": "public_kinematics_ridge",
+    "best_learned_selected_on_validation": "full",
+    "strongest_nonlearned_selected_on_validation": "zero",
+    "validation_baselines": {
+      "zero": {
+        "mean_abs_coordinate_m": 0.012637752304303602,
+        "vector_RMSE_m": 0.08052245152008587,
+        "per_horizon_vector_RMSE_m": [
+          0.05247026359870431,
+          0.10106731338811595
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.015768725295654602,
+            0.0004290140964763785
+          ],
+          [
+            0.033481704156454524,
+            0.0008715656686289022
+          ]
+        ]
+      },
+      "train_mean": {
+        "mean_abs_coordinate_m": 0.028376509613040304,
+        "vector_RMSE_m": 0.0780709093907736,
+        "per_horizon_vector_RMSE_m": [
+          0.05107992394094183,
+          0.09788245581508638
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.0364069559714195,
+            0.0009514475264831416
+          ],
+          [
+            0.07413534707881896,
+            0.0020122878754396936
+          ]
+        ]
+      },
+      "public_constant_velocity": {
+        "mean_abs_coordinate_m": 0.028521494946795036,
+        "vector_RMSE_m": 0.08451563518249103,
+        "per_horizon_vector_RMSE_m": [
+          0.049603076698137655,
+          0.1087442870346691
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.010452990858943344,
+            0.024756086728302765
+          ],
+          [
+            0.029133419976763737,
+            0.04974348222317026
+          ]
+        ]
+      },
+      "public_kinematics_ridge": {
+        "mean_abs_coordinate_m": 0.0036700868541691186,
+        "vector_RMSE_m": 0.008975680523514442,
+        "per_horizon_vector_RMSE_m": [
+          0.0048901223798714505,
+          0.011713769027527958
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.004400833884172604,
+            0.00017851683151700538
+          ],
+          [
+            0.009737219177418984,
+            0.0003637775235678829
+          ]
+        ]
+      }
+    },
+    "test_read_during_training": false,
+    "checkpoint_sha256": {
+      "full": "40aae873c4fb84b307c3c07838b5ff6650ea03cb93915f7ef562126fd7542915",
+      "kin": "bb8d4b6f7c171f317ea9b3bbf0de295d2099e1aeab3fcc901baa3a69e6b31849"
+    },
+    "train_mean_sha256": "40540e7478daac6531531aed17e2aaec836d123a5b7d7a1f28980e9257eb57f5",
+    "wall_seconds": 0.16645560786128044,
+    "episode_balanced_train_weights": true,
+    "validation_selection_episode_balanced": true,
+    "optimizer_updates": 0,
+    "closed_form_weight_fit": true,
+    "skill_weights_changed": false,
+    "physics_steps": 0,
+    "control_authority": false
+  },
+  "heldout": {
+    "schema": "narrow-push-heldout-v1",
+    "test_queries": 105,
+    "test_episode_groups": [
+      "test-00",
+      "test-01",
+      "test-02",
+      "test-03",
+      "test-04",
+      "test-05"
+    ],
+    "metrics": {
+      "zero": {
+        "mean_abs_coordinate_m": 0.009036587615106794,
+        "vector_RMSE_m": 0.0651430647529767,
+        "per_horizon_vector_RMSE_m": [
+          0.04287807973745832,
+          0.08153961030596846
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.011123728871877705,
+            0.0004756823997013611
+          ],
+          [
+            0.023505912898725088,
+            0.0010410262901230272
+          ]
+        ]
+      },
+      "train_mean": {
+        "mean_abs_coordinate_m": 0.025761352130044397,
+        "vector_RMSE_m": 0.0673024885335078,
+        "per_horizon_vector_RMSE_m": [
+          0.044000035965012306,
+          0.08439932914830246
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.03303239315946135,
+            0.0009899302367955775
+          ],
+          [
+            0.06678109039041134,
+            0.0022419947335093754
+          ]
+        ]
+      },
+      "public_constant_velocity": {
+        "mean_abs_coordinate_m": 0.027535611650814057,
+        "vector_RMSE_m": 0.0833939219700374,
+        "per_horizon_vector_RMSE_m": [
+          0.04921699364031397,
+          0.1071763965623899
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.009725248114582861,
+            0.024795966767816854
+          ],
+          [
+            0.02607190493250701,
+            0.04954932678834949
+          ]
+        ]
+      },
+      "public_kinematics_ridge": {
+        "mean_abs_coordinate_m": 0.003599232788509263,
+        "vector_RMSE_m": 0.008578693182509088,
+        "per_horizon_vector_RMSE_m": [
+          0.005319298966775343,
+          0.010903807222310866
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.004271938764574124,
+            0.00038941749006815763
+          ],
+          [
+            0.009015224465421407,
+            0.0007203504339733681
+          ]
+        ]
+      },
+      "learned_full_history": {
+        "mean_abs_coordinate_m": 0.003631880938297497,
+        "vector_RMSE_m": 0.009191532639965465,
+        "per_horizon_vector_RMSE_m": [
+          0.005603157898072045,
+          0.011729158798156582
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.004382535791129656,
+            0.00033110131672391645
+          ],
+          [
+            0.00917253696593507,
+            0.0006413496794013504
+          ]
+        ]
+      }
+    },
+    "per_episode": {
+      "test-00": {
+        "zero": {
+          "mean_abs_coordinate_m": 0.0012130994455219744,
+          "vector_RMSE_m": 0.010967480080815934,
+          "per_horizon_vector_RMSE_m": [
+            3.8065810330051235e-17,
+            0.015510359075346663
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              5.409105649305481e-19,
+              3.80602996920583e-17
+            ],
+            [
+              0.004557700303848834,
+              0.0002946974782390255
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.019942998827236547,
+          "vector_RMSE_m": 0.041830077343539725,
+          "per_horizon_vector_RMSE_m": [
+            0.02600871000172955,
+            0.053132454725703805
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.026001632926453425,
+              0.0006066968864595037
+            ],
+            [
+              0.051650948412923066,
+              0.0015127170831101843
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.024264675386120878,
+          "vector_RMSE_m": 0.07420600775324414,
+          "per_horizon_vector_RMSE_m": [
+            0.04641170239086292,
+            0.09412235151403213
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005105635024847288,
+              0.026033487449240066
+            ],
+            [
+              0.013707074724152335,
+              0.052212504346243825
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.0035267427837257443,
+          "vector_RMSE_m": 0.008466622190029097,
+          "per_horizon_vector_RMSE_m": [
+            0.003996100509805025,
+            0.011287097205788662
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.003973374783863496,
+              8.706522307852586e-05
+            ],
+            [
+              0.009709786201890606,
+              0.0003367449260703519
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.0036463812284103056,
+          "vector_RMSE_m": 0.009113861742668759,
+          "per_horizon_vector_RMSE_m": [
+            0.004033282012441755,
+            0.012241633385176842
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004029919369601652,
+              8.12765818019884e-05
+            ],
+            [
+              0.010128500823112577,
+              0.00034582813912500433
+            ]
+          ]
+        }
+      },
+      "test-01": {
+        "zero": {
+          "mean_abs_coordinate_m": 0.036813835837529056,
+          "vector_RMSE_m": 0.133164563974107,
+          "per_horizon_vector_RMSE_m": [
+            0.08787391440172507,
+            0.16656463419509665
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.046719661261886355,
+              0.0019978660787455978
+            ],
+            [
+              0.09441953046247363,
+              0.004118285547010643
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.04220541603603649,
+          "vector_RMSE_m": 0.11466240864708023,
+          "per_horizon_vector_RMSE_m": [
+            0.07724353504094032,
+            0.14257760065269393
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.05553082590508674,
+              0.0022162769578710057
+            ],
+            [
+              0.10656609775430613,
+              0.004508463526882021
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.04009133982646745,
+          "vector_RMSE_m": 0.10902299752388346,
+          "per_horizon_vector_RMSE_m": [
+            0.0572779574983915,
+            0.14314769842019065
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.024508002827642487,
+              0.020835893930634494
+            ],
+            [
+              0.07362307550152764,
+              0.0413983870460652
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.0046340155351738055,
+          "vector_RMSE_m": 0.010967490051061289,
+          "per_horizon_vector_RMSE_m": [
+            0.008230341906891633,
+            0.013146602151731834
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005227342910167604,
+              0.001356944699110298
+            ],
+            [
+              0.009730252918489404,
+              0.0022215216129279174
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.004778550405720465,
+          "vector_RMSE_m": 0.013188009443118315,
+          "per_horizon_vector_RMSE_m": [
+            0.008933380975851878,
+            0.016371984928036164
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005510937452656164,
+              0.001130543189680023
+            ],
+            [
+              0.010644072629419753,
+              0.00182864835112592
+            ]
+          ]
+        }
+      },
+      "test-02": {
+        "zero": {
+          "mean_abs_coordinate_m": 0.0004878410472884109,
+          "vector_RMSE_m": 0.004544976298592005,
+          "per_horizon_vector_RMSE_m": [
+            3.821790350257669e-17,
+            0.0064275671221330835
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              5.430288977389076e-19,
+              3.821218721652075e-17
+            ],
+            [
+              0.001862245553638787,
+              8.911863551481792e-05
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.02044610183707697,
+          "vector_RMSE_m": 0.042429006157007516,
+          "per_horizon_vector_RMSE_m": [
+            0.02600871000172955,
+            0.05407391359046149
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.026001632926453425,
+              0.0006066968864595038
+            ],
+            [
+              0.053702696016228006,
+              0.0014733815191669444
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.02368289339278818,
+          "vector_RMSE_m": 0.07352238362782265,
+          "per_horizon_vector_RMSE_m": [
+            0.04641170239054461,
+            0.09304319249598525
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005105635030304256,
+              0.026033487423774215
+            ],
+            [
+              0.011510530768646277,
+              0.05208192034842798
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.0029684042253593328,
+          "vector_RMSE_m": 0.006151852006813449,
+          "per_horizon_vector_RMSE_m": [
+            0.003996100538777534,
+            0.007727984647464772
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.003973374816905959,
+              8.706522854955059e-05
+            ],
+            [
+              0.007640176060463132,
+              0.00017300079551868985
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.0029350501929873117,
+          "vector_RMSE_m": 0.006140376963778537,
+          "per_horizon_vector_RMSE_m": [
+            0.004033263033849937,
+            0.007690334701063658
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004029901127299754,
+              8.130109702697947e-05
+            ],
+            [
+              0.007436742066164874,
+              0.00019225648145764125
+            ]
+          ]
+        }
+      },
+      "test-03": {
+        "zero": {
+          "mean_abs_coordinate_m": 2.7605374100429773e-05,
+          "vector_RMSE_m": 0.0002489502055134161,
+          "per_horizon_vector_RMSE_m": [
+            3.7814477281558215e-17,
+            0.0003520687569926423
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              5.378444681249298e-19,
+              3.780913912035607e-17
+            ],
+            [
+              0.00010279817979608284,
+              7.623316605597892e-06
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.020908164359635398,
+          "vector_RMSE_m": 0.043330452050519455,
+          "per_horizon_vector_RMSE_m": [
+            0.02600871000172955,
+            0.05548516156460811
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.026001632926453425,
+              0.0006066968864595035
+            ],
+            [
+              0.05546214339007071,
+              0.0015621842355579446
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.02336988312725908,
+          "vector_RMSE_m": 0.07338227631388287,
+          "per_horizon_vector_RMSE_m": [
+            0.04641170366831073,
+            0.09282171468260551
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005105637650558492,
+              0.02603348972115783
+            ],
+            [
+              0.010281049011609866,
+              0.05205935612571013
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.00329506419303086,
+          "vector_RMSE_m": 0.00786036503051002,
+          "per_horizon_vector_RMSE_m": [
+            0.00399610066533615,
+            0.010373131460568188
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.003973374937502229,
+              8.706521697600239e-05
+            ],
+            [
+              0.008869662776391165,
+              0.0002501538412540438
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.003262292863273255,
+          "vector_RMSE_m": 0.007343156383610636,
+          "per_horizon_vector_RMSE_m": [
+            0.004033145997101579,
+            0.009569619883484754
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004029783704675888,
+              8.126753484096403e-05
+            ],
+            [
+              0.008665609645054818,
+              0.00027251056852135
+            ]
+          ]
+        }
+      },
+      "test-04": {
+        "zero": {
+          "mean_abs_coordinate_m": 5.20375951893736e-05,
+          "vector_RMSE_m": 0.0004927539096027322,
+          "per_horizon_vector_RMSE_m": [
+            3.814677691874277e-17,
+            0.0006968592618725499
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              5.427947288851662e-19,
+              3.8141543097076575e-17
+            ],
+            [
+              0.00020292699991841887,
+              5.223380839036849e-06
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.020882107154694088,
+          "vector_RMSE_m": 0.043268219824986284,
+          "per_horizon_vector_RMSE_m": [
+            0.02600871000172955,
+            0.055387947224036074
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.026001632926453425,
+              0.0006066968864595036
+            ],
+            [
+              0.055362014569948374,
+              0.0015580842359150418
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.023387936951174033,
+          "vector_RMSE_m": 0.07338374150327447,
+          "per_horizon_vector_RMSE_m": [
+            0.04641170612011363,
+            0.09282403012721988
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.005105644018840394,
+              0.02603349488344976
+            ],
+            [
+              0.010350842516345438,
+              0.05206176638606055
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.0032765938755253796,
+          "vector_RMSE_m": 0.007709428411374117,
+          "per_horizon_vector_RMSE_m": [
+            0.003996100582245647,
+            0.010144050127872046
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.003973374864993127,
+              8.706521268890892e-05
+            ],
+            [
+              0.008799881597388945,
+              0.00024605382703053947
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.0032439496688012152,
+          "vector_RMSE_m": 0.007212332576173825,
+          "per_horizon_vector_RMSE_m": [
+            0.004033226592711281,
+            0.00936848790523438
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004029865503275272,
+              8.124727944509822e-05
+            ],
+            [
+              0.00859631354643878,
+              0.0002683723460457112
+            ]
+          ]
+        }
+      },
+      "test-05": {
+        "zero": {
+          "mean_abs_coordinate_m": 4.042658990053783e-07,
+          "vector_RMSE_m": 2.781451489834827e-06,
+          "per_horizon_vector_RMSE_m": [
+            3.798815565302747e-17,
+            3.933566420007263e-06
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              5.404465626511392e-19,
+              3.79812390098814e-17
+            ],
+            [
+              1.366013066218298e-06,
+              2.5105052976469343e-07
+            ]
+          ]
+        },
+        "train_mean": {
+          "mean_abs_coordinate_m": 0.020933538618466377,
+          "vector_RMSE_m": 0.043394726410116366,
+          "per_horizon_vector_RMSE_m": [
+            0.02600871000172955,
+            0.055585533769710586
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.026001632926453425,
+              0.0006066968864595036
+            ],
+            [
+              0.055563575556800575,
+              0.0015622491041519966
+            ]
+          ]
+        },
+        "public_constant_velocity": {
+          "mean_abs_coordinate_m": 0.023354344122269673,
+          "vector_RMSE_m": 0.07338329677734527,
+          "per_horizon_vector_RMSE_m": [
+            0.04641170326183441,
+            0.0928233283833288
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.0051056346092082094,
+              0.02603348816955987
+            ],
+            [
+              0.010211323627686397,
+              0.05206693008262422
+            ]
+          ]
+        },
+        "public_kinematics_ridge": {
+          "mean_abs_coordinate_m": 0.0033125108232416496,
+          "vector_RMSE_m": 0.008016498677771525,
+          "per_horizon_vector_RMSE_m": [
+            0.003996101167172948,
+            0.010609414572121507
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.003973375442115988,
+              8.7065304919457e-05
+            ],
+            [
+              0.008939383733054425,
+              0.00025021881287672965
+            ]
+          ]
+        },
+        "learned_full_history": {
+          "mean_abs_coordinate_m": 0.003280059695167006,
+          "vector_RMSE_m": 0.0074810447547193825,
+          "per_horizon_vector_RMSE_m": [
+            0.004033440046554519,
+            0.009780767998223812
+          ],
+          "per_coordinate_MAE_m": [
+            [
+              0.004030081654660533,
+              8.128616401063376e-05
+            ],
+            [
+              0.008736244274709455,
+              0.00027262668728740276
+            ]
+          ]
+        }
+      }
+    },
+    "best_learned_selected_without_test": "learned_full_history",
+    "strongest_nonlearned_selected_without_test": "zero",
+    "best_learned_minus_nonlearned_episode_RMSE_m": -0.01649045400934191,
+    "best_learned_minus_nonlearned_episode_bootstrap95_m": [
+      -0.05805735409966185,
+      0.006180881797147506
+    ],
+    "exploratory_learning_value_supported": false,
+    "baseline_selected_without_test": "public_kinematics_ridge",
+    "episode_balanced_RMSE_difference_model_minus_baseline_m": 0.00021775424941832653,
+    "episode_cluster_bootstrap95_RMSE_difference_m": [
+      -0.00043533808043198725,
+      0.0010618803998330214
+    ],
+    "outperforms_selected_baseline_point_estimate": false,
+    "robust_superiority_in_this_small_pilot": false,
+    "test_used_for_hyperparameter_selection": false,
+    "moving_query_count": 13,
+    "moving_subset_metrics": {
+      "zero": {
+        "mean_abs_coordinate_m": 0.07263716918420798,
+        "vector_RMSE_m": 0.1851279178492194,
+        "per_horizon_vector_RMSE_m": [
+          0.1218591939042897,
+          0.23172187811117742
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.08984550242670454,
+            0.003842050151433807
+          ],
+          [
+            0.18860207175692686,
+            0.008259052401766755
+          ]
+        ]
+      },
+      "train_mean": {
+        "mean_abs_coordinate_m": 0.06027271300356463,
+        "vector_RMSE_m": 0.15272572369590123,
+        "per_horizon_vector_RMSE_m": [
+          0.1041620987799141,
+          0.1892103341116361
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.08278854250074826,
+            0.003702043177635469
+          ],
+          [
+            0.14741029139165582,
+            0.007189974944218945
+          ]
+        ]
+      },
+      "public_constant_velocity": {
+        "mean_abs_coordinate_m": 0.05321915486554364,
+        "vector_RMSE_m": 0.12856531809054694,
+        "per_horizon_vector_RMSE_m": [
+          0.06086232368667892,
+          0.1713296809864098
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.04134110332233831,
+            0.011650042939716228
+          ],
+          [
+            0.13678053393064496,
+            0.023104939269475065
+          ]
+        ]
+      },
+      "public_kinematics_ridge": {
+        "mean_abs_coordinate_m": 0.006642642706866894,
+        "vector_RMSE_m": 0.015232619915939423,
+        "per_horizon_vector_RMSE_m": [
+          0.010717543396052239,
+          0.01868688530923989
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.006291891790705759,
+            0.0025599060690646527
+          ],
+          [
+            0.013415433061176818,
+            0.00430333990652034
+          ]
+        ]
+      },
+      "learned_full_history": {
+        "mean_abs_coordinate_m": 0.006908040999050683,
+        "vector_RMSE_m": 0.018642516987249686,
+        "per_horizon_vector_RMSE_m": [
+          0.011770258911686845,
+          0.023591267121365965
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.006887571042249784,
+            0.0020937578901632625
+          ],
+          [
+            0.015122429023855449,
+            0.0035284060399342404
+          ]
+        ]
+      }
+    },
+    "stationary_subset_metrics": {
+      "zero": {
+        "mean_abs_coordinate_m": 4.954891512510509e-05,
+        "vector_RMSE_m": 0.0006551252342021566,
+        "per_horizon_vector_RMSE_m": [
+          3.801129323246819e-17,
+          0.00092648699126154
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            5.292147742575399e-19,
+            3.800515159658376e-17
+          ],
+          [
+            0.00017710784267483648,
+            2.1087817825545183e-05
+          ]
+        ]
+      },
+      "train_mean": {
+        "mean_abs_coordinate_m": 0.02088474678922089,
+        "vector_RMSE_m": 0.04328667259936085,
+        "per_horizon_vector_RMSE_m": [
+          0.026008710001729583,
+          0.05541677592114544
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.026001632926453414,
+            0.0006066968864595043
+          ],
+          [
+            0.055387833727192005,
+            0.0015428236167786746
+          ]
+        ]
+      },
+      "public_constant_velocity": {
+        "mean_abs_coordinate_m": 0.02390641532699357,
+        "vector_RMSE_m": 0.07484402767682255,
+        "per_horizon_vector_RMSE_m": [
+          0.047341028813026834,
+          0.09466828375280775
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.005257790313486982,
+            0.026653542960918028
+          ],
+          [
+            0.010428294313204906,
+            0.05328603372036435
+          ]
+        ]
+      },
+      "public_kinematics_ridge": {
+        "mean_abs_coordinate_m": 0.003169185734828294,
+        "vector_RMSE_m": 0.0071558294357268485,
+        "per_horizon_vector_RMSE_m": [
+          0.004007756451804195,
+          0.009292452746689191
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.003986510619577262,
+            8.271801694908785e-05
+          ],
+          [
+            0.00839345585949945,
+            0.0002140584432873824
+          ]
+        ]
+      },
+      "learned_full_history": {
+        "mean_abs_coordinate_m": 0.0031689452775388945,
+        "vector_RMSE_m": 0.00687843501021268,
+        "per_horizon_vector_RMSE_m": [
+          0.004031813436796854,
+          0.008852695453380476
+        ],
+        "per_coordinate_MAE_m": [
+          [
+            0.004028563418688766,
+            8.203027917270415e-05
+          ],
+          [
+            0.008331791349055017,
+            0.00023339606323909368
+          ]
+        ]
+      }
+    },
+    "full_RSSM_or_closed_loop_planning_validated": false,
+    "strict_physics_safety_certified": false,
+    "forward_model_scope": "Only one fixed native PUSH continuation; no alternate action or closed-loop replanning efficacy claim"
+  },
+  "supplemental_clock_control": {
+    "schema": "supplemental-clock-control-v1",
+    "status": "DIAGNOSTIC_NOT_PRIMARY_PREREGISTERED_COMPARISON",
+    "code_sha256": "fd45496b1a293c4fb0fd3395923cfd62afb0044ea7f60aaae7725cc99e7ab64c",
+    "time_bins_from_train_only": 25,
+    "heldout_clock_RMSE_m": 0.005313203158759347,
+    "per_episode": {
+      "test-00": {
+        "clock_RMSE_m": 0.005135314233670896,
+        "selected_learned_RMSE_m": 0.009113861742668759
+      },
+      "test-01": {
+        "clock_RMSE_m": 0.006375111276635406,
+        "selected_learned_RMSE_m": 0.013188009443118315
+      },
+      "test-02": {
+        "clock_RMSE_m": 0.001298324355338889,
+        "selected_learned_RMSE_m": 0.006140376963778537
+      },
+      "test-03": {
+        "clock_RMSE_m": 0.005584720445498275,
+        "selected_learned_RMSE_m": 0.007343156383610636
+      },
+      "test-04": {
+        "clock_RMSE_m": 0.00534059902252855,
+        "selected_learned_RMSE_m": 0.007212332576173825
+      },
+      "test-05": {
+        "clock_RMSE_m": 0.005829993269587934,
+        "selected_learned_RMSE_m": 0.0074810447547193825
+      }
+    },
+    "episode_balanced_clock_RMSE_m": 0.0049273437672099915,
+    "episode_balanced_selected_learned_RMSE_m": 0.008413130310678243,
+    "model_refit_or_reselection": false,
+    "new_learned_model_test_forward_calls": 0,
+    "interpretation": "If clock-only matches/beats observation-conditioned prediction, this protocol may primarily test fixed-controller timing, not learned physical-property response. No closed-loop/immovable-box claim."
+  },
+  "interpretation": {
+    "model_test_vector_RMSE_mm": 9.191532639965464,
+    "zero_baseline_RMSE_mm": 65.1430647529767,
+    "clock_control_RMSE_mm": 5.313203158759347,
+    "selected_model_beats_clock_control": false,
+    "main_CI_crosses_zero": true,
+    "only13_test_moving_queries_from_one_episode": true,
+    "conclusion": "Numeric forecast fits the native trajectory but the more observation-conditioned model does not beat a simple train-only elapsed-PUSH-time lookup. No evidence yet that physical/contextual prediction adds value over fixed-controller timing; no full WM efficacy claim.",
+    "next": "Do not blindly scale this dataset or M/RSSM training. First decorrelate fixed skill clock with compile-time starting geometry/goal variation plus correctly bound caches; add observed termination/censor targets; freeze a new independent heldout protocol. No next physical study launched."
+  },
+  "physical_safety": {
+    "whole_episode_certified": false,
+    "max_raw_range_overshoot_rad": 0.00633346656552793,
+    "raw_speed_exceeded_joint_substeps_total": 0,
+    "prefix_violations_retained": true,
+    "only_strict_valid_forecast_windows_fit": true,
+    "original_native_hard_guards_not_disabled": true,
+    "no_hardware_or_deployment_admission": true
+  },
+  "storage": {
+    "as_of": "2026-10-24T18:40:12.688324+08:00",
+    "all_study_files_except_this_receipt_bytes": 1177671763,
+    "shared_static_compiled_model_gzip_bytes": 867969985,
+    "all_other_study_files_bytes": 309701778,
+    "static_model_files": 20,
+    "max_registered_dynamic_bytes": 1073741824,
+    "max_registered_new_static_bytes": 1073741824,
+    "includes_source_snapshots_logs_raw_and_labeled_videos": true
+  },
+  "closure": {
+    "schema": "narrow-push-final-independent-closure-v1",
+    "as_of": "2026-10-24T18:25:32.270448+08:00",
+    "source_execution_commit": "27ff8a0405bebf278b64e820ca87ec01a3e546ec",
+    "all20_cases_closed": true,
+    "own_study_inputs_verified": 38,
+    "upstream_source_files_verified": 148,
+    "case_inputs_min": 39,
+    "case_inputs_max": 39,
+    "cases": [
+      {
+        "id": "train-00",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368380,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527706,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-01",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368386,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527576,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-02",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368398,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527845,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-03",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368405,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527738,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-04",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368457,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527789,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-05",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368465,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527708,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-06",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368477,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527588,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-07",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368484,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527355,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-08",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368491,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527713,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "train-09",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368498,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527449,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "validation-00",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368505,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527647,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "validation-01",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368516,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527597,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "validation-02",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368527,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527362,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "validation-03",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368534,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527558,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-00",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368541,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.00633346656552793,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-01",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368553,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527845,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-02",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368560,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527665,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-03",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368567,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527718,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-04",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368574,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466565527774,
+        "strict_speed_exceeded_joint_substeps": 0
+      },
+      {
+        "id": "test-05",
+        "own_frozen_inputs": 39,
+        "physical_mass_and_all_pair_friction_verified": true,
+        "collector_pid": 1368581,
+        "pid_exited": true,
+        "strict_whole_episode_range_violation_rad": 0.006333466560362349,
+        "strict_speed_exceeded_joint_substeps": 0
+      }
+    ],
+    "outcomes": {
+      "probe_stop_at_native_push_success_boundary": 7,
+      "native_or_collection_failure": 13
+    },
+    "native_failure_reasons": {
+      "RuntimeError('push:arm_effort_safety')": 12,
+      "RuntimeError('push:invalid_hand_contact')": 1
+    },
+    "main_sim_seconds_total": 412.4400000000037,
+    "auxiliary_sim_seconds_total": 130.09999999999766,
+    "actual_main_RGBD_frames": 4133,
+    "actual_main_motor_steps": 82488,
+    "all20_data_audit_errors": [],
+    "all_physical_parameter_bindings_verified": true,
+    "all_released_target_labels_recomputed": true,
+    "max_label_recompute_error_m": 1.4729019837123047e-08,
+    "actual_training_split_only": true,
+    "training_runs": 1,
+    "closed_form_fits": 8,
+    "heldout_evaluations": 1,
+    "test_claim_consumed": true,
+    "learned_control_calls": 0,
+    "original_skill_weight_updates": 0,
+    "all_physics_pids_exited": true,
+    "launcher_pid": 1368375,
+    "collector_driver_pid": 1368376,
+    "locks_available": {
+      "/mnt/yuanyue/data/go2-piper-world-model/push-forecast-study-20261024-v1/study-dispatch.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock": true
+    },
+    "remaining_physics_attempts": 0,
+    "automatic_retry": false,
+    "dynamic_bytes_by_folder": {
+      "episode": 292082179,
+      "review-state": 3699056,
+      "dataset": 831090,
+      "models": 337395,
+      "review-v2": 3624821
+    },
+    "dynamic_bytes_total": 300574541,
+    "static_model_cache_gzip_bytes": 867969985,
+    "static_model_cache_files": 20,
+    "strict_whole_episode_safety_certified": false,
+    "errors": []
+  },
+  "review": {
+    "local_folder": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review",
+    "all_conditions_csv": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/all-scene-conditions.csv",
+    "videos": [
+      {
+        "case_id": "train-00",
+        "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/train-00-scene-review.mp4",
+        "sha256": "92c1958dd5329892cdc1ac610ca04ba4f58ca6d5560d508276b4dda99f62a9c6",
+        "frames": 217,
+        "outcome": "probe_stop_at_native_push_success_boundary",
+        "error": null
+      },
+      {
+        "case_id": "train-09",
+        "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/train-09-scene-review.mp4",
+        "sha256": "45100c00ca74ac5c48226ec5e6224f60be4259038b47307bd3c04ea6207bb916",
+        "frames": 201,
+        "outcome": "native_or_collection_failure",
+        "error": "RuntimeError('push:arm_effort_safety')"
+      },
+      {
+        "case_id": "test-00",
+        "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/test-00-scene-review.mp4",
+        "sha256": "8a921d1207c69f54ec9b813a76bc6b304d2c600cf78df69356e73b24c4b38cca",
+        "frames": 200,
+        "outcome": "native_or_collection_failure",
+        "error": "RuntimeError('push:invalid_hand_contact')"
+      },
+      {
+        "case_id": "test-01",
+        "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/test-01-scene-review.mp4",
+        "sha256": "c5177de9366a013eccbd6cf8c07b276f146a76ab063cc365c97f9183902e543c",
+        "frames": 218,
+        "outcome": "probe_stop_at_native_push_success_boundary",
+        "error": null
+      },
+      {
+        "case_id": "test-05",
+        "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1/review/test-05-scene-review.mp4",
+        "sha256": "f27d8d6643e3205a4a4f9e9262886d6f9fba7dcb4957ef15b3c8c9d5d756e33a",
+        "frames": 200,
+        "outcome": "native_or_collection_failure",
+        "error": "RuntimeError('push:arm_effort_safety')"
+      }
+    ],
+    "actual_same_episode_full_states": true,
+    "actual_onboard_inset": true,
+    "review_physics_labels_not_model_inputs": true,
+    "no_interpolation_terminal_padding_or_new_physics": true,
+    "whole_capture_not_full_NAV_PUSH_CLIMB_route": true,
+    "overlay_first_attempt_failed_PIL_type_raw_failure_retained": true,
+    "overlay_v2_fixed_without_any_physics_retry": true,
+    "program_sha256": "d8ef75a30ddfbbd30ea11beb219b8f67aaf2ebe36b3dd5da36c739beea2cc9e1"
+  },
+  "evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/push-forecast-study-20261024-v1",
+  "formal_root": "/mnt/yuanyue/data/go2-piper-world-model/push-forecast-study-20261024-v1",
+  "local_full_archive_integrity_verified": true,
+  "original_skill_training_runs": 0,
+  "M_RSSM_training_runs": 0,
+  "narrow_predictor_training_pipeline_runs": 1,
+  "learned_control_calls": 0,
+  "current_physics_or_training_jobs": 0,
+  "remaining_physics_claims": 0
+}

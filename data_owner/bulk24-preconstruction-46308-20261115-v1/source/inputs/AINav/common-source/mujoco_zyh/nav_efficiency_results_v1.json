@@ -1,0 +1,361 @@
+{
+  "schema": "piper-mujoco-nav-efficiency-results-v1",
+  "as_of": "2026-10-24T17:08:15.397042+08:00",
+  "status": "NAV_CIRCLING_AND_LONG_WAIT_REDUCED_WHOLE_ROUTE_COMPLETE_STRICT_JOINT_RANGE_SAFETY_NOT_ACCEPTED",
+  "execution_commit": "1cc00593b58ec23b53b2950b8a944e1bebd0cd9a",
+  "upstream_commit": "340d7d8b0fffbf3c566e503a919c8a92393c5cbe",
+  "scope": "Native1kg box/20cm platform, frozen actors/native Machine with explicit own post-PUSH high-level NAV and wrist damping adapter; not A20kg failure/no-reset recovery/B",
+  "actual_new_physical_protocols_this_task": 2,
+  "automatic_retry": false,
+  "failed_v1": {
+    "execution_commit": "0d4947c0d007e20a664cb53eee422b7c30a340f2",
+    "outcome": "native_or_collection_failure",
+    "sim_seconds": 21.020000000000103,
+    "wall_seconds": 16.989465408027172,
+    "error": "RuntimeError(\"nav_efficiency_15s_censor:{'position': True, 'yaw': True, 'planar_speed': True, 'yaw_rate': False, 'arm_speed': False, 'tilt': True, 'zero_command_phase': False, 'arm_joints': True}\")",
+    "cause": "Body .2-.3m/s requests stalled this actor near target; evidence retained; no retry of v1 root",
+    "data_audit": {
+      "schema": "piper-mujoco-closed-data-audit-v2",
+      "data_integrity_pass": true,
+      "errors": [],
+      "actual_physical_command_steps": 4204,
+      "actual_visual_frames": 211,
+      "full_intervening_actions_checked": true,
+      "max_PD_recompute_error": 0.0,
+      "max_torque_clip_error": 0.0,
+      "last_visual_tick": 1050,
+      "streaming_chunk_read": true,
+      "actor_or_WM_forwards": 0,
+      "task_success_inferred": false,
+      "actual_task_outcome": "native_or_collection_failure"
+    },
+    "closure": {
+      "own_frozen_files_verified": 31,
+      "upstream_verified_files": 148,
+      "pids_exited": {
+        "1367457": true,
+        "1367458": true
+      },
+      "locks_available": {
+        "/mnt/yuanyue/data/go2-piper-world-model/nav-efficiency-20261024-v1/dispatch.lock": true,
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock": true,
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock": true
+      },
+      "exit_code": 2,
+      "claim_consumed": true,
+      "remaining_attempts": 0,
+      "automatic_retry": false
+    },
+    "local_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/nav-efficiency-20261024-v1/run"
+  },
+  "successful_v2": {
+    "outcome": "frozen_skill_sequence_complete_engineering_NAV",
+    "task_success": true,
+    "sim_seconds": 62.62000000001358,
+    "wall_seconds": 74.0089135542512,
+    "reset_after_initial": 0,
+    "auxiliary_calibration": {
+      "worlds": 1,
+      "sim_seconds": 6.5049999999998835,
+      "source": "original zyh reference_stance + settle",
+      "main_world_unchanged": true,
+      "separate_initialization_state_adjustments_not_task_recovery": true,
+      "used_as_training_episode": false
+    },
+    "frames": 627,
+    "physical_motor_steps": 12524,
+    "native_route_complete_sim_s": 57.620000000011025,
+    "post_success_hold_s": 5.0,
+    "method": {
+      "method": "postpush_body_xy_native_minimums_wrist_damping_v2",
+      "source_native_high_level_or_NAV_motor_gains": false,
+      "actors_modified": false,
+      "source_bundle_modified": false,
+      "physical_state_or_queue_reset": false,
+      "route_geometry_changed": false,
+      "all_NAV_goals_final_yaw_zero": true,
+      "original_arrival_predicates_and_1s_hold_unchanged": true,
+      "body_velocity_limits": [
+        0.5,
+        0.4,
+        0.9
+      ],
+      "nonzero_command_minimums": [
+        0.4,
+        0.4,
+        0.8
+      ],
+      "native_command_slew_false_and_zero_request_braking": true,
+      "original_initial_NAV_and_PUSH_prefix_unmodified": true,
+      "only_postpush_NAV_arm_joint5_kd_old": 1.0,
+      "only_postpush_NAV_arm_joint5_kd_new": 2.5,
+      "native_NAV_other_gains_unchanged": true,
+      "native_PUSH_CLIMB_and_collision_guards_unchanged": true,
+      "max_single_NAV_s": 15.0,
+      "max_position_reacquisitions": 2,
+      "warning": "Command-envelope compliance/CPU tests do not certify frozen actor performance or strict physical safety"
+    },
+    "local_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/nav-efficiency-20261024-v2/run"
+  },
+  "comparison": {
+    "schema": "mujoco-nav-efficiency-readonly-comparison-v1",
+    "new_physics_steps": 0,
+    "new_actor_or_WM_forwards": 0,
+    "trajectory_sampling_hz": 10,
+    "same_source_group_not_independent_research": true,
+    "first30s_motor_chunk_sha256_exact_match": true,
+    "results": {
+      "baseline": {
+        "route_success": true,
+        "sim_seconds": 118.9599999999643,
+        "collector_wall_seconds": 116.47299036756158,
+        "postpush_NAV": [
+          {
+            "index": 2,
+            "start_s": 30.599999999998197,
+            "end_s": 41.140000000002594,
+            "duration_s": 10.540000000004397,
+            "path_m_at10Hz": 1.5510932917733025,
+            "absolute_yaw_travel_deg_at10Hz": 224.86604053368646,
+            "net_yaw_deg": 172.60543812895753,
+            "seconds_after_first_within6p5cm": 1.9400000000009925
+          },
+          {
+            "index": 3,
+            "start_s": 41.140000000002594,
+            "end_s": 71.20000000000773,
+            "duration_s": 30.06000000000514,
+            "path_m_at10Hz": 4.337078879517616,
+            "absolute_yaw_travel_deg_at10Hz": 713.1233049144099,
+            "net_yaw_deg": 177.50871182441625,
+            "seconds_after_first_within6p5cm": 23.800000000001937
+          },
+          {
+            "index": 4,
+            "start_s": 71.20000000000773,
+            "end_s": 105.61999999997643,
+            "duration_s": 34.419999999968695,
+            "path_m_at10Hz": 0.7920408985242596,
+            "absolute_yaw_travel_deg_at10Hz": 121.2133999412177,
+            "net_yaw_deg": 15.50883838607495,
+            "seconds_after_first_within6p5cm": 32.71999999997024
+          }
+        ],
+        "total_postpush_NAV_s": 75.01999999997824,
+        "total_postpush_absolute_yaw_deg": 1059.202745389314,
+        "raw_q_before_safety_by_skill": {
+          "startup": {
+            "max_joint_range_overshoot_rad": 0.004570054319313193,
+            "speed_exceeded_joint_samples": 0
+          },
+          "nav": {
+            "max_joint_range_overshoot_rad": 0.008620500145773497,
+            "speed_exceeded_joint_samples": 23
+          },
+          "push": {
+            "max_joint_range_overshoot_rad": 0.0017987253154117407,
+            "speed_exceeded_joint_samples": 0
+          },
+          "climb": {
+            "max_joint_range_overshoot_rad": 0.006723239076639377,
+            "speed_exceeded_joint_samples": 52
+          }
+        },
+        "strict_safety_pass": false
+      },
+      "v2": {
+        "route_success": true,
+        "sim_seconds": 62.62000000001358,
+        "collector_wall_seconds": 74.0089135542512,
+        "postpush_NAV": [
+          {
+            "index": 2,
+            "start_s": 30.599999999998197,
+            "end_s": 37.16000000000056,
+            "duration_s": 6.560000000002361,
+            "path_m_at10Hz": 1.3093743928029722,
+            "absolute_yaw_travel_deg_at10Hz": 41.62809774433834,
+            "net_yaw_deg": 3.0555323621250494,
+            "seconds_after_first_within6p5cm": 3.1600000000016166
+          },
+          {
+            "index": 3,
+            "start_s": 37.16000000000056,
+            "end_s": 46.72000000000545,
+            "duration_s": 9.56000000000489,
+            "path_m_at10Hz": 2.155909988837544,
+            "absolute_yaw_travel_deg_at10Hz": 61.51210729598883,
+            "net_yaw_deg": 10.404712551237814,
+            "seconds_after_first_within6p5cm": 2.0200000000010334
+          },
+          {
+            "index": 4,
+            "start_s": 46.72000000000545,
+            "end_s": 49.28000000000676,
+            "duration_s": 2.5600000000013097,
+            "path_m_at10Hz": 0.2981626228540204,
+            "absolute_yaw_travel_deg_at10Hz": 18.38661952340776,
+            "net_yaw_deg": -13.545208443800178,
+            "seconds_after_first_within6p5cm": 1.6800000000008595
+          }
+        ],
+        "total_postpush_NAV_s": 18.68000000000856,
+        "total_postpush_absolute_yaw_deg": 121.52682456373493,
+        "raw_q_before_safety_by_skill": {
+          "startup": {
+            "max_joint_range_overshoot_rad": 0.004570054319313193,
+            "speed_exceeded_joint_samples": 0
+          },
+          "nav": {
+            "max_joint_range_overshoot_rad": 0.011222606861691724,
+            "speed_exceeded_joint_samples": 0
+          },
+          "push": {
+            "max_joint_range_overshoot_rad": 0.0017987253154117407,
+            "speed_exceeded_joint_samples": 0
+          },
+          "climb": {
+            "max_joint_range_overshoot_rad": 0.006857474201597909,
+            "speed_exceeded_joint_samples": 46
+          }
+        },
+        "strict_safety_pass": false
+      }
+    },
+    "NAV_time_saved_s": 56.33999999996968,
+    "through_PUSH_closure_30p6sim_actual_motor_and_state_prefix_exact_match": true,
+    "prefix_matched_physical_steps": 6120
+  },
+  "strict_safety": {
+    "passed": false,
+    "old_speed_exceeded_joint_substeps": 75,
+    "new_speed_exceeded_joint_substeps": 46,
+    "old_max_range_overshoot_rad": 0.008620500145773497,
+    "new_max_range_overshoot_rad": 0.011222606861691724,
+    "new_per_joint_range_overshoot_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.011222606861691724,
+      0.005576941693365111,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "new_NAV_speed_exceedances": 0,
+    "new_CLIMB_speed_exceedances": 46,
+    "range_overshoot_worsened_in_NAV": true,
+    "no_safety_tolerance_relaxed": true,
+    "no_batch_training_or_hardware_admission": true,
+    "next_blocker": "NAV arm zero reference lies on joint2/joint3 bounds; protected interior stow/reference planning and actual limit validation still required. Do not hide excursions or change strict thresholds."
+  },
+  "video": {
+    "local_path": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/nav-efficiency-20261024-v2/run/review-video/complete-scene-review.mp4",
+    "sha256": "4c3b319d9c991a860d520803639063a7edd2968088245c9b03c1a5de08b2dc9e",
+    "actual_frames": 627,
+    "fps": 10.0,
+    "last_actual_sim_s": 62.60000000001357,
+    "actual_full_states": true,
+    "synced_onboard_RGB": true,
+    "offline_display_only": true,
+    "interpolation_padding_or_new_physics": false
+  },
+  "independent_data_audit": {
+    "schema": "piper-mujoco-closed-data-audit-v2",
+    "data_integrity_pass": true,
+    "errors": [],
+    "actual_physical_command_steps": 12524,
+    "actual_visual_frames": 627,
+    "full_intervening_actions_checked": true,
+    "max_PD_recompute_error": 0.0,
+    "max_torque_clip_error": 0.0,
+    "last_visual_tick": 3130,
+    "streaming_chunk_read": true,
+    "actor_or_WM_forwards": 0,
+    "task_success_inferred": false,
+    "actual_task_outcome": "frozen_skill_sequence_complete_engineering_NAV"
+  },
+  "final_CPU_tests_per_revision": 129,
+  "skipped": 0,
+  "zero_step_preflight_pass": true,
+  "closure": {
+    "schema": "nav-efficiency-closure-v1",
+    "as_of": "2026-10-24T17:05:26.202126+08:00",
+    "own_frozen_files_verified": 32,
+    "upstream_verified_files": 148,
+    "pids_exited": {
+      "1367657": true,
+      "1367658": true
+    },
+    "locks_available": {
+      "/mnt/yuanyue/data/go2-piper-world-model/nav-efficiency-20261024-v2/dispatch.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock": true,
+      "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock": true
+    },
+    "exit_code": 0,
+    "claim_consumed": true,
+    "remaining_attempts": 0,
+    "automatic_retry": false,
+    "dynamic_bytes_by_folder": {
+      "episode": 46449402,
+      "review-state": 548371,
+      "review-video": 1813483
+    },
+    "total_dynamic_episode_plus_review_bytes": 48811256,
+    "shared_static_model_bytes": 43398597,
+    "shared_static_model_path": "/mnt/yuanyue/data/go2-piper-world-model/compiled-review-models/72f60fc446582ba8ff0a924c29e3c92ca3f54f8ec74ecebfa17b6f3e1d1f70ec.mjb.gz",
+    "video_metadata": {
+      "plugin": "ffmpeg",
+      "nframes": null,
+      "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+      "codec": "h264",
+      "pix_fmt": "yuv420p(progressive)",
+      "fps": 10.0,
+      "source_size": [
+        960,
+        512
+      ],
+      "size": [
+        960,
+        512
+      ],
+      "rotate": 0,
+      "duration": 62.7
+    },
+    "video_sha256": "4c3b319d9c991a860d520803639063a7edd2968088245c9b03c1a5de08b2dc9e",
+    "extra_screenshot_video_indices": [
+      400,
+      550,
+      626
+    ],
+    "training_runs": 0,
+    "WM_forwards": 0,
+    "WM_control": 0,
+    "actual_decoded_video_frames": 627
+  },
+  "world_model": {
+    "training_runs": 0,
+    "forwards": 0,
+    "control": 0,
+    "prediction_contract": "/home/yuanyue/re-nav/GO2-PIPER/docs/MUJOCO_WORLD_MODEL_PREDICTION_CONTRACT_CN.md",
+    "main_model": "visual_latent_world_model.py:build_visual_world_model(M)",
+    "expectation": "Action-conditioned short-horizon object/robot displacement plus support/hard-stop event distributions; NOT learned low-level skills, complete-scene video, accurate hidden masses, or validated full-task success",
+    "data_admission": "MuJoCo v2 causal complete-action loader and matched labels/masks unfinished; this same-seed single-box engineering pair is not a sufficient independent world-model training/evaluation dataset",
+    "existing_output_gaps": [
+      "robot dy/yaw absent",
+      "no separate typed soft-PUSH-failure or task success/time head",
+      "native-vs-macro causal action adapters not matched to v2 motor stream",
+      "support labels require actual contact/force recording, not offline recomputation"
+    ]
+  }
+}

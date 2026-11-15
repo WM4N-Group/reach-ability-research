@@ -1,0 +1,198 @@
+{
+  "schema": "mujoco-terminated-PUSH-forecast-pilot-v2-preparation",
+  "status": "CPU_LABEL_CONTRACT_ONLY_NOT_DISPATCHABLE",
+  "date": "2026-10-25",
+  "user_authorized_order": "1 resume NAV -> 2 real selected B -> 3 small fresh prediction pilot",
+  "physics_started": false,
+  "training_started": false,
+  "dispatchable": false,
+  "training_admission_ready": false,
+  "dependencies": [
+    "step2 same-episode research A-failure/B-local native PUSH result + audit",
+    "source-matched initial geometry/goal/cache/observation/contact/RGBD compile preflight per case",
+    "new executor/study/test claims and dataset roles frozen"
+  ],
+  "question": "Given actual past RGBD/proprio and complete intervening motor commands, predict box XY displacement until min(t+h,first PUSH exit), plus soft/hard protection failure within h=.4/.8s under frozen executor.",
+  "reason_for_terminated_option_target": "60ms soft abort is followed by retreat. Post-exit retreat is NOT the counterfactual continued-PUSH future. Record first exit pose/time directly; never interpolate or zero-pad missing future.",
+  "forbidden_claim": "Not a predictor of what indefinite continued pushing would do after a safety exit; not permanent immovability.",
+  "cases": [
+    {
+      "case_id": "train-0",
+      "role": "train",
+      "seed": 5400,
+      "mass_kg_executor_private": 0.5,
+      "friction_executor_private": 0.15,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 0
+    },
+    {
+      "case_id": "train-1",
+      "role": "train",
+      "seed": 5401,
+      "mass_kg_executor_private": 1.0,
+      "friction_executor_private": 0.3,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 1
+    },
+    {
+      "case_id": "train-2",
+      "role": "train",
+      "seed": 5402,
+      "mass_kg_executor_private": 2.0,
+      "friction_executor_private": 0.15,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 2
+    },
+    {
+      "case_id": "train-3",
+      "role": "train",
+      "seed": 5403,
+      "mass_kg_executor_private": 4.0,
+      "friction_executor_private": 0.45,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 0
+    },
+    {
+      "case_id": "train-4",
+      "role": "train",
+      "seed": 5404,
+      "mass_kg_executor_private": 8.0,
+      "friction_executor_private": 0.3,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 1
+    },
+    {
+      "case_id": "train-5",
+      "role": "train",
+      "seed": 5405,
+      "mass_kg_executor_private": 20.0,
+      "friction_executor_private": 0.45,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 2
+    },
+    {
+      "case_id": "validation-0",
+      "role": "validation",
+      "seed": 5406,
+      "mass_kg_executor_private": 0.75,
+      "friction_executor_private": 0.35,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 0
+    },
+    {
+      "case_id": "validation-1",
+      "role": "validation",
+      "seed": 5407,
+      "mass_kg_executor_private": 3.0,
+      "friction_executor_private": 0.2,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 1
+    },
+    {
+      "case_id": "validation-2",
+      "role": "validation",
+      "seed": 5408,
+      "mass_kg_executor_private": 12.0,
+      "friction_executor_private": 0.4,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 2
+    },
+    {
+      "case_id": "test-0",
+      "role": "test",
+      "seed": 5409,
+      "mass_kg_executor_private": 0.65,
+      "friction_executor_private": 0.25,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 0
+    },
+    {
+      "case_id": "test-1",
+      "role": "test",
+      "seed": 5410,
+      "mass_kg_executor_private": 1.5,
+      "friction_executor_private": 0.4,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 1
+    },
+    {
+      "case_id": "test-2",
+      "role": "test",
+      "seed": 5411,
+      "mass_kg_executor_private": 16.0,
+      "friction_executor_private": 0.2,
+      "box_appearance": "identical_no_mass_color_encoding",
+      "initial_geometry_group": 2
+    }
+  ],
+  "split_independent_episodes": {
+    "train": 6,
+    "validation": 3,
+    "test": 3
+  },
+  "old_exposed_test_or_engineering_recovery_data_used_for_training": false,
+  "model_inputs": [
+    "past actual RGBD/proprio",
+    "all intervening actually issued/delayed motor position/velocity/Kp/Kd/feedforward channels",
+    "past causal timestamps"
+  ],
+  "forbidden_inputs": [
+    "mass",
+    "friction",
+    "private object pose/catalog",
+    "opaque object ID",
+    "future actual actions",
+    "future outcomes or termination time"
+  ],
+  "visible_geometry_groups": [
+    {
+      "initial_box_dx_m": -0.08,
+      "initial_box_dy_m": -0.08,
+      "initial_box_yaw_rad": -0.06
+    },
+    {
+      "initial_box_dx_m": 0.0,
+      "initial_box_dy_m": 0.0,
+      "initial_box_yaw_rad": 0.0
+    },
+    {
+      "initial_box_dx_m": 0.08,
+      "initial_box_dy_m": 0.08,
+      "initial_box_yaw_rad": 0.06
+    }
+  ],
+  "geometry_admission": "New-world construction only. All initial approach, immutable original world-X+.6 goal, selected readers/contacts/controller caches must agree. No in-episode pose swaps or fake waits/timestamps.",
+  "training": "One frozen small ridge displacement + regularized binary failure-head training pipeline; alpha selection from preregistered [1e-4,1e-2,1,100] using validation only. No M/RSSM or skill retraining.",
+  "training_coverage_gate": "At least3 independent moving train episodes and3 independent failure train episodes; if insufficient report coverage block, never silently add/retry or inspect test to rebalance.",
+  "baselines": [
+    "zero displacement",
+    "observed constant velocity",
+    "train-only PUSH-clock lookup",
+    "causal kinematic-history ridge",
+    "train-only failure prevalence"
+  ],
+  "evaluation": {
+    "test_claims": 1,
+    "model_and_preprocessing_frozen_before_test": true,
+    "episode_equal_weight": true,
+    "adjacent_windows_not_independent_samples": true,
+    "report_episode_bootstrap_uncertainty": true,
+    "with_only_three_test_episodes_not_general_effectiveness_certification": true,
+    "if_not_better_than_clock": "negative result; do not expand models/data or deploy"
+  },
+  "budgets": {
+    "main_episodes": 12,
+    "per_episode_max_sim_s": 60,
+    "per_episode_max_wall_s": 1200,
+    "grace_s": 10,
+    "reset_after_initial": 0,
+    "automatic_retry": false,
+    "total_dynamic_payload_cap_bytes": 536870912,
+    "full_state_review_sentinels": 2,
+    "total_static_review_model_cap_bytes": 100663296,
+    "complete_motor_hz": 200,
+    "RGBD_hz": 10,
+    "WM_control": false
+  },
+  "next": "Implement collector/label integration and all admission gates only after step2. This JSON does not launch physics or training."
+}

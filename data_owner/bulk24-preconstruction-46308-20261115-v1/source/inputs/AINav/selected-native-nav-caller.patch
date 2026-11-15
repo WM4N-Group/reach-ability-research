@@ -1,0 +1,15 @@
+--- ainav/native/execution_judged_course.py
++++ ainav/native/execution_judged_course.py
+@@ -115,7 +115,11 @@
+     def _native_nav(self,intent,spec,now):
+         # This private scoped entry reference may follow actual object geometry.
+         # It never enters the model observation/map or semantic intent batch.
+-        ref=PublicReference(intent.target_ref,tuple(spec.approach_xy),spec.source_height_m,'selected-skill-private-entry-reference')
++        _prepare_goal_xy = tuple(spec.approach_xy)
++        _prepare_goal_callback = globals().get('_ainav_selected_climb_prepare_goal')
++        if _prepare_goal_callback is not None:
++            _prepare_goal_xy = _prepare_goal_callback(self, intent, spec, now)
++        ref=PublicReference(intent.target_ref,_prepare_goal_xy,spec.source_height_m,'selected-skill-private-entry-reference')
+         self._entry('NAV',ref)
+         self._freeze_execution_reference(ref)
+         proof=self.journal(dict(event='selected_intent_private_NAV_entry_bound',intent_sha256=intent.sha256,time_s=now,

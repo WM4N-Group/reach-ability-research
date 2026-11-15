@@ -1,0 +1,16 @@
+{
+  "schema": "composite-shadow-postcollection-development-analysis-v2",
+  "reason": "In the completed five-case native route, strict physical-limit/speed filtering leaves zero NAV train windows; train-2 and validation-0 share the same complete motor trajectory despite different seed values.",
+  "raw_collection_version": "composite-shadow-native-route-20261025-v1",
+  "raw_roles_or_freeze_changed": false,
+  "training_input_cases": ["train-0", "train-1", "train-2"],
+  "validation_and_test_inputs_read_before_training": false,
+  "analysis_role": "post-collection exploratory development, not preregistered independent validation",
+  "future_labels": "Only measured within-skill 0.4/0.8s root and box body-frame XY. Any range/speed violation is retained as an explicit unsafe_future flag, not erased or called safe.",
+  "model": "One fixed-alpha 0.01 public RGBD/proprio/complete past motor ridge shadow baseline",
+  "training_runs_allowed": 1,
+  "hyperparameter_or_model_selection_on_validation": false,
+  "heldout_test_evaluations_now": 0,
+  "WM_control": false,
+  "claims_excluded": ["strict physical safety", "independent validation", "multistep task imagination", "A/B/C three-box 40cm task", "general world-model effectiveness"]
+}

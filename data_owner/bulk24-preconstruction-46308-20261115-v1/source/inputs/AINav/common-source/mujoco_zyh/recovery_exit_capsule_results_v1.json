@@ -1,0 +1,313 @@
+{
+  "schema": "actual-recovery-exit-capsule-diagnostic-results-v1",
+  "execution_source_commit": "5c413a8646cf9563ef9232071dbf8055c1afe7b0",
+  "local_evidence_root": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/exit-capsule-protocol-preparation-20261025-v3",
+  "formal_host_evidence_root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-protocol-preparation-20261025-v3",
+  "v3_actual_capsule_diagnostic_acceptance_pass": true,
+  "v3_actual_canonical_shared_resource_admission_pass": true,
+  "recovery_success": false,
+  "original_physical_or_reference_refusals_preserved": true,
+  "new_independent_generalization_samples": 0,
+  "CPU_tests_final": {
+    "passed": 213,
+    "skipped": 0,
+    "new_history_term_encoding_tests": 4
+  },
+  "CPU_frozen_actor_interface_forwards_across_three_test_runs": 12,
+  "research_WM_forwards_or_training_or_heldout_prediction_loads": 0,
+  "new_MJB_files_saved": 0,
+  "family_execution_ledger": {
+    "schema": "known-development-exit-capsule-family-closure-v1",
+    "all_roots": [
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-joint2-20261025-v1",
+        "source_version": 1,
+        "case": "joint2",
+        "report_created": false,
+        "claim_created": false,
+        "sim_seconds": 0.0,
+        "auxiliary_sim_seconds": 0.0,
+        "never_dispatch_again": true
+      },
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-base-speed-20261025-v1",
+        "source_version": 1,
+        "case": "base-speed",
+        "report_created": false,
+        "claim_created": false,
+        "sim_seconds": 0.0,
+        "auxiliary_sim_seconds": 0.0,
+        "never_dispatch_again": true
+      },
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-joint2-20261025-v2",
+        "source_version": 2,
+        "case": "joint2",
+        "report_created": true,
+        "claim_created": true,
+        "sim_seconds": 16.140000000001073,
+        "auxiliary_sim_seconds": 6.5049999999998835,
+        "error": "RuntimeError('required_private_failure_capsule_refused:soft_progress_abort') private_failure_capsule_incomplete",
+        "task_success": false,
+        "dynamic_bytes": 11575609,
+        "collector_PID": 1374770,
+        "collector_PID_exited": true
+      },
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-base-speed-20261025-v2",
+        "source_version": 2,
+        "case": "base-speed",
+        "report_created": false,
+        "claim_created": false,
+        "sim_seconds": 0.0,
+        "auxiliary_sim_seconds": 0.0,
+        "never_dispatch_again": true
+      },
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-joint2-20261025-v3",
+        "source_version": 3,
+        "case": "joint2",
+        "report_created": true,
+        "claim_created": true,
+        "sim_seconds": 16.145000000001072,
+        "auxiliary_sim_seconds": 6.5049999999998835,
+        "error": "RuntimeError('unload_coupled_reference_intersection_empty:1')",
+        "task_success": false,
+        "dynamic_bytes": 11765358,
+        "collector_PID": 1375134,
+        "collector_PID_exited": true
+      },
+      {
+        "root": "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-base-speed-20261025-v3",
+        "source_version": 3,
+        "case": "base-speed",
+        "report_created": true,
+        "claim_created": true,
+        "sim_seconds": 15.570000000001034,
+        "auxiliary_sim_seconds": 6.5049999999998835,
+        "error": "RuntimeError('measured_unload_retreat_outside_original_envelope')",
+        "task_success": false,
+        "dynamic_bytes": 11287013,
+        "collector_PID": 1375144,
+        "collector_PID_exited": true
+      }
+    ],
+    "total_main_episodes_executed": 3,
+    "family_max_main_episodes": 3,
+    "remaining_main_episodes": 0,
+    "main_sim_seconds": 47.85500000000317,
+    "auxiliary_sim_seconds": 19.514999999999652,
+    "total_main_RGBD_frames": 480,
+    "dynamic_payload_bytes_all_three_actual_main_episodes": 34627980,
+    "new_MJB_files_saved": 0,
+    "all_actual_collector_PIDs_exited": true,
+    "v3_capsule_acceptance": [
+      true,
+      true
+    ],
+    "recovery_success": false,
+    "old_source_failures_roles_or_claims_modified": false,
+    "no_automatic_retry_or_v4": true,
+    "WM_training_or_forwards": 0
+  },
+  "actual_cases": {
+    "joint2": {
+      "schema": "actual-recovery-exit-capsule-independent-audit-v1",
+      "capsule_diagnostic_acceptance_pass": true,
+      "formal_canonical_shared_resource_admission_pass": true,
+      "recovery_success": false,
+      "original_protection_failure_preserved": true,
+      "new_independent_generalization_sample": false,
+      "execution_source_commit": "5c413a8646cf9563ef9232071dbf8055c1afe7b0",
+      "case": "joint2",
+      "sim_seconds": 16.145000000001072,
+      "reset_after_initial": 0,
+      "old_known_development_condition": "/mnt/yuanyue/data/go2-piper-world-model/terminated-option-forecast-study-20261025-v2/episodes/train-3",
+      "old_all_motor_channels_bitwise_prefix_match": {
+        "issued": true,
+        "delayed": true,
+        "torque": true,
+        "raw_torque": true,
+        "q_before": true,
+        "dq_before": true,
+        "physical_tick": true,
+        "time_s": true
+      },
+      "exact_soft_exit_time_s": 16.140000000001073,
+      "exact_terminal_time_s": 16.145000000001072,
+      "actual_capsule_events": [
+        "soft_progress_abort",
+        "unload_reference_refusal",
+        "terminal_exception"
+      ],
+      "selected_contact_channel_reconstructions": 75,
+      "data_integrity_pass": true,
+      "original_goal_history_preserved": true,
+      "outcome": {
+        "retired_cached_history_terms_and_goal_bitwise_preserved": true,
+        "exit_base_linear_speed_m_s": 0.12150192741639382,
+        "terminal_base_linear_speed_m_s": 0.12659364288344652,
+        "exit_COM_velocity_world_m_s": [
+          0.07574947116384541,
+          -0.0589716859699678,
+          0.01892138836150536
+        ],
+        "exit_measured_base_acceleration_world_m_s2": [
+          0.9367890618138482,
+          -0.0939762779657653,
+          0.19582171182872563
+        ],
+        "measured_acceleration_is_NOT_a_future_bound": true,
+        "exit_base_below_original_point15_gate": true,
+        "new_recovery_motor_commands_applied_before_refusal": false,
+        "exact_refusal_gravity_Nm": [
+          0.21297873556613922,
+          -14.762910842895508,
+          -5.030433654785156,
+          -0.48096734285354614,
+          -1.0622178316116333,
+          0.00036105679464526474
+        ],
+        "original_coupled_refusal_reproduced_from_actual_inputs": true
+      },
+      "canonical_and_dispatch_locks_currently_released": [
+        "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-joint2-20261025-v3/dispatch.lock",
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock",
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock"
+      ],
+      "old_study_missing_resource_locks_not_repaired": true,
+      "physics_actor_WM_training_calls_by_audit": 0
+    },
+    "base-speed": {
+      "schema": "actual-recovery-exit-capsule-independent-audit-v1",
+      "capsule_diagnostic_acceptance_pass": true,
+      "formal_canonical_shared_resource_admission_pass": true,
+      "recovery_success": false,
+      "original_protection_failure_preserved": true,
+      "new_independent_generalization_sample": false,
+      "execution_source_commit": "5c413a8646cf9563ef9232071dbf8055c1afe7b0",
+      "case": "base-speed",
+      "sim_seconds": 15.570000000001034,
+      "reset_after_initial": 0,
+      "old_known_development_condition": "/mnt/yuanyue/data/go2-piper-world-model/terminated-option-forecast-study-20261025-v2/episodes/train-5",
+      "old_all_motor_channels_bitwise_prefix_match": {
+        "issued": true,
+        "delayed": true,
+        "torque": true,
+        "raw_torque": true,
+        "q_before": true,
+        "dq_before": true,
+        "physical_tick": true,
+        "time_s": true
+      },
+      "exact_soft_exit_time_s": 15.560000000001033,
+      "exact_terminal_time_s": 15.570000000001034,
+      "actual_capsule_events": [
+        "soft_progress_abort",
+        "unload_envelope_refusal",
+        "terminal_exception"
+      ],
+      "selected_contact_channel_reconstructions": 75,
+      "data_integrity_pass": true,
+      "original_goal_history_preserved": true,
+      "outcome": {
+        "retired_cached_history_terms_and_goal_bitwise_preserved": true,
+        "exit_base_linear_speed_m_s": 0.14756101909761932,
+        "terminal_base_linear_speed_m_s": 0.15045016681476936,
+        "exit_COM_velocity_world_m_s": [
+          0.11776624301796641,
+          -0.050370015460400756,
+          -0.033615438850218546
+        ],
+        "exit_measured_base_acceleration_world_m_s2": [
+          0.32816222717515786,
+          0.08475916963593041,
+          0.2942911597194092
+        ],
+        "measured_acceleration_is_NOT_a_future_bound": true,
+        "exit_base_below_original_point15_gate": true,
+        "new_recovery_motor_commands_applied_before_refusal": false,
+        "actual_speed_guard_metrics": {
+          "arm_error": 2.5249876451905395,
+          "arm_speed": 0.3749716508925253,
+          "base_angular_speed": 0.2877523788553818,
+          "base_horizontal_displacement_m": 0.0014535852270273187,
+          "base_linear_speed": 0.15045016681476936,
+          "base_retreat_m": -0.0013418856237485503,
+          "box_angular_speed": 5.4087916179865445e-05,
+          "box_linear_speed": 6.247216437401883e-05,
+          "foot_normal_N": [
+            109.19405698260432,
+            16.219303127268397,
+            0.0,
+            78.10362425867702
+          ],
+          "hand_force_N": 23.488969802856445,
+          "legal_hand_contact": true,
+          "max_foot_speed": 0.47911990893514117,
+          "standoff_m": 0.49553202880019953,
+          "tilt_rad": 0.031421127291167354
+        }
+      },
+      "canonical_and_dispatch_locks_currently_released": [
+        "/mnt/yuanyue/data/go2-piper-world-model/exit-capsule-base-speed-20261025-v3/dispatch.lock",
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-physics-gpu1.lock",
+        "/mnt/yuanyue/data/go2-piper-world-model/native-observer-sdk-gpu1.lock"
+      ],
+      "old_study_missing_resource_locks_not_repaired": true,
+      "physics_actor_WM_training_calls_by_audit": 0
+    }
+  },
+  "decision_required": {
+    "schema": "recovery-execution-boundary-major-decision-v1",
+    "status": "AWAIT_USER_CONFIRMATION_BEFORE_CHANGING_PUSH_CONTROL",
+    "basis": {
+      "known_condition": "20kg probe / former train-5 geometry and seed, NOT frozen research A/B/C",
+      "exit_time_s": 15.560000000001033,
+      "exit_base_speed_m_s": 0.14756101909761932,
+      "terminal_time_s": 15.570000000001034,
+      "terminal_base_speed_m_s": 0.15045016681476936,
+      "unchanged_recovery_speed_gate_m_s": 0.15,
+      "all_axis_command_delay_s": 0.02,
+      "no_new_recovery_command_applied_before_observed_speed_refusal": true,
+      "all_motor_channels_bitwise_equal_to_known_development_prefix": true
+    },
+    "logical_scope": "For THIS measured initial state and immutable queued commands, new motor controls issued only after failure cannot alter the observed first10ms plant trajectory before20ms latency. Keeping the same exit/gates therefore cannot avoid THIS refusal merely by changing post-failure motor control.",
+    "not_claimed": [
+      "Not every20kg box or seed is unrecoverable",
+      "Measured instantaneous acceleration is not a certified future bound",
+      "No proof that a new PUSH governor makes recovery universally safe"
+    ],
+    "options": {
+      "A": {
+        "name": "Preserve original PUSH execution; domain-limited recovery",
+        "effect": "Keep original control and all failures. Recover only admitted domain; outside-domain episodes censor. Do not claim general recovery/full-task acceptance."
+      },
+      "B": {
+        "name": "Frozen skill weights plus explicit protection/braking layer DURING PUSH",
+        "effect": "Change the executed option protocol while PUSH still owns authority, before its immutable pending commands make recovery infeasible. Needs separate source/protocol/data-distribution/label and new heldout validation; all old failures/goals/history preserved, no threshold relaxation."
+      }
+    },
+    "recommendation": "B if the requirement is broader continuous no-reset recovery; A if strict original-PUSH execution and narrow fixed-option prediction remain the priority.",
+    "governor_implemented": false,
+    "governor_training_or_physics_dispatched": false,
+    "new_physics_or_training_before_decision_allowed": false,
+    "old_gates_goals_data_roles_and_failures_must_remain": true
+  },
+  "guard_thresholds_or_native_skill_weights_changed": false,
+  "old_study_formal_resource_admission_remains_failed": true,
+  "independent_audit_source_sha256": "e7634f0294c563d984f2edbdb8bde275929f19948aac9b17da9d8562f8bd007e",
+  "audit_sha256": {
+    "joint2": "2f663774c7877f18f76c131228afc30ada18119215a43a31649bf2b110662a3b",
+    "base-speed": "90808588a05d2453a726f2ec6dd604edd940ef2dbc110773875944dcfd791f49"
+  },
+  "video_files": {
+    "joint2": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/exit-capsule-protocol-preparation-20261025-v3/review/joint2-actual-onboard.mp4",
+    "base-speed": "/home/yuanyue/re-nav/artifacts/go2-piper-world-model/exit-capsule-protocol-preparation-20261025-v3/review/base-speed-actual-onboard.mp4"
+  },
+  "execution_sources_by_family_version": {
+    "v1_zero_physics": "41ae450",
+    "v2_one_instrumentation_failure": "4d01002",
+    "v3_two_accepted_failure_capsule_diagnostics": "5c413a8"
+  }
+}

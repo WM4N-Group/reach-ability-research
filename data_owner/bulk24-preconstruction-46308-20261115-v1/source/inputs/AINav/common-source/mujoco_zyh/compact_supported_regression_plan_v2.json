@@ -1,0 +1,33 @@
+{
+  "schema": "compact-supported-protected-PUSH-engineering-regression-v2",
+  "cases": [
+    "train5",
+    "train3",
+    "train4"
+  ],
+  "role": "development_known_TRAIN_conditions_NOT_reliability_or_heldout_test",
+  "main_episodes_max": 3,
+  "each_new_root_one_shot": true,
+  "automatic_retry": false,
+  "max_sim_seconds_each": 100,
+  "max_wall_seconds_each": 1200,
+  "grace_seconds_each": 10,
+  "auxiliary_calibration_worlds_max": 3,
+  "auxiliary_calibration_max_sim_seconds_each": 10.5,
+  "dispatch_condition": "Runtrain5first. Only if original60ms legal-contact soft failure AND complete realretreat/stow independently audited should same frozen source run remainingtwo. On failure stop; no automatic seed refill or source mutation.",
+  "original_actor_weights_frozen": true,
+  "executed_controller_explicit_changes": [
+    "realcompactentry via existing source-matched adapter",
+    "all12leg motor channels replaced by existing nativewholebodyQP during protectedPUSH, zeroactualbaseXYvelocity target",
+    "arm nativegravityFF maintained with rate/effort projectedposition and zeroPDvelocity",
+    "recovery unload seed retains actual last-issued armFF instead of dropping existing gravity support",
+    "previousaction observation based on actual last-issued targets"
+  ],
+  "original_hard_limits_and_capture_stow_gates_unchanged": true,
+  "no_reset_or_task_state_write_after_initialization_or_FIFO_clear": true,
+  "training_runs": 0,
+  "WM_forwards": 0,
+  "WM_control": false,
+  "independent_new_generalization_samples": 0,
+  "new_reliability_claim": false
+}

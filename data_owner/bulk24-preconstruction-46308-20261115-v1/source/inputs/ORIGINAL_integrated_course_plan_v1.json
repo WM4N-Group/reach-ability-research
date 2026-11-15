@@ -1,0 +1,72 @@
+{
+  "schema": "continuous-integrated-course-five-versions-v1",
+  "success_contract": "A actual stall/recover; B actual push/step;40cm high platform; C actual bridge and robot crossing; ONE continuous no-reset world; all stages required in EACH of five geometries.",
+  "cases": [
+    {
+      "case_id": "full-1",
+      "lane_y_m": -1.8,
+      "gap_width_m": 0.2,
+      "step_length_m": 2.4,
+      "step_width_m": 1.4,
+      "bridge_length_m": 3.0,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 2.2
+    },
+    {
+      "case_id": "full-2",
+      "lane_y_m": -1.9,
+      "gap_width_m": 0.15,
+      "step_length_m": 2.4,
+      "step_width_m": 1.5,
+      "bridge_length_m": 3.0,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 3.5,
+      "bridge_mass_kg": 0.5,
+      "bridge_bottom_mu": 0.6
+    },
+    {
+      "case_id": "full-3",
+      "lane_y_m": -2.0,
+      "gap_width_m": 0.25,
+      "step_length_m": 2.4,
+      "step_width_m": 1.4,
+      "bridge_length_m": 3.2,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 3.5,
+      "bridge_mass_kg": 0.5,
+      "bridge_bottom_mu": 0.6
+    },
+    {
+      "case_id": "full-4",
+      "lane_y_m": -2.0,
+      "gap_width_m": 0.2,
+      "step_length_m": 2.4,
+      "step_width_m": 1.4,
+      "bridge_length_m": 3.2,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 3.5,
+      "bridge_mass_kg": 0.5,
+      "bridge_bottom_mu": 0.6
+    },
+    {
+      "case_id": "full-5",
+      "lane_y_m": -2.0,
+      "gap_width_m": 0.3,
+      "step_length_m": 2.4,
+      "step_width_m": 1.4,
+      "bridge_length_m": 3.2,
+      "bridge_width_m": 1.6,
+      "bank_width_m": 2.8,
+      "bridge_offset_from_high_front_m": 3.5,
+      "bridge_mass_kg": 0.5,
+      "bridge_bottom_mu": 0.6
+    }
+  ],
+  "first_dispatch_case_only": "full-1",
+  "automatic_retry": false,
+  "training_allowed": false
+}
