@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-15T14:05:54.655713+08:00",
+  "task": "T-COMPLEX-01",
+  "task_sha256": "a3ade42a679dfa86688cb5ce1e0de94899f0f2c3dba0fcaefbfe23db83ae4daa",
+  "main_plan_sha256": "b2fb786ec002b1e88ed4fc56a0bbfbac21d62cd788dacdda7d9fceb1a774c5a9",
+  "stage": "ALGORITHM_CORE_IMPLEMENTED_SCENE_ADAPTER_NOT_YET_CONSUMED",
+  "methods": [
+    "greedy",
+    "multistep"
+  ],
+  "core_source_sha256": "3a5eb184b9988371f0f05909bfa92e008b7eeb3b56eaef349b68416ef8a15bb9",
+  "shared_geometry": "nominal public radius-inflated AABB segment intersection; UNKNOWN without source envelope; not native clearance certification",
+  "cost": "same nominal robot route length plus nominal box translation length, weights1+1, metres; source-qualified domain must expose both components, no measured future costs",
+  "planning_budget_per_decision": {
+    "max_depth": 4,
+    "max_transitions": 256,
+    "max_wall_s": 0.25,
+    "same_ceiling_for_both": true,
+    "wall_timeout_detection_not_callback_preemption": true
+  },
+  "tie_break": "source catalogue order shared; never chosen route/name/hindsight",
+  "greedy": "minimum immediate common nominal cost among task-relevant source-generated POSSIBLE arcs",
+  "multistep": "bounded uniform-cost nominal goal search, first action; two or more future semantic skill arcs required by source mapping; explicit same-greedy fallback when no goal found",
+  "static_unknown": "exclude unknown arcs, never free pass; no known root arc/incomplete root domain means abstain",
+  "dynamic_unknown": "proposal only, original native judge/guards authoritative; no native success probability/certification",
+  "online_replan": "after actual observation refresh; never commit hypothetical successor state as actual",
+  "pair_order": [
+    "A_greedy",
+    "B_multistep"
+  ],
+  "new_main_upper_bound": 2,
+  "main_per_arm": 1,
+  "automatic_retry": false,
+  "scene_initializer_seed": "AINav source-qualified same exact configuration/seed for both arms; freeze before dispatch",
+  "source_adapter_qualified": false,
+  "native_program_frozen": false,
+  "physical_dispatch": false,
+  "video_delivered": false,
+  "critic_dependency": false,
+  "standard_search_not_new_algorithm": true,
+  "existence_witness_not_online_input": true,
+  "source_only_model_inputs": true,
+  "tests": {
+    "abstract_core_checks_local": 4,
+    "abstract_checks_are_not_complex_scene_or_physical_samples": true
+  }
+}

@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## T-COMPLEX-01优先任务（总计划标记14:00）
+
+不等critic/百级采集，先做真实复杂scene、greedy vs有限多步同条件两arm与完整live原片。Reach已实现共享nominal几何＋两策略标准搜索核心；source scene adapter/原生对比/视频尚未消费，不以抽象测试或旧短链冒完成。当前TRAIN6原门继续。见operations/T_COMPLEX_01_SHARED_METHODS_CN.md、T_COMPLEX_01_METHOD_PROPOSAL_20261115.json。物理/Data队列资格未核，不擅自占卡/开world。
+
 ## 13:45新总计划（覆盖下方旧优先级，当前冻结批不热改）
 
 完整成功／不可恢复死局优先，时间次要；固定／greedy／一跳／多步共用候选/观测/技能/预算。向≥100次新用途main、≥10有意义组滚动扩量，新批通常12—24；当前TRAIN6仍原门，Data统一双GPU/多worker准入，Reach不另开world。并行S1/S2复杂任务域与有限多步规划，不等critic完美；当前±.04短链/两条原方案成功不是G5或方法增益。新批/源适用域与用途分组详见operations/NEXT_BULK_AND_LONG_HORIZON_PRIORITY_20261115_CN.md；尚未声称已实现复杂任务或大量派发。

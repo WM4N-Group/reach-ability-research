@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 14:00计划接续：T-COMPLEX-01插入第一优先；已实现greedy/有限多步与共享nominal几何核心，真实scene adapter/对比/视频尚未资格
+
+- 发布前再次核到总计划b2fb786e…（文件标记14:00）/任务书a3ade42a…：先做双通路、多箱、远端共同终点、至少两次环境重构/三选择的真实A/B及live原片，不等critic/100条全齐；当前TRAIN6原门不热改。之前13:45计划0bfd5886…保历史，不因新计划改旧结果/失败/费用。
+- 新finite_multistep_planner.py已经实现共享source Arc上的A当前名义代价greedy、B标准有界uniform-cost多步，默认深4/256transition/.25s两方同上限、同source顺序tie，未找到nominal终点显式同greedy回退、未知根域弃权；不调用world或学习器，均proposal/native gates required。共享nominal_connection给公开envelope膨胀AABB扫掠/名义路径，触边拒绝、缺envelope UNKNOWN，不当真实安全证书。
+- 4个抽象算法/几何检查仅软件，不是复杂scene/物理成功/实验录像；标准搜索不冒创新。任务真实scene adapter/每arc语义映射和当前源两次合法重构域尚未由本组消费，不能用手工答案图/旧warehouse/±.04短链充对照。下一直接接AINav真源并实现共同消费，不让Data代写方法，不等critic；当前新TRAIN已提取2行/fit0继续原批。
+- 两臂同source/观测/模型/候选/预算，A→B各main1提议、成功或失败都保/不重试；原片完整1×和同钟并排1×，优先960×540/10Hz但须实测freeze，无片不算视频完成、不为补片重跑。当前本组T任务物理0/视频0，owner intake/队列未核。入口operations/T_COMPLEX_01_SHARED_METHODS_CN.md、T_COMPLEX_01_METHOD_PROPOSAL_20261115.json与新代码；新批扩量/双GPU由Data统一，旧dirty/closed/原安全/用途门保持。
+
 ### 2026-11-15 13:48：发布前核到13:45新总计划，改为完整成功／死局优先；当前TRAIN6不热改，并行新批与多步任务域
 
 - 新总计划SHA0bfd5886…覆盖旧53233939…；当前6支仍原门，后续新批可12—24滚动向100 main/10有意义组扩量，不把局部12/24当项目上限、不重试旧closed。Data唯一owner允许统一多GPU/多worker，Reach不抢卡/建world；在途锁/程序不动。
