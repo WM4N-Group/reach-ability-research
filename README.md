@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 13:45新总计划（覆盖下方旧优先级，当前冻结批不热改）
+
+完整成功／不可恢复死局优先，时间次要；固定／greedy／一跳／多步共用候选/观测/技能/预算。向≥100次新用途main、≥10有意义组滚动扩量，新批通常12—24；当前TRAIN6仍原门，Data统一双GPU/多worker准入，Reach不另开world。并行S1/S2复杂任务域与有限多步规划，不等critic完美；当前±.04短链/两条原方案成功不是G5或方法增益。新批/源适用域与用途分组详见operations/NEXT_BULK_AND_LONG_HORIZON_PRIORITY_20261115_CN.md；尚未声称已实现复杂任务或大量派发。
+
 ## 当前研究状态（2026-11-15，覆盖下方历史快照）
 
 新端46308三source五DEV已closed：full-4左右PASS、full-2左PASS/右PUSH卸载异常未达CLIMB、full-1左PASS。完整分母5、first-PREPARE4，原失败/未知费用不丢。只证明原AINav工程和有限公开信息，非Reach优化收益/论文贡献。公开增量测量原件留远端，小摘要见operations/G2_FULL1_AND_FINITE_COHORT_20261115.json。

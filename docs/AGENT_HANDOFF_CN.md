@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 13:48：发布前核到13:45新总计划，改为完整成功／死局优先；当前TRAIN6不热改，并行新批与多步任务域
+
+- 新总计划SHA0bfd5886…覆盖旧53233939…；当前6支仍原门，后续新批可12—24滚动向100 main/10有意义组扩量，不把局部12/24当项目上限、不重试旧closed。Data唯一owner允许统一多GPU/多worker，Reach不抢卡/建world；在途锁/程序不动。
+- 新主目标是共同技能/候选/观测/预算下固定、greedy、一跳、多步的完整成功/死局差异，时间次要。每链3真正选择/2环境重构、至少一个后果延迟2后续技能；优先S1/S2。当前原3请求/±.04只改CLIMB NAV-child、PUSH目标顺序固定/一重构，不能冒G5或通道/顺序规划能力；两条新TRAIN original成功仍非Reach收益。
+- 本组两线并行：继续01/02已提取行→03—06 closure→原TRAIN门/一次fit或有限No-Go；同时准备准确source候选图、多步状态/约束筛选和四策略对照，不等critic完美。新批用途/split/失败标签/覆盖设计见operations/NEXT_BULK_AND_LONG_HORIZON_PRIORITY_20261115_CN.md；目标10组非已有资格，source合格卡先成批，不等全矩阵或签字。
+- 精确能力缺口是source-owned同任务至少两个摆放/连接/顺序方案和第二次合法环境重构；.2后NAV→PUSH/12N域未验不假定，不任意添侧推/拉回/GT。不用手工答案图/新fixture冒多步原生能力。新global/更早时点profile须新协议，当前first-PREPARE48槽/短链标签不偷换为全任务。下一新批未登记/派发，原已耗/失败/未知账保持。发布前CAS发现计划更新已中止旧“未改”稿，未覆盖其他组。
+
 ### 2026-11-15 13:44：新TRAIN01/02真实PASS已消费并提取两条因果48槽监督行；03 plus-left唯一main已派，未提前fit/判gate
 
 - 正式ordinal01 f253b6af…46成员/ordinal02 daa22f04…41成员SHA已核，原9流cold/ledger/新purpose/TRAIN/原2f82530d…/new program/同scope CAS与实际journal链绑定。01于13:17:30 closed，121.085main sim；02于13:30:25 closed，109.865main sim。不是旧DEV重标/复用zero/世界，仍同一个full4 TRAIN scene，不增加独立scene数或新优化收益。
