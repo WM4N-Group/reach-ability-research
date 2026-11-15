@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-15T23:10:44.436804+08:00",
+  "active_main_plan_sha256": "26b67d55d0d8d8a6312ac8e19ec85de50f3f753bc8e503aaef8fb0eed20a7e9d",
+  "current_comparison_arms": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "current_task": "T-COMPLEX-01-V4-FIVE-ARM",
+  "E_can_qualify_and_run_before_WM": true,
+  "early_individual_video_delivery_supported": true,
+  "four_version_preserved_not_current_full_comparison": true,
+  "software": {
+    "four": {
+      "software_tests": 9,
+      "exit0": true,
+      "source_pins": {
+        "encode_four_arm_originals.py": "b2738804c85b5ce9a572cda72fb9123195ae50bb3f50c2b549ca2fe7b379741c",
+        "test_four_arm_originals.py": "52e6f5c2ab60b461c93114b11138cfac0dd26102811bb717f512be7aafea2e6a"
+      },
+      "software_fixtures_only": true,
+      "no_physical_or_actual_method_qualification": true
+    },
+    "five": {
+      "software_tests": 11,
+      "exit0": true,
+      "source_pins": {
+        "encode_five_arm_originals.py": "9e559975547be6455c8be1dcc3d0b435d8f22ee3ee93b5da39f149ca79ae5d6b",
+        "test_five_arm_originals.py": "6cb5296913448299c88cbc68b127ffc90cfa2e4c1541f8e3c9b2a0146f2d2474"
+      },
+      "software_fixtures_only": true,
+      "no_physical_or_actual_method_qualification": true
+    }
+  },
+  "new_V4_zero0_main0_video0": true,
+  "native_sources_caps_counts_H_not_changed": true,
+  "raw_weights_env_MJB_movies_credentials_and_logs_not_in_Git": true,
+  "selected_files": {
+    "data_owner/V4-four-arm-video-postprocess-46308-20261115-v1/implementation/encode_four_arm_originals.py": "b2738804c85b5ce9a572cda72fb9123195ae50bb3f50c2b549ca2fe7b379741c",
+    "data_owner/V4-four-arm-video-postprocess-46308-20261115-v1/implementation/test_four_arm_originals.py": "52e6f5c2ab60b461c93114b11138cfac0dd26102811bb717f512be7aafea2e6a",
+    "data_owner/V4-four-arm-video-postprocess-46308-20261115-v1/implementation/run_remote_software_tests.py": "5c444d54081aa837bc79f07860960c320e77f03a7d6053c1e8d93568ba46f747",
+    "data_owner/V4-four-arm-video-postprocess-46308-20261115-v1/implementation/README.md": "5b8ea7d95fe1a4fe765ced20f527f0c81afcb9d64b7346f9bbb487b8f40cc654",
+    "data_owner/V4-four-arm-video-postprocess-46308-20261115-v1/operations/publish_video_software_and_bulk6_current.py": "91abe9a0e6dce7244767e8526d23365cc3b0853ef691c7a2cb1dd837dda29fbe",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/implementation/encode_five_arm_originals.py": "9e559975547be6455c8be1dcc3d0b435d8f22ee3ee93b5da39f149ca79ae5d6b",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/implementation/test_five_arm_originals.py": "6cb5296913448299c88cbc68b127ffc90cfa2e4c1541f8e3c9b2a0146f2d2474",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/implementation/run_remote_software_tests.py": "28d1f4cde820a738647f90253f487e360f03dde3d8948fab1563e97da8b691de",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/implementation/README.md": "21532f76726d8712b6bc19a935a4f505b1c4698e99b48d64c04fc54d0e440a27",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/operations/publish_video_software_and_bulk6_current_v2.py": "3d3b548d3760bc2b3cb78fcca15b6f2143924148973456aa35ca719a187316d9",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/operations/publish_five_video_and_bulk_current_v3.py": "cb316abef2b1da85e9b9f00b23ae080a0c037335ee470134d24ea1b242815b42",
+    "data_owner/bulk24-collector-46308-20261115-v1/README.md": "cc90f06327dc65c9dd59e064d06191e8da54a11b1d2e6ccca1e0004ad2809ae0",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/README.md": "cc90f06327dc65c9dd59e064d06191e8da54a11b1d2e6ccca1e0004ad2809ae0",
+    "data_owner/V4-five-arm-intake-46308-20261115-v1/README.md": "858ad26c79c6d48b30aff7df3a2ab5630d48eb353c4fa96a11440cfd8527ffe8",
+    "data_owner/V4-five-arm-intake-46308-20261115-v1/Data-plan-2253-five-arm-intake.json": "e4abc089b146fa14c8d90aa7485edc9a3112479296a63dd43f7895bc25150266",
+    "data_owner/V4-five-arm-video-postprocess-46308-20261115-v1/operations/persist_video_code_custody.py": "83c959f40352e81cfcb920fbfb294c7898f3664cb18df8a51703cbf9a97a07fd"
+  }
+}

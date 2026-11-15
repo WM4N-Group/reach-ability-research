@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-15T23:07:51.460850+08:00",
+  "main_plan_sha256": "26b67d55d0d8d8a6312ac8e19ec85de50f3f753bc8e503aaef8fb0eed20a7e9d",
+  "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
+  "role": "DATA_PLAN_RECEIPT_NOT_NATIVE_FREEZE",
+  "current_arms": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "A_D_original_definition_retained": true,
+  "E": {
+    "backbone": "PREOUTCOME_FIXED_RULES",
+    "VLM_calls": 0,
+    "WM_calls": 0,
+    "shared_optimizer": false,
+    "implementation_owner": "AINav",
+    "information_comparison_owner": "Reach",
+    "physical_owner": "Data",
+    "may_run_before_WM_if_qualified": true,
+    "order_and_rules_frozen_before_first_main": true,
+    "no_after_A_D_outcome_tuning_or_oracle": true
+  },
+  "individual_E_video_may_publish_before_other_arms": true,
+  "V4_zero_dispatches": 0,
+  "V4_main_dispatches": 0,
+  "native_qualification": false,
+  "prior_four_arm_protocol_is_partial_input_not_five_arm_freeze": true,
+  "bulk_and_closed_scopes_unchanged": true,
+  "H_not_written": true
+}
