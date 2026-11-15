@@ -59,11 +59,13 @@
       "rule_content_and_ties_recovery_to_be_frozen_before_results": true,
       "no_result_tuned_correct_route": true,
       "independent_baseline_not_replacement_for_ABCD": true,
-      "source_sha256": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
+      "source_sha256": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0",
       "max_semantic_selections": 64,
       "source_review": "STATIC_PUBLIC_INFO_AND_ACTUAL_RECEIPT_UPDATE_ONLY_NOT_NATIVE_QUALIFICATION",
       "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
-      "legacy_common_stow_H": true
+      "legacy_common_stow_H": true,
+      "historical_source_sha256_before_factor_doc_clarification": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
+      "source_owner_commit": "8105e755f9751bffee6dc96819847f473a80b7aa"
     }
   ],
   "primary_contrasts": [

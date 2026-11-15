@@ -33,7 +33,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "18d9a342e884185a1b9736047522a9e26e532a0a574a6843fa866052777391e9",
+  "protocol_config_sha256": "e58be136198e18f76e7030dd5c0f344cd4eedfee72635794302b65f8697a3331",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -61,5 +61,6 @@
   "preparation_factor_policy_copy_sha256": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
   "read_only_original_source_pins_are_historical_consumed_snapshots_not_current_mutable_path_validation": true,
   "new_factor_scope_source_commit": "8105e755f9751bffee6dc96819847f473a80b7aa",
-  "exact_new_runtime_dependency_freeze_still_required": true
+  "exact_new_runtime_dependency_freeze_still_required": true,
+  "current_rule_source_sha256_after_factor_scope_clarification": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0"
 }
