@@ -11,7 +11,7 @@ class BulkRegistrationGateTests(unittest.TestCase):
                    scene_ancestry_key='1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8',
                    preparation_payload=dict(candidate_id='original'))
         self.protocol = dict(schema='Reach-bulk24-prospective-new-purpose-collection-v1', data_purpose=PURPOSE,
-            current_frozen_critic_refit_allowed=False, attempt_schedule=[copy.deepcopy(row) for _ in range(24)],
+            current_frozen_critic_refit_allowed=False, attempt_schedule=[dict(copy.deepcopy(row), ordinal=i+1) for i in range(24)],
             scene_split_assignments={'a'*64:'TRAIN'})
         self.acquisition = dict(row, data_purpose=PURPOSE, new_use_protocol_file_sha256=PROTOCOL_SHA)
         self.release = dict(schema='Data-bulk24-first-new-geometry-original-delivery-v1', protocol_sha256=PROTOCOL_SHA,
@@ -22,6 +22,26 @@ class BulkRegistrationGateTests(unittest.TestCase):
     def test_exact_registration_only_not_fit(self):
         self.assertEqual(self.gate()['preparation_payload']['candidate_id'], 'original')
         self.assertFalse(self.release['fit_allowed'])
+    def fixed_closed_fixture(self):
+        self.release.update(schema='Data-bulk24-fixed-closed-original-delivery-v2', ordinal=2)
+        self.acquisition['ordinal'] = 2
+    def test_exact_fixed_closed_format_for_new_original_release(self):
+        self.fixed_closed_fixture()
+        self.assertEqual(self.gate()['ordinal'], 2)
+    def test_original_first_format_cannot_be_reused_for_later_ordinals(self):
+        self.release['ordinal'] = self.acquisition['ordinal'] = 2
+        with self.assertRaises(ValueError): self.gate()
+        self.release['schema'] = 'Data-bulk24-fixed-closed-original-delivery-v2'
+        self.assertEqual(self.gate()['ordinal'], 2)
+        self.release['ordinal'] = self.acquisition['ordinal'] = 1
+        with self.assertRaises(ValueError): self.gate()
+    def test_fixed_closed_does_not_waive_purpose_and_future_format_rejected(self):
+        self.fixed_closed_fixture()
+        self.release['whole_package_model_input_allowed'] = True
+        with self.assertRaises(ValueError): self.gate()
+        self.release['whole_package_model_input_allowed'] = False
+        self.release['schema'] = 'Data-bulk24-fixed-closed-original-delivery-v3'
+        with self.assertRaises(ValueError): self.gate()
     def test_old_DEV_schema_is_not_relabelled(self):
         self.release['schema'] = 'OLD_DEV'
         with self.assertRaises(ValueError): self.gate()

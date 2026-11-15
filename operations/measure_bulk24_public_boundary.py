@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Read a successful closed bulk24 acquisition, not fit or score any model.
 
+Accept exactly the original ordinal01 release and fixed closed ordinal02--24
+release formats. Neither acceptance changes the prospective protocol or purpose.
+
 The untouched original-cohort extractor still rejects this different release.
 Reuse ONLY its public-observation 48-slot projection. Labels/clocks are derived
 separately from original receipts, never supplied to that projection. Raw vectors
@@ -26,7 +29,10 @@ PURPOSE = 'NEW_PREREGISTERED_HIGH_LEVEL_SUCCESSOR_CRITIC'
 
 def registration_gate(release, protocol, acquisition):
     """Pure schedule/purpose gate: does not promote this collection to fit."""
-    need(release.get('schema') == 'Data-bulk24-first-new-geometry-original-delivery-v1', 'Exact bulk24 release, not old DEV')
+    schema = release.get('schema')
+    need(schema in ('Data-bulk24-first-new-geometry-original-delivery-v1',
+                    'Data-bulk24-fixed-closed-original-delivery-v2'),
+         'Exact first/fixed-closed bulk24 release, not old DEV or arbitrary future schema')
     need(release.get('protocol_sha256') == acquisition.get('new_use_protocol_file_sha256') == PROTOCOL_SHA, 'Exact prospective bulk24 protocol')
     need(protocol.get('schema') == 'Reach-bulk24-prospective-new-purpose-collection-v1' and
          protocol.get('data_purpose') == acquisition.get('data_purpose') == PURPOSE, 'Prospective new-purpose acquisition')
@@ -35,6 +41,9 @@ def registration_gate(release, protocol, acquisition):
          and protocol.get('current_frozen_critic_refit_allowed') is False, 'No fit/whole-package permission')
     ordinal = release.get('ordinal')
     need(type(ordinal) is int and 1 <= ordinal <= len(protocol['attempt_schedule']) == 24, 'Fixed finite ordinal')
+    need((schema == 'Data-bulk24-first-new-geometry-original-delivery-v1' and ordinal == 1) or
+         (schema == 'Data-bulk24-fixed-closed-original-delivery-v2' and ordinal >= 2),
+         'Exact original release format for this fixed ordinal')
     row = protocol['attempt_schedule'][ordinal - 1]
     for key in ('ordinal', 'attempt_key', 'split'):
         need(release.get(key) == acquisition.get(key) == row[key], 'Schedule drift: ' + key)
