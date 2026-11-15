@@ -53,7 +53,6 @@
   "no_automatic_replacement": true,
   "information_gate": "At first actual original CLIMB PREPARE measure causal public45D/RGBD/candidate domain; missing PREPARE/failed predecessor/resource censor retained. If source or public decision states merge, report merged coverage, not ten effective groups.",
   "covers_current_goal": "Contributes task-relevant lane/width coverage for >=100-new-purpose-attempt expansion. It is not a complete 100-run cohort, G5 long-chain task, or T-COMPLEX A/B replacement.",
-  "material_or_goal_or_actor_changes": false,
   "no_post_20cm_NAV_PUSH_required": true,
   "physical_attempts": 0,
   "groups": [
@@ -317,5 +316,8 @@
       },
       "actual_native_qualified": false
     }
-  ]
+  ],
+  "material_changes": false,
+  "actor_changes": false,
+  "goal_frame_change": "Original PUSH/NAV/CLIMB task-reference Y follows the declared lane geometry; world-X, skill sequence and all original goal/success predicates unchanged."
 }

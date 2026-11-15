@@ -4,7 +4,7 @@
   "selection": "Exact frozen299-member published source plus release; current owned development modules; fixed two-condition prefix package; export/deployment tools and docs",
   "excluded": "Inherited outputs/manifests, raw RGBD/NPZ, checkpoints, environments/SDK binaries, credentials and pycache; original working tree unchanged",
   "file_count": 363,
-  "content_bytes": 2888441,
+  "content_bytes": 2888629,
   "files_sha256": {
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_CONTRACT_v1.json": "a0d562406bbd3cee57a6c7f57673986d211870d080bc4ed4e0f3bb2e61b62190",
     "consumer-deliveries/AINAV-CLIMB-PREPARATION-CANDIDATES-20261113-v1/CANDIDATE_RELEASE_v1.json": "0c17d2e70139a86a14b7a87fa9fb2cd6ed1bd37d8873a009a7b7613bea40718e",
@@ -320,7 +320,7 @@
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/FIXED_TWO_CONDITIONS.json": "b4bd121f237209868ff6c8cbb5bcccad754f6b83a9ad8f282159c7b8f80b5922",
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/SOURCE_CHANGE_AND_INVERSE.json": "325a381f5ce9cc561430fe18d1b7f7b212a5a7d89a98657180f2ca5cca9cff9a",
     "consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1/source-delta/probe_execution_judge.py": "133fd5933193f96dc2a6399d0f8305699519b3f758cd3c952528ac573a9dded5",
-    "development/bulk_registered_conditions_v1/BULK_MATRIX.json": "06d2ab776d9f988177e2e31d10a4af20d922b98476098e265fbeadcbbe3f4378",
+    "development/bulk_registered_conditions_v1/BULK_MATRIX.json": "84772f52501c9a216ab961e66f01eb4bfdef8353eb77a7e4001363ae0f6ee91c",
     "development/bulk_registered_conditions_v1/README_CN.md": "17157a87dd04e03c4bb576fded3e80d180f8319ac9619a681cff7ab1808d7439",
     "development/bulk_registered_conditions_v1/bulk_registered_conditions.py": "a10caa098346434e92ead0acd4c56b41bba71905c6f666e31b048f4b59cbdd68",
     "development/bulk_registered_conditions_v1/integrated_course_plan_bulk_v1.json": "515b4d7f6f781efbcebfd51cdf5ac932c47d4e76328fe58822ac8305a6c7a677",
