@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-15T23:08:31.473585+08:00",
+  "Reach_code_sha256": {
+    "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "acf6a1547d958bb7f4302a8ef97d942a3ebc75493189589ddf9dc81cb9139bbc",
+    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
+    "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "c18e3496b69ef819d8cc34d193d7e4fbf81d3a218cd61efd816e1b845d8263d3"
+  },
+  "read_only_original_source_pins": {
+    "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
+    "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/behavior_model_query.py": "fd5488aaed9699feccc729c50ec95c90677e9314c8011596332a371f176150cf",
+    "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/behavior_consequence_planner.py": "9388c0c9756336ea73bb69486736860a9299ecf42e574d755b12ff1a2da5d204",
+    "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/fivebox_model_io.py": "351a5acc7e548e1764ce3114177d2ef552827f9d3a2327106197c2d2cf179bc6",
+    "/home/yuanyue/reach-ability-research/owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/planner.py": "fef70edb687dd7e3c9597cb04df24c74795bfde6c77a667457210c0f8040543a",
+    "/home/yuanyue/reach-ability-research/owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/vlm.py": "1d044c833c8eb3858ce6b8f76e02634827de43278c21890c9fd164f2dd2198ee",
+    "/home/yuanyue/reach-ability-research/owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/contracts.py": "7d995f5a1dcb7135e1ca16d36e391a511bb8c8cefa0aeafd27430eba0932a669",
+    "/home/yuanyue/reach-ability-research/owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/intents.py": "257d5df748a932bd8b274ea308e823478c17d17ed5cb8fb217cc1986b1f49b76",
+    "/home/yuanyue/reach-ability-research/owner_snapshot/native-prefix-20261114/inputs/AINav/common-source/ainav/tree.py": "5091e340fb267b3a6455685526a343988653a39cf356176e41d46200718ae931",
+    "/home/yuanyue/main/work/ainav/manifests/V4_four_arm_source_20261115_v1/EXACT_V4_ASSET_AND_SELECTED_CLIMB_GAP.json": "869d3870e1449427143082973633fcf47ad397dbcabf112513efd9eaef4b1712",
+    "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
+    "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
+  },
+  "protocol_config_sha256": "5dd0da5c883a7aed48623e33a7ddfad729cf1be186d1d8eacc353c8a54f52002",
+  "historical_four_arm_input_NOT_latest_five_arm_authority": true,
+  "no_original_source_or_old_dirty_rewritten": true
+}

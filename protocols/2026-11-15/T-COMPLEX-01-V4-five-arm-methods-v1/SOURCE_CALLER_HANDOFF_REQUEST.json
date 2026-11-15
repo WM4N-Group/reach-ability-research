@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-15T23:08:31.473779+08:00",
+  "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
+  "role": "REACH_INCREMENTAL_METHOD_CALLER_HANDOFF_NOT_NEW_SCOPE_OR_NATIVE_PERMISSION",
+  "config_sha256": "5dd0da5c883a7aed48623e33a7ddfad729cf1be186d1d8eacc353c8a54f52002",
+  "code_files": {
+    "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "acf6a1547d958bb7f4302a8ef97d942a3ebc75493189589ddf9dc81cb9139bbc",
+    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
+    "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "c18e3496b69ef819d8cc34d193d7e4fbf81d3a218cd61efd816e1b845d8263d3"
+  },
+  "AINav_source_inputs_needed": [
+    "Exact five-arm shared original current IntentBatch/Observation and source journal",
+    "V4 public goal/surface references and original native support transition/caller domain; do not relax20cm predicate",
+    "Current original issued200Hz accepted motor-history callbacks + original sensor packet/public45 and observed owner, not private catalog/GT",
+    "Public per-option target8/explicit geometry-missing mask and exact causal relative PUSH or CLIMB approach mapping where supported",
+    "Original source AinavPlanner with actual shared verified vision backend/config; production software_fixture=False",
+    "E fixed public rule source/five-arm immutable manifest already reviewed, no duplicate E implementation by Reach"
+  ],
+  "Reach_implements_not_Data_or_AINav": [
+    "Shared B/D successor-cost evaluation on exported public capability/effects, explicit UNKNOWN while mapping absent",
+    "Original7a6 raw inference/current-query decision adapter, including exact missing absolutePUSH/CLIMB mapping handling",
+    "Same-query comparison and final-elevated-support result reader binding"
+  ],
+  "source_unsupported40cm_and_static_deck_not_native_qualified": true,
+  "no_user_layout_modified": true,
+  "no_credential_or_provider_probe": true,
+  "no_additional_receipt_signature_gate": true,
+  "new_scopes_mains_or_leases_issued": 0
+}

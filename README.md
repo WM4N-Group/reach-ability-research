@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前优先V4五组与方法实码（2026-11-15 23:09）
+
+最新22:53计划26b67d55…是A/B VLM＋既有WM无/有优化、C/D原AINav无/有同一优化、E固定规则（AINav负责），不是旧API0两组。Reach已实现共享后继选择核、保原AINav全roles/tree/replan及真实pending消费的C/D接缝、新direct VLM＋原7a6 raw-WM决策适配、五组scalar reader与纯配置；41新＋38原共79软件检查过，真实VLM/WM/native调用0。生产拒fixture。当前selected原20cm CLIMB拒.20→.60高差，static-deck/终点与V4因果WM IO/完整名义cost仍缺，不能称五组ready/优化已真实消费；未改设计或原门。详见operations/V4_FOUR_ARM_METHODS_AND_GAPS_CN.md及protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/。
+
 ## 当前固定观测测量main完成（2026-11-15 22:19）
 
 两原NAV/三fresh view已完整完成：center空→left接受cuboid_a→right空，27.515main sim/5503命令；本组独立核1058行全链及三query/两个原成功receipt，消费Data九流cold。phase已closed/PID退出但22:17 scope H仍待owner CAS；不是PUSH READY、完整任务或规划收益，left历史alias不能缓存到right终点。新共同固定观测prefix必须两方法共享费用并receipt绑定准备后的nominal start，不能沿用center；具体增量接口见operations/T_COMPLEX_01_OBS_COMPLETE_AND_NEXT_CN.md，旧实验不重启。
