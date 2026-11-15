@@ -8,7 +8,8 @@
     "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
     "public_candidates.py": "33b9a695d80ccc387609471d20c92391d487e5c5e4e98cec44421d9b963345bc",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
-    "README_CN.md": "afaa85b27b9ce7805c8110aaf76123d3c67b3236eab8082fa47a46f07c4563e2",
+    "README_CN.md": "017045e6ff43cec7e72f0ea0d1f4422577a174f0ac3e851e0ccedb3dfa244947",
+    "destination_climb.py": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
     "rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
     "FOUR_ARM_PROTOCOL_REFERENCE.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
     "FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
@@ -19,6 +20,7 @@
     "tests/test_public_candidates.py": "1ec402f4ce641c0ac5f3373dabfec53d1d5abca0aee30c5ea2bbf001eb5c741d",
     "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
     "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4",
+    "tests/test_destination_climb.py": "913658da17ca717b357fad73e75209142ff949747732661c7474dcb186ef7992",
     "tests/test_native_entry.py": "9602a26429333da4a7d88109e481cade43afa88e24b2411c70483fab2ec5effd"
   },
   "source_native_qualified": false,
@@ -27,5 +29,6 @@
   "old_FOUR_ARM_PROTOCOL_REFERENCE_is_historical_not_current": true,
   "explicit_DeepSeek_provider_selected_no_secret_or_API_call": true,
   "actual_contact_reader_implemented_not_native_tested": true,
-  "real_native_construction_entry_implemented_not_called_by_AINav": true
+  "real_native_construction_entry_implemented_not_called_by_AINav": true,
+  "CLIMB_destination_private_source_binder_not_native_qualified": true
 }

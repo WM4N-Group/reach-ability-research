@@ -75,3 +75,11 @@ components = construct_cold_components(enabled=True, source_root=exact_common_so
 ```
 
 5项新软件检查覆盖default-off、guard先拒绝、原函数字节码不变/三callback隔离、精确原registry高台与默认scene身份。它们没调用MuJoCo/Actor/Runtime，绝不冒真实compile/zero过。下一步看Data原生结果修具体阻塞，不继续用通用测试数量替代实跑。
+
+## CLIMB destination/source已补不改原回执的私有binder
+
+`destination_climb.adapter_class`默认OFF。它只覆盖精确原RegisteredClimbAdapter的bind：public SkillIntent和真正BehaviorOption仍保DESTINATION height（例如.20），实际SOURCE height从当前已验证owner witness/registry私下取得（例如0）；调用原RegisteredTerrain.climb_geometry，原20cm/.01/current RGBD/唯一registered object/body/旋转/位置门不变，再核target top与public destination一致。原construct方法**原样继承**，原ClimbBinding保存base_height；原constructor本来读该geometry而不把option.surface_height当source，所以无需造shadow params、删same-params检查或改option/receipt SHA。
+
+必须传当前原ExecutionBatch/同一个选中option、current query clock/原图SHA与live source witness，binding前后原world/FIFO不变，并将两种高度/同native option hash写private journal（不进model）。8项新软件检查含：原AINav observe_intent的same-params与receipt-hash检查原封不动通过destination=.20、改回source=0仍拒；.20→.60仍由原20cm门拒、static goal_deck仍因非movable current-RGBD object拒。测试用明确geometry/receipt fixture，没有实际CLIMB构造或actor。
+
+这解决**参数语义接缝的代码**，不是V4完整factory/driver、static-deck binding、CLIMB→NAV owner或40cm能力已经接通。现场调用与资格仍待Data实际程序。Data若已冻结19-member原生组件source/程序b125b188…，必须继续该immutable版本，不把这个后续binder热补进去，也不因更新重跑其组件scope。
