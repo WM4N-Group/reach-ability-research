@@ -1,0 +1,140 @@
+{
+  "at": "2026-11-15T17:59:57.262036+08:00",
+  "role": "FORMAL_A_RELEASE_B_PENDING_AND_SEPARATE_OBSERVATION_STUDY_INTAKE_NOT_NEW_RUN",
+  "formal_A_release": {
+    "path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/release.json",
+    "sha256": "7afea491985601c6e78100af5ee20881a925357b40a27cb6a1da93a3586effde",
+    "verified_members": 25,
+    "source_result_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+    "source_error": "ORIGINAL_INTENT_REJECTION:ValueError: Current original RGBD association unavailable; no static-pose substitution",
+    "native_task_options_dispatched": 0,
+    "task_reconstructions": 0,
+    "nine_stream_checks_owner_report": {
+      "episode_storage_complete": true,
+      "continuous_200Hz_commands": true,
+      "same_program_actual_zero_and_main_model": true,
+      "original_delay_FIFO_exact": true,
+      "PD_raw_torque_reproduced": true,
+      "hard_clip_reproduced": true,
+      "visual_actions_previous_matches_actual_issue": true,
+      "visual_and_review_grid_complete": true,
+      "no_teardown_errors": true
+    },
+    "independently_reproduced_PD_or_NPZ_by_Reach": false,
+    "scope_sim_including_zero_aux_s": 15.249999999999742,
+    "scope_ledger_wall_s": 880.5279031582177,
+    "scope_highwater_bytes": 218453439,
+    "all_usage_known": true,
+    "direct_HD_raw_frames": 23
+  },
+  "exact_B_root_observation": {
+    "at": "2026-11-15T17:48:20.479655+08:00",
+    "role": "EXACT_B_SCOPE_READ_ONLY_OBSERVATION_NOT_LAUNCH",
+    "root": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1",
+    "main_result_exists": false,
+    "zero": {
+      "sha256": "74f4861eba2b9132fa13a7f3e6f8b294aba1a9c7d0add13f0e38f4174255fc03",
+      "status": "OWN_ZERO_PASS",
+      "passed": true,
+      "program_sha256": "0ba3839592bc733162a4d913dfff12de4e21147a6d1be0d4e2ca99b21cb34589",
+      "task_steps": 0
+    },
+    "ledger_sha256": "cc9e7102fd24f70588eced55925e3b2124ba4759f37bcd4ee58a25187ca5847b",
+    "ledger_stopped": false,
+    "rows": [
+      {
+        "phase": "zero",
+        "PID": 45171,
+        "started_monotonic": 1556020.141096714,
+        "closed": true,
+        "status": "OWN_ZERO_PASS",
+        "sim_s": 6.5049999999998835,
+        "wall_s": 36.445520914159715,
+        "output_highwater_bytes": 129935848,
+        "report_sha256": "74f4861eba2b9132fa13a7f3e6f8b294aba1a9c7d0add13f0e38f4174255fc03",
+        "usage_known": true
+      },
+      {
+        "phase": "main",
+        "PID": 45403,
+        "started_monotonic": 1556348.457501004,
+        "closed": false,
+        "status": "CLAIMED_NOT_RESULT",
+        "sim_s": 8.654999999999859,
+        "wall_s": 807.8403904270381,
+        "output_highwater_bytes": 218146226
+      }
+    ]
+  },
+  "actual_AB_world0_equality_owner_report": {
+    "path": "/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/actual-AB-zero-condition-equality.json",
+    "sha256": "2012e740f0705e9fb6791240eb4aba9a234d37b39bcd41b55c9d64ecb46f6b8b",
+    "checks": {
+      "same_numeric_model": true,
+      "exact_full_integration_state_equal": true,
+      "exact_original_INPUT8_fields_equal": {
+        "action_valid": true,
+        "actions_previous": true,
+        "rgb": true,
+        "camera_K": true,
+        "timestamps_s": true,
+        "proprio": true,
+        "T_base_optical": true,
+        "depth_m": true
+      },
+      "exact_direct_HD_frame_equal": true
+    },
+    "recorded_world0_only": true,
+    "source_zero_results": {
+      "A": {
+        "zero_result_sha256": "15947a2e5e25a77cc12b120a89dad867c308987507d3a50d975ad26014d37cc9",
+        "numeric_model_sha256": "febcd5921c880d3029778b15f3efe0f2193ddc6f0210aade037cffe2d072ba9e"
+      },
+      "B": {
+        "zero_result_sha256": "74f4861eba2b9132fa13a7f3e6f8b294aba1a9c7d0add13f0e38f4174255fc03",
+        "numeric_model_sha256": "febcd5921c880d3029778b15f3efe0f2193ddc6f0210aade037cffe2d072ba9e"
+      }
+    },
+    "full_trajectory_equivalence_claimed": false,
+    "new_Runtime_or_physics": false
+  },
+  "separate_source_observability_proposal": {
+    "path": "/home/yuanyue/main/work/ainav/development/complex_dual_route_v1/OBSERVABILITY_QUALIFICATION_SOURCE_REQUEST.json",
+    "sha256": "25433aa513b9ca518e183c42d6a6fd89f962aacbd46d826b458e16585545dcde",
+    "proposal_at": "2026-11-15T17:38:06.001656+08:00",
+    "purpose": "OBSERVABILITY_QUALIFICATION_ONLY",
+    "fixed_boundaries": [
+      "after_actual_original_supported_capture",
+      "after_actual_original_left_NAV",
+      "after_actual_original_right_NAV"
+    ],
+    "original_NAV_goals": [
+      [
+        -0.08,
+        0.15,
+        0.0
+      ],
+      [
+        -0.08,
+        -0.15,
+        0.0
+      ]
+    ],
+    "PUSH_count": 0,
+    "layout_color_camera_proposer_matcher_or_guards_changed": false,
+    "private_GT_or_pose_substitution_allowed": false,
+    "current_frozen_B_source_modified": false,
+    "current_AB_role_changed": false,
+    "source_worktree_review_only_not_immutable_deployment_adoption": true,
+    "source_native_qualification": false,
+    "scope_or_program_allocated": false,
+    "new_physical_attempts": 0,
+    "interpretation": "Only three fixed actual observations around two original NAV receipts. At least one accepted original cuboid_a alias is a necessary local observability condition, NOT PUSH READY/success/all targets/full task or A/B advantage. Three unavailable boundaries or native/censor stop are a finite No-Go within this domain; no view/seed/color/threshold search.",
+    "caps": "Data fixes finite scope sim/wall/output/lease from measured cost before any new launch; old B caps stay frozen",
+    "no_extra_Reach_consumption_signature_needed_for_Data_technical_intake": true
+  },
+  "current_frozen_critic_refits": 0,
+  "partial_CAL_scoring": false,
+  "training_or_role_relabelling": false,
+  "new_scope_or_process_launches_by_Reach": 0
+}

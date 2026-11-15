@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 18:05：A正式负结果25成员已核，B own-zero PASS/main未闭合；独立两NAV观测资格source已review但未准入
+
+- **A正式交付已独立消费，原负结果不删改：** Data release7afea491…全部25小成员逐SHA过，原result82952392…与本组先读root/462行链/像素诊断一致。接收owner九流cold中PD/FIFO/clip/完整性通过，不冒本组再重算原NPZ；task2.240/448 capture命令、任务option0/重构0/objects=[]/两个warm组件均原hypothesis拒绝保持。整scope含zero/两aux15.250sim/880.527903158ledger wall/highwater218453439bytes，全known；23 live原帧留远端，未在此验收编码/配对。不是几何死局/前瞻胜利/critic负行。
+- **B真实自身zero通过且main仍待终态，不能写B0/借A零步：** 17:48:20读原root，own-zero74f4861e…/program0ba38395… OWN_ZERO_PASS，task0/命令0、6.505sim/36.445520914ledger wall；main PID45403的ledger open，18:02:06再次只读确认main/result.json尚无。未宣称当前PID健康/成功，不将open费用当终账，不派发/重试/热补。Data原world0 equality报告及两zero pins已核：同numeric model febcd592…、完整init integration state、原8字段和HD首帧相等；本组消费owner数据端比较而非复造/恢复状态，不升级为全轨迹或任务资格。
+- **已直接接续新source观测问题而非再刷基线：** 读AINav17:38独立OBSERVABILITY_QUALIFICATION_ONLY提议/现source实现：原capture后初query→原NAV左(-.08,+.15,0)成功后fresh query→原NAV右(-.08,-.15,0)成功后fresh query，固定两NAV/三边界/PUSH0，不挑好帧。保持原scene/颜色/相机/proposer/matcher/64pixel/IoU/SDF/12N等门。当前仅source review，未称采用immutable新版本/已分配scope或物理准入；当前b08 A/B与在途B不变，也不把诊断脚本伪装greedy/前瞻/第三有效选择。
+- **研究解释与有限停止先固定：** 某固定view由原matcher接受cuboid_a仅是局部必要可观测条件，不等PUSH READY/NN/placement/stow成功、其它目标可见或联合动态计划。三固定边界均无原关联则报告本域No-Go；NAV/资源/censor提前终止保未达，不扫view/seed/颜色/阈值到成功。任何后续公共观察准备需事前新source/协议、两策略同信息/动作/成本，不修当前pair追赢。Data据实测开销独立新freeze/自身zero/lease/有限cap，不需再加本组消费签字，也不能热抬旧B预算。
+- **保持与入口：** 完整T任务/≥3有效选择/原片仍未验收，B终态尚无；原TRAIN6/fit3371ac20…/model a8b1f165…、CAL仅07一条/未评分、bulk24 0f9e0e03…同TRAIN祖先/未refit均保持。入口`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_OBSERVABILITY_NEXT_BOUNDARY_CN.md`及`T_COMPLEX_01_FORMAL_A_B_AND_OBSERVATION_STUDY_INTAKE_20261115.json`。无新world/Actor/帧/训练、他组源/H/锁/进程修改，所有dirty/closed/失败未知账保留。
+
 ### 2026-11-15 17:35：T首个A main在首PUSH前因同色组件未消歧失败，原门安全退出；不是几何死局或方法胜负
 
 - **A唯一main已真实失败，不再沿用17:01“在途”：** 原program626400b8…/root result82952392…已读取，同program main ledger closed=true/root ledger stopped=true；FAILED_NO_RETRY、resource_censored=false、close_errors=[]。Data权威CAS收束及B后续状态尚未本组独立核到，不重派zero/main，不根据A失败推B成功。原own-zero15947a2e…/协议e72ddbb2…/source b08f51bb…和4方法SHA保持，无热补/改门/追胜。
