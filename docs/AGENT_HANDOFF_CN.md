@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 01:03：已消费真实V4组件zero PASS，解除“场景未原生构造”缺口；仍非完整任务/WM/优化资格
+
+- **计划未变：** 总计划仍bdfc613c…，当前五组/原7a6/三组优先与Data唯一physical owner不变。本轮没有重刷前6个bulk边界、重复restore或再造fixture。
+- **出现真正原生阶段增量，归Data/AINav实现执行，不计Reach方法贡献：** Data新组件scope已真实执行并closed，component_zero=1/PASS（result e77fd248…，program b125b188…）。Reach在46308只读核正式release **5a0d9127…** 全部12成员SHA及现有原MJB文件SHA；实际goal_deck registry=.60m、原onboard INPUT8/192×128、1280×720 direct-live第三视角单帧通过。单独原初始化辅助world=1/6.505sim、worker18.908wall/86,482,557输出bytes；task world0步/0sim，**五main/VLM/WM/fit/任务视频均0**，完整capture witness/三placement/CLIMB整链/高台终点仍未准入。不把原MJB hash0b3547b0…当WM checkpoint，原7a6只restore1/forward0保持。
+- **只消费、不复开/改用途：** 该component scope已closed、automatic_retry=false，未重跑其zero；原片/NPZ/MJB不回本地，只有约7KiB原件SHA/标量`/home/yuanyue/reach-ability-research/operations/V4_ACTUAL_NATIVE_COMPONENT_INTAKE_20261116.json`（SHAabdd1e9d…）。整包whole_artifact_model_input_or_fit_allowed=false，未把单帧送WM/planner；PNG像素等值是Data原报告，Reach没有二次解码冒现场query。其余H/进程/driver/锁/资源未动；不把单帧当HD吞吐或五组完整母版。
+- **仍需共享设计决定，不能靠优化器绕技能域：** 已锁三箱.20m，现高台.60m，后继增量.40m被选定原RegisteredTerrain的20cm±.01谓词拒绝；component PASS不改变这个事实，也不解决static deck/current RGBD binding/owner与完整terminal。用户只明确箱参数，未明确许可改平台/增加中间支撑。本轮向用户明确请求：**是否允许平台降到.40m，或允许调整布局增加真实.40m中间支撑（五组共用）？** 两者均只是待决定的共享布局方案，未改scene6394740e…、未承诺改图即整链合格；不得复开已closed component或放宽Actor/12N/4s/FF/QP/FIFO/CLIMB stop。
+- **Reach未完成项仍由本组做：** 当前公共源完整cost/exit=None、准备退出变体未导出；继续公共能力/效果到完整后继名义评价与原因果WM caller接线，不把Data新PASS、回顾端点或UNKNOWN回退冒B/D有效优化。当前native资产资格已到，不再把“缺V4 world构造/HD单帧”列阻塞，也不将方法研究委派给Data。
+
 ### 2026-11-16 00:50：准备路径的真实完整后继评价新增5条；到READY仍可CLIMB碰撞，不把失败短时当低成本
 
 - **已读最新总计划bdfc613c…：** 相对00:03主体新增V-JEPA低优先资源/许可核查说明，当前V4五组、Data唯一physical owner、原7a6与数据用途不变。AINav00:27已交默认OFF冷资产/Runtime新入口及新组件zero≤1/main0请求；收尾核到Data新原件：00:41已只读stage全部19 source/3 base，00:47形成466成员新component inventory（program b125b188…），均明确no H write/physical dispatch，空闲快照不是lease；因此不再写“未采用任何新源”，也不冒zero已启动/通过。本组没有代启动或动他组H/进程/锁。
