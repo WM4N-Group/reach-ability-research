@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fixed G1-full4/G2-full2 closed-scope PUBLIC measurement; no world/fit/GT input.
+"""Fixed G1-full4/G2-full2/full1 closed-scope PUBLIC measurement; no world/fit/GT input.
 
 Uses the original evidence reader and original pixel proposer/component helpers.
 Only the first CLIMB judgment is eligible; never substitute a later READY frame.
@@ -16,7 +16,8 @@ scopes={
  'data-46308-native-prefix-left-PUSH-CLIMB-20261115-v2':('G1_full4_v2','full-4','8da5a1f4c4d12163d2588ba5166c087381ff3df5c0f3769471cd3222816ef682'),
  'data-46308-native-prefix-right-PUSH-CLIMB-20261115-v2':('G1_full4_v2','full-4','c663dabc280b6bd2ea95c1f350fcfec7af7a45dc9fe983667522468a7e724b33'),
  'data-46308-G2-full2-left-PUSH-CLIMB-20261115-v1':('G2_full2_v1','full-2','6ee69a5f2a08c8ed8e5212b2c22ead90daf54dc4bb581bd9e4a09712ab2535e1'),
- 'data-46308-G2-full2-right-PUSH-CLIMB-20261115-v1':('G2_full2_v1','full-2','b0c2d41b07a3bf0d36d488970c17f17814fb205c1cc0b6e6aff01be9a9949f0a')}
+ 'data-46308-G2-full2-right-PUSH-CLIMB-20261115-v1':('G2_full2_v1','full-2','b0c2d41b07a3bf0d36d488970c17f17814fb205c1cc0b6e6aff01be9a9949f0a'),
+ 'data-46308-G2-full1-left-PUSH-CLIMB-20261115-v1':('G2_full1_left_v1','full-1','3b5e9d4d4366479394cf825419f47f6c1875c32519fca26c40762ffa4e82ee8f')}
 assert main.name=='main' and scope in scopes
 family,layout,program=scopes[scope]
 assert a.expected_program_sha==program,'Exact previously frozen program, not an arbitrary scope label'

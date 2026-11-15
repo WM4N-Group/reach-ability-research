@@ -6,7 +6,7 @@ No fitting/thresholds or joint-unit score; full45D block statistics belong to Re
 from pathlib import Path
 import argparse,datetime,hashlib,json,sys
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('--left',type=Path,required=True);p.add_argument('--right',type=Path,required=True)
-p.add_argument('--pair-family',choices=('G1_full4_v2','G2_full2_v1','G2_cross_layout_left_v1','G2_cross_layout_right_v1'),default='G1_full4_v2',help='Explicit within-scene or declared SAME-prefix cross-layout pair; no arbitrary mixing')
+p.add_argument('--pair-family',choices=('G1_full4_v2','G2_full2_v1','G2_cross_layout_left_v1','G2_cross_layout_right_v1','G2_full1_vs_full4_left_v1','G2_full1_vs_full2_left_v1'),default='G1_full4_v2',help='Explicit within-scene or declared SAME-prefix cross-layout pair; no arbitrary mixing')
 a=p.parse_args();blocked=[]
 pair_templates={'G1_full4_v2':'data-46308-native-prefix-{side}-PUSH-CLIMB-20261115-v2',
  'G2_full2_v1':'data-46308-G2-full2-{side}-PUSH-CLIMB-20261115-v1'}
@@ -17,10 +17,14 @@ within_scene=a.pair_family in pair_templates
 if within_scene:
  expected_scopes=[pair_templates[a.pair_family].format(side=s) for s in ('left','right')]
  roles=['prefix_left','prefix_right']
-else:
+elif a.pair_family in ('G2_cross_layout_left_v1','G2_cross_layout_right_v1'):
  prefix='left' if a.pair_family=='G2_cross_layout_left_v1' else 'right'
  expected_scopes=[pair_templates['G1_full4_v2'].format(side=prefix),pair_templates['G2_full2_v1'].format(side=prefix)]
  roles=['full4_'+prefix,'full2_'+prefix]
+else:
+ reference='G1_full4_v2' if a.pair_family=='G2_full1_vs_full4_left_v1' else 'G2_full2_v1'
+ expected_scopes=[pair_templates[reference].format(side='left'),'data-46308-G2-full1-left-PUSH-CLIMB-20261115-v1']
+ roles=['full4_left' if reference=='G1_full4_v2' else 'full2_left','full1_left']
 def fence(event,args):
  if event=='import' and str(args[0]).split('.')[0] in ('torch','mujoco','onnxruntime'):
   blocked.append(str(args[0]));raise RuntimeError('No native/model import')
@@ -63,7 +67,9 @@ if all(j['boundary_status']=='FIRST_PREPARE_EXACT_PUBLIC_VALUES_MEASURED' for j 
  med=[x['component_visible_point_median_base_xyz_m'] for x in v]
  if all(x is not None for x in med):
   delta=np.asarray(med[1])-np.asarray(med[0])
-  key='right_minus_left_nominal_component_median_base_XYZ_m' if within_scene else 'full2_minus_full4_nominal_component_median_base_XYZ_m'
+  if within_scene:key='right_minus_left_nominal_component_median_base_XYZ_m'
+  elif roles[1]=='full2_left' or roles[1]=='full2_right':key='full2_minus_full4_nominal_component_median_base_XYZ_m'
+  else:key=('full1_minus_full4' if roles[0]=='full4_left' else 'full1_minus_full2')+'_nominal_component_median_base_XYZ_m'
   result.update({key:delta.tolist(),'nominal_component_median_delta_L2_m':float(np.linalg.norm(delta)),
    'coordinate_frame_limitation':'Each point is in its own acquisition body frame; delta is NOT world motion, object truth or reference-relative error.'})
  result['interpretation']='Exact differences describe THIS two-run public representation only. No repeatability/noise/material threshold, object truth, candidate ranking, unseen evaluation or benefit follows.'
