@@ -53,6 +53,13 @@ def build_original_buffer(model,normalization,output,*,query_source_root,softwar
     return buffer
 
 
+class WMContextUnavailable(ValueError):
+    """Input/method unavailable, NOT a failed native skill or a success label."""
+    def __init__(self, reason):
+        self.reason = reason
+        super().__init__('WM_METHOD_INPUT_UNAVAILABLE: '+reason)
+
+
 class CausalWMQueryPort:
     def __init__(self,buffer,*,role,target_provider=None,software_fixture=False):
         need(type(software_fixture)is bool,'Explicit software fixture mode')
@@ -69,16 +76,71 @@ class CausalWMQueryPort:
                  'Production query port requires the exact original constructed buffer, not a fixture')
         self.buffer=buffer;self.role='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT'if fixture else role
         self.target_provider=target_provider;self.completed_queries=0
+        self._unmodelled_owner_ids=set();self._current_unmodelled_owner=None
+        self._last_callback_tick=None;self.unmodelled_issued_steps=0
+
+    def _check_accepted_clock(self,physical_tick,time_s):
+        import math
+        need(type(physical_tick)is int and physical_tick>=1 and type(time_s)in(int,float)
+             and math.isfinite(time_s) and abs(physical_tick*.005-time_s)<=1e-6,
+             'Actual accepted native tick/time, not selection or future command')
+        need(self._last_callback_tick is None or physical_tick==self._last_callback_tick+1,
+             'No skipped/duplicate accepted callbacks across modelled/unmodelled owners')
+
+    def on_unmodelled_issued(self,physical_tick,time_s,*,native_owner_id,owner_kind):
+        """Revoke only the model-input window for an actually issued unknown owner.
+
+        SupportedCapture is not silently HOLD/NAV/RECOVER. Original raw recorder,
+        actual owner/world/FIFO/clock and past query artifacts are NOT changed.
+        A later genuine modelled owner needs three NEW real frames/full history.
+        """
+        need(type(native_owner_id)is str and bool(native_owner_id)
+             and type(owner_kind)is str and bool(owner_kind),'Actual opaque owner ID/kind, never prospective candidate')
+        self._check_accepted_clock(physical_tick,time_s)
+        self._unmodelled_owner_ids.add(native_owner_id)
+        self._current_unmodelled_owner=(native_owner_id,owner_kind)
+        self.buffer.frames.clear();self.buffer.commands.clear()
+        self.buffer.owner=None;self.buffer.observed_skill=None;self.buffer.owner_started=None
+        self._last_callback_tick=physical_tick;self.unmodelled_issued_steps+=1
+        return dict(status='UNMODELLED_ISSUED_OWNER_WINDOW_REVOKED_NOT_NATIVE_FAILURE',
+            owner_kind=owner_kind,physical_tick=physical_tick,time_s=time_s,
+            raw_recording_or_native_world_modified=False,model_forward_performed=False)
+
+    def context_status(self):
+        from .v4_raw_wm_adapter import SKILLS
+        if self._current_unmodelled_owner is not None:status='CURRENT_ISSUED_OWNER_NOT_IN_ORIGINAL_GENERIC_SKILLS'
+        elif getattr(self.buffer,'observed_skill',None)not in SKILLS:status='NO_ACTUALLY_ISSUED_MODELLED_OWNER'
+        elif len(getattr(self.buffer,'frames',()))!=3:status='WAIT_THREE_NEW_REAL_GRID_FRAMES'
+        else:status='NECESSARY_CONTEXT_PRESENT_ORIGINAL_BUILD_CHECKS_STILL_REQUIRED'
+        return dict(status=status,current_observed_skill=getattr(self.buffer,'observed_skill',None),
+            buffered_frames=len(getattr(self.buffer,'frames',())),
+            buffered_issued_references=len(getattr(self.buffer,'commands',())),
+            unmodelled_issued_steps=self.unmodelled_issued_steps,completed_queries=self.completed_queries,
+            native_or_WM_inference_qualification_claimed=False)
+
+    def _require_modelled_owner(self):
+        status=self.context_status()['status']
+        if self._current_unmodelled_owner is not None or (
+                self.role!='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT' and
+                status!='NECESSARY_CONTEXT_PRESENT_ORIGINAL_BUILD_CHECKS_STILL_REQUIRED'):
+            raise WMContextUnavailable(status)
 
     def on_visual(self,packet):
+        if self._current_unmodelled_owner is not None:
+            return False  # Original native recorder still records; no unknown-owner frame enters model window.
         self.buffer.visual(packet)  # Exact original10Hz/causal ordering checks at build.
 
     def on_issued(self,position,physical_tick,time_s,*,actual_issued_skill,native_owner_id):
+        need(type(native_owner_id)is str and bool(native_owner_id) and native_owner_id not in self._unmodelled_owner_ids,
+             'An excluded actual owner cannot be renamed HOLD/NAV/RECOVER; a genuine new owner is required')
+        self._check_accepted_clock(physical_tick,time_s)
         self.buffer.actual_motor(position,physical_tick,time_s,
             issued_skill=actual_issued_skill,native_owner_id=native_owner_id)
+        self._last_callback_tick=physical_tick;self._current_unmodelled_owner=None
 
     def __call__(self,batch,options):
         """Direct query_provider for OriginalBehaviorWMAdapter, no model future head."""
+        self._require_modelled_owner()
         need(self.role!='CLOSED_RECORDED_INPUT_AUDIT_NOT_LIVE','Closed audit cannot supply live WM provider')
         if self.role!='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT':
             from ainav.intents import IntentBatch
@@ -114,6 +176,7 @@ class CausalWMQueryPort:
     def build(self,query_id,*,public_observation,body45,body_observed_time_s,
               target8_by_option_sha256,target8_evidence_by_option_sha256=None,observed_geometry8=None,
               observed_geometry_time_s=None,observed_geometry_RGB_sha256=None):
+        self._require_modelled_owner()
         if self.role!='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT':
             from ainav.contracts import Observation
             need(isinstance(public_observation,Observation),'Original strict public Observation only')

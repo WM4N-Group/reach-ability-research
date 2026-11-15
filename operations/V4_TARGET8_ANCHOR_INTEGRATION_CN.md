@@ -51,3 +51,24 @@ frame_local_ref_by_option_sha256:
 - 小报告`operations/V4_ORIGINAL_TARGET8_GEOMETRY_CPU_SMOKE_20261116.json`，SHA **d0ac33cca53d5c65d627f22d6bebdec4181df802996aed0603d194d37320ff84**；原件留`/mnt/yuanyue/reach-runs/V4-anchor-target8-original-functions-CPU-20261116-v1/ORIGINAL_GEOMETRY_CPU_SMOKE.json`。当前真实原7a6 restore仍1，现场query/forward仍0；未拿OBS/bulk/组件zero单帧补3帧/40步history，数据用途不变。
 - AINav新eafc8c5b…/23-source的destination binder/选中task factory已读：保持public destination和原native option hash；这是软件接缝，不是本模块可读取private witness source-height/pose的许可，也不是完整driver/observer资格。原component zero是04f/19-source、已closed，不借给新23-source或重跑。
 - 最新总计划0e9f872b…仅新增J组具体权重许可/版本核定说明；不热换当前7a6/五组，不扩bulk用途。平台.20→.60与static deck/owner/真实terminal、完整cost provider/准备退出域仍未闭合。用户布局决定未回，不擅改三箱/平台/原门，也不把本输入实现当准备路径优化器完成。
+
+## 2026-11-16 02:43：真capture已过，但首次WM决策有bootstrap依赖；不把capture编码成原HOLD
+
+Data新**25-source/475-member**程序f1991adb…已真实完成SupportedCapture448条命令/2.240任务sim＋同world/FIFO原execution装配，scope已closed；release1254bb36…/result00768cd9…。Reach只读核16发布metadata＋20 sealed远端成员SHA与452行原journal全链，不decode NPZ或调用模型；精确小记录在`operations/V4_ACTUAL_CAPTURE_EXECUTION_INTAKE_20261116.json`，SHA **5b7810c39650ff66d2968ba9272e0770e6aacf1f5706924bf2c44d7c91b49c7f**。原23 onboard帧不是WM用途输入许可（whole_artifact_model_input_allowed=false），不从中造history/forward。原19-source cold zero仍单独closed；这两个component均非五组main，也不能借给新27-source full driver。
+
+**首次A/B不能仅凭“有448条命令/23图”就宣称可开始。** SupportedCapture是实际ground owner，但不是原6类泛型技能里的HOLD/NAV/RECOVER，也不等原FarBankStop。现A/B第一select就要求实际WM预测；若一开始只发capture、随后直接进该select，仍缺合法的已发模型技能上下文。此处是源码输入依赖，不是已观察到A/B native失败；不能偷改首次A/B为VLM-only，或改成HOLD伪造过去。
+
+新增`CausalWMQueryPort.on_unmodelled_issued(tick,time_s,native_owner_id=...,owner_kind='SupportedCapture')`供**实际accepted-step**调用：只撤销模型窗口/旧observed_skill，不动world/FIFO/原recorder/已落盘query。unsupported期间的grid帧不进模型窗口；同一已排除owner ID不能改名HOLD/NAV/RECOVER。真正新控制owner按原on_issued输入之后，必须积累3张**新**真实10Hz帧和完整原200Hz区间，仍由原build核history、clock、previous-action等；未齐抛`WMContextUnavailable`，不作native failed或成功代价0。8个新增metadata专项（连此前64共72）不使用本次真实capture流作模型输入，未再次运行原Torch/NumPy smoke或恢复权重。
+
+### 对AINav新live_driver的最短接法（仍由source owner改其代码）
+
+1. **grid而非任意planning图：** 原`NavPilot.capture_grid`只在`tick%20==0`且未重复时调用observer/append_visual。就在同一packet的原记录后交`port.on_visual(packet)`；不要将`observe_public()`额外off-grid拍摄写进10Hz窗口，也不为WM另建renderer/world。
+2. **accepted而非意图：** 原`CourseGuardsAndWriter._write_command`在实际step后记录`issued`，并设置`_last_issued=issued[0].copy()`。port输入的native18 position就是这个实际accepted的`issued[0]`，**不是delayed FIFO/PD应用后的ref、VLM候选或将来动作**。同原physical_tick/time；实际SupportedCapture时用on_unmodelled_issued，其他已真正发出动作的原6类owner用on_issued。
+3. **实际native动作族与稳定owner：** CLIMB意图的PREPARE可能真正执行NAV，必须编码NAV而非CLIMB；owner ID来自实际原controller/session（含必要exit子owner），不取尚未执行的意图hash。原native身份与same-params检查不改。
+4. **仍需同anchor公共语义关联：** 新driver的192×128当前alias不能直接抄成96×64 WM anchor ref。用同原packet/变换来源证明建立公共semantic/landmark与该anchor frame-local ref的一对一关系；缺失保持None，不能传private body pose来补。非视觉NAV路标不凭空有箱面；A/B raw适用域必须真实可用。
+
+### 首次合法上下文的共同前缀：仅提议，未执行/未改协议
+
+建议AINav/研究在**五组共同初态协议**中事前固定一个必要的公开原NAV观察准备（从共同27目录选择；具体目标/次数由其在结果前冻结），五组都先取得真实NAV原回执，并计入从task t0开始的全部时间/费用/完整原片；A/B接真实NAV已发history，C/D仍保原AINav所有能力，E仍零VLM/WM/优化。准备动作不是方法决策或正确完整路线，不能据其结果调五组策略/选赢家，也不能只给A/B独占prefix。
+
+**这只是用于消除bootstrap依赖的共享方案，不是本组新派发/新权限或已采纳的条件。** 本轮未硬编码/执行某条NAV、未改五组协议或场景、未让Data运行新scope、未借448条closed capture做WM输入；若未来采纳，要在新full program精确freeze/必要own-zero/lease里验证，不重开任何closed组件。若不采用共同prefix，必须显式解决其他合法的原模型观测编码/启动方案，不能暗中丢掉A/B的WM要求。平台.20→.60/static deck/动态箱NAV与完整后继cost仍独立未解决。
