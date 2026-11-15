@@ -1,0 +1,7 @@
+# T-COMPLEX v2 camera-repaired source component qualification
+
+Source-owner exact immutable remote release d486ec48813cd7d50ad09a30404573e353305f7c, selected three-choice scene578bd753…. Source-owner camera hook is original precompile scene.configure_scene branch, checked parent/K/T/rotation/fovy. Mutable local terminal_stop.py had drifted after release and was rejected before any staging/native dispatch; fetched all22 exact released code-only members from source-owner immutable remote root instead.
+
+New distinct source-version technical component scope data-46308-T-COMPLEX-01-v2-camera-source-components-zero-20261115-v1; at most one component-zero, no task main/AB/planning/fit, no auto retry. Prior failed component root/result/ledger/count1 preserved and remains closed. Original common SDK/runtime/Actor and canonical GPU0 lease unchanged. Explicit selected scene path+SHA for compile and fresh Runtime; zero task steps. Intended checks: actual original camera ABI, cold Runtime/aux calibration/original INPUT8 and one direct 960x540 live world0 frame. A success is not full dynamic task/capture witness/A-B qualification or video.
+
+Native evidence and authority/freezes/H remain remote/outside Git. Code custody does not authorize any launch on another host or reopen any scope. CAL07 already closedPASS119.345sim; CAL08/09 and all VAL remain0. This new source-version preflight takes T priority without waiting for critic or100 data.
