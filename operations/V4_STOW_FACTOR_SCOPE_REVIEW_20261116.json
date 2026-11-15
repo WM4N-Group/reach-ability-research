@@ -22,11 +22,13 @@
   "existing25_source_capture_did_not_construct_a_selected_skill": true,
   "five_arm_main_calls_observed": 0,
   "physical_or_model_calls_by_review": 0,
-  "required_action": "Source owner must gate or disable the old always-TRUE installer BEFORE new full program freeze; A/C/E must not receive this Reach optimization silently",
+  "required_action": "Before full-program freeze explicitly distinguish retained legacy-common stow from NEW five-arm successor treatment; do not weaken the complete AINav baseline merely to make a generic counter zero. If this component is treatment-specific, gate it by arm at first install using the optional helper.",
   "suggested_helper": "research.task_conditioned_reachability.execution_preparation.v4_stow_factor.install_v4_stow_factor",
   "helper_default_OFF_for_all_arms": true,
   "helper_A_C_E_force_enable_refused": true,
   "helper_disabled_alias_guard_records_expected_None": true,
   "helper_not_yet_adopted_by_AINav_or_Data": true,
-  "existing_closed_components_not_reopened_or_invalidated": true
+  "existing_closed_components_not_reopened_or_invalidated": true,
+  "legacy_common_scope_is_not_automatically_a_treatment_leak": true,
+  "strict_factor_helper_is_optional_not_a_mandatory_baseline_rewrite": true
 }

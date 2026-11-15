@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 03:03：真实capture/装配资格已消费；补WM非模型owner隔离，并明确旧共同收臂与新处理因子，未擅改基线
+
+- **计划更新42c8a90d…已读：** 新增J组7项冻结评价软件检查/02:00低优先CPU窗口过期且未用等状态；当前五组/原7a6/仅46308/Data唯一physical owner不变，未有平台布局改动许可。本组未借J窗口或创造新资源/训练用途。
+- **Data/AINav真实新阶段已到，不再写“只有cold Runtime”：** 新25-source/475-member program f1991adb…、result00768cd9…/release1254bb36…，原SupportedCapture真实448条200Hz命令/2.240任务sim→同world/FIFO原resolver/backend/RegisteredPushAPI/NativeOptionExecutor/选中factory装配PASS并closed，6条原不可变placement合同齐；选中技能controller0、五组main0。Reach只读核16发布metadata＋20 sealed远端成员SHA及452原journal全链，23机载192×128帧/原4-step FIFO/PD/clip等是Data原cold原件，不decode NPZ/重算采集。本组件aux1world/6.505sim另列，worker25.838781wall/87,735,513bytes；不是E/完整任务/CLIMB/影片，也不借25-source资格给4909180a…/27-source live driver。小记录`/home/yuanyue/reach-ability-research/operations/V4_ACTUAL_CAPTURE_EXECUTION_INTAKE_20261116.json` SHA5b7810c3…；全部raw/MJB/数组仍远端。
+- **WM首次启动依赖已具体化，不把capture冒HOLD：** 当前V4未核定SupportedCapture到原6类observed-family的合法映射，且A/B第一select就需真实预测。新on_unmodelled_issued只撤销模型窗口/旧observed_skill，不改原world/FIFO/recorder/过去query；同一被排除owner不能改名HOLD/NAV/RECOVER。真正新已发owner需3张新真实grid帧＋完整原history，未齐是WMContextUnavailable（方法输入不可用），不是native failed/0成功代价。精确source接点：只收原capture_grid10Hz packet，accepted issued[0]而非delayed FIFO，实际执行NAV PREPARE时不能编码成尚未执行的CLIMB意图；不挂aux校准world。本包whole_artifact_model_input_allowed=false，448命令/23帧没有送WM。
+- **已给source消除bootstrap依赖的共同方案，而非偷偷改方法：** 可在五组共同初态协议里结果前冻结一个必要公开原NAV观察准备，五组全成本/原片从task t0计、保C/D原树和E无VLM/WM；具体目标/次数由source/研究明确，未硬编码/执行、未新派scope或擅改五组协议。否则需另有合法启动编码，不能首次A/B静默退成VLM-only。见既有接线文档新增bootstrap节。
+- **准备路径优化接缝发现的是范围歧义，不冒已污染结果：** 4909180a… live driver继承的_install_common_stow（method e658b891…）把旧Reach-v2 binder无arm判断enabled=True；该旧DAG可在合法PUSH门内改waypoints。若它是已固定legacy-common强底座，应保留并与本次new-successor优化分层计数，**不能为泛称“优化0”删掉共同项、削弱完整C**，旧H也不能归因B−A/D−C。若明确登记为本次处理因子，新增v4_stow_factor可供source在task0接：默认全OFF、A/C/E拒强开、B/D仅显式opt-in；OFF为每alias登记expected None并保持原_native_guards，不删旧callback伪OFF，不热切换/改4s/endpoint/Actor/guard。需注意live_driver末尾setattr会覆盖早定义的同名override。实现/准确callgraph在`/home/yuanyue/reach-ability-research/operations/V4_PREPARATION_FACTOR_ISOLATION_CN.md`及V4_STOW_FACTOR_SCOPE_REVIEW_20261116.json。**这是可选严格模式，未被AINav/Data采用，不宣布已发生或修复实验污染。**
+- **验证与未完成均准确：** 新8个unmodelled-owner＋8个factor namespace专项，加前64=80软件检查，两端过；首次helper空格SyntaxError已修，没改原门/expected。无新Torch/NumPy smoke、restore/神经预测/API/物理/fit；原7a6 restore1/现场query-forward0，五main0。完整名义后继cost/provider/准备退出域仍未闭合，不把新helper、标准DAG、旧AINav/原组件成功或回退当Reach新收益。平台.20→.60/static deck/动态箱NAV/完整terminal与既有用户布局决定仍待，scene6394740e…/三箱参数/12N/FF/QP/FIFO/4s/stop、全部dirty/closed/失败成本与critic旧用途保持，未动他组代码/H/进程/锁或自动化。
+
 ### 2026-11-16 01:46：原target8可见平面计算接到WM实际anchor；64软件检查两端过，现场query/forward仍0
 
 - **已读更新计划0e9f872b…：** 新增J组具体编码器权重许可/版本/SHA已核定（尚无实际下载/forward）的说明；Reach仍当前7a6/五组优化与critic，不接管J训练/改旧用途。AINav新eafc8c5b…/23-source destination＋selected task factory已读，public destination与原option hash保留；软件接缝不等完整driver/static deck/40cm/终点准入，也不把旧04f/19-source组件zero借给新源。

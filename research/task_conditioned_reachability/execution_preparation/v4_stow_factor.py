@@ -1,6 +1,8 @@
 """V4 arm-specific startup binding for the EXISTING Reach stow path kernel.
 
-Default OFF for every arm; A/C/E cannot opt in. A pre-existing all-arm installer
+In explicit treatment-specific mode, default OFF; A/C/E cannot opt in.
+Do not use this helper to silently remove an already fixed legacy-common layer
+or weaken the complete original AINav baseline. A pre-existing all-arm installer
 must NOT run first: disabling a second bind does not remove its callback. This
 helper installs no controller/command and changes no native success/safety gate.
 Source owner calls it in a fresh zero-step NEW worker, never an active/closed run.
