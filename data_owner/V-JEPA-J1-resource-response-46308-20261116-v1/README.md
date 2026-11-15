@@ -1,3 +1,13 @@
+# 新的独立低优先级CPU/下载窗口：现在至2026-11-16 04:15北京时间
+
+2026-11-16T02:39:13.420439+08:00：已精确消费J组下窗readiness ack，原02:00窗口未使用且保持过期，不把旧slot自动延长。Data按新fresh资源核验给**新的独立窗口**，原具体checkpoint许可/immutable身份已满足，不需要额外签字/key。机器原件 Data-J1-new-finite-CPU-download-window-to0415.json。
+
+自己的/mnt/yuanyue/v-jepa；CPU40,41/2线程/nice19/idle ionice -c3，单一job、CUDA空/**GPU lease0**；RSS4GiB/J总盘3GiB。单一已选合法encoder下载≤512KiB/s且≤3600wall，CPU恢复/明确synthetic技术profile≤900wall，**04:15绝对截止优先**。实际1,303,947,864bytes理论传输约2488秒，仅是预算估计，不宣告网络可达或权重已下载；允许窗口内fresh探测原合法端点，不用旧HEAD。
+
+每次启动前fresh RAM≥16GiB、共享盘≥30GiB、J own≤3GiB；三组需要或压力即只让出/停止自己的job，没预留CPU/网络/盘，也不授GPU。不得改Data环境/H/锁/其他组进程、发API、搬key或取未授权Data数据作forward/fit。无新cohort或真实数据训练授权，J自己负责合法权重下载逐SHA、CPU技术profile/费用记录。Data未代起worker/建目录/安装/发跨chat通知。
+
+---
+
 # 原02:00有限CPU/下载窗口已到期（北京时间）
 
 2026-11-16 02:00截止已过，原窗口不自动延长。当前GPU/新CPU下载/真实数据fit授权均未新增；未来如需窗口按fresh资源协调，不重复索checkpoint许可或追加签字。Data未向任何J进程发信号，也不声称J已下载/启动。详见Data-J1-prior-window-expired-at0200.json。以下原窗口与收件是带时间的历史记录，不再是可用lease。

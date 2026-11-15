@@ -1,0 +1,171 @@
+{
+  "releases": [
+    {
+      "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-19-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "87fe28f4aae8f9d6d82c514b3f47aa02d6002f4851f82021ab43fe3569a6a0bf",
+      "summary": {
+        "source_result_passed": true,
+        "source_error": null,
+        "source_result_sha256": "bba315cd9f57b56584183b76c433e38ff9d87110a94032e8a64c025a8ac5d547",
+        "actual_task_sim_s": 118.37499999996483,
+        "actual_commands": 23675,
+        "RGBD_frames": 1184,
+        "review_frames": 1184,
+        "direct_raw_frames": 1184,
+        "direct_raw_resolution_px": [
+          192,
+          128
+        ],
+        "HD": false,
+        "exact3_semantic_requests_succeeded": true,
+        "actual_native_terminal_receipts": [
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=10433",
+              "issued_command_sha256": "ff027adbbb0a5d25fa4697fbdd4e410073f011436888cf760132a6c650f4e601",
+              "option_sha256": "33ed32755f9b26eca35bbff83d106c96684c4fa005cdb998d52ec7f28e822192",
+              "status": "succeeded",
+              "time_s": 52.165000000008234
+            },
+            "task_success_inferred": false
+          },
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=12845",
+              "issued_command_sha256": "09b9e80486aedb2589d592fe9a49a05485afb349919cbe42b68dcc1f909de05c",
+              "option_sha256": "7d288a936767b8c753024bbeaf8f7c7005c0377ee6d6d1617086f887cddc2960",
+              "status": "succeeded",
+              "time_s": 64.22500000001408
+            },
+            "task_success_inferred": false
+          },
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=19093",
+              "issued_command_sha256": "8071bdf41183b2e4f035306cd78a82caf2af12963329c19869402d6183ac37e5",
+              "option_sha256": "86c1777359d3ae7d9a35f6de3ab42ff20c6d04500e7979502008985d4441c0f0",
+              "status": "succeeded",
+              "time_s": 95.46499999998566
+            },
+            "task_success_inferred": false
+          },
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=21763",
+              "issued_command_sha256": "f18cd32623fab9fde5bca7ba63973d9fc3f6fccfe8451ebf6eb3ec0a2a29f521",
+              "option_sha256": "348bf759f82c6e3468ca0b7ad96018e97c34db324e26f61022ad4b73c0fee8f5",
+              "status": "succeeded",
+              "time_s": 108.81499999997352
+            },
+            "task_success_inferred": false
+          },
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "observed-native-option-outcome",
+              "issued_command_sha256": "d34b44dcd0211a1fe428564643563baa43c3de5d3d1f7fdf65f3620be624aa6b",
+              "option_sha256": "4e2da7cb84fdb59e8e8dccb22a364601b7678f3671727a5f8677f5cf9da81e6c",
+              "status": "succeeded",
+              "time_s": 118.37499999996483
+            },
+            "task_success_inferred": false
+          }
+        ],
+        "first_CLIMB_query_present": true,
+        "missing_CLIMB_query_features": null,
+        "missing_CLIMB_outcome_label": null,
+        "nine_stream_checks": {
+          "episode_storage_complete": true,
+          "continuous_200Hz_commands": true,
+          "same_program_actual_zero_and_main_model": true,
+          "original_delay_FIFO_exact": true,
+          "PD_raw_torque_reproduced": true,
+          "hard_clip_reproduced": true,
+          "visual_actions_previous_matches_actual_issue": true,
+          "visual_and_review_grid_complete": true,
+          "no_teardown_errors": true
+        },
+        "public_query_count": 5,
+        "first_CLIMB_boundary": {
+          "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+          "first_judgment_status": "PREPARE",
+          "first_PREPARE_time_s": 95.46499999998566,
+          "actual_physical_observation_sha256": "11a7493f0a612c82fcdf2563a218cadd7def2ef9b1657be64b6c054d88f96dc3",
+          "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-19-g02-left-lateral_plus_0p04-20261115-v1/main/events.jsonl#3751",
+          "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+        },
+        "scope_including_own_zero_aux_sim_s": 131.3849999999646,
+        "scope_ledger_wall_s": 935.8545469988603,
+        "scope_output_highwater_bytes": 174330923,
+        "all_usage_known": true,
+        "resource_censored": false,
+        "whole_mission_or_T_complex_success": false
+      }
+    },
+    {
+      "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-20-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "cf4a0ac511bb2206761cfb90c24da9d6144efc24c55ab317011f1fea4f6601e3",
+      "summary": {
+        "source_result_passed": false,
+        "source_error": "reconciled_reference_FF_intersection_empty",
+        "source_result_sha256": "6bdedeb7c5ed78a905226575626c19edbeac5d120b8adeef3a86db045f81ac15",
+        "actual_task_sim_s": 64.17500000001412,
+        "actual_commands": 12835,
+        "RGBD_frames": 642,
+        "review_frames": 642,
+        "direct_raw_frames": 642,
+        "direct_raw_resolution_px": [
+          192,
+          128
+        ],
+        "HD": false,
+        "exact3_semantic_requests_succeeded": false,
+        "actual_native_terminal_receipts": [
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=10621",
+              "issued_command_sha256": "4ed2a9016ae4efe0404036b5e5da2b7dfc39eff82d013531578132db92244dd2",
+              "option_sha256": "c877f0a8ba69c996f4af33d55ad6edc01a714fc93b8021729c17fdf93314b880",
+              "status": "succeeded",
+              "time_s": 53.105000000008715
+            },
+            "task_success_inferred": false
+          }
+        ],
+        "first_CLIMB_query_present": false,
+        "missing_CLIMB_query_features": null,
+        "missing_CLIMB_outcome_label": null,
+        "nine_stream_checks": {
+          "episode_storage_complete": true,
+          "continuous_200Hz_commands": true,
+          "same_program_actual_zero_and_main_model": true,
+          "original_delay_FIFO_exact": true,
+          "PD_raw_torque_reproduced": true,
+          "hard_clip_reproduced": true,
+          "visual_actions_previous_matches_actual_issue": true,
+          "visual_and_review_grid_complete": true,
+          "no_teardown_errors": true
+        },
+        "public_query_count": 2,
+        "first_CLIMB_boundary": {
+          "status": "NO_CLIMB_JUDGMENT_RECORDED",
+          "first_judgment_status": null,
+          "first_PREPARE_time_s": null,
+          "actual_physical_observation_sha256": null,
+          "judgment_ref": null
+        },
+        "scope_including_own_zero_aux_sim_s": 77.18500000001389,
+        "scope_ledger_wall_s": 499.4160119041335,
+        "scope_output_highwater_bytes": 116428150,
+        "all_usage_known": true,
+        "resource_censored": false,
+        "whole_mission_or_T_complex_success": false
+      }
+    }
+  ]
+}
