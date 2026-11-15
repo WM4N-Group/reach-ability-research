@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-16T06:23:46.018549+08:00",
+  "PID": 161551,
+  "process_state": "S (sleeping)",
+  "wait_channel": "request_wait_answer",
+  "CPU_user_s": 94.45,
+  "CPU_system_s": 46.12,
+  "VmRSS_kB": 2076064,
+  "threads": 7,
+  "CPU_affinity": "36-37",
+  "nice": 15,
+  "interpretation": "A read-only instantaneous filesystem-request wait observation, not function-level profiling or proof of a particular bottleneck",
+  "possible_source_per_tick_module_path_or_recording_metadata_IO_only_hypothesis": true,
+  "no_signal_source_or_budget_modification": true,
+  "frozen_wall_cap_stays1800_s": true,
+  "do_not_infer_native_skill_failure_from_slow_wall_throughput": true
+}

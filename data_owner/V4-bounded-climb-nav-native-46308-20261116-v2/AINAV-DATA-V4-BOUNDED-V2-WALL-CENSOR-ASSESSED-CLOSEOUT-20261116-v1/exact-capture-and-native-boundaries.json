@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-16T06:32:17.008201+08:00",
+  "source_result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "original_journal_sha256": "7eb678eb170ef1d596bc2f7f910a5f0faaa18471368640deabe60d27a1651603",
+  "resource_wall_censored": true,
+  "no_native_failure_or_CLIMB_negative_label": true,
+  "original_actual_capture_completed_sample": {
+    "complete": true,
+    "event": "cold_capture_actual_sample",
+    "metrics": {
+      "arm_error": 0.00024976552925343176,
+      "arm_speed": 0.0002769655639352366,
+      "base_angular_speed": 0.0005995096419026136,
+      "base_linear_speed": 0.0004999164084940913,
+      "drift_m": 0.0019821318858657157,
+      "foot_normal_N": [
+        52.38009698561048,
+        52.389940647312784,
+        54.37110724417728,
+        54.38083670595904
+      ],
+      "hand_force_N": 0.0,
+      "max_foot_speed": 5.0055856644589514e-05,
+      "on_declared_support": true,
+      "reference_error": 0.0,
+      "reference_speed": 0.0,
+      "tilt_rad": 0.0005869399984643858
+    },
+    "model_input": false,
+    "phase": "COMPACT_TRANSFER",
+    "time_s": 2.2399999999999745
+  },
+  "actual_Push_intent_selected": [
+    {
+      "counts_as_model_decision": false,
+      "event": "skill_intent_selected",
+      "intent": {
+        "budget_s": 60.0,
+        "parameters": [
+          [
+            "goal_world_x_m",
+            2.6
+          ],
+          [
+            "goal_world_y_m",
+            0.0
+          ],
+          [
+            "surface_height_m",
+            0.0
+          ]
+        ],
+        "skill": "PUSH",
+        "target_ref": "cuboid_a",
+        "token": "v4-intent-1-20"
+      },
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "intent_source": "API0_BOUNDED_COMPONENT_ENGINEERING_NOT_C_OR_E_METHOD",
+      "model_selection_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v2/events.jsonl#454",
+      "physical_action_issued": false,
+      "semantic_query_sha256": "a4d6886510c9ccd5ae07966ea16e0d3204b9551179d8c24080308103a6d0b292",
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "only_original_native_admitted": [
+    {
+      "event": "ainav_native_admitted",
+      "option": {
+        "attempt_id": "",
+        "budget_s": 60.0,
+        "mandatory_protection": false,
+        "native_preconditions_receipt": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v2/events.jsonl#456",
+        "original_push_goal_sha256": "",
+        "parameters": [
+          [
+            "goal_world_x_m",
+            0.22000000000000008
+          ],
+          [
+            "goal_world_y_m",
+            1.8797838865806863e-16
+          ],
+          [
+            "surface_height_m",
+            0.0
+          ]
+        ],
+        "skill": "NAV",
+        "target_ref": "cuboid_a",
+        "token": "v4-entry-NAV-1"
+      },
+      "physical_command_issued": false,
+      "query_sha256": "942429761614fb9c0c34302147e06490855e82e2a63800f33f30cab1218d4bf9",
+      "receipt": {
+        "evidence_ref": "native-option-installed:ainav-execution-000002",
+        "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+        "option_sha256": "07b6db2bd3ea04eaffa8d6a2bfb1900934906a650fe9c706db4195500c901dbe",
+        "status": "admitted",
+        "time_s": 2.2399999999999745
+      },
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "original_started_receipts": [
+    {
+      "event": "ainav_native_receipt",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=449",
+        "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+        "option_sha256": "07b6db2bd3ea04eaffa8d6a2bfb1900934906a650fe9c706db4195500c901dbe",
+        "status": "started",
+        "time_s": 2.2449999999999743
+      },
+      "task_success_inferred": false,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "literal_native_terminal_receipts": [],
+  "original_NAV_actor_forward_events": 133,
+  "actual_capture_commands": 448,
+  "subsequent_original_ground_NAV_preparation_commands": 530,
+  "total_task_commands": 978,
+  "late_capture_report_is_current_gait_measurement_not_capture_boundary": true,
+  "late_capture_report_stable_seconds_not_continued_four_foot_dwell": true,
+  "legacy_capture_witness_complete_false_is_initial_unupdated_full_run_default": true,
+  "actual_Push_interaction_and_CLIMB_and_dynamic_NAV_not_attempted": true,
+  "no_original_scope_result_journal_or_guards_changed": true
+}

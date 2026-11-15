@@ -1,0 +1,67 @@
+{
+  "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-V4-BOUNDED-QUAL-V2-ORIGINAL-RESOURCE-AND-NATIVE-OUTCOME-20261116-v1/release.json",
+  "release_sha256": "b54503b8d19adf82980a2507425769ee70263f6c55b7382d2548a21cc46e3930",
+  "audit": {
+    "original_result_passed": false,
+    "source_result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+    "all_frozen_source_members": 492,
+    "frozen_source_bytes_verified": true,
+    "journal_chain_verified_rows": 600,
+    "original_error": "BoundedComponent1800wall cap with teardown reserve",
+    "original_failure_stage": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+    "no_Runtime_Actor_Renderer_WM_or_physics_imports": true,
+    "task_success_not_inferred": true,
+    "model_input_allowed": false,
+    "training_allowed": false,
+    "checks": {
+      "episode_storage_complete": true,
+      "continuous_200Hz_commands": true,
+      "original4step_delay_FIFO_exact": true,
+      "raw_PD_reproduction": true,
+      "original_hard_clip": true,
+      "onboard_visual_previous_action": true,
+      "original10Hz_grid_complete": true,
+      "no_teardown_errors": true
+    },
+    "actual_commands": 978,
+    "original_onboard_frames": 49,
+    "max_raw_PD_error": 0.0,
+    "max_hard_clip_error": 0.0,
+    "original_capture_sample_events": 448,
+    "actual_assembly_events": [
+      {
+        "actual_capture": {
+          "actual_issued_steps": 448,
+          "kind": "actual_cold_start_supported_capture",
+          "model_input": false,
+          "no_NAV_arrival_claimed": true,
+          "no_PUSH_failure_claimed": true,
+          "support_ref": "ground",
+          "time_s": 2.2399999999999745
+        },
+        "bounded_CLIMB_NAV_source_wiring_present": true,
+        "connected_skills": [
+          "NAV",
+          "PUSH",
+          "CLIMB"
+        ],
+        "current_controller_constructed": false,
+        "event": "V4_actual_capture_to_original_execution_assembled",
+        "model_input": false,
+        "native_CLIMB_NAV_or_full_task_qualification": false,
+        "native_commands_issued": 0,
+        "static_deck_40cm_or_task_ready": false,
+        "time_s": 2.2399999999999745,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "C",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    ]
+  }
+}

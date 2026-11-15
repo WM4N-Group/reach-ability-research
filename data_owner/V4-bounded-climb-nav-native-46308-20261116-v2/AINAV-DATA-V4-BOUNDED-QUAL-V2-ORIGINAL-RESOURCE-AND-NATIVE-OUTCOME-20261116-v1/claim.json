@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T05:57:27.108024+08:00",
+  "PID": 161551,
+  "program_sha256": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "phase": "component_zero",
+  "scope_id": "data-46308-V4-bounded-climb-nav-native-20261116-v2",
+  "task_main": false,
+  "invocation": 1
+}

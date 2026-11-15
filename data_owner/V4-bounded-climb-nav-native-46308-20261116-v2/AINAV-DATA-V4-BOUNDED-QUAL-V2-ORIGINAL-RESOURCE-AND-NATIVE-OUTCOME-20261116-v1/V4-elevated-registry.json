@@ -1,0 +1,8 @@
+{
+  "goal_surface_ref": "goal_deck",
+  "goal_top_z_m": 0.6,
+  "deck_geom_id": 1,
+  "deck_body_id": 0,
+  "declared_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "not_complete_CLIMB_or_task_qualification": true
+}

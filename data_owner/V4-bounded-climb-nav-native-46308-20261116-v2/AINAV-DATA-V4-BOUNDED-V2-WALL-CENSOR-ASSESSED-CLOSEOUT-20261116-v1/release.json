@@ -1,0 +1,22 @@
+{
+  "schema": "Data-bounded-v2-wall-censor-assessed-closeout-child-v1",
+  "at": "2026-11-16T06:41:41.588592+08:00",
+  "scope_id": "data-46308-V4-bounded-climb-nav-native-20261116-v2",
+  "program_sha256": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "parent_original_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-BOUNDED-QUAL-V2-ORIGINAL-RESOURCE-AND-NATIVE-OUTCOME-20261116-v1/release.json",
+  "parent_original_release_sha256": "b54503b8d19adf82980a2507425769ee70263f6c55b7382d2548a21cc46e3930",
+  "same_scope_not_new_physical_sample": true,
+  "interpretation_superset_replaces_parent_summary_not_union": true,
+  "original_result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "passed": false,
+  "resource_censored": true,
+  "actual_task_native_preparation_controllers": 1,
+  "native_interaction_Push_Climb_top_NAV_controllers": 0,
+  "whole_task_or_five_arm_success": false,
+  "fit_or_J_data_permission": false,
+  "files": {
+    "exact-capture-and-native-boundaries.json": "52760809e3f9d66c007ad71e25e1697b650e61051689343e83178f2da98cbef2",
+    "final-authority-resource-proof.json": "ccfe671d52b209a59864f52e5e4230f8c2455a8e1bb268670de8392ac1f12c5d",
+    "corrected-assessment-and-summary-errata.json": "546b6b58842c40b6849517255fa6ae4b69894f1f58a7b451fbf9b05102ec3ecb"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "local_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-BOUNDED-V2-WALL-CENSOR-ASSESSED-CLOSEOUT-20261116-v1/release.json",
+  "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-V4-BOUNDED-V2-WALL-CENSOR-ASSESSED-CLOSEOUT-20261116-v1/release.json",
+  "release_sha256": "172c1b679feee1b5b826ab9780f9d77e37070b8b2c1699bb709fe4ffe2eba62a",
+  "parent_original_unchanged": true,
+  "no_physical_or_H_source_mutation": true
+}

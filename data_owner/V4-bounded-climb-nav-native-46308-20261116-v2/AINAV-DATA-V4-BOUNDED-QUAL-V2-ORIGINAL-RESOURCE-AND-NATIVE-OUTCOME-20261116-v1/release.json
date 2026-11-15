@@ -1,0 +1,93 @@
+{
+  "schema": "Data-V4-bounded-qualification-v2-original-resource-and-native-outcome-release-v1",
+  "at": "2026-11-16T06:27:47.214883+08:00",
+  "scope_id": "data-46308-V4-bounded-climb-nav-native-20261116-v2",
+  "source_commit": "a703c35323e7329ad04959cccac4674c0f3e3071",
+  "program_sha256": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "passed": false,
+  "component_zero_calls": 1,
+  "five_arm_task_main_calls": 0,
+  "selected_skill_controllers_constructed": 0,
+  "actual_task_commands": 978,
+  "original_audit": {
+    "original_result_passed": false,
+    "source_result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+    "all_frozen_source_members": 492,
+    "frozen_source_bytes_verified": true,
+    "journal_chain_verified_rows": 600,
+    "original_error": "BoundedComponent1800wall cap with teardown reserve",
+    "original_failure_stage": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+    "no_Runtime_Actor_Renderer_WM_or_physics_imports": true,
+    "task_success_not_inferred": true,
+    "model_input_allowed": false,
+    "training_allowed": false,
+    "checks": {
+      "episode_storage_complete": true,
+      "continuous_200Hz_commands": true,
+      "original4step_delay_FIFO_exact": true,
+      "raw_PD_reproduction": true,
+      "original_hard_clip": true,
+      "onboard_visual_previous_action": true,
+      "original10Hz_grid_complete": true,
+      "no_teardown_errors": true
+    },
+    "actual_commands": 978,
+    "original_onboard_frames": 49,
+    "max_raw_PD_error": 0.0,
+    "max_hard_clip_error": 0.0,
+    "original_capture_sample_events": 448,
+    "actual_assembly_events": [
+      {
+        "actual_capture": {
+          "actual_issued_steps": 448,
+          "kind": "actual_cold_start_supported_capture",
+          "model_input": false,
+          "no_NAV_arrival_claimed": true,
+          "no_PUSH_failure_claimed": true,
+          "support_ref": "ground",
+          "time_s": 2.2399999999999745
+        },
+        "bounded_CLIMB_NAV_source_wiring_present": true,
+        "connected_skills": [
+          "NAV",
+          "PUSH",
+          "CLIMB"
+        ],
+        "current_controller_constructed": false,
+        "event": "V4_actual_capture_to_original_execution_assembled",
+        "model_input": false,
+        "native_CLIMB_NAV_or_full_task_qualification": false,
+        "native_commands_issued": 0,
+        "static_deck_40cm_or_task_ready": false,
+        "time_s": 2.2399999999999745,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "C",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    ]
+  },
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "files": {
+    "result.json": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+    "ledger.json": "baaa245608b9002124c4e0cb6bd3f7771a54f50f1c15a12ba742abffbff84c12",
+    "claim.json": "f28775407fafc4cd720031e1720d0fe2922c6ce2a7855ea1cb64449c3d104c9f",
+    "resource-lease.json": "23ad4096811a491ab9980090c146956d11e0b0bc7ef154b4972b0eabadaf4861",
+    "V4-elevated-registry.json": "c7f165ac02424b7545f680184e925c58767e62ba15e54e9a7b69e59b006fab4e",
+    "episode/episode.json": "c2fc074e1536d59fdf07f75c4cf938dca47f84b87d001bfdbbf9454c5316fef2",
+    "episode/index.json": "784153864794f11b5e437fcb21da52c9b5836b72b09aee4184a6e60b36e347ed",
+    "episode/closure.json": "f1b92098a6ed1d7c5daeefb4b36d08e8431eba5e26b0f9acf0a5accc3c11d9c4",
+    "protocol.json": "a39d0ba3cf527d394e53955713812c174296592ffb3f9a5ed853cd36379e44e5",
+    "program-freeze.json": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+    "Data-resource-native-outcome-assessment.json": "e07727e9442f7bcad6537b755bdcb7efc2bfecd830c900144fa5bcf1c2c093ff",
+    "original-stream-cold-audit.json": "a5f24f88a10244021581e9b95a6d922856a8ef93b7635e47b99d0281c0177c34",
+    "remote-only-original-reference.json": "3fc2832d0a43c9e4f89d8a27a085bd752365451d91eae2ce5af0bc0b603e2e18"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scope_id": "data-46308-V4-bounded-climb-nav-native-20261116-v2",
+  "program_sha256": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "phase_invocations": 1,
+  "closed": true,
+  "status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "actual_auxiliary_sim_s": 6.5049999999998835,
+  "actual_task_sim_s": 4.889999999999918,
+  "wall_s": 1772.3632363041397,
+  "usage_known": true,
+  "output_bytes": 4487295,
+  "AB_main_calls": 0,
+  "automatic_retry": false
+}

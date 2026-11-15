@@ -1,0 +1,13 @@
+{
+  "original_result_status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "original_result_passed": false,
+  "resource_wall_censored": true,
+  "not_native_CLIMB_or_NAV_failure_label": true,
+  "original_result_and_generic_status_not_rewritten": true,
+  "actual_capture_complete_from_actual_report": true,
+  "legacy_capture_witness_complete_field_is_initial_default_on_failed_full_component": true,
+  "actual_component_receipts": [],
+  "first_Push_intent_not_proof_Push_interaction_started": true,
+  "phase_costs_keep_failure_and_censor_separate": true,
+  "current_component_not_five_arm_or_J_training": true
+}

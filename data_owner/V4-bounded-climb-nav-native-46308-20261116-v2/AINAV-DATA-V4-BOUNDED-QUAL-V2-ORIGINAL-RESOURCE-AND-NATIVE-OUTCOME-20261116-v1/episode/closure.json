@@ -1,0 +1,17 @@
+{
+  "schema": "piper-mujoco-episode-closure-v2",
+  "caller_outcome": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "terminal_time_s": 4.889999999999918,
+  "censored": true,
+  "storage_complete": true,
+  "storage_error": null,
+  "observations": 49,
+  "physical_command_steps": 978,
+  "compressed_payload_bytes": 2351848,
+  "episode_sha256": "c2fc074e1536d59fdf07f75c4cf938dca47f84b87d001bfdbbf9454c5316fef2",
+  "index_sha256": "784153864794f11b5e437fcb21da52c9b5836b72b09aee4184a6e60b36e347ed",
+  "private_catalog_sha256": "ddd93dece5f234cad8fb921309202484521570a7b0ebc8a43c00ad46ffbf97c8",
+  "control_boundaries_sha256": "172f99669c678640ad9af107b67b4db4d06da7b87806a6d1d6e15096a6ce0f75",
+  "task_success_not_inferred_from_recorder": true,
+  "no_auto_reset_or_terminal_frame_backfill": true
+}
