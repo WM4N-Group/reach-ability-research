@@ -6,7 +6,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "c62fda63c047154312e030b24ecce156e9c0e2e4f32f403cfe69ea36140ba4a0",
+    "README_CN.md": "f84cc9e26d101385aeaedef042f61f64e63aee803e37e4b831f783f5a8cc7a87",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
     "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
@@ -16,7 +16,7 @@
     "elevated_terminal.py": "aac30006cb0edbd0e63ae3b4f72948de90f0ae61dd6a75f6ea2f21dce5554242",
     "execution_entry.py": "e7fd5242a758cd7b4b507a755ba724d18772a9503f2adde352c7b3b550dd9374",
     "factor_scope.py": "b34a5487469dd484e21e5b5ec2025966aad675b31f39ea777081aa3c615bca5f",
-    "live_driver.py": "cce46d8a50c58030f439012e81eef36f9e8e8c77d120efd3ba7b3e7e116bb29d",
+    "live_driver.py": "fc4947e73657e1a4074b125c513b1093339f98b340e212389f89542ae3be7174",
     "native_entry.py": "5edcd0082ec582584c57f499e64864a0e524c16c237f47b896bac9b0f4e73fa4",
     "public_candidates.py": "66dfd55a9f47dccd85daed27a2401b0f3d859074670e5d3fc54f9dc999d07948",
     "rule_baseline.py": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
@@ -30,8 +30,9 @@
     "tests/test_elevated_terminal.py": "32b53771209bc332fdb85c3d286e01ce5b9d169d740690f2732a0e9ce05ed00b",
     "tests/test_execution_entry.py": "8abc6f8154fc7a96954eedb70c4785ae410b401ef24a6abcc6730b643ee2b1a4",
     "tests/test_factor_scope.py": "7d6c562f8d8f06f74e9ee216130d0063704023ee036bbb0e8d3a622aaa1e5a0e",
-    "tests/test_live_driver.py": "44b1a376e509c180871a302632ff707658447a7189349221c48c18b737c42799",
+    "tests/test_live_driver.py": "c0012041c8197b86669b4b50f10727b97622e6f7be41c025c3d00c67465890c6",
     "tests/test_native_entry.py": "9602a26429333da4a7d88109e481cade43afa88e24b2411c70483fab2ec5effd",
+    "tests/test_private_catalog_stream.py": "15c98b5c707b4e0f6d27a2d9b765da9ad746c09d6e1afb0bb2d3c31293caea4a",
     "tests/test_public_candidates.py": "1ec402f4ce641c0ac5f3373dabfec53d1d5abca0aee30c5ea2bbf001eb5c741d",
     "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
     "tests/test_task_factory.py": "d85f62168fe3e98579da390004492f902b72d0133960d79c4066efeea5d959a0",
@@ -57,5 +58,6 @@
   "bounded_single_CLIMB_NAV_factory_outer_contact_finite_public_source_wiring_not_native_qualified": true,
   "declared_support_layer_and_actual_measured_top_separate_original_geometry_gate_retained": true,
   "actual_high_task_terminal_source_connected_not_native_qualified": true,
-  "terminal_wrapper_retains_original_NAV_type_owner_not_reconstructed_or_native_qualified": true
+  "terminal_wrapper_retains_original_NAV_type_owner_not_reconstructed_or_native_qualified": true,
+  "original_registered_private_catalog_explicit_no_model_stream_projection_not_native_qualified": true
 }

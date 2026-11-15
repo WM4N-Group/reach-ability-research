@@ -51,6 +51,28 @@ def _original_methods():
     return {name: getattr(module.ComplexSceneDriver, name) for name in BASE_METHOD_PINS}
 
 
+def stream_private_catalog(catalog, *, control_tick, actual_time_s):
+    """Project the original registered PRIVATE catalog to the stream boundary.
+
+    RegisteredObserver emits model_input=False; the original EpisodeWriter
+    additionally requires model_input_allowed=False. Preserve both prohibitions,
+    all actual metadata and the current clock; never promote this data to models.
+    """
+    require(type(catalog) is dict and catalog.get('schema') == 'ainav-private-registered-object-catalog-v1'
+            and catalog.get('model_input') is False,
+            'Exact original registered private catalog, not public/model data')
+    require(type(control_tick) is int and control_tick >= 0
+            and type(catalog.get('control_tick')) is int and catalog['control_tick'] == control_tick
+            and type(actual_time_s) in (int, float) and math.isfinite(actual_time_s)
+            and type(catalog.get('time_s')) in (int, float) and math.isfinite(catalog['time_s'])
+            and abs(catalog['time_s'] - actual_time_s) <= 1e-7
+            and abs(actual_time_s - control_tick * .02) <= 1e-7,
+            'Exact actual registered private catalog acquisition clock')
+    require('model_input_allowed' not in catalog or catalog['model_input_allowed'] is False,
+            'Conflicting private model-input permission is never silently overwritten')
+    return dict(catalog, model_input_allowed=False)
+
+
 def current_aliases(descriptors, resolver, public_body):
     """Project ONLY original accepted current RGBD associations, never old IDs."""
     aliases, objects = {}, []
@@ -141,6 +163,16 @@ def driver_class(*, source_root=None, enabled=False):
             self.arm = arm
             install_legacy_common(self, arm=arm, planner=planner, journal=journal)
             self.owner_guard()
+
+        def capture_grid(self):
+            # Same original10Hz source/cadence, but RegisteredObserver's PRIVATE
+            # schema needs its explicit no-model marker projected to the writer.
+            if self.tick % 20 == 0 and self.last_capture_tick != self.tick:
+                packet, private = self.observer.capture(self.tick // 4, self._last_issued)
+                catalog = stream_private_catalog(private, control_tick=self.tick // 4,
+                    actual_time_s=float(self.r.sim.data.time))
+                self.writer.append_visual(packet, control_tick=self.tick // 4, private_catalog=catalog)
+                self.last_capture_tick = self.tick
 
         def _contact_guard(self):
             if self.execution is not None:
@@ -359,10 +391,11 @@ def driver_class(*, source_root=None, enabled=False):
                 self.tick = self.loop.physical_tick
 
     for name, function in methods.items():
-        if name != '_install_common_stow':  # Never overwrite the explicit two-layer installer.
+        if name not in ('_install_common_stow', 'capture_grid'):  # Preserve explicit factor/privacy adapters.
             setattr(V4LiveDriver, name, function)
     V4LiveDriver.source_receipt = dict(original_helpers_reviewed_method_sha256=BASE_METHOD_PINS,
-        original_helpers_borrowed=tuple(n for n in BASE_METHOD_PINS if n != '_install_common_stow'),
+        original_helpers_borrowed=tuple(n for n in BASE_METHOD_PINS if n not in ('_install_common_stow', 'capture_grid')),
+        registered_private_catalog_explicit_no_model_stream_boundary=True,
         legacy_common_stow_separate_from_new_successor_treatment=True,
         obsolete_base_constructor_catalogue_judge_and_ground_terminal_not_inherited=True,
         scene_source_sha256=SCENE_SHA256, actual_native_qualification=False,

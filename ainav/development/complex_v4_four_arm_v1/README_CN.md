@@ -1,3 +1,5 @@
+> 真实35源必要资格于2026-11-16 05:48 closed：在task0首帧记录时因RegisteredObserver的model_input=False缺少原writer另需的model_input_allowed=False而拒绝，capture/命令0、未到PUSH/CLIMB/NAV，不是技能失败。修复在V4 source capture_grid明确投影双重私有禁止标志，原schema/内容/时钟不改，冲突权限/错时钟仍拒；不改原observer/streams/closed worker，不把私有catalog给模型，不自动重开。此修复尚未原生验证，先前19/25真实成功与35失败/费用全保留。
+
 > 后续源码自审：高台终点wrapper保留原RegisteredNavMachine类型与同一个只读native_nav身份，避免原outer-contact/live-source守卫因外层wrapper丢失owner类型而拒绝；NAV完成仍不等任务完成，拒绝stack/replacement，未再构造或进入NAV。新增6项明确SOFTWARE owner接缝检查，不是原生资格/真实失败或E成功。static-deck、40cm及全链仍未解决，scene/Actor/全部原门未改。
 
 # AINav接任V4五组：精确资产移植与能力缺口，不是原生通过
