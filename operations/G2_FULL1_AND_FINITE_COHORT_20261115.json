@@ -1,0 +1,129 @@
+{
+  "at": "2026-11-15T12:44:06.284349+08:00",
+  "protocol_path": "/home/yuanyue/reach-ability-research/protocols/2026-11-15/G2-new-purpose-finite-cohort-v1/FINITE_COHORT_PROTOCOL.json",
+  "protocol_sha256": "2f82530d1f880892c631c7b62cc79bfbd72d57e1b369faf99f542d02d4a53eda",
+  "new_main_ceiling": 12,
+  "split_main_ceilings": {
+    "TRAIN": 6,
+    "CALIBRATION": 3,
+    "VALIDATION": 3
+  },
+  "finite_protocol_internal_consistency_checked": true,
+  "no_software_check_count_as_research": true,
+  "releases": {
+    "AINAV-DATA-G2-46308-FULL1-LEFT-ACTUAL-20261115-v1": {
+      "release_sha256": "2bae0f2abe72c19dfbc756102e995ce6c5eff0a7d36c42e7cfa8112531285522",
+      "verified_members": 47
+    },
+    "AINAV-DATA-G2-46308-REGISTERED-SCENE-SOURCE-HANDOFF-20261115-v1": {
+      "release_sha256": "01e2571a3e5a5ca3244264f9de8219fe6c19518c5176442d728ee067ce7de240",
+      "verified_members": 5
+    }
+  },
+  "full1": {
+    "program_sha256": "3b5e9d4d4366479394cf825419f47f6c1875c32519fca26c40762ffa4e82ee8f",
+    "closed_at": "2026-11-15T12:22:34.499829+08:00",
+    "requested_chain_PASS": true,
+    "main_sim_s": 119.34499999996395,
+    "first_PREPARE_sim_s": 95.24999999998586,
+    "current_READY_s": 13.494999999987726,
+    "full_success_s": 24.094999999978086,
+    "scope_sim_s": 132.35499999996372,
+    "scope_ledger_wall_s": 814.4182960379403,
+    "scope_highwater_bytes": 175664393,
+    "all_nine_streams_cold_passed": true
+  },
+  "public_scalar_measurement": {
+    "report_path": "/mnt/yuanyue/reach-runs/G2-full1-left-three-source-measurement-20261115-v1.json",
+    "report_sha256": "7a00588cd3975b1ad045c217b127f5602de376bae52cac3382e7d07d491d7be2",
+    "at": "2026-11-15T12:36:46.814390+08:00",
+    "role": "THREE_REGISTERED_SOURCES_MATCHED_LEFT_PREFIX_DEV_ONLY_NOT_FIT",
+    "query_times_s": [
+      97.28499999998401,
+      95.60499999998554,
+      95.24999999998586
+    ],
+    "component_estimates": [
+      {
+        "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+        "valid_depth_pixels": 4016,
+        "nominal_visible_median_parent_base_m": [
+          0.6561849415955343,
+          0.05678535206243396,
+          -0.08111655195916312
+        ],
+        "component_pixels": 4016,
+        "public_native_matcher_conditioned": true,
+        "object_identity_or_reference_pose_certified": false
+      },
+      {
+        "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+        "nominal_visible_median_parent_base_m": [
+          0.667315341422917,
+          0.18164586027463278,
+          -0.0914581147979604
+        ],
+        "component_pixels": 4461,
+        "valid_depth_pixels": 4461
+      },
+      {
+        "status": "EXACT_PUBLIC_COMPONENT_NOMINAL_ONLY",
+        "nominal_visible_median_parent_base_m": [
+          0.6669234585978046,
+          0.17023474707578617,
+          -0.09269799652633232
+        ],
+        "component_pixels": 4104,
+        "valid_depth_pixels": 4104
+      }
+    ],
+    "comparisons": [
+      {
+        "baseline": "full-4",
+        "new": "full-1",
+        "decoded_RGB_exact_numeric_equal": false,
+        "depth_exact_numeric_equal_NaNs_equal": false,
+        "camera_K_exact_numeric_equal": true,
+        "T_base_optical_exact_numeric_equal": true,
+        "nominal_component_delta": {
+          "full1_minus_baseline_XYZ_m": [
+            0.010738517002270243,
+            0.11344939501335222,
+            -0.011581444567169197
+          ],
+          "L2_m": 0.11454348883531568,
+          "physical_error_or_reference_relative_bound_m": null
+        },
+        "q_max_abs_delta_rad": 0.2314622402191162
+      },
+      {
+        "baseline": "full-2",
+        "new": "full-1",
+        "decoded_RGB_exact_numeric_equal": false,
+        "depth_exact_numeric_equal_NaNs_equal": false,
+        "camera_K_exact_numeric_equal": true,
+        "T_base_optical_exact_numeric_equal": true,
+        "nominal_component_delta": {
+          "full1_minus_baseline_XYZ_m": [
+            -0.0003918828251124884,
+            -0.011411113198846606,
+            -0.0012398817283719166
+          ],
+          "L2_m": 0.011484963355877977,
+          "physical_error_or_reference_relative_bound_m": null
+        },
+        "q_max_abs_delta_rad": 0.04694259166717529
+      }
+    ],
+    "old_frame_proposer_reexecutions": 0,
+    "new_full1_original_proposer_calls": 1,
+    "forbidden_attempts": []
+  },
+  "new_qualified_training_rows": 0,
+  "real_fit": 0,
+  "new_Reach_physical_calls": 0,
+  "old_closed_reopened": false,
+  "old_host_connections": 0,
+  "independent_TEST": 0,
+  "major_method_contribution_proven": false
+}

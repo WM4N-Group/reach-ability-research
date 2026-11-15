@@ -35,17 +35,13 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
-## 当前研究状态
+## 当前研究状态（2026-11-15，覆盖下方历史快照）
 
-三分支 Stage-B 已 closed：2 PASS、1 原 CLIMB stop_deadline；raw 排序反转未达事前双100ms material 条件。测量与代表点对照已经闭合，保留 mixed/负结论，不继续扫阈值追全胜。
+新端46308三source五DEV已closed：full-4左右PASS、full-2左PASS/右PUSH卸载异常未达CLIMB、full-1左PASS。完整分母5、first-PREPARE4，原失败/未知费用不丢。只证明原AINav工程和有限公开信息，非Reach优化收益/论文贡献。公开增量测量原件留远端，小摘要见operations/G2_FULL1_AND_FINITE_COHORT_20261115.json。
 
-下一物理问题是原生 NAV left/right 前驱是否在相同 PUSH/stow 后留下公开可辨的首次 CLIMB PREPARE 条件。最多两条件各一次，固定 original 准备；只检验 condition source，不是三候选优化收益或24-main训练准入。Data 唯一物理 owner；新机器资源门、exact3 原生回执、完整 freeze/own-zero/原12N/4s/stop/guard/QP/FIFO不放宽。
+**当前新用途有限协议：** protocols/2026-11-15/G2-new-purpose-finite-cohort-v1/；固定full4 TRAIN6/full1 CAL3/full2 VAL3、最多12新main，whole-scene分组、只未来新数据。TRAIN类/状态不足即No-Go，不自动扩批/旧DEV改fit。每split仅一scene且DEV-informed，不是未曝光TEST、统计功效或G5 holdout；不能通过排除原full2right宣告完整族已合格。Data唯一物理owner，现阶段尚未scope/派发/真实fit；无需再问已授权小高层训练用途/经济许可。
 
-高层小型后继 critic 仅获授权使用**未来新预登记数据**训练与离线评价。旧 audit/隔离 GT 不转 fit，当前合规新数据仍0；没有真实训练中的模型。Actor/WM/DINO/真机不因迁移自动开放。
-
-完整历史/接续见 `docs/AGENT_HANDOFF_CN.md`。原始工程 README/AGENTS 保存在 `provenance/`，其中旧机器/在途快照不能覆盖本文件的新存储与机器决定。
-
-少量冻结协议另保存在 `protocols/`：未来新数据 critic 用途/协议、原生前驱两条件 DEV 问题及 Reach 后果前分析。它们逐字节保留来源 SHA，不含数据或权重，也不是新机器执行 authority。
+下一真实TRAIN闭合就G3单次高层critic和常量/均值基线或有限否证，接续新协议G4三策略/G5多决策/G6，而非止于本gate。原Actor/WM/DINO/真机暂停，12N/4s/identity/immutable/guard/support/QP/FIFO/CLIMB stop不变。完整接续见docs/AGENT_HANDOFF_CN.md顶部。
 
 ### 23:45计划接续（覆盖旧机器恢复前置）
 
