@@ -117,8 +117,9 @@ def terminal_nav_session(original,placements,chain,*,source_root,journal):
     from ainav.native.registered_nav_factory import RegisteredNavMachine
     from ainav.native.registered_compact_nav import ActualArrivalSupportWitness
     from mujoco_zyh.native_behavior_executor import NativeOptionSession
-    require(type(original)is NativeOptionSession and isinstance(original.machine,RegisteredNavMachine),
-            'Exact original final NAV session, not synthetic supported pose')
+    require(type(original)is NativeOptionSession and isinstance(original.machine,RegisteredNavMachine)
+            and getattr(original,'_v4_terminal_source',None)is None,
+            'Exact original final NAV session, not synthetic supported pose or stacked terminal wrapper')
     r=original.runtime;nav=original.machine.native_nav
     require(r is placements.r and r is chain.r and placements.registry is chain.registry,
             'Same task/world registry for final original NAV')
@@ -126,8 +127,19 @@ def terminal_nav_session(original,placements,chain,*,source_root,journal):
     goal=chain.registry.goal
     require(nav.surface.ref==goal.surface_ref and nav.height==chain.scene['task']['goal_surface_height_m'],
             'Final NAV is truly on the goal_deck layer; ground same-XY forbidden')
-    class FinalNAV:
-        def __init__(self):self.r=r;self.tasks=list(original.machine.tasks);self.stop=None;self.complete=False;self.original=original
+    class FinalNAV(RegisteredNavMachine):
+        # Preserve the exact NAV identity/type expected by the original contact
+        # guards and live source witness. Do NOT construct/enter another NAV or
+        # call the base constructor: this is the same original owner's wrapper.
+        def __init__(self):self.r=r;self.tasks=list(original.machine.tasks);self.stop=None;self._task_complete=False;self.original=original
+        @property
+        def native_nav(self):
+            require(original.machine.native_nav is nav,'Original final NAV owner changed inside terminal wrapper')
+            return nav
+        @property
+        def entered(self):return original.machine.entered
+        @property
+        def complete(self):return self._task_complete
         @property
         def phase(self):return self.stop.phase if self.stop is not None else original.machine.phase
         @property
@@ -148,7 +160,7 @@ def terminal_nav_session(original,placements,chain,*,source_root,journal):
                     self.stop=ElevatedSupportedStop(r,original,witness,placements,chain,source_root=source_root,journal=journal)
                     self.stop.enter()
             else:
-                self.stop.after_step();self.complete=self.stop.complete
+                self.stop.after_step();self._task_complete=self.stop.complete
     wrapped=NativeOptionSession(r,FinalNAV(),check_guards=original.check_guards)
     wrapped._v4_terminal_source=(original,placements,chain)
     return wrapped

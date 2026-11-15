@@ -1,3 +1,5 @@
+> 后续源码自审：高台终点wrapper保留原RegisteredNavMachine类型与同一个只读native_nav身份，避免原outer-contact/live-source守卫因外层wrapper丢失owner类型而拒绝；NAV完成仍不等任务完成，拒绝stack/replacement，未再构造或进入NAV。新增6项明确SOFTWARE owner接缝检查，不是原生资格/真实失败或E成功。static-deck、40cm及全链仍未解决，scene/Actor/全部原门未改。
+
 # AINav接任V4五组：精确资产移植与能力缺口，不是原生通过
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。

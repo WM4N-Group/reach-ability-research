@@ -6,7 +6,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "c0d96be3b7d904365e861ce0f61f690fc1592176c84b6b3297342ad19c03203e",
+    "README_CN.md": "c62fda63c047154312e030b24ecce156e9c0e2e4f32f403cfe69ea36140ba4a0",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
     "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
@@ -22,7 +22,7 @@
     "rule_baseline.py": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
     "task_factory.py": "24a575b7782d544ca267499d82732135fc3442984dc74f7d00d0501804dccc2a",
-    "task_terminal.py": "f36705dc916e7d50727fbbd5ceccdb3f0d80ca6462785823c83389e2910d2b61",
+    "task_terminal.py": "71bc3f9d6bda6bb90b882fe08acf06255874a384c20a0504ca7d7cce5038cf6b",
     "tests/test_climb_nav_adapter.py": "6e33239f342520d3b1201adb4ada30a980ce9bdeb7222743c87a4c562f7f98a7",
     "tests/test_climb_nav_integration.py": "1d98455ebfdc6dd623001bec87e8d7f884cb484e04332e3df37da503ae2885f1",
     "tests/test_climb_nav_source.py": "a3ca236b0acef294ea2b91cec1b4339604b68ea8187cd9f7098314fc0a03c494",
@@ -36,6 +36,7 @@
     "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
     "tests/test_task_factory.py": "d85f62168fe3e98579da390004492f902b72d0133960d79c4066efeea5d959a0",
     "tests/test_task_terminal.py": "c834091ea666a6e2606604c417e3f5dca1c6b4a96fe5872878199e2b10e7f4ca",
+    "tests/test_terminal_owner_wrapper.py": "70e70316dc0ae6f40bd7ef056891a2829014fa4990bc3e38205757c5e7e244dc",
     "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4",
     "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71"
   },
@@ -55,5 +56,6 @@
   "typed_live_CLIMB_NAV_adapter_source_not_factory_integrated_or_native_qualified": true,
   "bounded_single_CLIMB_NAV_factory_outer_contact_finite_public_source_wiring_not_native_qualified": true,
   "declared_support_layer_and_actual_measured_top_separate_original_geometry_gate_retained": true,
-  "actual_high_task_terminal_source_connected_not_native_qualified": true
+  "actual_high_task_terminal_source_connected_not_native_qualified": true,
+  "terminal_wrapper_retains_original_NAV_type_owner_not_reconstructed_or_native_qualified": true
 }
