@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 04:18：新增B/D完整参考路程核算组件；65项软件两端过，真实效果模型仍未绑定
+
+- **继续实现共享目标计算，不重复bulk审计：** 新`v4_reference_cost.py::CompleteReferenceCost`供B/D同一path_cost接口；逐步传播公共名义状态，强制preparation/skill/preparation_exit三段参考与步间连续，全部参考路程求和，完整任务terminal未核/退出缺失则UNKNOWN/None。每步同query/primitive/起始状态SHA绑定；不偷用bulk后果/initial blueprint，不以截短树叶冒完整后继。显式静止参考允许路程0，**不表示收臂/验证耗时0**；metric仅m，不是完整成功成本秒/物理安全证书或新求解算法。
+- **明确完成边界：** 已完成核算组件，不等公共几何/技能effects估计模型已完成。initial_state/三阶段forecast/完整名义terminal仍需Reach实现并接真正source；源preparation-exit variants仍空，生产五组尚未绑定该accountant、无合格KNOWN_NOMINAL整链cost。A/C OFF不求cost，B/D共用；生产方法拒绝显式软件fixture cost。新增14专项＋2接线/隔离回归，连受影响methods/provider=65软件检查本地/46308两端过，不当独立样本或方法增益。
+- **新source增量只读已核，不借资格：** AINav当前32-member package adfe5507…逐成员SHA已核，新增climb_nav_source只观测真实CLIMB回执边界必要contact/12N/reference来源，不是NAV typed-owner bridge/原constructor准入；未调用其真实reader、未改他组source/H/锁/driver。原19/25组件仍closed，五main/真实WM query-forward0。总计划新22f570c1…已读，增量为J组技术下载/合成forward，当前五组/用途不变，不热换模型，.20→.60/static deck/动态owner/完整终点与合法WM bootstrap仍待；原箱范围/无数值diff、已问布局选择、legacy-common H共同底座/仅B-D新treatment均保持。
+- **交付/原件保留：** 说明`/home/yuanyue/reach-ability-research/operations/V4_COMPLETE_REFERENCE_ACCOUNTING_CN.md`，本轮只本组软件、零新physics/API/WM/fit/critic评分。bulk24全24 closed/10原链成功14失败/12首PREPARE/4三候选表保留，不重提/重跑/refit/转J；数据成功不当Reach贡献，全部继承dirty/旧index不动。真实计算端仍46308，raw/权重/env/视频不回本地。
+
 ### 2026-11-16 03:55：bulk24全批闭合与第四套完整三候选已核；失败None/用途/在线缺口保持
 
 - **bulk24固定批最终闭合，不再写余4在途：** 24正式原release/closed zero+main齐，10原链成功/14原生失败（FF6/settle6/base_collision2，resource censor0）；12到首CLIMB PREPARE/12未到，12不同full48/4 public45＋age状态，仍1 TRAIN祖先。未到12支features/CLIMB成本None，10/21真实CLIMB中碰撞无terminal，不造failed receipt/负类或以短时失败填成功成本。独立核Data最终release5367a3a1…及4小成员，03:39 authority proof全24 H closed/worker0/四锁释放，明确只快照不是Reach新lease；84原public query、scope含zero/aux2720.665sim/19005.873282551wall、known，非成功条件或项目总费。

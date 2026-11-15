@@ -18,6 +18,12 @@ def _contracts():
     return Primitive, SkillPlan, canonical, Selection
 
 
+def _validate_cost_provider(path_cost, software_fixture):
+    need(path_cost is None or callable(path_cost), 'Callable declared path cost or explicitly unbound')
+    need(software_fixture or not getattr(path_cost, 'software_fixture', False),
+         'Fixture cost provider cannot supply production method choices')
+
+
 def _unknown(path, query_sha):
     return NominalCost(path.path_id, query_sha, 'UNKNOWN', None, False,
                        'V4_SOURCE_COMPLETE_SUCCESSOR_COST_NOT_BOUND')
@@ -29,6 +35,7 @@ class AinavSuccessorAdapter:
         from ainav.planner import AinavPlanner
         need(isinstance(baseline, AinavPlanner), 'Actual original AinavPlanner, not API0 substitute')
         need(type(optimizer_enabled) is bool and type(software_fixture) is bool, 'Explicit optimizer/provenance factors')
+        _validate_cost_provider(path_cost, software_fixture)
         if not software_fixture:
             need(getattr(getattr(baseline.roles,'backend',None),'kind',None) in
                  ('deepseek_vision_api','openai_compatible_vision_api','local_qwen_vlm'),
@@ -103,6 +110,7 @@ class VLMWMIntentPlanner:
         need(type(optimizer_enabled) is bool and 0 < timeout_s <= 120 and
              type(max_episode_calls) is int and 1<=max_episode_calls<=100, 'Frozen bounded VLM budget')
         need(type(software_fixture) is bool, 'Explicit fixture/production identity')
+        _validate_cost_provider(path_cost, software_fixture)
         if not software_fixture:
             from .v4_raw_wm_adapter import OriginalBehaviorWMAdapter
             need(isinstance(wm_evaluator,OriginalBehaviorWMAdapter),

@@ -128,6 +128,28 @@ class SourceSeamTests(unittest.TestCase):
             AinavSuccessorAdapter(base,journal=self.journal)
         with self.assertRaisesRegex(ValueError,'Production A/B'):
             VLMWMIntentPlanner(FakeBackend(),FakeWM(),journal=self.journal)
+    def test_fixture_complete_cost_provider_cannot_be_promoted_to_production(self):
+        from .v4_reference_cost import CompleteReferenceCost
+        cost=CompleteReferenceCost(initial_state=lambda *a,**k:None,forecast=lambda *a,**k:None,
+            is_terminal=lambda s:None,journal=self.journal,software_fixture=True)
+        base=AinavPlanner(self.roles,self.journal,plan_count=2)
+        with self.assertRaisesRegex(ValueError,'Fixture cost provider'):
+            AinavSuccessorAdapter(base,path_cost=cost,journal=self.journal)
+        with self.assertRaisesRegex(ValueError,'Fixture cost provider'):
+            VLMWMIntentPlanner(FakeBackend(),FakeWM(),path_cost=cost,journal=self.journal)
+
+    def test_actual_cost_accountant_missing_source_preserves_original_C_D_selection(self):
+        from .v4_reference_cost import CompleteReferenceCost
+        cost=CompleteReferenceCost(initial_state=lambda *a,**k:None,forecast=lambda *a,**k:None,
+            is_terminal=lambda s:None,journal=self.journal,software_fixture=True)
+        base=AinavPlanner(self.roles,self.journal,plan_count=2)
+        planner=AinavSuccessorAdapter(base,optimizer_enabled=True,path_cost=cost,
+            journal=self.journal,software_fixture=True)
+        selection=planner.select(self.batch())
+        self.assertFalse(planner.last_choice['optimization_applied'])
+        self.assertEqual(selection,base.pending)
+        self.assertTrue(any(e['event']=='reach_v4_complete_reference_cost'for e in self.journal))
+
     def test_four_arm_factory_keeps_both_factors_explicit(self):
         base=AinavPlanner(self.roles,self.journal,plan_count=2)
         a=build_v4_planner('A',backend=FakeBackend(),wm_evaluator=FakeWM(),journal=self.journal,software_fixture=True)

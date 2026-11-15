@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-16T03:32:26.576299+08:00",
+  "at": "2026-11-16T04:18:00+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
-    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "db07d6e6f573c551bb43c8cf4cfdc026e466a993dc1451a0fd8964cf88dddb95",
     "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "f89e2cbbdbe53e81fa451c4b85686294c3ad7bb0b00e04728983557052d6674e",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "3404ea0cddce0d7f0cc2d88e6ba4f8c7f26fe9dd0a63ccd34aae62b6094fb197",
     "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
     "research/task_conditioned_reachability/execution_preparation/test_v4_provider_binding.py": "3e543504941a3534b1477834c901574ffffcd049b64a233e5c850cad74e36a6f",
     "research/task_conditioned_reachability/execution_preparation/v4_box_skill_domain.py": "f9682e1d3b1fc401ede52407e5c124fe7a5aaaaaed366a058c853eaa5339875a",
@@ -17,7 +17,9 @@
     "research/task_conditioned_reachability/execution_preparation/test_v4_causal_wm_query.py": "ed023095c6d1ba321bd7a75caf41e283aea56043c742584392071875c679de59",
     "operations/check_original_query_port_CPU.py": "0fd29a3070f46237883bc388f3dad00e4ee02907166273b02a4d5031e0f8ddfd",
     "research/task_conditioned_reachability/execution_preparation/v4_anchor_target8.py": "c4bb1b516498abd415a36057a764c4911fd848bc1d96cb381b147825557e8742",
-    "research/task_conditioned_reachability/execution_preparation/v4_stow_factor.py": "b36fbae234946d2c0d2fcf8bede6dd829caf96a195c24afab87e07505fddb896"
+    "research/task_conditioned_reachability/execution_preparation/v4_stow_factor.py": "b36fbae234946d2c0d2fcf8bede6dd829caf96a195c24afab87e07505fddb896",
+    "research/task_conditioned_reachability/execution_preparation/v4_reference_cost.py": "2598f670c7807583ad6f5f4c03ce92eb12c12c22afae10121f702f39c4784805",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_reference_cost.py": "8d300229ce6243c1a15633a2f4b51def35c08917f1badab1b874bb209826a3b1"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
@@ -62,5 +64,8 @@
   "read_only_original_source_pins_are_historical_consumed_snapshots_not_current_mutable_path_validation": true,
   "new_factor_scope_source_commit": "8105e755f9751bffee6dc96819847f473a80b7aa",
   "exact_new_runtime_dependency_freeze_still_required": true,
-  "current_rule_source_sha256_after_factor_scope_clarification": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0"
+  "current_rule_source_sha256_after_factor_scope_clarification": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0",
+  "complete_reference_accountant_implemented_public_geometry_effect_model_still_unbound": true,
+  "current_readonly_AINav_source_package_sha256": "adfe550793150ae69d474062d634d9a4c9bd1b2d4100dd23be5ffd3a6434eff5",
+  "current_readonly_AINav_source_members": 32
 }
