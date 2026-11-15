@@ -1,0 +1,92 @@
+{
+  "at": "2026-11-16T06:44:48.402671+08:00",
+  "remote_metadata_SHA_verified": 16,
+  "raw_arrays_or_frames_read": false,
+  "original_journal_sha256": "7eb678eb170ef1d596bc2f7f910a5f0faaa18471368640deabe60d27a1651603",
+  "original_journal_chain": {
+    "rows": 600,
+    "last_sha256": "15925b1442427750c16ad924c2f3487ed75280a8c3a337cd37c264250ed3e4e9",
+    "valid": true
+  },
+  "exact_capture": {
+    "sample_rows": 448,
+    "actual_complete_time_s": 2.2399999999999745,
+    "actual_commands": 448,
+    "selected_support_ref": "ground"
+  },
+  "only_native_option": {
+    "skill": "NAV",
+    "option_sha256": "07b6db2bd3ea04eaffa8d6a2bfb1900934906a650fe9c706db4195500c901dbe",
+    "admitted_time_s": 2.2399999999999745
+  },
+  "actual_native_receipts": [
+    {
+      "evidence_ref": "commands:physical_tick=449",
+      "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+      "option_sha256": "07b6db2bd3ea04eaffa8d6a2bfb1900934906a650fe9c706db4195500c901dbe",
+      "status": "started",
+      "time_s": 2.2449999999999743
+    }
+  ],
+  "literal_native_terminal_receipts": [],
+  "actor_event_counts": {
+    "registered_NAV_actual_actor_forward": 133
+  },
+  "actual_NAV_preparation_commands": 530,
+  "resource_wall_censored": true,
+  "source_status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "source_error": "BoundedComponent1800wall cap with teardown reserve",
+  "task_commands": 978,
+  "task_sim_s": 4.889999999999918,
+  "auxiliary_sim_s": 6.5049999999998835,
+  "ledger_wall_s": 1772.3632363041397,
+  "output_bytes": 4487295,
+  "usage_known": true,
+  "closed": true,
+  "automatic_retry": false,
+  "original_evidence_verifier_sha256": "2fbe99daffb7462f5351416077f0f8a623ba4ade4725c556c238e93ee1d1a38c",
+  "original_result_and_generic_status_not_modified": true,
+  "independent_physics_WM_Actor_API_fit_calls": 0,
+  "schema": "Reach-V4-bounded-v2-original-resource-censor-not-skill-failure-v1",
+  "source_release": {
+    "path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-BOUNDED-QUAL-V2-ORIGINAL-RESOURCE-AND-NATIVE-OUTCOME-20261116-v1/release.json",
+    "sha256": "b54503b8d19adf82980a2507425769ee70263f6c55b7382d2548a21cc46e3930",
+    "local13_member_SHA_verified": true,
+    "files_sha256": {
+      "result.json": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+      "ledger.json": "baaa245608b9002124c4e0cb6bd3f7771a54f50f1c15a12ba742abffbff84c12",
+      "claim.json": "f28775407fafc4cd720031e1720d0fe2922c6ce2a7855ea1cb64449c3d104c9f",
+      "resource-lease.json": "23ad4096811a491ab9980090c146956d11e0b0bc7ef154b4972b0eabadaf4861",
+      "V4-elevated-registry.json": "c7f165ac02424b7545f680184e925c58767e62ba15e54e9a7b69e59b006fab4e",
+      "episode/episode.json": "c2fc074e1536d59fdf07f75c4cf938dca47f84b87d001bfdbbf9454c5316fef2",
+      "episode/index.json": "784153864794f11b5e437fcb21da52c9b5836b72b09aee4184a6e60b36e347ed",
+      "episode/closure.json": "f1b92098a6ed1d7c5daeefb4b36d08e8431eba5e26b0f9acf0a5accc3c11d9c4",
+      "protocol.json": "a39d0ba3cf527d394e53955713812c174296592ffb3f9a5ed853cd36379e44e5",
+      "program-freeze.json": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+      "Data-resource-native-outcome-assessment.json": "e07727e9442f7bcad6537b755bdcb7efc2bfecd830c900144fa5bcf1c2c093ff",
+      "original-stream-cold-audit.json": "a5f24f88a10244021581e9b95a6d922856a8ef93b7635e47b99d0281c0177c34",
+      "remote-only-original-reference.json": "3fc2832d0a43c9e4f89d8a27a085bd752365451d91eae2ce5af0bc0b603e2e18"
+    }
+  },
+  "scope_id": "data-46308-V4-bounded-climb-nav-native-20261116-v2",
+  "program_sha256": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "source_result_sha256": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "source_commit": "a703c35323e7329ad04959cccac4674c0f3e3071",
+  "classification": "RESOURCE_CENSORED_DURING_GROUND_NAV_PREPARATION_NOT_PUSH_CLIMB_OR_DYNAMIC_NAV_RESULT",
+  "all_success_cost_and_CLIMB_labels": null,
+  "five_arm_main_calls": 0,
+  "internal_C_flag_not_C_or_E_method": true,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "no_VJEPA_purpose_grant": true,
+  "arrays_MJB_frames_models_remain_remote": true,
+  "original_FIFO_PD_clip_and_49_visual_checks_owner_audit_consumed_not_recomputed": true,
+  "Data_closed_resource_snapshot": {
+    "path": "/home/yuanyue/main/work/data-team/manifests/V4-bounded-climb-nav-native-46308-20261116-v2/bounded-v2-final-authority-resource-proof.json",
+    "sha256": "ccfe671d52b209a59864f52e5e4230f8c2455a8e1bb268670de8392ac1f12c5d",
+    "as_of": "2026-11-16T06:33:53.990121+08:00",
+    "native_workers_empty": true,
+    "canonical_locks_free_snapshot_not_new_lease": true
+  },
+  "readonly_reader_initial_size_and_event_filter_checks_corrected_no_original_data_or_scope_changed": true
+}

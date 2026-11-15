@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 06:46：v2原wall资源截断已闭合；真capture＋530步NAV准备，无PUSH/CLIMB结果
+
+- **bounded v2已资源截断关闭，不再写在途：** 程序a0e8ada0…/492（原35源＋Data recorder adapter）原resultfe3d5f6c…保generic failed状态；literal错误是原1800wall门含teardown reserve，归resource-censor而非native拒绝。最终releaseb54503b8…的13本地小成员＋16远端metadata SHA、600行原journal链独立核过；NPZ/帧/权重不读，FIFO/PD/clip只消费owner audit、不冒本组重算。
+- **真实端点比result默认字段更精确，但不回写原件：** capture448命令/2.240sim已完成；只一个ground NAV admitted，449tick/2.245 started，978tick/4.890sim终止，NAV准备530命令/133原Actor forward、无任何native terminal。PUSH只是选中语义意图，真正issued owner为NAV，尚未PUSH interaction/CLIMB/动态handoff；controller0的summary不等没有NAV Actor。旧capture_witness_complete初始false及晚时gait capture.report保原，不能将晚时测量作完成边界/持续站稳。
+- **失败/费用/生命周期如实保留：** 原1772.363236304wall、4.890task＋6.505aux sim、4,487,295bytes known/close0；成功成本/技能标签None。v1 task0失败/费用另保，两scope都closed/耗唯一资格，不延期/重跑/换ID追胜。Data06:33 proof worker0/四锁释放、原inode；本组只读核v2 PID已不在，空闲不是Reach lease。原包model_input/training=false，不用其真NAV帧追溯做WM或转critic/J。
+- **下一真阻塞与产物：** 有限只读性能定位后修热点，FS wait不能直接归因函数；AINav alias-path性能改动仍WIP未纳入旧39 manifest，不当immutable/实测加速、不热换在途/closed。Reach真实WM/caller/同96×64语义、完整公共名义effects/cost/退出域及.40m/static deck/完整终点仍未解，五main/真实WM forward0。总计划be3aa7e5…未变，箱/布局/旧模型/用途/dirty/index及bulk24 closed均保。本轮只读消费、无代码/新测试或physics/API/WM/fit；小摘要`/home/yuanyue/reach-ability-research/operations/V4_BOUNDED_V2_RESOURCE_CENSOR_INTAKE_20261116.json`。
+
 ### 2026-11-16 06:15：新资格task0记录边界失败已核；component不计五组main，74软件两端过
 
 - **新物理原件已独立消费，失败不洗标签：** Data35源/788c6116…首次component_zero在task0首帧writer因`Exact private catalog boundary required` closed；release3daf48d2…/result1469fdb2…的12本地小成员＋13远端原小文件SHA核同。任务0命令/0sim/0归档帧、capture未完成/选择及选中技能controller0；只aux1world/6.505sim、24.690580467wall、12,013bytes known。内部C底座flag不等C/E方法，不造技能负类或成功成本；空流cold checks不冒PD/视觉覆盖。失败包不作model/训练/J输入，491成员全freeze这里只消费owner audit而非本组重算。

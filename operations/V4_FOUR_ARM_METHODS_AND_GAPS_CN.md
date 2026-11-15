@@ -59,3 +59,15 @@ Data原35源/程序788c6116…的第一次component_zero因私有catalog缺`mode
 Data已经独立冻结原35源＋自身privacy-annotation adapter的v2程序a0e8ada0…/492成员；06:10:08 snapshot在途、423实际capture采样/2.115sim、尚无terminal/result，**不是v1恢复、不是E/C/main，也不是新的39源资格**。本组不操作其H/锁/driver/once。AINav新39源305a48b3…已接有限CLIMB→NAV factory/outer/public30intent和高台终点source及明确私有双禁止标志，逐成员SHA只读核过；仍软件，40cm/static deck/后续source链及真实WM/完整cost/exit缺口不由接线自动消失，不借19/25 zero。
 
 小摘要`operations/V4_BOUNDED_RECORDER_FAILURE_INTAKE_20261116.json`不含帧/数组/模型，失败包whole_artifact_model_input_allowed=false/training=false/不转J保持。总计划be3aa7e5…新增J2a只为候选未来TRAIN-only工程评审，不热换当前五组或授本批训练。
+
+## 2026-11-16 06:46：v2已按原wall门关闭，不再写在途；真实NAV准备≠技能失败
+
+独立核Data最终release **b54503b8d19adf82980a2507425769ee70263f6c55b7382d2548a21cc46e3930**及13本地小成员、16远端原metadata SHA；直接原events核600行完整hash-chain，未读NPZ/帧/权重、未重算FIFO/PD/clip，后者只消费owner原audit报告。原source35＋Data metadata adapter程序a0e8ada0…/492不改，result **fe3d5f6c…** generic status `COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY`保留；原错误是 `BoundedComponent1800wall cap with teardown reserve`，分析分类为resource-wall censor，不重写为controller拒绝或native技能负类。
+
+精确原边界：capture第448条/2.240sim真实complete；随后只有一个NAV admitted，449tick/2.245s started，在978tick/4.890sim资源停止，NAV准备实际530命令/133原Actor forward，未有任何native terminal。初次选中的是PUSH语义意图，真正issued owner却为NAV；PUSH interaction、CLIMB及动态箱handoff均未开始。release的selected-skill-controller0指没有进入选中PUSH/CLIMB，**不能误写成没有原NAV controller/Actor调用**。result旧capture_witness_complete初始false保持；晚时capture.report是当前NAV gait测量＋历史complete，不能冒2.240边界或持续站稳。模型本身未使用这些审计后果。
+
+本scope原费用 **1772.363236304wall /4.890task sim＋6.505aux sim /4,487,295bytes**、known/close0；成功成本与PUSH/CLIMB标签None。Datav1 task0 recorder失败的24.690580467wall另保，不合并成成功成本。06:33 owner resource proof记native worker0/四canonical锁释放且原inode，独立只读检查v2 PID已不在；只是快照，不授Reach lease。两bounded scope各自唯一资格已耗，不复开、不加wall、不直接重跑新39源或追胜。
+
+下一步是**有限只读性能定位**后修真正热点/保持安全语义、再由Data冻结独立新用途/程序必要资格；wchan filesystem wait尚不能归因某函数。AINav当前alias-path解析性能改动仍在development WIP，既有39-source manifest没有涵盖新编辑，不能当immutable/实测加速或偷偷热换a0e8。Reach不另起world/接管其进程，继续本组真实WM及完整名义effects/退出域；这些仍未由本次capture/NAV部分轨迹解决，五main/真实WM forward0。
+
+可复核小摘要`operations/V4_BOUNDED_V2_RESOURCE_CENSOR_INTAKE_20261116.json` SHA **1c147d0e6c8e6ad00a8725f94d066bc11865f50e7c5d55c309c47f303415e150**。原包whole_artifact_model_input_allowed=false/training=false，不因含真NAV帧就追溯喂WM/critic/J训练。本轮没有代码/测试变化，不刷74项旧回归；初次只读消费的小文件预设大小及事件过滤检查已在同一原metadata上纠正，原result/journal/lease和物理从未改变。总计划be3aa7e5…未再更新，旧模型/数据用途/dirty全部保留。
