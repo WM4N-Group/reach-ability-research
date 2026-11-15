@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 21:29：bulk24首个新几何真实成功边界已消费，48槽非旧行精确重复；不refit、不作方法收益
+
+- **bulk24不再是物理0：首个新几何原生结果已消费，非Reach收益。** Data release904ff608…/main107864c0…/program95a0356d…，严格同16:40事前0f9e0e03…的ordinal01（g01/left/original/TRAIN，lane−1.75/B宽1.4）。原NAV/PUSH/20cm CLIMB三个请求均有实际succeeded，不是三策略选择/整复杂任务；118.910main sim/23782命令，scope含自身zero/双aux131.920sim/926.960380628ledger wall/175224831bytes，全known、resource_censored=false。本组逐SHA核正式45小成员、独立核原4093行完整journal链及同intent/native option的三请求对应；Data九流/PD/FIFO/NPZ只消费报告，未冒重算。
+- **确有新public输入，保持因果/用途分离：** 新reader复用未改原48槽纯投影，首CLIMB PREPARE实际judgment95.370→proposal→preparation binding语义SHA精确找public query，原候选goal与实际NAV一致、install-before-command/started均核；不传private state/result或未来标签给特征函数。原READY相对13.500s、完整请求CLIMB succeeded相对23.540s另取字面后果。48槽/46状态均不与冻结TRAIN6整行精确重复、age0；只是本条数值非重复，不证可学习/几何可辨/critic增益。仅本组消费了该context的original一条，三候选对比/反转仍无，所有变体仍一既有TRAIN祖先，不算独立heldout家族。
+- **准确相机与资格边界：** 本bulk direct raw实际192×128/1190帧，非HD；Data已公开继承“T HD auditor断言”与zero metadata命名erratum，未改camera/放大重渲染或物理重跑。reader开发修正structured exact3不是bool、helper binding_ref实际是judge ref，两类语义均保测试，不改原件/原门。新14＋原24共38软件检查过，不算新样本；old-cohort reader仍明确拒bulk不同schema，无旧DEV/旧TRAIN强改role。原fit3371ac20…/model a8b1f165…实际SHA未变，未fit/预测/评分CAL-VAL，不将bulk24采集许可当新模型训练manifest。
+- **T仍准确保留未完成：** 21:26直接查46308 OBS原main result尚无，最后已消费观测仍初始1/3；不因bulk短链成功解除T视觉关联问题或宣称三选择/规划胜出。旧A原RGBD关联拒绝、B原4800wall resource censor、A462/B995完整链/原片和费用全保，绝不复开或热抬旧cap；独立OBS新9fdd2076…/自身zero2136ddd7…、两NAV/三view有限purpose不变，未达/失败/censor不能作三view No-Go。
+- **下一与产物：** Data唯一owner按固定24序继续技术可准入行，本组依正式closed原件消费，不另加签字/代派发/扩其余36组合；完整48向量和源数组/录像/模型留远端`/mnt/yuanyue/reach-runs/bulk24-first-public-boundary-20261115-v1/ACTUAL_PUBLIC_FEATURE_AND_ENDPOINTS_v2.json`（76b53f55…）。本地代码与无数组摘要`/home/yuanyue/reach-ability-research/operations/BULK24_FIRST_PUBLIC_BOUNDARY_CN.md`及`BULK24_FIRST_PUBLIC_BOUNDARY_SCALARS_20261115.json`。总计划仍14:00/b2fb786e…/T优先；CAL07仅1/3未评分，所有dirty/原actor/12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop全保，本轮未动他组源码/H/锁/进程/自动化，无新仿真或训练。
+
 ### 2026-11-15 19:48：独立两NAV观测新程序own-zero已过/main健康在途，仅1/3视角、尚无资格结论
 
 - **独立观测测量已越过“仅收代码”，不是复开A/B：** 本组19:47直接读46308原件，核新protocol691e9dfa…/authority2bdd91c5…/program9fdd2076…及原c3c695b5…26个source成员SHA和3个Data测量wrapper；493全program成员/SDK未冒独立审计。新程序自身zero2136ddd7…真PASS/closed，task0/commands0、aux6.505sim/36.788752641ledger wall/129934978bytes。唯一新main PID57116 ledger open，zero1/main1，不借旧zero/改旧cap；原A/B仍closed，原负结果/费用保持。

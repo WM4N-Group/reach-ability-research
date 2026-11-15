@@ -1,5 +1,9 @@
 # G2新批24：原full4祖先内的lane×width覆盖采集（已预登记，未派发／不准refit）
 
+## 实际更新：2026-11-15 21:29
+
+首条新几何g01/left/original正式结果904ff608…已到达并由本组独立消费：原三请求成功、首PREPARE95.370，READY13.500/完整请求CLIMB23.540（均相对同PREPARE）；本批不再物理0。仅该context一候选，无三候选比较/独立heldout/方法收益，原采集协议0f9e0e03…与不refit边界未改，raw192×128非HD。见BULK24_FIRST_PUBLIC_BOUNDARY_CN.md；下方“当前0/未确认”为16:45登记时历史，不作为当前状态。
+
 2026-11-15 16:40:13，已固定 `protocols/2026-11-15/G2-bulk24-lane-width-new-purpose-v1/BULK24_COLLECTION_PROTOCOL.json`，SHA **0f9e0e03a4cdf8263b1c69f69db9697968040023f42d4c1f383a320631d9e57e**。不是T-COMPLEX原生A/B，也不热扩旧TRAIN6/12根。
 
 ## 为什么选这24，而非照目录跑60或重复至100
