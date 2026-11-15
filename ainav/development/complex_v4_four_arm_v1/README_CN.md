@@ -2,6 +2,16 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：实际capture之后的共享执行装配入口（未调用native）
+
+`execution_entry.build_after_actual_capture`默认OFF。Data在fresh程序/lease/guard下、真正原SupportedCapture已完成并逐步记账后，可把现成components接到原RegisteredBindingResolver、BehaviorSessionFactory、RegisteredPushAPI、NativeOptionExecutor及上一版V4TaskFactory。**不新建world、不step、不选策略、不创建所选controller、不签完整任务成功**；原helper检查真capture类型/同world/实际issued steps与200Hz时钟，普通`complete=True`对象或零步标志不算。场景须与已确认V4逐内容相同，goal必须goal_deck/.60，不能回退旧ground-only装配。
+
+六份PUSH合同直接由五组共同PUBLIC目录构建原PlacementContract，保持绝对目标、原.11 stop偏置/不可变goal与ground源，旧scene validator不再误消费V4。使用原ActualPlacementEvidence，只记录原NN/STOW_VERIFIED成功回执并复核当前required placement；**不调用旧ground终点wrapper**。
+
+外层contact guard新增的不是“CLIMB被选就放行”：只凭已安装、entered的**原RegisteredClimbMachine**、private option hash/body/opaque/current model/data/FIFO同一性，给该实际目标entered_climb_refs。仍调用原>1N/forbidden-body policy，躯干/机械臂或其他箱接触照常拒绝；不把权限沿用给后继dynamic-box NAV，不给static deck许可。这样后续真正CLIMB的合法脚接触不会先被旧NAV/PUSH-only外层guard错误截断。仍需真实程序自己的必要zero验证此装配/原始流。
+
+新增8项纯软件检查覆盖原6份合同、场景篡改、伪capture拒绝及未entered/不同机器/错hash-body-world-FIFO/contact forbidden拒绝。**不是8次仿真**。完整V4 observer/selected entry judge/200Hz driver、CLIMB后dynamic support owner、static/40cm和终点collector尚未打通，不能用此入口宣布E或五组main准入，不重复旧19-source成功组件。
+
 ## 2026-11-16：公开CLIMB→原生task factory接线（软件候选，非整链准入）
 
 新增 `task_factory.factory_class` 默认OFF；显式启用时组合原semantic有限PUSH-goal映射与**原RegisteredTaskSessionFactory**，不改原文件/模块。它接入上一版destination binder，保留原 `RegisteredClimbAdapter.construct`、原 `NativeOptionSession` 和原完成CLIMB witness方法；真实回执仍绑定选定的private native option SHA，公开参数保持DESTINATION=.20。绑定逐一核当前RGBD opaque body与所选PUBLIC `object_ref:upper-entry`、query/source/world/FIFO；不能用另一个同高箱体替代所选对象。新acquisition清空映射，只装配精确选中项，构造失败原永久撤销门保持。
