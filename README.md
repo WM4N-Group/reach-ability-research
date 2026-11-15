@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前T真实负结果（2026-11-15 17:35）
+
+A原唯一main82952392…已FAILED_NO_RETRY/ledger stopped，非仍在途：实际capture448步/2.240sim后第一PUSH前原RGBD同色组件未消歧、当前objects=[]，无任务NAV/PUSH native option。原像素API离线一次确认两个depth有效warm候选均被原guard拒绝；不改阈值/GT回填/重跑。没有几何死局/方法胜出或G3负标签证据。原23 live帧保留、未有完整A/B视频；B终态未消费。见operations/T_COMPLEX_01_FIRST_MAIN_FAILURE_CN.md。
+
 ## 当前T执行状态（2026-11-15 17:09）
 
 完整Data A/B已按e72ddbb2…冻结，A原own-zero15947a2e…已PASS；17:01:56 owner快照的A唯一main已派/在途，B待自身zero/main。4方法SHA同本组，当前source为b08；不再写全程序未装配或重复派zero。未消费main终态/完整task/有效三选择/任务视频，不把in-progress当成功或原AINav工程当方法贡献。见operations/T_COMPLEX_01_FULL_PROGRAM_ZERO_AND_MAIN_INTAKE_20261115.json。

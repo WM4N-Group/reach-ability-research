@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 17:35：T首个A main在首PUSH前因同色组件未消歧失败，原门安全退出；不是几何死局或方法胜负
+
+- **A唯一main已真实失败，不再沿用17:01“在途”：** 原program626400b8…/root result82952392…已读取，同program main ledger closed=true/root ledger stopped=true；FAILED_NO_RETRY、resource_censored=false、close_errors=[]。Data权威CAS收束及B后续状态尚未本组独立核到，不重派zero/main，不根据A失败推B成功。原own-zero15947a2e…/协议e72ddbb2…/source b08f51bb…和4方法SHA保持，无热补/改门/追胜。
+- **准确停点是source当前像素身份，不是几何死局/原PUSH失败：** 实际SupportedCapture完成、448步/2.240world sim，原journal462行哈希链已独立验证。第一query同钟Observation31b92b0e…的objects=[]；greedy第1bundle选cuboid_a→(1.85,0)、名义root6/route仅(-.08,0)，原source以“Current original RGBD association unavailable; no static-pose substitution” BLOCKED，本组按原fail-closed退出。原native_option_installed/intent_native_execution_bound事件均0：448实际命令是capture，不是任务NAV/PUSH；重构0/未有三有效选择。不能把这条当延迟封路机制、不可恢复物理死局、critic负类或能力差异。
+- **本轮已把泛“关联缺失”定位到原guard，未靠改门通过：** 对既有2.240sim原RGB/depth/K/T、同frozen proposer837e95ec…只离线调用纯像素API一次，未起Actor/Runtime/新帧/重渲染/fit、未用私有pose。得到两个warm component，bbox[22,89,170,94]/727像素与[24,46,169,74]/2153像素，depth有效分别727/2153、geometry_valid均true；原single_visible_hypothesis因同family片段/实例未消歧**两者均拒绝**，resolver因此无法给当前合法目标。不是缺depth；究竟一个箱被遮挡还是多个物体仍UNKNOWN，不挑最大块/并色/改pixel阈值/静态GT造NativeTarget。原192×128 PNG仅2.4KB按SHA保ignored，depth/数组/录像仍远端。
+- **真实费用/原片保留：** main含aux8.745sim/844.490240974ledger wall、scope highwater218453439bytes/usage_known=true（world2.240＋aux6.505）；result entry844.401510896不同口径不混。zero另6.505sim/36.037662184wall已记，scope highwater不跨phase相加。直接live原母数据23帧、960×540/10Hz/capture-grid完整、结束2.240sim；尚未编码1×/pair，不把启动短片称完整能力录像，不为补片重跑。未独立重算全部motor/NPZ/PD，只核实际result/ledger/原链/该query及原proposer边界，保持原证据范围。
+- **下一具体source域问题/本组责任：** AINav核原RegisteredBindingResolver.observe→single_visible_hypothesis→当前一一关联/原合法感知准备映射；Reach承认当前共同nominal模型没有观测可用性预测，本例不能验证原拟延迟通道机制。若需原NAV视角准备或公开拒绝反馈，应事前新source/新协议、两策略共用且不把感知准备冒额外有效选择；不在当前pair插NAV、换色/改布局、松guard追胜。B是否继续由Data按原权威/同源资格处理，本组不擅自派发/停进程；即使B后续过，也要隔离初始可观测性混杂，不自动归因前瞻优势。
+- **其余主线/持久入口：** TRAIN6 fit3371ac20…/model a8b1f165…、CAL07仅1/3/未评分、bulk24 0f9e0e03…均原样，本T DEV原件不fit、不转旧训练角色。入口`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_FIRST_MAIN_FAILURE_CN.md`与`T_COMPLEX_01_FIRST_MAIN_ASSOCIATION_FAILURE_20261115.json`；ignored evidence/T-first-main-visibility-rejection-20261115-v1。全部旧dirty/closed/12N/4s/identity/immutable/support/guard/QP/FIFO/stop/旧失败未知账保留，无新native运行、模型训练、他组源/H/锁/进程/Goal/agent/chat/自动化改动。
+
 ### 2026-11-15 17:09：T完整A/B程序冻结，A原own-zero PASS且唯一main在途；未有完整任务/方法结果
 
 - **完整程序已装配/冻结，A自己的zero已真过，不能继续写“等装配/组件zero待借用”：** 已核Data完整protocol e72ddbb2…/authority14399568…，A greedy program626400b8…、B multistep0ba38395…，新source明确b08f51bb…/三箱578bd753…/公共asset99d660de…与fd295678…；原method protocol c0ecb872…及Data inputs/Reach实际4方法文件SHA均同本组。A原zero result15947a2e…与closed phase ledger已核，OWN_ZERO_PASS/实际PID42481、完整host/原INPUT8/private catalog copy-only alias/同模型记录通过；numeric-model febcd592…、task0步/命令0/visual1，不是借旧camera组件zero。

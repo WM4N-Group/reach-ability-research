@@ -1,0 +1,159 @@
+{
+  "at": "2026-11-15T17:32:53.476303+08:00",
+  "role": "ACTUAL_FIRST_T_MAIN_PRE_TASK_ASSOCIATION_REJECTION_NOT_ALGORITHM_WIN_OR_TRAIN",
+  "actual_result_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/result.json",
+  "actual_result_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+  "actual_main": {
+    "scope_id": "data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1",
+    "arm": "A",
+    "method": "greedy",
+    "program_sha256": "626400b87c001800da53c7bf6f4050e7421a2a86dcecbd9a8f2bce61f8f231df",
+    "status": "FAILED_NO_RETRY",
+    "passed": false,
+    "task_success": false,
+    "error_class": "RuntimeError",
+    "error": "ORIGINAL_INTENT_REJECTION:ValueError: Current original RGBD association unavailable; no static-pose substitution",
+    "task_physics_steps": 448,
+    "actual_main_world_sim_s": 2.2399999999999745,
+    "actual_recorded_commands": 448,
+    "actual_recorded_visual_frames": 23,
+    "wall_s": 844.4015108959284,
+    "direct_video_grid_complete": true,
+    "close_errors": [],
+    "resource_censored": false
+  },
+  "main_ledger": {
+    "phase": "main",
+    "PID": 42697,
+    "started_monotonic": 1554063.87491136,
+    "closed": true,
+    "status": "FAILED_NO_RETRY",
+    "sim_s": 8.744999999999859,
+    "wall_s": 844.4902409741189,
+    "output_highwater_bytes": 218453439,
+    "report_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+    "usage_known": true
+  },
+  "root_ledger_stopped": true,
+  "Data_authority_CAS_closure_independently_checked": false,
+  "original_journal_verification": {
+    "rows": 462,
+    "last_sha256": "6d96396c37f094f01d7e34c2189c20a9e8518b117c416979872d7e0785521fab",
+    "valid": true
+  },
+  "original_journal_file_sha256": "0c8fa13ebfe111f9a174df74d0cfc4fcce2d081d0547b455204367e0972ed590",
+  "original_public_observation_sha256": "31b92b0e8bce2acc23ff9310a485885bd726ce76c3e1e2a41b98217b33d24421",
+  "original_public_object_count": 0,
+  "original_query_clock_s": 2.2399999999999745,
+  "original_cold_capture_completed_event_count": 1,
+  "first_method_choice": {
+    "method": "greedy",
+    "decision_index": 1,
+    "public_target_ref": "cuboid_a",
+    "goal_xy_m": [
+      1.85,
+      0.0
+    ],
+    "nominal_root_candidates": 6,
+    "nominal_route_reference_xy_m": [
+      [
+        -0.08,
+        0.0
+      ]
+    ],
+    "task_NAV_intents_installed": 0,
+    "task_PUSH_intents_installed": 0
+  },
+  "measured_task_reconstructions": 0,
+  "actual_three_meaningful_choices_qualified": false,
+  "source_boundary": "Actual capture -> current original public query with zero associated objects -> first greedy PUSH intent -> source BLOCKED -> preregistered fail-closed rejection; no native task option constructed",
+  "first_query_RGB": {
+    "height": 128,
+    "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/query-observations/frame-000001/rgb.png",
+    "sha256": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "time_s": 2.2399999999999745,
+    "width": 192
+  },
+  "original_pixel_only_diagnostic": {
+    "at": "2026-11-15T17:29:26.296689+08:00",
+    "role": "OFFLINE_ORIGINAL_PIXEL_PROPOSER_DIAGNOSTIC_NOT_ONLINE_DECISION_FIT_OR_REPLAY_RENDER",
+    "source_module_sha256": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+    "program_sha256": "626400b87c001800da53c7bf6f4050e7421a2a86dcecbd9a8f2bce61f8f231df",
+    "closed_capture_input_file_sha256": {
+      "rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+      "depth_m.npy": "17eb7605ac9a13bed9783e8a95cbbf0b13d176ef7ba4bd67322f40695d7972c4",
+      "calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717"
+    },
+    "original_capture_time_s": 2.2399999999999745,
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "frame_local_ref": "visual-proposal-0",
+        "appearance_family": "warm",
+        "pixel_bbox_xyxy": [
+          22,
+          89,
+          170,
+          94
+        ],
+        "pixel_count": 727,
+        "valid_depth_pixels": 727,
+        "geometry_valid": true,
+        "original_hypothesis_result": "ValueError: Same-family fragments or physical instances unresolved; no implicit largest-component choice"
+      },
+      {
+        "frame_local_ref": "visual-proposal-1",
+        "appearance_family": "warm",
+        "pixel_bbox_xyxy": [
+          24,
+          46,
+          169,
+          74
+        ],
+        "pixel_count": 2153,
+        "valid_depth_pixels": 2153,
+        "geometry_valid": true,
+        "original_hypothesis_result": "ValueError: Same-family fragments or physical instances unresolved; no implicit largest-component choice"
+      }
+    ],
+    "ambiguous_same_family_components": true,
+    "appearance_groups": [
+      {
+        "appearance_family": "warm",
+        "member_frame_local_refs": [
+          "visual-proposal-0",
+          "visual-proposal-1"
+        ],
+        "multiple_fragments_or_instances_unresolved": true,
+        "distinct_physical_object_count": null
+      }
+    ],
+    "offline_pure_proposer_calls": 1,
+    "actual_native_runs_or_new_frames": 0,
+    "model_fits": 0,
+    "private_world_pose_used": false,
+    "thresholds_or_guards_changed": false,
+    "forbidden_attempts": []
+  },
+  "source_pixel_diagnostic_calls_offline_only": 1,
+  "new_Actor_Runtime_physics_or_image_capture_calls": 0,
+  "classification": "CURRENT_QUERY_SAME_APPEARANCE_COMPONENT_AMBIGUITY_BEFORE_NATIVE_TASK_EXECUTION",
+  "not_a_missing_depth_failure": true,
+  "distinct_physical_object_or_fragment_identity_resolved": false,
+  "no_largest_fragment_choice_or_same_color_merge": true,
+  "no_GT_or_static_pose_target_substitution": true,
+  "not_geometric_deadlock_evidence": true,
+  "not_native_PUSH_or_CLIMB_guard_failure": true,
+  "critic_training_label_allowed": false,
+  "original_frozen_model_refits": 0,
+  "raw_live_evidence": {
+    "captured_frames": 23,
+    "complete_for_capture_grid": true,
+    "actual_run_end_time_s": 2.2399999999999745,
+    "encoded_video_created": false,
+    "state_replay_or_rerender_used": false
+  },
+  "old_main_or_zero_restarted": false,
+  "current_frozen_pair_or_source_modified": false,
+  "next": "Source owner diagnose source-domain current-query observability under unchanged original proposer/entry guards. Any repair needs a new source/protocol and common A/B treatment; never hot-patch/retry this closed root. Do not infer B status/win from this A failure."
+}
