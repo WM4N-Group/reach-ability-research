@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-15T23:35:50.647974+08:00",
+  "role": "ORIGINAL_DELIVERY_POINTERS_NOT_MODEL_INPUT_OR_NEW_PHYSICS",
+  "releases": [
+    {
+      "ordinal": 5,
+      "remote_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-05-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "9115fcb3ff347ebc2e1bcde38a4a54c937b7e369e06c28bb3cf93c32b2ee17e4",
+      "original_result_passed": true,
+      "actual_public_queries": 5,
+      "first_CLIMB_boundary": {
+        "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+        "first_judgment_status": "PREPARE",
+        "first_PREPARE_time_s": 97.75999999998358,
+        "actual_physical_observation_sha256": "0e788fc152e39f2eb72a9b1680bf70a0de9378444a735fa693e9a5eca83e4887",
+        "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-05-g09-left-lateral_plus_0p04-20261115-v1/main/events.jsonl#3890",
+        "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+      }
+    },
+    {
+      "ordinal": 6,
+      "remote_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-06-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "acc5be91e81ea5b5a239a0770ef5ce6d9b73b3de18950193906e9daed8ac5577",
+      "original_result_passed": false,
+      "actual_public_queries": 2,
+      "first_CLIMB_boundary": {
+        "status": "NO_CLIMB_JUDGMENT_RECORDED",
+        "first_judgment_status": null,
+        "first_PREPARE_time_s": null,
+        "actual_physical_observation_sha256": null,
+        "judgment_ref": null
+      }
+    },
+    {
+      "ordinal": 7,
+      "remote_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-07-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "5da550747dedbb0ae4ed20d780beee78a27e2ae33530816b8ca3cc18e01111f5",
+      "original_result_passed": false,
+      "actual_public_queries": 3,
+      "first_CLIMB_boundary": {
+        "status": "NO_CLIMB_JUDGMENT_RECORDED",
+        "first_judgment_status": null,
+        "first_PREPARE_time_s": null,
+        "actual_physical_observation_sha256": null,
+        "judgment_ref": null
+      }
+    },
+    {
+      "ordinal": 8,
+      "remote_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-08-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "70857034944bb6db12dd9765076e177f29f872c292e8e19aa4cd0416dbb3945d",
+      "original_result_passed": false,
+      "actual_public_queries": 2,
+      "first_CLIMB_boundary": {
+        "status": "NO_CLIMB_JUDGMENT_RECORDED",
+        "first_judgment_status": null,
+        "first_PREPARE_time_s": null,
+        "actual_physical_observation_sha256": null,
+        "judgment_ref": null
+      }
+    }
+  ],
+  "four_new_deliveries_actual_public_queries": 12,
+  "first8_total_actual_public_queries": 28,
+  "not28_independent_world_groups": true,
+  "missing_CLIMB_features_and_label_None": true,
+  "current_critic_refit_not_authorized": true,
+  "H_original_native_programs_caps_counts_not_changed": true,
+  "no_raw_MJB_video_weights_env_or_logs_in_Git": true,
+  "selected_code_files": {
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/export_closed_ordinals05to08_originals.py": "283cdd80d631a7ac4b939de801bf3da71035f3b50082450f4c63b6618f101e3c",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/run_export_closed_ordinals05to08.py": "d003b20d3d4692c1fb87377a41c42bf701498b519c536b5a10855c0009d5f3a9",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/publish_closed05to08_original_delivery.py": "2563e95686f17e5932b17d188066f166a30879261b2d1a39a776627a92c64a30",
+    "data_owner/bulk24-collector-46308-20261115-v1/README.md": "bb7e5b75201aea277df8cf8fd2b31c3dc7c315fff9140c269136af0864a31cc7",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/README.md": "bb7e5b75201aea277df8cf8fd2b31c3dc7c315fff9140c269136af0864a31cc7"
+  }
+}
