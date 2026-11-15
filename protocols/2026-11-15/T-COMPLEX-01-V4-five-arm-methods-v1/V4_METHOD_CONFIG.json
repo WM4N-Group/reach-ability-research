@@ -242,9 +242,9 @@
     "complete_cost_provider_or_native_domain_qualified": false
   },
   "latest_plan_seen": {
-    "at": "2026-11-16T03:32:26.576053+08:00",
+    "at": "2026-11-16T07:50:15.636560+08:00",
     "version": "2026-11-16 00:03",
-    "sha256": "42c8a90d31e84d8d3b0c832a405b0a654ad82319f3c0b7f5da49982c1f3cfc3a",
+    "sha256": "be3aa7e587e5aa990375d1085dde6affc497861c1d45ab01862edc2793501845",
     "new_parallel_group": "V-JEPA",
     "current_V4_five_arm_and7a6_identity_unchanged": true,
     "new_model_may_only_enter_separately_registered_future_WM_ablation": true,
@@ -262,5 +262,11 @@
     "legacy_costs_included_in_each_arm": true,
     "strict_optional_stow_factor_helper_adopted": false,
     "source_only_no_native_or_comparison_qualification": true
+  },
+  "common_observation_prelude_proposal": {
+    "path": "protocols/2026-11-16/V4-common-public-NAV-observation-prelude-v1/PROPOSAL.json",
+    "sha256": "7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb",
+    "status": "PROPOSED_OPT_IN_AUXILIARY_CODE_NOT_SOURCE_BOUND_NOT_NATIVE_QUALIFIED_OR_DISPATCHED",
+    "changes_current_runtime_protocol": false
   }
 }

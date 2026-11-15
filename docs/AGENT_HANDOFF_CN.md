@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 07:50：共同NAV观察前缀固定目标/代码已就绪；15软件两端过，尚未源采用或真实WM
+
+- **推进真实WM启动依赖，不再停留泛提案：** 新default-OFF `CommonNavObservationPrelude`固定选现有共同公开NAV `v4-ground-nav-007`=(.22,0,ground)，A—E同一目标、每arm最多一次、无view扫描/重试。作为capture后/首次方法前的共同工程观察准备，原judge/factory/executor/回执消费；只原NAV succeeded后要求fresh observation交回同一真实arm method。全部成本入各arm task0，prefix模型/新优化0，不是A/B的VLM-only兜底/优化贡献/正确路线。已曝光DEV选择不冒盲定/未见，不读私有actual approach或改布局。
+- **可消费代码但尚未源集成/采用：** 辅助policy没有`.enabled`治疗因子字段，不能被原factor gate当B/D；host.planner仍须真正A/B/C/D/E、E仍原RuleBaseline，只aux coordinator阶段使用helper。新增15纯软件专项本地/46308两端过，含原IntentExecutionCoordinator的辅助选择→真实类型fixture回执→新观测→同一method交回；不是native NAV/WM资格，旧74项不重复跑。固定proposal在`protocols/2026-11-16/V4-common-public-NAV-observation-prelude-v1/PROPOSAL.json`，当前方法config只登记未采用候选，不变更执行协议/派发，也不等Reach签字。
+- **必要输入和方法缺口仍保留：** prefix成功不等WM ready。原真实grid/accepted200Hz实际owner（PREPARE意图不能盖实际NAV）/3新图/同96×64语义与真实forward仍需接；target8 None/mask0不放宽，不把SupportedCapture改HOLD、不用closed v2原帧。完整公共名义effects/cost/准备退出域及.40m/static deck/后续owner链/原task资格仍未闭合，五main/真实WM forward0；不把新helper称优化器完成。
+- **源/权限/保管：** 总计划be3aa7e5…未变；AINav新41-sourceec62709d…逐SHA只读核过，parallel metadata guard是五组共同底座候选，不归因Reach新方法或当实测提速。两个bounded scope与bulk24均closed不复开/延期，原模型/CAL/VAL/用途/dirty/index全保。具体source接点追加`/home/yuanyue/reach-ability-research/operations/V4_CAUSAL_QUERY_PORT_NEXT_CN.md`；本轮未改他组source/H/锁/进程、未执行physics/API/模型/fit，raw/env/权重仍远端。
+
 ### 2026-11-16 06:46：v2原wall资源截断已闭合；真capture＋530步NAV准备，无PUSH/CLIMB结果
 
 - **bounded v2已资源截断关闭，不再写在途：** 程序a0e8ada0…/492（原35源＋Data recorder adapter）原resultfe3d5f6c…保generic failed状态；literal错误是原1800wall门含teardown reserve，归resource-censor而非native拒绝。最终releaseb54503b8…的13本地小成员＋16远端metadata SHA、600行原journal链独立核过；NPZ/帧/权重不读，FIFO/PD/clip只消费owner audit、不冒本组重算。

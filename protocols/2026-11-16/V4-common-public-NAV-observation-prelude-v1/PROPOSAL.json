@@ -1,0 +1,66 @@
+{
+  "schema": "Reach-V4-common-public-NAV-observation-prelude-proposal-v1",
+  "at": "2026-11-16T07:50:15.636560+08:00",
+  "state": "PROPOSED_OPT_IN_AUXILIARY_CODE_NOT_SOURCE_BOUND_NOT_NATIVE_QUALIFIED_OR_DISPATCHED",
+  "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
+  "main_plan_sha256": "be3aa7e587e5aa990375d1085dde6affc497861c1d45ab01862edc2793501845",
+  "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "policy_id": "V4_COMMON_PUBLIC_NAV_OBSERVATION_PRELUDE_v1",
+  "arms": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "all_five_identical": true,
+  "selected_existing_public_intent": {
+    "skill": "NAV",
+    "target_ref": "v4-ground-nav-007",
+    "parameters": {
+      "goal_world_x_m": 0.22,
+      "goal_world_y_m": 0.0,
+      "surface_height_m": 0.0
+    }
+  },
+  "public_source_snapshot": {
+    "package_sha256": "ec62709dd0a338168ef006cc51641643a6b056b453de485e2f6e0266be645f69",
+    "members": 41,
+    "public_map_sha256": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
+    "public_effects_sha256": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda"
+  },
+  "exposure": "EXPOSED_DEV_DESIGN_NOT_BLIND_OR_UNSEEN_SELECTION; point already in common public catalogue, not a private existence route",
+  "max_NAV_requests_per_arm": 1,
+  "no_retry_or_alternate_view_scan": true,
+  "no_additional_arm_mains_or_budget_granted": true,
+  "start": "AFTER_GENUINE_CAPTURE_BEFORE_FIRST_ARM_METHOD_SELECTION",
+  "caller": "SOURCE_OWNED_AUXILIARY_COORDINATOR_PHASE; same original factory/executor/world/FIFO, no new world or direct motor issuer",
+  "arm_method_identity": "Keep original real host.planner at task0. Do NOT install auxiliary policy as A/B/C/D/E. Restore coordinator.model to that same original method instance ONLY after actual succeeded receipt and fresh public acquisition.",
+  "legacy_common_H_all5_unchanged": true,
+  "new_successor_treatment_B_D_only_unchanged": true,
+  "success": "Exact original bound NAV succeeded receipt; admitted/started/READY/prediction are not success; failure/expiry/rejection => unavailable, no retry",
+  "accounting": "Entire prefix capture/NAV/preparation/stow/validation/sensing and actual wall/sim/resources count from each arm task0; not removed as warmup or attributed to B-D optimizer",
+  "VLM_calls_in_prefix": 0,
+  "WM_decision_calls_in_prefix": 0,
+  "new_optimizer_choices_in_prefix": 0,
+  "E_VLM_WM_new_optimizer_calls_remain0": true,
+  "required_next": "NEW public acquisition. A/B still require original real3-grid/complete200Hz query and actual WM forward, same96x64-anchor target8 semantic association; UNKNOWN stays UNKNOWN, never VLM-only.",
+  "observed_owner": "Actual issued NAV owner during NAV, not proposed PUSH/CLIMB; SupportedCapture is still unmodelled and excluded.",
+  "source_hooks_still_required": [
+    "real10Hz packet to CausalWMQueryPort.on_visual",
+    "actual accepted200Hz reference/actual owner to on_issued or on_unmodelled_issued",
+    "same96x64 anchor public target association",
+    "auxiliary-to-same-arm-method transition before dispatch of any arm method choice"
+  ],
+  "genuine_prefix_success_not_WM_ready_or_full_task_success": true,
+  "all_original_safety_success_stop_identity_guards_unchanged": true,
+  "model_checkpoint_unchanged": true,
+  "closed_artifacts_used_as_WM_inputs": false,
+  "new_training_or_J_purpose_granted": false,
+  "helper": "research/task_conditioned_reachability/execution_preparation/v4_common_nav_prelude.py",
+  "default_enabled": false,
+  "helper_has_no_optimizer_enabled_attribute": true,
+  "actual_prefix_executions": 0,
+  "actual_WM_query_or_forward": 0,
+  "five_arm_mains": 0
+}

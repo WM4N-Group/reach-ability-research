@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16T06:15:30.556599+08:00",
+  "at": "2026-11-16T07:50:15.636560+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "38787016a99e346b92d745a8ca0884128b68356d29beb9fe28e8f140a2865689",
@@ -19,7 +19,9 @@
     "research/task_conditioned_reachability/execution_preparation/v4_anchor_target8.py": "c4bb1b516498abd415a36057a764c4911fd848bc1d96cb381b147825557e8742",
     "research/task_conditioned_reachability/execution_preparation/v4_stow_factor.py": "b36fbae234946d2c0d2fcf8bede6dd829caf96a195c24afab87e07505fddb896",
     "research/task_conditioned_reachability/execution_preparation/v4_reference_cost.py": "2598f670c7807583ad6f5f4c03ce92eb12c12c22afae10121f702f39c4784805",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_reference_cost.py": "8d300229ce6243c1a15633a2f4b51def35c08917f1badab1b874bb209826a3b1"
+    "research/task_conditioned_reachability/execution_preparation/test_v4_reference_cost.py": "8d300229ce6243c1a15633a2f4b51def35c08917f1badab1b874bb209826a3b1",
+    "research/task_conditioned_reachability/execution_preparation/v4_common_nav_prelude.py": "3cb37d8e3c770951283cd6f093d5c545826ff06ef01531c4f41f2bf94311ab3a",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_common_nav_prelude.py": "8e3de3bc4411fc4a266c28161604b8370d5e4025ead985745f8a689b2cdf428c"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
@@ -35,7 +37,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "e58be136198e18f76e7030dd5c0f344cd4eedfee72635794302b65f8697a3331",
+  "protocol_config_sha256": "62767d05b35db164fb3c6d2155d679ab4a5d51c1516e58765d4ddac338e3c792",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -66,8 +68,10 @@
   "exact_new_runtime_dependency_freeze_still_required": true,
   "current_rule_source_sha256_after_factor_scope_clarification": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0",
   "complete_reference_accountant_implemented_public_geometry_effect_model_still_unbound": true,
-  "current_readonly_AINav_source_package_sha256": "305a48b3b3ca872ee4a002a63d9c04043de016928768a517337c50bedfb5405a",
-  "current_readonly_AINav_source_members": 39,
+  "current_readonly_AINav_source_package_sha256": "ec62709dd0a338168ef006cc51641643a6b056b453de485e2f6e0266be645f69",
+  "current_readonly_AINav_source_members": 41,
   "B_D_shared_choice_event_schema_unified_not_effective_or_physical_count": true,
-  "component_zero_excluded_from_five_arm_main_reader": true
+  "component_zero_excluded_from_five_arm_main_reader": true,
+  "current_readonly_E_rule_source_sha256": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+  "common_public_NAV_prefix_proposal_sha256_not_runtime_adoption": "7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb"
 }

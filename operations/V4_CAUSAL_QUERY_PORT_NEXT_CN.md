@@ -26,3 +26,19 @@
 AINav/Data新V4 caller可直接绑定上述两个callbacks与当前descriptor provider，source自己的必要zero/main核实际IO，不再等待本组另造schema或收件签字。Reach继续在相同public capability/效果边界实现共享完整名义cost，不从原WM terminal elapsed/logit伪造成功Finish/READY；PUSH绝对→公开relative action、CLIMB语义destination→原native SOURCE要有显式原binding。现场query/优化/native消费成立前不报有效五组对照。
 
 收尾已核最新00:03计划34c169d5abfc7edc112ac0febd6e372052021d478c847e77c60050791fdd430b：新增独立V-JEPA候选研究不阻V4，当前7a6/五组不热换、不冒第六arm，旧用途不转新训练；Reach职责继续。
+
+## 2026-11-16 07:50：共同NAV观察准备从泛提案收敛为一个固定公开目标和可消费代码（尚未采用/派发）
+
+此前只建议“共同公开NAV prefix”，没有固定目标或可调用选择/回执逻辑。本轮给出单一、default-OFF的 `v4_common_nav_prelude.CommonNavObservationPrelude`，以及 `protocols/2026-11-16/V4-common-public-NAV-observation-prelude-v1/PROPOSAL.json`（SHA **7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb**）。固定使用**现有五组公共目录** `v4-ground-nav-007` = NAV(.22,0,ground)，每arm最多一次，A—E完全相同、不挑view、不重试。该点取自早已公开的目录；我们已经见过DEV组件，**不冒结果前盲定或未见选择**，不读取私有实际approach/存在性路线、不改目标/布局/物体/Actor。
+
+这只是一次共同工程观察准备：从capture后真NAV实际owner取得新的模型窗口，避免A/B必须先预测才能选择第一个modelled owner的启动依赖。它不是第一条A/B方法选择、不是VLM-only兜底，也不是本次优化贡献；VLM/WM/新selector在prefix中0调用，全部原执行/sensing/4s/收臂/wall/sim成本计各arm task0账本。只接受原同intent参数绑定NAV的`succeeded`原回执；admitted/started/READY、预测、布尔不当成功。失败/预算到期/拒绝都unavailable，不替换目标/重试。成功后要求新原public acquisition，但**不自行宣告WM ready**：原3帧/完整200Hz/实际owner/同96×64 anchor语义/真实forward仍必须齐，target8 None/mask0不放宽、不用closed v2帧。
+
+### 源owner的最小接点（本组没有修改AINav/Data）
+
+1. task0仍装真正arm method为host.planner、原legacy H/新treatment身份不变，E仍精确原RuleBaseline。辅助policy**没有`.enabled`治疗因子字段**，原factor gate不能误将它当B/D。
+2. source ActualCoordinator可在首个方法query前，仅一次用该auxiliary policy走**原**IntentExecutionCoordinator→judge→factory→executor。原NAV complete receipt回到helper后，清理该intent，再把coordinator.model交回同一个已构造的真实arm method；不要替换host.planner/E类或让辅助prefix推进AINav树/规则placement。helper的`require_fresh_method_observation`核新观测后才开始真实method。
+3. 原capture_grid实际packet、accepted200Hz reference及实际native owner仍须接原query port。PREPARE/PUSH意图不覆盖真正issued NAV，SupportedCapture仍不冒HOLD。first A/B select仍必须真WM预测，缺输入则明确method unavailable，不能绕成API0/首次VLM-only。C/D仍保原VLM/tree/replanning且不暗加WM；E不调用模型。
+
+新增15项明确SOFTWARE测试本地/46308两端过，包括**真实原IntentExecutionCoordinator纯语义接口**的auxiliary→回执→fresh acquisition→同一arm-method交回测试；没有Runtime/Actor/physics/真实WM/API。不是15次NAV或native资格，旧74项本轮不刷。helper default OFF、源没有接，**当前main config只记录proposal，不改变现有执行协议或表示已排队**；AINav/Data可按现有流程技术集成，新准确程序自身资格，不加Reach签字/收件门。
+
+当前source41 packageec62709d…逐成员SHA只读核过，parallel metadata guard候选属五组共同底座，不算B/D新贡献或实际吞吐改善；旧v1/v2仍closed。完整几何effects/cost/准备退出域、.40m/static deck/后续source链与真task终点资格仍未解决；这个小前缀不冒优化器或五组完成。
