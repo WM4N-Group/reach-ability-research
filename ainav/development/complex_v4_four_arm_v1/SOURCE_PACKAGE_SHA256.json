@@ -1,14 +1,18 @@
 {
-  "role": "CODE_ONLY_V4_PARTIAL_SOURCE_NOT_DISPATCH_OR_METHOD_IDENTITY",
+  "role": "V4_FIVE_ARM_ASSET_AND_E_RULE_PARTIAL_SOURCE_NOT_DISPATCH_OR_FULL_METHOD_IDENTITY",
   "files_sha256": {
     "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
-    "README_CN.md": "b64e4574cd77a9c4bef09ae983aa6da36af19a58a5f37b9a2e5b5acf8debc3a2",
+    "README_CN.md": "49304e97a2a33cc32b444a7ef24c5fddef125d10e6e0f23856e6c2044ee23a12",
+    "rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
     "FOUR_ARM_PROTOCOL_REFERENCE.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
+    "FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
+    "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
     "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4"
   },
   "source_native_qualified": false,
   "physical_dispatches": 0,
-  "full_four_arm_methods_integrated": false
+  "full_five_arm_methods_integrated": false,
+  "old_FOUR_ARM_PROTOCOL_REFERENCE_is_historical_not_current": true
 }
