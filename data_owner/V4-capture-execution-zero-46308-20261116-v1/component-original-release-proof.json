@@ -1,0 +1,56 @@
+{
+  "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-V4-GENUINE-CAPTURE-ORIGINAL-EXECUTION-ASSEMBLY-NOT-TASK-20261116-v1/release.json",
+  "release_sha256": "1254bb36b3b073533d9974d5c6849c0bef390be7fca9a054fcf782366ccc51fd",
+  "audit": {
+    "original_result_passed": true,
+    "source_result_sha256": "00768cd9d9bb74f071d28fa5240ffe09331ee5773e51ff8fe14367f14ff8987e",
+    "all_frozen_source_members": 475,
+    "frozen_source_bytes_verified": true,
+    "journal_chain_verified_rows": 452,
+    "original_error": null,
+    "original_failure_stage": null,
+    "no_Runtime_Actor_Renderer_WM_or_physics_imports": true,
+    "task_success_not_inferred": true,
+    "model_input_allowed": false,
+    "training_allowed": false,
+    "checks": {
+      "episode_storage_complete": true,
+      "continuous_200Hz_commands": true,
+      "original4step_delay_FIFO_exact": true,
+      "raw_PD_reproduction": true,
+      "original_hard_clip": true,
+      "onboard_visual_previous_action": true,
+      "original10Hz_grid_complete": true,
+      "no_teardown_errors": true
+    },
+    "actual_commands": 448,
+    "original_onboard_frames": 23,
+    "max_raw_PD_error": 0.0,
+    "max_hard_clip_error": 0.0,
+    "original_capture_sample_events": 448,
+    "actual_assembly_events": [
+      {
+        "actual_capture": {
+          "actual_issued_steps": 448,
+          "kind": "actual_cold_start_supported_capture",
+          "model_input": false,
+          "no_NAV_arrival_claimed": true,
+          "no_PUSH_failure_claimed": true,
+          "support_ref": "ground",
+          "time_s": 2.2399999999999745
+        },
+        "connected_skills": [
+          "NAV",
+          "PUSH",
+          "CLIMB"
+        ],
+        "current_controller_constructed": false,
+        "event": "V4_actual_capture_to_original_execution_assembled",
+        "model_input": false,
+        "native_commands_issued": 0,
+        "static_deck_40cm_dynamic_box_NAV_or_task_ready": false,
+        "time_s": 2.2399999999999745
+      }
+    ]
+  }
+}

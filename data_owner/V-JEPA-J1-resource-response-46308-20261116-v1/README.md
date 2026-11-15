@@ -1,3 +1,9 @@
+# 原02:00有限CPU/下载窗口已到期（北京时间）
+
+2026-11-16 02:00截止已过，原窗口不自动延长。当前GPU/新CPU下载/真实数据fit授权均未新增；未来如需窗口按fresh资源协调，不重复索checkpoint许可或追加签字。Data未向任何J进程发信号，也不声称J已下载/启动。详见Data-J1-prior-window-expired-at0200.json。以下原窗口与收件是带时间的历史记录，不再是可用lease。
+
+---
+
 # J1机器入口已明确收件（2026-11-16T01:43:27.188665+08:00），不是cohort批准
 
 原JSON与更新detail SHA精确记录于 Data-J1-machine-request-received-not-cohort-approved.json。建议16 native attempts/16 main只作为待审上界；本组没有现成VJEPA_WM用途release，未注册新cohort、未派物理、未把bulk四geometry拆独立split。J组自己提取v2机载RGB/45D本体/K/T/原tick序列，当前目标关联缺证据保持UNKNOWN。

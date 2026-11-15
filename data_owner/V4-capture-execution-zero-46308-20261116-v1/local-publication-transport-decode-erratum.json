@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-16T02:14:28.661522+08:00",
+  "error": "Local wrapper used b64encode(str) where b64decode was intended; TypeError before first payload write",
+  "first_recovery_assertion_incorrectly_expected_result_filename_instead_of_actual_ledger_no_data_changed": true,
+  "empty_local_transport_file_archived": "/home/yuanyue/main/work/data-team/manifests/V4-capture-execution-zero-46308-20261116-v1/publication-transport-before-decode-fix/ledger.json.empty-from-failed-local-transport",
+  "remote_export_already_succeeded_once": true,
+  "recovered_only_from_original_saved_stdout": true,
+  "all_original_release_SHA_verified": true,
+  "remote_export_or_native_reruns": 0,
+  "original_source_result_and_streams_not_changed": true
+}

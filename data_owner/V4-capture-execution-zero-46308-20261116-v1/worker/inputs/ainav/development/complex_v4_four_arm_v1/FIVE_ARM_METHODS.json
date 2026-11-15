@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-15T23:00:46.985784+08:00",
+  "task": "T-COMPLEX-01-V4-FIVE-ARM",
+  "plan_sha256": "26b67d55d0d8d8a6312ac8e19ec85de50f3f753bc8e503aaef8fb0eed20a7e9d",
+  "arms": [
+    {
+      "id": "A",
+      "backbone": "VLM+WM",
+      "our_optimizer": false
+    },
+    {
+      "id": "B",
+      "backbone": "VLM+WM",
+      "our_optimizer": true
+    },
+    {
+      "id": "C",
+      "backbone": "AINav full VLM/tree/replanning",
+      "our_optimizer": false
+    },
+    {
+      "id": "D",
+      "backbone": "AINav full VLM/tree/replanning",
+      "our_optimizer": true
+    },
+    {
+      "id": "E",
+      "backbone": "fixed public-geometry engineering rules",
+      "our_optimizer": false
+    }
+  ],
+  "primary_contrasts": [
+    "B-A",
+    "D-C"
+  ],
+  "E_source": "rule_baseline.RuleBaseline",
+  "E_source_sha256": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
+  "E_prior": "scene-specific public initial-X/public-ref order, one declared approach if current association absent; then one-hop nominal goal distance at next declared support height",
+  "E_tie": "public_ref then target_ref",
+  "E_VLM_WM_optimizer_calls": 0,
+  "E_max_semantic_selections": 64,
+  "E_no_unknown_view_scan_or_failed_native_retry": true,
+  "E_not_private_existence_witness": true,
+  "first_pilot_main_per_arm": 1,
+  "first_pilot_main_total": 5,
+  "run_order": null,
+  "technical_caps_owner": "Data freezes before results",
+  "V4_same_world_terminal_driver_not_integrated": true,
+  "selected40cm_rise_not_supported": true,
+  "source_native_qualified": false,
+  "baseline_method_identity_or_native_admission_claimed": false,
+  "current_API_or_WM_calls": 0
+}
