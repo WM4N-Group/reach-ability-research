@@ -2,6 +2,18 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：有限单次CLIMB→NAV的factory／inner+outer guard／共同候选已同步接源（未native验证）
+
+不再只交独立adapter。`V4TaskFactory`现在在**选中NAV private ExecutionBatch**的短生命周期context内，从原成功CLIMB已登记的真实source observation＋原placement建立/缓存typed live witness；普通PUSH/CLIMB仍走原completed-witness路径。原NAV `_validate_option`仅source registry lookup一处精确可逆适配，原公共anchor/参数/height/4脚12N/goal-margin检查都在。selected constructor只为真实该类型调用其同次`nav_type`，普通ground/arrival/stow仍原constructor。assembly把原ActualPlacementEvidence交给factory，driver在真CLIMB receipt边界登记source，selected judge用相同registry/witness逻辑。
+
+**外层同步**：`execution_entry`仅对真正entered/installed原RegisteredNavMachine＋该exact typed NAV owner/registry/executor允许所选source对象feet contacts，仍原forbidden-body；不能只改inner guard放行。保存历史public→private native option的**精确对象绑定**，新query/新NAV constructor不能让旧CLIMB真实private hash消失；这是私有实发owner证据，不是把旧RGBD alias带入新public帧，current aliases仍每次重建，clone/value-equal option不冒原对象。
+
+五组共同目录新增**仅3个**事前固定box required top-centre NAV（声明几何，非live pose/正确路线）：当前30 intents=20 NAV/6 PUSH/4 CLIMB、27 anchors，PUBLIC_DECLARED_MAP/PUBLIC_EFFECTS已同源更新。只表示有限候选；选错当前support/缺源12N/关联/原required placement/typed owner仍拒绝，不开放任意连续XY／任意高度，也不添加.2平台PUSH。现接线仅**一次真CLIMB→NAV**，后续动态NAV/下一CLIMB source链与static/40cm、高台完整终点尚未接通，不能把本次接源称整链或原.2 NAV→PUSH缺口修复。
+
+同阶段纠正一个source probe语义：未来NAV goal未选定时，不能把“当前base XY”误当未来goal而额外强加.35/.3 goal-margin；未知goal只以私有矩形中心探针核该表面存在合法目标，真实base仍须在原source region、4脚/所选contact12N/足高等原条件。**真正选中的公共goal仍由原factory/constructor/arrival核原margin**，不降低原门、不把中心探针作为planner输入/控制目标或可行路线。
+
+新8项明确mock integration＋2个private old-owner/context新增回归，连受影响factory/driver/公共目录/entry/source/adapter共79项软件检查（同套两端，不是158试验）。初次旧“方法指针完全不override”静态assert失败保留：现在只为selected NAV包context，原Task completed-witness implementation本身未改；新增原路径delegation与新context清理检查，不用改安全expected遮掩。实际Runtime/Actor/physics/API/source-read/NAV尝试仍0；原19/25已closed组件不借zero或重开。
+
 > 同阶段source自审修正：构造完成／仍在旧CLIMB边界待装配，不等于新NAV已installed/entered。report现分native_NAV_constructed、constructor_pending_at_source_boundary与实际active_native_NAV_owner，后者核executor当前session/owner/skill/entered/时钟/非failed。原12项＋新增pending/active回归共13项；旧source481ee5c未实际运行，此修正不改任何物理结果。
 
 ## 2026-11-16：typed live CLIMB→原NAV adapter源（尚未装入factory/目录）

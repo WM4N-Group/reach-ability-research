@@ -41,7 +41,8 @@ class Tests(unittest.TestCase):
         for name in ('update','command','after_step','report','_sync_arrival'):
             self.assertIs(getattr(cls,name),getattr(original.RegisteredCompactNav,name))
         self.assertFalse(cls.source_receipt['actual_native_qualification'])
-        self.assertTrue(cls.source_receipt['not_installed_in_V4_factory_or_public_catalogue'])
+        self.assertFalse(cls.source_receipt['dispatch_authority_in_adapter_itself'])
+        self.assertTrue(cls.source_receipt['factory_outer_guard_and_public_domain_qualification_is_separate'])
     def test_no_observation_or_fake_capture_direct_NAV_constructor_shortcut(self):
         cls=c.nav_class(source_root=SOURCE,enabled=True)
         for fake in (NS(),ActualClimbNavSourceObservation.__new__(ActualClimbNavSourceObservation)):
@@ -123,5 +124,5 @@ class Tests(unittest.TestCase):
 
 if __name__=='__main__':
     r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
-    print(json.dumps(dict(role='CLIMB_TO_ORIGINAL_NAV_TYPED_ADAPTER_SOFTWARE_LIFECYCLE_NOT_NATIVE_OR_FULL_FACTORY_INTEGRATION',checks=r.testsRun,failures=len(r.failures),errors=len(r.errors),forbidden_attempts=blocked,actual_live_source_Runtime_NAV_Actor_physics_API_calls=0)))
+    print(json.dumps(dict(role='CLIMB_TO_ORIGINAL_NAV_TYPED_ADAPTER_SOFTWARE_LIFECYCLE_NOT_NATIVE_OR_FULL_TASK_QUALIFICATION',checks=r.testsRun,failures=len(r.failures),errors=len(r.errors),forbidden_attempts=blocked,actual_live_source_Runtime_NAV_Actor_physics_API_calls=0)))
     sys.exit(0 if r.wasSuccessful()and not blocked else 1)

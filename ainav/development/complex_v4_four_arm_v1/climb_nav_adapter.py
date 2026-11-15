@@ -1,6 +1,6 @@
 """Opt-in genuine CLIMB -> original compact NAV owner adapter, source candidate.
 
-NOT installed into the V4 factory/catalogue yet, NOT physically qualified.
+Connected by the V4 selected factory; still NOT physically qualified.
 A same-tick observation alone is not accepted as a NAV witness: construct a
 new typed live source from the real CLIMB and retained original placement.
 During gait use the actually installed NAV owner, not the expired CLIMB pose.
@@ -178,7 +178,7 @@ class LiveClimbNavSourceWitness:
                 contacts.append((int(contact.geom1),int(contact.geom2),[float(v)for v in contact.frame[:3]],float(force[0])))
             loads=deck_normal_loads(mapping,gid,contacts)
             status=source_readiness(surface,feet=p.data.xpos[feet].tolist(),total_vertical_load_N=p.forces[feet,2].tolist(),
-                selected_contact_normal_N=loads,base_xy=goal)
+                selected_contact_normal_N=loads,base_xy=p.data.qpos[:2].tolist(),goal_xy=goal)
             require(status['necessary_source_ready'],'Actual stopped NAV arrival must retain four-foot12N on this selected object')
         require(world_snapshot(self.r)==before,'Live support check changed actual world/FIFO')
 
@@ -235,7 +235,8 @@ def nav_class(*,source_root=None,enabled=False):
         narrow_type_and_entered_contact_source_delta_exactly_invertible=True,
         original_actor_update_command_after_step_arrival_unchanged=True,
         active_gait_not_subject_to_false_continuous_four_foot12N=True,
-        actual_native_qualification=False,not_installed_in_V4_factory_or_public_catalogue=True)
+        actual_native_qualification=False,dispatch_authority_in_adapter_itself=False,
+        factory_outer_guard_and_public_domain_qualification_is_separate=True)
     return ClimbSupportedOriginalNav
 
 

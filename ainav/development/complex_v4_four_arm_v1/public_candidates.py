@@ -19,6 +19,12 @@ def declarations(scene):
     for obj in scene['objects']:
         for x in [obj['initial_xy_m'][0],*obj['allowed_placement_x_m']]:add((x-obj['size_m'][0]/2-.58,obj['initial_xy_m'][1]))
     rows=[dict(skill='NAV',target_ref='v4-ground-nav-%03d'%i,parameters=dict(goal_world_x_m=xy[0],goal_world_y_m=xy[1],surface_height_m=0.))for i,xy in enumerate(ground)]
+    # One finite nominal top-centre NAV per object, shared by all arms. This
+    # declares no current support or arbitrary continuous/elevated NAV domain.
+    for obj in scene['objects']:
+        rows.append(dict(skill='NAV',target_ref='v4-box-top-'+obj['public_ref'],parameters=dict(
+            goal_world_x_m=obj['required_goal_xy_m'][0],goal_world_y_m=obj['required_goal_xy_m'][1],
+            surface_height_m=obj['size_m'][2])))
     for obj in scene['objects']:
         for x in obj['allowed_placement_x_m']:
             rows.append(dict(skill='PUSH',target_ref=obj['public_ref'],parameters=dict(goal_world_x_m=x,goal_world_y_m=obj['initial_xy_m'][1],surface_height_m=0.)))

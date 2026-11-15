@@ -85,7 +85,8 @@ class Tests(unittest.TestCase):
         self.host.entity_by_public={'cuboid_a':'SOFTWARE-opaque'}
         self.host.registry=NS(surfaces={'ground':NS(bounds_xy_m=(-20.,20.,-10.,10.),top_z_m=0.)})
         witness=NS(support_ref=source,validate=lambda runtime:True)
-        self.host.factory=NS(_current_completed_witness=lambda:witness,
+        self.host.factory=NS(_current_completed_witness=lambda:witness,witness_for_skill=lambda skill:witness,
+            registry_for_witness=lambda witness:self.host.registry,
             prepare_public_climb=lambda outer,inner:self.prepared.append(('CLIMB',outer,inner)),
             prepare_private_entry_nav=lambda option,judgment:self.prepared.append(('PREPARE',option,judgment)))
         data=NS(time=1.,qpos=[x,0.],xmat=Matrix(),xpos=Feet())

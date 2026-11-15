@@ -92,7 +92,7 @@ class Tests(unittest.TestCase):
 
     def test_MRO_preserves_original_owner_and_construct_methods(self):
         self.assertIn(RegisteredTaskSessionFactory, self.cls.__mro__)
-        self.assertIs(self.cls._current_completed_witness, RegisteredTaskSessionFactory._current_completed_witness)
+        self.assertIs(self.cls.original_completed_witness_implementation, RegisteredTaskSessionFactory._current_completed_witness)
         self.assertIs(self.cls.destination_adapter_class.construct, RegisteredClimbAdapter.construct)
         self.assertEqual(self.cls.connected_skills, ('NAV','PUSH','CLIMB'))
 
@@ -184,6 +184,30 @@ class Tests(unittest.TestCase):
         self.assertTrue(self.factory._construction_failed)
         self.fail_construct = False
         with self.assertRaises(ValueError): self.factory(self.outer)
+
+    def test_old_actual_private_CLIMB_identity_survives_new_query_and_constructor(self):
+        self.bind()
+        self.factory.begin_acquisition(self.obs)
+        nav = BehaviorOption('SOFTWARE-next-NAV','NAV',self.outer.target_ref,
+            (('goal_world_x_m',0.),('goal_world_y_m',0.),('surface_height_m',0.)),60.,'SOFTWARE')
+        self.factory._validate_option=lambda option,observation,witness:(0.,0.)
+        self.factory.bind_batch(ExecutionBatch('SOFTWARE-next-query',self.obs,(nav,),self.cap))
+        self.assertIs(self.factory.native_option_for(self.outer),self.inner)
+        self.factory._constructing_outer=nav;self.factory._constructing_inner=nav
+        self.assertIs(self.factory.native_option_for(self.outer),self.inner)
+        self.assertIs(self.factory.native_option_for(nav),nav)
+        self.assertIsNot(self.factory.native_option_for(replace(self.outer)),self.inner)
+
+    def test_only_selected_NAV_binding_context_wraps_original_completed_witness(self):
+        from unittest.mock import patch
+        with patch.object(RegisteredTaskSessionFactory,'_current_completed_witness',lambda owner:'SOFTWARE-original-owner'):
+            self.factory._binding_skill=None
+            self.assertEqual(self.cls._current_completed_witness(self.factory),'SOFTWARE-original-owner')
+            self.factory._binding_skill='PUSH'
+            self.assertEqual(self.cls._current_completed_witness(self.factory),'SOFTWARE-original-owner')
+            self.factory.witness_for_skill=lambda skill:'SOFTWARE-selected-'+skill
+            self.factory._binding_skill='NAV'
+            self.assertEqual(self.cls._current_completed_witness(self.factory),'SOFTWARE-selected-NAV')
 
     def test_wrong_selected_copy_or_changed_world_cannot_construct(self):
         self.bind()

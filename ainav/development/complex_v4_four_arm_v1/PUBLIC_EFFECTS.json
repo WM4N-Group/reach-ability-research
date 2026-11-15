@@ -274,6 +274,57 @@
       "requires_actual_arrival_and_stow": true
     },
     {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.6,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 7.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.6,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.2
+      },
+      "actual_native_admission": false,
+      "actual_exit_pose": null,
+      "complete_successor_cost_s": null,
+      "success_probability": null,
+      "declared_effect": "same-support NAV reference only",
+      "source_height_m": "CURRENT_VERIFIED_SUPPORT_REQUIRED",
+      "destination_height_m": 0.2,
+      "requires_actual_arrival_and_stow": true
+    },
+    {
       "skill": "PUSH",
       "target_ref": "cuboid_a",
       "parameters": {

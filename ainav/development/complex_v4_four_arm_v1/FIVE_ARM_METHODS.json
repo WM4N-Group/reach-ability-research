@@ -53,5 +53,9 @@
   "legacy_common_stow_H_enabled_for_all_five_arms": true,
   "legacy_H_actual_attempts_and_costs_not_new_successor_factor": true,
   "factor_policy": "PREPARATION_FACTOR_POLICY.json",
-  "E_literal_zero_all_legacy_kernels_not_claimed": true
+  "E_literal_zero_all_legacy_kernels_not_claimed": true,
+  "shared_public_intents_current_count": 30,
+  "shared_public_anchors_current_count": 27,
+  "bounded_box_top_NAV_nominal_candidates_shared_all5": 3,
+  "new_candidate_not_native_admission_or_continuous_domain": true
 }

@@ -48,8 +48,9 @@ def _current_contact_owners(owners, runtime, registry, climb_type):
     """Private contact authority comes ONLY from the installed original session.
 
     Selecting/declaring CLIMB or simply seeing a box never admits its contacts.
-    This does NOT authorize subsequent NAV on a dynamic box; that owner transfer
-    still needs its own implementation. Original forbidden-body policy remains.
+    The NAV branch accepts only the actually entered typed CLIMB-source NAV;
+    a new selection/observation alone never grants that permission. Original
+    forbidden-body policy remains and broader continuations are not admitted.
     """
     executor = owners.get('executor')
     if executor is None or executor.option is None:
@@ -65,6 +66,18 @@ def _current_contact_owners(owners, runtime, registry, climb_type):
         matches = [o.ref for o in registry.objects.values() if o.body_name == binding.target.body_name]
         require(len(matches) == 1, 'One actual selected original PUSH body')
         return matches[0], frozenset()
+    if option.skill == 'NAV' and session is not None:
+        from ainav.native.registered_nav_factory import RegisteredNavMachine
+        from climb_nav_adapter import LiveClimbNavSourceWitness
+        if isinstance(session.machine, RegisteredNavMachine):
+            nav = session.machine.native_nav
+            witness = getattr(nav, 'capture_witness', None)
+            if type(witness) is LiveClimbNavSourceWitness:
+                require(session.runtime is runtime and session.entered and nav.r is runtime
+                        and witness.executor is executor and witness.original_registry is registry
+                        and witness.nav_owner is nav and type(nav) is witness.nav_type,
+                        'Outer contact authority requires this actual entered typed source NAV')
+                return None, witness.entered_objects(runtime)
     if option.skill != 'CLIMB':
         return None, frozenset()
     require(session is not None and session.runtime is runtime and session.entered
@@ -149,12 +162,15 @@ def build_after_actual_capture(components=None, *, source_root=None, bundle=None
     evidence_module = importlib.import_module('terminal_stop')
     require(Path(evidence_module.__file__).resolve() == evidence_path, 'No ambient terminal module')
     placements = evidence_module.ActualPlacementEvidence(runtime, registry, components['scene'])
+    factory.actual_placements = placements
     require(api.world_snapshot(runtime) == before, 'Execution assembly changed actual physical world/FIFO')
     journal(dict(event='V4_actual_capture_to_original_execution_assembled',
                  time_s=float(runtime.sim.data.time), actual_capture=witness.report(),
                  connected_skills=list(factory.connected_skills),
                  current_controller_constructed=False, native_commands_issued=0,
-                 static_deck_40cm_dynamic_box_NAV_or_task_ready=False, model_input=False))
+                 bounded_CLIMB_NAV_source_wiring_present=True,
+                 native_CLIMB_NAV_or_full_task_qualification=False,
+                 static_deck_40cm_or_task_ready=False, model_input=False))
     return dict(factory=factory, executor=executor, resolver=resolver, initial_witness=witness,
                 placement_catalogue=contracts, placements=placements, guards=guards,
                 source_provenance=pins, world_steps_issued=0, actual_dynamic_qualification=False,

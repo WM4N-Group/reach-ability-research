@@ -29,7 +29,7 @@ def support_reference(object_ref, existing_refs):
     return ref
 
 
-def source_readiness(surface, *, feet, total_vertical_load_N, selected_contact_normal_N, base_xy):
+def source_readiness(surface, *, feet, total_vertical_load_N, selected_contact_normal_N, base_xy, goal_xy=None):
     """Original NAV support predicate plus REAL selected-object normal loads.
 
     Pure scalars alone never establish provenance or native admission. A fresh
@@ -37,8 +37,16 @@ def source_readiness(surface, *, feet, total_vertical_load_N, selected_contact_n
     """
     from ainav.native.registered_compact_nav import validate_support_and_goal
     reasons = []
+    x0,x1,y0,y1=surface.bounds_xy_m
+    require(len(base_xy)==2 and all(type(v)in(int,float)and math.isfinite(v)for v in base_xy), 'Actual finite current base XY')
+    if not (x0<base_xy[0]<x1 and y0<base_xy[1]<y1):
+        reasons.append('ORIGINAL_NAV_BASE_OUTSIDE_CURRENT_SUPPORT_REGION')
+    # Unknown future goal is NOT current base XY. Use a private geometric
+    # centre solely to test this rectangle can admit any original goal margin.
+    # The selected public goal is still checked by the original factory/ctor.
+    checked_goal=((x0+x1)/2,(y0+y1)/2)if goal_xy is None else goal_xy
     try:
-        validate_support_and_goal(surface, feet, total_vertical_load_N, base_xy)
+        validate_support_and_goal(surface, feet, total_vertical_load_N, checked_goal)
     except ValueError:
         reasons.append('ORIGINAL_NAV_FOUR_FOOT_12N_HEIGHT_FOOTPRINT_OR_GOAL_MARGIN_NOT_READY')
     require(len(selected_contact_normal_N) == 4 and all(type(v) in (int, float)
@@ -47,7 +55,7 @@ def source_readiness(surface, *, feet, total_vertical_load_N, selected_contact_n
     if min(selected_contact_normal_N) < 12.:
         reasons.append('FOUR_FEET_NOT_EACH_12N_ON_ACTUAL_SELECTED_CLIMB_OBJECT')
     return dict(necessary_source_ready=not reasons, reasons=reasons,
-                native_NAV_admitted=False, actual_next_NAV_goal_not_selected=True)
+                native_NAV_admitted=False, actual_next_NAV_goal_not_selected=goal_xy is None)
 
 
 def issued_history_gate(*, time_s, tick, first_command_time_s, previous_tick,

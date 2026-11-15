@@ -59,7 +59,9 @@ class Tests(unittest.TestCase):
         loads=c.deck_normal_loads({10:0,11:1,12:2,13:3},20,[(20,g,[1.,0.,0.],52.)for g in range(10,14)])
         self.assertEqual(loads,[0.]*4);self.assertFalse(self.sample(selected_contact_normal_N=loads)['necessary_source_ready'])
     def test_original_support_footprint_and_NAV_goal_margin_still_apply(self):
-        self.assertFalse(self.sample(base_xy=[.1,0.])['necessary_source_ready'])
+        self.assertTrue(self.sample(base_xy=[.1,0.])['necessary_source_ready'])  # Base is not the unselected future goal.
+        self.assertFalse(self.sample(base_xy=[.1,0.],goal_xy=[.1,0.])['necessary_source_ready'])
+        self.assertFalse(self.sample(base_xy=[-.1,0.])['necessary_source_ready'])
         feet=[*self.feet[:3],[2.5,.15,.222]]
         self.assertFalse(self.sample(feet=feet)['necessary_source_ready'])
     def test_bad_contact_scalars_not_silently_masked_or_filled(self):

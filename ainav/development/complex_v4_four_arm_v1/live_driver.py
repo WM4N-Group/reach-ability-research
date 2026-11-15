@@ -168,6 +168,7 @@ def driver_class(*, source_root=None, enabled=False):
                                 executor=driver.executor, registry=driver.registry, native_witness=witness,
                                 source_root=driver.source_root, guard=driver.owner_guard, journal=driver.journal, enabled=True)
                             driver.actual_climb_nav_sources.append(source)
+                            driver.factory.register_climb_nav_source(source)
                             # NOT_READY only describes the next source; never rewrite
                             # this original succeeded CLIMB receipt as native failure.
                     return super().observe(option, receipt)
@@ -226,11 +227,12 @@ def driver_class(*, source_root=None, enabled=False):
             params, p = dict(intent.parameters), self.r.sim
             try:
                 exact_declared_intent(self.scene, intent)
-                witness = self.factory._current_completed_witness()
+                witness = self.factory.witness_for_skill(intent.skill)
                 witness.validate(self.r)
-                require(witness.support_ref in self.registry.surfaces,
+                source_registry = self.factory.registry_for_witness(witness)
+                require(witness.support_ref in source_registry.surfaces,
                         'Dynamic-box post-CLIMB source support/owner NAV bridge not yet admitted')
-                surface = self.registry.surfaces[witness.support_ref]
+                surface = source_registry.surfaces[witness.support_ref]
                 if intent.skill == 'NAV':
                     require(params['surface_height_m'] == surface.top_z_m, 'NAV cannot change actual source support layer')
                     proof = self.journal(dict(event='V4_selected_NAV_entry_ready', time_s=now,
