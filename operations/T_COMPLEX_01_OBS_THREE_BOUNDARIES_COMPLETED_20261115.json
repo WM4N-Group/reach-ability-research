@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-15T22:16:35.149752+08:00",
+  "role": "CLOSED_FIXED_THREE_VIEW_OBSERVABILITY_ONLY_NOT_PUSH_OR_TASK_CERTIFICATE",
+  "result_sha256": "a2252439e9e6352163404ce7861b83ecde1b29953ae2f2fb6f92784b01080ce8",
+  "program_sha256": "9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad",
+  "source_commit": "c3c695b5fa10daa826e85fcad04dd737b4810bc5",
+  "status": "OBSERVATION_STUDY_COMPLETE_NOT_TASK_SUCCESS",
+  "qualification_complete": true,
+  "visible_in_any_fixed_view": true,
+  "actual_public_boundaries": [
+    {
+      "boundary": "initial_after_actual_supported_capture",
+      "time_s": 2.2399999999999745,
+      "semantic_observation_sha256": "ff5a166f5c1f4802ba9ae3f6a397c03ae08a937fb9613a02b19d71ba11840988",
+      "original_query_file": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0001.json",
+      "original_query_file_sha256": "394eadbad5d553ab9a497a2982641ba95415d0c99342218643e69c21d68541b3",
+      "RGB_sha256": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+      "accepted_aliases": []
+    },
+    {
+      "boundary": "after_original_left_NAV",
+      "time_s": 14.815000000000916,
+      "semantic_observation_sha256": "d6f32f9fb5298c5edeb938c9d50549c3660e1d7a1b56760074f0e2117029d75b",
+      "original_query_file": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0002.json",
+      "original_query_file_sha256": "b92a18b7329383fc13c2136256027946797f9002735781c0f5e3d77666e19b6c",
+      "RGB_sha256": "22587ae736bde49d42e8605c870bd4db9c1c3f0a6b32570e0ff414a35b81ec12",
+      "accepted_aliases": [
+        "cuboid_a"
+      ]
+    },
+    {
+      "boundary": "after_original_right_NAV",
+      "time_s": 27.51499999999881,
+      "semantic_observation_sha256": "27ce21660ed62a12e3e6431fbcbd8345f3ef62919e30a73562015e3120ca5216",
+      "original_query_file": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0003.json",
+      "original_query_file_sha256": "a64a24b25f6215ec42af46cfa9c54bed0e95a364379b97e402a6f5e66760a965",
+      "RGB_sha256": "2aa77f62e55fe8d42f90dc6908827c16ddabb21bc6ddb9879c0ea3d66d64010a",
+      "accepted_aliases": []
+    }
+  ],
+  "original_NAV_successes": [
+    {
+      "side": "left",
+      "native_option_sha256": "2ee7dd18e62680fd8a5ab9c667350bec8f9392dacf13d307eb9ee7f09fb6d3e1",
+      "original_succeeded_receipt": {
+        "evidence_ref": "commands:physical_tick=2963",
+        "issued_command_sha256": "2a167227274c56cf472fbd4c437ba339d95089270d811a66cc9bee9f59c07763",
+        "option_sha256": "2ee7dd18e62680fd8a5ab9c667350bec8f9392dacf13d307eb9ee7f09fb6d3e1",
+        "status": "succeeded",
+        "time_s": 14.815000000000916
+      }
+    },
+    {
+      "side": "right",
+      "native_option_sha256": "c12eac40214853cc27731ba288c939d0633836c0bd5f7930a4911ace8daa2a34",
+      "original_succeeded_receipt": {
+        "evidence_ref": "commands:physical_tick=5503",
+        "issued_command_sha256": "87f38863566b4c60cb1052896a771d6783edd6a6a28cb0b275b85feaeb98de64",
+        "option_sha256": "c12eac40214853cc27731ba288c939d0633836c0bd5f7930a4911ace8daa2a34",
+        "status": "succeeded",
+        "time_s": 27.51499999999881
+      }
+    }
+  ],
+  "complete_journal_chain": {
+    "rows": 1058,
+    "last_sha256": "c3e0e381351695fd18e98768cbac688425793c7848e34123ff335986e8664222",
+    "journal_file_sha256": "8137e26a0d7ff1741415d9cdccbc97f35e367ef13d53c328cdc4263e33140b76",
+    "valid": true
+  },
+  "prior_1052row_journal_prefix_retained_verbatim": true,
+  "task_world_sim_s": 27.51499999999881,
+  "physical_commands": 5503,
+  "original_visual_frames": 276,
+  "scope_including_own_zero_aux_sim_s": 40.52499999999858,
+  "scope_ledger_wall_s": 10266.018950355006,
+  "scope_output_highwater_bytes": 245208182,
+  "all_usage_known": true,
+  "actor_and_original_safety_unchanged": true,
+  "Data_cold_or_full_program_members_independently_recomputed_by_Reach": false,
+  "source_pins": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-observability-study-46308-20261115-v1/OBS/program-freeze.json": "9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/T-COMPLEX-observability-study-46308-20261115-v1/protocol.json": "691e9dfacd7444dfc6d166c00553e105eaea924f9aae74fd69f3a64240c84eb8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/result.json": "a2252439e9e6352163404ce7861b83ecde1b29953ae2f2fb6f92784b01080ce8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/accounting/ledger.json": "7c682738beb1ea608056fa3e555eb757398f89bc9a7cb987a6b612f85327cab2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/zero/result.json": "2136ddd7767f1026c2da33e97568f67ecd546ec8f81a1c3320860befee188d97",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/contracts.py": "7d995f5a1dcb7135e1ca16d36e391a511bb8c8cefa0aeafd27430eba0932a669",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/events.jsonl": "8137e26a0d7ff1741415d9cdccbc97f35e367ef13d53c328cdc4263e33140b76",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0001.json": "394eadbad5d553ab9a497a2982641ba95415d0c99342218643e69c21d68541b3",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0002.json": "b92a18b7329383fc13c2136256027946797f9002735781c0f5e3d77666e19b6c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0003.json": "a64a24b25f6215ec42af46cfa9c54bed0e95a364379b97e402a6f5e66760a965",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/query-observations/frame-000001/rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/query-observations/frame-000002/rgb.png": "22587ae736bde49d42e8605c870bd4db9c1c3f0a6b32570e0ff414a35b81ec12",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/query-observations/frame-000003/rgb.png": "2aa77f62e55fe8d42f90dc6908827c16ddabb21bc6ddb9879c0ea3d66d64010a"
+  },
+  "task_success": false,
+  "AB_comparison": false,
+  "PUSH_READY_or_PUSHexecuted_or_joint_plan_certified": false,
+  "three_view_all_invisible_NoGo": false,
+  "right_empty_does_not_negate_actual_left_visibility": true,
+  "left_alias_not_current_at_final_right_boundary": true,
+  "private_pose_or_GT_or_proposer_used_by_Reach": false,
+  "source_or_caps_or_H_changed": false,
+  "new_physics_fit_predictions_or_dispatch": 0,
+  "actual_remote_record_reader_snapshot_sha256": "c31764032b9b5517e653d659164f946dec49fcb7b90664bc33f01e41e8618ef3",
+  "Data_nine_stream_cold_report_consumed": {
+    "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-observability-study-46308-20261115-v1/OBS/actual-main-cold-audit-v2.json",
+    "sha256": "6907bb1cf2e8b484ed58eadb9d45dd50f4ea7245f00015ba7b1b244523190dce",
+    "all_nine_checks": true,
+    "direct_HD_frames": 276,
+    "resolution_px": [
+      960,
+      540
+    ],
+    "independent_Reach_NPZ_PD_or_pixel_recompute": false
+  },
+  "authority_closure_snapshot": {
+    "at": "2026-11-15T22:17:43.673428+08:00",
+    "main_process_exited_and_phase_ledger_closed": true,
+    "scope_H_still_active": true,
+    "Data_final_CAS_release_pending": true,
+    "scope_closed_not_claimed": true
+  }
+}

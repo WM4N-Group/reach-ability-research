@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前固定观测测量main完成（2026-11-15 22:19）
+
+两原NAV/三fresh view已完整完成：center空→left接受cuboid_a→right空，27.515main sim/5503命令；本组独立核1058行全链及三query/两个原成功receipt，消费Data九流cold。phase已closed/PID退出但22:17 scope H仍待owner CAS；不是PUSH READY、完整任务或规划收益，left历史alias不能缓存到right终点。新共同固定观测prefix必须两方法共享费用并receipt绑定准备后的nominal start，不能沿用center；具体增量接口见operations/T_COMPLEX_01_OBS_COMPLETE_AND_NEXT_CN.md，旧实验不重启。
+
 ## 当前T观测必要条件阳性（2026-11-15 21:54）
 
 原固定left NAV成功后的14.815sim fresh public query，原RGBD门真实接受cuboid_a；本组独立核原query/图像SHA/label与native receipt/1052行日志前缀。仍2/3边界、right在途，不能称PUSH READY或完整任务/规划收益，不挑最好帧或缓存旧alias；原A/B继续closed。见operations/T_COMPLEX_01_OBSERVABILITY_NEXT_BOUNDARY_CN.md。

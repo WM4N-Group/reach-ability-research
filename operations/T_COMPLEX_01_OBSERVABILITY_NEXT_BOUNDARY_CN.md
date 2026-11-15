@@ -1,5 +1,13 @@
 # 当前source边界：A正式负结果已闭合；B按旧freeze继续，独立两NAV观测研究不是A/B修复
 
+## 2026-11-15 22:19：固定两NAV/三view main已完成，空→A可见→空；新共享观测准备接线需求已明确，无任务收益
+
+- **固定三view测量main真实完成，不再写right在途/仅2/3：** 原OBS result a2252439…/program9fdd2076… status OBSERVATION_STUDY_COMPLETE_NOT_TASK_SUCCESS，qualification_complete=true、task_success/AB_comparison=false。完整三边界为2.240sim center aliases=[]→14.815 left[cuboid_a]→27.515 right[]；两个原NAV succeeded分别tick2963/5503，0PUSH/0placement/0研究bundle。不是三view全不可见No-Go，也不是PUSH READY/完整任务或前瞻优势。
+- **独立终态消费与费用：** 本组直接原root核1058行完整原journal链8137e26a…、保此前1052行前缀逐byte；三actual public query各按原Observation语义SHA精确绑定，原RGB SHA/one-to-one标签及两个NAV option/params/字面成功receipt同钟。主世界27.515sim/5503命令，276原RGBD/review/direct960×540 HD帧；scope含zero/双aux40.525sim/10266.018950355ledger wall/245208182bytes高水位，全known、main phase closed、PID已退出。Data九流cold-v2 6907bb1c…全过，本组核SHA消费报告，不冒NPZ/PD/pixel重算。22:17权威H仍active等待owner CAS，**phase完成不等scope已closed/设备可分配**，不替Data改H/锁/队列；正式完整release/编码片尚未消费。
+- **后续准备优化接口已明确而不是延长旧pair：** source owner可在新共享DEV源研究两方法共同的固定capture→原left NAV→fresh query前缀，完整记录动作/观测/sim/wall费用，不挑最好view或给B额外信息。当前终点right aliases=[]，left阳性不是当前alias，不能缓存旧观测/静态pose给下一PUSH。下一版本若在left成功后启动方法，必须原receipt＋fresh query绑定共同nominal reference(-.08,+.15)，不能沿用本组当前hardcoded center(-.08,0)偷偷算路径/代价；reference非私有实际base pose/精确tracking证明。两方法同catalog/原native gate/4-256-.25预算，每后继都原fresh acquisition，未来source接口到后增量接线，不恢复旧program。
+- **资格/对照仍不越界：** 单view可见仅必要条件；当前nominal catalog不等当前native合法候选，共同动态可行完整计划/三有效选择仍待源证据，隔离存在性路线不喂在线方法。本文不新派第三对/lease/次数，也不增设Reach签字门，source/Data可按现流程直接推进新版本资格。原A首视觉拒绝/B4800wall资源censor及原片/费用保持closed；OBS用途不进入critic TRAIN/CAL/VAL。总计划仍b2fb786e…/T优先，bulk24原24有限滚动、原fit3371ac20…/model a8b1f165…/CAL07仅1/3未评分保持。
+- **产物/保存：** 新解释与具体接线需求`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_OBS_COMPLETE_AND_NEXT_CN.md`、无数组终态摘要`T_COMPLEX_01_OBS_THREE_BOUNDARIES_COMPLETED_20261115.json`。本轮只读CPU消费/本组代码文档，不创建新native/fit/预测、未改他组源码/H/锁/进程/自动化；原dirty/index/actor/12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop均保，大数组/视频/权重不回本地或Git。
+
 ## 2026-11-15 21:54：T原left NAV后cuboid_a当前关联接受，必要观测条件阳性；仍2/3、无PUSH或任务资格
 
 - **T固定left观测有实际必要条件阳性，仍仅2/3：** 本组21:52直接读46308原OBS记录：同9fdd2076…新program，初始2.240sim的aliases=[]完整保留；原NAV(-.08,+.15,0)真实succeeded（native option2ee7dd18…、physical_tick2963/time14.815）后，fresh public query d6f32f9f…的原RGB22587ae7…中，原matcher接受cuboid_a。本组用原Observation纯contract按语义SHA精确找该actual query、核RGB文件SHA及原one-to-one label，再核同原NAV binding/字面成功receipt；未重跑proposer/读GT/静态pose替换/改阈值。1052行只读journal完整前缀独立验链/保append-only，不冒闭合终态。
