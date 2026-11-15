@@ -1,0 +1,584 @@
+{
+  "schema": "Data-fixed-new-purpose-12-root-acquisition-schedule-v1",
+  "protocol_file_sha256": "2f82530d1f880892c631c7b62cc79bfbd72d57e1b369faf99f542d02d4a53eda",
+  "new_main_upper_bound": 12,
+  "per_root_main": 1,
+  "conditions": [
+    {
+      "ordinal": 1,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__original",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-01-full4-left-original-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_01_full4_left_original",
+      "layout_id": "full-4",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.85,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__original",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-02-full4-right-original-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_02_full4_right_original",
+      "layout_id": "full-4",
+      "prefix_side": "right",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:right",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.15,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__lateral_plus_0p04",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-03-full4-left-lateral_plus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_03_full4_left_lateral_plus_0p04",
+      "layout_id": "full-4",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.85,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__lateral_plus_0p04",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-04-full4-right-lateral_plus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_04_full4_right_lateral_plus_0p04",
+      "layout_id": "full-4",
+      "prefix_side": "right",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:right",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.15,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__lateral_minus_0p04",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-05-full4-left-lateral_minus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_05_full4_left_lateral_minus_0p04",
+      "layout_id": "full-4",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.85,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__lateral_minus_0p04",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-06-full4-right-lateral_minus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_06_full4_right_lateral_minus_0p04",
+      "layout_id": "full-4",
+      "prefix_side": "right",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:right",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.15,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__original",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-07-full1-left-original-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_07_full1_left_original",
+      "layout_id": "full-1",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.6500000000000001,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.8,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__lateral_plus_0p04",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-08-full1-left-lateral_plus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_08_full1_left_lateral_plus_0p04",
+      "layout_id": "full-1",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.6500000000000001,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.8,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 9,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__lateral_minus_0p04",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-09-full1-left-lateral_minus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_09_full1_left_lateral_minus_0p04",
+      "layout_id": "full-1",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.6500000000000001,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.8,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 10,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__original",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-10-full2-left-original-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_10_full2_left_original",
+      "layout_id": "full-2",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.75,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.9,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 11,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__lateral_plus_0p04",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-11-full2-left-lateral_plus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_11_full2_left_lateral_plus_0p04",
+      "layout_id": "full-2",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.75,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.9,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 12,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__lateral_minus_0p04",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": "data-46308-new-critic-12-full2-left-lateral_minus_0p04-20261115-v1",
+      "physical_program_sha256": null,
+      "condition_id": "new_critic_12_full2_left_lateral_minus_0p04",
+      "layout_id": "full-2",
+      "prefix_side": "left",
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.75,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.9,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    }
+  ]
+}

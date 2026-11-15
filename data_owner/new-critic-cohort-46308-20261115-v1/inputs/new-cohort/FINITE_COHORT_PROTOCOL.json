@@ -1,0 +1,911 @@
+{
+  "schema": "Reach-prospective-G2-finite-conditional-critic-cohort-v1",
+  "registered_at": "2026-11-15T12:41:40.776299+08:00",
+  "data_purpose": "NEW_PREREGISTERED_HIGH_LEVEL_SUCCESSOR_CRITIC",
+  "registration_state": "FINITE_COLLECTION_REQUEST_SOURCE_FREEZE_BY_DATA_NOT_DISPATCH",
+  "authorization_path": "/home/yuanyue/reach-ability-research/protocols/2026-11-14/high-level-critic/USER_AUTHORIZATION.json",
+  "authorization_sha256": "4dab4c18d041b228ebbcd77f241cb6003788a48f48f3be602e0b4546fae043e4",
+  "source_inventory_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-G2-46308-REGISTERED-SCENE-SOURCE-HANDOFF-20261115-v1/release.json",
+  "source_inventory_release_sha256": "01e2571a3e5a5ca3244264f9de8219fe6c19518c5176442d728ee067ce7de240",
+  "source_inventory_sha256": "ce3c6a9ea48e7dbc19bb9e87db377ad9440174f56c60a3e820173e024ff1c886",
+  "hypothesis": "At FIRST_ORIGINAL_CLIMB_PREPARE, candidate action offsets plus current public45D contain descriptive information about original READY time and complete requested CLIMB outcome/time beyond TRAIN-only constant/mean baselines. No claim about curing upstream PUSH failures.",
+  "task_family": "Original ground PUSH -> finite preparation -> complete 20cm CLIMB, fixed original success/stop gates",
+  "prediction_decision": "FIRST_ORIGINAL_CLIMB_PREPARE_ONLY",
+  "decision_horizon": {
+    "start": "Original first CLIMB PREPARE judgment public observation, before candidate NAV/controller execution",
+    "current_end": "Original verified READY for this CLIMB",
+    "success_end": "Original requested CLIMB literal succeeded with original stop gates, not far-bank whole task",
+    "main_sim_watchdog_s": 240.0,
+    "unreached": "NO_INPUT_NO_SUCCESSOR_LABEL; retain attempt outcome, literal traceback/receipts, all spending"
+  },
+  "feature_profile": {
+    "names": [
+      "candidate_reference_offset_x",
+      "candidate_reference_offset_y",
+      "public_q_0",
+      "public_q_1",
+      "public_q_2",
+      "public_q_3",
+      "public_q_4",
+      "public_q_5",
+      "public_q_6",
+      "public_q_7",
+      "public_q_8",
+      "public_q_9",
+      "public_q_10",
+      "public_q_11",
+      "public_q_12",
+      "public_q_13",
+      "public_q_14",
+      "public_q_15",
+      "public_q_16",
+      "public_q_17",
+      "public_dq_0",
+      "public_dq_1",
+      "public_dq_2",
+      "public_dq_3",
+      "public_dq_4",
+      "public_dq_5",
+      "public_dq_6",
+      "public_dq_7",
+      "public_dq_8",
+      "public_dq_9",
+      "public_dq_10",
+      "public_dq_11",
+      "public_dq_12",
+      "public_dq_13",
+      "public_dq_14",
+      "public_dq_15",
+      "public_dq_16",
+      "public_dq_17",
+      "public_gravity_0",
+      "public_gravity_1",
+      "public_gravity_2",
+      "public_angular_velocity_0",
+      "public_angular_velocity_1",
+      "public_angular_velocity_2",
+      "public_linear_velocity_0",
+      "public_linear_velocity_1",
+      "public_linear_velocity_2",
+      "measurement_age"
+    ],
+    "units": [
+      "m",
+      "m",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "1",
+      "1",
+      "1",
+      "rad/s",
+      "rad/s",
+      "rad/s",
+      "m/s",
+      "m/s",
+      "m/s",
+      "s"
+    ],
+    "frames": [
+      "WORLD_REGISTERED_REFERENCE",
+      "WORLD_REGISTERED_REFERENCE",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "JOINT_ORDER_AS_ORIGINAL_PUBLIC_PACKET",
+      "BODY_PROJECTED_GRAVITY",
+      "BODY_PROJECTED_GRAVITY",
+      "BODY_PROJECTED_GRAVITY",
+      "BODY",
+      "BODY",
+      "BODY",
+      "BODY",
+      "BODY",
+      "BODY",
+      "ACQUISITION_AGE_NOT_SKILL_ELAPSED"
+    ]
+  },
+  "feature_profile_sha256": "10ba6a77ccd1e7dcf6cd63a6774b8b17771a334371a3ded23f82db10a09347e5",
+  "feature_extractor_sha256": "efe42ae34fa7a4634e8a030187699c62bcba4e9f988f751e4c9cd6eb7f637b45",
+  "ordered_candidates": [
+    "original",
+    "lateral_plus_0p04",
+    "lateral_minus_0p04"
+  ],
+  "feature_policy": {
+    "exact_view": "2 source nominal WORLD offsets + 45 original public proprio channels + measured acquisition age",
+    "max_acquisition_age_s": 0.1,
+    "absolute_time_ID_scene_hash_candidate_label_or_future_outcome_as_features": false,
+    "geometry_from_original_public_reference": true,
+    "RGBD": "Retain originals for evidence; not new geometric features or private pose labels",
+    "historical_DEV_features_or_labels_for_fit": false
+  },
+  "require_source_scene_isolation": true,
+  "scene_split_assignments": {
+    "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8": "TRAIN",
+    "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9": "CALIBRATION",
+    "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11": "VALIDATION"
+  },
+  "scenes": [
+    {
+      "case_id": "full-4",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "scene_ancestry_key": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "scene_key_canonical_payload": {
+        "schema": "Reach-whole-registered-scene-and-initialization-v1",
+        "integrated_case": {
+          "case_id": "full-4",
+          "lane_y_m": -2.0,
+          "gap_width_m": 0.2,
+          "step_length_m": 2.4,
+          "step_width_m": 1.4,
+          "bridge_length_m": 3.2,
+          "bridge_width_m": 1.6,
+          "bank_width_m": 2.8,
+          "bridge_offset_from_high_front_m": 3.5,
+          "bridge_mass_kg": 0.5,
+          "bridge_bottom_mu": 0.6
+        },
+        "registered_materials": {
+          "A_bottom_mu": 0.15,
+          "B_bottom_mu": 0.4,
+          "C_bottom_mu": 0.6,
+          "C_mass_kg": 0.5,
+          "box_foot_mu": 0.8
+        },
+        "scene_recipe": "integrated_course",
+        "seed": 4301,
+        "initialization": "Before FIRST main physics step, after original separate auxiliary calibration: only robot leg positions/height from native reference_stance; arm native safe compact waypoint. No failed state, velocity, force, queue or policy history copied. Native six-second measured startup and physical PushEntry remain unchanged. Recovery NEVER writes physical state.",
+        "constructor_source_sha256": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb"
+      },
+      "original_native_protocol_sha256_canonical": "d829ce9dd047faad5434e2b7ffaa501d78ee2c4beeaf91d4b910a2900614c3a9",
+      "source_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-G1-46308-NATIVE-PREFIX-LEFT-ACTUAL-20261115-v1/release.json",
+      "source_release_sha256": "af81f3914c73d6546d2cc26e62b2fc0841021f11123d2e1fbc53db86e6a7dadc"
+    },
+    {
+      "case_id": "full-1",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "scene_ancestry_key": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "scene_key_canonical_payload": {
+        "schema": "Reach-whole-registered-scene-and-initialization-v1",
+        "integrated_case": {
+          "case_id": "full-1",
+          "lane_y_m": -1.8,
+          "gap_width_m": 0.2,
+          "step_length_m": 2.4,
+          "step_width_m": 1.4,
+          "bridge_length_m": 3.0,
+          "bridge_width_m": 1.6,
+          "bank_width_m": 2.8,
+          "bridge_offset_from_high_front_m": 2.2
+        },
+        "registered_materials": {
+          "A_bottom_mu": 0.15,
+          "B_bottom_mu": 0.4,
+          "C_bottom_mu": 0.3,
+          "C_mass_kg": 1.0,
+          "box_foot_mu": 0.8
+        },
+        "scene_recipe": "integrated_course",
+        "seed": 4301,
+        "initialization": "Before FIRST main physics step, after original separate auxiliary calibration: only robot leg positions/height from native reference_stance; arm native safe compact waypoint. No failed state, velocity, force, queue or policy history copied. Native six-second measured startup and physical PushEntry remain unchanged. Recovery NEVER writes physical state.",
+        "constructor_source_sha256": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb"
+      },
+      "original_native_protocol_sha256_canonical": "7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55",
+      "source_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-G2-46308-FULL1-LEFT-ACTUAL-20261115-v1/release.json",
+      "source_release_sha256": "2bae0f2abe72c19dfbc756102e995ce6c5eff0a7d36c42e7cfa8112531285522"
+    },
+    {
+      "case_id": "full-2",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "scene_ancestry_key": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "scene_key_canonical_payload": {
+        "schema": "Reach-whole-registered-scene-and-initialization-v1",
+        "integrated_case": {
+          "case_id": "full-2",
+          "lane_y_m": -1.9,
+          "gap_width_m": 0.15,
+          "step_length_m": 2.4,
+          "step_width_m": 1.5,
+          "bridge_length_m": 3.0,
+          "bridge_width_m": 1.6,
+          "bank_width_m": 2.8,
+          "bridge_offset_from_high_front_m": 3.5,
+          "bridge_mass_kg": 0.5,
+          "bridge_bottom_mu": 0.6
+        },
+        "registered_materials": {
+          "A_bottom_mu": 0.15,
+          "B_bottom_mu": 0.4,
+          "C_bottom_mu": 0.6,
+          "C_mass_kg": 0.5,
+          "box_foot_mu": 0.8
+        },
+        "scene_recipe": "integrated_course",
+        "seed": 4301,
+        "initialization": "Before FIRST main physics step, after original separate auxiliary calibration: only robot leg positions/height from native reference_stance; arm native safe compact waypoint. No failed state, velocity, force, queue or policy history copied. Native six-second measured startup and physical PushEntry remain unchanged. Recovery NEVER writes physical state.",
+        "constructor_source_sha256": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb"
+      },
+      "original_native_protocol_sha256_canonical": "5488a1ecc1d81348373783c7cf5f5691f7999910d8c7c46779437189e3ebbcb2",
+      "source_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-G2-46308-FULL2-LEFT-ACTUAL-20261115-v1/release.json",
+      "source_release_sha256": "3b5e9a9fd20971faa45fca7e53a0385118270bb607f67944fd04a7a49429b2c5"
+    }
+  ],
+  "conditions": [
+    {
+      "condition_key": "full-4_left",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "scene_ancestry_key": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "split": "TRAIN",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "condition_binding_payload": {
+        "schema": "Reach-fixed-scene-prefix-condition-v1",
+        "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+        "prefix_side": "left",
+        "requested_intents": [
+          {
+            "skill": "NAV",
+            "target_ref": "cuboid-2:approach:left",
+            "parameters": {
+              "goal_world_x_m": -0.07999999999999996,
+              "goal_world_y_m": -1.85,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "PUSH",
+            "target_ref": "cuboid-2:approach:center",
+            "parameters": {
+              "goal_world_x_m": 2.3,
+              "goal_world_y_m": -2.0,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "CLIMB",
+            "target_ref": "cuboid-2:upper-entry",
+            "parameters": {
+              "surface_height_m": 0.2
+            }
+          }
+        ]
+      },
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.85,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "condition_key": "full-4_right",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "scene_ancestry_key": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "split": "TRAIN",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "condition_binding_payload": {
+        "schema": "Reach-fixed-scene-prefix-condition-v1",
+        "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+        "prefix_side": "right",
+        "requested_intents": [
+          {
+            "skill": "NAV",
+            "target_ref": "cuboid-2:approach:right",
+            "parameters": {
+              "goal_world_x_m": -0.07999999999999996,
+              "goal_world_y_m": -2.15,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "PUSH",
+            "target_ref": "cuboid-2:approach:center",
+            "parameters": {
+              "goal_world_x_m": 2.3,
+              "goal_world_y_m": -2.0,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "CLIMB",
+            "target_ref": "cuboid-2:upper-entry",
+            "parameters": {
+              "surface_height_m": 0.2
+            }
+          }
+        ]
+      },
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:right",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -2.15,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -2.0,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "condition_key": "full-1_left",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "scene_ancestry_key": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "split": "CALIBRATION",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "condition_binding_payload": {
+        "schema": "Reach-fixed-scene-prefix-condition-v1",
+        "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+        "prefix_side": "left",
+        "requested_intents": [
+          {
+            "skill": "NAV",
+            "target_ref": "cuboid-2:approach:left",
+            "parameters": {
+              "goal_world_x_m": -0.07999999999999996,
+              "goal_world_y_m": -1.6500000000000001,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "PUSH",
+            "target_ref": "cuboid-2:approach:center",
+            "parameters": {
+              "goal_world_x_m": 2.3,
+              "goal_world_y_m": -1.8,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "CLIMB",
+            "target_ref": "cuboid-2:upper-entry",
+            "parameters": {
+              "surface_height_m": 0.2
+            }
+          }
+        ]
+      },
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.6500000000000001,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.8,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "condition_key": "full-2_left",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "scene_ancestry_key": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "split": "VALIDATION",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "condition_binding_payload": {
+        "schema": "Reach-fixed-scene-prefix-condition-v1",
+        "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+        "prefix_side": "left",
+        "requested_intents": [
+          {
+            "skill": "NAV",
+            "target_ref": "cuboid-2:approach:left",
+            "parameters": {
+              "goal_world_x_m": -0.07999999999999996,
+              "goal_world_y_m": -1.75,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "PUSH",
+            "target_ref": "cuboid-2:approach:center",
+            "parameters": {
+              "goal_world_x_m": 2.3,
+              "goal_world_y_m": -1.9,
+              "surface_height_m": 0.0
+            }
+          },
+          {
+            "skill": "CLIMB",
+            "target_ref": "cuboid-2:upper-entry",
+            "parameters": {
+              "surface_height_m": 0.2
+            }
+          }
+        ]
+      },
+      "requested_intents": [
+        {
+          "skill": "NAV",
+          "target_ref": "cuboid-2:approach:left",
+          "parameters": {
+            "goal_world_x_m": -0.07999999999999996,
+            "goal_world_y_m": -1.75,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "PUSH",
+          "target_ref": "cuboid-2:approach:center",
+          "parameters": {
+            "goal_world_x_m": 2.3,
+            "goal_world_y_m": -1.9,
+            "surface_height_m": 0.0
+          }
+        },
+        {
+          "skill": "CLIMB",
+          "target_ref": "cuboid-2:upper-entry",
+          "parameters": {
+            "surface_height_m": 0.2
+          }
+        }
+      ]
+    }
+  ],
+  "attempt_schedule": [
+    {
+      "ordinal": 1,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__original",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 2,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__original",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 3,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__lateral_plus_0p04",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 4,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__lateral_plus_0p04",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 5,
+      "attempt_key": "g2-new-purpose-v1__full-4__left__lateral_minus_0p04",
+      "condition_key": "full-4_left",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "7bf38e9a701c94e5745c0a43565be6b1e8dbde3e00346d8dc871c5b2eb1aec88",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 6,
+      "attempt_key": "g2-new-purpose-v1__full-4__right__lateral_minus_0p04",
+      "condition_key": "full-4_right",
+      "split": "TRAIN",
+      "source_scene_sha256": "1245cf2a2c5ffa02a1cc7ae4de61fdd28f70df6eec5f0de5eb3a90a7f7f7d1a8",
+      "condition_binding_sha256": "0a90b9745e4f71773612a3b7981c4e6b749d45ee6d07c4cdad0aa80c8d54ebfb",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 7,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__original",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 8,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__lateral_plus_0p04",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 9,
+      "attempt_key": "g2-new-purpose-v1__full-1__left__lateral_minus_0p04",
+      "condition_key": "full-1_left",
+      "split": "CALIBRATION",
+      "source_scene_sha256": "f980d851378a6ccac16f1d1e26fc4f23bb776200486a015235c81faaf5c2a5b9",
+      "condition_binding_sha256": "04c4219f039f5ee49de53d9499f78e5e0dea7f874ea47b19c2426b385f5e6d3a",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 10,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__original",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "original",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "original"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 11,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__lateral_plus_0p04",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "lateral_plus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_plus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    },
+    {
+      "ordinal": 12,
+      "attempt_key": "g2-new-purpose-v1__full-2__left__lateral_minus_0p04",
+      "condition_key": "full-2_left",
+      "split": "VALIDATION",
+      "source_scene_sha256": "e25896347ef3105a69cdc2acae76de7e5124546b3e0218fd2477ccdfd3433f11",
+      "condition_binding_sha256": "d3710da46f9b795cdc2f8be1b030cbcf64007659e00ec48e034071f4c77e7c3f",
+      "candidate_id": "lateral_minus_0p04",
+      "preparation_payload": {
+        "schema": "AINav-finite-CLIMB-preparation-selection-v1",
+        "target_ref": "cuboid-2:upper-entry",
+        "candidate_id": "lateral_minus_0p04"
+      },
+      "own_zero_max": 1,
+      "main_max": 1,
+      "scope_id": null,
+      "physical_program_sha256": null
+    }
+  ],
+  "split_limitations": {
+    "one_scene_per_split": true,
+    "TRAIN_condition_groups": 2,
+    "CALIBRATION_condition_groups": 1,
+    "VALIDATION_condition_groups": 1,
+    "split_chosen_after_historical_DEV_exposure": true,
+    "shared_original_constructor_and_Actor_lineage": true,
+    "not_blind_TEST": true,
+    "not_three_independent_scene_populations": true,
+    "claims": "Fresh acquisitions, source-config-disjoint from fit only. Not never-exposed layouts, statistical scene generalization or G5 untouched holdout."
+  },
+  "known_unqualified_domain": {
+    "case_id": "full-2",
+    "prefix_side": "right",
+    "historical_scope_id": "data-46308-G2-full2-right-PUSH-CLIMB-20261115-v1",
+    "reason": "Original PUSH unload FF intersection empty before CLIMB; no successor input. Not repaired by post-PUSH choices.",
+    "future_requests": 0,
+    "no_retry_or_replacement": true,
+    "excluded_from_new_conditional_sampling_domain_explicitly": true,
+    "historical_attempt_retained": true,
+    "coverage": "4 previously reached scene-prefix contexts of 5 DEV contexts; right remains outside qualified domain. No complete full2 left/right family or whole-chain improvement claim."
+  },
+  "sampling": {
+    "max_new_roots": 12,
+    "max_own_zero_attempts": 12,
+    "max_main_attempts": 12,
+    "per_condition_per_candidate": 1,
+    "reset_or_seed_repetitions": 0,
+    "statistical_power_claimed": false,
+    "rationale": "Smallest complete 3-arm factorial over two observed TRAIN prefixes and one CAL/one VALIDATION prefix in different registered scenes. 6/3/3 main ceiling, 4 condition groups but 3 scene groups; 48 features and tiny n require strong fixed regularization and negative-result readiness. Not statistical power.",
+    "not_12_independent_scene_replicates": true,
+    "capacity_reserve_per_root_bytes": 1610612736,
+    "max_capacity_reservation_bytes": 19327352832,
+    "capacity_is_current_Data_root_estimate_not_provider_quota_or_lease": true,
+    "scope_or_GPU_reservation_already_allocated": false
+  },
+  "minimum_groups": {
+    "TRAIN": 2,
+    "CALIBRATION": 1,
+    "VALIDATION": 1
+  },
+  "qualified_entry_condition_family": false,
+  "training_activation": "This immutable prospective protocol is NOT a fit permit. Existing own-zero/main/cold/source evidence and closed TRAIN gate may activate a derived training run manifest (link this exact SHA); no change to split/domain/count. Do not edit this file into an apparent prior qualification.",
+  "source_binding": {
+    "physical_owner": "Data",
+    "compute": "root@180.97.68.228:46308",
+    "reuse": "Existing native runner, same common stow for all arms, original 3-request consumer, original journal/8-field public observation, original SDK/4 Actor and private Expat environment",
+    "full4_full2": "Existing registered_layout_conditions_v1.LayoutCondition and build_condition returned fields, source SHA458ec66e0e65e573c7e98a91e8c496b0ad8449ebcaec686e6ff338486010dcff",
+    "full1": "Existing explicit original full1 plan/source option, canonical original protocol7492762cbb1b3a268d5a2a7d4d148956a32d4a675e83e1a29bf7099d60e13d55; do not relax full2 material guard",
+    "consumer": "Existing prefix_bindings.install_preexecution_choices on a fresh tick0 host, candidate payload via selection_from_payload/bind_to_host; frozen before any task physics, no live hot install",
+    "candidate_api_sha256": "1c40a748bd1d93e3684853b60f2dc038e673f019976d60cf33eb8195ff9942d0",
+    "actor_device_overlay_only": true,
+    "role_and_purpose": "NEW acquisition manifest, not rewriting old physical protocol training_allowed or old result. Data assigns NEW scope/program/freeze/role, pins all members, verifies same own-zero and main model plus fresh canonical lease.",
+    "no_new_NN_table_logger_or_budget_signature_required": true
+  },
+  "physical_limits": {
+    "own_zero_max": 1,
+    "main_max": 1,
+    "automatic_retry": false,
+    "max_sim_s": 240.0,
+    "max_wall_s": 2400.0,
+    "own_zero_wall_s": 180.0,
+    "auxiliary_calibration_per_phase_max_sim_s": 10.5,
+    "max_output_bytes": 1073741824,
+    "max_CPU_threads": 2,
+    "max_CPU_RSS_bytes": 4294967296,
+    "max_own_GPU_bytes": 3221225472,
+    "native_protocol_cap_remains_420_s_outer_watchdog_stricter": true,
+    "original_guards": "12N, original4s, immutable/identity, whole-path guard, support, QP, FIFO, CLIMB stop unchanged"
+  },
+  "stopping": {
+    "sequence": "TRAIN ordinal1..6 -> existing TRAIN gate -> one frozen fit -> CAL7..9 -> freeze report -> VALIDATION10..12",
+    "TRAIN_gate": {
+      "minimum_reached_prefix_groups": 2,
+      "minimum_success_rows": 3,
+      "minimum_verified_postdecision_native_failures": 1,
+      "minimum_distinct_public_proprio_states": 2,
+      "all_features_complete_and_source_integrity": true,
+      "if_failed": "NO_GO: do not fit/reseed/mine failures; mark CAL/VALIDATION NOT_DISPATCHED_DUE_TO_TRAIN_GATE, retain all spending; report one finite diagnostic direction, no automatic extra cohort"
+    },
+    "zero_failure": "No main for that root, no replacement; record source/infra failure. Immutable/identity/safety integrity or shared deterministic build failure halts cohort before any next main.",
+    "ordinary_main_failure": "Close FAILED_NO_RETRY. Upstream failure remains unreached; later candidate scopes may run only if independent fresh admission holds, never repairing closed scope.",
+    "common_capacity_or_resource_failure": "Stop further dispatch; remaining rows NOT_DISPATCHED_RESOURCE_STOP. Do not hide canceled rows in an attempted denominator or replace them.",
+    "after_12": "STOP collection; no automatic expansion, repeats or alternative source."
+  },
+  "labels": {
+    "success": "Original CLIMB literal succeeded + READY/source and stop verified; current_READY_s/full_success_s relative to same first-PREPARE clock",
+    "native_guard_failure": "Only verified native failure AFTER decision, full_success_s=None; absent terminal receipt retained absent",
+    "upstream_failure": "Unreached decision, physical_features/outcome-for-critic/current_READY_s/full_success_s=None. Keep native failure reason in whole-attempt inventory.",
+    "resource_failure": "CENSORED, never native negative or successful cost",
+    "missing_features_or_boundary": "Explicit missing/UNKNOWN, no nearest/READY/zero imputation; no fit if existing validator cannot represent all actual attempts honestly",
+    "cost": "All scopes include zero/aux/main/failure/censor sim, wall, bytes; unknown cost lower bound. Successful conditional cost separately, never failure elapsed imputed as completion time."
+  },
+  "learning": {
+    "kind": "CPU regularized logistic uncalibrated success score + separate ridge current/full conditional times",
+    "fit_once": true,
+    "train_only_normalization": true,
+    "logistic": {
+      "iterations": 300,
+      "learning_rate": 0.1,
+      "L2": 0.01
+    },
+    "ridge_L2": 1.0,
+    "baselines": "TRAIN-only constant success score and TRAIN-only mean READY/successful horizon costs",
+    "calibration": "3 CAL rows are diagnostics only; no calibrated probability, no tuned thresholds or confidence guarantee.",
+    "offline_score_threshold": 0.5,
+    "score_threshold_is_native_feasibility_or_online_gate": false,
+    "post_validation_tuning": false,
+    "old_audit_fit": false,
+    "Actor_WM_training": false
+  },
+  "analysis": {
+    "report": "Per-scene/prefix/arm observed outcomes, acquisition reach coverage and all attempt spending; grouped MAE/RMSE, Brier/logloss, failure misses/false refusal, unknown denominators=None; retain paired missing cells, no arm ranking when missing/failure.",
+    "exploratory_signal_floor_s": 0.1,
+    "signal_floor_meaning": "Predeclared engineering time-MAE reduction vs TRAIN-only mean, NOT statistical or sensor accuracy threshold",
+    "G4_admission": false,
+    "reason": "One CAL and one VALIDATION scene and 3 rows each cannot certify safe deployment; missing failure denominator is UNKNOWN not 0% miss. Positive/negative descriptive result leads a NEW independent G4 protocol, not live activation.",
+    "G2_whole_family_qualified": false,
+    "G5_untouched_holdout_satisfied": false
+  },
+  "dispatch": false,
+  "physical_admission": false,
+  "new_scopes_allocated": false,
+  "trained_models": 0,
+  "scene_key_serialization": "json.dumps(payload, sort_keys=True, separators=(comma,colon), ensure_ascii=True, allow_nan=False), UTF-8 SHA256"
+}
