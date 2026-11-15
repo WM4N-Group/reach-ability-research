@@ -56,7 +56,7 @@ frame_local_ref_by_option_sha256:
 
 Data新**25-source/475-member**程序f1991adb…已真实完成SupportedCapture448条命令/2.240任务sim＋同world/FIFO原execution装配，scope已closed；release1254bb36…/result00768cd9…。Reach只读核16发布metadata＋20 sealed远端成员SHA与452行原journal全链，不decode NPZ或调用模型；精确小记录在`operations/V4_ACTUAL_CAPTURE_EXECUTION_INTAKE_20261116.json`，SHA **5b7810c39650ff66d2968ba9272e0770e6aacf1f5706924bf2c44d7c91b49c7f**。原23 onboard帧不是WM用途输入许可（whole_artifact_model_input_allowed=false），不从中造history/forward。原19-source cold zero仍单独closed；这两个component均非五组main，也不能借给新27-source full driver。
 
-**首次A/B不能仅凭“有448条命令/23图”就宣称可开始。** SupportedCapture是实际ground owner，但不是原6类泛型技能里的HOLD/NAV/RECOVER，也不等原FarBankStop。现A/B第一select就要求实际WM预测；若一开始只发capture、随后直接进该select，仍缺合法的已发模型技能上下文。此处是源码输入依赖，不是已观察到A/B native失败；不能偷改首次A/B为VLM-only，或改成HOLD伪造过去。
+**首次A/B不能仅凭“有448条命令/23图”就宣称可开始。** SupportedCapture是实际ground owner，但当前V4尚未核定其到原6类observed-family的合法编码，不能自动归入HOLD/NAV/RECOVER，也不等原FarBankStop。现A/B第一select就要求实际WM预测；若一开始只发capture、随后直接进该select，仍缺合法的已发模型技能上下文。此处是源码输入依赖，不是已观察到A/B native失败；不能偷改首次A/B为VLM-only，或改成HOLD伪造过去。
 
 新增`CausalWMQueryPort.on_unmodelled_issued(tick,time_s,native_owner_id=...,owner_kind='SupportedCapture')`供**实际accepted-step**调用：只撤销模型窗口/旧observed_skill，不动world/FIFO/原recorder/已落盘query。unsupported期间的grid帧不进模型窗口；同一已排除owner ID不能改名HOLD/NAV/RECOVER。真正新控制owner按原on_issued输入之后，必须积累3张**新**真实10Hz帧和完整原200Hz区间，仍由原build核history、clock、previous-action等；未齐抛`WMContextUnavailable`，不作native failed或成功代价0。8个新增metadata专项（连此前64共72）不使用本次真实capture流作模型输入，未再次运行原Torch/NumPy smoke或恢复权重。
 
