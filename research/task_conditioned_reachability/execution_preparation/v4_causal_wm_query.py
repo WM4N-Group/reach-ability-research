@@ -62,6 +62,8 @@ class CausalWMQueryPort:
         need(fixture or getattr(buffer,'_reach_query_software_fixture',True)is False,
              'A source-function fixture buffer cannot be relabelled as live')
         if not fixture:
+            need(not getattr(target_provider,'software_fixture',False),
+                 'A fixture target descriptor cannot be used by a production query port')
             need(type(buffer).__name__=='BehaviorQueryBuffer'and
                  set(getattr(buffer,'_reach_original_query_source_pins',{}))=={'BehaviorQueryBuffer','filter_full_native','resize_packet'},
                  'Production query port requires the exact original constructed buffer, not a fixture')
@@ -90,20 +92,27 @@ class CausalWMQueryPort:
             need(isinstance(values,list)and len(values)==size,'Original current public45D only, no padding')
             body.extend(values)
         anchor_sha=hashlib.sha256(anchor['rgb'].tobytes()).hexdigest()
+        evidence=None
         if self.target_provider is None:
             targets={o.sha256:None for o in options}
         else:
             descriptor=self.target_provider(batch.observation,tuple(options),anchor)
+            need(self.role=='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT' or
+                 descriptor.get('source_role')!='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT',
+                 'Fixture descriptor output cannot become live WM input')
+            evidence=descriptor.get('target8_evidence_by_option_sha256')
+            need(evidence is None or set(evidence)=={o.sha256 for o in options},'Same finite target evidence domain')
             need(descriptor['WM_anchor_RGB_bytes_sha256']==anchor_sha and
                  descriptor['WM_anchor_time_s']==anchor['time_s'],
                  'Target descriptors must bind WM anchor, not another off-grid image/old alias')
             targets=descriptor['target8_by_option_sha256']
             need(set(targets)=={o.sha256 for o in options},'Explicit target or missing mask for every candidate')
         return self.build('v4-wm-query-%06d'%self.completed_queries,public_observation=batch.observation,
-            body45=body,body_observed_time_s=now,target8_by_option_sha256=targets)
+            body45=body,body_observed_time_s=now,target8_by_option_sha256=targets,
+            target8_evidence_by_option_sha256=evidence)
 
     def build(self,query_id,*,public_observation,body45,body_observed_time_s,
-              target8_by_option_sha256,observed_geometry8=None,
+              target8_by_option_sha256,target8_evidence_by_option_sha256=None,observed_geometry8=None,
               observed_geometry_time_s=None,observed_geometry_RGB_sha256=None):
         if self.role!='EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT':
             from ainav.contracts import Observation
@@ -117,5 +126,6 @@ class CausalWMQueryPort:
         return dict(public_observation_sha256=public_observation.sha256,
             original_query_sha256=record['query_sha256'],query_time_s=record['query_time_s'],
             image_time_s=record['image_time_s'],source_role=self.role,belief=belief,public60=public,
-            target8_by_option_sha256=dict(target8_by_option_sha256),original_query_record=record,
+            target8_by_option_sha256=dict(target8_by_option_sha256),
+            target8_evidence_by_option_sha256=target8_evidence_by_option_sha256,original_query_record=record,
             input_file=record['input_file'],live_policy_context_allowed=self.role=='CURRENT_ORIGINAL_SENSOR_AND_ISSUED_HISTORY')

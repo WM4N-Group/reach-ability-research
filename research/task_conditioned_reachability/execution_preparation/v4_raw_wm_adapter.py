@@ -133,7 +133,11 @@ class OriginalBehaviorWMAdapter:
                 need(all(x>0 for x in row['std']) and row['elapsed_s']>0 and row['elapsed_std_s']>0,
                      'Raw model dispersion/time, not calibrated uncertainty')
                 records.append(dict(option_sha256=option.sha256,original_query_sha256=context['original_query_sha256'],
-                    actual_action11=list(a[i]),raw_anchor_translation6_m=row['mean'],raw_learned_std6_m=row['std'],
+                    actual_action11=list(a[i]),
+                    actual_target8=[float(v) for v in targets[option.sha256]],
+                    requested_prediction_duration_s=option.budget_s,
+                    target8_visible_geometry_evidence=(context.get('target8_evidence_by_option_sha256') or {}).get(option.sha256),
+                    raw_anchor_translation6_m=row['mean'],raw_learned_std6_m=row['std'],
                     raw_native_success_or_failure_event_elapsed_s=row['elapsed_s'],raw_elapsed_std_s=row['elapsed_std_s'],
                     raw_uncalibrated_option_success_logit=row['option_success_logits'],
                     successful_Finish_or_READY_unsupported=True))

@@ -1,0 +1,28 @@
+{
+  "role": "ORIGINAL_VISIBLE_RGBD_GEOMETRY_ONLY_NO_TRAINER_NATIVE_OR_WEIGHTS",
+  "files": {
+    "visual_box_proposals.py": {
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_box_proposals.py",
+      "original_whole_file_sha256": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+      "method": "EXACT_WHOLE_FILE_BYTES",
+      "custody_sha256": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304"
+    },
+    "visible_surface_goal.py": {
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/visible_surface_goal.py",
+      "original_whole_file_sha256": "b7ccf787db0db1e8496d2d6627e9efeb941bb6c06d7638791ce1628a81068da4",
+      "method": "EXACT_WHOLE_FILE_BYTES",
+      "custody_sha256": "b7ccf787db0db1e8496d2d6627e9efeb941bb6c06d7638791ce1628a81068da4"
+    },
+    "geometry_vector.py": {
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/prepare_control_training.py",
+      "original_whole_file_sha256": "ce0f640735d6db8025a5b7bc4833d4bb94a1c55f65fb7479fcdb4de11025f2e6",
+      "symbol": "geometry_vector",
+      "original_lines": [
+        22,
+        25
+      ],
+      "method": "EXACT_WHOLE_TOPLEVEL_FUNCTION_LINES_NO_REWRITE",
+      "custody_sha256": "f02cbefb7dca72cc5b4f0b54014eb3af0aa8e5eda8faa0c9bab432f4ae9d137f"
+    }
+  }
+}
