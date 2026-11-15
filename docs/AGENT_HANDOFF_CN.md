@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 19:21：T首对A/B真实闭合，B为wall资源截断；原片已发布，无完整任务或前瞻收益
+
+- **B原唯一main现已闭合，不再写在途：** 已消费Data正式release161d483b…/原result4a93cc08…：原wall watchdog `Full-task owned wall watchdog, no retry`，FAILED_NO_RETRY/resource_censored=true/task_success=false。主世界12.720sim/2544原命令，实际bundle选择仍1，原NAV option1/Actor-forward524、原native terminal receipt0、placement/重构0。没有NAV成功/技能失败回执，更没有三有效选择或完整任务能力收益；不将资源censor冒原NAV控制失败或.1954s搜索超出.25s预算。
+- **独立读终态原记录而非只转述状态：** 本组只读CPU reader在46308逐SHA核A/B正式小成员（B26份）、scope/program/source/scene/zero-main与closed ledger，独立验A462/B995行完整原journal链，核B最终journal仍逐byte包含本组18:28已核前缀与同一实际NAV binding；三远端视频文件SHA均核。Data九流/PD/FIFO/NPZ/pixel cold仅消费报告，不冒本组独立重算/解码。原A RGBD关联失败82952392…保持，初始同448步/首query不等名义候选已native合法，不据A source拒绝称强合法greedy已输。
+- **完整费用与原片已入账：** B含zero/两aux25.730sim/4781.901017321ledger wall/232149061bytes高水位，全部known；A仍15.250sim/880.527903158wall/218453439bytes，旧失败/原cap不改。A23/B128本次direct live帧已编码各自1×及同sim钟pair留46308（原960×540不裁切、80px注释头栏、A终止后黑色“无后续”说明），不是视频0，也不是成功任务母版；原raw保留，H264非像素无损。v1→v2仅5.38MB journal的小文件出版限制修正，完整journal保远端并pin SHA，不是物理重试。
+- **继续的准确路径，不加Reach回执阻塞：** 优先用已收c3c695b5…独立OBSERVABILITY_QUALIFICATION_ONLY源装配固定capture→两原NAV(-.08,+.15)/(−.08,−.15)→3观测边界、PUSH0，以measurement motion_complete终止；Data事前按真实开销定新有限cap/freeze/own-zero/lease。source owner可独立验证新源安全语义等价吞吐优化；原trace中Path.resolve只是watchdog中断点，尚无profiler/benchmark因果证据，不能删身份/alias/guard或热改closed b08/抬原cap重跑。固定view任何接受仅必要观测条件，非PUSH READY/第三策略选择；未达/censor保留，不挑帧找赢家。
+- **本组入口与其它冻结项：** 原报告远端`/mnt/yuanyue/reach-runs/T-closed-first-DEV-pair-consumption-20261115-v1/CLOSED_PAIR_CONSUMPTION.json`，无数组小副本`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_CLOSED_PAIR_CONSUMPTION_20261115.json`（447e534d…），解释/下一`T_COMPLEX_01_CLOSED_PAIR_AND_NEXT_CN.md`。13原planner/adapter/seam软件回归通过，不作新实验/方法贡献。总计划仍14:00/b2fb786e…/T优先；bulk24已登记收源但未派发/不refit，G3原一次fit/model冻结、CAL07仅1/3未评分。计算仅46308/Data唯一物理owner；本轮无新仿真/训练、他组源码/H/锁/进程/自动化改动，原dirty/closed/actor/12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop全保。
+
 ### 2026-11-15 18:37：独立实核448步/首query同信息，B多步选择已被原NAV执行；仍仅首段、无任务收益结论
 
 - **本轮独立消费实际记录，不是再用fixture宣布接线：** 新只读reader在46308核A/B前3个已完成immutable command chunks，前448个真实capture命令的issued/delayed/torque/raw_torque/q_before/dq_before/physical_tick/time_s逐dtype/shape/bytes全相同、tick恰1—448。A462行closed journal与B18:28取读时的完整append-only前缀均独立验原SHA链，读前后既存前缀不变；B前缀不是终态日志。没有起Runtime/Actor/renderer/物理或fit，原数组不回本地。

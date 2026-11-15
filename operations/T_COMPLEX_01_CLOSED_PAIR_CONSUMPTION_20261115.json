@@ -1,0 +1,292 @@
+{
+  "schema": "Reach-independent-closed-T-first-DEV-pair-consumption-v1",
+  "at": "2026-11-15T19:18:17.801574+08:00",
+  "reader_source_sha256": "008f2440334ed8398709fb2159c1ffc2db4133b36e1a6e3e688b8c9d38dd3c81",
+  "protocol_sha256": "e72ddbb2e33968fe8b997fb2918efd50551e59c4be069a067f2aeab0366d7d02",
+  "arms": {
+    "A": {
+      "result_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+      "status": "FAILED_NO_RETRY",
+      "error": "ORIGINAL_INTENT_REJECTION:ValueError: Current original RGBD association unavailable; no static-pose substitution",
+      "resource_censored": false,
+      "task_success": false,
+      "task_sim_s": 2.2399999999999745,
+      "actual_command_steps": 448,
+      "scope_including_zero_aux_sim_s": 15.249999999999742,
+      "scope_ledger_wall_s": 880.5279031582177,
+      "scope_output_highwater_bytes": 218453439,
+      "journal_chain": {
+        "rows": 462,
+        "last_sha256": "6d96396c37f094f01d7e34c2189c20a9e8518b117c416979872d7e0785521fab",
+        "valid": true
+      },
+      "algorithm_decisions": 1,
+      "original_native_installs": 0,
+      "NAV_Actor_forward_events": 0,
+      "native_terminal_receipts": [],
+      "task_reconstructions": 0,
+      "actual_first_decision": {
+        "actual_three_meaningful_choices_NOT_proven": true,
+        "common_nominal_root_candidate_count": 6,
+        "counts_as_algorithm_decision": true,
+        "decision_index": 1,
+        "depth_units": "DECISION_BUNDLES_NOT_NATIVE_SKILLS",
+        "event": "reach_complex_public_decision",
+        "examined_transitions": 6,
+        "execution_authorized": false,
+        "fallback_to_shared_greedy": false,
+        "method": "greedy",
+        "nominal_action": {
+          "goal_xy_m": [
+            1.85,
+            0.0
+          ],
+          "kind": "PUSH_WITH_NAV_ROUTE",
+          "native_mapping_verified": false,
+          "nominal_NAV_route_xy_m": [
+            [
+              -0.08,
+              0.0
+            ]
+          ],
+          "public_ref": "cuboid_a",
+          "requires_original_placement_or_terminal_stop": true
+        },
+        "nominal_geometry_forecast_not_actual_world": true,
+        "nonforced_nominal_reconstruction_choice": true,
+        "planned_native_request_count": 1,
+        "planner_wall_s": 0.004115272080525756
+      },
+      "actual_first_selected_intent": {
+        "VLM_calls": 0,
+        "actual_source_parameters": {
+          "goal_world_x_m": 1.85,
+          "goal_world_y_m": 0.0,
+          "surface_height_m": 0.0
+        },
+        "actual_source_target_ref": "cuboid_a",
+        "batch_sha256": "7a97c94a042bda910b66ef07185ae7bb45eb81e0dece2048b0ac898b923345c4",
+        "decision_index": 1,
+        "event": "reach_complex_semantic_intent_selected",
+        "intent_sha256": "558e60e83b461f9da783998e0a9fdd3c29d09ad20a63830dfb5cc76b565d0467",
+        "method": "greedy",
+        "physical_action_issued": false
+      },
+      "direct_HD_frames": 23,
+      "Data_nine_stream_audit_consumed": true,
+      "independent_NPZ_PD_RGB_recomputation": false
+    },
+    "B": {
+      "result_sha256": "4a93cc0873798da5001a0ee2d01952f9a9b5bf99192b8864b5e1a94c379b6a34",
+      "status": "FAILED_NO_RETRY",
+      "error": "Full-task owned wall watchdog, no retry",
+      "resource_censored": true,
+      "task_success": false,
+      "task_sim_s": 12.720000000000589,
+      "actual_command_steps": 2544,
+      "scope_including_zero_aux_sim_s": 25.730000000000352,
+      "scope_ledger_wall_s": 4781.901017321274,
+      "scope_output_highwater_bytes": 232149061,
+      "journal_chain": {
+        "rows": 995,
+        "last_sha256": "d5b851d80529f0fcfea59447b3ea25e54996199def477e705e54775a9d22b563",
+        "valid": true
+      },
+      "algorithm_decisions": 1,
+      "original_native_installs": 1,
+      "NAV_Actor_forward_events": 524,
+      "native_terminal_receipts": [],
+      "task_reconstructions": 0,
+      "actual_first_decision": {
+        "actual_three_meaningful_choices_NOT_proven": true,
+        "common_nominal_root_candidate_count": 6,
+        "counts_as_algorithm_decision": true,
+        "decision_index": 1,
+        "depth_units": "DECISION_BUNDLES_NOT_NATIVE_SKILLS",
+        "event": "reach_complex_public_decision",
+        "examined_transitions": 127,
+        "execution_authorized": false,
+        "fallback_to_shared_greedy": false,
+        "method": "multistep",
+        "nominal_action": {
+          "goal_xy_m": [
+            9.7,
+            0.0
+          ],
+          "kind": "PUSH_WITH_NAV_ROUTE",
+          "native_mapping_verified": false,
+          "nominal_NAV_route_xy_m": [
+            [
+              -0.08,
+              0.0
+            ],
+            [
+              -0.08,
+              -1.8
+            ],
+            [
+              3.62,
+              -1.8
+            ],
+            [
+              7.32,
+              -1.8
+            ],
+            [
+              7.319999999999999,
+              0.0
+            ]
+          ],
+          "public_ref": "cuboid_c",
+          "requires_original_placement_or_terminal_stop": true
+        },
+        "nominal_geometry_forecast_not_actual_world": true,
+        "nonforced_nominal_reconstruction_choice": true,
+        "planned_native_request_count": 5,
+        "planner_wall_s": 0.1954034510999918
+      },
+      "actual_first_selected_intent": {
+        "VLM_calls": 0,
+        "actual_source_parameters": {
+          "goal_world_x_m": -0.08,
+          "goal_world_y_m": -1.8,
+          "surface_height_m": 0.0
+        },
+        "actual_source_target_ref": "cx-nav-000",
+        "batch_sha256": "853a519177c67b41435ea6ee52965f895776e409cc3eb40517df713b1efebcdc",
+        "decision_index": 1,
+        "event": "reach_complex_semantic_intent_selected",
+        "intent_sha256": "1c3f3b4bf5b1a5325b7b3d20f1148c20480eb74545cee4393c846ae273169f8b",
+        "method": "multistep",
+        "physical_action_issued": false
+      },
+      "direct_HD_frames": 128,
+      "Data_nine_stream_audit_consumed": true,
+      "independent_NPZ_PD_RGB_recomputation": false
+    }
+  },
+  "source_pins": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/T-COMPLEX-01-full-program-46308-20261115-v1/protocol.json": "e72ddbb2e33968fe8b997fb2918efd50551e59c4be069a067f2aeab0366d7d02",
+    "/mnt/yuanyue/reach-runs/T-actual-predecision-control-consumption-20261115-v1/ACTUAL_PREFIX_AND_ORIGINAL_NAV_CONSUMPTION_v2.json": "fcc69504ea43b877668e2fea38d54bd072301b855206e669164ba2374023a7cb",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/release.json": "7afea491985601c6e78100af5ee20881a925357b40a27cb6a1da93a3586effde",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/result.json": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/events.jsonl": "0c8fa13ebfe111f9a174df74d0cfc4fcce2d081d0547b455204367e0972ed590",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/zero/result.json": "15947a2e5e25a77cc12b120a89dad867c308987507d3a50d975ad26014d37cc9",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/ledger.json": "23473eb8a9c8ca01be61af746c8a5256de15b3f0b4b34edef2863ae13689a78d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/actual-main-cold-audit.json": "37c2385709b1861728a467684da1d20901ed08e662f7229ba47f7db4739e0062",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/first-query-public-readonly-diagnostic.json": "3b2c7a9b2af517a6c51f3ddb65f6f939a8a589d95a702efb25c578e5b11f5f66",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/actual-AB-zero-condition-equality.json": "2012e740f0705e9fb6791240eb4aba9a234d37b39bcd41b55c9d64ecb46f6b8b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/original-public-query/intent-observation.json": "31b92b0e8bce2acc23ff9310a485885bd726ce76c3e1e2a41b98217b33d24421",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/actual-config.json": "fd80d2f3c9267111bffa46887812a109d7603396f78c9059e4db2dbee2f78569",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/actual-model-identity.json": "f3459e251de40802f4a75fc16afc9933c515dad3a5e0cc6b0878a06cfb11324e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/native-asset-construction.json": "82d75849113049ecd6bfd4d18a1a3c23e5771014c1381e0663496030b141adfc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/main/resource-lease.json": "d3ac520c73d5693c4a841c91cbc9ad2ce8141e27607289bffa7473537b3c105c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/episode/index.json": "01e6b7630677f3387ae57aa145918663cbe56d7ebf15d98defd114a3404fad93",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/episode/closure.json": "4765dc677b4a68ecde44f8af71a8b0daab2eb28e35afa8e1e97b5acde0d4ddbe",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/episode/episode.json": "c9203f1fdb23f05f99dad48d7081807cfb1ac46449dd42b28fa176bc72ab6cc2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/review/metadata.json": "88a81e132dc7e422705cf0d3126492f2e8a6ff310d2918156fe7b6dd9be65de2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/review/closure.json": "bac795d432e0f67dba9633e0a35ffe83a912e4c2c8342bda5191010b8271c244",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/raw-third-view/metadata.json": "db263de8e1f888c74bd55d50a6619554953dd9e2ec1a2c0251229ac732364d64",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/raw-third-view/closure.json": "2cb13b815474ae3763b59bcb4777a42c7304ba8a098a3c3f308246518338f909",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/original-public-query/rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/original-public-query/depth_m.npy": "17eb7605ac9a13bed9783e8a95cbbf0b13d176ef7ba4bd67322f40695d7972c4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/original-public-query/calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/original-public-query/observation.json": "31b92b0e8bce2acc23ff9310a485885bd726ce76c3e1e2a41b98217b33d24421",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/raw-scope-inventory.json": "ff91a7be745e998513b00e54c71d845c92179c12c259ff4f0bd45d2aeee39f73",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-A-FIRST-QUERY-REFUSAL-ACTUAL-20261115-v1/interpretation-and-B-scope-boundary.json": "40e389360f535c8d67ef89ccbd42d8eee5cce86a4c9ad6c71126f59884b2a452",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/release.json": "161d483bd5c40d8a4359fc31da6dd3a088a320eeeba8748e0323f1ceb047b81b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/main/result.json": "4a93cc0873798da5001a0ee2d01952f9a9b5bf99192b8864b5e1a94c379b6a34",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/zero/result.json": "74f4861eba2b9132fa13a7f3e6f8b294aba1a9c7d0add13f0e38f4174255fc03",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/ledger.json": "e2a4d9f35db8ce3959b9df30a63f2d46240c702cfa7a5b3557623c23f49a8ad0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/actual-main-cold-audit.json": "506295b6e03cadd11c39c2dd3559fa982fbf0cf1f43dab283827e0b695392d21",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/actual-AB-zero-condition-equality.json": "2012e740f0705e9fb6791240eb4aba9a234d37b39bcd41b55c9d64ecb46f6b8b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/actual-first-query-and-capture-prefix-equality.json": "4014d29733fe2c1a7a27636dcde16d4d91d9b3ff79065b291ada0b62f2f5cfd6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/main/actual-config.json": "6b4ad3097735cd99e5970b17c0c2e71308e4e0281229648059d78cd5bd3b42fc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/main/actual-model-identity.json": "e310f17bf13ca692ddb6f40ae14708038db2afd986120867e324e982a5c5818b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/main/native-asset-construction.json": "4ecde75331c9c317defc078c58115c171dc2866fdb5e1f7e5b3b7d4db59bc3b1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/main/resource-lease.json": "074214531836d193309ed62cb7935a130442848405277577b19725fe40320bb4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/episode/index.json": "0f95c35ff30b9ae1e2e2a99a7761016a363cceaf05a06790c6345c61896a4d69",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/episode/closure.json": "fbde16b4c808746648c54fc06d43123c18ab748eb3513bdc538ce5fd83af3228",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/episode/episode.json": "247746a6da12a58dce583cb2918e83c0adbb3be97b5696dc5d1bcda58a277ba0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/review/metadata.json": "8eed9da3e541a10ec5dd3ed8b7fcbabca4aec3d4bcc1230466bd5939935f0988",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/review/closure.json": "244c155324770bfe89fbf8cf32fdf37ee437cb0ba5d958f791bc22ecbd42c8b1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/raw-third-view/metadata.json": "877a5b8cae6ca9f7d8f96c11d14b4314019054cfe5b77d2f90e9eb06f7d904a8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/raw-third-view/closure.json": "f6ff8588ed8bc9c2e171a50d64b5b4ec1a9646039ecbcde07978a13c3bb70fd2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/closed-pair-direct-video-manifest.json": "dddd430a63ce2ed9930ff751553d88eaa877591b112fd0d2ab84401db26d0bed",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-public-queries/intent-observation-0001/intent-observation.json": "b0d229fe25f5a036bcfb0308c92aa39cbb7069b5d36b8a47af12b0ba6af50ec6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-public-queries/intent-observation-0001/rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-public-queries/intent-observation-0001/depth_m.npy": "17eb7605ac9a13bed9783e8a95cbbf0b13d176ef7ba4bd67322f40695d7972c4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-public-queries/intent-observation-0001/calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-public-queries/intent-observation-0001/observation.json": "b0d229fe25f5a036bcfb0308c92aa39cbb7069b5d36b8a47af12b0ba6af50ec6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/original-journal-remote-reference.json": "b71742fd7d0841ff8543ac92cd6bf0fbbd7d5dae5460635fdc08f87c0aa0b48c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/raw-scope-inventory.json": "620aa86a3f979d6408cdb303af42884fa796d60741796c74d0579317e859b6c7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/interpretation.json": "ab509072c76c1cd4f5a8f47616a0d06f3d8428e39f4990f5d54feb5799885d16",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/events.jsonl": "817d4aee627ee3790a7c90eb857606481df07c30e98b9d008cdea0b02c975187",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/A-direct-raw-1x.mp4": "7292b0317d10cf1473743a3766ede74c4803447b2fbd0319e3bcfe666645b4fe",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/B-direct-raw-1x.mp4": "6a9fb23f0abd1366d85ac6b7fe1b75d0b064aeed98393a0a3a2923457044792d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/pair-direct-raw-1x.mp4": "24117d647d99c7d716377661dfd0fdfeaf292699fb2518ee3a14bcfe2146ffce"
+  },
+  "independent_closed_journal_chains_verified": true,
+  "prior_actual_448step_prefix_proof_retained": true,
+  "direct_video_outputs_remote": {
+    "A": {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/A-direct-raw-1x.mp4",
+      "sha256": "7292b0317d10cf1473743a3766ede74c4803447b2fbd0319e3bcfe666645b4fe",
+      "bytes": 37495,
+      "frames": 23,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 620,
+            "r_frame_rate": "10/1",
+            "nb_read_frames": "23"
+          }
+        ]
+      }
+    },
+    "B": {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/B-direct-raw-1x.mp4",
+      "sha256": "6a9fb23f0abd1366d85ac6b7fe1b75d0b064aeed98393a0a3a2923457044792d",
+      "bytes": 79250,
+      "frames": 128,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 620,
+            "r_frame_rate": "10/1",
+            "nb_read_frames": "128"
+          }
+        ]
+      }
+    },
+    "pair": {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-evidence-v1/pair-direct-raw-1x.mp4",
+      "sha256": "24117d647d99c7d716377661dfd0fdfeaf292699fb2518ee3a14bcfe2146ffce",
+      "bytes": 133885,
+      "frames": 128,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 620,
+            "r_frame_rate": "10/1",
+            "nb_read_frames": "128"
+          }
+        ]
+      }
+    }
+  },
+  "video_bytes_verified_not_decoded_by_Reach": true,
+  "video_role": "COMPLETE_AVAILABLE_FAILED_CENSORED_EPISODES_NOT_FULL_TASK_SUCCESS",
+  "three_effective_choices_or_full_task_or_method_advantage_established": false,
+  "A_observability_confound_preserved": true,
+  "B_resource_censor_is_not_native_skill_or_search_budget_failure": true,
+  "source_throughput_cause_not_established": true,
+  "new_physics_Actor_Renderer_fit_dispatch": 0,
+  "original_records_or_closed_caps_modified": false
+}

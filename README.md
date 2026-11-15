@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前T首对闭合（2026-11-15 19:21）
+
+A原RGBD关联门拒绝保持；B唯一main因原wall watchdog停止（resource_censored=true），主世界12.720sim/2544命令，1次研究选择/原NAV option1/Actor-forward524、terminal receipt0/重构0。两支均未完整任务，不能宣称lookahead收益或搜索超时。已独立核原A462/B995行完整journal链及原三视频SHA，原片是完整可用失败/截断episode而非成功母版。下一为已收源的独立固定两NAV观测资格与新源吞吐准备，Data唯一owner，不重启旧root/抬旧cap。见operations/T_COMPLEX_01_CLOSED_PAIR_AND_NEXT_CN.md。
+
 ## 当前T实际方法消费（2026-11-15 18:37）
 
 本组独立读原A/B记录：前448个capture命令8通道逐字节相同，第1public query仅存储path异。A首PUSH拒绝保持；B实际多步选择C(9.7,0)、规划.1954s无greedy fallback，首原NAV(-.08,-1.8)已安装并于tick449/time2.245发原Actor任务命令。只证明真实研究选择进入原consumer，不是NAV成功/三选择/任务收益；B终态与视频待原件，源/Actor/原门不改。见operations/T_COMPLEX_01_ACTUAL_FIRST_DECISION_CN.md。
