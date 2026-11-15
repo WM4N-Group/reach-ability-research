@@ -31,7 +31,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "761861a3d898b18ef213a6be6612c3b52353680fdfff0b6b2b3aaf4a46db2968",
+  "protocol_config_sha256": "1868b3661a474449930c37be76dd3d484d4b830b8f282afe12e12bd23aea291b",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",

@@ -212,5 +212,15 @@
       "CLIMB": 4
     },
     "complete_cost_provider_or_native_domain_qualified": false
+  },
+  "latest_plan_seen": {
+    "at": "2026-11-16T00:25:39.630632+08:00",
+    "version": "2026-11-16 00:03",
+    "sha256": "34c169d5abfc7edc112ac0febd6e372052021d478c847e77c60050791fdd430b",
+    "new_parallel_group": "V-JEPA",
+    "current_V4_five_arm_and7a6_identity_unchanged": true,
+    "new_model_may_only_enter_separately_registered_future_WM_ablation": true,
+    "old_OBS_or_critic_bulk_permissions_not_relabelled_for_JEPA": true,
+    "Reach_still_owns_current_chain_optimizer_critic_and_existing_WM_integration": true
   }
 }

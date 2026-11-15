@@ -2,7 +2,7 @@
   "at": "2026-11-15T23:08:31.473779+08:00",
   "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
   "role": "REACH_INCREMENTAL_METHOD_CALLER_HANDOFF_NOT_NEW_SCOPE_OR_NATIVE_PERMISSION",
-  "config_sha256": "761861a3d898b18ef213a6be6612c3b52353680fdfff0b6b2b3aaf4a46db2968",
+  "config_sha256": "1868b3661a474449930c37be76dd3d484d4b830b8f282afe12e12bd23aea291b",
   "code_files": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
@@ -49,5 +49,6 @@
   "direct_live_query_provider": "CausalWMQueryPort(build_original_buffer(model,normalization,fresh_output,query_source_root=original_query_parts), role=CURRENT_ORIGINAL_SENSOR_AND_ISSUED_HISTORY, target_provider=source_WM_anchor_descriptor)",
   "source_callback_binding": "Attach source original observer packets to port.on_visual and exact accepted200Hz references/actual native option owner to port.on_issued, never future candidate owner",
   "source_public_effects_received_but_not_complete_cost_or_variant_permission": true,
-  "old_OBS_no_model_input_purpose_preserved": true
+  "old_OBS_no_model_input_purpose_preserved": true,
+  "latest_additive_JEPA_plan_seen_no_current_WM_hot_swap": "34c169d5abfc7edc112ac0febd6e372052021d478c847e77c60050791fdd430b"
 }

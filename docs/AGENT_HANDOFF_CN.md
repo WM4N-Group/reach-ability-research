@@ -4,6 +4,8 @@
 
 ### 2026-11-16 00:19：原WM因果query三函数已接成callback接口；开发源27声明已接，未有现场query或预测结果
 
+- **收尾复核发现新计划并已接续：** 00:03总计划34c169d5…新增独立V-JEPA组，并行未来候选WM研发，不阻当前V4五组。Reach仍负责当前链优化/critic/原WM接入，现A/B仍精确7a6；不热换JEPA模型、不冒第六arm，不把旧OBS/audit或critic/bulk用途自动转JEPA训练，也未替新组创建聊天/任务/训练或改其源码。当前V4的source/native/数据边界不变。
+
 - **把原WM query producer接成可直接调用的实码，未冒现场已通：** 新v4_causal_wm_query.py复用原BehaviorQueryBuffer/filter_full_native/resize_packet三段完整定义逐byte提取，接原7a6 loader/RawWM adapter；不导入trainer或native-control模块。source可把原observer packet挂on_visual、原accepted200Hz位置参考/实际owner挂on_issued，再由当前严格public45D直接build。target8逐WM实际anchor RGB字节SHA/time绑定，另时刻off-grid图/旧left alias拒绝；缺descriptor保None，不补历史/改observed owner。生产限定真实restored原7a6+原Buffer和public IntentBatch/Observation，fixture/audit不能升级成live context。
 - **测试身份分清：** 新10项port/源码/clock/生产fixture隔离回归通过，累计72新＋38原=110软件检查；另46308一次明确SOFTWARE_FIXTURE调用原三函数，3 synthetic帧/43 synthetic参考的40interval＋3tail、输入存档和clock过，错anchor/fixture→live均拒绝，临时数组已删。使用FixtureModel，不加载实际权重，不作真实WM预测或当前V4 query；此前真实7a6 CPU restore仍仅1次。此次真实API/WM未来预测/Actor/world/fit/新native派发0，CPU smoke不是研究样本/现场资格。摘要在`/home/yuanyue/reach-ability-research/operations/V4_ORIGINAL_QUERY_PORT_CPU_SMOKE_20261116.json`。
 - **新source公共声明已按owner manifest接收为开发快照：** PUBLIC_EFFECTS/DECLARED_MAP/acceptance共27语义声明（17NAV/6PUSH/4CLIMB）/24 anchors；完整cost与actual exit均None、prep/exit variants空、native qualified=false。不是immutable runtime freeze、当前合法动作或完整cost provider，Reach继续负责共享后继估计，不要求Data/AINav代写研究评价器或把None补0。公开快照`protocols/2026-11-16/V4-public-source-intake-v1/`，source新增E真实成功/A—D完整live原片及Data容量合格下并行要求已读，未据此新开world/抢卡/借E结果调其它arm。
