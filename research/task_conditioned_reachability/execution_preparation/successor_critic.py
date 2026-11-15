@@ -258,11 +258,13 @@ def _evaluate_model(data,protocol,rows,model):
         baseline_current_errors=[abs(model['baseline_current_time_mean_s']-r['current_READY_s']) for r in part
                                  if r.get('current_READY_s') is not None and model['baseline_current_time_mean_s'] is not None]
         unknown=sum(p['complete_successor_feasibility']=='UNKNOWN' for _,p in predictions)
-        log_losses=[];baseline_log_losses=[];baseline_full_errors=[]
+        log_losses=[];baseline_log_losses=[];baseline_full_errors=[];brier=[];baseline_brier=[]
         for r,p in predictions:
             if r['outcome']=='CENSORED':continue
             prob=min(1.-1e-12,max(1e-12,p['uncalibrated_success_score']));label=r['outcome']=='SUCCESS'
             log_losses.append(-math.log(prob if label else 1.-prob))
+            brier.append((p['uncalibrated_success_score']-float(label))**2)
+            baseline_brier.append((model['baseline_success_score']-float(label))**2)
             base=min(1.-1e-12,max(1e-12,model['baseline_success_score']))
             baseline_log_losses.append(-math.log(base if label else 1.-base))
         for row in part:
@@ -279,8 +281,14 @@ def _evaluate_model(data,protocol,rows,model):
             qualified_native_or_execution_PASS_predictions=0,
             current_READY_time_MAE_s=None if not current_errors else sum(current_errors)/len(current_errors),
             train_only_mean_baseline_current_READY_time_MAE_s=None if not baseline_current_errors else sum(baseline_current_errors)/len(baseline_current_errors),
+            current_READY_time_RMSE_s=None if not current_errors else math.sqrt(math.fsum(e*e for e in current_errors)/len(current_errors)),
+            train_only_mean_baseline_current_READY_time_RMSE_s=None if not baseline_current_errors else math.sqrt(math.fsum(e*e for e in baseline_current_errors)/len(baseline_current_errors)),
+            uncalibrated_Brier_score=None if not brier else math.fsum(brier)/len(brier),
+            train_only_constant_baseline_Brier_score=None if not baseline_brier else math.fsum(baseline_brier)/len(baseline_brier),
             uncalibrated_log_loss=None if not log_losses else sum(log_losses)/len(log_losses),
             successful_full_time_MAE_s=None if not full_errors else sum(full_errors)/len(full_errors),
+            successful_full_time_RMSE_s=None if not full_errors else math.sqrt(math.fsum(e*e for e in full_errors)/len(full_errors)),
+            train_only_mean_baseline_full_time_RMSE_s=None if not baseline_full_errors else math.sqrt(math.fsum(e*e for e in baseline_full_errors)/len(baseline_full_errors)),
             train_only_constant_baseline_log_loss=None if not baseline_log_losses else sum(baseline_log_losses)/len(baseline_log_losses),
             train_only_mean_baseline_full_time_MAE_s=None if not baseline_full_errors else sum(baseline_full_errors)/len(baseline_full_errors),
             used_for_parameter_fit=False,statistical_or_native_qualification_claimed=False)

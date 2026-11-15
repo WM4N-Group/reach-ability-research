@@ -246,6 +246,23 @@ class SuccessorCriticTests(unittest.TestCase):
         self.assertEqual(result['attempt_spending']['unreached_decision']['known_spent_sim_s'],7.)
         self.assertEqual(before,result['model'])
 
+    def test_predeclared_Brier_and_RMSE_preserve_censor_and_missing_denominators(self):
+        row=self.data['rows'][-1];row.update(outcome='CENSORED',full_success_s=None)
+        out=fit_and_evaluate(self.data,self.auth,self.protocol);v=out['heldout_metrics']['VALIDATION']
+        known=[r for r in self.data['rows'] if r['split']=='VALIDATION' and r['outcome']!='CENSORED']
+        scores=[predict_offline(out['model'],r['physical_features'])['uncalibrated_success_score'] for r in known]
+        expected=sum((p-float(r['outcome']=='SUCCESS'))**2 for r,p in zip(known,scores))/len(known)
+        self.assertAlmostEqual(v['uncalibrated_Brier_score'],expected)
+        self.assertGreaterEqual(v['successful_full_time_RMSE_s']+1e-12,v['successful_full_time_MAE_s'])
+        self.assertGreaterEqual(v['current_READY_time_RMSE_s']+1e-12,v['current_READY_time_MAE_s'])
+        for row in self.data['rows']:
+            if row['split']=='VALIDATION':row.update(outcome='CENSORED',full_success_s=None)
+        empty=fit_and_evaluate(self.data,self.auth,self.protocol)['heldout_metrics']['VALIDATION']
+        self.assertIsNone(empty['uncalibrated_Brier_score'])
+        self.assertIsNone(empty['train_only_constant_baseline_Brier_score'])
+        self.assertIsNone(empty['successful_full_time_RMSE_s'])
+        self.assertIsNone(empty['train_only_mean_baseline_full_time_RMSE_s'])
+
     def test_missing_group_or_wrong_protocol_or_future_clock_refused(self):
         self.data['rows']=[r for r in self.data['rows'] if r['split']!='CALIBRATION'];self.data['closed_attempt_count']=len(self.data['rows'])
         with self.assertRaisesRegex(ValueError,'Insufficient'):self.validate()

@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 13:44：新TRAIN01/02真实PASS已消费并提取两条因果48槽监督行；03 plus-left唯一main已派，未提前fit/判gate
+
+- 正式ordinal01 f253b6af…46成员/ordinal02 daa22f04…41成员SHA已核，原9流cold/ledger/新purpose/TRAIN/原2f82530d…/new program/同scope CAS与实际journal链绑定。01于13:17:30 closed，121.085main sim；02于13:30:25 closed，109.865main sim。不是旧DEV重标/复用zero/世界，仍同一个full4 TRAIN scene，不增加独立scene数或新优化收益。
+- 新`operations/extract_new_critic_attempt.py`已在46308真实执行：首次原CLIMB judgment PREPARE→exact judgment_ref preparation binding→Host Observation语义SHA，分别落实际query4/query3而非固定frame；复用原48槽函数SHA efe42ae3…，public reference+公开45D+age，原候选API与actual native child goal一致。private judgment只用状态/clock、后果只作监督，private pose/FF/模型ID不入48槽；native install明确命令未发、首次命令分别97.290/86.585，均晚于feature97.285/86.580，age0。RGBD仅SHA不解码/不跑proposer，raw48值留远端。
+- 两新行均original偏移[0,0]/SUCCESS：PREPARE→READY分别13.460/13.485sim，至原请求CLIMB成功终点23.800/23.285；不冒far-bank整任务或方法胜出。原actual_choice_changed布尔涉及共享stow，不能代替准备offset消费。2prefix/2不同公开proprio状态但仅1scene、目前2成功/0失败；完整6TRAIN尚未齐，既不fit也不提前No-Go/补类。新批已闭合2scope费用256.970sim/1567.950872ledger wall/高水位和339712775bytes，open03/其余未执行/旧未知另列，不冒全batch或全项目账。
+- 13:39只读H快照：03 full4-left+lateral_plus_0p04新程序3259848d…已13:37:07 CAS唯一main，zero/main各1；04—06尚未派，07—12仍TRAIN门阻，不重发。新reader旧DEV实包在读数组/journal前拒绝，未知postdecision失败不凭error字符串造负标签：保UNKNOWN待原失败证据；未达不造输入、resource censor单列。首版reader的journal索引断言已按正式cold raw pin修正，未改Data任何artifact/物理，版本01v1/v2只算同一条。
+- 已在未采heldout前补齐原协议承诺的Brier/常量Brier及READY/成功条件耗时RMSE/均值基线RMSE；censor与缺分母None规则不变，模型/超参/阈值/协议不变。本地/46308各32回归过仅软件，真实fit0/完整合格TRAIN批0/未出training manifest。下一消费03—06 closure、真实失败源资格、完整6门→一次真实fit或有限No-Go，再CAL/VAL只评价冻结model；G4/G5/G6继续。
+- 入口`/home/yuanyue/reach-ability-research/operations/G2_NEW_TRAIN_ROWS_EXTRACTION_CN.md`与operations/G2_NEW_TRAIN_FIRST_TWO_ROWS_20261115.json；raw输出在/mnt/yuanyue/reach-runs/G2-new-critic-ordinal01-extracted-20261115-v2.json、ordinal02对应v1。旧5DEV失败/UNKNOWN费用/dirty/closed/12N/4s/identity/immutable/support/guard/QP/FIFO/stop/独立TEST0/主要贡献未证保持。
+
 ### 2026-11-15 13:04：新用途12程序已真实冻结、首TRAIN已派main；修复TRAIN先fit与heldout门的时序循环，不改原协议
 
 - 已在46308只读核Data新cohort12个freeze SHA、每个plan和实际prepare/worker/installer的freeze成员：原2f82530d…协议、whole-scene split、condition、assigned arm、attempt ordinal和new-purpose一致。首TRAIN full4-left-original程序b738125e…，13:04:02 H已CAS_DISPATCHED_MAIN、own-zero/main各1；其余11未派，CAL/VAL被TRAIN门硬阻。静态匹配不冒native成功；首main终态未消费，不改Data源/进程/锁/authority，不重发。
