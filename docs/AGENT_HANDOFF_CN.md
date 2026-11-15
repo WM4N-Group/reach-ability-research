@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 00:50：准备路径的真实完整后继评价新增5条；到READY仍可CLIMB碰撞，不把失败短时当低成本
+
+- **已读最新总计划bdfc613c…：** 相对00:03主体新增V-JEPA低优先资源/许可核查说明，当前V4五组、Data唯一physical owner、原7a6与数据用途不变。AINav00:27已交默认OFF冷资产/Runtime新入口及新组件zero≤1/main0请求；收尾核到Data新原件：00:41已只读stage全部19 source/3 base，00:47形成466成员新component inventory（program b125b188…），均明确no H write/physical dispatch，空闲快照不是lease；因此不再写“未采用任何新源”，也不冒zero已启动/通过。本组没有代启动或动他组H/进程/锁。
+- **不是又刷fixture，而是消费真实原件：** reader先因只认ordinal01首包拒绝原02；现准确支持原fixed-closed-v2（不放宽固定24/split/用途/禁止fit门）。46308新增02/03/05/09成功及10实际started-CLIMB后hard stop五条exact首PREPARE公开48槽/阶段端点；合先前01共6条。完整10个closed分母逐原release/小成员SHA/原journal全链核：**5成功/5原失败，6到CLIMB决策/4未到**。04/06/07/08未到不造CLIMB负例；10有READY和started，随后base_collision，完整成功成本None，不造原本没有的failed receipt。
+- **后继评价已有具体真实反例，但不是优化收益：** 01/09同声明g01-left、同95.37sim查询、实测public45＋age完全相等，+0.04的READY少.125s而完整requested成功仅少.065s（后继多.060s）。02/10同g01-right/85.9sim且public45＋age相等，+0.04为13.425s READY/24.185s完整成功；−0.04为13.625s READY，后继4.410s即base_collision，18.035s仅决策至失败耗时。两者都READY仍有不同完整结局；不能按更短失败时长获胜。这里未证明RGBD/完整公开观测或隐藏世界严格同起点，不叫因果/本方法增益、不硬编码到V4路线。
+- **准确数据角色与交付：** 6个不同完整48槽/4个不同public45＋age，仍一既有TRAIN祖先，不是独立holdout/学会泛化。新代码25项针对性软件检查两端过（3格式＋8端点新增），不是物理样本；仅回顾测量，无fit/refit/CAL-VAL评分/WM或VLM调用/新native。原fit3371ac20…/model a8b1f165…保持。标量与SHA约30KiB留本地，48槽向量、数组、权重、原片/环境均远端。说明`/home/yuanyue/reach-ability-research/operations/BULK24_PREPARATION_SUCCESSOR_FINDINGS_20261116_CN.md`；原完整汇总SHA97509b4e…留`/mnt/yuanyue/reach-runs/bulk24-new-closed-public-boundaries-20261116-v1/FIRST10_STAGE_CONTRASTS.json`。
+- **当前未完成仍如实：** V4当前因果WM query/forward仍0，真实restore仍仅1；B/D完整名义后继cost provider、准备退出变体和原native caller未接全，不能用这些bulk回顾端点冒在线预测/五组结果。三箱原2.4×1.4×.20m/.5kg/mu .4/.8已在技能域（numeric diff原为空），scene6394740e…/高台不擅改；.20→.60原20cm增量能力/static deck/owner/完整terminal缺口不绕过。全部dirty、closed、Actor/12N/4s/FF/QP/FIFO/CLIMB stop保留，旧实验不重开，AINav原成功不计Reach贡献。
+
 ### 2026-11-16 00:19：原WM因果query三函数已接成callback接口；开发源27声明已接，未有现场query或预测结果
 
 - **收尾复核发现新计划并已接续：** 00:03总计划34c169d5…新增独立V-JEPA组，并行未来候选WM研发，不阻当前V4五组。Reach仍负责当前链优化/critic/原WM接入，现A/B仍精确7a6；不热换JEPA模型、不冒第六arm，不把旧OBS/audit或critic/bulk用途自动转JEPA训练，也未替新组创建聊天/任务/训练或改其源码。当前V4的source/native/数据边界不变。
