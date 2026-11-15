@@ -91,10 +91,85 @@ def correlate_semantic_successes(records, requests, journal_path):
              terminals[0]['receipt']['option_sha256'] == request['native_option_sha256'], 'Literal requested-skill terminal receipt')
 
 
+
+def requested_climb_endpoint(rows, intent, journal_path, result, *, allow_native_hard_stop=False):
+    """Audit-only exact READY -> requested CLIMB terminal, never impute success cost.
+
+    An uncaught native hard stop may have no failed receipt. Retain that literal
+    fact rather than creating one or relabelling failure duration as success time.
+    Private failure-event metrics are not read; only outcome error/clock binds.
+    """
+    ready = [(i,r) for i,r in rows.items() if r['payload'].get('event') == 'skill_execution_judgment'
+        and r['payload'].get('intent_sha256') == intent and r['payload'].get('status') == 'READY'
+        and r['payload'].get('spec',{}).get('skill') == 'CLIMB'
+        and r['payload']['spec'].get('target_ref') == 'cuboid-2:upper-entry']
+    need(len(ready) == 1, 'Exact same-intent CLIMB READY, never preparation receipt as READY')
+    ri, rr = ready[0]
+    climbs = [(i,r) for i,r in rows.items() if i > ri
+        and r['payload'].get('event') == 'intent_native_execution_bound'
+        and r['payload'].get('intent_sha256') == intent and r['payload'].get('execution_role') == 'interaction'
+        and r['payload'].get('native_option',{}).get('skill') == 'CLIMB'
+        and r['payload'].get('judgment_ref') == journal_path+'#'+str(ri)]
+    need(len(climbs) == 1, 'Exact requested CLIMB bound to that READY judgment')
+    bi, br = climbs[0]; native = br['payload']['native_option_sha256']
+    need(br['payload']['native_option'].get('target_ref') == rr['payload']['spec']['target_ref'],
+         'Same exact requested target across READY and native binding')
+    outcomes = [(i,r) for i,r in rows.items() if i > bi
+        and r['payload'].get('event') == 'intent_actual_native_outcome'
+        and r['payload'].get('intent_sha256') == intent and r['payload'].get('execution_role') == 'interaction'
+        and r['payload'].get('native_option_sha256') == native]
+    ready_time = rr['payload']['state']['time_s']
+    from research.task_conditioned_reachability.execution_preparation.successor_aware_choice import number
+    need(number(ready_time) and ready_time >= 0, 'Actual finite READY clock')
+    if result.get('passed') is True:
+        need(len(outcomes) == 1, 'Literal single requested interaction terminal')
+        oi, outcome = outcomes[0]; payload = outcome['payload']; receipt = payload['receipt']
+        need(payload.get('intent_succeeded') is True and receipt.get('status') == 'succeeded'
+             and receipt.get('option_sha256') == native, 'Original succeeded receipt for exact requested CLIMB')
+        end = receipt['time_s']
+        witness = dict(endpoint_kind='LITERAL_REQUESTED_CLIMB_SUCCEEDED', native_receipt_status='succeeded',
+            outcome_sha256=outcome['sha256'], native_hard_stop_sha256=None, failure_clock_sha256=None,
+            native_start_sha256=None, source_error=None)
+    else:
+        need(allow_native_hard_stop is True and result.get('passed') is False
+             and result.get('error_class') == 'RuntimeError' and not outcomes,
+             'Failure requires explicit original native hard-stop route, not timeout/absent terminal as failed receipt')
+        error = result.get('error')
+        need(type(error) is str and error and result.get('whole_task_success_claimed') is False,
+             'Literal closed native failure, never whole-task success')
+        starts = [(i,r) for i,r in rows.items() if i > bi and r['payload'].get('event') == 'ainav_native_receipt'
+            and r['payload'].get('receipt',{}).get('option_sha256') == native
+            and r['payload']['receipt'].get('status') == 'started']
+        stops = [(i,r) for i,r in rows.items() if i > bi and r['payload'].get('event') == 'ainav_chain_hard_stop'
+            and r['payload'].get('error') == error and r['payload'].get('native_safety_handling_required') is True
+            and r['payload'].get('automatic_retry') is False]
+        failures = [(i,r) for i,r in rows.items() if i > bi and r['payload'].get('event') == 'private_terminal_controller_failure'
+            and r['payload'].get('error') == error and r['payload'].get('model_input') is False
+            and r['payload'].get('live_state_written') is False]
+        need(len(starts) == len(stops) == len(failures) == 1, 'Exact original started CLIMB/hard-stop/failure-clock witnesses')
+        si, sr = starts[0]; hi, hr = stops[0]; fi, fr = failures[0]
+        need(bi < si < hi < fi, 'Original native started before hard stop and failure clock')
+        intervening = [r for i,r in rows.items() if si < i < hi and r['payload'].get('event') == 'native_option_installed']
+        need(not intervening, 'No later native owner installed between CLIMB start and hard stop')
+        end = fr['payload']['time_s']
+        need(number(end) and end == result.get('actual_main_world_sim_s'), 'Original closed result clock equals literal failure clock')
+        need(number(sr['payload']['receipt'].get('time_s')) and
+             ready_time <= sr['payload']['receipt']['time_s'] <= end, 'Finite causal started receipt clock')
+        witness = dict(endpoint_kind='LITERAL_CHAIN_HARD_STOP_DURING_STARTED_CLIMB_NO_TERMINAL_RECEIPT',
+            native_receipt_status=None, outcome_sha256=None, native_hard_stop_sha256=hr['sha256'],
+            failure_clock_sha256=fr['sha256'], native_start_sha256=sr['sha256'], source_error=error)
+    need(number(end) and ready_time <= end, 'Nested actual endpoint clocks')
+    return dict(witness, ready_time_s=ready_time, end_time_s=end, READY_sha256=rr['sha256'],
+                binding_sha256=br['sha256'], READY_line=ri, CLIMB_binding_line=bi,
+                native_option_sha256=native)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     for name in ('release-root', 'expected-release-sha', 'source-root', 'TRAIN-root', 'expected-TRAIN-release-sha', 'output'):
         p.add_argument('--' + name, required=True)
+    p.add_argument('--include-native-hard-stop', action='store_true',
+                   help='Audit exact failed started-CLIMB hard stop; no success-cost imputation')
     a = p.parse_args(); pins = {}
     sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
     def read(path, expected=None):
@@ -122,7 +197,10 @@ def main():
          ledger['program_sha256'] == release['program_sha256'] and all(r['closed'] and r['usage_known'] for r in ledger['rows']), 'Closed exact physical program')
     need(len(ledger['rows']) == 2 and ledger['rows'][1]['report_sha256'] == release['actual_summary']['source_result_sha256'], 'One zero/main; closed ledger result')
     need(result['new_use_protocol_sha256'] == PROTOCOL_SHA and result['source_scene_sha256'] == scheduled['source_scene_sha256'], 'Actual new-use native source')
-    semantic_requests = semantic_success_gate(result)
+    passed = result.get('passed') is True
+    need(passed or a.include_native_hard_stop and result.get('passed') is False,
+         'Default reader still requires original success; native hard-stop analysis is explicit')
+    semantic_requests = semantic_success_gate(result) if passed else None
     need(cold['passed'] is True and cold['source_result_sha256'] == release['actual_summary']['source_result_sha256']
          and all(cold['checks'].values()), 'Data cold checks consumed, not re-run')
     need(dt.datetime.fromisoformat(protocol['registered_at']) <= dt.datetime.fromisoformat(freeze['at']) <
@@ -146,7 +224,9 @@ def main():
     chain = evidence.verify(journal); need(chain == cold['journal_chain'] == ref['verified_chain'], 'Independent complete original journal chain')
     records = [json.loads(line) for line in journal.read_text().splitlines()]
     rows = {i:r for i,r in enumerate(records, 1)}
-    correlate_semantic_successes(records, semantic_requests, str(journal))
+    if passed: correlate_semantic_successes(records, semantic_requests, str(journal))
+    else: need(cold.get('source_resource_censored') is False and cold.get('source_result_passed') is False,
+               'Original native failure, not resource censor relabelled as negative successor')
     judgments = [(i,r) for i,r in rows.items() if r['payload'].get('event') == 'skill_execution_judgment'
         and r['payload'].get('spec',{}).get('skill') == 'CLIMB' and r['payload'].get('spec',{}).get('target_ref') == 'cuboid-2:upper-entry']
     need(judgments and judgments[0][1]['payload']['status'] == 'PREPARE', 'Actual first PREPARE, no nearest/READY substitution')
@@ -172,14 +252,10 @@ def main():
     starts = [r for i,r in rows.items() if i > bi and r['payload'].get('event') == 'ainav_native_receipt'
         and r['payload'].get('receipt',{}).get('option_sha256') == bound['native_option_sha256'] and r['payload']['receipt']['status'] == 'started']
     need(len(starts) == 1 and starts[0]['payload']['receipt']['time_s'] >= clock, 'Actual candidate start follows feature clock')
-    ready = [(i,r) for i,r in judgments if i > ji and r['payload'].get('intent_sha256') == intent and r['payload']['status'] == 'READY']
-    outcomes = [(i,r) for i,r in rows.items() if i > bi and r['payload'].get('event') == 'intent_actual_native_outcome' and r['payload'].get('intent_sha256') == intent and r['payload'].get('execution_role') == 'interaction' and r['payload'].get('intent_succeeded') is True and r['payload'].get('receipt',{}).get('status') == 'succeeded']
-    need(len(ready) == len(outcomes) == 1, 'Literal READY and same-intent interaction success')
-    oi,outcome = outcomes[0]; payload = outcome['payload']; receipt = payload['receipt']
-    climbs = [r for i,r in rows.items() if ready[0][0] < i < oi and r['payload'].get('event') == 'intent_native_execution_bound' and r['payload'].get('intent_sha256') == intent and r['payload'].get('execution_role') == 'interaction' and r['payload'].get('native_option_sha256') == payload['native_option_sha256']]
-    need(len(climbs) == 1 and climbs[0]['payload']['native_option']['skill'] == 'CLIMB' and
-         receipt['option_sha256'] == payload['native_option_sha256'], 'Original actual CLIMB endpoint')
-    ready_time = ready[0][1]['payload']['state']['time_s']; end = receipt['time_s']; need(clock <= ready_time <= end, 'Causal nested endpoint clocks')
+    endpoint = requested_climb_endpoint(rows, intent, str(journal), result,
+        allow_native_hard_stop=a.include_native_hard_stop)
+    ready_time = endpoint['ready_time_s']; end = endpoint['end_time_s']
+    need(clock <= ready_time <= end, 'Causal nested endpoint clocks')
     train_root = Path(a.TRAIN_root); train_release = read(train_root/'TRAIN_GATE_AND_FIT_RELEASE.json', a.expected_TRAIN_release_sha)
     train = read(train_root/'CLOSED_TRAIN_ONLY_DATASET.json', train_release['files']['CLOSED_TRAIN_ONLY_DATASET.json'])
     need(len(train['rows']) == 6 and train['feature_profile_sha256'] == protocol['feature_profile_sha256'] and
@@ -191,7 +267,12 @@ def main():
     scalar = dict(status='ACTUAL_BULK24_PUBLIC_BOUNDARY_MEASURED_NOT_FIT',ordinal=scheduled['ordinal'],attempt_key=scheduled['attempt_key'],
         group_id=scheduled['group_id'],prefix_side=scheduled['prefix_side'],candidate_id=scheduled['candidate_id'],split='TRAIN',
         new_geometry_definition_sha256=scheduled['source_scene_sha256'],existing_TRAIN_ancestor=scheduled['scene_ancestry_key'],
-        first_PREPARE_time_s=clock,current_READY_s=ready_time-clock,full_requested_CLIMB_success_s=end-clock,
+        first_PREPARE_time_s=clock,current_READY_s=ready_time-clock,
+        full_requested_CLIMB_success_s=end-clock if passed else None,
+        decision_to_native_hard_stop_s=None if passed else end-clock,
+        READY_to_native_hard_stop_s=None if passed else end-ready_time,
+        source_result_passed=passed,literal_endpoint=endpoint['endpoint_kind'],
+        literal_CLIMB_terminal_receipt_status=endpoint['native_receipt_status'],
         task_sim_s=result['actual_main_world_sim_s'],feature_slots=len(features),feature_age_s=features[-1],
         full48_feature_sha256=feature_hash,state46_sha256=state_hash,exact_full48_matches_in_frozen_TRAIN=len(duplicates),
         exact_state46_matches_in_frozen_TRAIN=len(state_duplicates),journal_chain=chain,
@@ -203,7 +284,8 @@ def main():
         reader_sha256=sha(__file__),scalar=scalar,physical_features=features,geometry_from_original_public_anchor=geometry,
         causal_binding=dict(judgment_line=ji,judgment_sha256=jr['sha256'],proposal_sha256=pr['sha256'],binding_sha256=br['sha256'],
             physical_observation_sha256=bound['physical_observation_sha256'],query_file=str(query),
-            native_install_sha256=installed[0]['sha256'],native_start_sha256=starts[0]['sha256'],native_start_time_s=starts[0]['payload']['receipt']['time_s'],READY_sha256=ready[0][1]['sha256'],outcome_sha256=outcome['sha256']),
+            native_install_sha256=installed[0]['sha256'],native_start_sha256=starts[0]['sha256'],native_start_time_s=starts[0]['payload']['receipt']['time_s'],READY_sha256=endpoint['READY_sha256'],outcome_sha256=endpoint['outcome_sha256'],
+            requested_CLIMB_endpoint=endpoint),
         source_pins=pins,baseline_exact_feature_match_sample_ids=duplicates,baseline_exact_state_match_sample_ids=state_duplicates,
         novelty_does_not_establish_learnability_or_independent_scene=True,new_physics_Actor_Renderer_fit_or_critic_predictions=0)
     with Path(a.output).open('x') as f: json.dump(report,f,ensure_ascii=False,indent=2,allow_nan=False);f.write('\n')

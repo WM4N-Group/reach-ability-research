@@ -115,4 +115,60 @@ class BulkRegistrationGateTests(unittest.TestCase):
         with self.assertRaises(ValueError): self.gate()
 
 
+class BulkRequestedEndpointTests(unittest.TestCase):
+    def setUp(self):
+        from operations.measure_bulk24_public_boundary import requested_climb_endpoint
+        self.read = requested_climb_endpoint
+        self.result = dict(passed=False, whole_task_success_claimed=False,
+            error_class='RuntimeError', error='base_collision', actual_main_world_sim_s=20.)
+        def row(**payload): return dict(payload=payload, sha256='SOFTWARE_ONLY')
+        self.rows = {
+            1: row(event='skill_execution_judgment', intent_sha256='intent', status='READY',
+                spec=dict(skill='CLIMB',target_ref='cuboid-2:upper-entry'),state=dict(time_s=10.)),
+            2: row(event='intent_native_execution_bound',intent_sha256='intent',execution_role='interaction',
+                judgment_ref='/FIXTURE#1',native_option_sha256='native',
+                native_option=dict(skill='CLIMB',target_ref='cuboid-2:upper-entry')),
+            3: row(event='ainav_native_receipt',receipt=dict(option_sha256='native',status='started',time_s=10.005)),
+            4: row(event='ainav_chain_hard_stop',error='base_collision',native_safety_handling_required=True,automatic_retry=False),
+            5: row(event='private_terminal_controller_failure',error='base_collision',model_input=False,
+                live_state_written=False,time_s=20.),
+        }
+    def read_failure(self):
+        return self.read(self.rows,'intent','/FIXTURE',self.result,allow_native_hard_stop=True)
+    def test_explicit_native_hard_stop_does_not_create_a_failed_receipt(self):
+        out = self.read_failure()
+        self.assertIsNone(out['native_receipt_status']); self.assertIsNone(out['outcome_sha256'])
+        self.assertEqual(out['ready_time_s'],10.);self.assertEqual(out['end_time_s'],20.)
+        self.assertEqual(out['source_error'],'base_collision')
+    def test_default_success_reader_still_refuses_native_failure(self):
+        with self.assertRaises(ValueError): self.read(self.rows,'intent','/FIXTURE',self.result)
+    def test_ready_bound_to_other_target_or_judgment_cannot_supply_endpoint(self):
+        for field,value in [('judgment_ref','/FIXTURE#99'),('native_option',dict(skill='CLIMB',target_ref='another'))]:
+            before=self.rows[2]['payload'][field];self.rows[2]['payload'][field]=value
+            with self.assertRaises(ValueError): self.read_failure()
+            self.rows[2]['payload'][field]=before
+    def test_missing_started_is_not_executed_CLIMB(self):
+        self.rows[3]['payload']['receipt']['status']='admitted'
+        with self.assertRaises(ValueError): self.read_failure()
+    def test_original_result_failure_clock_must_match_not_use_spent_success_time(self):
+        self.result['actual_main_world_sim_s']=25.
+        with self.assertRaises(ValueError): self.read_failure()
+    def test_intervening_native_owner_cannot_be_assigned_to_CLIMB(self):
+        self.rows[3.5]=dict(payload=dict(event='native_option_installed'),sha256='SOFTWARE_ONLY')
+        with self.assertRaises(ValueError): self.read_failure()
+    def test_missing_or_other_error_is_not_original_native_failure(self):
+        self.rows[4]['payload']['error']='watchdog'
+        with self.assertRaises(ValueError): self.read_failure()
+    def test_success_requires_literal_matching_native_terminal(self):
+        self.result.update(passed=True)
+        self.rows={k:v for k,v in self.rows.items()if k<4}
+        self.rows[4]=dict(sha256='SOFTWARE_SUCCESS',payload=dict(event='intent_actual_native_outcome',
+            intent_sha256='intent',execution_role='interaction',native_option_sha256='native',intent_succeeded=True,
+            receipt=dict(status='succeeded',option_sha256='native',time_s=20.)))
+        out=self.read(self.rows,'intent','/FIXTURE',self.result)
+        self.assertEqual(out['native_receipt_status'],'succeeded');self.assertEqual(out['outcome_sha256'],'SOFTWARE_SUCCESS')
+        self.rows[4]['payload']['receipt']['option_sha256']='OTHER'
+        with self.assertRaises(ValueError): self.read(self.rows,'intent','/FIXTURE',self.result)
+
+
 if __name__ == '__main__': unittest.main()
