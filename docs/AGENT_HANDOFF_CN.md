@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 01:46：原target8可见平面计算接到WM实际anchor；64软件检查两端过，现场query/forward仍0
+
+- **已读更新计划0e9f872b…：** 新增J组具体编码器权重许可/版本/SHA已核定（尚无实际下载/forward）的说明；Reach仍当前7a6/五组优化与critic，不接管J训练/改旧用途。AINav新eafc8c5b…/23-source destination＋selected task factory已读，public destination与原option hash保留；软件接缝不等完整driver/static deck/40cm/终点准入，也不把旧04f/19-source组件zero借给新源。
+- **直接补WM缺输入的计算，不再只留callback口：** 新v4_anchor_target8.py逐byte复用原visual_box_proposals/visible_surface_goal完整代码＋原geometry_vector函数，从原Buffer的**96×64 WM实际anchor** RGBD/K/mount计算target8。不是192×128 onboard原图/另时刻off-grid VLM图/1280×720第三视角。loader只执行几何推理闭包，不导入trainer/native/Torch/模型，private namespace不覆盖ambient模块，可复用原函数而不多造world/owner。
+- **语义关联与未知保持准确：** source只需给同一WM anchor上各public option的frame-local视觉ref或None，图像字节SHA/time/calibration严格同源；producer计算几何，不代做native/body身份关联。缺关联/无深度/同色歧义/原plane拒绝→None/UNKNOWN，不挑最大块、不补旧alias/世界pose/有效zero。原模型底层虽接受mask0，但本次**未放宽现V4的mask0弃权策略**，不将NAV路标凭空关联成箱面或用“类已写”冒A/B成立。fixture target不能升live；callback用小像素副本并前后校验，不改原history。query port传递同候选proof hash，raw WM记录实际target8/action11/duration便于未来核真实输入，仍非成功Finish/READY或完整cost。
+- **新增验证只有软件身份：** 13项新source/hash/anchor/歧义/来源隔离与query证据接缝，连10原query＋41原V4方法=64检查，本机及46308通过。另一次原NumPy函数CPU smoke约.447wall：明确synthetic96×64前平面得到[1,0,0,2,2,0,1,1]，缺关联/深度/歧义None、错anchor拒绝，原数组未改、无Torch/native/API/子进程、数组仅RAM。不是传感器/WM任务数据、现场query/forward或新物理样本；真实7a6 restore仍1、query/forward仍0。报告`/home/yuanyue/reach-ability-research/operations/V4_ORIGINAL_TARGET8_GEOMETRY_CPU_SMOKE_20261116.json` SHA d0ac33cc…；直接接线说明`/home/yuanyue/reach-ability-research/operations/V4_TARGET8_ANCHOR_INTEGRATION_CN.md`。
+- **原实测结果不冲淡：** Data/AINav组件zero1/closed PASS、.60m registry/原INPUT8/720p现场帧1保持；不是五组main/完整capture/CLIMB/成功影片，本轮未复开或把其单帧送WM。bulk前10的5原成功/5失败、6达到首PREPARE与4未达、02/10皆READY但后继不同结局保持，不重复提取或refit原critic。全部raw/权重/环境/原片留46308，本地新增仅约16KiB原推理源码＋2KiB软件报告/实现代码。
+- **未完成与边界：** 当前要接实际observer/accepted200Hz-issued owner流、同WM anchor合法语义关联/公开action11映射，再真正forward；Reach-owned完整后继名义cost/provider/准备退出域仍未闭合，不让Data代写。平台布局决定已向用户提出但尚未回，不把heartbeat“继续推进”当改图许可；三箱当前域/scene6394740e…、原Actor/12N/4s/FF/QP/FIFO/stop、旧dirty/closed全保，不重复询问同一决定、不新开agent/自动化或动他组H/锁/进程。
+
 ### 2026-11-16 01:03：已消费真实V4组件zero PASS，解除“场景未原生构造”缺口；仍非完整任务/WM/优化资格
 
 - **计划未变：** 总计划仍bdfc613c…，当前五组/原7a6/三组优先与Data唯一physical owner不变。本轮没有重刷前6个bulk边界、重复restore或再造fixture。
