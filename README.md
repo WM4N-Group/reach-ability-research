@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 原WM实际CPU恢复完成（2026-11-15 23:53）
+
+46308已有原7a6权重，精确历史路径/SHA核过；原5文件推理闭包已code-only保管并实际CPU恢复一次BehaviorM/2,819,568参数，原normalization/eval/梯度禁用通过，5.6926wall。真实restore1、WM prediction0、world/Actor/fit0，不是V4 query/native资格。新6检查与原合计100纯软件过，下一为当前sensor/已发200Hz因果IO与公开动作映射，不再等权重迁移；不改用户高台/原门。见operations/V4_ORIGINAL_WM_RESTORE_AND_IO_NEXT_CN.md。
+
 ## 用户要求三箱适配原技能（2026-11-15 23:25）
 
 三箱统一锁原2.4×1.4×.20m/0.5kg/底面mu.4/足接触mu.8，必达PUSH.60＋原reference偏置.11=.71≤.80。核当前V4原本就是此点，数值/scene SHA6394740e…未改；新增归一/越域校验和锁定副本，不虚报调参或物理通过。箱顶.20→平台.60的40cm缺口不能靠增高C解决；未擅降平台/加中间台阶。新7检查加既有共94软件过，真实API/WM/native0。见operations/V4_BOX_PARAMETERS_CN.md。

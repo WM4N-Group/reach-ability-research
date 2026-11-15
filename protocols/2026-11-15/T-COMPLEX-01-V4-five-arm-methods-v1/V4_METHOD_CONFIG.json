@@ -115,7 +115,18 @@
     "success_Finish_time_pose_READY": "UNKNOWN; not inferred from terminal raw heads",
     "no_valid_current_predictions": "AB_METHOD_UNAVAILABLE_STOP_NOT_FAKE_WM_SWITCH",
     "checkpoint_and_causal_IO_on46308_qualified": false,
-    "actual_WM_forwards_this_release": 0
+    "actual_WM_forwards_this_release": 0,
+    "checkpoint_path": "/mnt/yuanyue/data/go2-piper-world-model/own-M64B-behavior-training-20261027-v2/M64B-behavior-final.pt",
+    "checkpoint_bytes": 11314598,
+    "checkpoint_restore_on46308_verified": true,
+    "actual_checkpoint_restores": 1,
+    "actual_model_class": "BehaviorM",
+    "normalization_sha256": "23c4dccac745293493c7639d085851e71fb210bc370d2cd6cc96e656eb8def6a",
+    "CPU_only": true,
+    "causal_query_on46308_qualified": false,
+    "checkpoint_lookup_missing_resolved": true,
+    "causal_IO_and_actual_choice_not_yet_qualified": true,
+    "CPU_restore_report_sha256": "39c9a2f95f6325c5c1fa78b23a5093f38aa2671e4e74adeff92dcd8e9a41e246"
   },
   "preparation_exit_domain": "Only source proposed legal public variants. No arbitrary standoff/arm/yaw/sidepush additions; full variants still source dependent",
   "native_readiness": {
@@ -150,7 +161,7 @@
     "new_scope_or_dispatch_authority_issued": false
   },
   "scalar_reader": "research.task_conditioned_reachability.execution_preparation.v4_outcome_summary",
-  "software_only_tests": 56,
+  "software_only_tests": 62,
   "real_API_WM_Actor_worlds_or_training_started": 0,
   "production_software_fixture_mode": false,
   "production_rejects_fake_WM_or_fixture_AINav_roles": true,

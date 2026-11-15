@@ -1,0 +1,30 @@
+{
+  "checkpoint_path": "/mnt/yuanyue/data/go2-piper-world-model/own-M64B-behavior-training-20261027-v2/M64B-behavior-final.pt",
+  "checkpoint_sha256": "7a6ba61e89d824cd3e0a78f469a0925f91c784ab1f77ed4273365d6c313f569c",
+  "checkpoint_bytes": 11314598,
+  "actual_model_class": "BehaviorM",
+  "architecture_id": "piper-M64-generic11-public60-target8-options-v1",
+  "contract_sha256": "939aec4df2529f2afabed9e72aa49bef8297fe29c80e19ff54c39357276b79b8",
+  "normalization_sha256": "23c4dccac745293493c7639d085851e71fb210bc370d2cd6cc96e656eb8def6a",
+  "source_file_sha256": {
+    "visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
+    "visual_latent_control.py": "e903efaa01c231e75c827b3eeaea9cd74362fe2b426f776955e13848a08a8d25",
+    "visual_latent_highres.py": "d8587dce8ca1c10f3d225f7b75c0853e761a1ccdfff4041955cc036368ff1643",
+    "visual_latent_world_model.py": "4e19439f74fc25fe1b3d9cce78aba30b258707ad44a5958970256f99c33ca176",
+    "visual_shadow_model.py": "0be4a9aadc2dbb087971b7f00f6ec5d1844a822298a3597eac1b8e39a2baa775"
+  },
+  "device": "cpu",
+  "eval_mode": true,
+  "all_gradients_disabled": true,
+  "parameters": 2819568,
+  "real_checkpoint_restores": 1,
+  "actual_WM_prediction_forwards": 0,
+  "actual_native_worlds_or_Actor_forwards": 0,
+  "fit_or_optimizer_steps": 0,
+  "current_V4_causal_query_not_constructed": true,
+  "V4_policy_or_native_qualification_claimed": false,
+  "at": "2026-11-15T23:46:04.850448+08:00",
+  "role": "ACTUAL_ORIGINAL_WM_CPU_RESTORE_NOT_FORWARD_OR_NATIVE_QUALIFICATION",
+  "wall_s": 5.6925869069527835,
+  "forbidden_attempts": []
+}

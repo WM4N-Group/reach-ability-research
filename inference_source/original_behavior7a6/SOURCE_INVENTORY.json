@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-15T23:45:15.655644+08:00",
+  "role": "EXACT_ORIGINAL_INFERENCE_CODE_ONLY_NO_WEIGHTS_OR_TRAINING",
+  "checkpoint_sha256": "7a6ba61e89d824cd3e0a78f469a0925f91c784ab1f77ed4273365d6c313f569c",
+  "files": {
+    "visual_latent_behavior.py": {
+      "sha256": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py",
+      "bytes": 12019
+    },
+    "visual_latent_control.py": {
+      "sha256": "e903efaa01c231e75c827b3eeaea9cd74362fe2b426f776955e13848a08a8d25",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_control.py",
+      "bytes": 10030
+    },
+    "visual_latent_highres.py": {
+      "sha256": "d8587dce8ca1c10f3d225f7b75c0853e761a1ccdfff4041955cc036368ff1643",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_highres.py",
+      "bytes": 2983
+    },
+    "visual_latent_world_model.py": {
+      "sha256": "4e19439f74fc25fe1b3d9cce78aba30b258707ad44a5958970256f99c33ca176",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_world_model.py",
+      "bytes": 24030
+    },
+    "visual_shadow_model.py": {
+      "sha256": "0be4a9aadc2dbb087971b7f00f6ec5d1844a822298a3597eac1b8e39a2baa775",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_shadow_model.py",
+      "bytes": 6103
+    }
+  },
+  "original_source_modified": false,
+  "native_constructor_or_Actor_included": false,
+  "training_functions_called": false,
+  "scope": "Current user-authorized existing WM inference preparation only; not old physical program custody"
+}

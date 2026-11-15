@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 23:53：原7a6 WM已在46308实际CPU恢复；解除权重定位问题，真实当前query/策略forward仍0
+
+- **原7a6权重已在46308找到并实际恢复一次，不再等“迁移模型”：** 从原training-result精确只读路径索引核`/mnt/yuanyue/data/go2-piper-world-model/own-M64B-behavior-training-20261027-v2/M64B-behavior-final.pt`，11,314,598bytes/SHA7a6ba61e…完全一致。此前局部目录/文件名查找漏掉它，不是实际缺失；未连旧46174/复制权重到本地或Git/重开旧training root。原推理5文件55,165bytes已逐byte保管为code-only inference_source，原算法与strict checkpoint loader未改。
+- **本轮有真实模型准备结果，和软件fixture分列：** 46308现有私有环境CPU/CUDA空/线程2实际恢复BehaviorM原architecture/action11-public60-target8，2,819,568参数、原45D normalization SHA23c4dcca…，eval/全部梯度禁用；耗时5.692586907wall，禁止native/Actor/API/network/child的fence无触发。**真实checkpoint restore1，WM prediction forward0，世界/Actor/fit0**，恢复参数不是训练、也不是V4实际query/native资格。报告远端`/mnt/yuanyue/reach-runs/V4-original7a6-CPU-restore-20261115-v1/ACTUAL_CPU_RESTORE.json`与本地operations/V4_ORIGINAL_WM_CPU_RESTORE_20261115.json SHA39c9a2f9…相同，未下数组/权重。
+- **直接接线已收敛，不另堆通用auditor：** 新v4_original_wm_loader和OriginalBehaviorWMAdapter.from_checkpoint可在source自己的新程序恢复一次并接原raw头；下一项是本回合3真实10Hz帧/完整200Hz已发位置参考/实际owner时钟的原BehaviorQueryBuffer与current observation绑定。WM最近grid anchor和VLM fresh off-grid图可不同，target8必须绑原WM实际anchor，不能拷另时刻bbox/旧left alias或填历史。绝对PUSH→公开相对推距、CLIMB语义destination→原native SOURCE height须显式源映射，不能删same-params/hash门硬过或把40cm写20cm；后继cost provider仍Reach负责，不把raw native-event elapsed/logit叫成功Finish/READY/整链成本。详见`/home/yuanyue/reach-ability-research/operations/V4_ORIGINAL_WM_RESTORE_AND_IO_NEXT_CN.md`。
+- **验证/其余边界保持：** 新6项loader源码/namespace/错权重拒绝检查，合计62新＋38原=100软件检查，不算模型forward或物理试验。计划22:53/26b67d55…/五组不变，DeepSeek TLS身份已定但无真实API；三箱仍原轻箱点/SHA6394740e…无数值修改，未擅降高台/加中支撑。原20cm路径的40cm/static-deck/owner/终点缺口仍需原source/共同设计，不能据WM恢复宣称A/B可用或五组ready。所有dirty/index/旧closed/失败censor费用、冻结critic/heldout用途和12N/4s/identity/immutable/support/guard/QP/FIFO/stop保持，Data唯一物理owner，未动其H/锁/进程或新派发。
+
 ### 2026-11-15 23:25：用户要求三箱适配原技能；统一轻箱参数已锁定，当前数值本就吻合，未擅改平台/布局
 
 - **接用户“各箱子的参数都调整到目前技能可行的范围”，三箱统一锁定原轻箱点：** A/B/C均2.4×1.4×0.20m、0.50kg、bottom_mu0.40、foot_top_mu0.80；这是当前原full4 B原型/有ground PUSH→20cm CLIMB成功依据的参数点，不扩成任意质量尺寸连续已验证域。核对发现已确认V4三箱**原本就完全是这些数值**，本轮不为制造调整换成未验证参数；各箱changed_physical_attributes={}，scene仍逐byte6394740e…，明确无数值改动。新增v4_box_skill_domain.normalize_boxes/check_boxes及场景锁定副本，今后生成重箱/高箱/不同材料会归一或拒绝，已冻/在途根不热补。

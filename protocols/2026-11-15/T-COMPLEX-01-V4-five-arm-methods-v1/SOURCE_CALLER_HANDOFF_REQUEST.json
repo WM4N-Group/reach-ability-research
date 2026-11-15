@@ -2,17 +2,20 @@
   "at": "2026-11-15T23:08:31.473779+08:00",
   "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
   "role": "REACH_INCREMENTAL_METHOD_CALLER_HANDOFF_NOT_NEW_SCOPE_OR_NATIVE_PERMISSION",
-  "config_sha256": "78869e4a69f48f4a305d56276919a5dc7500173644c0a8bf92f3b952c62d44c0",
+  "config_sha256": "88551f9861a28e9e93ab47782bb73cd5be5381f50a0711f3a81e4228685ce4bd",
   "code_files": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
-    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
+    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "1028c2c2a7c1cef705b9e948602770b54cac8964620227488ee8208ad18534dd",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
     "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
     "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
     "research/task_conditioned_reachability/execution_preparation/test_v4_provider_binding.py": "3e543504941a3534b1477834c901574ffffcd049b64a233e5c850cad74e36a6f",
     "research/task_conditioned_reachability/execution_preparation/v4_box_skill_domain.py": "f9682e1d3b1fc401ede52407e5c124fe7a5aaaaaed366a058c853eaa5339875a",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_box_skill_domain.py": "0cd49e67fe7dbcdfe45b50d23b2b1e4f3a718b35632a15f50dd8d6ed696c9d16"
+    "research/task_conditioned_reachability/execution_preparation/test_v4_box_skill_domain.py": "0cd49e67fe7dbcdfe45b50d23b2b1e4f3a718b35632a15f50dd8d6ed696c9d16",
+    "research/task_conditioned_reachability/execution_preparation/v4_original_wm_loader.py": "a2199bc0dd18161f79e816ee0e354e1a16443819027e958e69495887dd1322f3",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_original_wm_loader.py": "5117d38021b39400f9ddcccc0df75883888551b1765c5dd3d74f4d128176dd7d",
+    "operations/restore_original_WM_cpu.py": "6029d104625f96e92c84abb8202fb18748cdcac7e0cb70f99d7ed556fd385f84"
   },
   "AINav_source_inputs_needed": [
     "Exact five-arm shared original current IntentBatch/Observation and source journal",
@@ -36,5 +39,8 @@
   "runtime_API_call_cap_ABCD": 100,
   "real_injected_credential_or_served_model_metadata_not_claimed": true,
   "box_parameter_lock_report": "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-box-skill-lock-v1/BOX_PARAMETER_LOCK_REPORT.json",
-  "box_parameters_already_match_current_scene_no_numeric_or_platform_edit_needed": true
+  "box_parameters_already_match_current_scene_no_numeric_or_platform_edit_needed": true,
+  "actual_original_checkpoint_path_and_SHA_verified_on46308": "/mnt/yuanyue/data/go2-piper-world-model/own-M64B-behavior-training-20261027-v2/M64B-behavior-final.pt",
+  "WM_checkpoint_restore_completed_not_forward_or_current_IO": true,
+  "raw_WM_builder": "OriginalBehaviorWMAdapter.from_checkpoint(checkpoint_path, source_root=<original inference closure>, query_provider=<qualified current source causal IO>)"
 }

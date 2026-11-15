@@ -15,7 +15,7 @@
    - 至少有真实当前model forward且有效raw evidence才允许A/B路线选取；所有行UNKNOWN则明确停在“WM方法不可用”，不会WM开关=true而实用无WM。新V4 query/raw预测是未标定模型输入输出，不扩大旧7a6成功Finish/后继ready No-Go结论。
 5. `build_v4_planner('A'|'B'|'C'|'D',...)`四组明确factory：D拒收暗加WM，A/B拒收把原AINav对象换名当WM路线。只组装方法对象，不建transport、读key或发native命令。
 
-**最新56项新软件检查＋38项旧回归共94项通过；真实VLM/WM forward/native main=0。** fixtures显式标注，原AINav纯源码测试不是原生安全/任务资格。五组纯配置/原源逐SHA入口：`protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/`。E由AINav实现，本组不代写场景正确路线。旧research FOUR_ARM_PROTOCOL仅保历史输入，最新总计划和五组config优先。新增预算是新V4方法配置提议，不抬旧scope cap；最终程序/order/VLM身份/技术cap由Data事前freeze。`v4_outcome_summary.py`另已实现五组标量评价reader：缺arm、WM名义开启而无forward、B/D无有效优化选择均不建立方法对比，失败/censor不补成功耗时，E严禁API/WM/优化计数；高台完整成功必须有三placement、原CLIMB、实际支撑和原stop/stow证据。此reader不是native审计替身，尚无五组原件供消费。
+**最新62项新软件检查＋38项旧回归共100项通过；真实VLM/WM forward/native main=0。** fixtures显式标注，原AINav纯源码测试不是原生安全/任务资格。五组纯配置/原源逐SHA入口：`protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/`。E由AINav实现，本组不代写场景正确路线。旧research FOUR_ARM_PROTOCOL仅保历史输入，最新总计划和五组config优先。新增预算是新V4方法配置提议，不抬旧scope cap；最终程序/order/VLM身份/技术cap由Data事前freeze。`v4_outcome_summary.py`另已实现五组标量评价reader：缺arm、WM名义开启而无forward、B/D无有效优化选择均不建立方法对比，失败/censor不补成功耗时，E严禁API/WM/优化计数；高台完整成功必须有三placement、原CLIMB、实际支撑和原stop/stow证据。此reader不是native审计替身，尚无五组原件供消费。
 
 ## 不掩盖的真实阻塞／最小能力方案
 
@@ -27,7 +27,7 @@ AINav22:51原源报告`EXACT_V4_ASSET_AND_SELECTED_CLIMB_GAP.json`核精确selec
 
 ### 2. 当前WM/VLM的实际部署身份未齐
 
-原7a6 query/frame/raw ABI已精读、逐SHA列入SOURCE_INDEX；没有把旧预测当当前推理。46308选定reach-assets/ainav-compute/Data部署目录max-depth6文件名检索未取得M64B/behavior-final checkpoint位置；**不等于证明整服务器没有权重**，只是尚无可用remote checkpoint＋V4原因果IO接入证据。不能复制私钥、恢复旧端任务或用旧actual帧作live。source owner提供同一fresh episode的observed-public60/原issued-history/belief、按候选实际公开descriptor/参数及checkpoint路径后，代码可直接调用原头。
+**23:46权重缺口已解除：** 通过历史精确只读索引在46308找到11,314,598bytes原7a6文件，并用逐byte复制的原五文件推理闭包在CPU实际恢复一次；BehaviorM/2,819,568参数、原normalization、eval/梯度禁用均核，禁止native/API的fence空。真实restore1、WM prediction forward0、世界/Actor/训练0；不是旧实验重启，也不说明V4 query/策略已合格。权重/源码/contract/normalization/报告SHA与下一实际IO点见V4_ORIGINAL_WM_RESTORE_AND_IO_NEXT_CN.md。不再把早先文件名检索未命中写成“缺权重待迁移”；真正待接的是原当前sensor＋issued200Hz history、target8和语义/原native动作参数映射。
 
 **23:13 provider身份已按用户确认收束，不再等服务选择：** AINav发布原公开profile87d38fef…，官方TLS DeepSeek/deepseek-flash/thinking disabled、无fallback、原backend SHA11e5fdd8…。Reach已逐SHA接收并实现`v4_provider_binding.runtime_binding`，只读公开profile/原backend源码，返回合法构造kwargs，不读取key/env、不创建transport或API探针；实际鉴权模型元数据/served identity及受保护进程注入仍由新冻结运行核，不把“配置已定”冒“密钥已注入/调用已过”。
 

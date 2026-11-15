@@ -57,6 +57,16 @@ class OriginalBehaviorWMAdapter:
         self.model=model;self.normalization=normalization;self.provider=query_provider
         self.forward_batches=0
 
+    @classmethod
+    def from_checkpoint(cls, checkpoint_path, *, source_root, query_provider):
+        """Owner calls once in a fresh qualified run; no synthetic query fallback."""
+        from .v4_original_wm_loader import restore_original_cpu
+        model,normalization,report=restore_original_cpu(checkpoint_path,source_root=source_root)
+        adapter=cls(model,normalization,checkpoint_path=checkpoint_path,
+                    loaded_checkpoint_sha256=report['checkpoint_sha256'],query_provider=query_provider)
+        adapter.restore_report=report
+        return adapter
+
     def evaluate(self,batch):
         actions=[];supported=[];unknown=[]
         need(1<=len(batch.options)<=128, 'Same finite source candidate capability; do not drop roots')
