@@ -1,25 +1,20 @@
-# bulk24 新collector：GPU1／CPU38,39；与GPU0独立观测隔离
+# 两卡真实并行：GPU1 bulk24首条own-zero/cold过且main1；GPU0独立OBS继续
 
-本目录是Data新生命周期，不调用/重开旧TRAIN6／CAL／T失败runner。精确Reach协议0f9e0e03…：24条预登记attempt、4几何/8prefix context×3固定candidate、一个既有TRAIN祖先。原24 source/config接线已核；新的caller CPU preflight已真实用原typed RequestedIntentPlanner(max_requests=3)接首条，禁Runtime/Actor/CUDA/NN/Renderer/physics构造，forbidden_attempts=[]。不是native资格/研究样本或fit。
+更新：2026-11-15T20:51:46.536972+08:00（北京时间；主计划仍14:00/b2fb786e…；**两卡已真实并行**：GPU0独立观测study不变，GPU1 bulk24首条自身zero/cold通过且唯一main已启动；不是24条已完成/全量同时启动或critic refit）
 
-## 冻结与次数必须看权威H，而非此代码存在
+**当前实际执行**
+- **GPU1已开始新的批量用途真实采集，而非继续只接code：** bulk24首条 **g01/left/original**、scope `data-46308-bulk24-01-g01-left-original-20261115-v1`；完整483成员program **95a0356da5a3354285f7b52966299978e51c9673fefa548e0a8d94a0f8ca5d5b**、authority **304bac86d9751682af14155d6a065ebfbf38a3311538472931fa9affe8c7cae8**。新source为0fff23aa…明确plan515b4d7f…＋原full4完整同源host，原Python/Actor/成功门和四既有差分未改；Data仅有精确第5项plan pin/inverse metadata适配，原非verifier consumer函数逐字不变。原typed RequestedIntentPlanner明确max_requests=3，实际原NAV→PUSH→20cm CLIMB及**exact3 semantic成功回执**才是本条件pass，不把准备NAV或普通字符串计成功；不冒复杂整场任务／方法A/B／全任务成功。
+- **首条自己的完整zero/cold过，不借旧TR/CAL或T zero：** result **fb98339f…**、原aux6.505sim、**33.754982751result wall**、task/commands0、原INPUT8/直接HD/review各1、close errors0、RSS峰2249736192bytes。原实际model numeric **bb6afc8dc1ab336d8e20d00c2f0d1597f0d3f7e74ca13eaf07ecf974efd60ef4**已与该唯一main当前model一致。先前typed-caller CPU preflight与UNKNOWN费用ledger回归均只软件、0研究样本；constructor未交回可靠runtime/aux时，最终sim=None/usage_known=false保未知尾，不填0/恢复。新源码及此修正都在freeze/物理前已GitHub+46308代码同步，**当前483成员不热改**。
+- **GPU1首条main own-zero1/main1真实在途：** 2026-11-15T20:45:38.243781+08:00 PID **68677** alive，原main ledger open／含本phase aux共21.825sim、80.850wall为部分费用；尚无本条最终结果，当前只读原日志可见semantic request 0／actual semantic result 0，不把已启动/时间推进冒PUSH、PREPARE到达、CLIMB或三请求成功。当前H **0f8d0ad87d40eb05d1f2856d92ef7da00c3862fc3e1efb7dcd942a944f34f29b**。**24条配方/完整程序事前固定与登记，只有首条真正派发；余23条仍zero0/main0、REGISTERED_PENDING_ROLLING_ADMISSION**，不是全24 world/lease/容量已准入。当前无自动下一slot脚本，须按首条原终态/停止门和rolling fresh接续，不等用户再派同一职责。
+- **双GPU是真实两个独立native PID/lease，不是第二owner：** 原GPU0 study PID **57116**／CPU36,37，与新GPU1 PID68677／CPU**38,39**隔离；GPU1 UUID6d66aa68…、logicalcuda0/EGL1、原规范device51/inode3428459217/3428459218，新PerGpuLease实持原锁，未复制/重建inode或操作他组进程。只读NVIDIA采样两PID分别约769654784／767557632bytes，**是该时刻测量，不是peak/全GPU独占或下一run lease**。每worker CPU2/RSS4GiB/ownGPU3GiB、nice15；原Actor/12N/4s/immutable/FF/effort/QP/FIFO/CLIMB stop全部保留。
 
-- 新registry `bulk24_collector_v1`／`active_bulk24_collector_scope`，仅此batch信息可CAS修改，原OBS/旧pair/TRAIN/CAL/VAL等字段逐字保留，不清旧pair stop、不建第二owner。
-- 24条source recipe/完整program可以预先固定，**不是全24 root/容量/lease已准入或自动同时开24个world**。仅首个GPU1 slot激活；每个scope自己的zero/main各≤1，实际dispatch才耗次数，closed不重开、无替代/补seed。其余未开须明确REGISTERED_PENDING_ROLLING_ADMISSION。
-- 自身完整同program/model zero/原INPUT8/HD/review1帧/0任务命令及cold后才main。原max_requests=3、exact3成功semantic NAV/PUSH/CLIMB回执，不把准备NAV或原件里的字符串计成功。whole_task_success_claimed=false；本用途是20cm CLIMB后继条件收集，不是复杂整场导航或A/B胜负。
-- 原full4 family完整sourceD快照与SDK SHA封印，D的唯一新原生source文件为源owner明确plan；原native Python/Actor/原四差分不改。新Data metadata verifier精确plan pin/原5case＋固定note/原10追加case inverse均保，原非verifier consumer函数逐字不动。源/条件/实际model/入口/回执/费用/失败/未达/资源censor全保，不擅加旧数据fit。
+**GPU0 T优先主线／其它真实结果不变**
+- 原独立OBS program9fdd2076…/c3c695b5… own-zero1/main1在途，不因GPU1启动换源/改门/加预算。2026-11-15T20:47:38.637804+08:00已原capture448步/2.240sim＋第1fresh中心观测（RGB a76e641e…，aliases=[]/visible=false），首原NAV(-.08,+.15,0)执行中，**原NAV succeeded 0／真实观测边界 1/3、无measurement终态**。固定第2原NAV(-.08,-.15,0)与后续视角不补/不挑；task_success=false/AB_comparison=false，visibility不等PUSH READY或完整任务。其独立150sim/57600wall/3GiB事前cap原样保留，**不是把16小时带入bulk**。
+- 旧T首对A/B仍closed且原global_stop=true：A原RGBD唯一关联门拒绝首PUSH、任务PUSH0，scope15.250sim/880.527903158wall/218453439bytes／7afea491…；B原wall资源截断12.720task sim/2544步/524 Actor、1public bundle/0terminal receipt/0重构，scope25.730sim/4781.901017321wall/232149061bytes／161d483b…原发布、995行链/九流/128原RGBD+review+HD和1×/同钟raw证据保持。不是PUSH控制失败、强greedy已输/前瞻收益或复杂成功母版；旧4800wall/失败/费用与旧46174 UNKNOWN尾不改、不重跑。
 
-## 资源与双GPU隔离
+**批量范围、费用与下一步**
+- 仍精确Reach **0f9e0e03…**：24ordinal、4几何/8context×3candidate、**一既有TRAIN祖先**，不是4独立heldout家族，不扩另36组合；case-only祖先0c0a9fd8…与whole-scene/init1245cf2a…分开核回原件。源码纯接线24条已实际调用原build_condition/protocol/validate_protocol并匹配原protocol canonical SHA、精确request float和prep payload；这是接线，**不替代每条自身zero/compiled model/动态结果**。源固定note的首次纯verifier拒绝/修正与原记录保留，不是物理retry。
+- bulk每scope严格原预登记累计**240sim/2400wall/1GiB输出，own-zero180wall**；每phase fresh owned＋旧CAL/VAL7.5GiB＋当前OBS3GiB＋**一个**GPU1 root1GiB滚动预留<40GiB，首派发fresh owned22218205696bytes／rolling reserve12348030976bytes，provider quota未知。已产出根持续计owned，**没有虚假预约24×1GiB/没有清旧数据抢容量**；容量不足留下NOT_STARTED并保完整分母。zero/source identity/安全实现/共享资源问题stop本source，普通单条native失败原样保留，0retry/replacement；未到PREPARE就features/label=None，censor/UNKNOWN不伪造成负标签/成功成本。
+- 下一项接续现两个唯一main；bulk首条终态后只读核原流/成本/正负/未达并CAS关闭，按固定顺序、同freeze及fresh GPU1 lease/容量激活后续尚未启动支，不恢复closed。T仍首优先；长期≥100新尝试/≥10有物理意义组不取消，不刷相同输入/seed或把OBS观测算TRAIN。TRAIN6原13758867…4PASS2失败/27query、唯一真实fit3371ac20…/modela8b1f165…gate=true冻结；**当前critic不refit**，CAL07原PASS/9249faef…保留，CAL08/09与VAL10—12仍0/0，不把旧audit/EVAL转训练。WM/DINO/Actor重训/真机/第二owner/新自动化不开。
 
-- GPU1 UUID GPU-6d66aa68-9a3f-fdcf-89b7-f98d4106fa39，logicalcuda0/EGL1；规范physics/SDK锁原device51/inode3428459217/3428459218，使用已固定PerGpuLease，不创建/换inode。
-- CPU affinity固定38,39，与现GPU0 OBS的36,37分开；每worker线程2/RSS4GiB/ownGPU3GiB，nice15。新GPU1流程只允许真实同owner/原9fdd…程序的GPU0 OBS并行，不准旧cohort或未知Data native混跑；GPU0源/门/cap/lease均不改，不操作他组进程。
-- 原批量协议每scope累计240sim/2400wall/1GiB输出、own-zero180wall及原aux计账不变；不是把OBS的16小时cap带到bulk。原12N/4s/immutable/FF/effort/QP/FIFO/CLIMB stop/Actor不变。
-- 每phase fresh owned+旧CAL/VAL7.5GiB＋当前OBS3GiB＋**一个**GPU1 root1GiB滚动预留<40GiB；不对24×1GiB做虚假全量预约，已产出root持续计owned，后续无容量就明确不启动/保分母，provider quota未知。GPU空闲/锁probe不是lease；自身CUDA PID显存缺失fail closed，不记0。
-
-## 当前操作入口
-
-`stage_and_freeze.py`为新程序及权威CAS；`control_bulk24.py <原attempt_key> prepare|zero-dispatch|zero-run|zero-cold|fetch-zero|close-zero|main-dispatch|main-run|fetch-main|close-main`每已耗动作不得重跑。原attempt_key首条为 `g2-bulk24-v1__bulk-g01_left__original`。当前代码未提供自动激活下一slot；须按权威counts/终态/停止规则和rolling fresh接续，不借旧root/zero。
-
-source/identity/safety实现问题、zero失败或共享资源失败stop本source版本；普通单条原native失败完整保留，不追胜/洗账。未到PREPARE就features/label=None，不能把source/资源censor当critic负例。当前fit3371ac20…/modela8b1f165…及旧CAL/VAL协议不动，无当前critic refit/WM/DINO/Actor训练/真机/新自动化。
-
-新worker在任何freeze/物理前补了UNKNOWN费用保护：constructor未交回可靠runtime/aux时，最终sim=None/usage_known=false，保partial lower bound而不填0、停该source版本；软件临时ledger回归确认UNKNOWN闭合不可resume。不是对现OBS/旧数据的修复或重跑。
+**入口**：新collector `/home/yuanyue/main/work/data-team/manifests/bulk24-collector-46308-20261115-v1/README.md`、`/home/yuanyue/main/work/data-team/manifests/bulk24-collector-46308-20261115-v1/g2-bulk24-v1__bulk-g01_left__original/`、`/home/yuanyue/main/work/data-team/manifests/bulk24-collector-46308-20261115-v1/latest-observation-pointer.json`；源/config接线 `/home/yuanyue/main/work/data-team/manifests/bulk24-preconstruction-46308-20261115-v1/actual-pure-source-binding.json`；GPU0观测 `/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-observability-study-46308-20261115-v1/README.md`与`latest-observation-pointer.json`，旧pair raw视频manifest `/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-manifest.json`。工作目录`/home/yuanyue/main/work/data-team`、compute仅46308；本地/GitHub保存代码，远端保存大raw/MJB/数组/视频/权重，最新native collector code1aa9639…已三端同步。**不要重复两个在途main-run或任何closed scope。**

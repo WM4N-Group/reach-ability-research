@@ -1,0 +1,21 @@
+"""Scalar-only bulk24/GPU0 coexistence observation. No native import or dispatch."""
+from pathlib import Path
+import subprocess,shlex,json,datetime
+M=Path(__file__).resolve().parent
+code=r'''
+from pathlib import Path
+import json,hashlib,datetime,subprocess
+R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');B=R/'workspace';H=B/'registry/handoff_current_status_20261115.json';raw=H.read_bytes();h=json.loads(raw);q=h['active_bulk24_collector_scope'];co=h['bulk24_collector_v1'];root=R/'runtime/workers'/q['scope_id'];phase='main'if q['main_dispatch_count']else'zero';D=root/phase;L=root/'accounting/ledger.json';ledger=json.loads(L.read_bytes())if L.exists()else None;pid=ledger['rows'][-1]['PID']if ledger and ledger['rows']else None;events=[];last='0'*64
+if(D/'events.jsonl').exists():
+ for line in(D/'events.jsonl').read_text().splitlines():
+  try:r=json.loads(line)
+  except json.JSONDecodeError:continue
+  pin=r.pop('sha256');assert r['sequence']==len(events)and r['previous_sha256']==last and hashlib.sha256(json.dumps(r,sort_keys=True,ensure_ascii=False,separators=(',',':'),allow_nan=False).encode()).hexdigest()==pin;last=pin;events.append(r['payload'])
+v=json.loads((D/'result.json').read_bytes())if(D/'result.json').exists()else None;model=json.loads((D/'actual-model-identity.json').read_bytes())if(D/'actual-model-identity.json').exists()else None;obs=h['active_T_COMPLEX_observation_study_scope'];obsroot=R/'runtime/workers'/obs['scope_id'];ol=json.loads((obsroot/'accounting/ledger.json').read_bytes());opid=ol['rows'][-1]['PID'];apps=subprocess.check_output(['nvidia-smi','--query-compute-apps=pid,used_gpu_memory,gpu_uuid','--format=csv,noheader,nounits'],text=True,timeout=15);owned=[]
+for p,u in [(pid,'GPU-6d66aa68-9a3f-fdcf-89b7-f98d4106fa39'),(opid,'GPU-297c1146-bcec-a8ee-8437-d9603392a2e1')]:
+ rows=[tuple(x.strip()for x in line.split(','))for line in apps.splitlines()];values=sorted(set(int(r[1])*1024**2 for r in rows if len(r)==3 and r[0]==str(p)and r[2]==u and r[1].isdigit()));owned.append(dict(PID=p,UUID=u,observed_compute_bytes=values[0]if len(values)==1 else None,state='MEASURED'if len(values)==1 else'UNKNOWN_NOT_ZERO',not_peak_or_new_lease=True))
+print(json.dumps(dict(at=datetime.datetime.now().astimezone().isoformat(),H_sha256=hashlib.sha256(raw).hexdigest(),scope=q,phase=phase,PID=pid,PID_exists=bool(pid and Path('/proc/'+str(pid)).exists()),ledger_last=ledger['rows'][-1]if ledger and ledger['rows']else None,model_numeric_sha256=model['model_sha256']if model else None,journal_complete_rows_verified=len(events),actual_requested_intents=[e for e in events if e.get('event')=='explicit_engineering_intent_requested'],actual_semantic_results=[e for e in events if e.get('event')=='engineering_intent_actual_result'],actual_interaction_outcomes=[e for e in events if e.get('event')=='intent_actual_native_outcome'and e.get('execution_role')=='interaction'],result_status=v['status']if v else None,result_error=v.get('error')if v else None,result_passed=v['passed']if v else None,total_registered_recipes=len(co['order']),total_zero_dispatches=sum(r['zero_dispatch_count']for r in co['branches'].values()),total_main_dispatches=sum(r['main_dispatch_count']for r in co['branches'].values()),remaining_unstarted=sum(r['zero_dispatch_count']==r['main_dispatch_count']==0 for r in co['branches'].values()),bulk_global_stop=co['global_stop'],GPU0_OBS_scope=obs,GPU0_OBS_PID=opid,GPU0_OBS_PID_exists=Path('/proc/'+str(opid)).exists(),own_current_GPU_memory_readonly=owned,old_pair_stop=h['T_COMPLEX_full_program_v1']['global_stop'],no_Runtime_Actor_Renderer_or_physics_call=True,current_critic_refit_allowed=False),ensure_ascii=False))
+'''
+r=subprocess.run(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15','-p','46308','root@180.97.68.228','/mnt/yuanyue/data-team/env-native-v1/bin/python -I -B -c '+shlex.quote(code)],capture_output=True,text=True,timeout=60);assert r.returncode==0,r.stderr;v=json.loads(r.stdout);p=M/('readonly-observation-'+datetime.datetime.now().strftime('%Y%m%dT%H%M%S')+'.json')
+with p.open('x')as f:json.dump(v,f,ensure_ascii=False,indent=2);f.write('\n')
+(M/'latest-observation-pointer.json').write_text(json.dumps(dict(file=p.name),indent=2)+'\n');print(json.dumps(v,ensure_ascii=False,indent=2))
