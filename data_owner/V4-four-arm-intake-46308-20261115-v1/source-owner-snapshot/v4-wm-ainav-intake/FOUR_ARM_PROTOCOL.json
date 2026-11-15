@@ -1,0 +1,93 @@
+{
+  "schema": "research-v4-four-arm-comparison-v1",
+  "task_id": "T-COMPLEX-01-V4-FOUR-ARM",
+  "user_confirmed_design": "VLM+WM / AINav; each without and with our optimizer",
+  "created_local": "2026-11-15T22:36:44",
+  "scene_path": "/home/yuanyue/main/work/research-complex-comparison-20261115/scene-v3-review/scene.json",
+  "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "arms": [
+    {
+      "id": "A",
+      "backbone": "VLM+WM",
+      "our_optimizer": false,
+      "label": "VLM + WM"
+    },
+    {
+      "id": "B",
+      "backbone": "VLM+WM",
+      "our_optimizer": true,
+      "label": "VLM + WM + our optimizer"
+    },
+    {
+      "id": "C",
+      "backbone": "AINav",
+      "our_optimizer": false,
+      "label": "AINav"
+    },
+    {
+      "id": "D",
+      "backbone": "AINav",
+      "our_optimizer": true,
+      "label": "AINav + our optimizer"
+    }
+  ],
+  "optimizer_definition": "One shared successor-aware target/order/preparation-exit selection implementation; consumes each backbone through explicit adapters; no extra privileged state or skills",
+  "primary_within_backbone_contrasts": [
+    "B-A",
+    "D-C"
+  ],
+  "secondary_backbone_contrasts": [
+    "A-C",
+    "B-D"
+  ],
+  "wm_factor_note": "AINav baseline retains its native VLM/skill-tree/replanning behavior; no automatic WM addition to D. WM is part of A/B only unless baseline code inspection proves otherwise and protocol is revised before outcomes.",
+  "frozen_shared_controls": [
+    "same_scene",
+    "same_initial_state_protocol",
+    "same_skill_weights",
+    "same_native_guards",
+    "same_candidate_capability",
+    "same_success_criteria",
+    "same_public_observation_access",
+    "same_VLM_identity_where_used",
+    "preregistered_equalized_API_and_compute_budget",
+    "same_live_cameras"
+  ],
+  "no_optimization_means": "No proposed added optimizer, not no baseline planning/replanning",
+  "outcome_policy": "All successes/failures/refusals/timeouts kept; resource/API censor distinct from native failure",
+  "first_pilot": {
+    "planned_main_attempts": 4,
+    "attempts_per_arm": 1,
+    "require_new_scope_own_zero_and_Data_lease": true,
+    "run_order": "TO_BE_FROZEN_BEFORE_EXECUTION",
+    "automatic_retry": false,
+    "role": "DEV_MECHANISM_NOT_STATISTICAL_OR_GENERALIZATION"
+  },
+  "recording": {
+    "direct_live_only": true,
+    "individual_complete_1x": true,
+    "four_panel_synchronized_1x": true,
+    "optional_four_x_preview": true,
+    "state_replay_or_interpolation": false,
+    "actual_camera_resolution_reported": true
+  },
+  "current_status": {
+    "V4_native_asset_delta": "IMPLEMENTED_STDLIB_TESTED_NOT_NATIVE_QUALIFIED",
+    "software_tests": 9,
+    "V4_CLIMB_driver_and_final_support": "NOT_INTEGRATED",
+    "backbone_adapters": "NOT_INTEGRATED_FOR_V4",
+    "WM_scope": "EXISTING_ACTION_RESPONSE_ONLY_NOT_COMPLETE_CHAIN_PREDICTOR",
+    "four_way_main_dispatches": 0,
+    "videos": 0
+  },
+  "authorization": {
+    "use_existing_WM_inference_for_this_comparison": true,
+    "new_WM_or_Actor_training": false,
+    "high_level_critic_training_previous_scope_unchanged": true,
+    "physical_owner": "Data",
+    "server": "180.97.68.228:46308",
+    "credentials_recorded": false,
+    "new_endpoint_assumed_from_key": false
+  },
+  "credential_setup": "No secret in protocol/source/argv/logs. Provider endpoint/model and protected runtime injection must be explicit; historical plaintext HTTP gateway not silently reused."
+}

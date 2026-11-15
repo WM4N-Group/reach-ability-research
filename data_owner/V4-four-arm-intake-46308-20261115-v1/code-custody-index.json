@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-15T22:42:04.963804+08:00",
+  "role": "CODE_CUSTODY_NOT_NATIVE_FREEZE_OR_DISPATCH_AUTHORITY",
+  "main_plan_sha256": "ad0b589ba1aaf46a0de5faaf1002bc690f2df2c727195297460b30e291385dca",
+  "research_source_protocol_sha256": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
+  "V4_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "existing_WM_inference_allowed_only_for_four_arm_comparison": true,
+  "new_WM_Actor_training": false,
+  "new_V4_zero0_main0": true,
+  "bulk02to04_original_deliveries": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-02-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "sha256": "1a5abb073f1630b23d7d1c8e87f12816ddb784000ad1d2f7f2fdac1f2726b508",
+      "source_result_passed": true,
+      "actual_public_queries": 4,
+      "first_CLIMB_boundary": {
+        "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+        "first_judgment_status": "PREPARE",
+        "first_PREPARE_time_s": 85.89999999999436,
+        "actual_physical_observation_sha256": "5cc9ee410db2b921599e390a8c6d8bb46b0f401e31ca5d374ccabab55656c59e",
+        "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-02-g01-right-lateral_plus_0p04-20261115-v1/main/events.jsonl#3893",
+        "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+      }
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-03-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "sha256": "8e9ebfa09a879ecef0d3453f0a6b546902ce005c587dd0487b60e8d858e7ec63",
+      "source_result_passed": true,
+      "actual_public_queries": 5,
+      "first_CLIMB_boundary": {
+        "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+        "first_judgment_status": "PREPARE",
+        "first_PREPARE_time_s": 95.46499999998566,
+        "actual_physical_observation_sha256": "20e3eb5147a283f4ccd3f2df851bee141e7ab36c090a641611cae47a55b91e03",
+        "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-03-g02-left-lateral_minus_0p04-20261115-v1/main/events.jsonl#3751",
+        "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+      }
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-04-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "sha256": "2f543e92a662666f11a863e21713d7c1d28da674bea82fec48e14b55085bb9fb",
+      "source_result_passed": false,
+      "actual_public_queries": 2,
+      "first_CLIMB_boundary": {
+        "status": "NO_CLIMB_JUDGMENT_RECORDED",
+        "first_judgment_status": null,
+        "first_PREPARE_time_s": null,
+        "actual_physical_observation_sha256": null,
+        "judgment_ref": null
+      }
+    }
+  ],
+  "original_pre_CLIMB_failure_missing_features_and_label_remain_None": true,
+  "no_RAW_MJB_arrays_weights_env_video_credentials_or_logs_in_Git": true,
+  "selected_files": {
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/export_closed_ordinals02to04_originals.py": "2dee7231767349aecc1df7702ab321c23e94c106dd841bcca023048988a11858",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/run_export_closed_ordinals02to04.py": "4593c9102da56fa0fd2ac1cf4c27297f10890fbf33b4118a72aea5a6665e9b81",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/publish_closed02to04_original_deliveries.py": "31813606019b8227175a2fad0736123136b48d298cc0d0360c52cd038eae5f89",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/publish_closed02to04_and_V4_intake_v2.py": "747d9a9709481827df4f5ca32c12ea693e77f73fded7c89d620d1465820a62d8",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/persist_closed02to04_and_V4_intake_code.py": "9598a5f46639c4a8519c75b24d1ce48658f19c8e582dc19871c1e24b8b8c4614",
+    "data_owner/bulk24-collector-46308-20261115-v1/README.md": "e6d4af4c8f40f71ef395a3372c721884be20e9932325c788b5835a2e3454e5db",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/README.md": "e6d4af4c8f40f71ef395a3372c721884be20e9932325c788b5835a2e3454e5db",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/README.md": "e5f135c11166c6883eee009e0c930977e384372dc33fc5c08526ae6cad9cc884",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/source-owner-snapshot/v4-wm-ainav-intake/README_CN.md": "8d9404cdb3fc7d87c64edbef34b6bc2c957bc2b9de8aaeaae74be92e89f3e4d7",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/source-owner-snapshot/v4-wm-ainav-intake/FOUR_ARM_PROTOCOL.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/source-owner-snapshot/v4-wm-ainav-intake/v4_native_asset.py": "1599989cab85dfbd0dca97455cc409bc0f66decc03b2fdf28498d6710158f38f",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/source-owner-snapshot/v4-wm-ainav-intake/test_v4_native_asset.py": "bb5d480593e1704ed17da912ca30080f99c437a8ee9f9e9642670d50d52f6438",
+    "data_owner/V4-four-arm-intake-46308-20261115-v1/source-owner-snapshot/scene-v3-review/scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20"
+  }
+}
