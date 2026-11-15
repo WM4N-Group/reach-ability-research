@@ -1,0 +1,18 @@
+{
+  "task": "T-COMPLEX-01",
+  "selected_scene_id": "dual-route-three-reconstruction-v2",
+  "reason": "At least three nonforced reconstruction choices: v1 two-box public diagnostic cannot count forced final NAV as third. No native A/B outcomes existed for either version.",
+  "scene_file": "scene_v2_three_choices.json",
+  "scene_sha256": "578bd75303ef00bfb3813a4cc32c3e93c17318e41801d98eb4414092bc56fb34",
+  "public_task_file": "PUBLIC_TASK_V2.json",
+  "public_task_sha256": "99d660dee6c044eb4f531cbf72877df7edbc29fcb6cbaf99273a839ab1bfab1d",
+  "finite_placements_file": "FINITE_PLACEMENTS_V2.json",
+  "finite_placements_sha256": "fd295678be5a14c93be25c94ca7966d888413c9dfbd1f473ae5d232ef0cc2a0b",
+  "v1_preserved": true,
+  "v1_actual_main_or_video": 0,
+  "v2_actual_main_or_video": 0,
+  "new_source_scope_and_full_qualification_required": true,
+  "not_native_outcome_chasing": true,
+  "not_a_TRAIN_or_TEST_cohort": true,
+  "evaluation_ready": false
+}

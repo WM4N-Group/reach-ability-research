@@ -18,14 +18,14 @@ def load_scene(path=SCENE):
 def validate(s):
     need(s['schema']=='AINav-T-COMPLEX-01-native-scene-v1','Exact scene schema')
     need(s['seed']==4301 and s['robot_initial_yaw_rad']==0.,'Original registered initialization and world +X only')
-    need(len(s['objects'])==2 and len({o['public_ref']for o in s['objects']})==2,'Two distinct physical task objects')
-    need(len({o['body_name']for o in s['objects']})==2,'No body aliases')
+    need(len(s['objects'])in(2,3) and len({o['public_ref']for o in s['objects']})==len(s['objects']),'Two/three distinct original-prototype task objects')
+    need(len({o['body_name']for o in s['objects']})==len(s['objects']),'No body aliases')
     for o in s['objects']:
         need(o['size_m']==[2.4,1.4,.2] and o['mass_kg']==.5 and o['bottom_mu']==.4 and o['foot_top_mu']==.8,'Original full4 B prototype, not heavy/overheight trap')
         x,y=o['initial_xy_m'];need(all(math.isfinite(v)for v in(x,y,*o['allowed_placement_x_m'])),'Finite source floats')
         need(o['required_goal_xy_m'][1]==y and o['required_goal_xy_m'][0]in o['allowed_placement_x_m'],'Same-lane +X targets, not side push')
         need(all(0.<g+.11-x<=.8 for g in o['allowed_placement_x_m']),'Original declared drive stroke including .11m offset')
-    need(s['task']['minimum_distinct_reconstructions']==2 and set(s['task']['required_final_placements'])=={o['public_ref']for o in s['objects']},'Both environment reconstructions actually required')
+    need(s['task']['minimum_distinct_reconstructions']==len(s['objects']) and set(s['task']['required_final_placements'])=={o['public_ref']for o in s['objects']},'Both environment reconstructions actually required')
     return s
 
 def public_task(s):

@@ -97,3 +97,35 @@ class FinalSupportedStop:
         self.complete=self.monitor.observe(time_s=float(self.r.sim.data.time),tick=self.r.step_count,sample=sample,placements_current=current)
         self.journal(dict(event='complex_private_supported_goal_sample',time_s=float(self.r.sim.data.time),tick=self.r.step_count,placements_current=current,goal_stop_verified=self.complete,model_input=False))
         if self.native.complete and not self.complete:raise RuntimeError('complex_terminal_original_owner_goal_stop_not_verified')
+
+def terminal_nav_session(original,placements,*,source_root,journal,scene):
+    """Extend final NAV's actual protected arrival with common terminal checks.
+
+    One NAV task, one original controller and same owner continuation; not a
+    scripted compound route or a fabricated HOLD/arrival. Original inner NAV
+    success time is separately journalled, task success waits for the real gate.
+    """
+    from ainav.native.registered_nav_factory import RegisteredNavMachine
+    from ainav.native.registered_compact_nav import ActualArrivalSupportWitness
+    from mujoco_zyh.native_behavior_executor import NativeOptionSession
+    need(type(original)is NativeOptionSession and isinstance(original.machine,RegisteredNavMachine),'Exact original final NAV session')
+    need(original.runtime is placements.r and placements.current_required(),'Final task cannot replace missing original placement boundaries')
+    r=original.runtime
+    class FinalNAV:
+        def __init__(self):self.r=r;self.tasks=list(original.machine.tasks);self.stop=None;self.complete=False
+        @property
+        def phase(self):return self.stop.phase if self.stop else original.machine.phase
+        @property
+        def results(self):return list(original.machine.results)+([]if self.stop is None else self.stop.results)
+        def enter(self):original.enter()
+        def update(self):original.update()if self.stop is None else self.stop.update()
+        def next_command(self):return original.command()if self.stop is None else self.stop.next_command()
+        def after_step(self):
+            if self.stop is None:
+                original.after_step()
+                if original.outcome=='succeeded':
+                    witness=ActualArrivalSupportWitness(original.machine.native_nav);witness.validate(r)
+                    journal(dict(event='complex_final_original_NAV_boundary',time_s=float(r.sim.data.time),original_owner_type=type(original.machine).__name__,task_success_not_yet=True,model_input=False))
+                    self.stop=FinalSupportedStop(r,original,witness,placements,source_root=source_root,journal=journal,scene=scene);self.stop.enter()
+            else:self.stop.after_step();self.complete=self.stop.complete
+    return NativeOptionSession(r,FinalNAV(),check_guards=original.check_guards)

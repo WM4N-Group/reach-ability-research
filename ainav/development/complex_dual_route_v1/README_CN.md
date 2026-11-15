@@ -2,7 +2,13 @@
 
 这是AINav-owned新场景源码/物理asset，不是旧warehouse review、渲染动画、WM profile或预录路线。原完整v6/283/冻结技能核继续；本包是独立新scene/source接入，当前TRAIN6在途完全不改。Data仍唯一物理owner；不在本机/本组构造world。
 
-## 已落地的物理资产/候选
+## 当前选择更新：v2三重构source/新driver已实现，仍待原生资格
+
+已消费Reach实际PUBLIC模型诊断：v1只有2个非强制重构＋forced final NAV，不冒3有效选择。v1文件/commit不覆盖；新`scene_v2_three_choices.json`、`PUBLIC_TASK_V2.json`、`FINITE_PLACEMENTS_V2.json`为独立source。构造helpers显式scene_path/SHA贯穿Model与Runtime，三箱同原B prototype/ground/+X，真实registry/goal/接触构造支持；此修订发生在native A/B均0之前，不是输赢追胜。
+
+`scene_driver.py`现已接原public IntentBatch→原EntryJudge/Coordinator→PRIVATE native batch与真实200Hz/writer/capture→原终点；`semantic_factory.py`保原opaque target/goal seal，同时把公共目标/Ref与原私有构造option逐hash桥接，不泄露private pose。`public_planner_binding.py`接Reach原共享A/B/model，不包含私有存在性路线。精确入口/源/未验域见 **OWNER_ENTRYPOINTS_V2_CN.md** 与SOURCE_SELECTION_V2；下文“driver尚未完成”是前一阶段记录，现源码已实现但**Data实际native compile/运行/资格/对比/视频仍0**，不能据代码越级派发。
+
+## v1已落地的物理资产/候选（历史，仍保留）
 
 - `scene.json`固定13×6m围墙场地、两件**原full4 B同尺寸2.4×1.4×.2m/.5kg/底μ.4/足顶μ.8**箱，均在ground。原初始robotXY(−.08,0)、yaw0、seed4301，不需要.2上第二次PUSH、不靠20kg/超高障碍卡基线。
 - 两箱初始X1.7/5.4，Y0；共同任务要求两件分别按原verified-placement门完成最终X2.3/6.0，再进入远端ground目标[8.5,9.5]×[−.7,.7]并原支持停稳。不是给某方法额外自由度或手工正确顺序。

@@ -1,0 +1,62 @@
+[
+  {
+    "public_ref": "cuboid_a",
+    "skill": "PUSH",
+    "goal_world_x_m": 1.85,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  },
+  {
+    "public_ref": "cuboid_a",
+    "skill": "PUSH",
+    "goal_world_x_m": 2.3,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  },
+  {
+    "public_ref": "cuboid_b",
+    "skill": "PUSH",
+    "goal_world_x_m": 5.55,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  },
+  {
+    "public_ref": "cuboid_b",
+    "skill": "PUSH",
+    "goal_world_x_m": 6.0,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  },
+  {
+    "public_ref": "cuboid_c",
+    "skill": "PUSH",
+    "goal_world_x_m": 9.25,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  },
+  {
+    "public_ref": "cuboid_c",
+    "skill": "PUSH",
+    "goal_world_x_m": 9.7,
+    "goal_world_y_m": 0.0,
+    "surface_height_m": 0.0,
+    "native_direction": "WORLD_PLUS_X_ONLY",
+    "original_goal_and_entry_and_stop_guards_required": true,
+    "actual_native_admission": false
+  }
+]
