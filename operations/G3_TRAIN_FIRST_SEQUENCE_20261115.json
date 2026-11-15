@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-15T13:06:32.066327+08:00",
+  "protocol_file_sha256": "2f82530d1f880892c631c7b62cc79bfbd72d57e1b369faf99f542d02d4a53eda",
+  "Data_cohort_status": "IN_PROGRESS_ONE_CURRENT_BRANCH",
+  "first_active": {
+    "active": true,
+    "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+    "scope_id": "data-46308-new-critic-01-full4-left-original-20261115-v1",
+    "candidate_id": "new_critic_01_full4_left_original",
+    "phase": "CAS_DISPATCHED_MAIN",
+    "authorization_sha256": "88bb1827ed9206811452b56748e0f707e96f82b5a41a20d2b97046875dfc9852",
+    "whole_program_freeze_sha256": "b738125e2ba21b700da3ab6f0392283b6541b52db5141e31c72d868ec85ea45c",
+    "zero_dispatch_count": 1,
+    "main_dispatch_count": 1,
+    "zero_dispatch_program_sha256": "b738125e2ba21b700da3ab6f0392283b6541b52db5141e31c72d868ec85ea45c",
+    "main_dispatch_program_sha256": "b738125e2ba21b700da3ab6f0392283b6541b52db5141e31c72d868ec85ea45c",
+    "physical_retry_allowed": false
+  },
+  "programs_frozen": 12,
+  "all_selected_plan_worker_installer_pins_verified": true,
+  "all_other_roots_zero_and_main0": true,
+  "software_tests": {
+    "new_staged_regressions": 8,
+    "existing_learner_regressions": 23,
+    "local_passed": 31,
+    "remote_passed": 31,
+    "remote_python": "3.11.16",
+    "not_62_independent_research_samples": true
+  },
+  "real_fit": 0,
+  "new_qualified_training_rows": 0,
+  "Data_physical_owner_unchanged": true,
+  "old_scope_restart": false,
+  "original_collection_protocol_unmodified": true,
+  "remote_regression_source_pins": {
+    "/mnt/yuanyue/reach-runs/staged-fit-regression-20261115-1304-v1/successor_critic.py": "989639580f56c7683bcb6a8267bb6d433764e213e345481de0769834413b37b4",
+    "/mnt/yuanyue/reach-runs/staged-fit-regression-20261115-1304-v1/test_staged_successor_critic.py": "2a05cd1f8d92ecdda02b70ae1df3978dea832856dda4958ac35ed0922e39469f"
+  }
+}

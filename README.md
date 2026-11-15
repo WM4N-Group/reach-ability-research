@@ -39,9 +39,9 @@ python3 -m unittest \
 
 新端46308三source五DEV已closed：full-4左右PASS、full-2左PASS/右PUSH卸载异常未达CLIMB、full-1左PASS。完整分母5、first-PREPARE4，原失败/未知费用不丢。只证明原AINav工程和有限公开信息，非Reach优化收益/论文贡献。公开增量测量原件留远端，小摘要见operations/G2_FULL1_AND_FINITE_COHORT_20261115.json。
 
-**当前新用途有限协议：** protocols/2026-11-15/G2-new-purpose-finite-cohort-v1/；固定full4 TRAIN6/full1 CAL3/full2 VAL3、最多12新main，whole-scene分组、只未来新数据。TRAIN类/状态不足即No-Go，不自动扩批/旧DEV改fit。每split仅一scene且DEV-informed，不是未曝光TEST、统计功效或G5 holdout；不能通过排除原full2right宣告完整族已合格。Data唯一物理owner，现阶段尚未scope/派发/真实fit；无需再问已授权小高层训练用途/经济许可。
+**当前新用途有限协议：** protocols/2026-11-15/G2-new-purpose-finite-cohort-v1/；固定full4 TRAIN6/full1 CAL3/full2 VAL3、最多12新main，whole-scene分组、只未来新数据。TRAIN类/状态不足即No-Go，不自动扩批/旧DEV改fit。每split仅一scene且DEV-informed，不是未曝光TEST、统计功效或G5 holdout；不能通过排除原full2right宣告完整族已合格。Data唯一物理owner，13:04已只读核12个新program freeze及首TRAIN own-zero/main各1、main已CAS派发；其余未派，CAL/VAL仍阻。真实fit0；无需再问已授权小高层训练用途/经济许可。
 
-下一真实TRAIN闭合就G3单次高层critic和常量/均值基线或有限否证，接续新协议G4三策略/G5多决策/G6，而非止于本gate。原Actor/WM/DINO/真机暂停，12N/4s/identity/immutable/guard/support/QP/FIFO/CLIMB stop不变。完整接续见docs/AGENT_HANDOFF_CN.md顶部。
+TRAIN先fit/heldout后只评价的时序循环已修复，见operations/G3_TRAIN_FIRST_FROZEN_EVALUATION_CN.md；下一真实TRAIN闭合就G3单次高层critic和常量/均值基线或有限否证，接续新协议G4三策略/G5多决策/G6，而非止于本gate。原Actor/WM/DINO/真机暂停，12N/4s/identity/immutable/guard/support/QP/FIFO/CLIMB stop不变。完整接续见docs/AGENT_HANDOFF_CN.md顶部。
 
 ### 23:45计划接续（覆盖旧机器恢复前置）
 

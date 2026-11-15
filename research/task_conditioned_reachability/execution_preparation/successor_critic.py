@@ -17,6 +17,7 @@ from .successor_aware_choice import need,number,pin,digest
 PURPOSE='NEW_PREREGISTERED_HIGH_LEVEL_SUCCESSOR_CRITIC'
 HISTORICAL_SCOPE_FRAGMENTS=('stageB-','stow-choice','full-host-continuation-20261113','first-ground-push-20261113')
 SPLITS=('TRAIN','CALIBRATION','VALIDATION')
+PHASE_SPLITS={'TRAIN_ONLY':('TRAIN',),'CALIBRATION':('TRAIN','CALIBRATION'),'FULL_COHORT':SPLITS}
 
 
 def timestamp(value):
@@ -26,7 +27,9 @@ def timestamp(value):
     return parsed
 
 
-def validate_dataset(data, authorization, protocol):
+def validate_dataset(data, authorization, protocol, *, phase='FULL_COHORT'):
+    need(phase in PHASE_SPLITS,'Explicit collection phase')
+    active_splits=PHASE_SPLITS[phase]
     need(authorization.get('user_reply')=='运行' and
          authorization.get('permission_for_old_data_relabelling') is False and
          'small high-level candidate-conditioned successor success and duration model' in authorization.get('approved_scope',[]),
@@ -48,6 +51,9 @@ def validate_dataset(data, authorization, protocol):
     need(type(unreached) is list and data.get('all_closed_attempts_accounted') is True and
          type(data.get('closed_attempt_count')) is int and
          data['closed_attempt_count']==len(rows)+len(unreached),'All acquisition/prefix failures must remain in the attempt denominator')
+    if phase!='FULL_COHORT' or 'attempt_schedule' in protocol:
+        need(all(r.get('split') in active_splits for r in rows+unreached),
+             'No later heldout rows in an earlier collection phase')
     scene_isolation=protocol.get('require_source_scene_isolation',False)
     need(type(scene_isolation) is bool,'Explicit scene-isolation policy')
     scene_assignments=protocol.get('scene_split_assignments')
@@ -112,6 +118,7 @@ def validate_dataset(data, authorization, protocol):
         if split=='TRAIN' and outcome!='CENSORED':classes.add(outcome=='SUCCESS')
         if split=='TRAIN':state_signatures.add(tuple(round(v,6) for v in x[2:47]))
     for split,minimum in protocol['minimum_groups'].items():
+        if split not in active_splits:continue
         need(len(groups.get(split,set()))>=minimum,'Insufficient predeclared independent-condition groups: '+split)
     need(len(classes)==2,'No observed success/failure class variation; do not mine seeds/retry until failure')
     need(len(state_signatures)>=2,'No observed entry-state variation beyond action labels/metadata')
@@ -233,9 +240,15 @@ def _score_diagnostics(row_scores):
 
 
 def fit_and_evaluate(data,authorization,protocol):
+    need('attempt_schedule' not in protocol,
+         'Staged finite cohort requires TRAIN-only fit then frozen evaluation, never a refit after heldout')
     rows=validate_dataset(data,authorization,protocol)
+    return _evaluate_model(data,protocol,rows,_fit_heads(rows))
+
+
+def _evaluate_model(data,protocol,rows,model):
     spending=attempt_spending(data)
-    model=_fit_heads(rows);metrics={}
+    metrics={}
     for split in ('CALIBRATION','VALIDATION'):
         part=[r for r in rows if r['split']==split];known=[r for r in part if r['outcome']!='CENSORED']
         predictions=[(r,predict_offline(model,r['physical_features'])) for r in part]
@@ -284,9 +297,90 @@ def fit_and_evaluate(data,authorization,protocol):
         successful_time_is_conditional_not_failure_penalty=True,post_validation_tuning_allowed=False,execution_authorized=False)
 
 
+def _training_rows_digest(rows):
+    return digest(sorted((r for r in rows if r['split']=='TRAIN'),key=lambda r:r['sample_id']))
+
+
+def _validate_finite_stage(data, protocol, phase):
+    """Exact scheduled attempt inventory, not another sampling/qualification gate.
+
+    Read only the current stage's acquisitions. The full split map remains fixed;
+    future heldout rows are neither necessary for fit nor allowed into its input.
+    """
+    collection=protocol.get('collection_protocol_file_sha256')
+    need(pin(collection) and data.get('collection_protocol_file_sha256')==collection,
+         'Derived fit manifest must retain the immutable collection protocol SHA')
+    schedule=protocol.get('attempt_schedule')
+    need(type(schedule) is list and bool(schedule),'Explicit frozen finite attempt schedule')
+    expected={r['attempt_key']:r for r in schedule if r['split'] in PHASE_SPLITS[phase]}
+    need(len(expected)==sum(r['split'] in PHASE_SPLITS[phase] for r in schedule),
+         'Unique scheduled attempt keys')
+    actual=data['rows']+data.get('unreached_decision_attempts',[])
+    keys=[r.get('attempt_key') for r in actual]
+    need(len(keys)==len(set(keys)) and set(keys)==set(expected),
+         'Complete closed scheduled phase only; no missing, replacement or extra attempts')
+    for record in actual:
+        planned=expected[record['attempt_key']]
+        need(record.get('new_use_protocol_file_sha256')==collection,
+             'Fresh acquisition must retain its original registered collection purpose')
+        need(all(record.get(k)==planned[k] for k in
+                 ('split','source_scene_sha256','condition_binding_sha256','candidate_id')),
+             'Recorded attempt must match frozen scene, condition, split and assigned arm')
+    gate=protocol['stopping']['TRAIN_gate']
+    train=[r for r in data['rows'] if r['split']=='TRAIN']
+    need(len({r['condition_binding_sha256'] for r in train})>=gate['minimum_reached_prefix_groups'],
+         'TRAIN prefix group gate not met')
+    need(sum(r['outcome']=='SUCCESS' for r in train)>=gate['minimum_success_rows'],
+         'TRAIN success count gate not met; no adaptive replacement')
+    need(sum(r['outcome']=='NATIVE_GUARD_FAILURE' for r in train)>=gate['minimum_verified_postdecision_native_failures'],
+         'TRAIN verified postdecision failure count gate not met; no failure mining')
+    need(len({tuple(round(v,6) for v in r['physical_features'][2:47]) for r in train})
+         >=gate['minimum_distinct_public_proprio_states'],'TRAIN physical-state gate not met')
+
+
+def fit_train_only(data,authorization,protocol):
+    """One actual fit after the six-TRAIN gate, before acquiring CAL/VALIDATION.
+
+    The protocol supplied here is the derived qualified training manifest, linked
+    to the immutable original collection protocol. It is not a role relabelling.
+    """
+    rows=validate_dataset(data,authorization,protocol,phase='TRAIN_ONLY')
+    _validate_finite_stage(data,protocol,'TRAIN_ONLY')
+    model=_fit_heads(rows)
+    return dict(status='TRAIN_ONLY_FIT_FROZEN_HELDOUT_NOT_COLLECTED',model=model,
+        model_sha256=digest(model),training_rows_sha256=_training_rows_digest(rows),
+        preregistration_sha256=digest(protocol),training_rows=len(rows),
+        closed_TRAIN_attempts=data['closed_attempt_count'],attempt_spending=attempt_spending(data),
+        heldout_used_for_fit=False,training_started=True,execution_authorized=False)
+
+
+def evaluate_frozen(data,authorization,protocol,artifact,*,phase='FULL_COHORT'):
+    """Score the frozen one-fit artifact; NEVER call a fitter on heldout arrival."""
+    need(phase in ('CALIBRATION','FULL_COHORT'),'Frozen evaluation stage only')
+    rows=validate_dataset(data,authorization,protocol,phase=phase)
+    _validate_finite_stage(data,protocol,phase)
+    need(artifact.get('status')=='TRAIN_ONLY_FIT_FROZEN_HELDOUT_NOT_COLLECTED' and
+         artifact.get('preregistration_sha256')==digest(protocol),
+         'The same TRAIN-only frozen fit artifact and protocol are required')
+    need(artifact.get('training_rows_sha256')==_training_rows_digest(rows),
+         'TRAIN snapshot changed since the one frozen fit')
+    model=artifact['model']
+    need(artifact.get('model_sha256')==digest(model),'Frozen model contents changed')
+    out=_evaluate_model(data,protocol,rows,model)
+    out.pop('model')  # Evaluation is a report, not a second model export.
+    out.update(status='FROZEN_'+phase+'_EVALUATION_COMPLETE_NO_REFIT',
+        frozen_model_sha256=artifact['model_sha256'],
+        training_rows_sha256=artifact['training_rows_sha256'],
+        collection_phase=phase,model_refitted=False,training_started=False,
+        later_validation_not_collected=phase=='CALIBRATION')
+    return out
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('authorization','protocol','dataset','output'):parser.add_argument('--'+name,type=Path,required=True)
+    parser.add_argument('--phase',choices=('full-cohort','train-only','calibrate-frozen','evaluate-frozen'),default='full-cohort')
+    parser.add_argument('--frozen-fit',type=Path)
     args=parser.parse_args();started=dt.datetime.now(dt.timezone.utc).isoformat();wall=time.perf_counter();auth_raw=args.authorization.read_bytes();authorization=json.loads(auth_raw)
     protocol=json.loads(args.protocol.read_bytes())
     need(hashlib.sha256(auth_raw).hexdigest()==protocol['authorization_sha256'],'Exact explicit user grant')
@@ -300,8 +394,21 @@ def main():
     else:
         need(not args.dataset.is_symlink() and args.dataset.stat().st_size<=10*1024**2,'Explicit small regular new-dataset file, not a redirected archive')
         try:
-            result=fit_and_evaluate(json.loads(args.dataset.read_text()),authorization,protocol)
-            result['model_written']=True
+            data=json.loads(args.dataset.read_text())
+            if args.phase=='train-only':
+                need(args.frozen_fit is None,'A new fit cannot take an old model')
+                result=fit_train_only(data,authorization,protocol)
+            elif args.phase in ('calibrate-frozen','evaluate-frozen'):
+                need(args.frozen_fit is not None and not args.frozen_fit.is_symlink() and
+                     args.frozen_fit.stat().st_size<=10*1024**2,'Explicit small frozen TRAIN-only artifact required')
+                raw=args.frozen_fit.read_bytes()
+                result=evaluate_frozen(data,authorization,protocol,json.loads(raw),
+                    phase='CALIBRATION' if args.phase=='calibrate-frozen' else 'FULL_COHORT')
+                result['frozen_fit_artifact_sha256']=hashlib.sha256(raw).hexdigest()
+            else:
+                need(args.frozen_fit is None,'Use explicit frozen evaluation phase')
+                result=fit_and_evaluate(data,authorization,protocol)
+            result['model_written']='model' in result
             result['source_dataset_sha256']=hashlib.sha256(args.dataset.read_bytes()).hexdigest()
         except ValueError as error:
             result=dict(status='DATA_ADMISSION_REFUSED_NO_FIT',reason=str(error),model_written=False,training_started=False,physical_dispatch=False)

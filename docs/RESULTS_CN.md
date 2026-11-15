@@ -1,5 +1,12 @@
 # 关键结果与证据边界
 
+## 2026-11-15 13:04：新用途12程序已真实冻结、首TRAIN已派main；修复TRAIN先fit与heldout门的时序循环，不改原协议
+
+- 已在46308只读核Data新cohort12个freeze SHA、每个plan和实际prepare/worker/installer的freeze成员：原2f82530d…协议、whole-scene split、condition、assigned arm、attempt ordinal和new-purpose一致。首TRAIN full4-left-original程序b738125e…，13:04:02 H已CAS_DISPATCHED_MAIN、own-zero/main各1；其余11未派，CAL/VAL被TRAIN门硬阻。静态匹配不冒native成功；首main终态未消费，不改Data源/进程/锁/authority，不重发。
+- 发现真实G3软件时序阻塞：原训练入口要求三split齐才fit，但原协议要求TRAIN6先fit才采CAL/VAL，形成循环。已加TRAIN-only一次fit及CAL/VAL frozen-only评价：保全三scene map/全部阶段attempt、原class/state/成功≥3/后决策失败≥1门；later heldout拒进earlyfit，完整TRAIN snapshot/模型hash冻结，评价不refit/不导出第二model。有限协议禁止误用legacy full-cohort重拟合；未改变原协议SHA、样本/模型/阈值，不加采样合同/预算许可。
+- 新8定向回归+原23 learner回归在本地/46308各31过（非62独立研究样本），仅软件，不是科学数据或模型训练。真实training rows/fit仍0，原false资格协议未回改；六TRAIN真实闭合后才决定derived training manifest或No-Go，不挖失败补类。下一消费首新用途原件、按既有reader精确绑定first-PREPARE并取原48槽与真实终点，再收完整TRAIN门→一次fit或有限否证，CAL/VAL只用该冻结模型。
+- 入口`/home/yuanyue/reach-ability-research/operations/G3_TRAIN_FIRST_FROZEN_EVALUATION_CN.md`。用户目标G3—G6未完成，原DEV/GT不得fit、旧dirty/closed/原门/上游失败与未知费用/独立TEST0/主要贡献未证保持。
+
 ## 2026-11-15 12:44：三source DEV原件已消费，full-1真实PASS；新用途有限12-main协议已固定（未派发/未fit）
 
 - full-1-left程序3b5e9d4d…119.345sim/23869commands，12:22:34 CAS PASS closed，正式2bae0f2a…47成员与三源01e2571a…5成员/child pins逐SHA核。原9流cold过；zero+aux共132.355sim/814.418296ledger wall/175664393bytes。first-PREPARE原Journal/Observation绑定95.250→READY13.495→原请求CLIMB终点24.095sim，非far-bank整任务或优化收益。
