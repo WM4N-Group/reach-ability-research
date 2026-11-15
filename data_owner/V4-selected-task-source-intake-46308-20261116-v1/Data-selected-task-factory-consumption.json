@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-16T01:43:27.188665+08:00",
+  "role": "IMMUTABLE_SELECTED_TASK_FACTORY_INTAKE_NOT_PROGRAM_FREEZE_OR_NATIVE_QUALIFICATION",
+  "source_commit": "eafc8c5b4a5349d26619b604a39fc55205dc7a05",
+  "source_record_sha256": "d847e5082680bb5ea3688513f3f618f7c940a609b721c2cf1db1b1b65ddbe6a4",
+  "source_count": 23,
+  "all23_remote_and_local_source_bytes_verified": true,
+  "task_factory_sha256": "c0e4def4735100cf25162c7403efaca62b3062dbddd56fa499f22eda14a9b985",
+  "destination_climb_sha256": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
+  "source_review": {
+    "default_off": true,
+    "original_NAV_PUSH_sealed_finite_placement_constructor_retained": true,
+    "selected_CLIMB_maps_exact_current_public_object_and_opaque_target": true,
+    "current_observation_image_clock_world_FIFO_and_witness_required": true,
+    "public_destination_parameters_and_native_option_hash_retained": true,
+    "source_height_private_from_original_live_witness_registry": true,
+    "original_CLIMB_construct_and_completed_witness_inherited": true,
+    "old_ground_terminal_hook_not_called": true
+  },
+  "remaining_full_task_source_gaps": [
+    "Selected V4 judge/observer/driver must call the new task factory and original caller end-to-end",
+    "Actual completed-CLIMB to NAV support ownership/contact history not yet connected",
+    "Worldbody static-deck binding and .20m box-top to .60m deck .40m rise remain outside this selected original20cm movable-target path",
+    "Shared final whole-task elevated stop and pre-main common framing/FPS load qualification remain required"
+  ],
+  "box_parameter_authorization_already_consumed_not_a_permission_block": true,
+  "not_requesting_box_provider_key_or_duplicate_signature": true,
+  "software_checks_repeated": 0,
+  "native_Runtime_Actor_API_WM_forward_fit_calls": 0,
+  "existing_component_scope_closed_zero1_main0_immutable_program": "b125b188c6e250c9de68b35f42b4dd146cd70cad9ac4a73b220251dd9f8e0096",
+  "no_borrowed_zero_or_reopen_or_hotpatch": true
+}

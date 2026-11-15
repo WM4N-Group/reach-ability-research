@@ -1,3 +1,11 @@
+# J1机器入口已明确收件（2026-11-16T01:43:27.188665+08:00），不是cohort批准
+
+原JSON与更新detail SHA精确记录于 Data-J1-machine-request-received-not-cohort-approved.json。建议16 native attempts/16 main只作为待审上界；本组没有现成VJEPA_WM用途release，未注册新cohort、未派物理、未把bulk四geometry拆独立split。J组自己提取v2机载RGB/45D本体/K/T/原tick序列，当前目标关联缺证据保持UNKNOWN。
+
+原CPU40,41/2线程/nice19/idleIO/RSS4GiB/J盘3GiB/下载512KiB每秒/单job/GPU lease0技术窗口仍于**2026-11-16 02:00北京时间**到期，原fresh RAM/盘/优先级/各phase cap均不变，不自动延长。checkpoint许可已由其原件记录满足，不要再等Data加签/索key；Data没有宣告其实际下载、forward或fit。01:41只读观察J远端目录仍不存在，不作后台全局不存在推断。
+
+---
+
 # 01:16主计划/J组权重许可记录已更新，已给窗口可按条件使用
 
 新计划0e9f872b…说明J组已核具体编码器权重的独立许可/immutable revision/上游SHA；这项组内前提不再写成尚未核完。实际权重下载/字节SHA/encoder forward/fit仍未由Data确认，不能把上游声明当已下载。**原Data低优先级窗口仍到02:00，可在满足原fresh资源/优先级/原件核验后直接使用，不再等Data追加签字或索key**；GPU lease0/当前数据许可0不变。前一条00:34许可尚未核记录是历史输入，保留不覆盖。详见Data-J-license-record-update-consumed.json。

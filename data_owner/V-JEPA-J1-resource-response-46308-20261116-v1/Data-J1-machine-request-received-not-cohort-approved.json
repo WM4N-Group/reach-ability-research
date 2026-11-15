@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-16T01:43:27.188665+08:00",
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+  "role": "EXACT_MACHINE_REQUEST_RECEIVED_FOR_FUTURE_COHORT_REVIEW_NOT_COLLECTION_APPROVAL",
+  "request_id": "VJEPA-WM-J1-FUTURE-COHORT-20261116-v1",
+  "request_path": "/home/yuanyue/main/work/v-jepa/requests/Data_vjepa_wm_cohort_request_v1.json",
+  "request_sha256": "2128f5fae5c077c3defa105804f87b4c3e9fa1600725bcd1e024580f7620ec25",
+  "detail_path": "/home/yuanyue/main/work/v-jepa/requests/J1_MINIMAL_DATA_AND_LOW_PRIORITY_RESOURCES_CN.md",
+  "detail_sha256": "dcb34bf567b3092e4daae2c8bf532c60dbb351e4226e1be8c70c70902a727cc8",
+  "request_received": true,
+  "existing_exact_VJEPA_WM_purpose_release_count": 0,
+  "exact_cohort_registered": false,
+  "physical_collection_dispatches": 0,
+  "proposed16_attempts_and16_mains_are_upper_bound_request_not_admitted_budget": true,
+  "zero_automatic_retry_and_no_success_forcing_consumed": true,
+  "requested_split": "At least2 independent TRAIN scene/init/ancestor groups;1 independent CALIBRATION; separate EVALUATION",
+  "existing_bulk24_four_geometry_one_TRAIN_ancestor_not_eligible": true,
+  "no_relabel_critic_bulk_audit_V4_or_evaluation_as_J_train": true,
+  "source_and_split_actual_lower_budget_needed_before_new_collection": true,
+  "recorder_source_feasibility": {
+    "existing_v2_onboard_RGB_proprio_K_T_ticks_closure_supported_by_prior_source_intake": true,
+    "not_raw_third_view": true,
+    "not_new_tensor_platform": true,
+    "original_integer_control_tick_to_physics_tick_factor4_version_pinned_only": true,
+    "decisions_candidates_phase_and_receipt_use_original_journal_not_future_motor": true,
+    "not_asserting_future_cohort_has_already_captured_these_fields": true
+  },
+  "public_target_binding": {
+    "new_AINav_commit": "eafc8c5b4a5349d26619b604a39fc55205dc7a05",
+    "selected_task_factory_checks_original_associated_PUBLIC_object_identity": true,
+    "no_string_suffix_stripping_as_observation_association": true,
+    "does_not_by_itself_publish_same_anchor_bbox_or_target8_for_J_or_WM": true,
+    "missing_association_UNKNOWN": true
+  },
+  "existing_resource_window": {
+    "response": "/home/yuanyue/main/work/data-team/manifests/V-JEPA-J1-resource-response-46308-20261116-v1/Data-J1-received-and-low-priority-window.json",
+    "expires_at": "2026-11-16T02:00:00+08:00",
+    "unchanged": true,
+    "CPU40_41_2_threads_low_priority": true,
+    "GPU_leases": 0,
+    "real_data_forward_or_fit_not_granted": true,
+    "checkpoint_license_record_precondition_already_consumed": true,
+    "no_extra_signature_or_key_required": true,
+    "not_claiming_J_notified_or_started": true
+  },
+  "priority": "Non-blocking: AINav/Reach/Data first; do not change current V4/bulk sources, purposes, budgets or workers"
+}
