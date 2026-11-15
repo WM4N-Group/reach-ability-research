@@ -18,6 +18,7 @@ from public_candidates import declarations, declared_map, capability_contract, i
 from execution_entry import build_after_actual_capture
 from native_entry import _exact_base
 from factor_scope import install_legacy_common, factors
+from climb_nav_source import read_actual_climb_nav_source
 
 BASE_DIR = Path(__file__).resolve().parent.parent / 'complex_dual_route_v1'
 # Only these unchanged methods are consumed. The inherited local tree contains
@@ -135,6 +136,7 @@ def driver_class(*, source_root=None, enabled=False):
             self.current_observation, self.entity_by_public = None, {}
             self.capabilities = capability_contract()
             self.actual_climb_boundaries = []  # Private receipt/owner evidence only.
+            self.actual_climb_nav_sources = []  # Necessary samples, never NAV admission.
             self.arm = arm
             install_legacy_common(self, arm=arm, planner=planner, journal=journal)
             self.owner_guard()
@@ -162,6 +164,12 @@ def driver_class(*, source_root=None, enabled=False):
                             witness = driver.factory._current_completed_witness()
                             witness.validate(driver.r)
                             driver.actual_climb_boundaries.append((option, receipt, driver.executor.session, witness))
+                            source = read_actual_climb_nav_source(runtime=driver.r, session=driver.executor.session,
+                                executor=driver.executor, registry=driver.registry, native_witness=witness,
+                                source_root=driver.source_root, guard=driver.owner_guard, journal=driver.journal, enabled=True)
+                            driver.actual_climb_nav_sources.append(source)
+                            # NOT_READY only describes the next source; never rewrite
+                            # this original succeeded CLIMB receipt as native failure.
                     return super().observe(option, receipt)
             self.coordinator = CurrentCoordinator(planner=self.planner, observe=self.observe_public,
                 catalogue=self.intent_catalogue, judge=self.judge_intent, bind=self.factory.bind_batch,

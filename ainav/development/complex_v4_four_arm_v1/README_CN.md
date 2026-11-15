@@ -2,6 +2,16 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：原CLIMB真实终态的NAV-source必要证据观测（不是handoff准入）
+
+新增`climb_nav_source.read_actual_climb_nav_source`默认OFF，Data实际guard后只接受**当前已成功/entered的原NativeOptionSession、RegisteredClimbMachine、ActualClimbSupportWitness**，核同世界model/data/FIFO、selected private option/opaque/body ID与registry。新driver只在真实CLIMB succeeded receipt边界调用，观测PRIVATE evidence，不发控制命令，不喂VLM/WM。**还没有把它接成原NAV可接受witness，也未改变原support/contact gate或宣称CLIMB→NAV已打通。**
+
+来源不是“按终态姿态补两个命令”：原executor的first_command_time/previous_tick/current200Hz时钟、entered/session归属、原session.last_two的两个finite global18位置参考、最后一个与真实r.last.position逐值一致均核，初始化重复seed/过期/别的session拒绝。保原native CollisionGuard实例的真实sim别名，读原robot软限位与硬限位交集，不重建cold capture/failed-PUSH或改p.soft_limits/原Actor/增益/FIFO。
+
+从实际选中box geom、四个实际foot body/geom和**mj_contactForce的法向世界Z投影**，独立核每脚在该目标箱顶≥12N；总foot force够大却脚还在地面／其他箱／侧墙摩擦不算。复用原NAV四脚高度/矩形/12N/goal margin谓词。私有SurfaceSpec提议名`climb_nav_source__<object>`避免SceneRegistry object/surface同名碰撞；**不写registry、不扩NAV目录、不更改公开声明**。原CLIMB stop success但下一source不足时只记necessary_source_ready=false，不把原CLIMB回执改失败。
+
+该类型故意不是Capture/Arrival/PushStow，没有伪装成原NAV `.validate`接口；只读样本**下一物理步即过期**。后续真正typed-owner bridge/原NAV constructor/guard与外层contact授权仍须准确实现并新程序资格。新13项只pure predicate/来源接口/12N、实际选中contact vs total load、side contact、source ref、history与expiry的显式SOFTWARE fixtures；必要实际reader/原CLIMB/下一NAV均未调用，不能冒新物理成果。
+
 ## 2026-11-16：首次主运行前明确旧共同H与本次新后继优化，不削弱C
 
 已消费Reach `V4_PREPARATION_FACTOR_ISOLATION_CN.md`的源码风险：上一版driver原7 helper中的installer在所有arm都装旧Reach H，不能把A/C/E的“本次新优化OFF”字幕误写成所有历史算法kernel都0，也不能为了字面0删除共同底座、削弱完整C。**本组当前决定保留原来已选的legacy-common H，五组相同；它不是此次B−A/D−C treatment。** 新后继优化仍只B/D开，E规则不调用VLM/WM/新优化。精确定义与视频字幕见`PREPARATION_FACTOR_POLICY.json`；尚无五main，没有把旧组件或未触发callback说成已污染/已优化成功。
