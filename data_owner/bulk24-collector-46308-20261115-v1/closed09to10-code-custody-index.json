@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-16T00:18:02.144115+08:00",
+  "current_main_plan_sha256": "34c169d5abfc7edc112ac0febd6e372052021d478c847e77c60050791fdd430b",
+  "role": "CODE_AND_ORIGINAL_DELIVERY_POINTERS_NOT_MODEL_INPUT",
+  "releases": [
+    {
+      "ordinal": 9,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-09-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "sha256": "fc550becb6d62049191456458709abb2bac74d9168c7626421b76a81fe5fdec5",
+      "original_phase_passed": true,
+      "public_query_count": 5,
+      "first_CLIMB_boundary": {
+        "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+        "first_judgment_status": "PREPARE",
+        "first_PREPARE_time_s": 95.36999999998575,
+        "actual_physical_observation_sha256": "96cba7749659cf017ab586a3692c5454e81fe05063bbbc99cffa600534e24d2d",
+        "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-09-g01-left-lateral_plus_0p04-20261115-v1/main/events.jsonl#3742",
+        "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+      }
+    },
+    {
+      "ordinal": 10,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-10-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "sha256": "858f25a741f5368e4500964c97541b69a54871b99582cd0594ebfec9674ab162",
+      "original_phase_passed": false,
+      "public_query_count": 4,
+      "first_CLIMB_boundary": {
+        "status": "FIRST_PREPARE_EXACT_PUBLIC_QUERY_BOUND",
+        "first_judgment_status": "PREPARE",
+        "first_PREPARE_time_s": 85.89999999999436,
+        "actual_physical_observation_sha256": "b27617866e3c6922a4994afa703d3fffb2f7f882229f5c6f3aa114e706adff0f",
+        "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-bulk24-10-g01-right-lateral_minus_0p04-20261115-v1/main/events.jsonl#3893",
+        "intent_sha256": "80c7dcf480fb898cb29a344780a848be2346bc076ea4096fe02a1f5fd1c00d5d"
+      }
+    }
+  ],
+  "original10_CLIMB_preparation_success_then_CLIMB_admitted_runtime_base_collision_not_fabricated_terminal_receipt": true,
+  "first10_public_queries": 37,
+  "not37_independent_scene_groups": true,
+  "critic_or_audit_NOT_automatically_VJEPA_TRAIN": true,
+  "current_cohort_and_model_not_hot_changed": true,
+  "model_weights_ENV_RAW_MJB_videos_credentials_logs_not_in_Git": true,
+  "selected_code_files": {
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/export_closed_ordinals09to10_originals.py": "9df389332a170610621598501362e45cbf9fdc18e3476182d52ea7301817ad4c",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/run_export_closed_ordinals09to10.py": "ecbad05c2df43d09e3fed246d58e93f904c337d4bdc3ada07c849dfba1d95170",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/publish_closed09to10_and_V4_inputs_current.py": "13a443a11f2daafc1d248f5cc99fd5a3b59879c1a38916c98cb1166ff30bcc2f",
+    "data_owner/bulk24-collector-46308-20261115-v1/operations/publish_closed09to10_V4_and_JEPA_current_v2.py": "ba632793efabfa1c21e2c77c325c3b6676d44fe8dd61870595bf68002a3d2f42",
+    "data_owner/V4-terminal-WM-inputs-46308-20261116-v1/operations/consume_known_remote_inputs_readonly.py": "78900c4fa50761ed60dde7df74d1da0300bb8e4bd79b141e477c14ef07a4c1ad",
+    "data_owner/bulk24-collector-46308-20261115-v1/README.md": "d80fd9594182a6d34748f5e46a3248c37c9b8bc4c650d572706c4fe74d50def4",
+    "data_owner/T-COMPLEX-observability-study-46308-20261115-v1/README.md": "d80fd9594182a6d34748f5e46a3248c37c9b8bc4c650d572706c4fe74d50def4",
+    "data_owner/V4-terminal-WM-inputs-46308-20261116-v1/README.md": "f303bf5b8ec2a9be689174099528c64e2bbbb830af12c55a02563333f16874d5",
+    "data_owner/V-JEPA-new-purpose-intake-46308-20261116-v1/README.md": "e094f6abd4e59057386d43cb24baff128bfe3e78525c69abdf01544e041e2367",
+    "data_owner/V-JEPA-new-purpose-intake-46308-20261116-v1/Data-new-purpose-boundary-ack.json": "a1030d4f3e6a61680406c20ebd82bbc7736b62687d05873a4ed9d85a7e58e79d",
+    "data_owner/V4-terminal-WM-inputs-46308-20261116-v1/Data-consumed-inputs-proof.json": "055ba32608909163eb29e0b200868e112010815fa4d128eff5a5852a0eb0ffde"
+  }
+}

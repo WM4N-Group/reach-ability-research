@@ -1,0 +1,21 @@
+{
+  "AINav_commit": "82a513b748b9c8eaec6d330e1dafb1aa57795f31",
+  "source_members": 12,
+  "source_package_sha256": "7bbf7ef09d53db0789830e268fed62e16e08651eb9b93e549715bcc792a14c41",
+  "all_source_SHA_verified": true,
+  "WM_checkpoint_path": "/mnt/yuanyue/data/go2-piper-world-model/own-M64B-behavior-training-20261027-v2/M64B-behavior-final.pt",
+  "WM_checkpoint_sha256": "7a6ba61e89d824cd3e0a78f469a0925f91c784ab1f77ed4273365d6c313f569c",
+  "WM_checkpoint_bytes": 11314598,
+  "model_not_deserialized_or_restored_or_forwarded_by_Data": true,
+  "no_directory_search_or_environment_or_credentials_read": true,
+  "no_original_files_modified": true,
+  "at": "2026-11-16T00:07:28.015096+08:00",
+  "role": "DATA_INCREMENTAL_CODE_AND_EXISTING_WM_REFERENCE_INTAKE_NOT_NATIVE_ADMISSION",
+  "Reach_actual_restore_report_sha256": "39c9a2f95f6325c5c1fa78b23a5093f38aa2671e4e74adeff92dcd8e9a41e246",
+  "Reach_restore1_not_Data_repeat_restore": true,
+  "Data_WM_forwards_API_world_compile_zero_main": 0,
+  "WM_weight_not_downloaded": true,
+  "no_repeat_terminal_or_WM_software_tests": true,
+  "H_not_written": true,
+  "current_40cm_static_support_owner_caller_gap_not_solved_by_this_metadata": true
+}
