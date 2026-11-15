@@ -2,6 +2,12 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 16:12：首条真实CAL07已closed并完成因果48槽提取，完整CAL评价未开始
+
+- **首条CAL实际闭合并提取，未评分或refit：** 已核Data正式ordinal07 release9249faef…/48成员与原result c96c3c1e…、journal fde98bd6…；新full1-left-original于15:56:44 CAS closed/请求链PASS（不是T全任务）。46308原reader一次真实提取first-PREPARE95.250→原query/首issued因果48槽、READY相对13.495/完整请求CLIMB成功相对24.095sim；原source58 pins全过，extracted717aa3ba…，raw48仅远端。用途仍CALIBRATION/whole-scene隔离，不加TRAIN行/不把原full1 DEV换role；1/3 CAL不出heldout误差/校准/泛化或部署结论。
+- **费用、分母与模型保持：** CAL07单scope含zero/aux132.355sim、817.287665ledger wall、175668085bytes highwater，usage_known=true；未与旧UNKNOWN/项目费用混算。原TRAIN6/4正2负与fit3371ac20…/model a8b1f165…/rows882ca00b…保持，未再fit、未调阈值、未部署。08/09正式closed release尚未消费，VAL未在此放行；完整CAL原件到齐才用新装配入口→原calibrate-frozen。
+- **实际下一步／T优先：** 新完整heldout装配代码已本地/GitHub/46308同cf6c295（两端44软件检查），不是本轮新增拟合/实测样本。T仍待AINav精确camera ABI修复版/原动态资格与Data自己的新程序zero/lease；A/B main与原片仍未由本组消费，不重开组件closed、不用模型图或旧仓库片顶替。源15:42 helper的base planner不等本组4模块完整catalogue factory已被native消费。入口operations/G3_CLOSED_HELDOUT_ASSEMBLY_CN.md、G3_FIRST_CAL_ROW_SCALARS_20261115.json；全部旧dirty/closed/原安全门/失败未知账保持。
+
 ### 2026-11-15 16:08：补齐冻结heldout数据装配入口，仍未提前评价CAL/再次fit
 
 - 原一次TRAIN-only模型/快照不变。Data已独立消费670d4eb5…并派原CAL07；工作目录main/cold metadata已出现，但正式完整closed release尚未由本组消费，CAL3/VAL/heldout成绩未完成，不能把在途/单条PASS当完整评价。

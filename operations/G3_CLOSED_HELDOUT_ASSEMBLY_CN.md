@@ -1,5 +1,7 @@
 # 冻结模型的CAL/VAL闭合数据装配入口（不拟合、不采集）
 
+> **2026-11-15 16:12更新：** 正式CAL07 release9249faef…现已独立消费，原reader提取717aa3ba…/48槽、SUCCESS、READY13.495/请求CLIMB终点24.095sim。仍仅1/3 CAL，未运行真实阶段装配/评分/refit；下文“正式release尚未消费”是16:08之前快照。scalar与费用见operations/G3_FIRST_CAL_ROW_SCALARS_20261115.json。
+
 2026-11-15。首次实际TRAIN-only fit保持原3371ac20…/model a8b1f165…/TRAIN行882ca00b…，不是新增fit。总计划14:00/b2fb786e…未变，T复杂任务合格时仍优先资源。
 
 原learner已有`calibrate-frozen/evaluate-frozen`，但读取的是完整dataset而非三份Data release。本次补齐**已提取且完整闭合heldout→保留原TRAIN的dataset**步骤；不为了凑输入重新fit、改derived protocol、改角色、丢未达或提前评价单条CAL。
