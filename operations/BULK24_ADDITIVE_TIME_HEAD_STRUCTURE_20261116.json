@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-16T03:22:18.169748+08:00",
+  "role": "STRUCTURAL_ADDITIVE_TIME_HEAD_DIAGNOSTIC_NOT_MODEL_SCORE_TRAINING_OR_INFERENCE",
+  "actual_context_pairs": [
+    {
+      "context": "bulk-g01_left",
+      "plus_ordinal": 9,
+      "minus_ordinal": 17,
+      "plus_action_offset": [
+        0.0,
+        0.040000000000000036
+      ],
+      "minus_action_offset": [
+        0.0,
+        -0.040000000000000036
+      ],
+      "plus_minus_feature_delta2": [
+        0.0,
+        0.08000000000000007
+      ],
+      "remaining46_within_context_deltas_exact_zero": true,
+      "plus_minus_full_success_cost_delta_ticks": 36,
+      "both_requested_native_success": true
+    },
+    {
+      "context": "bulk-g02_left",
+      "plus_ordinal": 19,
+      "minus_ordinal": 3,
+      "plus_action_offset": [
+        0.0,
+        0.040000000000000036
+      ],
+      "minus_action_offset": [
+        0.0,
+        -0.040000000000000036
+      ],
+      "plus_minus_feature_delta2": [
+        0.0,
+        0.08000000000000007
+      ],
+      "remaining46_within_context_deltas_exact_zero": true,
+      "plus_minus_full_success_cost_delta_ticks": -67,
+      "both_requested_native_success": true
+    }
+  ],
+  "full_feature_difference_vectors_exactly_equal": true,
+  "affine_standardized48_time_head_cannot_fit_opposite_strict_pair_preferences": true,
+  "clipped_affine_cannot_reverse_sign_without_tying_zero": true,
+  "scope": "Only the four observed labels in these two all-success contexts; no population expected-cost or causal-identical-world claim",
+  "observed_cost_contrast_difference_ticks": 103,
+  "source_code": "/mnt/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/successor_critic.py",
+  "source_code_sha256": "5c21d596a02627c4932b237cddace75fbb238cd74c52b099f102a88018d30c0d",
+  "source_definitions": [
+    {
+      "function": "_fit_heads",
+      "lines": [
+        175,
+        202
+      ],
+      "definition_sha256": "e852be00b2414a739a668d01ffe5820947f89ff404bc649e0236f6f8ae8e7f98"
+    },
+    {
+      "function": "predict_offline",
+      "lines": [
+        205,
+        212
+      ],
+      "definition_sha256": "5221257a9ea22363c09fc6ee950377ec3e2a7df81d000a9533e84561a43db05c"
+    }
+  ],
+  "model_artifact_or_weights_read": false,
+  "predict_offline_called": false,
+  "fitter_or_model_or_WM_called": false,
+  "frozen_fit_model_and_CAL_VAL_unchanged": true,
+  "RGBD_or_hidden_world_match_not_claimed": true,
+  "future_model_change_not_installed_or_authorized_by_this_report": true
+}

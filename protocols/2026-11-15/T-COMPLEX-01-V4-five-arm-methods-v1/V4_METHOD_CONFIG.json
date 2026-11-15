@@ -14,7 +14,9 @@
       "our_optimizer": false,
       "builder": "build_v4_planner",
       "historical_API0_substitution": false,
-      "WM": true
+      "WM": true,
+      "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
+      "legacy_common_stow_H": true
     },
     {
       "id": "B",
@@ -22,7 +24,9 @@
       "our_optimizer": true,
       "builder": "build_v4_planner",
       "historical_API0_substitution": false,
-      "WM": true
+      "WM": true,
+      "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
+      "legacy_common_stow_H": true
     },
     {
       "id": "C",
@@ -30,7 +34,9 @@
       "our_optimizer": false,
       "builder": "build_v4_planner",
       "historical_API0_substitution": false,
-      "WM": false
+      "WM": false,
+      "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
+      "legacy_common_stow_H": true
     },
     {
       "id": "D",
@@ -38,7 +44,9 @@
       "our_optimizer": true,
       "builder": "build_v4_planner",
       "historical_API0_substitution": false,
-      "WM": false
+      "WM": false,
+      "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
+      "legacy_common_stow_H": true
     },
     {
       "id": "E",
@@ -53,7 +61,9 @@
       "independent_baseline_not_replacement_for_ABCD": true,
       "source_sha256": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
       "max_semantic_selections": 64,
-      "source_review": "STATIC_PUBLIC_INFO_AND_ACTUAL_RECEIPT_UPDATE_ONLY_NOT_NATIVE_QUALIFICATION"
+      "source_review": "STATIC_PUBLIC_INFO_AND_ACTUAL_RECEIPT_UPDATE_ONLY_NOT_NATIVE_QUALIFICATION",
+      "our_optimizer_scope": "NEW_SUCCESSOR_TREATMENT_ONLY",
+      "legacy_common_stow_H": true
     }
   ],
   "primary_contrasts": [
@@ -143,7 +153,23 @@
     "native_zero": 0,
     "five_arm_mains": 0,
     "original_videos": 0,
-    "evaluation_ready": false
+    "evaluation_ready": false,
+    "native_zero_scope": "FIVE_ARM_OWN_ZERO_ONLY; separate19/25-source component passes are not borrowed",
+    "separate_closed_components_seen": [
+      {
+        "source_members": 19,
+        "program_sha256_prefix": "b125b188",
+        "result_sha256_prefix": "e77fd248",
+        "status": "ASSET_COLD_HD_SINGLE_FRAME_NOT_TASK"
+      },
+      {
+        "source_members": 25,
+        "program_sha256_prefix": "f1991adb",
+        "result_sha256_prefix": "00768cd9",
+        "status": "GENUINE_CAPTURE_EXECUTION_ASSEMBLY_NOT_SKILL_OR_TASK"
+      }
+    ],
+    "new_source_30_factor_scope_is_software_only": true
   },
   "physical": {
     "owner": "Data",
@@ -214,13 +240,25 @@
     "complete_cost_provider_or_native_domain_qualified": false
   },
   "latest_plan_seen": {
-    "at": "2026-11-16T00:25:39.630632+08:00",
+    "at": "2026-11-16T03:32:26.576053+08:00",
     "version": "2026-11-16 00:03",
-    "sha256": "34c169d5abfc7edc112ac0febd6e372052021d478c847e77c60050791fdd430b",
+    "sha256": "42c8a90d31e84d8d3b0c832a405b0a654ad82319f3c0b7f5da49982c1f3cfc3a",
     "new_parallel_group": "V-JEPA",
     "current_V4_five_arm_and7a6_identity_unchanged": true,
     "new_model_may_only_enter_separately_registered_future_WM_ablation": true,
     "old_OBS_or_critic_bulk_permissions_not_relabelled_for_JEPA": true,
     "Reach_still_owns_current_chain_optimizer_critic_and_existing_WM_integration": true
+  },
+  "our_optimizer_factor_definition": "NEW_SUCCESSOR_TREATMENT_ONLY_NOT_FIXED_LEGACY_COMMON_H",
+  "preparation_factor_scope": {
+    "mode": "LEGACY_COMMON_NOT_TREATMENT_SPECIFIC",
+    "source_policy_sha256": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
+    "source_owner_commit": "8105e755f9751bffee6dc96819847f473a80b7aa",
+    "policy_copy": "protocols/2026-11-16/V4-legacy-common-H-scope-v1/PREPARATION_FACTOR_POLICY.json",
+    "legacy_common_stow_enabled_for_all_arms": true,
+    "legacy_H_not_attributable_to_new_method_comparisons": true,
+    "legacy_costs_included_in_each_arm": true,
+    "strict_optional_stow_factor_helper_adopted": false,
+    "source_only_no_native_or_comparison_qualification": true
   }
 }

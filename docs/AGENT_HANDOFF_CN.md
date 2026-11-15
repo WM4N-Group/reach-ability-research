@@ -2,6 +2,16 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 03:33：前20完整分母与3套真实三候选表已核；局部快100ms却完整慢180ms，现加性时间头有表达限制
+
+- **计划仍42c8a90d…，继续当前五组而非新WM/新arm：** 无平台/箱数值或模型用途新许可。本轮只读增量消费bulk11/13/17/18/19五个原成功的exact首PREPARE公开48槽/原READY/完整requested CLIMB端点，旧6行不重提/不重跑；未读取frozen模型/权重或调用predict_offline、WM、Actor、physics、API、fit/CAL评分。原fit3371ac20…/model a8b1f165…和旧CAL/VAL均保持。
+- **固定前20分母不是挑胜者：** 独立核20原release/小成员SHA、事前protocol/split/用途、原closed zero/main账与全journal；10原链成功/10原生失败，11到首CLIMB PREPARE/9未到。9个未到的features/CLIMB成本None，10号READY后base_collision完整成功成本仍None，无伪failed receipt。11个不同full48/4个public45＋age状态，仍4几何/8声明context、1个TRAIN祖先，不是独立holdout或TEST。
+- **已形成3套完整三候选context，不再只是两点比较：** g01-left：original R/C=13.500/23.540，+.04=13.375/23.475，−.04=13.475/23.295；+.04局部快**20原tick=.100s**却完整成功慢**36tick=.180s**，后继阶段+.280s反转局部-.100s。g01-right：+.04局部比original快.035s，完整却慢1.485s，第三候选失败保None；g02-left局部/完整最优均+.04，照实保留。各组内部actual public45＋age及首PREPARE clock相等，但未证明RGBD/隐藏世界严格同起点，不冒因果克隆。所有min都是hindsight oracle，不是线上方法；.100s恰好20tick，不把浮点误差当严格跨100ms门、不拿本bulk事后替旧G1检验。
+- **有具体模型族结构诊断，但没有评分/改模型：** 当前源码conditional-time head是标准化48槽affine ridge＋非负截断，无state×action交互。g01-left的+/−与g02-left的+/−实际48维差向量完全相同（只有dy差+.08000000000000007），C(+)-C(−)却分别+.180s和−.335s；这类时间头自身不能表达这4个实测标签的相反严格偏好，截断最多平局不能反向。此结论是读源码＋标签的代数检查，未载权重/调用预测，**不是frozen模型误差/校准结果或总体失效证明**；也未证明45D状态不可辨识/加视觉一定有效。未来合法新版本应检验状态-动作交互与强简单基线，但当前bulk fit/refit仍false，不据此训练/热换7a6。
+- **明确旧H范围已获source响应，不削弱C：** AINav03:24/8105e755…/30-source明确legacy-common H五组同开，与B/D本次new-successor treatment分计、旧H全成本入各arm/不归因新比较；E是无VLM/WM/新优化，不虚称所有底层kernel0。本组可选strict H隔离helper**未采纳、已退出待决项**，不为字面0删除共同强底座。原policy逐byte保管，SHA14b77d69…；纯方法config的our_optimizer已显式限new-successor，当前代码pin刷新，历史原件pin仍保快照。此新30-source计数/flags只是软件，19/25-source closed物理资格不借给它；Data是否采用新版本仍看其原件，不加Reach签字门。
+- **可复核交付与准确完成度：** 说明`/home/yuanyue/reach-ability-research/operations/BULK24_COMPLETE_CANDIDATE_FINDINGS_20261116_CN.md`；本地约64KiB标量/原件指针SHA100f9cab…，48槽/815-entry完整pin inventory只远端，完整报告SHAecd235b4…；结构报告SHA71add454…。新增8个完整域/失败None/tick/prefix专项，连原25个bulk用途/端点=33两端过；另方法config/provider受影响回归本地过，非物理样本/收益。采集/原技能成功归Data/AINav，Reach贡献仅独立输入/端点/机制评价。本轮未新开world/训练/自动化或改他组代码/H/锁/进程。
+- **当前未完成仍不掩盖：** 真capture448步/2.240sim＋原装配PASS保持，但五组main/真实WM query-forward仍0；新caller尚需合法bootstrap/实际grid与accepted owner/same-anchor语义，完整后继cost/provider/准备退出域还未闭合。表中真20cm requested CLIMB不是V4高台整链；.20→.60/static deck/动态箱NAV/完整terminal及先前布局确认仍待，不把heartbeat当许可。scene6394740e…/三箱原技能域/Actor/12N/4s/FF/QP/FIFO/stop、全部dirty/closed/失败账和数据用途全保。
+
 ### 2026-11-16 03:03：真实capture/装配资格已消费；补WM非模型owner隔离，并明确旧共同收臂与新处理因子，未擅改基线
 
 - **计划更新42c8a90d…已读：** 新增J组7项冻结评价软件检查/02:00低优先CPU窗口过期且未用等状态；当前五组/原7a6/仅46308/Data唯一physical owner不变，未有平台布局改动许可。本组未借J窗口或创造新资源/训练用途。

@@ -1,9 +1,9 @@
 {
-  "at": "2026-11-16T00:18:02.885114+08:00",
+  "at": "2026-11-16T03:32:26.576299+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
-    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "70a731fc51e14b2f7edb93ad6938ec81fad1f9a48af99c2b6c81c6942a92a1ec",
+    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "f89e2cbbdbe53e81fa451c4b85686294c3ad7bb0b00e04728983557052d6674e",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
     "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
     "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
@@ -13,9 +13,11 @@
     "research/task_conditioned_reachability/execution_preparation/v4_original_wm_loader.py": "5a06f94396bf8ef0aed77f53f77c7cdffa752f51d9f65d949c31ff9c6147e8f9",
     "research/task_conditioned_reachability/execution_preparation/test_v4_original_wm_loader.py": "5117d38021b39400f9ddcccc0df75883888551b1765c5dd3d74f4d128176dd7d",
     "operations/restore_original_WM_cpu.py": "6029d104625f96e92c84abb8202fb18748cdcac7e0cb70f99d7ed556fd385f84",
-    "research/task_conditioned_reachability/execution_preparation/v4_causal_wm_query.py": "c1302bbdb776f1276665b45bcb72026e54f8b64cad5f8dda8180ef0ba1da8619",
+    "research/task_conditioned_reachability/execution_preparation/v4_causal_wm_query.py": "d79f6b00d9b927649abdf0cdf8f5b9357681baf3817838da434e4d00871c8e96",
     "research/task_conditioned_reachability/execution_preparation/test_v4_causal_wm_query.py": "ed023095c6d1ba321bd7a75caf41e283aea56043c742584392071875c679de59",
-    "operations/check_original_query_port_CPU.py": "0fd29a3070f46237883bc388f3dad00e4ee02907166273b02a4d5031e0f8ddfd"
+    "operations/check_original_query_port_CPU.py": "0fd29a3070f46237883bc388f3dad00e4ee02907166273b02a4d5031e0f8ddfd",
+    "research/task_conditioned_reachability/execution_preparation/v4_anchor_target8.py": "c4bb1b516498abd415a36057a764c4911fd848bc1d96cb381b147825557e8742",
+    "research/task_conditioned_reachability/execution_preparation/v4_stow_factor.py": "b36fbae234946d2c0d2fcf8bede6dd829caf96a195c24afab87e07505fddb896"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
@@ -31,7 +33,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "1868b3661a474449930c37be76dd3d484d4b830b8f282afe12e12bd23aea291b",
+  "protocol_config_sha256": "18d9a342e884185a1b9736047522a9e26e532a0a574a6843fa866052777391e9",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -49,5 +51,15 @@
     "inference_source/original_behavior7a6_query/SOURCE_INVENTORY.json": "aa4b5c060892d1159477972f4a55515c04a12f65e16b02144e55b528bd16fb1d",
     "inference_source/original_behavior7a6_query/filter_full_native.py": "c55901d8205fbdd16952b4e9dbcd65a084ddd569bce591cb415cdb4d9ee6b0e0",
     "inference_source/original_behavior7a6_query/resize_packet.py": "3b70e23eb54b85d035060b914425a33d178d93986eb3eda502e8d8d06e770921"
-  }
+  },
+  "original_visible_geometry_code_closure_sha256": {
+    "inference_source/original_behavior7a6_geometry/SOURCE_INVENTORY.json": "60d433a0ff506eeb6b88ae0004e50cef0e4d303238ae1a34ba09679965860c47",
+    "inference_source/original_behavior7a6_geometry/geometry_vector.py": "f02cbefb7dca72cc5b4f0b54014eb3af0aa8e5eda8faa0c9bab432f4ae9d137f",
+    "inference_source/original_behavior7a6_geometry/visible_surface_goal.py": "b7ccf787db0db1e8496d2d6627e9efeb941bb6c06d7638791ce1628a81068da4",
+    "inference_source/original_behavior7a6_geometry/visual_box_proposals.py": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304"
+  },
+  "preparation_factor_policy_copy_sha256": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
+  "read_only_original_source_pins_are_historical_consumed_snapshots_not_current_mutable_path_validation": true,
+  "new_factor_scope_source_commit": "8105e755f9751bffee6dc96819847f473a80b7aa",
+  "exact_new_runtime_dependency_freeze_still_required": true
 }

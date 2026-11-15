@@ -2,6 +2,13 @@
 
 2026-11-16。查看新live caller时发现具体的方法身份风险，不能只看A/B/C/D/E的高层开关。此处的原Reach stow kernel是标准有限DAG原waypoint子序列选择，不是原Actor内生控制器，也不等完整后继评价器。
 
+## 03:24源码owner已明确口径（本组03:31接收）
+
+AINav commit **8105e755…/30-source**明确选择`LEGACY_COMMON_NOT_TREATMENT_SPECIFIC`：五组保留旧共同H，只有B/D开启本次new-successor treatment；E无VLM/WM/新后继优化，但不虚称底层所有算法都0。新factor_scope记录旧H attempts/completed/failed/proposed-changed与新selector事件，原alias guard保留，末尾不再借旧always-TRUE installer覆盖V4方法。**本组可选strict isolation未采纳，不再作为待决项/开跑门，也不据它削弱C。** 这是源码计数/身份澄清，不是新的物理运行或方法收益，19/25-source closed资格不借给30-source。
+
+精确源policy逐byte保管在`protocols/2026-11-16/V4-legacy-common-H-scope-v1/PREPARATION_FACTOR_POLICY.json`；纯method config已标记`our_optimizer`仅new-successor，五组legacy_H同开。SOURCE_INDEX刷新本组代码pin，历史只读原件pin明确为既有快照，不拿后来可编辑路径当新runtime资格。当前统一caller/WM/bootstrap/完整cost与原40cm能力缺口仍未解决。
+
+
 ## 精确调用链（AINav 4909180a…/27-source软件候选）
 
 1. `/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/live_driver.py`，SHA **f6567d53…**：V4 constructor调用`self._install_common_stow()`；结尾用`setattr`把所有7个原helper装到V4类。
