@@ -1,0 +1,6 @@
+{
+  "note": "PRELAUNCH_API_CORRECTION_NO_PHYSICAL_ATTEMPT new_worker_sha256 describes intermediate API-only draft before camera ABI guard. Actual executable bytes pinned by F2 files and this exact SHA; old frozen reviews unchanged.",
+  "actual_worker_api_v2_sha256": "d0dd7277690831184702db753de2474c4f3b8d925fe354c9c9c0a50ccbe6fb65",
+  "actual_F2_program_sha256": "d239b27f0e73adf6213eaaadfaa0dee29e3addaa7821f33775657014406147df",
+  "physical_dispatches_so_far": 0
+}

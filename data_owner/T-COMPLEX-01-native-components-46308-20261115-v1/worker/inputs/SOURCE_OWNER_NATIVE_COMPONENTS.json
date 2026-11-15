@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-15T14:59:54.431291+08:00",
+  "code_commit": "8067164c6db208484ff009b5e6986869fd8bbbc3",
+  "previous_integration_code": "14264f65e78a71a4f3b9546e648d370e841d1d8a",
+  "deployed_SHA_members": 349,
+  "same_local_remote_software_checks": 6,
+  "not_twelve_or_prior_four_plus_six_research_samples": true,
+  "source_files_sha256": {
+    "development/complex_dual_route_v1/terminal_stop.py": "a85a00adc0f52734cc7a9bfc7cae3bd638b1e4b84e405c7bf8f09db0e88a724d",
+    "development/complex_dual_route_v1/scene.json": "c7a05d971fa5607b1156d1ab49f334f6a21c085f446b7f2d93c8f1f7df7286f3",
+    "development/complex_dual_route_v1/README_CN.md": "7bbc4d87626219652a4dd0bdf7c95bd1f3f56203f7491c8fad6c12901bf4f70d",
+    "development/complex_dual_route_v1/native_construction.py": "f963ba032bcc9617821faa00c9cbc2c15182286f93d616908e7e1bd26f5c19bc",
+    "development/complex_dual_route_v1/complex_scene.py": "f44384e67d518e78961fac17ca966f87e453bb9efccf15243c7a9ed1142272ba",
+    "development/complex_dual_route_v1/multi_goal_factory.py": "afbe3326015db0544a8714a565d53795f3cfd0f72a891529dd4d1b852f2e7070",
+    "development/complex_dual_route_v1/FINITE_PLACEMENTS.json": "575191d2f258b81dedbcea97f452fab2a171322f99623a30d2e6c451ef191e8f",
+    "development/complex_dual_route_v1/static_qualification.py": "23ff4daedbe25709f9559061db1aedc7ba800bc743108a10b3140a5ccaa77d5d",
+    "development/complex_dual_route_v1/PUBLIC_TASK.json": "630016fe35aaed2f4ec5bb06c5a17d349a7a28e4c3345e6931e3c0faf6b64105",
+    "development/complex_dual_route_v1/tests/test_source_contracts.py": "05a5fbf5e5fea63bbb0e57ceac4d0df034e6c6c29888aef9e1e2f1c5b4de00c8"
+  },
+  "actual_native_compile_Runtime_world_or_Actor_by_AINav": false,
+  "actual_T_COMPLEX_main_or_video": 0,
+  "new_query_semantic_driver_and_Reach_adapter_and_dynamic_qualification_still_required": true,
+  "Data_inflight_or_H_or_locks_modified": false
+}

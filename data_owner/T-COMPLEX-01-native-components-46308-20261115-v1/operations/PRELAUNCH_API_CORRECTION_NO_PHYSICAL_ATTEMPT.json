@@ -1,0 +1,12 @@
+{
+  "kind": "UNEXECUTED_PROGRAM_REVISION_ONLY",
+  "original_program_sha256": "7ac90d41b23d213abc8cee48a9a836f74bab381160a7972657ba5934240f0c90",
+  "physical_dispatch_count": 0,
+  "native_models_or_worlds_by_original_program": 0,
+  "source_review": "Original RegisteredObserver inherits capture(control_tick,issued_previous), not acquire. Typo found before prepare/zero dispatch; source owner module unchanged.",
+  "old_worker_and_freeze_kept_immutable": true,
+  "new_worker_sha256": "2348991b52c74457b5527df73d37cf92d5538d9989f8ac25777c3ddcee36b4b8",
+  "same_single_scope_total_component_zero_limit": 1,
+  "same_task_main_limit": 0,
+  "old_unexecuted_version_withdrawn_not_retried": true
+}
