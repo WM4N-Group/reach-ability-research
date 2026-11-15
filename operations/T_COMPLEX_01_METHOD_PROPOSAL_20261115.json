@@ -46,7 +46,7 @@
   },
   "public_task_sha256": "630016fe35aaed2f4ec5bb06c5a17d349a7a28e4c3345e6931e3c0faf6b64105",
   "finite_placements_sha256": "575191d2f258b81dedbcea97f452fab2a171322f99623a30d2e6c451ef191e8f",
-  "public_model_source_sha256": "cac79218ed92aa8ccc4aa0fb26847deacc99dd4105d88e33e2988a6cb522937d",
+  "public_model_source_sha256": "e77d95a06a5da5e46ad2b03db9218b74d225382566b2d8af2f2f3b7434da23aa",
   "original_intent_seam_source_sha256": "8b646a703c1ba4cf4938d9cb19b398bc8b38ca2ab31557e5ee1cfb7e6e570529",
   "depth_units": "NOMINAL_DECISION_BUNDLES_NOT_NATIVE_SEMANTIC_TRANSFERS",
   "native_transfer_count_to_be_measured": true,
@@ -54,5 +54,6 @@
   "nominal_envelope_radius_m": 0.45,
   "envelope_is_dynamic_bound": false,
   "Data_owner_task_intake_confirmed": true,
-  "Data_owner_queue_confirmed": false
+  "Data_owner_queue_confirmed": false,
+  "declaration_roundoff_NAV_noops_removed_not_native_READY_inferred": true
 }

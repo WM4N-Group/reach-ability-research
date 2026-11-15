@@ -72,6 +72,8 @@ class PublicSceneModel:
 
     def route(self,state,start,goal):
         """Common shortest nominal visibility route; never a stored correct path."""
+        if math.hypot(goal[0]-start[0],goal[1]-start[1])<=1e-12:
+            return 0.,(tuple(start),)  # declaration roundoff, not actual native READY
         points=(tuple(start),tuple(goal))+self.points;obstacles=self.obstacles(state)
         heap=[(0.,0,())];best={0:0.}
         while heap:

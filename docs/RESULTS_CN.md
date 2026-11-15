@@ -1,5 +1,13 @@
 # 关键结果与证据边界
 
+## 2026-11-15 15:18：首个真实高层critic已在46308完成TRAIN-only拟合；6新行4PASS/2原门失败源资格齐，T实际公共source与原语义接点已实现
+
+- G2 TRAIN6完整原件已到，01/02 original与05/06 minus成功；03 plus-left原stop_deadline、04 plus-right原forbidden_contact:middle。两失败均决策后CLIMB原门，不是资源censor/上游缺输入；核原frozen SDK Machine.after_step:219、course_tools._contact_guard:320及structured active-machine/stack/start/issued clock见证，保缺literal failed回执，不造terminal。6真实48槽均age0，2prefix/2公共proprio状态/1TRAIN scene、4成功2负，4个成功成本+6个READY监督。六scope763.970sim/4642.471546ledger wall/独立highwater和1013819924bytes，旧账另保。
+- 15:04:10完整source/feature/label门PASS；原2f82530d…采集协议false旗/旧角色不回改，仅生成derived manifest d626da89…与6新行dataset cb2cae69…（raw/weights只远端）。15:04:11原固定stdlib logistic/ridge真实fit一次，entry wall.045899s；actual artifact3371ac20…、model content a8b1f165…、TRAIN snapshot882ca00b…。不是fixture、Actor/WM/GPU训练或原AINav工程成功冒模型。常量基线success score2/3、READY mean13.490s、成功CLIMB条件mean23.700s；未有heldout比较，score未校准/动态feasibilityUNKNOWN/不部署。
+- 可消费release `/mnt/yuanyue/reach-runs/G3-TRAIN-only-20261115-v1/TRAIN_GATE_AND_FIT_RELEASE.json`；Data据原协议、实际gate/fit pins独立新phase技术准入CAL7—9，VAL未由本文件放行，原TRAIN控制器/锁/H不改、不自动派发。T-COMPLEX若先合格仍首资源窗口优先，不为等critic延误；之后CAL/VAL只用同一model不再fit，只有真实诊断，不冒小样本概率校准/G3未见验收完成。
+- T-COMPLEX actual PUBLIC_TASK630016fe…/FINITE_PLACEMENTS575191d2…已接入generic PublicSceneModel，同一visibility/AABB/box sweep/cost供两策略；原select/reject/observe seam已实现，拒private ExecutionBatch、只选实际当前catalog唯一option，真实匹配receipt后才更新nominal reference，不把预测state写world；original terminal verifier未给证据则complete=false。Source-native catalogue/dispatcher/ground safe stop/实际资格仍未由本组消费，Data确认任务但未排队，不冒A/B/视频。
+- 公共v1模型计算不同策略结果仅counterfactual，不是原生能力差；当前macro成功路径仅2非强制重构选择，强制final NAV不充第三有效选择，也不把11native transfers当3决策。可验证v1真实更细决策，或考虑本组三箱同prototype/ground/+X公开提议（原生asset未实现、非必须换v1）；不喂private存在性路线/手工答案，不改source追原生输赢。原8核心/语义软件检查是软件，T物理/视频本组仍0。入口operations/T_COMPLEX_PUBLIC_SOURCE_ADAPTER_CN.md、G3_FIRST_REAL_TRAIN_FIT_20261115.json。
+
 ## 2026-11-15 13:44：新TRAIN01/02真实PASS已消费并提取两条因果48槽监督行；03 plus-left唯一main已派，未提前fit/判gate
 
 - 正式ordinal01 f253b6af…46成员/ordinal02 daa22f04…41成员SHA已核，原9流cold/ledger/新purpose/TRAIN/原2f82530d…/new program/同scope CAS与实际journal链绑定。01于13:17:30 closed，121.085main sim；02于13:30:25 closed，109.865main sim。不是旧DEV重标/复用zero/世界，仍同一个full4 TRAIN scene，不增加独立scene数或新优化收益。

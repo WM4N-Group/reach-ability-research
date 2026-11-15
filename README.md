@@ -35,6 +35,12 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 最新真实进展（2026-11-15 15:04）
+
+未来新用途TRAIN6完整闭合4成功/2原门失败，六行48槽/源标签门通过；46308已完成首次真正TRAIN-only高层logistic/ridge拟合一次，6行/1scene/2prefix，非fixture或Actor/WM训练。数据与权重只远端，模型3371ac20…文件/a8b1f165…内容冻结；常量/均值基线已记，CAL/VAL还未评价，score未校准/不部署。见operations/G3_FIRST_REAL_TRAIN_FIT_20261115.json；Data按原协议实际gate/fit pins接续heldout，T复杂首对优先资源窗口不改。
+
+实际T公共source已进入共同model与原语义API seam，原live host/candidate注册/ground终点和native资格仍待接；只做public名义图诊断，不拿模型A/B结果充机器人成功或视频。v1 macro仅2非强制重构选择，第三有效选择未证，三箱方案仅可选新source提议。见operations/T_COMPLEX_PUBLIC_SOURCE_ADAPTER_CN.md。
+
 ## T-COMPLEX-01优先任务（总计划标记14:00）
 
 不等critic/百级采集，先做真实复杂scene、greedy vs有限多步同条件两arm与完整live原片。Reach已实现共享nominal几何＋两策略标准搜索核心；source scene adapter/原生对比/视频尚未消费，不以抽象测试或旧短链冒完成。当前TRAIN6原门继续。见operations/T_COMPLEX_01_SHARED_METHODS_CN.md、T_COMPLEX_01_METHOD_PROPOSAL_20261115.json。物理/Data队列资格未核，不擅自占卡/开world。
