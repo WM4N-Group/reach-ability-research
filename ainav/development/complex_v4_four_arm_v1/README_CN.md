@@ -40,3 +40,15 @@
 `ElevatedGoalDwell`按真实连续200Hz clock/tick维持原.5s必要停稳：重复clock不积时、漏tick重置、载荷/支撑/速度失效重置，ground同XY不通过。它故意没有task complete属性/回执：原同world已成功owner/stow、三immutable placement与真实CLIMB链仍需单独接入，不把这个ready布尔冒完整任务。
 
 新9项仅验证接触算术/顺序/多geom累积/非有限拒绝/时钟和停稳；没有调用实际MuJoCo collector或产生真实接触样本，原生ABI/平台contact动态资格仍待Data自己的新程序。没有因reader代码写好就恢复旧根或放行五main。
+
+## 五组真实共同公开候选与效果声明
+
+`public_candidates.py`导出原SkillIntent目录/declared_map/capability_contract与PUBLIC_EFFECTS.json。五组同序同域：ground NAV只列平台外声明点；高台终点NAV唯一以.60m目标层声明，绝不把平台下面ground同XY当终点；6个地面绝对PUSH目标保原数字、不额外加.11；3个物体与static deck的CLIMB均保public DESTINATION高度，private source support/20cm rise/当前关联仍由native judge建立。原IntentBatch契约与真实E.select已接通软件seam，但不是V4实际runtime caller已完成。
+
+公开效果只列请求的reference/placement/destination和必须原回执，实际exit pose、成功概率、后继成功耗时全部None；合法准备/退出变体尚未原生导出时显式UNKNOWN，不补0、不把G2偏移直接挪来。Reach自己实现共同完整代价provider，本组不替其研究评价；不造WM public60/target8/真实issued-history。
+
+## 当前硬交付目标与并行授权
+
+用户最新明确E规则必须完整实跑成功，A—D各自交完整直接live原片，失败/API或资源截断也留全片；软件checks/示意图/进程exit不替代。E若未成功只报告实际失败阶段并修具体新版本，不能洗旧失败或在原closed root反复重试。五组共同执行底座先资格，正式顺序/策略与源结果前freeze；E后果不能反调其他方法后还声称同一未见对比。
+
+用户同时明确尽量并行、充分利用服务器。仍Data唯一physical owner；AINav不自己开world/改Data进程或锁。新scope可按Data合法隔离lease/CPU/GPU/显存与HD录制容量并发，不是限制为必然一GPU只能一world；已有bulk专slot/CPU与watchdog不能热改。先实测必要own-zero资源，再决定同卡多world是否安全；没有method/native资格不为占卡而启动假任务，不把空闲快照当lease。

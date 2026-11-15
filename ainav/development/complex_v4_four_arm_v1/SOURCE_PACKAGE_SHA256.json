@@ -1,16 +1,21 @@
 {
   "role": "V4_FIVE_ARM_ASSET_AND_E_RULE_PARTIAL_SOURCE_NOT_DISPATCH_OR_FULL_METHOD_IDENTITY",
   "files_sha256": {
+    "PUBLIC_DECLARED_MAP.json": "9be67e3c24fc96cceab24b286294199f17701be4e316156120005ba9faba0979",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
+    "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "elevated_terminal.py": "aac30006cb0edbd0e63ae3b4f72948de90f0ae61dd6a75f6ea2f21dce5554242",
     "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
+    "public_candidates.py": "33b9a695d80ccc387609471d20c92391d487e5c5e4e98cec44421d9b963345bc",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
-    "README_CN.md": "a2139ae813c35b74552e1d74200dcaf77e6cc932afe14a5d1faa666d40297a02",
+    "README_CN.md": "3d94b38dbc87b727608314a87ecc46c536b893bd6316ee5749367bbf266b22c6",
     "rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
     "FOUR_ARM_PROTOCOL_REFERENCE.json": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
     "FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
+    "PUBLIC_EFFECTS.json": "1a3c1205849734ddb2faebe3335194e7b10aa3b8779d2d69d281d683c77c6a9c",
     "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
     "tests/test_elevated_terminal.py": "32b53771209bc332fdb85c3d286e01ce5b9d169d740690f2732a0e9ce05ed00b",
+    "tests/test_public_candidates.py": "1ec402f4ce641c0ac5f3373dabfec53d1d5abca0aee30c5ea2bbf001eb5c741d",
     "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
     "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4"
   },
