@@ -1,10 +1,20 @@
-# 独立原生观测资格测量：仅2 NAV／3观测，不是任务A/B
+# 独立2NAV/3观测程序：自身zero/cold通过，唯一main在途；不是A/B或任务成功
 
-- source：AINav immutable `c3c695b5fa10daa826e85fcad04dd737b4810bc5`，26源逐SHA未改；三箱几何／颜色／原RGBD proposer/matcher、原Actor／12N／4s／FF／effort／QP／FIFO／接触与原NAV成功门不改。
-- 精确purpose `OBSERVABILITY_QUALIFICATION_ONLY`；新scope `data-46308-T-COMPLEX-observability-only-20261115-v1`，新完整程序own-zero/main各至多1，无自动重试／替代／旧root恢复。
-- 原SupportedCapture→固定原NAV(-.08,+.15,0)→固定原NAV(-.08,-.15,0)，只记录3个实际fresh边界与原关联结果；0 PUSH，不挑最好帧／补视角。按 `planner.motion_complete` 与 source `finish_from_driver` 结束，绝不套 `while not host.complete`。
-- 成功只指2原NAV真实succeeded回执＋3个fresh原观测完成；`task_success=false`、`AB_comparison=false`恒定，visibility不等PUSH READY、三有效选择或全任务成功；没有Reach搜索／critic／训练输入。
-- 新程序有限cap：task125sim、scope150sim含自身zero/双aux、57600wall、输出3GiB；CPU2／RSS4GiB／GPU3GiB，GPU0／原UUID／canonical inode不变。新wall cap在任何物理前，按A/B真实最慢377.005wall/sim和2×原NAV60sim＋capture2.24sim的完整域事前预算，保>1.2倍＋zero/收尾余量，不是给旧4800wall pair延时或重试；旧pair global_stop／失败／费用／scope不改。
-- 代码仅已实现与新Data lifecycle软件检查；native资格和dispatch只以新权威H／新自身zero/cold／launch记录为准。软件检查不算新研究样本，未重跑AINav源fixture。
-- 生命周期：`stage_and_freeze.py`→显式`control_observation_study.py OBS prepare`→`zero-dispatch`→`zero-run`→`zero-cold`→`fetch-zero`→`close-zero`；每步仅一次。main须另fresh准入后显式派发，不因代码存在自动启动。禁止重复任何已经消耗的命令；当前次数读远端H。
-- 大raw／MJB／原query数组／权重／视频留46308，本地仅小metadata／少数原query，GitHub code-only。不连接旧46174，不训练WM／DINO／Actor、不启真机／第二owner／新自动化。
+更新：2026-11-15T19:21:32.616311+08:00（北京时间；主计划仍14:00/b2fb786e…；旧T首对closed不动，独立2NAV/3观测资格新程序已自己的zero/cold通过、唯一main实际启动；不是新A/B成功／训练）
+
+**当前唯一在途：独立观测资格，不恢复旧pair**
+- **已从“仅接code”推进到新原生程序实际执行：** AINav immutable **c3c695b5…**26源逐SHA未改、同三箱578bd753…/颜色/原RGBD proposer和matcher；新purpose **OBSERVABILITY_QUALIFICATION_ONLY**，scope `data-46308-T-COMPLEX-observability-only-20261115-v1`，完整493成员program **9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad**，新authority **2bdd91c590a5ba38bec5bd63b868f79fbd9c068f62c1b80a85468d687c9fc079**。新固定原capture→NAV(-.08,+.15,0)→NAV(-.08,-.15,0)／3fresh原边界／0PUSH；原Actor/12N/4s/FF/effort/QP/FIFO/接触与NAV成功门均不改，没用静态pose填关联、改mask/颜色或挑最好帧。Data是明确measurement caller，不是手工给B正确路线；无Reach搜索／critic／模型输入或fit。
+- **自身完整zero及cold已过，不借旧组件／A/B zero：** 原zero **2136ddd7…**，原aux6.505sim、**36.734562313result wall**、task/commands0、原INPUT8/HD世界0帧/review各1、close errors0；numeric model **febcd5921c880d3029778b15f3efe0f2193ddc6f0210aade037cffe2d072ba9e**。新Data lifecycle软件检查只验新measurement终止／预算和ledger用途，无native/numeric导入、不计研究样本，也没重跑源fixture。完整zero后禁native/Actor的cold核原8字段／时钟／私域catalog无损alias、原模型／原记录，未置观测完成或任务success。
+- **唯一main已真实派发并alive：** 当前H **7ceaffeb2829e32eaa0b9eb1a512e585baf706787c8249b1f1ce8737f564e717**、own-zero1/main1；2026-11-15T19:21:32.557589+08:00只读快照native PID **57116**，ledger main open、当前phase费用仅在途实测，不填0或冒最终总费。当前实际capture witness **0**、观测边界 **0**、原NAV succeeded **0**；**尚无2NAV/3观测完成**。新caller按 `planner.motion_complete`＋source `finish_from_driver` 终止，不套永不结束的full-task while-not-host.complete；只有精确2个原成功receipt/3fresh原观测才记measurement complete，**task_success=false/AB_comparison=false恒定**，可见只证必要关联、不是PUSH READY／三有效决策／完整任务。
+- **本新用途在物理前单独冻结有限技术cap，不给旧失败延期：** task125sim，scope150sim含自身zero/双aux、**57600wall（16小时上限，不是预计耗时）/3GiB输出**；按A/B真实最慢377.005wall/sim×原2NAV各60sim＋capture2.24sim的完整域，加>1.2倍及zero/收尾余量事前预算，详见新protocol cost_basis。**旧pair4800wall/global_stop/全部失败与次数未动，不是重试或wall因果benchmark。** CPU2/RSS4GiB/GPU3GiB、GPU0原UUID/canonical inode，fresh owned21933177856bytes＋旧CAL/VAL7.5GiB＋本root3GiB在40GiB自限内，provider quota未知。任何原失败／预算censor保全、0替代/补视角/恢复；在途源码/门/cap不热改，未优化全module Path.resolve guard。
+
+**已闭合原件／科学解释不变**
+- 原A greedy仍capture448步/2.240sim后首PUSH因当前RGBD唯一关联缺失拒绝，native PUSH0/重构0；release7afea491…，scope15.250sim/880.527903158wall/218453439bytes，非resource censor。原B multistep仍**原wall watchdog资源截断**，12.720task sim/2544步、524原NAV Actor forward、1public bundle/0terminal receipt/0placement，source result4a93cc08…；scope25.730sim/4781.901017321wall/232149061bytes，usage_known=true/resource_censored=true，非搜索.1954s计算超限、未补造NAV失败/成功回执。
+- 原B九流cold全过／995行原journal链／128RGBD+128review+128直接HD raw；A/B 1×和同钟pair已从原live raw编码，末端A黑色“无后续观测”说明页，不重渲染/插帧/旧TRAIN片替代，**只是原失败／截断证据，不是复杂任务成功母版或前瞻优势**。正式B/pair release **161d483b…** 已挂H；`/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-T-COMPLEX-01-FULL-B-AND-CLOSED-PAIR-DIAGNOSTIC-ACTUAL-20261115-v2/release.json`。A/B实际首query/448控制前缀与独立own-zero同信息证据保留，不把nominal候选冒当前原生合法候选/强greedy已输。
+
+**后续覆盖与边界**
+- 接续本唯一measurement到原终态，按3固定边界全分母发布原query/原回执／费用，失败/资源censor如实；无关联可给该固定域No-Go，不反复找角度/调阈值。source owner可在本冻结程序外独立验证guard开销优化，现静态线索与B watchdog中断栈不等完整因果profile；当前源不改。
+- bulk24仍已收原0fff23aa…五源／Reach0f9e0e03…24 ordinal、4几何/8contexts×3/一既有TRAIN祖先、scope/program均None；**未freeze/派发或给全24预留容量、未扩其余36组合**。并行准备合格滚动新cohort/GPU1源准入，不与旧cohort authority混跑、不冒4独立heldout族。T仍首优先；长期≥100新尝试/≥10有意义组与唯一owner逐GPU覆盖不取消，观测资格不计TRAIN。
+- TRAIN6原13758867…4PASS2失败/27query、一次真实fit3371ac20…/modela8b1f165…gate=true冻结；CAL07原PASS119.345task sim／9249faef…保留，CAL08/09与VAL10—12仍0/0，不refit、不把旧audit转训练。旧closed/旧46174 UNKNOWN/费用不洗；WM/DINO/Actor重训/真机/第二owner/新自动化不开。
+
+**详细入口**：`/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-observability-study-46308-20261115-v1/README.md`、`/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-observability-study-46308-20261115-v1/OBS/`、`/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-observability-study-46308-20261115-v1/latest-observation-pointer.json`；旧pair视频manifest `/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/closed-pair-direct-video-manifest.json`，未来bulk intake `/home/yuanyue/main/work/data-team/manifests/T-COMPLEX-observation-and-bulk24-source-intake-20261115-v1/FUTURE_SOURCES_RECEIVED_NOT_DISPATCHED.json`。新worker code-only **8d5fdc2…**已本地/GitHub/46308同步；大raw/MJB/数组/权重/视频留远端，工作目录仍`/home/yuanyue/main/work/data-team`，不使用re-nav或旧46174。
