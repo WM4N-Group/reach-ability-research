@@ -1,0 +1,213 @@
+{
+  "at": "2026-11-15T18:28:20.552701+08:00",
+  "role": "INDEPENDENT_ACTUAL_CONTROLLED_PREFIX_AND_NATIVE_CONSUMPTION_NOT_TASK_GAIN",
+  "protocol_sha256": "e72ddbb2e33968fe8b997fb2918efd50551e59c4be069a067f2aeab0366d7d02",
+  "reader_source_sha256": "275faf61e9e80a4d53d12ca07981a86c9129baf6284b670d8c20353a4389355b",
+  "A_original_closed_result_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+  "A_main_ledger_closed": true,
+  "predecision_capture_steps": 448,
+  "actual_capture_channel_checks": {
+    "delayed": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "dq_before": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "issued": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "physical_tick": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "q_before": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "raw_torque": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "time_s": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    },
+    "torque": {
+      "dtype_and_shape_equal": true,
+      "actual_bytes_equal": true
+    }
+  },
+  "first_public_observations_equal_except_storage_path": true,
+  "canonical_original_observation_hashes_not_overridden": true,
+  "exact_original_observation_file_sha256": {
+    "A": "31b92b0e8bce2acc23ff9310a485885bd726ce76c3e1e2a41b98217b33d24421",
+    "B": "b0d229fe25f5a036bcfb0308c92aa39cbb7069b5d36b8a47af12b0ba6af50ec6"
+  },
+  "both_first_public_observed_object_lists_empty": true,
+  "actual_decision_events": {
+    "A": {
+      "actual_three_meaningful_choices_NOT_proven": true,
+      "common_nominal_root_candidate_count": 6,
+      "counts_as_algorithm_decision": true,
+      "decision_index": 1,
+      "depth_units": "DECISION_BUNDLES_NOT_NATIVE_SKILLS",
+      "event": "reach_complex_public_decision",
+      "examined_transitions": 6,
+      "execution_authorized": false,
+      "fallback_to_shared_greedy": false,
+      "method": "greedy",
+      "nominal_action": {
+        "goal_xy_m": [
+          1.85,
+          0.0
+        ],
+        "kind": "PUSH_WITH_NAV_ROUTE",
+        "native_mapping_verified": false,
+        "nominal_NAV_route_xy_m": [
+          [
+            -0.08,
+            0.0
+          ]
+        ],
+        "public_ref": "cuboid_a",
+        "requires_original_placement_or_terminal_stop": true
+      },
+      "nominal_geometry_forecast_not_actual_world": true,
+      "nonforced_nominal_reconstruction_choice": true,
+      "planned_native_request_count": 1,
+      "planner_wall_s": 0.004115272080525756
+    },
+    "B": {
+      "actual_three_meaningful_choices_NOT_proven": true,
+      "common_nominal_root_candidate_count": 6,
+      "counts_as_algorithm_decision": true,
+      "decision_index": 1,
+      "depth_units": "DECISION_BUNDLES_NOT_NATIVE_SKILLS",
+      "event": "reach_complex_public_decision",
+      "examined_transitions": 127,
+      "execution_authorized": false,
+      "fallback_to_shared_greedy": false,
+      "method": "multistep",
+      "nominal_action": {
+        "goal_xy_m": [
+          9.7,
+          0.0
+        ],
+        "kind": "PUSH_WITH_NAV_ROUTE",
+        "native_mapping_verified": false,
+        "nominal_NAV_route_xy_m": [
+          [
+            -0.08,
+            0.0
+          ],
+          [
+            -0.08,
+            -1.8
+          ],
+          [
+            3.62,
+            -1.8
+          ],
+          [
+            7.32,
+            -1.8
+          ],
+          [
+            7.319999999999999,
+            0.0
+          ]
+        ],
+        "public_ref": "cuboid_c",
+        "requires_original_placement_or_terminal_stop": true
+      },
+      "nominal_geometry_forecast_not_actual_world": true,
+      "nonforced_nominal_reconstruction_choice": true,
+      "planned_native_request_count": 5,
+      "planner_wall_s": 0.1954034510999918
+    }
+  },
+  "actual_selected_intent_events": {
+    "A": {
+      "VLM_calls": 0,
+      "actual_source_parameters": {
+        "goal_world_x_m": 1.85,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "actual_source_target_ref": "cuboid_a",
+      "batch_sha256": "7a97c94a042bda910b66ef07185ae7bb45eb81e0dece2048b0ac898b923345c4",
+      "decision_index": 1,
+      "event": "reach_complex_semantic_intent_selected",
+      "intent_sha256": "558e60e83b461f9da783998e0a9fdd3c29d09ad20a63830dfb5cc76b565d0467",
+      "method": "greedy",
+      "physical_action_issued": false
+    },
+    "B": {
+      "VLM_calls": 0,
+      "actual_source_parameters": {
+        "goal_world_x_m": -0.08,
+        "goal_world_y_m": -1.8,
+        "surface_height_m": 0.0
+      },
+      "actual_source_target_ref": "cx-nav-000",
+      "batch_sha256": "853a519177c67b41435ea6ee52965f895776e409cc3eb40517df713b1efebcdc",
+      "decision_index": 1,
+      "event": "reach_complex_semantic_intent_selected",
+      "intent_sha256": "1c3f3b4bf5b1a5325b7b3d20f1148c20480eb74545cee4393c846ae273169f8b",
+      "method": "multistep",
+      "physical_action_issued": false
+    }
+  },
+  "B_original_native_option_sha256": "3fe554cb92c821e1bc70d844caba47986fa3450d9206f267966c79e04139e673",
+  "B_original_NAV_actor_forward_events_in_snapshot": 319,
+  "B_first_actual_postcapture_command_physical_tick": 449,
+  "B_first_actual_postcapture_command_time_s": 2.2449999999999743,
+  "B_journal_prefix_not_terminal": {
+    "rows": 788,
+    "last_sha256": "412d6aea0960712eeca5a300a6e56aad8d5490634be54e17223541ebd2f430ce",
+    "prefix_bytes": 3423449,
+    "prefix_sha256": "7c1bf753055e52aac4216e6228742dcb397c053c5a1126be01f4e50d8c83a58a",
+    "original_journal_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/events.jsonl",
+    "prefix_valid": true,
+    "full_journal_closed": false
+  },
+  "A_closed_journal": {
+    "rows": 462,
+    "last_sha256": "6d96396c37f094f01d7e34c2189c20a9e8518b117c416979872d7e0785521fab",
+    "prefix_bytes": 359688,
+    "prefix_sha256": "0c8fa13ebfe111f9a174df74d0cfc4fcce2d081d0547b455204367e0972ed590",
+    "original_journal_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/events.jsonl",
+    "prefix_valid": true,
+    "full_journal_closed": true
+  },
+  "source_input_file_pins": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/result.json": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/accounting/ledger.json": "23473eb8a9c8ca01be61af746c8a5256de15b3f0b4b34edef2863ae13689a78d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/intent-observation-0001.json": "31b92b0e8bce2acc23ff9310a485885bd726ce76c3e1e2a41b98217b33d24421",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/query-observations/frame-000001/rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/query-observations/frame-000001/depth_m.npy": "17eb7605ac9a13bed9783e8a95cbbf0b13d176ef7ba4bd67322f40695d7972c4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/query-observations/frame-000001/calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/episode/commands/000000.npz": "75feb44d02b99c1a4d984d57b208fcde31a66632295ab9c7eba471f1c9752081",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/episode/commands/000001.npz": "419163db0f4d0c4e2dcadf2a8df5383febd1056cad41d1ede707e0f95bc7f5df",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-A-greedy-20261115-v1/main/episode/commands/000002.npz": "a859c70daf6aa5f5e9bb51b85e83a1ef711331e8e06d02b322ce26fd825ec856",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/intent-observation-0001.json": "b0d229fe25f5a036bcfb0308c92aa39cbb7069b5d36b8a47af12b0ba6af50ec6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/query-observations/frame-000001/rgb.png": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/query-observations/frame-000001/depth_m.npy": "17eb7605ac9a13bed9783e8a95cbbf0b13d176ef7ba4bd67322f40695d7972c4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/query-observations/frame-000001/calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/episode/commands/000000.npz": "75feb44d02b99c1a4d984d57b208fcde31a66632295ab9c7eba471f1c9752081",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/episode/commands/000001.npz": "419163db0f4d0c4e2dcadf2a8df5383febd1056cad41d1ede707e0f95bc7f5df",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-01-v2-full-B-multistep-20261115-v1/main/episode/commands/000002.npz": "d48cfc4a4e753fde415d3c7a86e35c0ee808ef963fe12ca3fabc4d92b1651189"
+  },
+  "A_native_task_options": 0,
+  "B_main_result_not_yet_published": true,
+  "task_NAV_success_or_reconstruction_or_three_choices_claimed": false,
+  "full_task_or_algorithm_advantage_claimed": false,
+  "standard_search_not_algorithm_novelty": true,
+  "private_pose_or_future_route_used": false,
+  "original_source_or_records_modified": false,
+  "new_Runtime_Actor_Renderer_physics_or_fit": 0,
+  "forbidden_attempts": []
+}

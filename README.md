@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前T实际方法消费（2026-11-15 18:37）
+
+本组独立读原A/B记录：前448个capture命令8通道逐字节相同，第1public query仅存储path异。A首PUSH拒绝保持；B实际多步选择C(9.7,0)、规划.1954s无greedy fallback，首原NAV(-.08,-1.8)已安装并于tick449/time2.245发原Actor任务命令。只证明真实研究选择进入原consumer，不是NAV成功/三选择/任务收益；B终态与视频待原件，源/Actor/原门不改。见operations/T_COMPLEX_01_ACTUAL_FIRST_DECISION_CN.md。
+
 ## 当前T真实负结果（2026-11-15 17:35）
 
 A原唯一main82952392…已FAILED_NO_RETRY/ledger stopped，非仍在途：实际capture448步/2.240sim后第一PUSH前原RGBD同色组件未消歧、当前objects=[]，无任务NAV/PUSH native option。原像素API离线一次确认两个depth有效warm候选均被原guard拒绝；不改阈值/GT回填/重跑。没有几何死局/方法胜出或G3负标签证据。原23 live帧保留、未有完整A/B视频；B终态未消费。见operations/T_COMPLEX_01_FIRST_MAIN_FAILURE_CN.md。

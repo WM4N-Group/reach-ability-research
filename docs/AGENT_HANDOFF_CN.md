@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 18:37：独立实核448步/首query同信息，B多步选择已被原NAV执行；仍仅首段、无任务收益结论
+
+- **本轮独立消费实际记录，不是再用fixture宣布接线：** 新只读reader在46308核A/B前3个已完成immutable command chunks，前448个真实capture命令的issued/delayed/torque/raw_torque/q_before/dq_before/physical_tick/time_s逐dtype/shape/bytes全相同、tick恰1—448。A462行closed journal与B18:28取读时的完整append-only前缀均独立验原SHA链，读前后既存前缀不变；B前缀不是终态日志。没有起Runtime/Actor/renderer/物理或fit，原数组不回本地。
+- **同一实际决策信息，研究两策略确实选出不同高层意图：** 两支2.240sim第1public Observation除RGB存储路径外完全相同（RGB bytes/depth/calibration及objects=[]一致），保留A31b92b0e…/Bb0d229fe…两个原canonical SHA，不改原数据/哈希。A greedy选cuboid_a→(1.85,0)且首PUSH被原门拒；B multistep在相同root6名义候选上实际选cuboid_c→(9.7,0)的NAV+PUSH bundle，先原NAV(-.08,-1.8,0)。B原日志examined127/规划wall.195403451s/greedy fallback=false，A6/.004115272s；同4bundle/256/.25s上限保持，未手工给B正确路线/额外GT或critic。
+- **不只日志，已核原consumer开始执行B选择：** B intent SHA→原private interaction binding→原NAV option3fe554cb…逐项吻合，params与实际选中原option一致；原Actor forward事件取读时319个，且immutable command chunk确有**physical tick449/time2.245**首task命令。底层仍原NAV Actor/guard，不是Data代写任务路线、Actor重训或本组发力矩。首次研究决策进入原执行器这一点已核，但319 forward不是319选择，B仍第1bundle/首段NAV；不宣称NAV succeeded、PUSH/重构/三有效选择/全任务或方法收益。
+- **比较解释不变：** A原82952392…/正式7afea491…source观测域失败及所有费用完整保留，未执行原拟几何陷阱，不能据此称强“当前原生合法候选”greedy已输；即使B后续过也要隔离初始可观测性混杂。B.1954s search在预算内，若后续native/recording/guard wall或资源cap停止，按原原因记censor/失败，不把通用host成本归成lookahead计算超限或热抬在途cap。标准bounded search是机制原型，不是新算法创新。
+- **原件/下一与保持：** artifact远端`/mnt/yuanyue/reach-runs/T-actual-predecision-control-consumption-20261115-v1/ACTUAL_PREFIX_AND_ORIGINAL_NAV_CONSUMPTION_v2.json`，小型无数组副本与解释见`/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_ACTUAL_FIRST_DECISION_CN.md`、`T_COMPLEX_01_ACTUAL_FIRST_DECISION_CONSUMPTION_20261115.json`。reader v1/v2只是同一在途trial的读者完善，不算两次实验/新数据。B终态/1×原片与pair尚未消费；独立两NAV观测source仍不改当前b08 pair。原fit3371ac20…/model a8b1f165…、1/3 CAL未评分、bulk24 0f9e0e03…与所有dirty/closed/12N/4s/identity/immutable/support/guard/QP/FIFO/stop全保，无他组源/H/锁/进程/新scope/训练/自动化改动。
+
 ### 2026-11-15 18:05：A正式负结果25成员已核，B own-zero PASS/main未闭合；独立两NAV观测资格source已review但未准入
 
 - **A正式交付已独立消费，原负结果不删改：** Data release7afea491…全部25小成员逐SHA过，原result82952392…与本组先读root/462行链/像素诊断一致。接收owner九流cold中PD/FIFO/clip/完整性通过，不冒本组再重算原NPZ；task2.240/448 capture命令、任务option0/重构0/objects=[]/两个warm组件均原hypothesis拒绝保持。整scope含zero/两aux15.250sim/880.527903158ledger wall/highwater218453439bytes，全known；23 live原帧留远端，未在此验收编码/配对。不是几何死局/前瞻胜利/critic负行。
