@@ -1,0 +1,42 @@
+{
+  "at": "2026-11-15T17:38:06.001656+08:00",
+  "role": "BOUNDED_OBSERVATION_ONLY_NEW_SOURCE_PROPOSAL_NOT_DISPATCH_OR_AB_REPAIR",
+  "trigger_closed_A_result_sha256": "8295239278efda4ee8b058d70a40de28825bae8a568ec1cc0c703944a4c4ce23",
+  "same_scene_file": "scene_v2_three_choices.json",
+  "same_scene_sha256": "578bd75303ef00bfb3813a4cc32c3e93c17318e41801d98eb4414092bc56fb34",
+  "geometry_appearance_camera_proposer_matcher_or_original_guards_changed": false,
+  "default_comparison_domain_unchanged": true,
+  "purpose": "OBSERVABILITY_QUALIFICATION_ONLY",
+  "fixed_boundaries": [
+    "after_actual_original_supported_capture",
+    "after_actual_original_left_NAV",
+    "after_actual_original_right_NAV"
+  ],
+  "original_NAV_goals": [
+    [
+      -0.08,
+      0.15,
+      0.0
+    ],
+    [
+      -0.08,
+      -0.15,
+      0.0
+    ]
+  ],
+  "original_NAV_count": 2,
+  "PUSH_count": 0,
+  "original_option_budget_s": 60.0,
+  "scope_id": null,
+  "program_sha256": null,
+  "own_zero_max_proposed": 1,
+  "main_max_proposed": 1,
+  "retries_or_replacements": 0,
+  "Data_selects_and_freezes_finite_caps_from_real_cost": true,
+  "new_model_or_fit_allowed": false,
+  "old_A_not_reopened": true,
+  "current_B_not_modified_or_given_new_source": true,
+  "original_complete_task_success_can_be_claimed": false,
+  "actual_new_physical_attempts": 0,
+  "source_native_qualified": false
+}

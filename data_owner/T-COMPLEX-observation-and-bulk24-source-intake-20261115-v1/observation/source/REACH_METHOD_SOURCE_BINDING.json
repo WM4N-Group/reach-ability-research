@@ -1,0 +1,22 @@
+{
+  "role": "SAME_PUBLIC_METHOD_SOURCE_FOR_A_B_NOT_AN_ADMISSION",
+  "files_sha256": {
+    "complex_public_model": "e77d95a06a5da5e46ad2b03db9218b74d225382566b2d8af2f2f3b7434da23aa",
+    "complex_intent_planner": "aa69bc8d8daf5cbea42c89e94a354ef9e2994ca83612a26ba2df031f5ea17969",
+    "finite_multistep_planner": "3a5eb184b9988371f0f05909bfa92e008b7eeb3b56eaef349b68416ef8a15bb9",
+    "complex_source_adapter": "dd4f9122443f32144ff358d5b21e62f3000631c774f2d09381e4911eb76a2664"
+  },
+  "method_names": [
+    "greedy",
+    "multistep"
+  ],
+  "same_limits": {
+    "max_depth": 4,
+    "max_transitions": 256,
+    "max_wall_s": 0.25
+  },
+  "depth_units": "PUBLIC_DECISION_BUNDLES_NOT_NATIVE_SKILLS",
+  "actual_runtime_mapping_or_task_success_certified": false,
+  "entrypoint": "complex_source_adapter.build_source_bound_planner",
+  "complete_ordered_public_catalogue_validation": true
+}
