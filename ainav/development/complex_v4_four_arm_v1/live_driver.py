@@ -397,8 +397,10 @@ def driver_class(*, source_root=None, enabled=False):
             finally:
                 self.tick = self.loop.physical_tick
 
-    from parallel_alias_guard import make_parallel_guard
-    V4LiveDriver._native_guards = make_parallel_guard(methods['_native_guards'], enabled=True)
+    import parallel_alias_guard as guard_source
+    require(Path(guard_source.__file__).resolve() == Path(__file__).with_name('parallel_alias_guard.py').resolve(),
+            'No ambient parallel guard source')
+    V4LiveDriver._native_guards = guard_source.make_parallel_guard(methods['_native_guards'], enabled=True)
 
     for name, function in methods.items():
         if name not in ('_install_common_stow', 'capture_grid', '_native_guards'):  # Preserve factor/privacy/current-read adapters.

@@ -139,6 +139,11 @@ class Tests(unittest.TestCase):
         self.alias('ordinary',self.other)
         with patch.object(self.guard.engine,'_resolve_paths',return_value=()):
             with self.assertRaises(ValueError):self.guard(self.host)
+    def test_ambient_guard_module_path_is_rejected_before_controller_or_pool(self):
+        import parallel_alias_guard as helper
+        with patch.object(helper,'__file__',str(self.root/'foreign-helper.py')):
+            with self.assertRaisesRegex(ValueError,'ambient parallel guard'):
+                live_driver.driver_class(source_root=SOURCE,enabled=True)
     def test_default_driver_installs_bytecode_adapter_without_creating_threads(self):
         cls=live_driver.driver_class(source_root=SOURCE,enabled=True)
         self.assertIsNone(cls._native_guards.engine._pool);self.assertEqual(cls._native_guards.current_full_path_passes,2)
