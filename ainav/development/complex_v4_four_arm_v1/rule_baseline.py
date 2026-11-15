@@ -1,4 +1,7 @@
-"""E: fixed public-geometry engineering rule, no VLM/WM/optimizer/route oracle.
+"""E planner: fixed public rules, no VLM/WM/NEW successor optimizer/route oracle.
+
+The shared execution layer retains legacy-common stow H for ALL five arms;
+that kernel and its actual costs are separate from this rule and the new factor.
 
 This is NOT a native driver. It uses only the actual original public catalogue
 and successful matching semantic receipts. Unsupported CLIMB stays explicit.

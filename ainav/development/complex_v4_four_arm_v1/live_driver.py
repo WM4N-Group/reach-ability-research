@@ -17,6 +17,7 @@ from v4_native_asset import load_scene, require, SCENE_SHA256
 from public_candidates import declarations, declared_map, capability_contract, intent_catalogue
 from execution_entry import build_after_actual_capture
 from native_entry import _exact_base
+from factor_scope import install_legacy_common, factors
 
 BASE_DIR = Path(__file__).resolve().parent.parent / 'complex_dual_route_v1'
 # Only these unchanged methods are consumed. The inherited local tree contains
@@ -98,11 +99,12 @@ def driver_class(*, source_root=None, enabled=False):
     class V4LiveDriver:
         full_task_terminal_integrated = False
 
-        def __init__(self, components, *, bundle, output_root, writer, planner, journal, guard):
+        def __init__(self, components, *, bundle, output_root, writer, planner, journal, guard, arm):
             require(callable(guard) and callable(journal), 'Actual Data owner guard/journal')
             def checked_guard():
                 require(guard() is not False, 'Original Data owner/resource guard refused')
             checked_guard()
+            factors(arm)  # Reject an undeclared arm before any native import.
             import numpy as np
             from mujoco_zyh import native_behavior_executor as api
             from ainav.native.observation import AcquisitionPublisher
@@ -133,7 +135,8 @@ def driver_class(*, source_root=None, enabled=False):
             self.current_observation, self.entity_by_public = None, {}
             self.capabilities = capability_contract()
             self.actual_climb_boundaries = []  # Private receipt/owner evidence only.
-            self._install_common_stow()
+            self.arm = arm
+            install_legacy_common(self, arm=arm, planner=planner, journal=journal)
             self.owner_guard()
 
         def _contact_guard(self):
@@ -330,8 +333,11 @@ def driver_class(*, source_root=None, enabled=False):
                 self.tick = self.loop.physical_tick
 
     for name, function in methods.items():
-        setattr(V4LiveDriver, name, function)
-    V4LiveDriver.source_receipt = dict(original_helpers_method_sha256=BASE_METHOD_PINS,
+        if name != '_install_common_stow':  # Never overwrite the explicit two-layer installer.
+            setattr(V4LiveDriver, name, function)
+    V4LiveDriver.source_receipt = dict(original_helpers_reviewed_method_sha256=BASE_METHOD_PINS,
+        original_helpers_borrowed=tuple(n for n in BASE_METHOD_PINS if n != '_install_common_stow'),
+        legacy_common_stow_separate_from_new_successor_treatment=True,
         obsolete_base_constructor_catalogue_judge_and_ground_terminal_not_inherited=True,
         scene_source_sha256=SCENE_SHA256, actual_native_qualification=False,
         post_CLIMB_dynamic_NAV_static_deck40cm_and_full_terminal_not_admitted=True)

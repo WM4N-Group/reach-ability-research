@@ -2,6 +2,16 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：首次主运行前明确旧共同H与本次新后继优化，不削弱C
+
+已消费Reach `V4_PREPARATION_FACTOR_ISOLATION_CN.md`的源码风险：上一版driver原7 helper中的installer在所有arm都装旧Reach H，不能把A/C/E的“本次新优化OFF”字幕误写成所有历史算法kernel都0，也不能为了字面0删除共同底座、削弱完整C。**本组当前决定保留原来已选的legacy-common H，五组相同；它不是此次B−A/D−C treatment。** 新后继优化仍只B/D开，E规则不调用VLM/WM/新优化。精确定义与视频字幕见`PREPARATION_FACTOR_POLICY.json`；尚无五main，没有把旧组件或未触发callback说成已污染/已优化成功。
+
+新`factor_scope.install_legacy_common`在fresh task0显式接`arm`，核真实method adapter的`.enabled`因子（E精确原RuleBaseline）、非fixture及同一journal；不能在capture448步后换因子。全部native stow aliases先原source/check/globals预核，任何已有callback或别名漂移都拒绝，不移除hook伪装OFF；原callback身份guard保留。driver末尾不再把旧always-TRUE installer覆盖回来：只借6个原capture/writer/guard方法，旧installer仅保源码核查，不作为实际方法使用。
+
+保持同一个原v2 binder/原有限DAG kernel。只用原binder**同一字节码/默认值**的私有globals副本，把`optimize`引用包为证据计数；Reach原module/globals/kernel和native源不改，原capture/queue/selected-view/FIFO/goal/全路径/4s recheck和原返回/异常/args全保留。legacy H尝试在调用前记录，完成/异常/提出path变化分别记录；有尝试无完成保持UNKNOWN/censor，不补0。旧H events明确标legacy，B/D新selector events另计，A/C/E新selector事件拒绝；**choice事件数不是实际kernel调用次数，提出waypoint变化也不是实际命令变化/任务收益**。所有真实计算/执行开销仍进入各arm从t0账本。
+
+构造新driver需额外显式`arm='A'...'E'`，原method与native使用同一journal对象；这是未执行的新source，不热改27或25旧program。新增11 metadata/private-namespace专项＋2个受影响driver接线回归两端核，不调用真实kernel/Runtime/Actor/physics/API；没有因本策略声明完整cost provider或整链成功。旧19/25组件仍closed，27/本版均不借zero。CLIMB→NAV/static/40cm/高台终点和A/B真实WM bootstrap缺口仍独立未解。
+
 ## 2026-11-16：V4 live observer／selected judge／原200Hz loop已接（source component，非任务准入）
 
 新增`live_driver.driver_class(source_root=..., enabled=True)`；默认OFF。Data在fresh zero-step qualified cold components/新authority/lease下实例化，传原writer、真实public planner、journal/guard。`step_one`实际走原SupportedCapture命令及记录→真capture后`execution_entry`→原IntentExecutionCoordinator/AinavLoop/NativeOptionExecutor；不是另一物理owner或新world，也不替方法选固定路线。E可传原`RuleBaseline`，A—D须传各自真实方法adapter；本模块不设置／假造VLM/WM/优化身份或发API。

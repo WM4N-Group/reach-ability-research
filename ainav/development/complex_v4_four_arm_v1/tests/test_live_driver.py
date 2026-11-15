@@ -41,18 +41,20 @@ class Tests(unittest.TestCase):
         self.assertIsNone(driver.driver_class())
         with self.assertRaises(ValueError):driver.driver_class(enabled=1)
         self.assertFalse(blocked)
-    def test_only_seven_exact_helpers_used_no_inheritance_of_old_constructor(self):
+    def test_six_helpers_borrowed_old_installer_cannot_overwrite_factor_binding(self):
         cls=driver.driver_class(source_root=SOURCE,enabled=True)
         self.assertEqual(cls.__bases__,(object,));self.assertFalse(cls.full_task_terminal_integrated)
         methods=driver._original_methods();self.assertEqual(set(methods),set(driver.BASE_METHOD_PINS))
-        for name,fn in methods.items():self.assertIs(getattr(cls,name),fn)
+        for name,fn in methods.items():
+            if name!='_install_common_stow':self.assertIs(getattr(cls,name),fn)
+        self.assertFalse(hasattr(cls,'_install_common_stow'))
         self.assertEqual(cls.observe_public.__module__,'live_driver')
         self.assertEqual(cls.judge_intent.__module__,'live_driver')
     def test_owner_explicit_false_or_exception_refuses_before_native_import(self):
         cls=driver.driver_class(source_root=SOURCE,enabled=True)
         for callback in [lambda:False,lambda:(_ for _ in ()).throw(PermissionError('SOFTWARE denied'))]:
             with self.assertRaises((ValueError,PermissionError)):
-                cls(None,bundle=None,output_root=None,writer=None,planner=None,journal=lambda row:'SOFTWARE',guard=callback)
+                cls(None,bundle=None,output_root=None,writer=None,planner=None,journal=lambda row:'SOFTWARE',guard=callback,arm='E')
         with self.assertRaisesRegex(ValueError,'guard refused'):
             execution_entry.build_after_actual_capture(enabled=True,guard=lambda:False,journal=lambda row:'SOFTWARE')
         self.assertFalse(blocked)
