@@ -10,7 +10,7 @@ release=json.loads((root/base/'CANDIDATE_RELEASE_v1.json').read_bytes())
 files={base/'CANDIDATE_RELEASE_v1.json',*[base/rel for rel in release['files_sha256']]}
 for rel,h in release['files_sha256'].items():
     if hashlib.sha256((root/base/rel).read_bytes()).hexdigest()!=h:raise SystemExit('Published source drift: '+rel)
-for folder in [Path('development/climb_preparation_v2'),Path('development/registered_layout_conditions_v1'),Path('consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1'),Path('consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1'),Path('consumer-deliveries/AINAV-G2-REGISTERED-FULL1-SOURCE-GATE-20261115-v1')]:
+for folder in [Path('development/climb_preparation_v2'),Path('development/registered_layout_conditions_v1'),Path('development/complex_dual_route_v1'),Path('consumer-deliveries/AINAV-NATIVE-PREFIX-CONDITION-PILOT-20261114-v1'),Path('consumer-deliveries/AINAV-G2-REGISTERED-PREFIX-SOURCE-GATE-20261115-v1'),Path('consumer-deliveries/AINAV-G2-REGISTERED-FULL1-SOURCE-GATE-20261115-v1')]:
     files.update(f.relative_to(root) for f in (root/folder).rglob('*') if f.is_file() and f.suffix in ('.py','.json','.md') and '__pycache__' not in f.parts)
 files.update(map(Path,['scripts/export_cloud_code.py','scripts/remote_code_smoke.py','scripts/measure_g1_public_boundary.py','scripts/compare_g1_public_values.py','docs/REMOTE_EXECUTION_AND_CODE_STORAGE_20261114.md','docs/G2_THREE_REGISTERED_SCENES_AND_NEXT_METHOD_BINDING_20261115.md']))
 patterns=[re.compile(rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----'),re.compile(rb'\b(?:ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|sk-(?:proj-)?[A-Za-z0-9_-]{32,})\b'),re.compile(rb'https?://[^/\s:@]+:[^/\s@]+@')]
