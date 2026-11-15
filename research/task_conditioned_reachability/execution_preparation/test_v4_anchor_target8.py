@@ -102,6 +102,24 @@ class AnchorGeometryTests(unittest.TestCase):
                 out=self.association(obs,options,anchor)
                 out['frame_local_ref_by_option_sha256']['a'*64]['declared_standoff_m']=value;return out
             with self.assertRaises(ValueError):self.provider(bad)(self.obs,self.options,self.anchor)
+    def test_query_port_preserves_target_proof_and_fixture_provenance(self):
+        frames=[self.anchor,self.anchor,self.anchor]  # Metadata-only fixture, not real causal history.
+        class FixtureBuffer:
+            def __init__(self):self.frames=frames
+            def build(self,q,now,body,**kwargs):
+                return 'FIXTURE_BELIEF','FIXTURE_PUBLIC60',dict(query_sha256='b'*64,
+                    query_time_s=now,image_time_s=1.,input_file='FIXTURE_NOT_SENSOR')
+        state={name:[0.]*size for name,size in [('q',18),('dq',18),('gravity',3),
+            ('angular_velocity',3),('linear_velocity',3)]}
+        self.obs.value=dict(public_state=state);self.obs.sha256='c'*64
+        port=CausalWMQueryPort(FixtureBuffer(),role='CURRENT_ORIGINAL_SENSOR_AND_ISSUED_HISTORY',
+            software_fixture=True,target_provider=self.provider())
+        result=port(SimpleNamespace(observation=self.obs),self.options)
+        self.assertEqual(result['target8_by_option_sha256']['a'*64][7],1.)
+        self.assertEqual(result['target8_evidence_by_option_sha256']['a'*64]['status'],
+            'CURRENT_VISIBLE_PLANE_NOT_NATIVE_ASSOCIATION_OR_WORLD_POSE')
+        self.assertEqual(result['source_role'],'EXPLICIT_SOFTWARE_FIXTURE_NOT_MODEL_TASK_INPUT')
+        self.assertFalse(result['live_policy_context_allowed'])
     def test_fixture_api_and_target_provider_cannot_be_promoted_to_production(self):
         with self.assertRaises(ValueError):AnchorTarget8Provider(fixture_api=self.api)
         buffer=SimpleNamespace(_reach_query_software_fixture=False)

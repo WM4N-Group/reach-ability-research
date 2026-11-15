@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-16T01:41:42.978330+08:00",
+  "role": "EXPLICIT_SYNTHETIC_ORIGINAL_GEOMETRY_CPU_SMOKE_NOT_SENSOR_WM_FORWARD_OR_NATIVE_QUALIFICATION",
+  "reader_sha256": "ff2750f750873837c2888f2744f826ef89a70918c26d3b057d284180bda0b107",
+  "source_pins": {
+    "visual_box_proposals.py": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+    "visible_surface_goal.py": "b7ccf787db0db1e8496d2d6627e9efeb941bb6c06d7638791ce1628a81068da4",
+    "geometry_vector.py": "f02cbefb7dca72cc5b4f0b54014eb3af0aa8e5eda8faa0c9bab432f4ae9d137f"
+  },
+  "original_functions_executed": [
+    "propose_visual_candidates",
+    "describe_visible_goal",
+    "front_plane",
+    "geometry_vector"
+  ],
+  "anchor_resolution_px": [
+    96,
+    64
+  ],
+  "synthetic_valid_plane_target8": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "no_source_array_mutation": true,
+  "private_modules_do_not_replace_ambient_visual_module": true,
+  "immutable_geometry_functions_reused_for_second_producer": true,
+  "no_association_is_None": true,
+  "no_depth_is_None": true,
+  "ambiguous_same_color_is_None": true,
+  "stale_anchor_refused": true,
+  "original_refusal_reasons": {
+    "no_depth": {
+      "status": "UNKNOWN",
+      "reason": "ORIGINAL_VISIBLE_PLANE_REFUSED",
+      "original_reason": "No usable optical-depth geometry for action hypothesis"
+    },
+    "ambiguous": {
+      "status": "UNKNOWN",
+      "reason": "ORIGINAL_VISIBLE_PLANE_REFUSED",
+      "original_reason": "Same-family fragments or physical instances unresolved; no implicit largest-component choice"
+    }
+  },
+  "target_mask0_abstention_policy_unchanged": true,
+  "actual_sensor_frames_used": 0,
+  "real_checkpoint_restores": 0,
+  "real_WM_forward_calls": 0,
+  "physics_Runtime_Actor_API_or_training_calls": 0,
+  "synthetic_arrays_persisted": false,
+  "forbidden_modules": [],
+  "wall_s": 0.446703237015754
+}
