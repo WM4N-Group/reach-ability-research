@@ -21,3 +21,5 @@
 `stage_and_freeze.py`为新程序及权威CAS；`control_bulk24.py <原attempt_key> prepare|zero-dispatch|zero-run|zero-cold|fetch-zero|close-zero|main-dispatch|main-run|fetch-main|close-main`每已耗动作不得重跑。原attempt_key首条为 `g2-bulk24-v1__bulk-g01_left__original`。当前代码未提供自动激活下一slot；须按权威counts/终态/停止规则和rolling fresh接续，不借旧root/zero。
 
 source/identity/safety实现问题、zero失败或共享资源失败stop本source版本；普通单条原native失败完整保留，不追胜/洗账。未到PREPARE就features/label=None，不能把source/资源censor当critic负例。当前fit3371ac20…/modela8b1f165…及旧CAL/VAL协议不动，无当前critic refit/WM/DINO/Actor训练/真机/新自动化。
+
+新worker在任何freeze/物理前补了UNKNOWN费用保护：constructor未交回可靠runtime/aux时，最终sim=None/usage_known=false，保partial lower bound而不填0、停该source版本；软件临时ledger回归确认UNKNOWN闭合不可resume。不是对现OBS/旧数据的修复或重跑。

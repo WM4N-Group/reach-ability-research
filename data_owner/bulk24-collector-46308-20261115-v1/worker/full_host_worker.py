@@ -44,7 +44,7 @@ def run(phase,program_sha):
  def timeout(*args):raise Stop('Full-host cumulative wall deadline')
  signal.signal(signal.SIGALRM,timeout);signal.setitimer(signal.ITIMER_REAL,max(.1,min(180. if phase=='zero' else CAPS['wall_s'],CAPS['wall_s']-INHERITED['wall_s']-prior_wall)-(time.monotonic()-start)-15.))
  selection_rows=[];binding_receipts=[]
- runtime=host=planner=observer=writer=review=journal=capsules=video=None;lease=None;primary=None;close_errors=[];last_review=None;last_disk_at=0;latest_totals=None;model_hash=None;model_record=None;usage_known=True
+ runtime=host=planner=observer=writer=review=journal=capsules=video=None;lease=None;primary=None;close_errors=[];last_review=None;last_disk_at=0;latest_totals=None;model_hash=None;model_record=None;usage_known=False
  result={'candidate_id':CANDIDATE,'schema':'Data-real-original-AINav-full-host-phase-result-v1','scope_id':SCOPE,'phase':phase,'program_sha256':program_sha,'authorization_sha256':sha(AUTH),'baseline_release_sha256':plan['baseline_release_sha256'],'reference_source_manifest_sha256':plan['source_manifest_sha256'],'PID':os.getpid(),'passed':False,'automatic_retry':False,'research_WM_or_API_calls':0,'training_allowed':False,'whole_task_success_claimed':False,'CLIMB_requested':True,'HIGH_or_other_object_requested':False,'source_profile':'EXPLICIT_FOUR_NATIVE_DELTAS_PLUS_PINNED_ADDITIVE_BULK_PLAN','new_waypoint_choice_control_enabled':True,'new_preparation_choice_enabled':plan['public_preparation_candidate_id']!='original','condition_qualification_not_critic_training':True,'original_source_manifest_is_baseline_lineage_only':True,'source_fork_manifest_sha256':plan['current_source_fork_manifest_sha256']}
  result.update(new_acquisition_data_purpose=plan['data_purpose'],new_acquisition_split=plan['split'],new_use_protocol_sha256=plan['new_use_protocol_file_sha256'],source_scene_sha256=plan['source_scene_sha256'],training_allowed_field_means_this_native_worker_does_not_train=True,fit_requires_closed_TRAIN_gate_and_Reach_training_manifest=True)
  write_new(root/'new-purpose-acquisition-manifest.json',{k:plan[k] for k in ('data_purpose','split','source_scene_sha256','scene_ancestry_key','condition_binding_sha256','new_use_protocol_file_sha256','preparation_payload','ordinal','attempt_key')})
@@ -84,7 +84,7 @@ def run(phase,program_sha):
   try:runtime,native,construction=construct_runtime(SDK,config)
   except BaseException as e:runtime=getattr(e,'wm_partial_runtime',None);raise
   need(float(runtime.sim.data.time)==0. and runtime.step_count==0 and not runtime.sim.queue,'Constructor must leave main world at zero, no queued task issue')
-  aux=getattr(runtime,'wm_auxiliary_calibration',None);need(aux is not None and aux['worlds']==1 and aux['sim_seconds']<=10.5 and aux['main_world_unchanged'],'Original auxiliary calibration counted, no task recovery')
+  aux=getattr(runtime,'wm_auxiliary_calibration',None);need(aux is not None and aux['worlds']==1 and aux['sim_seconds']<=10.5 and aux['main_world_unchanged'],'Original auxiliary calibration counted, no task recovery');usage_known=True
   need(str(runtime.device)=='cuda:0','Actual original Actor backend must match the explicit CUDA overlay')
   write_new(root/'construction.json',construction);write_new(root/'actual-config.json',{'original_native_protocol':plan['original_native_protocol'],'actual_runtime_config':config,'external_caps':CAPS,'inherited_old_failure_cost':INHERITED})
   capsules=install_capsules(runtime,root,config['private_failure_capsules'])
@@ -176,7 +176,7 @@ def run(phase,program_sha):
   if journal is not None:
    try:journal({'event':'Data_full_host_phase_teardown','phase':phase,'close_errors':close_errors,'automatic_retry':False});journal.close()
    except BaseException as e:close_errors.append({'stage':'journal.close','error':repr(e)})
-  result.update(observed_process_peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,stow_choice_records=selection_rows,stow_choice_bindings=binding_receipts,actual_preparation_proposals=[row for row in selection_rows if row.get('event')=='ainav_selected_CLIMB_preparation_NAV_goal_proposed'],actual_selection_recorded=bool(selection_rows),actual_choice_changed=any(row.get('changed') is True for row in selection_rows),method_benefit_or_distinct_algorithm_proven=False,actual_main_world_sim_s=now_sim,actual_auxiliary_calibration=aux,actual_model_numeric_sha256=model_hash,actual_Actor_backend=str(runtime.device) if runtime is not None and hasattr(runtime,'device') else None,close_errors=close_errors,wall_s=time.monotonic()-start,usage_known=usage_known,old_B_failure_and_root_preserved=True,bulk24_collection_only_not_current_critic_refit=True,explicit_same_owner_GPU1_parallel_to_independent_GPU0_OBS=True)
+  result.update(observed_process_peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,stow_choice_records=selection_rows,stow_choice_bindings=binding_receipts,actual_preparation_proposals=[row for row in selection_rows if row.get('event')=='ainav_selected_CLIMB_preparation_NAV_goal_proposed'],actual_selection_recorded=bool(selection_rows),actual_choice_changed=any(row.get('changed') is True for row in selection_rows),method_benefit_or_distinct_algorithm_proven=False,actual_main_world_sim_s=(now_sim if runtime is not None else None),actual_auxiliary_calibration=aux,actual_model_numeric_sha256=model_hash,actual_Actor_backend=str(runtime.device) if runtime is not None and hasattr(runtime,'device') else None,close_errors=close_errors,wall_s=time.monotonic()-start,usage_known=usage_known,old_B_failure_and_root_preserved=True,bulk24_collection_only_not_current_critic_refit=True,explicit_same_owner_GPU1_parallel_to_independent_GPU0_OBS=True)
   if close_errors:result.update(passed=False,status='TEARDOWN_FAILED_NO_RETRY')
   if writer is not None:
    result['actual_recorded_commands']=writer.written_steps;result['actual_recorded_visual_frames']=writer.written_frames
@@ -184,8 +184,12 @@ def run(phase,program_sha):
     result.update(passed=False,status='INCOMPLETE_COMMAND_EVIDENCE_NO_RETRY')
   try:result['cumulative_observed_usage']=ledger.observe(phase,sim_s=usage(),wall_s=time.monotonic()-start,cleanup=True)
   except BaseException as e:result.update(passed=False,status='BUDGET_OR_FINAL_USAGE_FAILED_NO_RETRY',budget_close_error=repr(e))
+  if not usage_known:
+   result['unknown_simulation_tail_not_zero']=True
+   if 'cumulative_observed_usage'in result:
+    result['cumulative_observed_usage']['observed_simulation_lower_bound_s']=result['cumulative_observed_usage']['sim_s'];result['cumulative_observed_usage']['sim_s']=None
   write_new(root/'result.json',result)
-  ledger.close(phase,result['status'],sim_s=usage(),wall_s=time.monotonic()-start,report_sha=sha(root/'result.json'),usage_known=usage_known)
+  ledger.close(phase,result['status'],sim_s=(usage()if usage_known else None),wall_s=time.monotonic()-start,report_sha=sha(root/'result.json'),usage_known=usage_known)
   if lease is not None:lease.__exit__(None,None,None)
   runtime=host=observer=writer=review=None
  return result

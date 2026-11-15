@@ -81,7 +81,7 @@ def change(h):
   assert json.loads((D/'zero-cold.json').read_bytes())['passed'];q.update(phase='OWN_FULL_ZERO_COLD_PASS_AWAIT_MAIN',zero_dispatch_program_sha256=None);br.update(status='OWN_FULL_ZERO_COLD_PASS_AWAIT_MAIN',zero_result_sha256=sha(ROOT/'zero/result.json'))
  else:
   q.update(active=False,phase='CLOSED_ACTUAL_'+phase.upper()+('_PASS'if v['passed']else'_FAILED_NO_RETRY'),zero_dispatch_program_sha256=None,main_dispatch_program_sha256=None,closed_at=now(),actual_result_sha256=sha(ROOT/phase/'result.json'));br.update(status=q['phase'],actual_result_sha256=q['actual_result_sha256'],actual_task_success=v.get('whole_task_success_claimed',False),actual_requested_chain_passed=v['passed'],actual_main_world_sim_s=v['actual_main_world_sim_s'])
-  if phase=='zero'or v.get('resource_censored')or any(t in str(v.get('error','')).lower()for t in('immutable','identity','source mismatch','binding mismatch','frozen','canonical')):co['global_stop']=True
+  if phase=='zero'or not v.get('usage_known',False)or v.get('resource_censored')or any(t in str(v.get('error','')).lower()for t in('immutable','identity','source mismatch','binding mismatch','frozen','canonical')):co['global_stop']=True
  co['status']=q['phase'];q['closure_resource_snapshot']=resources
 out=cas(change);record(D/('CAS-close-'+phase+'.json'),{k:z for k,z in out.items()if k!='after_base64'});print(json.dumps(out))
 '''}
