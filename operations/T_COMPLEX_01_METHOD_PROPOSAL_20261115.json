@@ -3,7 +3,7 @@
   "task": "T-COMPLEX-01",
   "task_sha256": "a3ade42a679dfa86688cb5ce1e0de94899f0f2c3dba0fcaefbfe23db83ae4daa",
   "main_plan_sha256": "b2fb786ec002b1e88ed4fc56a0bbfbac21d62cd788dacdda7d9fceb1a774c5a9",
-  "stage": "ALGORITHM_CORE_IMPLEMENTED_SCENE_ADAPTER_NOT_YET_CONSUMED",
+  "stage": "PUBLIC_SOURCE_MODEL_AND_ORIGINAL_INTENT_API_SEAM_IMPLEMENTED_NATIVE_HOST_NOT_QUALIFIED",
   "methods": [
     "greedy",
     "multistep"
@@ -41,7 +41,18 @@
   "existence_witness_not_online_input": true,
   "source_only_model_inputs": true,
   "tests": {
-    "abstract_core_checks_local": 4,
-    "abstract_checks_are_not_complex_scene_or_physical_samples": true
-  }
+    "local_targeted_core_and_seam_checks": 8,
+    "not_native_samples": true
+  },
+  "public_task_sha256": "630016fe35aaed2f4ec5bb06c5a17d349a7a28e4c3345e6931e3c0faf6b64105",
+  "finite_placements_sha256": "575191d2f258b81dedbcea97f452fab2a171322f99623a30d2e6c451ef191e8f",
+  "public_model_source_sha256": "cac79218ed92aa8ccc4aa0fb26847deacc99dd4105d88e33e2988a6cb522937d",
+  "original_intent_seam_source_sha256": "8b646a703c1ba4cf4938d9cb19b398bc8b38ca2ab31557e5ee1cfb7e6e570529",
+  "depth_units": "NOMINAL_DECISION_BUNDLES_NOT_NATIVE_SEMANTIC_TRANSFERS",
+  "native_transfer_count_to_be_measured": true,
+  "source_v1_third_effective_decision_not_yet_proven": true,
+  "nominal_envelope_radius_m": 0.45,
+  "envelope_is_dynamic_bound": false,
+  "Data_owner_task_intake_confirmed": true,
+  "Data_owner_queue_confirmed": false
 }

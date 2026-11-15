@@ -53,6 +53,81 @@ def public_features_only(observation, candidate_id, candidate_api, profile, now_
     return list(result.values), geometry
 
 
+def verified_native_climb_guard_failure(result, cold, by_line, after_line, intent, freeze, source, pins):
+    """Label-only source witness, NOT a fabricated failed receipt or feature.
+
+    A literal RuntimeError string alone is insufficient. Qualify only the actual
+    frozen SDK climb-stop raise, structured active-machine/stack witness, same
+    intent's last CLIMB and actual issued-start/hard-stop physical clock. Other
+    exceptions remain unclassified. Never return private geometry/kinematics.
+    """
+    if not (result.get('passed') is False and result.get('status')=='FAILED_NO_RETRY'
+            and result.get('error_class')=='RuntimeError' and result.get('error') in
+            ('stop_deadline','integrated_unselected_or_native_forbidden_contact:middle')
+            and result.get('resource_censored') is False and result.get('owner_guard_or_contract_stop') is False):
+        return None
+    terminals=[(i,r) for i,r in by_line.items() if i>after_line and
+               r['payload'].get('event')=='private_terminal_controller_failure']
+    stops=[(i,r) for i,r in by_line.items() if i>after_line and
+           r['payload'].get('event')=='ainav_chain_hard_stop']
+    if len(terminals)!=1 or len(stops)!=1:return None
+    ti,tr=terminals[0];si,sr=stops[0];terminal=tr['payload'];stop=sr['payload']
+    if not (si<ti and terminal.get('error')==stop.get('error')==result['error']
+            and terminal.get('model_input') is False and terminal.get('live_state_written') is False
+            and terminal.get('physics_steps')==0 and stop.get('automatic_retry') is False
+            and stop.get('fixed_route_fallback') is False):return None
+    native=[n for n in terminal.get('nodes',[]) if n.get('path')=='machine.native_machine'
+            and n.get('type')=='Machine' and n.get('fields',{}).get('kind')=='climb'
+            and n.get('fields',{}).get('phase')=='run']
+    if len(native)!=1:return None
+    paths=[Path(p) for p in freeze['files'] if p.endswith('/sdk-bundle/switch/machine.py')]
+    if len(paths)!=1:return None
+    machine=paths[0]
+    expected={machine:'703c701d92c8adb06369d6775307c8162a0f8688af6e4ac4fa65d45828aa1b9e',
+              source/'ainav/native/failure_diagnostics.py':'5455b7801dfb2933c99f461ece525fe7f9ec9bc650b1321e0e13ecb03f075a23',
+              source/'mujoco_zyh/native_behavior_executor.py':'8d42281aa890bd5224f7d8c0bacc2c44d1fa1bda0ba5a89fec8bffa59f701995'}
+    for path,h in expected.items():
+        need(freeze['files'].get(str(path))==h and sha(path)==h,'Exact original native exception source')
+        pins[str(path)]=h
+    if result['error']=='stop_deadline':
+        raise_source,raise_line,raise_function=machine,219,'after_step'
+        expected_raise='raise RuntimeError(r.stop.failure)'
+        kind='SOURCE_VERIFIED_NATIVE_CLIMB_STOP_DEADLINE_EXCEPTION'
+    else:
+        raise_source,raise_line,raise_function=source/'ainav/native/course_tools.py',320,'_contact_guard'
+        h='bb09e44b0eae6ca2420dc670f5826b65ea2ad141ca7e09a8417c08d6c92dfc51'
+        need(freeze['files'].get(str(raise_source))==h and sha(raise_source)==h,
+             'Exact original contact guard source, no weakened gate')
+        pins[str(raise_source)]=h
+        expected_raise="raise RuntimeError('integrated_unselected_or_native_forbidden_contact:' + objects[obj])"
+        kind='SOURCE_VERIFIED_NATIVE_CLIMB_FORBIDDEN_CONTACT_EXCEPTION'
+    stack=terminal.get('traceback',[])
+    if not stack or stack[-1]!={'file':str(raise_source),'function':raise_function,'line':raise_line}:return None
+    need(raise_source.read_text().splitlines()[raise_line-1].strip()==expected_raise,
+         'Original native failure raise, not worker/resource timeout')
+    before=[(i,r)for i,r in by_line.items() if after_line<=i<si and
+            r['payload'].get('event')=='intent_native_execution_bound']
+    if not before:return None
+    ci,cr=before[-1];binding=cr['payload'];option=binding.get('native_option',{})
+    if not (binding.get('intent_sha256')==intent and binding.get('execution_role')=='interaction'
+            and option.get('skill')=='CLIMB' and option.get('target_ref')=='cuboid-2:upper-entry'):return None
+    starts=[(i,r)for i,r in by_line.items() if ci<i<si and r['payload'].get('event')=='ainav_native_receipt'
+            and r['payload'].get('receipt',{}).get('status')=='started'
+            and r['payload']['receipt'].get('option_sha256')==binding['native_option_sha256']]
+    if len(starts)!=1:return None
+    time_s=terminal.get('time_s');ticks=stop.get('actual_physical_tick')
+    if not (number(time_s) and type(ticks) is int and ticks==cold['actual_command_steps']
+            and abs(time_s-ticks*.005)<1e-7 and abs(time_s-result['actual_main_world_sim_s'])<1e-7
+            and starts[0][1]['payload']['receipt']['time_s']<=time_s):return None
+    return dict(kind=kind,
+        terminal_diagnostic_record_sha256=tr['sha256'],hard_stop_record_sha256=sr['sha256'],
+        actual_CLIMB_binding_record_sha256=cr['sha256'],actual_CLIMB_start_record_sha256=starts[0][1]['sha256'],
+        original_machine_source_sha256=expected[machine],original_raise_source_sha256=sha(raise_source),
+        original_raise_line=raise_line,
+        failure_time_s=time_s,actual_physical_tick=ticks,literal_failed_terminal_receipt_synthesized=False,
+        private_pose_or_dynamics_used_as_features_or_regression_targets=False)
+
+
 def extract(release_root, expected_release_sha, source_root):
     root = Path(release_root).resolve(strict=True)
     release_file = root / 'release.json'
@@ -231,7 +306,7 @@ def extract(release_root, expected_release_sha, source_root):
         literal = next(((i,r) for i,r in outcomes if r['payload'].get('execution_role') == 'interaction'
                         and r['payload'].get('intent_succeeded') is True
                         and r['payload'].get('receipt',{}).get('status') == 'succeeded'), None)
-        success_time = None; outcome_sha = None; native_failure_verified = False
+        success_time = None; outcome_sha = None; native_failure_verified = False; label_witness = None
         if literal is not None:
             oi, orow = literal; payload = orow['payload']; receipt = payload['receipt']
             final_bindings = [r for i,r in by_line.items() if i < oi and r['payload'].get('event') == 'intent_native_execution_bound'
@@ -254,7 +329,14 @@ def extract(release_root, expected_release_sha, source_root):
             if failures:
                 outcome='NATIVE_GUARD_FAILURE';native_failure_verified=True;outcome_sha=failures[0]['sha256']
             else:
-                outcome=None  # Future exception-based witnesses require their actual source evidence, not guessing.
+                label_witness=verified_native_climb_guard_failure(result,cold,by_line,bi,intent,freeze,source,pins)
+                if label_witness is None:
+                    outcome=None
+                else:
+                    outcome='NATIVE_GUARD_FAILURE';native_failure_verified=True
+                    outcome_sha=label_witness['terminal_diagnostic_record_sha256']
+        out['label_witness']=label_witness
+
         out['causal_binding'] = dict(first_judgment_line=ji, first_judgment_record_sha256=jr['sha256'],
             proposal_line=pi, proposal_record_sha256=pr['sha256'], preparation_binding_line=bi,
             preparation_binding_record_sha256=br['sha256'], physical_observation_sha256=bound['physical_observation_sha256'],
@@ -274,7 +356,9 @@ def extract(release_root, expected_release_sha, source_root):
                 current_READY_s=None if ready_time is None else ready_time-time_s,
                 full_success_s=None if success_time is None else success_time-time_s,
                 READY_source_verified=ready_time is not None,successful_task_endpoint_verified=success_time is not None,
-                native_guard_failure_verified=native_failure_verified)
+                native_guard_failure_verified=native_failure_verified,
+                native_failure_witness_kind=None if label_witness is None else label_witness['kind'],
+                failure_elapsed_from_decision_s=None if label_witness is None else label_witness['failure_time_s']-time_s)
             out['status']='NEW_PURPOSE_ROW_EXTRACTED_AWAIT_COMPLETE_TRAIN_GATE'
     for path, expected in pins.items():
         need(sha(path) == expected, 'Read sources changed during extraction')
