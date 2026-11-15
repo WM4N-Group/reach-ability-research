@@ -29,6 +29,19 @@ def support_reference(object_ref, existing_refs):
     return ref
 
 
+def declared_support_layer(destination_height_m, measured_top_m):
+    """Keep the PUBLIC registered layer; actual geometry must pass original .01m.
+
+    No rounding/rewrite of an option or actual body pose. A compliant contact
+    may settle the box top to .1998m; that is not a new public NAV layer/profile.
+    """
+    require(type(destination_height_m) in (int,float) and type(measured_top_m) in (int,float)
+            and math.isfinite(destination_height_m) and math.isfinite(measured_top_m)
+            and abs(destination_height_m-measured_top_m)<=.01,
+            'Actual selected top must match the declared CLIMB destination within original geometry gate')
+    return destination_height_m
+
+
 def source_readiness(surface, *, feet, total_vertical_load_N, selected_contact_normal_N, base_xy, goal_xy=None):
     """Original NAV support predicate plus REAL selected-object normal loads.
 
@@ -125,7 +138,9 @@ class ActualClimbNavSourceObservation:
         refs = set(registry.objects) | set(registry.surfaces)
         ref = support_reference(obj.ref, refs)
         x0, y, length, width = geometry['front'], geometry['lane_y_m'], geometry['length'], geometry['width']
-        surface = SurfaceSpec(ref, obj.body_name + '_geom', (x0, x0 + length, y - width / 2, y + width / 2), geometry['top'])
+        require(native.parameters == executor.option.parameters, 'Original public/native CLIMB destination parameters unchanged')
+        layer = declared_support_layer(dict(native.parameters)['surface_height_m'], geometry['top'])
+        surface = SurfaceSpec(ref, obj.body_name + '_geom', (x0, x0 + length, y - width / 2, y + width / 2), layer)
         last_two = tuple(value.copy() for value in session.last_two)
         valid_refs = len(last_two) == 2 and all(value.shape == (18,) and np.isfinite(value).all() for value in last_two)
         issued_history_gate(time_s=float(p.data.time), tick=r.step_count,
@@ -179,6 +194,7 @@ class ActualClimbNavSourceObservation:
             time_s=self.observed_time, physical_tick=self.observed_tick, actual_object_ref=self.actual_object_ref,
             original_native_option_sha256=self.original_option_sha256,
             proposed_private_support_ref=self.surface.ref, source_height_m=self.surface.top_z_m,
+            actual_measured_support_top_m=self.original_geometry['top'],
             selected_object_contact_normal_N=list(self.selected_contact_normal_N),
             **self.metrics, actual_two_issued_global18_refs=True, original_guard_and_joint_limits_retained=True,
             support_registry_not_mutated=True, native_NAV_constructed=False,

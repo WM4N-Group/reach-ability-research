@@ -43,7 +43,7 @@ class Tests(unittest.TestCase):
         self.assertFalse(blocked)
     def test_six_helpers_borrowed_old_installer_cannot_overwrite_factor_binding(self):
         cls=driver.driver_class(source_root=SOURCE,enabled=True)
-        self.assertEqual(cls.__bases__,(object,));self.assertFalse(cls.full_task_terminal_integrated)
+        self.assertEqual(cls.__bases__,(object,));self.assertTrue(cls.task_terminal_source_integrated);self.assertFalse(cls.full_task_native_ready)
         methods=driver._original_methods();self.assertEqual(set(methods),set(driver.BASE_METHOD_PINS))
         for name,fn in methods.items():
             if name!='_install_common_stow':self.assertIs(getattr(cls,name),fn)

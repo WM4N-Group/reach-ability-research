@@ -2,6 +2,16 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：目标层标称值接缝修正＋实际高台终点source接线（未native执行）
+
+**不能让接触沉降把公开layer改成新profile**：真实box top可为.1998m，公开CLIMB destination/NAV layer仍.20。source observation现在保公开声明layer，实际top另记并须过原.01m几何门；不是把public/native option改成实测小数、四舍五入r.qpos或降容差。原validator仍要求公开NAV height与该声明layer完全相同、actual feet/selected contacts/height tolerance照原门。新增非整数沉降回归避免.1998 private plane与.20 public参数精确比较时人为BLOCKED，.189/.6/NaN照拒；旧source35未借此宣称物理失败或修复成功。
+
+`task_terminal.ActualClimbChain`只在当前真实原CLIMB succeeded回执/原stop witness/实发command hash/同world/时钟边界记录原private binding与公开destination，保留immutable绑定SHA。最后须从ground连续正向到真正goal_deck、≥2个真实成功transition；不接受VLM reaches_goal、单CLIMB、拼另一world/clock或蓝图补后果，不硬编码哪个箱先后。所有原3placement/NN/STOW_VERIFIED当前几何仍须成立。
+
+final `v4-goal-elevated` NAV现在只可包装**真实在goaldeck/.60层**的原RegisteredNavMachine（ground同XY拒绝），原NAV成功另记，然后用原RegisteredHoldMachine继续其真正protected-arrival owner、bounded2s内逐实际200Hz命令读goal_deck contact/4脚≥12N、原速度/tilt/足高/goal bounds与连续.5s dwell。没有新world/teleport/万能HOLD或加额外任务路线，原option/owner预算连续，不从片长判成功。
+
+只有真正collector给出的同tick、current executor/session/原NAV＋owner-stop/3placements/CLIMB chain/真实deck-contact proof才可让driver完成；E收到该typed proof、自己的实际placement/support/terminal-pending状态匹配且一次性验证才确认complete，字符串/布尔/goal/ref/仅类型正确但未collector来源的对象均不能自签。A—D共用同一private物理终点，不依赖预测tree reaches_goal。此source已接assembly/factory/coordinator/driver，**不等于终点已实际过**；当前static deck/.20→.60原20cm技能域、后继source链和A/B WM bootstrap仍未解决，五组main仍0。
+
 ## 2026-11-16：有限单次CLIMB→NAV的factory／inner+outer guard／共同候选已同步接源（未native验证）
 
 不再只交独立adapter。`V4TaskFactory`现在在**选中NAV private ExecutionBatch**的短生命周期context内，从原成功CLIMB已登记的真实source observation＋原placement建立/缓存typed live witness；普通PUSH/CLIMB仍走原completed-witness路径。原NAV `_validate_option`仅source registry lookup一处精确可逆适配，原公共anchor/参数/height/4脚12N/goal-margin检查都在。selected constructor只为真实该类型调用其同次`nav_type`，普通ground/arrival/stow仍原constructor。assembly把原ActualPlacementEvidence交给factory，driver在真CLIMB receipt边界登记source，selected judge用相同registry/witness逻辑。

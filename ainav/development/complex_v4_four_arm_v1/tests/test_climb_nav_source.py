@@ -34,6 +34,14 @@ class Tests(unittest.TestCase):
         with self.assertRaises(ValueError):c.read_actual_climb_nav_source(enabled=True)
         with self.assertRaises(ValueError):c.read_actual_climb_nav_source(enabled=True,guard=lambda:False,journal=lambda row:'SOFTWARE')
         self.assertFalse(blocked)
+    def test_declared_layer_not_actual_compliant_top_or_rewritten_public_option(self):
+        destination=.2;measured=.1998
+        self.assertEqual(c.declared_support_layer(destination,measured),destination)
+        self.assertNotEqual(c.declared_support_layer(destination,measured),measured)
+        self.assertEqual(measured,.1998)  # No state/reference adjustment.
+        for top in (.189,.6,float('nan')):
+            with self.assertRaises(ValueError):c.declared_support_layer(destination,top)
+
     def test_reader_has_no_sample_pose_force_history_override_arguments(self):
         params=set(inspect.signature(c.read_actual_climb_nav_source).parameters)
         self.assertFalse(params.intersection({'feet','contacts','sample','last_two','limits','pose','forces','owner_type'}))

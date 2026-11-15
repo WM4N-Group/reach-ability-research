@@ -98,7 +98,8 @@ def driver_class(*, source_root=None, enabled=False):
     methods = _original_methods()
 
     class V4LiveDriver:
-        full_task_terminal_integrated = False
+        task_terminal_source_integrated = True
+        full_task_native_ready = False
 
         def __init__(self, components, *, bundle, output_root, writer, planner, journal, guard, arm):
             require(callable(guard) and callable(journal), 'Actual Data owner guard/journal')
@@ -163,6 +164,7 @@ def driver_class(*, source_root=None, enabled=False):
                         elif option.skill == 'CLIMB':
                             witness = driver.factory._current_completed_witness()
                             witness.validate(driver.r)
+                            driver.execution['climb_chain'].record_current(driver.executor, option, receipt, witness)
                             driver.actual_climb_boundaries.append((option, receipt, driver.executor.session, witness))
                             source = read_actual_climb_nav_source(runtime=driver.r, session=driver.executor.session,
                                 executor=driver.executor, registry=driver.registry, native_witness=witness,
@@ -235,6 +237,9 @@ def driver_class(*, source_root=None, enabled=False):
                 surface = source_registry.surfaces[witness.support_ref]
                 if intent.skill == 'NAV':
                     require(params['surface_height_m'] == surface.top_z_m, 'NAV cannot change actual source support layer')
+                    if intent.target_ref == 'v4-goal-elevated':
+                        self.execution['climb_chain'].verify()
+                        require(self.execution['placements'].current_required(), 'Actual required placements before final NAV')
                     proof = self.journal(dict(event='V4_selected_NAV_entry_ready', time_s=now,
                         intent_sha256=intent.sha256, original_factory_support_checks_still_required=True, model_input=False))
                     return 'READY', BehaviorOption('v4-NAV-%d' % self.execution_sequence,
@@ -335,8 +340,19 @@ def driver_class(*, source_root=None, enabled=False):
                                 self._after_guard()
                 return True
             self.loop._receipts()
-            if getattr(self.planner, 'awaiting_terminal', False) and self.executor.reported_end and self.executor.last_outcome == 'succeeded':
-                raise RuntimeError('V4_full_elevated_owner_contact_dwell_verifier_not_integrated_no_task_success')
+            if self.executor.reported_end and self.executor.last_outcome == 'succeeded' and getattr(self.executor.session, '_v4_terminal_source', None) is not None:
+                from task_terminal import collect_verified_terminal
+                from rule_baseline import RuleBaseline
+                proof = collect_verified_terminal(self.r, self.executor, self.execution['placements'],
+                    self.execution['climb_chain'], guard=self.owner_guard)
+                ref = self.journal(dict(event='V4_original_complete_task_verified', time_s=float(p.data.time),
+                    original_required_placements=len(self.execution['placements'].records),
+                    genuine_CLIMB_transitions=len(self.execution['climb_chain'].records),
+                    actual_goal_deck_contact_and_contiguous_stop=True, model_input=False))
+                if type(self.planner) is RuleBaseline:
+                    self.planner.confirm_original_task_terminal(evidence_ref=ref, terminal_proof=proof)
+                self.complete = True
+                return False
             try:
                 return self.loop.step_one()
             finally:

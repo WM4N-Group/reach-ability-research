@@ -75,6 +75,11 @@ class RuleBaseline:
     def reject_intent(self,intent,reason,evidence_ref):
         require(intent is self.pending,'Only the real pending rule intent may be rejected')
         self.failed=True;raise RuntimeError('E_original_judgment_rejection_no_retry:'+str(reason))
-    def confirm_original_task_terminal(self,*,evidence_ref):
-        # No V4 same-world support/placement/CLIMB verifier has been integrated.
-        raise RuntimeError('V4_actual_terminal_verifier_not_integrated_E_cannot_self_certify')
+    def confirm_original_task_terminal(self,*,evidence_ref,terminal_proof=None):
+        from task_terminal import VerifiedV4TaskTerminal
+        if type(terminal_proof) is not VerifiedV4TaskTerminal:
+            raise RuntimeError('V4_actual_typed_terminal_proof_required_E_cannot_self_certify')
+        terminal_proof.confirm_rule(self,evidence_ref=evidence_ref)
+        self.journal(dict(event='V4_E_actual_complete_task_confirmed',evidence_ref=evidence_ref,
+            original_private_terminal_verifier=True,not_self_certified_from_goal_or_string=True,model_input=False))
+        self.complete=True;self.awaiting_terminal=False

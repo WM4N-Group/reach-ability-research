@@ -90,6 +90,7 @@ def factory_class(*, source_root=None, enabled=False):
             self._climb_nav_sources = {}
             self._climb_nav_witnesses = {}
             self.actual_placements = None
+            self.actual_climb_chain = None
 
         def register_climb_nav_source(self, observation):
             require(type(observation) is ActualClimbNavSourceObservation and observation.r is self.r
@@ -234,6 +235,11 @@ def factory_class(*, source_root=None, enabled=False):
                     and self.api.world_snapshot(self.r) == self._outer_world,
                     'Exact selected public option and unchanged original world/FIFO required')
             inner = self._constructor_options[outer.sha256]
+            if outer.skill == 'NAV' and outer.target_ref == 'v4-goal-elevated':
+                require(self.actual_placements is not None and self.actual_climb_chain is not None,
+                        'Actual full-task evidence required before any final NAV constructor')
+                self.actual_climb_chain.verify()
+                require(self.actual_placements.current_required(), 'Actual required placements before final NAV')
             self._constructing_inner = inner
             self._constructing_outer = outer
             try:
@@ -245,7 +251,19 @@ def factory_class(*, source_root=None, enabled=False):
             finally:
                 self._constructing_inner = None
                 self._constructing_outer = None
-            # Deliberately do NOT inherit the old ground-only terminal_stop hook.
+            # Never call the old ground-only endpoint. The actual elevated
+            # wrapper retains the original NAV owner and requires a REAL chain.
+            if outer.skill == 'NAV' and outer.target_ref == 'v4-goal-elevated':
+                require(self.actual_placements is not None and self.actual_climb_chain is not None,
+                        'Original full-task placement/CLIMB evidence required')
+                from task_terminal import terminal_nav_session
+                try:
+                    session = terminal_nav_session(session, self.actual_placements, self.actual_climb_chain,
+                        source_root=root, journal=self.journal)
+                    self._constructed_session = session
+                except BaseException:
+                    self._construction_failed = True
+                    raise
             self.journal(dict(event='V4_selected_original_session_bound',
                               selected_option_sha256=outer.sha256, constructor_option_sha256=inner.sha256,
                               original_native_session=True, task_terminal_verified=False, model_input=False))

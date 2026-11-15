@@ -163,6 +163,9 @@ def build_after_actual_capture(components=None, *, source_root=None, bundle=None
     require(Path(evidence_module.__file__).resolve() == evidence_path, 'No ambient terminal module')
     placements = evidence_module.ActualPlacementEvidence(runtime, registry, components['scene'])
     factory.actual_placements = placements
+    from task_terminal import ActualClimbChain
+    chain = ActualClimbChain(runtime, registry, components['scene'], source_root=root, guard=guard, journal=journal)
+    factory.actual_climb_chain = chain
     require(api.world_snapshot(runtime) == before, 'Execution assembly changed actual physical world/FIFO')
     journal(dict(event='V4_actual_capture_to_original_execution_assembled',
                  time_s=float(runtime.sim.data.time), actual_capture=witness.report(),
@@ -172,6 +175,7 @@ def build_after_actual_capture(components=None, *, source_root=None, bundle=None
                  native_CLIMB_NAV_or_full_task_qualification=False,
                  static_deck_40cm_or_task_ready=False, model_input=False))
     return dict(factory=factory, executor=executor, resolver=resolver, initial_witness=witness,
-                placement_catalogue=contracts, placements=placements, guards=guards,
+                placement_catalogue=contracts, placements=placements, climb_chain=chain, guards=guards,
                 source_provenance=pins, world_steps_issued=0, actual_dynamic_qualification=False,
-                full_V4_driver_and_task_terminal_integrated=False)
+                task_terminal_source_integrated_not_native_qualified=True,
+                full_V4_static40cm_chain_or_methods_ready=False)

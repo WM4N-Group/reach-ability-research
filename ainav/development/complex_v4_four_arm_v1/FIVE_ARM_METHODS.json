@@ -34,7 +34,7 @@
     "D-C"
   ],
   "E_source": "rule_baseline.RuleBaseline",
-  "E_source_sha256": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0",
+  "E_source_sha256": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
   "E_prior": "scene-specific public initial-X/public-ref order, one declared approach if current association absent; then one-hop nominal goal distance at next declared support height",
   "E_tie": "public_ref then target_ref",
   "E_max_semantic_selections": 64,
@@ -44,7 +44,6 @@
   "first_pilot_main_total": 5,
   "run_order": null,
   "technical_caps_owner": "Data freezes before results",
-  "V4_same_world_terminal_driver_not_integrated": true,
   "selected40cm_rise_not_supported": true,
   "source_native_qualified": false,
   "baseline_method_identity_or_native_admission_claimed": false,
@@ -57,5 +56,7 @@
   "shared_public_intents_current_count": 30,
   "shared_public_anchors_current_count": 27,
   "bounded_box_top_NAV_nominal_candidates_shared_all5": 3,
-  "new_candidate_not_native_admission_or_continuous_domain": true
+  "new_candidate_not_native_admission_or_continuous_domain": true,
+  "V4_task_terminal_source_integrated_not_native_qualified": true,
+  "V4_static40cm_and_full_methods_not_ready": true
 }
