@@ -52,3 +52,26 @@
 用户最新明确E规则必须完整实跑成功，A—D各自交完整直接live原片，失败/API或资源截断也留全片；软件checks/示意图/进程exit不替代。E若未成功只报告实际失败阶段并修具体新版本，不能洗旧失败或在原closed root反复重试。五组共同执行底座先资格，正式顺序/策略与源结果前freeze；E后果不能反调其他方法后还声称同一未见对比。
 
 用户同时明确尽量并行、充分利用服务器。仍Data唯一physical owner；AINav不自己开world/改Data进程或锁。新scope可按Data合法隔离lease/CPU/GPU/显存与HD录制容量并发，不是限制为必然一GPU只能一world；已有bulk专slot/CPU与watchdog不能热改。先实测必要own-zero资源，再决定同卡多world是否安全；没有method/native资格不为占卡而启动假任务，不把空闲快照当lease。
+
+## Data现在可直接调用的V4原生资产/冷Runtime入口
+
+`native_entry.compile_static_asset`与`native_entry.construct_cold_components`已接到原完整host真正构造函数，不再只有外部asset callback。两函数默认enabled=False；只有Data传自己的fresh authority/resource guard、原已核common-source/SDK bundle、exclusive output model/new runtime路径并显式enabled=True才进入真实构造。AINav未自行调用、没有获取新lease或启动world。
+
+新入口在**私有globals副本**执行精确原native_construction的同一函数字节码，只换3个明确V4 callbacks：load_scene、fresh geometry构造、registry。旧模块/源/已冻程序未改；原source/SDK核验、机器人/actuator/engine签名、onboard camera ABI、fresh model exclusive发布、Actor/Runtime初始化和capture原门仍走原实现。V4 static deck真实几何和goal_deck=.60 registry不能静默退回旧ground-only scene。源码/依赖逐SHA，原kwargs默认值也保留。
+
+Data可先用**新组件scope（必要zero≤1/main0）**做原生V4 asset/model/camera与初始Runtime资格，GPU0按fresh lease隔离，GPU1原bulk不动；不必等WM/current-query/完整40cm方案才编译资产。该组件不是五组main/E成功、不是旧zero复用，也不放行CLIMB/static-deck/完整高台终点。任一失败保实际诊断/成本，不在原root热修或自动重试。
+
+调用示意（仅接口说明，不是本组已执行）：
+
+```python
+from native_entry import compile_static_asset, construct_cold_components
+asset = compile_static_asset(enabled=True, source_root=exact_common_source,
+    bundle=exact_verified_sdk_bundle, output_model=new_exclusive_model,
+    expected_scene_sha256=exact_V4_scene_sha, guard=Data_fresh_guard)
+components = construct_cold_components(enabled=True, source_root=exact_common_source,
+    bundle=exact_verified_sdk_bundle, model_path=asset['model_path'],
+    model_sha256=asset['model_sha256'], expected_scene_sha256=exact_V4_scene_sha,
+    guard=Data_fresh_guard, journal=original_journal, actor_device=isolated_device)
+```
+
+5项新软件检查覆盖default-off、guard先拒绝、原函数字节码不变/三callback隔离、精确原registry高台与默认scene身份。它们没调用MuJoCo/Actor/Runtime，绝不冒真实compile/zero过。下一步看Data原生结果修具体阻塞，不继续用通用测试数量替代实跑。
