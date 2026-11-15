@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-16T03:13:40.560339+08:00",
+  "initial_checker_assumed_attribute_call_not_actual_direct_Name_bind_to_host_and_literal_variable_method_not_function": true,
+  "corrected_to_inspect_actual_AST_call_and_assignment_identity": true,
+  "no_source_code_or_physical_scope_changed": true
+}

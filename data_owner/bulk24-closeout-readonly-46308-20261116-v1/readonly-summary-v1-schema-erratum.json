@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-16T03:10:12.062381+08:00",
+  "error": "Initial scalar closeout reader assumed v2 first_CLIMB_query_present also existed in ordinal01 original v1 summary",
+  "fix": "Read v1 exact original first_CLIMB_boundary.actual_physical_observation_sha256 without changing original release, labels or any H/physical scope",
+  "first_failure_logs_preserved": true,
+  "model_or_native_reruns": 0
+}

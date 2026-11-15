@@ -1,0 +1,76 @@
+{
+  "releases": [
+    {
+      "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-23-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "3ddd3c9bf6597502cc851524eeb27daa15f668048773450a80fbe55640bebc0b",
+      "summary": {
+        "source_result_passed": false,
+        "source_error": "reconciled_reference_FF_intersection_empty",
+        "source_result_sha256": "c8e4d292f5649ba416b830955fe6a516d3e6f03a36d6c3f179f0688336829ef8",
+        "actual_task_sim_s": 76.03500000000334,
+        "actual_commands": 15207,
+        "RGBD_frames": 761,
+        "review_frames": 761,
+        "direct_raw_frames": 761,
+        "direct_raw_resolution_px": [
+          192,
+          128
+        ],
+        "HD": false,
+        "exact3_semantic_requests_succeeded": false,
+        "actual_native_terminal_receipts": [
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=10666",
+              "issued_command_sha256": "8f11488298a8e44242f47410130e78833aa1d8cb48c12c82570678df4481eee8",
+              "option_sha256": "611b299121dd609db19874f994bacb9403376f850aa6844d51b9f3eb5462035e",
+              "status": "succeeded",
+              "time_s": 53.33000000000883
+            },
+            "task_success_inferred": false
+          },
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=13022",
+              "issued_command_sha256": "b45bb410fa316cb4d45abc04972ab284bab40474771be1f01a4a47fe44c14120",
+              "option_sha256": "a73920a79dd2eafadb0960ffd7721acf8b4d95dd5e91f4b5be6005de2cd298b4",
+              "status": "succeeded",
+              "time_s": 65.11000000001327
+            },
+            "task_success_inferred": false
+          }
+        ],
+        "first_CLIMB_query_present": false,
+        "missing_CLIMB_query_features": null,
+        "missing_CLIMB_outcome_label": null,
+        "nine_stream_checks": {
+          "episode_storage_complete": true,
+          "continuous_200Hz_commands": true,
+          "same_program_actual_zero_and_main_model": true,
+          "original_delay_FIFO_exact": true,
+          "PD_raw_torque_reproduced": true,
+          "hard_clip_reproduced": true,
+          "visual_actions_previous_matches_actual_issue": true,
+          "visual_and_review_grid_complete": true,
+          "no_teardown_errors": true
+        },
+        "public_query_count": 3,
+        "first_CLIMB_boundary": {
+          "status": "NO_CLIMB_JUDGMENT_RECORDED",
+          "first_judgment_status": null,
+          "first_PREPARE_time_s": null,
+          "actual_physical_observation_sha256": null,
+          "judgment_ref": null
+        },
+        "scope_including_own_zero_aux_sim_s": 89.0450000000031,
+        "scope_ledger_wall_s": 607.8140105141792,
+        "scope_output_highwater_bytes": 131855601,
+        "all_usage_known": true,
+        "resource_censored": false,
+        "whole_mission_or_T_complex_success": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-16T03:13:40.560339+08:00",
+  "role": "PRE_MAIN_STATIC_METHOD_IDENTITY_REVIEW_NOT_ADOPTED_FACTOR_CHANGE_OR_NATIVE_TEST",
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+  "Reach_original_record_sha256": "21b9f384746ae1415ee406d47bed0cae00a78640b1b1c19030ed085e3726f1a4",
+  "source_commit": "4909180a3fa05ebf5a1eb1cf2847df42ee6cc1d9",
+  "live_driver_sha256": "f6567d535cbf0d0894f1bee4807ea336e64ea3a844e1dc11c74d183cf82e5bc6",
+  "immutable_parent_scene_driver_whole_SHA256": "7919278e08a8610359ee3f14e6380bc874f2a579582e0143f13a8420b2c42e08",
+  "immutable_parent_method_SHA256": "e658b891f50ce0b30a4500f415942159190903e7297a690336d1892323ef236a",
+  "exact_legacy_binder_bytes_verified_SHA256": "23c1d6b5d160de10259d469d43c57bf7c6d6e1616d4568b895ab8fdf76ac65a5",
+  "Data_independent_AST_checks": {
+    "driver_constructor_uses_borrowed_installer": true,
+    "borrowed_actual_immutable_method_calls_bind_to_host_enabled_True": true,
+    "no_arm_or_planner_factor_selector_in_original_method": true,
+    "late_method_assignment_can_override_early_override": true
+  },
+  "scope_decision": {
+    "legacy_common_not_automatically_treatment_leak": true,
+    "preserve_existing_strong_common_baseline_until_method_owner_explicitly_classifies": true,
+    "do_not_silently_delete_common_kernel_to_force_generic_zero": true,
+    "new_successor_optimizer_B_D_must_be_reported_separately": true,
+    "optional_strict_factor_helper_not_adopted_by_Data": true,
+    "no_new_user_cost_box_or_signature_permission_gate": true,
+    "full_program_freeze_must_record_actual_legacy_common_vs_new_factor_and_imported_dependencies": true
+  },
+  "existing_data": {
+    "five_arm_main_calls": 0,
+    "no_observed_five_arm_treatment_leak": true,
+    "old25_source_capture_and_assembly_did_not_construct_selected_Push_or_invoke_this_live_driver_installer": true,
+    "original_closed_asset_and_capture_qualifications_not_invalidated_or_reopened": true,
+    "bulk_original_frozen_protocol_not_relabelled_or_hot_modified": true
+  },
+  "causal_bootstrap_boundary": {
+    "original_SupportedCapture_not_qualified_WM_skill_owner": true,
+    "capture_frames_not_sent_to_WM": true,
+    "proposed_shared_public_NAV_observation_preparation_only_a_proposal_not_adopted": true,
+    "no_silent_first_AB_VLM_only_fallback_or_private_observed_owner_substitution": true
+  },
+  "source_import_or_fixture_retest_native_API_WM_forward_fit_calls": 0,
+  "no_H_source_callbacks_or_physical_scope_modifications": true
+}

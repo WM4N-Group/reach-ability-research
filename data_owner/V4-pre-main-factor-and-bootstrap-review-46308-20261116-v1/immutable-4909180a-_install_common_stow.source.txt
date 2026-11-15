@@ -1,0 +1,14 @@
+def _install_common_stow(self):
+        # Same current common lower layer for both arms, installed once at zero.
+        sys.path.insert(0,str(self.source_root.parent))
+        from reach_stow_choice.native_stow_path_binding import bind_to_host,CALLBACK
+        allowed={self.source_root/'mujoco_zyh/stall_stow.py',self.source_root/'ainav/native/current_stall_stow.py'}
+        modules=[];seen=set()
+        for module in tuple(sys.modules.values()):
+            path=getattr(module,'__file__',None)
+            if path is not None and id(module)not in seen and Path(path).resolve()in allowed:seen.add(id(module));modules.append(module)
+        need(any(Path(m.__file__).resolve()==self.source_root/'mujoco_zyh/stall_stow.py'for m in modules),'Actual selected original stow module must already be loaded')
+        self.common_choice_records=[];self.common_stow_bindings=[];self._stow_callback_name=CALLBACK;self._stow_allowed=allowed;self._stow_installed={}
+        def emit(row):self.journal(row);self.common_choice_records.append(dict(row))
+        for module in modules:
+            r=bind_to_host(self,module,enabled=True,emit=emit);need(r['installed'],'One actual common source binding required');self.common_stow_bindings.append(dict(path=str(Path(module.__file__).resolve()),**r));self._stow_installed[str(Path(module.__file__).resolve())]=vars(module)[CALLBACK]

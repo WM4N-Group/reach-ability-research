@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-16T03:11:29.904759+08:00",
+  "error": "Single-ordinal template substitution produced wrong source filename; failed before claim or remote call",
+  "only_new_local_wrapper_fixed": true,
+  "physical_or_remote_export_retry": 0
+}
