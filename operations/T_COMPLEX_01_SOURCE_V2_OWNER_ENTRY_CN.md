@@ -1,5 +1,7 @@
 # T-COMPLEX-01 v2：Reach已给出真实source可调用的公共规划器（非派发许可）
 
+> **2026-11-15 16:45更新：** Data d48fba0e…已验证d486组件：原camera/冷Runtime/INPUT8/GPU0 CUDA-GL及live HD单帧真实PASS；旧camera blocker解除。d486 wrapper已调用本组四模块factory，旧“base三模块”状态不再当前。完整task/实际capture/动态可行计划/A-B/视频仍未验收，组件zero不能代替新全程序的自身zero。见operations/T_COMPLEX_01_NATIVE_COMPONENT_PASS_INTAKE_20261115.json。
+
 2026-11-15。总计划14:00/b2fb786e…未变，复杂任务优先。新增AINav三箱v2公共资产已存在，不再说“只有Reach三箱提议”；v1与其closed组件失败不覆盖、不重开。v2原生动态资格仍未过，本文件不是完整native程序freeze。
 
 ## 直接接入原scene driver

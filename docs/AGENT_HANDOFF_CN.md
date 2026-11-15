@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 16:45：T真实native组件PASS/四模块source接缝已核；新用途bulk24已预登记但未派，完整A/B仍未运行
+
+- **T原camera/Runtime/GPU0组件阻塞已真实解除，不再沿用旧“缺相机”状态：** 独立核Data新正式release d48fba0e…的8小成员SHA，采用AINav不可变d486ec48…/程序c43a4471…；三箱Model a901755c…、原onboard camera ABI/冷Runtime/INPUT8、GPU0 CUDA/GL与直接live960×540单帧PASS，组件scope已closed。Data实际aux6.505sim/task0步、wall17.605737142s/RSS2533969920/ownGPU624951296/output86425276bytes且usage_known=true；本组只消费metadata/方法绑定，不冒大MJB/原数组独立重审或本组新native运行。旧v1 CAMERA_ABI失败/未知sim账原样保留，不复开任一组件。
+- **源与方法接缝已对齐四模块：** d486 immutable public_planner_binding 8ce0e39e…现在明确调用本组source-bound factory，binding6528522e…的4文件SHA均同Reach实际源码，公共asset99d660de…/fd295678…不变；此前“15:42 helper只有base/3模块”已被新版覆盖，不能继续当当前缺口。仍无实际SupportedCapture见证/完整200Hz task循环/多目标ground placement/原NAV-owner终点/≥3有效选择资格；A/B main0/任务视频0，不把world0帧/组件PASS/名义模型输赢当完整任务或方法贡献。下一由Data装准确新全程序、自己的zero/lease和直接live hooks，不能借组件zero给不同程序。
+- **不空等，已事前固定新用途首批24：** AINav0fff23aa…十几何source已接，本组16:40:13登记`BULK24_COLLECTION_PROTOCOL.json` SHA0f9e0e03…；选g01/g02/g09/g10（lane−1.75/−2.15×B宽1.4/1.5）×left/right×原/±.04各一次=24 main上限/8context/4几何/**1既有full4 TRAIN祖先族**。所有prefix/arm同TRAIN，不冒四个独立holdout/TEST；lane对应任务goal-Y一起平移，明示非同世界目标不变。24原requests/payload及4原native protocol SHA已由原source pure函数/validator软件核一致；8新单测过，非24真实资格/科学样本。新root/派发/有效不同状态仍0，Data接收/队列未确认。
+- **新采样问题与停止/原门：** 用既有first-PREPARE/原48槽检验几何变化是否带来可辨输入，或暴露固定profile别名；case标签/RGBD SHA异不充有效组，q/dq/其它proprio诊断计数不冒learnability/安全界。固定round-major循环Latin arm顺序、seed4301、零reset重复/替代/追失败；共性source/安全实现故障停该版，普通失败/未达/censor/UNKNOWN/未准入及全部费用都保，未达不造负标签/向量，不自动扩成其余36目录或刷100。Data新source/自己的zero/lease/容量/原12N/4s/identity/immutable/support/guard/QP/FIFO/stop原门不降；T首可用资源窗口优先，不等十组齐、不挤占T、不另开物理owner。
+- **当前critic/heldout保持：** TRAIN6/fit3371ac20…/model a8b1f165…/rows882ca00b…冻结不变，CAL07已消费1/3、READY13.495/请求CLIMB24.095sim仅原监督，不是heldout性能；08/09正式闭合尚未消费，未评分/校准/部署/放行VAL。本新bulk24 collection不授权当前model refit，不改旧TRAIN/CAL/VAL；任何未来新model需另一个事前训练/评价manifest及实际源/48槽/标签门。新代码/小协议保本地和GitHub、raw/权重/录像只46308，全部旧dirty/closed/原失败未知账保持。
+- **直接入口：** `/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_NATIVE_COMPONENT_PASS_INTAKE_20261115.json`、`operations/BULK24_LANE_WIDTH_COLLECTION_CN.md`、`operations/G2_BULK24_COLLECTION_RELEASE_20261115.json`；新协议远端位置`/mnt/yuanyue/reach-ability-research/protocols/2026-11-15/G2-bulk24-lane-width-new-purpose-v1/BULK24_COLLECTION_PROTOCOL.json`。无新agent/chat/Goal/自动化/旧端连接/他组source或authority改动。
+
 ### 2026-11-15 16:12：首条真实CAL07已closed并完成因果48槽提取，完整CAL评价未开始
 
 - **首条CAL实际闭合并提取，未评分或refit：** 已核Data正式ordinal07 release9249faef…/48成员与原result c96c3c1e…、journal fde98bd6…；新full1-left-original于15:56:44 CAS closed/请求链PASS（不是T全任务）。46308原reader一次真实提取first-PREPARE95.250→原query/首issued因果48槽、READY相对13.495/完整请求CLIMB成功相对24.095sim；原source58 pins全过，extracted717aa3ba…，raw48仅远端。用途仍CALIBRATION/whole-scene隔离，不加TRAIN行/不把原full1 DEV换role；1/3 CAL不出heldout误差/校准/泛化或部署结论。

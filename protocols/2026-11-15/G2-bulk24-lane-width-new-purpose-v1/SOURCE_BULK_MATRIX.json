@@ -1,0 +1,323 @@
+{
+  "schema": "AINav-bulk-registered-source-matrix-v1",
+  "purpose": "NEW_GEOMETRY_SOURCE_ONLY_NOT_ACQUISITION_OR_FIT_AUTHORITY",
+  "original_plan_sha256": "3449b3744ff46c7d0c99237303eca96aca5b72edcda6873a33e287272f19c842",
+  "new_plan_sha256": "515b4d7f6f781efbcebfd51cdf5ac932c47d4e76328fe58822ac8305a6c7a677",
+  "source_delta": {
+    "target": "mujoco_zyh/integrated_course_plan_v1.json",
+    "replacement_file": "integrated_course_plan_bulk_v1.json",
+    "original_code_bytes_unchanged": true,
+    "new_fresh_source_snapshot_only": true,
+    "never_install_on_inflight_or_closed": true
+  },
+  "baseline_case_id": "full-4",
+  "ancestor_case_canonical_sha256": "0c0a9fd848c8c256df19347e622f31e7b9486913b4520cd3b942c28e086edd0d",
+  "shared_initialization_and_ancestor": true,
+  "grouping": "All ten variants and their prefixes/candidates share original full-4 TRAIN ancestry; not ten independent splits or blind TEST scenes. Reach must preregister any new-purpose cohort before Data dispatch.",
+  "role": "UNASSIGNED_NO_FIT_OR_DISPATCH; TRAIN_ONLY_FAMILY_PROPOSAL_NOT_HELDOUT",
+  "factor_design": {
+    "lane_y_m": [
+      -1.75,
+      -1.85,
+      -1.95,
+      -2.05,
+      -2.15
+    ],
+    "step_width_m": [
+      1.4,
+      1.5
+    ],
+    "seed": 4301,
+    "step_height_m": 0.2,
+    "B_mass_kg": 0.5,
+    "B_bottom_mu": 0.4,
+    "foot_top_mu": 0.8,
+    "geometry_changes_only": true
+  },
+  "original_cases_preserved": 5,
+  "declared_geometries": 10,
+  "actual_distinct_decision_states_verified": 0,
+  "prefixes": [
+    "left",
+    "right"
+  ],
+  "candidates": [
+    "original",
+    "lateral_plus_0p04",
+    "lateral_minus_0p04"
+  ],
+  "source_context_count": 20,
+  "potential_context_candidate_count": 60,
+  "qualification_proposal": "Source-qualify each group with existing exact3 NAV/PUSH/CLIMB and original candidate, two existing prefixes as predeclared contexts. Reuse actual qualified callers. Not a run schedule or allocation; Data freezes finite new batch and own-zero/lease/technical caps; Reach fixes split/purpose/stop rules.",
+  "no_sweeping_until_success": true,
+  "no_automatic_replacement": true,
+  "information_gate": "At first actual original CLIMB PREPARE measure causal public45D/RGBD/candidate domain; missing PREPARE/failed predecessor/resource censor retained. If source or public decision states merge, report merged coverage, not ten effective groups.",
+  "covers_current_goal": "Contributes task-relevant lane/width coverage for >=100-new-purpose-attempt expansion. It is not a complete 100-run cohort, G5 long-chain task, or T-COMPLEX A/B replacement.",
+  "no_post_20cm_NAV_PUSH_required": true,
+  "physical_attempts": 0,
+  "groups": [
+    {
+      "group_id": "bulk-g01",
+      "case_id": "bulk-g01-lane175-width140-v1",
+      "factor_values": {
+        "lane_y_m": -1.75,
+        "step_width_m": 1.4
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g01-lane175-width140-v1",
+        "lane_y_m": -1.75,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g02",
+      "case_id": "bulk-g02-lane175-width150-v1",
+      "factor_values": {
+        "lane_y_m": -1.75,
+        "step_width_m": 1.5
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g02-lane175-width150-v1",
+        "lane_y_m": -1.75,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.5,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g03",
+      "case_id": "bulk-g03-lane185-width140-v1",
+      "factor_values": {
+        "lane_y_m": -1.85,
+        "step_width_m": 1.4
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g03-lane185-width140-v1",
+        "lane_y_m": -1.85,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g04",
+      "case_id": "bulk-g04-lane185-width150-v1",
+      "factor_values": {
+        "lane_y_m": -1.85,
+        "step_width_m": 1.5
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g04-lane185-width150-v1",
+        "lane_y_m": -1.85,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.5,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g05",
+      "case_id": "bulk-g05-lane195-width140-v1",
+      "factor_values": {
+        "lane_y_m": -1.95,
+        "step_width_m": 1.4
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g05-lane195-width140-v1",
+        "lane_y_m": -1.95,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g06",
+      "case_id": "bulk-g06-lane195-width150-v1",
+      "factor_values": {
+        "lane_y_m": -1.95,
+        "step_width_m": 1.5
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g06-lane195-width150-v1",
+        "lane_y_m": -1.95,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.5,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g07",
+      "case_id": "bulk-g07-lane205-width140-v1",
+      "factor_values": {
+        "lane_y_m": -2.05,
+        "step_width_m": 1.4
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g07-lane205-width140-v1",
+        "lane_y_m": -2.05,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g08",
+      "case_id": "bulk-g08-lane205-width150-v1",
+      "factor_values": {
+        "lane_y_m": -2.05,
+        "step_width_m": 1.5
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g08-lane205-width150-v1",
+        "lane_y_m": -2.05,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.5,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g09",
+      "case_id": "bulk-g09-lane215-width140-v1",
+      "factor_values": {
+        "lane_y_m": -2.15,
+        "step_width_m": 1.4
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g09-lane215-width140-v1",
+        "lane_y_m": -2.15,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.4,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    },
+    {
+      "group_id": "bulk-g10",
+      "case_id": "bulk-g10-lane215-width150-v1",
+      "factor_values": {
+        "lane_y_m": -2.15,
+        "step_width_m": 1.5
+      },
+      "changed_physical_fields": [
+        "lane_y_m",
+        "step_width_m"
+      ],
+      "source_case": {
+        "case_id": "bulk-g10-lane215-width150-v1",
+        "lane_y_m": -2.15,
+        "gap_width_m": 0.2,
+        "step_length_m": 2.4,
+        "step_width_m": 1.5,
+        "bridge_length_m": 3.2,
+        "bridge_width_m": 1.6,
+        "bank_width_m": 2.8,
+        "bridge_offset_from_high_front_m": 3.5,
+        "bridge_mass_kg": 0.5,
+        "bridge_bottom_mu": 0.6
+      },
+      "actual_native_qualified": false
+    }
+  ],
+  "material_changes": false,
+  "actor_changes": false,
+  "goal_frame_change": "Original PUSH/NAV/CLIMB task-reference Y follows the declared lane geometry; world-X, skill sequence and all original goal/success predicates unchanged."
+}

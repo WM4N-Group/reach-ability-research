@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 最新进展（2026-11-15 16:45）
+
+T三箱v2的原camera/冷Runtime/INPUT8/GPU0 CUDA-GL真实组件预检已PASS并closed（Data d48fba0e…），source d486四模块wrapper与本方法SHA一致；尚无完整SupportedCapture/task/A-B/原片资格，组件zero不能借给不同全程序。新用途bulk24已预登记0f9e0e03…：4几何×2prefix×3候选，全部同full4 TRAIN祖先，不refit当前model、不动CAL/VAL，T优先。见operations/T_COMPLEX_01_NATIVE_COMPONENT_PASS_INTAKE_20261115.json与BULK24_LANE_WIDTH_COLLECTION_CN.md。
+
 ## 最新T实现进展（2026-11-15 15:48）
 
 已接AINav三箱v2公共source与原IntentExecutionCoordinator接缝；新增完整SHA/全catalogue门的source-bound factory，Data可直接传入原scene driver。两端各13定向单测，本地87原类/helper与远端53原类子集断言是软件而非真实A/B。v2公共图3个非强制名义重构选择不等真实动态资格；原生A/B和原片仍0。Data v1组件zero因原camera ABI缺失closed，须源修复新程序own-zero，不重开。首次TRAIN-only拟合保持冻结、不重训。入口operations/T_COMPLEX_01_SOURCE_V2_OWNER_ENTRY_CN.md与T_COMPLEX_01_SOURCE_V2_METHOD_RELEASE_20261115.json。
