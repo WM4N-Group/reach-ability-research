@@ -1,0 +1,62 @@
+{
+  "schema": "Data-independent-original-two-NAV-observability-study-v1",
+  "registered_at": "2026-11-15T19:11:27.279215+08:00",
+  "task_id": "T-COMPLEX-01",
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+  "purpose": "OBSERVABILITY_QUALIFICATION_ONLY",
+  "source_owner_commit": "c3c695b5fa10daa826e85fcad04dd737b4810bc5",
+  "source_owner_record_sha256": "1248c50ca32cb71d4fc1842406934f91e03d81e597a52b39362ee5c5532e2308",
+  "scene_sha256": "578bd75303ef00bfb3813a4cc32c3e93c17318e41801d98eb4414092bc56fb34",
+  "GPU_UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+  "physical_GPU_index": 0,
+  "logical_actor_device": "cuda:0",
+  "EGL_device_id": 0,
+  "arms": {
+    "OBS": {
+      "method": "scripted_observability_qualification_not_A_B",
+      "scope_id": "data-46308-T-COMPLEX-observability-only-20261115-v1",
+      "zero_limit": 1,
+      "main_limit": 1
+    }
+  },
+  "order": [
+    "OBS"
+  ],
+  "scope_caps": {
+    "sim_s": 150.0,
+    "wall_s": 57600.0,
+    "output_bytes": 3221225472
+  },
+  "task_sim_cap_s": 125.0,
+  "zero_wall_cap_s": 180.0,
+  "own_GPU_cap_bytes": 3221225472,
+  "own_RSS_cap_bytes": 4294967296,
+  "CPU_threads": 2,
+  "remaining_CAL_VAL_reserve_bytes": 8053063680,
+  "pair_root_storage_reserve_bytes": 3221225472,
+  "provider_quota_unknown": true,
+  "automatic_retry": false,
+  "training_allowed": false,
+  "fit_or_critic_model_input": false,
+  "old_scopes_reused": false,
+  "own_zero": "New exact measurement program at world0, original INPUT8/HD/review1, commands0 and no SupportedCapture/measurement completion.",
+  "main": "One fresh SupportedCapture, exact source two finite NAVs, three actual original observations; stop by measurement completion, never host.complete.",
+  "success": "MEASUREMENT_COMPLETE only after exact2 original succeeded NAV receipts and3 fresh original boundaries; original task_success/AB_comparison always false; visibility neither PUSH READY nor task success.",
+  "dynamic_full_plan_qualified_before_first_main": false,
+  "preregistered_unknown": "Original two NAVs and original sensor association may fail or be resource censored; no threshold/color/pose/goal changes or selective frame retention.",
+  "stop_rules": "Own new full-program zero/cold mandatory; original safety/identity and failure/resource gates retained. Any failure stops this one study without replacement, retries, view search or old closed scope use.",
+  "video": "Direct live960x540 every20 actual physics ticks=10Hz, same fixed camera, complete original raw grids incl failures; encode1x/paired only from raw, no replay/upscale/clip-for-victory",
+  "private_catalog_adapter": "Exact literal RegisteredObserver private catalog preserved sidecar; add model_input_allowed=False/actual_sim_time_s aliases on a copy solely for unchanged original recorder. INPUT8/native/model observations unmodified; both arms identical adapter.",
+  "no_native_controller_or_original_success_gate_changed": true,
+  "cost_basis": {
+    "prior_B_closed_result_sha256": "4a93cc0873798da5001a0ee2d01952f9a9b5bf99192b8864b5e1a94c379b6a34",
+    "prior_B_task_sim_s": 12.72,
+    "prior_B_main_ledger_wall_s": 4745.455496407114,
+    "prior_A_task_sim_s": 2.24,
+    "prior_A_main_ledger_wall_s": 844.490240974,
+    "conservative_observed_ratio_wall_per_task_sim_s": 377.0045718633928,
+    "max_task_sim_from_actual_capture_and_two_original_NAV_budgets": 122.24,
+    "wall_cap_reason": "57600s finite pre-run envelope >1.2x worst observed wall/sim *122.24 plus own-zero/teardown; not a change to old4800s pair caps, not a retry or benchmark-derived cause.",
+    "native_module_scan_not_optimized_or_profiled": true
+  }
+}

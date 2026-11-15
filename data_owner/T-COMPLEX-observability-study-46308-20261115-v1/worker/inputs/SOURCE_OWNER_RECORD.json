@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-15T17:44:37.015495+08:00",
+  "role": "INDEPENDENT_BOUNDED_ORIGINAL_NAV_OBSERVATION_QUALIFICATION_SOURCE_NOT_NATIVE_OR_AB_REPAIR",
+  "cloud_commit": "c3c695b5fa10daa826e85fcad04dd737b4810bc5",
+  "remote_code_root": "/mnt/yuanyue/ainav-compute/code/c3c695b5fa10daa826e85fcad04dd737b4810bc5/ainav",
+  "files_sha256": {
+    "scene_driver.py": "7919278e08a8610359ee3f14e6380bc874f2a579582e0143f13a8420b2c42e08",
+    "observability_qualification.py": "b7c180ef362f8a2e8b9eab742a53777a3a1a2ad652d107438d2a5f7d11dd4199",
+    "OBSERVABILITY_QUALIFICATION_CN.md": "d8117bd916a09053aea4ed7eaa98b0879c6fb1642025227e87a3da38a0da38dc",
+    "OBSERVABILITY_QUALIFICATION_SOURCE_REQUEST.json": "25433aa513b9ca518e183c42d6a6fd89f962aacbd46d826b458e16585545dcde",
+    "tests/test_observability_qualification.py": "0f93de1e5d3dc1bff269dcddbe61182f744558f92e42e5a9ae5fb6e4549396eb"
+  },
+  "all_370_checksum_entries_pass": true,
+  "local_and_remote_source_software_checks": {
+    "base": 6,
+    "semantic": 3,
+    "seams": 7,
+    "new_qualification": 6
+  },
+  "actual_new_physical_observation_study_attempts": 0,
+  "no_mutation_of_frozen_AB_source_or_geometry_camera_appearance_or_proposer": true,
+  "not_task_or_AB_success": true,
+  "scope_allocated": false,
+  "Data_adoption_or_dispatch_not_claimed": true
+}
