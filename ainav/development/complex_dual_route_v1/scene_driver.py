@@ -23,7 +23,9 @@ def nav_declarations(scene):
     return tuple(dict(target_ref='cx-goal'if p==goal else 'cx-nav-%03d'%i,xy=p)for i,p in enumerate(unique))
 
 class ComplexSceneDriver:
-    def __init__(self,components,*,source_root,bundle,root,writer,planner,journal,guard):
+    def __init__(self,components,*,source_root,bundle,root,writer,planner,journal,guard,purpose='T_COMPLEX_COMPARISON'):
+        from observability_qualification import validate_planner_purpose,QUALIFICATION_PURPOSE
+        validate_planner_purpose(planner,purpose);self.purpose=purpose
         import numpy as np
         from mujoco_zyh import native_behavior_executor as api
         from ainav.native.observation import AcquisitionPublisher
@@ -31,12 +33,14 @@ class ComplexSceneDriver:
         need(self.r.step_count==0 and float(self.r.sim.data.time)==0. and not self.r.sim.queue,'Fresh new-scene driver only, no resume')
         need(callable(journal)and callable(guard),'Data original journal/resource guard')
         self.components=components;self.source_root=Path(source_root).resolve();self.bundle=bundle;self.root=Path(root);self.writer=writer;self.planner=planner;self.journal=journal;self.owner_guard=guard
-        need(getattr(planner,'method',None)in('greedy','multistep'),'Actual shared public algorithm method required')
-        planner.decision_source='reach_finite_public_algorithm'
+        if purpose!=QUALIFICATION_PURPOSE:planner.decision_source='reach_finite_public_algorithm'
         self.api=api;self.np=np;self.tick=0;self.loop=None;self.executor=None;self.factory=None;self.coordinator=None;self.execution=None;self.complete=False
         self.prefix=self.capture;self._last_issued=self.r.last.position.copy();self._before=None;self.last_capture_tick=None;self.sequence=0;self.execution_sequence=0
         p=self.r.sim;self._world=(p,p.model,p.data,p.queue,p.controller,p.box_push_target)
-        self.navs=nav_declarations(self.scene);self.nav_by_ref={v['target_ref']:v['xy']for v in self.navs};self.public_body={o['public_ref']:o['body_name']for o in self.scene['objects']}
+        self.navs=nav_declarations(self.scene)
+        if purpose==QUALIFICATION_PURPOSE:self.navs=(*self.navs,*planner.viewpoints)
+        self.nav_by_ref={v['target_ref']:v['xy']for v in self.navs};need(len(self.nav_by_ref)==len(self.navs),'No duplicate declared NAV reference')
+        self.public_body={o['public_ref']:o['body_name']for o in self.scene['objects']}
         self.publisher=AcquisitionPublisher(self.root/'query-observations');self.current_observation=None;self.entity_by_public={};self._entry_specs={}
         from ainav.contracts import canonical
         self.capabilities=canonical(dict(source_ref='T-COMPLEX common source extension of original v6 frozen native skills; not an admission certificate',skills=['NAV','PUSH'],constraints=[
@@ -45,6 +49,8 @@ class ComplexSceneDriver:
             'Current native entry, original four-foot12N/immutable goal/FF/guard/QP/FIFO/placement/stow gates are mandatory.',
             'Both methods use identical scene/actions/observations/termination. No private actual approach, body pose or offline route is model input.',
             'Final NAV also verifies all required original placements and actual protected-arrival supported stop. Predicted goal is not task completion.']))
+        if purpose==QUALIFICATION_PURPOSE:
+            self.capabilities=canonical(dict(source_ref='OBSERVATION-ONLY original NAV qualification, not T task or A/B policy',skills=['NAV'],constraints=['Fixed original ground left/right NAV observation study; no PUSH, retries, fake sensor, threshold change or task-success claim.']))
         self._install_common_stow()
         self.owner_guard()
     def _install_common_stow(self):
@@ -113,15 +119,19 @@ class ComplexSceneDriver:
             alias=aliases[0];self.entity_by_public[alias]=d['target_ref'];p=d['descriptor'];objects.append(dict(target_ref=d['target_ref'],label=alias+'; current original RGBD one-to-one association',bbox_xyxy=p['pixel_bbox_xyxy'],evidence_ref='RGBD:'+d['RGB_sha256']))
         anchors=[dict(target_ref=v['target_ref'],description='fixed task NAV reference, not current measured pose or prescribed route',position_xyz_m=[*v['xy'],0.],uncertainty_xyz_m=[0.,0.,0.])for v in self.navs]
         anchors.extend(dict(target_ref=o['public_ref'],description='declared task object identity and INITIAL blueprint only, not live pose',position_xyz_m=[*o['initial_xy_m'],0.],uncertainty_xyz_m=[0.,0.,0.])for o in self.scene['objects'])
-        obs=self.publisher.publish(packet,now=now,descriptors=objects,declared_map=dict(source_ref='shared task declarations; actual private current pose excluded',anchors=anchors),goal=self.scene['task']['instruction'],events=[])
+        obs=self.publisher.publish(packet,now=now,descriptors=objects,declared_map=dict(source_ref='shared task declarations; actual private current pose excluded',anchors=anchors),goal=('OBSERVATION-ONLY: fixed original left/right NAV views; no box manipulation or complete-task success'if self.purpose=='OBSERVABILITY_QUALIFICATION_ONLY'else self.scene['task']['instruction']),events=[])
         self.sequence+=1;(self.root/('intent-observation-%04d.json'%self.sequence)).write_text(obs.encoded+'\n');self.current_observation=obs;self.factory.begin_acquisition(obs);return obs
     def intent_catalogue(self,observation):
         from ainav.intents import SkillIntent
         need(observation is self.current_observation,'Same real public acquisition');options=[]
         def add(skill,ref,params):options.append(SkillIntent('cx-intent-%d-%d'%(self.sequence,len(options)),skill,ref,tuple(sorted(params.items()))))
-        for ref,xy in self.nav_by_ref.items():add('NAV',ref,dict(goal_world_x_m=xy[0],goal_world_y_m=xy[1],surface_height_m=0.))
-        for c in finite_placements(self.scene):add('PUSH',c['public_ref'],{k:c[k]for k in('goal_world_x_m','goal_world_y_m','surface_height_m')})
-        self.journal(dict(event='semantic_intent_catalogue',time_s=observation.time_s,intents=[dict(skill=o.skill,target_ref=o.target_ref,parameters=dict(o.parameters))for o in options],actual_native_admission_claimed=False,fixed_successor_table=False));return tuple(options)
+        from observability_qualification import QUALIFICATION_PURPOSE
+        if self.purpose==QUALIFICATION_PURPOSE:
+            for v in self.planner.viewpoints:add('NAV',v['target_ref'],dict(goal_world_x_m=v['xy'][0],goal_world_y_m=v['xy'][1],surface_height_m=0.))
+        else:
+            for ref,xy in self.nav_by_ref.items():add('NAV',ref,dict(goal_world_x_m=xy[0],goal_world_y_m=xy[1],surface_height_m=0.))
+            for c in finite_placements(self.scene):add('PUSH',c['public_ref'],{k:c[k]for k in('goal_world_x_m','goal_world_y_m','surface_height_m')})
+        self.journal(dict(event='semantic_intent_catalogue',time_s=observation.time_s,intents=[dict(skill=o.skill,target_ref=o.target_ref,parameters=dict(o.parameters))for o in options],actual_native_admission_claimed=False,fixed_successor_table=(self.purpose==QUALIFICATION_PURPOSE)));return tuple(options)
     def _blocked(self,intent,now,reason):
         ref=self.journal(dict(event='complex_selected_intent_blocked',time_s=now,intent_sha256=intent.sha256,reason=reason,model_input=False));return 'BLOCKED',reason,ref
     def judge_intent(self,intent,now):
