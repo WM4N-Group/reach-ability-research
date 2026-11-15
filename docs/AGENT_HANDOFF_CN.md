@@ -2,6 +2,12 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 19:48：独立两NAV观测新程序own-zero已过/main健康在途，仅1/3视角、尚无资格结论
+
+- **独立观测测量已越过“仅收代码”，不是复开A/B：** 本组19:47直接读46308原件，核新protocol691e9dfa…/authority2bdd91c5…/program9fdd2076…及原c3c695b5…26个source成员SHA和3个Data测量wrapper；493全program成员/SDK未冒独立审计。新程序自身zero2136ddd7…真PASS/closed，task0/commands0、aux6.505sim/36.788752641ledger wall/129934978bytes。唯一新main PID57116 ledger open，zero1/main1，不借旧zero/改旧cap；原A/B仍closed，原负结果/费用保持。
+- **仍在第一NAV，没有测量终态或No-Go：** 新main已真capture448步/2.240sim，初始public RGB SHA与原A/B一致、accepted aliases=[]；原固定NAV(-.08,+.15,0)正在执行。只核581行完整append-only journal前缀，不冒终态；目前仅1/3观测边界，原NAV terminal/测量complete均无，不能拿初view空关联作“三view均不见”、PUSH READY、任务失败或方法结论。open ledger局部费用不记最终总账。
+- **接下来原边界与资源范围：** 等同一新scope的两次原NAV succeeded/3固定真实观测和正式closed结果，完整三view均无关联才本固定域No-Go；失败/censor保未达，不补视角/挑帧/改阈值。新测量事前cap150sim/57600wall/3GiB由Data按原B真实开销登记，非旧pair4800wall热抬/重试；16h是硬上限，不是预计完成时间。实际动态可行计划/三有效策略选择/完整任务收益仍未证。Data唯一物理owner，未改他组源码/锁/H/进程；总计划b2fb786e…、G3一次fit/CAL07仅1/3和bulk24有限预登记/未派发/不refit全保。
+
 ### 2026-11-15 19:21：T首对A/B真实闭合，B为wall资源截断；原片已发布，无完整任务或前瞻收益
 
 - **B原唯一main现已闭合，不再写在途：** 已消费Data正式release161d483b…/原result4a93cc08…：原wall watchdog `Full-task owned wall watchdog, no retry`，FAILED_NO_RETRY/resource_censored=true/task_success=false。主世界12.720sim/2544原命令，实际bundle选择仍1，原NAV option1/Actor-forward524、原native terminal receipt0、placement/重构0。没有NAV成功/技能失败回执，更没有三有效选择或完整任务能力收益；不将资源censor冒原NAV控制失败或.1954s搜索超出.25s预算。

@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前独立观测资格测量（2026-11-15 19:48）
+
+Data新program9fdd2076…的自身zero2136ddd7…真实通过，唯一main已在46308执行固定两NAV/三view；本组已核26source SHA及原zero/ledger，当前仅初始view和第一NAV，无终态/资格No-Go/任务或方法收益。新150sim/57600wall测量cap不是旧A/B提预算，旧pair仍closed。见operations/T_COMPLEX_01_OBSERVABILITY_NEXT_BOUNDARY_CN.md；完整read-only intake与无数组snapshot保在旧工作区ignored evidence/2026-11-15/T-observability-ownzero-open-main-intake-v1。
+
 ## 当前T首对闭合（2026-11-15 19:21）
 
 A原RGBD关联门拒绝保持；B唯一main因原wall watchdog停止（resource_censored=true），主世界12.720sim/2544命令，1次研究选择/原NAV option1/Actor-forward524、terminal receipt0/重构0。两支均未完整任务，不能宣称lookahead收益或搜索超时。已独立核原A462/B995行完整journal链及原三视频SHA，原片是完整可用失败/截断episode而非成功母版。下一为已收源的独立固定两NAV观测资格与新源吞吐准备，Data唯一owner，不重启旧root/抬旧cap。见operations/T_COMPLEX_01_CLOSED_PAIR_AND_NEXT_CN.md。
