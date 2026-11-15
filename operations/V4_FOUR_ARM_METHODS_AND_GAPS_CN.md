@@ -49,3 +49,13 @@ Data正式完整release785bd9db…的本地34小成员与远端全部35成员SHA
 已读AINav新FIVE_ARM_METHODS.json与RuleBaseline源码74827bd0…：选择依据是公开initial-X/public_ref排序、原fresh one-to-one alias、公开required goal和source候选/支撑高度；原receipt前不推进，缺关联最多一次公开approach，失败/拒绝不重试，无VLM/WM/本优化或私有存在性路线。明确工程规则先验，符合E角色；完整native/terminal仍未接，不能从6项source软件测试宣称E已可完成V4。E由AINav持有实现，本组不另写第二份或在五组结果后换成正确路线。
 
 用户后续要求三箱参数适配原技能，已补统一轻箱参数锁与7项检查；当前scene三箱本已匹配，未修改数值/平台，具体见V4_BOX_PARAMETERS_CN.md。
+
+## 2026-11-16 06:15：新component失败独立消费与五组reader身份隔离
+
+Data原35源/程序788c6116…的第一次component_zero因私有catalog缺`model_input_allowed=False`在task0首帧writer边界closed，result1469fdb2…/release3daf48d2…；Reach独立核12本地小成员及13远端原小文件SHA、读取literal result/ledger。任务0命令/0sim/0归档帧、capture未完成/选择0/选中技能controller0，不能因内部C执行底座flag称C或E失败，更不能造PUSH/CLIMB/NAV负类。原aux1world/6.505sim、24.690580467wall、12,013bytes known另记；成功成本None。空流cold字段为真不代表实际PD/视觉覆盖，491成员freeze完整性这里只消费原audit报告、不冒本组全重算。
+
+本组`v4_outcome_summary.summarize`现要求输入行明确 `run_role='V4_FIVE_ARM_TASK_MAIN'`、`source_phase='main'`、实际原件绑定的 `source_task_main_dispatch_count=1`（拒bool），并拒`component_not_C_or_E_method=True`。source adapter须从真实冻结/dispatch/原结果提取，不能手填把component升级；纯reader本身不是原件证明。真实main即使method unavailable/0API也保分母，只不建立有效方法对照。新增5项针对性回归，连受影响methods/reference/provider=74纯软件检查本地/46308两端过，非物理试验。
+
+Data已经独立冻结原35源＋自身privacy-annotation adapter的v2程序a0e8ada0…/492成员；06:10:08 snapshot在途、423实际capture采样/2.115sim、尚无terminal/result，**不是v1恢复、不是E/C/main，也不是新的39源资格**。本组不操作其H/锁/driver/once。AINav新39源305a48b3…已接有限CLIMB→NAV factory/outer/public30intent和高台终点source及明确私有双禁止标志，逐成员SHA只读核过；仍软件，40cm/static deck/后续source链及真实WM/完整cost/exit缺口不由接线自动消失，不借19/25 zero。
+
+小摘要`operations/V4_BOUNDED_RECORDER_FAILURE_INTAKE_20261116.json`不含帧/数组/模型，失败包whole_artifact_model_input_allowed=false/training=false/不转J保持。总计划be3aa7e5…新增J2a只为候选未来TRAIN-only工程评审，不热换当前五组或授本批训练。

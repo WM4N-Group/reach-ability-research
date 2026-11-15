@@ -14,6 +14,14 @@ ARMS=tuple('ABCDE')
 def summarize(rows, *, scene_sha256):
     by_arm={}
     for row in rows:
+        # Component probes can carry an internal arm flag solely to configure
+        # the shared execution layer. They are NEVER one of the five mains,
+        # including failed probes with zero VLM/WM/commands or an E-like flag.
+        need(row.get('run_role') == 'V4_FIVE_ARM_TASK_MAIN' and row.get('source_phase') == 'main'
+             and type(row.get('source_task_main_dispatch_count')) is int
+             and row['source_task_main_dispatch_count'] == 1
+             and row.get('component_not_C_or_E_method') is not True,
+             'Actual five-arm task-main source role/dispatch required; component zero is not C or E')
         arm=row['arm'];need(arm in ARMS and arm not in by_arm, 'One original new main per arm; no duplicates/retries')
         need(row['scene_sha256']==scene_sha256 and len(row['source_result_sha256'])==64 and bool(row['source_result_ref']),
              'Exact common frozen scene and original result identity')

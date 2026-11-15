@@ -324,7 +324,8 @@ class RawWMMappingTests(unittest.TestCase):
 
 class FiveArmSummaryTests(unittest.TestCase):
     def row(self,arm,**extra):
-        value=dict(arm=arm,scene_sha256='a'*64,source_result_sha256='b'*64,source_result_ref='EXPLICIT_SOFTWARE_NOT_NATIVE',
+        value=dict(arm=arm,run_role='V4_FIVE_ARM_TASK_MAIN',source_phase='main',source_task_main_dispatch_count=1,
+                   scene_sha256='a'*64,source_result_sha256='b'*64,source_result_ref='EXPLICIT_SOFTWARE_NOT_NATIVE',
                    task_success=False,resource_censored=False,api_censored=False,VLM_calls=0 if arm=='E'else 1,
                    WM_forward_batches=1 if arm in 'AB'else 0,effective_optimizer_choices=1 if arm in 'BD'else 0,
                    success_elapsed_sim_s=None)
@@ -352,6 +353,29 @@ class FiveArmSummaryTests(unittest.TestCase):
         v=self.summary([self.row('A',api_censored=True),self.row('B')])
         self.assertTrue(v['primary_contrasts']['B-A']['baseline_censored'])
         self.assertIsNone(v['primary_contrasts']['B-A']['successful_sim_delta'])
+    def test_component_internal_C_or_E_flag_is_not_a_five_arm_task_result(self):
+        for arm in ('C','E'):
+            row=self.row(arm,run_role='BOUNDED_COMPONENT_APPLICABILITY',source_phase='component_zero',
+                source_task_main_dispatch_count=0,VLM_calls=0,WM_forward_batches=0,
+                effective_optimizer_choices=0,component_not_C_or_E_method=True)
+            with self.assertRaisesRegex(ValueError,'component zero'):
+                self.summary([row])
+    def test_missing_or_invented_main_dispatch_provenance_rejected(self):
+        for value in (None,0,2,True):
+            with self.assertRaisesRegex(ValueError,'source role/dispatch'):
+                self.summary([self.row('E',source_task_main_dispatch_count=value)])
+        row=self.row('E');del row['run_role']
+        with self.assertRaises(ValueError):self.summary([row])
+    def test_component_flag_cannot_be_overwritten_by_main_style_fields(self):
+        with self.assertRaisesRegex(ValueError,'component zero'):
+            self.summary([self.row('C',component_not_C_or_E_method=True)])
+    def test_component_source_phase_rejected_even_with_one_claimed_main(self):
+        with self.assertRaises(ValueError):self.summary([self.row('E',source_phase='component_zero')])
+    def test_genuine_task_main_method_unavailable_is_kept_not_erased_as_component(self):
+        result=self.summary([self.row('C',VLM_calls=0)])
+        self.assertEqual(result['original_arm_count'],1)
+        self.assertFalse(result['arms']['C']['method_identity_established'])
+        self.assertIsNone(result['arms']['C']['success_elapsed_sim_s'])
     def test_duplicate_arm_is_not_extra_independent_trial(self):
         with self.assertRaises(ValueError):self.summary([self.row('E'),self.row('E')])
 

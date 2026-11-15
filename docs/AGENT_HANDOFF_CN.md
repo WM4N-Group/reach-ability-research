@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 06:15：新资格task0记录边界失败已核；component不计五组main，74软件两端过
+
+- **新物理原件已独立消费，失败不洗标签：** Data35源/788c6116…首次component_zero在task0首帧writer因`Exact private catalog boundary required` closed；release3daf48d2…/result1469fdb2…的12本地小成员＋13远端原小文件SHA核同。任务0命令/0sim/0归档帧、capture未完成/选择及选中技能controller0；只aux1world/6.505sim、24.690580467wall、12,013bytes known。内部C底座flag不等C/E方法，不造技能负类或成功成本；空流cold checks不冒PD/视觉覆盖。失败包不作model/训练/J输入，491成员全freeze这里只消费owner audit而非本组重算。
+- **修复本组结果reader的真实混淆风险：** 五组摘要现必须显式真实task-main role、source phase main和原main dispatch=1（拒bool/0/重复），并拒component_not_C_or_E_method；不能把API0资格probe计入五main。真正main即使0API/method unavailable仍保分母、不建立对照。新增5专项，连受影响方法/reference/provider=74纯软件检查本地/46308两端过；未新建通用auditor或改他组H/driver/源/进程。
+- **外部接缝进度准确更新，不再停留“只有inner”：** AINav有限单次CLIMB→NAV已接factory/outer/公共30intent（20NAV/6PUSH/4CLIMB）/27 anchors，新39源305a48b3…另接高台terminal和catalog双禁止标志，但都不等原生通过。Data独立v2=a0e8ada0…/492成员是原35源＋Data recorder修复，06:10:08 snapshot实际capture423样本/2.115sim、result仍null；不冒当前状态/成功/新39源资格或复活v1，不操作once。原19/25闭合资格不借。
+- **Reach真正未完成保持：** 总计划be3aa7e5…已读（新增J2a评审不变当前五组/用途）；真实WM bootstrap/grid/accepted owner/same96×64 association、完整公共几何effects/名义cost/准备退出域仍待；五main/真实WM forward0。高台.40m/static deck与后续source链尚未解，旧布局询问无新决定，不擅改图/重问箱许可。bulk24全closed/不refit/不转J、旧模型/CAL/VAL/失败/dirty/index全保。摘要`/home/yuanyue/reach-ability-research/operations/V4_BOUNDED_RECORDER_FAILURE_INTAKE_20261116.json`，raw/权重/环境不回本地。
+
 ### 2026-11-16 04:45：B/D共享优化事件接缝已修正；69软件两端过，不把事件数冒有效优化
 
 - **修复真正方法—source记账不一致，而非新建接口：** 原B只发VLM-WM selection，source FactorJournal只认shared optimizer event，D此前已发。现B/D复用同一记录函数，各次selector完成恰一条shared event，B原selection仅引用该证据；A/C不发、E与legacy H不变。事件绑定当前query/baseline/实际返回root与有效应用/改变/UNKNOWN预算状态；无持久shared引用包括fallback均不返回派发selection。此为运行前正确性修复，五main仍0，不冒已发生优化/污染。
