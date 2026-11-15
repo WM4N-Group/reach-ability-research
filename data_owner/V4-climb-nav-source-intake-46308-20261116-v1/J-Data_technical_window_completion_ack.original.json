@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-16T04:05:01.381000+08:00",
+  "role": "FINITE_TECHNICAL_WINDOW_WORK_COMPLETED_NO_MORE_COMPUTE_REQUESTED_WITHOUT_DATA",
+  "window_id": "J1-CPU-DOWNLOAD-20261116-0240to0415-v2",
+  "all_own_CPU_download_jobs_finished": true,
+  "window_not_extended": true,
+  "own_remote_root": "/mnt/yuanyue/v-jepa",
+  "persistent_weight_bytes": 1303947864,
+  "own_total_disk_bytes": 1368431413,
+  "measured_peak_aggregate_RSS_bytes": 2077630464,
+  "CPU": [
+    40,
+    41
+  ],
+  "GPU": 0,
+  "Data_environment_modified": false,
+  "checkpoint_actual_sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b",
+  "strict_restore_total": 2,
+  "synthetic_encoder_forward": 2,
+  "real_data_forward_or_fit": 0,
+  "first_software_failure_preserved_and_one_specific_repair": true,
+  "cohort_still_pending_as_of_last_exact_receipt": true,
+  "next_need": "Exact new-purpose cohort/public target binding first; CPU appears usable for small encoder/fit checks, no request to consume remaining window or a GPU. New compute only under Data actual arrangement.",
+  "local_milestone": "/home/yuanyue/main/work/v-jepa/evidence/ACTUAL_WEIGHT_AND_CPU_TECHNICAL_MILESTONE_20261116.json",
+  "remote_report": "/mnt/yuanyue/v-jepa/runs/J0-public-weight-window-v2-20261116/ACTUAL_CPU_TECHNICAL_PROFILE_repair1.json"
+}

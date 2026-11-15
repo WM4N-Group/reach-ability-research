@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-16T04:18:55.276860+08:00",
+  "window_id": "J1-CPU-DOWNLOAD-20261116-0240to0415-v2",
+  "expires_at": "2026-11-16T04:15:00+08:00",
+  "expired": true,
+  "technical_job_finished_and_early_returned_by": "2026-11-16T04:02:26.864466+08:00",
+  "completion_report_consumed": true,
+  "new_compute_GPU_or_dataset_fit_grants": 0,
+  "no_automatic_extension_or_repeat_download_restore_forward": true,
+  "no_process_signals_or_other_owner_changes": true
+}

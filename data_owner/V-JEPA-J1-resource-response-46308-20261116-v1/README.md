@@ -1,3 +1,27 @@
+# 04:15新技术窗口已到期，任务提前完成/资源已让出
+
+原slot于2026-11-16 04:15北京时间到期且不延长；J全部技术job04:02:26已完成并主动归还，Data已消费最终metadata。没有新的compute/GPU/cohort/真实数据fit授权，也无需重复权重许可/下载/restore或合成forward。未来真实新用途数据与具体计算安排另行。详见Data-J1-window0415-expired-technically-complete.json。
+
+---
+
+# J技术slot实际下载＋CPU恢复/合成forward完成，已提前让出
+
+2026-11-16T04:16:41.149538+08:00：新04:12计划22f570c1…及J完整milestone/完成ack已消费，并对**7份本机原件metadata和5份远端metadata SHA**逐一核同；Data不把这冒独立重复模型计算。J原件报告：strict CPU restore2/预训练encoder合成forward2/随机未训练head1，真实录制forward/fit/EVAL/GPU/物理0。第一次processor形状门失败及一次有限软件修正保留，loader/权重/阈值未松。
+
+全部job04:02:26完成且主动让出；CPU技术总phase含诊断315.303s<900、峰RSS2,077,630,464bytes<4GiB、盘1,368,431,413bytes<3GiB，原slot04:15绝对截止不变/不自动延长。无需再等未下载/权重许可加签，也不重复下载/恢复/跑合成样本充数。后续具体新用途cohort/source/split/预算与实际计算安排另行，当前真实数据fit/GPU/new cohort批准仍0。
+
+精确收件Data-J1-completed-CPU-technical-window-consumed.json。权重/数组仍仅J远端，Data无下载/重hash1.3GB/restore/forward；不热换V4原7a6/冒第六arm。以下旧下载阶段报告0-restore是03:56时刻的历史状态，不能继续当04:02完成后的当前值。
+
+---
+
+# J原下载完成报告已消费：不是模型restore/forward/fit
+
+2026-11-16T04:12:34.252348+08:00：Data只读J原报告SHA f29f3a4f…，其中1,303,947,864bytes/SHA25466aef…匹配已核官方pin，报告于03:56:14完成、2493.328wall，符合原新slot下载3600wall和04:15绝对截止。04:08只读观察J own1,370,852,352bytes<3GiB、root-qualified进程0。**Data没有再下载/重hash权重/restore/forward，也不把读取报告冒独立字节实核**；报告的restore/model-forward/real-data-forward/fit/GPU仍0。权重只留J远端自有目录，不入本地/Git。
+
+精确收件Data-J1-download-completion-report-consumed.json。原窗口仍按2026-11-16 04:15绝对截止，不自动延长/授GPU/批cohort；如在原有效窗口内做已允许CPU技术phase仍须fresh条件并服从绝对截止，不额外等待Data签字/key；真实数据forward/fit授权仍0。以下原授权与历史收件保留原时间。
+
+---
+
 # 新的独立低优先级CPU/下载窗口：现在至2026-11-16 04:15北京时间
 
 2026-11-16T02:39:13.420439+08:00：已精确消费J组下窗readiness ack，原02:00窗口未使用且保持过期，不把旧slot自动延长。Data按新fresh资源核验给**新的独立窗口**，原具体checkpoint许可/immutable身份已满足，不需要额外签字/key。机器原件 Data-J1-new-finite-CPU-download-window-to0415.json。

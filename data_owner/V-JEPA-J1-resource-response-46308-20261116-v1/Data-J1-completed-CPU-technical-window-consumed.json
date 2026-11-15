@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-16T04:16:41.149538+08:00",
+  "role": "COMPLETED_OWNER_CPU_TECHNICAL_WINDOW_METADATA_CONSUMED_NOT_DATA_MODEL_RERUN_OR_DATASET_AUTHORITY",
+  "milestone_path": "/home/yuanyue/main/work/v-jepa/evidence/ACTUAL_WEIGHT_AND_CPU_TECHNICAL_MILESTONE_20261116.json",
+  "milestone_sha256": "5c183120039a801a009d2b218d98cbaaa00ed3b47714010cc8700c305bf7e45b",
+  "completion_ack_path": "/home/yuanyue/main/work/v-jepa/requests/Data_technical_window_completion_ack_v1.json",
+  "completion_ack_sha256": "674f623be46d701e10a50e9cd21579238445730800a8a7bfd58b293660576736",
+  "remote_original_metadata_pins_verified": {
+    "ACTUAL_CPU_TECHNICAL_PROFILE_repair1.json": "d6c981cd87cd0d890aeb726ee55b5e708e166a54a3b0153e9db9dbc6c9778425",
+    "CPU_WATCHDOG_repair1.json": "94cdc04f2077c096632bab94486ee7edb71beecac16def6acc2768170895d86f",
+    "download-report.json": "f29f3a4f5b114cfa09c46fc1cfe21f59d5101f1926de4d419ec6273701251088",
+    "ACTUAL_CPU_TECHNICAL_PROFILE.json": "805ff14162ea6bfdf997fb575616414be1318edf02bbd50ddf9fa23c41c435d5",
+    "CPU_WATCHDOG.json": "a5c317d3923c0bac47d69bc5a1e9f40213c72156fe633e3941efb5c5c6f511f7"
+  },
+  "weights_arrays_or_models_not_read": true,
+  "local_original_metadata_pins_verified": {
+    "PROCESSOR_GEOMETRY_DIAGNOSIS_AND_ONE_REPAIR.json": "a778bf3b72891e65981944c0405693d5dbd4c7c306d18d98e5d3136f5b535035",
+    "ACTUAL_CPU_TECHNICAL_PROFILE_repair1.json": "d6c981cd87cd0d890aeb726ee55b5e708e166a54a3b0153e9db9dbc6c9778425",
+    "CPU_WATCHDOG_initial_failed.json": "a5c317d3923c0bac47d69bc5a1e9f40213c72156fe633e3941efb5c5c6f511f7",
+    "CPU_WATCHDOG_repair1.json": "94cdc04f2077c096632bab94486ee7edb71beecac16def6acc2768170895d86f",
+    "download-report.json": "f29f3a4f5b114cfa09c46fc1cfe21f59d5101f1926de4d419ec6273701251088",
+    "VJEPA_WM_PROVENANCE.json": "a38d902dfd5497de0e70bc2aaad62563085b1dc19997e7820d9b39187144f8c2",
+    "ACTUAL_CPU_TECHNICAL_PROFILE_initial_failed.json": "805ff14162ea6bfdf997fb575616414be1318edf02bbd50ddf9fa23c41c435d5"
+  },
+  "explicit_remote_initial_report_basename_map": {
+    "ACTUAL_CPU_TECHNICAL_PROFILE_repair1.json": "ACTUAL_CPU_TECHNICAL_PROFILE_repair1.json",
+    "CPU_WATCHDOG_repair1.json": "CPU_WATCHDOG_repair1.json",
+    "download-report.json": "download-report.json",
+    "ACTUAL_CPU_TECHNICAL_PROFILE_initial_failed.json": "ACTUAL_CPU_TECHNICAL_PROFILE.json",
+    "CPU_WATCHDOG_initial_failed.json": "CPU_WATCHDOG.json"
+  },
+  "owner_report": {
+    "all_jobs_finished_by": "2026-11-16T04:02:26.864466+08:00",
+    "strict_CPU_restore_total": 2,
+    "synthetic_pretrained_encoder_forward": 2,
+    "random_untrained_own_predictor_forward": 1,
+    "real_recording_forward": 0,
+    "real_fit": 0,
+    "EVAL": 0,
+    "GPU": 0,
+    "peak_aggregate_RSS_bytes": 2077630464,
+    "own_disk_bytes": 1368431413,
+    "CPU_phase_elapsed_including_diagnostic_s": 315.303343,
+    "original_processor_shape_failure_preserved_one_specific_repair": true
+  },
+  "within_original_finite_window_and_phase_caps": true,
+  "window_expires_at": "2026-11-16T04:15:00+08:00",
+  "job_finished_and_resources_early_return_acknowledged": true,
+  "no_automatic_extension_or_new_GPU_CPU_dataset_fit_grant": true,
+  "Data_model_download_hash_restore_forward_fit_calls": 0,
+  "no_model_or_weights_copied_local_or_Git": true,
+  "no_H_other_source_lock_or_process_changes": true,
+  "main_plan_new_sha256": "22f570c1d74340287088f34eeaf5bce694d53317876bb826956f71321d6c0b65",
+  "plan_delta_only_J_actual_technical_progress_not_V4_method_change": true
+}
