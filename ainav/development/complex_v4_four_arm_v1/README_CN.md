@@ -2,6 +2,29 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：公开CLIMB→原生task factory接线（软件候选，非整链准入）
+
+新增 `task_factory.factory_class` 默认OFF；显式启用时组合原semantic有限PUSH-goal映射与**原RegisteredTaskSessionFactory**，不改原文件/模块。它接入上一版destination binder，保留原 `RegisteredClimbAdapter.construct`、原 `NativeOptionSession` 和原完成CLIMB witness方法；真实回执仍绑定选定的private native option SHA，公开参数保持DESTINATION=.20。绑定逐一核当前RGBD opaque body与所选PUBLIC `object_ref:upper-entry`、query/source/world/FIFO；不能用另一个同高箱体替代所选对象。新acquisition清空映射，只装配精确选中项，构造失败原永久撤销门保持。
+
+数据端已有同世界runtime/registry/resolver和实际capture完成witness后，构造方式：
+
+```python
+Task = task_factory.factory_class(source_root=original_source_root, enabled=True)
+climb = Task.destination_adapter_class(runtime, registry, resolver, journal=journal)
+factory = Task(runtime, registry, initial_witness=actual_capture_witness,
+               journal=journal, push_backend=original_backend,
+               placement_contracts=immutable_finite_contracts, climb_adapter=climb)
+# 沿原NativeOptionExecutor attach。当前公开图像发布后 begin_acquisition；
+# 原selected judge只在current association/entry成立时提供outer/inner，
+# 其参数完全相同，仅public identity→current opaque identity改变。
+factory.prepare_public_climb(outer, inner)
+# bind_batch(原ExecutionBatch)只绑定；原executor选中factory(outer)才装配。
+```
+
+**不能直接套旧driver**：本factory明确不调用旧ground-only terminal wrapper；实际高台contact/dwell collector仍待driver消费，禁止因此self-sign任务成功。既有MOVABLE ground→.20路径仅完成源接线，尚无真CLIMB运行；.20后dynamic-box NAV原witness/type/surface/12N门、static goal_deck绑定、.20→.60原20cm能力拒绝均仍保留。旧19-source组件zero不借给此新版，不重开该closed scope。完整driver、共同可行整链、E成功及A—D任务原片仍未完成。
+
+新增15项仅源/MRO/选中constructor的显式SOFTWARE fixture，含public物体错配、参数/预算篡改、过期query/图像、重放、未安装owner/失败构造和旧ground终点禁接；fixture没有真实native/Actor/physics/API调用，**不作为15次实验或整链证明**。
+
 ## 已接手的实际实现
 
 - scene.json逐byte保留用户确认V4（SHA6394740e…），没有修改墙、箱体、C对接或0.60m平台追胜。research资产代码已移入本组可迁移目录，不再依赖本机research绝对路径。
