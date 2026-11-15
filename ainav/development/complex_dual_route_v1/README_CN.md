@@ -18,24 +18,24 @@
 
 三个有效选择机会需在真实决策轨迹中核：先对象、该对象短/最终目标、连接南/北通路（后续仍需另一重构/最终连接）；不能仅靠声明计数就通过G5。贪心与前瞻策略由Reach用同候选/同观测/同预算实现，**本包没有任何强制失败A或人工答案B**；双方都成功/失败也保全结果。
 
-## 已实现一个确切执行接点，不伪称整个host已连接
+## 第二阶段已实现：真实native构造入口、query seal和原owner终点
 
-当前`RegisteredSkillSessionFactory.prospective_push_contract`只按object查一个固定contract，不能同时消费同箱两个目标。新`multi_goal_factory.factory_class`默认off，显式true才基于**原源SHA2da2c075…**生成仅该方法查找key的有界派生：
+- `native_construction.compile_static_asset`显式default-off；Data新preflight冻权威/拿lease后传实际guard，才从原SDK PushBridge零步spec调用本场景、编译新MJB。复用SHA固定的原robot/engine signature核函数逐组件对比，原robot/actuator/engine必须同签名；新模型的offscreen≥960×540在任何task Runtime之前固定。MJB用exclusive no-replace发布到远端，SDK148成员原verify，不本地下载/不覆盖旧模型/不forward Actor。
+- `construct_cold_components`复用SHA固定原`registered_runtime.construct_cold_runtime`及真实原SDK auxiliary calibration/支持初始化，seed4301/原STOW_ARM/显式CUDA；返回同一Runtime/registry/原onboard observer/SupportedCapture。没有伪造failed-A owner。**capture尚未完成**，Data的真实200Hz循环必须执行它的原command/after_step并记账，`completed_initial_witness`才接受原ActualCaptureWitness；zero-step/假complete不能准入。
+- `build_common_execution_after_capture`在上述真实支持见证后接原RegisteredBindingResolver/opaque RGBD关联、原RegisteredPushAPI/BehaviorSessionFactory、同world common factory/NativeOptionExecutor与所有registered objects的接触检查；未选箱接触原>1N拒绝、selected-target native guards仍在。原factory NAV/owner转交与两阶段PUSH/stow不改。不是恢复旧五箱失败profile或任选其几十个开关；当前TRAIN/原发布模块完全不改。
+- `multi_goal_factory`修正**实际每query**多目标：构造时四个原PlacementContract按自身内容SHA冻结；从原resolver真的prepare出的每个option.goal-array seal建立一次同query/object/goal-seal→原contract映射，query重复安装/旧owner仍运行/错contract拒绝。原typed query/opaque-body/model/data/FIFO/support/hash检查可逆保留，并再核实际native `[1,3]` goal XY等于该contract原drive XY（原1e-6核验口径）。不能提前用nominal数组伪造未来native seal，也不把whole-global contracts来回热改。
+- `terminal_stop`不发明一个通用ground控制器：只收**真实original NAV succeeded session/witness**，复用源SHA固定`RegisteredHoldMachine`继续同一原arrival owner/guard，最多2s做私有任务验证。原两箱placement必须各有当前executor实际succeeded边界/原NN/placement/STOW_VERIFIED及matching receipt；最终仍当前测量满足原contract，不能用预期位置或过期成功代替。四脚≥12N/区域/height/足速/.03线速/.12角速/.03tilt连续.5s、丢sample重置，未过明确失败。不降低旧registry简单几何>3N门来冒本任务12N门。
 
-```
-(object_ref)  ->  (object_ref, SAME option.original_push_goal_sha256)
-```
+以上是可调用的真实构造/控制链**源码**，不是本组已构造了世界或完成native资格。仅纯source软件检查可在本机/46308跑；构造入口仍default-off，无Data实际preflight/Model/Runtime/原owner轨迹证据，不算A/B结果。原止动后下一控制接口仍须按新scope资格。
 
-原exact query/opaque-ref→registered body/model/world/FIFO/support与contract hash保护完整保留，变更可逐字逆还原。新caller需在只读query preparation阶段为每个真实prospective native goal array产生原seal，并建对应原PlacementContract；factory只消费真正选中的option/controller。两策略共享该extension，旧发布模块/当前TRAINworker不改；这不是绕original goal seal或允许改世界目标。
+## 下一尚欠：完整新host驱动和源/策略适配（不能跳过）
 
-## 仍必须完成的真实接线/qualification（不是新增经济/回执门）
+1. 在Data新程序实际编译/核机器人与scene/GL/记录、own-zero；实际startup/capture→见证→本factory这条链须真实运行/冷核，不把函数存在当原门通过。
+2. **实际query/semantic-coordinator driver尚未完成**：同钟原8字段→原visual one-to-one/公开alias→两个absolute任务意图，current source/live pose只在executor私域判entry/prepare，不能把private approach或body pose喂策略。每个prepared option/原goal seal与immutable contract先封后选，NAV前驱准备仍经原技能；不得从同名静态目标直接猜entry READY。
+3. Reach将同一public task/有限候选/nominal effects接其greedy/UCS core，两臂同地图/时点/费用与真实语义预算。本隔离witness9 NAV+2 PUSH，默认depth4不能假称已够；不得在线读PRIVATE存在性答案，也不得把多段连接/动画改名一原生技能。
+4. driver在最后真实NAV成功后接本FinalSupportedStop/两实际placement证据，配对owner/context/cold/原stream收束；共同至少一动态原门可行计划单列资格后才新A/B各一次，失败也保原片，不追胜。
 
-1. 新scene fresh Runtime的**真实原SDK startup/capture支持witness**要接现有同world NAV/PUSH factory，不能伪造零步owner、偷用旧failed-A前缀或把旧五箱runner的一堆profile开关当本包资格。
-2. 新caller接上每query两个目标的prospective goal/contract seal、本包factory、当前RGBD/对象association与动态entry原门；asset/库签名可消费不等actual Host installed。
-3. 远端ground终点须复用真实NAV protected-arrival owner并检查任务条件/四足≥12N与原停稳，不宣称已有ground通用HOLD；目前最终支持停稳adapter尚未连接。不能凭到区域或两placement回执就说完整任务成功。
-4. Data真实模型compile/robot-signature/SDK/foot friction/自身zero与动态资格，至少一个共同原门计划存在性须有原件；未合格前不派A/Bmain、不预约/旁路锁。本组当前physics0/A-B0/video0。
-
-这四项是当前具体代码/运行缺口，继续实现而不是等critic。已落地constructor/有限目标/原contract extension，不以README或fixture宣布T-COMPLEX-01完成。Reach可并行实现真正同域A/B，Data可据源码核新环境装配；不要求额外AINav消费回执。
+Data已读T-COMPLEX-01任务并准备资源，不等于已接收此版新源码/已排队。当前新scene actual Model compile/动态资格/对比main/原片仍0；不宣称可直接派发/任务完成。
 
 ## 原片/技术范围（未来新freeze）
 

@@ -69,7 +69,7 @@ def construct_into_native_spec(sim,*,scene=None,main_steps):
     ground=spec.geom('ground');old=spec.body('push_box')
     need(ground.name=='ground'and old.name=='push_box','Original native SDK spec identity')
     old.pos=[-8.,-8.,.1]  # Construction-only out-of-task original object.
-    x0,x1,y0,y1=s['floor']['native_ground_bounds_xy_m'];h=s['floor']['thickness_m'];ground.pos=[(x0+x1)/2,(y0+y1)/2,-h/2];ground.size=[(x1-x0)/2,(y1-y0)/2,h/2];ground.friction=[.7,0.,0.];ground.group=1
+    x0,x1,y0,y1=s['floor']['native_ground_bounds_xy_m'];h=s['floor']['thickness_m'];ground.type=mujoco.mjtGeom.mjGEOM_BOX;ground.pos=[(x0+x1)/2,(y0+y1)/2,-h/2];ground.size=[(x1-x0)/2,(y1-y0)/2,h/2];ground.friction=[.7,0.,0.];ground.group=1
     foot_ids={int(native_model.body(n+'_foot').id)for n in('FR','FL','RR','RL')}
     need(len(foot_ids)==4,'Four original native foot bodies, no naming heuristic')
     foot_names={native_model.geom(i).name for i in range(native_model.ngeom)if int(native_model.geom_bodyid[i])in foot_ids}
