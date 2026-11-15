@@ -2,6 +2,12 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 16:08：补齐冻结heldout数据装配入口，仍未提前评价CAL/再次fit
+
+- 原一次TRAIN-only模型/快照不变。Data已独立消费670d4eb5…并派原CAL07；工作目录main/cold metadata已出现，但正式完整closed release尚未由本组消费，CAL3/VAL/heldout成绩未完成，不能把在途/单条PASS当完整评价。
+- 新`operations/build_closed_frozen_heldout_dataset.py`＋`frozen_heldout_dataset.py`只接原TRAIN release精确SHA和完整阶段的source-bound extraction。保持原TRAIN、protocol/model bytes与所有unreached/censor/失败/成本分母；CAL缺07—09任何一条、FULL缺07—12任何一条/重复/UNKNOWN/角色漂移均拒绝，不fit/不采集/不改Data H。12新装配＋32原learner/stage共44软件检查通过，不是新增数据或真实训练。用法`operations/G3_CLOSED_HELDOUT_ASSEMBLY_CN.md`；真实原件完整后装配→原calibrate-frozen，不再生成model。
+- T优先不降。AINav15:42 helper目前造base ComplexIntentPlanner/3方法模块；Data若要消费本组完整catalogue门，应传`complex_source_adapter.build_source_bound_planner`的4模块factory给原driver，不把旧helper冒本方法新gate已被原生消费。原camera故障scope仍closed，新source/自身zero/lease/完整A-B/原片未验收。
+
 ### 2026-11-15 15:48：T三箱v2已接source-bound规划factory与原Coordinator，完整公共catalogue门通过；仍无原生A/B
 
 - **本轮真实实现，不是再刷旧审计：** AINav已新增三箱v2 PUBLIC_TASK（99d660de…）与6个同向有限placements（fd295678…）、原scene driver/candidate/goal-seal/终点接口。Reach新增`complex_source_adapter.py:build_source_bound_planner`，用完整SHA固定公共文件，逐fresh原IntentBatch核整个有序NAV/PUSH域/唯一终点ref，拒missing/extra/duplicate/reorder/private ExecutionBatch/旧观察；返回原Selection，不伪造native option或seal。Data可直接传入原ComplexSceneDriver，无需代写方法。
