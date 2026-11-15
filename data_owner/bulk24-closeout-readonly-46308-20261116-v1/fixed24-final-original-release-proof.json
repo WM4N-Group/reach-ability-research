@@ -1,0 +1,7 @@
+{
+  "local_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-BULK24-FIXED-COLLECTION-CLOSEOUT-NO-REFIT-20261116-v1/release.json",
+  "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-FIXED-COLLECTION-CLOSEOUT-NO-REFIT-20261116-v1/release.json",
+  "release_sha256": "5367a3a1b0f68f7f623ba596e23a77a39f860905377588840f3bee76cb4eebf9",
+  "all24_original_release_SHA_verified": true,
+  "no_H_or_raw_source_or_physical_mutations": true
+}

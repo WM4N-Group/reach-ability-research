@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-16T03:39:13.450432+08:00",
+  "H_sha256": "efd423623ef97b788ce8f1c9d920c2eb5b3d06d5ed99a6b9121b496200857a12",
+  "all24_H_closed_zero24_main24": true,
+  "global_stop": false,
+  "Data_runtime_worker_PIDs": [],
+  "canonical_GPU0_GPU1_locks": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+      "device": 51,
+      "inode": 3428729629,
+      "free_snapshot_not_new_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+      "device": 51,
+      "inode": 3428729630,
+      "free_snapshot_not_new_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu1.lock",
+      "device": 51,
+      "inode": 3428459217,
+      "free_snapshot_not_new_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu1.lock",
+      "device": 51,
+      "inode": 3428459218,
+      "free_snapshot_not_new_lease": true
+    }
+  ],
+  "owned_bytes": 26125737472,
+  "owned_limit_bytes": 42949672960,
+  "provider_quota_unknown": true,
+  "MemAvailable_bytes": 122351980544,
+  "shared_disk_available_bytes": 429246752747520,
+  "GPU_inventory": "0, GPU-297c1146-bcec-a8ee-8437-d9603392a2e1, 24080\n1, GPU-6d66aa68-9a3f-fdcf-89b7-f98d4106fa39, 24080\n",
+  "GPU_compute_app_rows": "",
+  "J_remote_root_exists": true,
+  "old_asset_and_capture_components_still_closed_no_repeat": true,
+  "no_H_native_lock_inode_process_or_scope_mutation": true,
+  "local_H_mirror_matches_remote": true
+}

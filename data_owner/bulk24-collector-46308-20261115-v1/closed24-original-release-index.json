@@ -1,0 +1,65 @@
+{
+  "releases": [
+    {
+      "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-24-ORIGINAL-ACTUAL-20261115-v1/release.json",
+      "release_sha256": "91d3a7b60364aa675e63aeacc0a12c6f01d404eb591dcbbbcbb8f8c50a9afd76",
+      "summary": {
+        "source_result_passed": false,
+        "source_error": "push_start_pose_timeout:settle:{'tilt': 0.007493224385973593, 'speed': 5.06553481246634e-06, 'foot_error': 0.015480427273717106, 'supported': [True, True, True, True], 'base_error': 0.017558779885174767, 'com': [-0.08370221495429826, -2.1499419346933704, 0.3145452105475893], 'com_goal': [-0.08486347159399073, -2.149977297984007, 0.31578353666508174], 'capture': [-0.08370262285073532, -2.1499417236460414]}",
+        "source_result_sha256": "ea10d91405506fe7978c1ea94235ade8a62465d243f1667b4ddfa7973605a262",
+        "actual_task_sim_s": 99.14499999998232,
+        "actual_commands": 19829,
+        "RGBD_frames": 992,
+        "review_frames": 992,
+        "direct_raw_frames": 992,
+        "direct_raw_resolution_px": [
+          192,
+          128
+        ],
+        "HD": false,
+        "exact3_semantic_requests_succeeded": false,
+        "actual_native_terminal_receipts": [
+          {
+            "event": "ainav_native_receipt",
+            "receipt": {
+              "evidence_ref": "commands:physical_tick=10825",
+              "issued_command_sha256": "7e95204a645fca814cc8f38832ddeb810883e9e86eb1236117b18b78195441fe",
+              "option_sha256": "6b144c444a3b0c93d45b20563fb67ecdbb03893cbcb284c4afb8866b68fb2302",
+              "status": "succeeded",
+              "time_s": 54.12500000000924
+            },
+            "task_success_inferred": false
+          }
+        ],
+        "first_CLIMB_query_present": false,
+        "missing_CLIMB_query_features": null,
+        "missing_CLIMB_outcome_label": null,
+        "nine_stream_checks": {
+          "episode_storage_complete": true,
+          "continuous_200Hz_commands": true,
+          "same_program_actual_zero_and_main_model": true,
+          "original_delay_FIFO_exact": true,
+          "PD_raw_torque_reproduced": true,
+          "hard_clip_reproduced": true,
+          "visual_actions_previous_matches_actual_issue": true,
+          "visual_and_review_grid_complete": true,
+          "no_teardown_errors": true
+        },
+        "public_query_count": 2,
+        "first_CLIMB_boundary": {
+          "status": "NO_CLIMB_JUDGMENT_RECORDED",
+          "first_judgment_status": null,
+          "first_PREPARE_time_s": null,
+          "actual_physical_observation_sha256": null,
+          "judgment_ref": null
+        },
+        "scope_including_own_zero_aux_sim_s": 112.15499999998208,
+        "scope_ledger_wall_s": 757.8594509770628,
+        "scope_output_highwater_bytes": 149889290,
+        "all_usage_known": true,
+        "resource_censored": false,
+        "whole_mission_or_T_complex_success": false
+      }
+    }
+  ]
+}

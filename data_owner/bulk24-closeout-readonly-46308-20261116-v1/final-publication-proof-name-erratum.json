@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-16T03:46:06.140533+08:00",
+  "error": "Final Data-only publication completed all4 CAS updates but proof filename collided with earlier partial proof",
+  "old_partial_proof_preserved": true,
+  "final_proof_rebuilt_from_unique_backups_and_current_bytes": true,
+  "all_shared_peer_bytes_verified_unchanged": true,
+  "no_republication_or_native_or_export_retries": true
+}

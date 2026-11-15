@@ -1,0 +1,23 @@
+{
+  "purpose": "FIXED_PREREGISTERED_HIGH_LEVEL_SUCCESSOR_CRITIC_TRAIN_COLLECTION_ORIGINALS",
+  "fit_allowed_by_closeout": false,
+  "current_critic_refit_allowed": false,
+  "whole_package_model_input_allowed": false,
+  "features_only_original_qualified_first_CLIMB_PREPARE_48slots": true,
+  "private_state_ID_future_or_unreached_outcome_not_features": true,
+  "raw_onboard_not_third_view_HD": true,
+  "raw_third_view_resolution_px": [
+    192,
+    128
+  ],
+  "four_geometries_eight_contexts_same_one_TRAIN_ancestor": true,
+  "independent_TEST_groups": 0,
+  "V4_five_arm_or_whole_mission_success_not_claimed": true,
+  "no_VJEPA_WM_or_audit_repurpose": true,
+  "old_TRAIN6_frozen_model_CAL_VAL_not_changed": true,
+  "no_new_labels_or_features_derived_by_this_closeout": true,
+  "no_automatic_retry_or_new_batch_registration": true,
+  "old_driver_metadata_CAS_race_and_all_prior_failures_preserved": true,
+  "native_scope_ledgers_not_end_to_end_or_monetary_total": true,
+  "scope_highwater_sum_not_current_disk_usage": true
+}

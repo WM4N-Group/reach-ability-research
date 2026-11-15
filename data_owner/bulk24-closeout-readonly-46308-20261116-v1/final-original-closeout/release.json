@@ -1,0 +1,44 @@
+{
+  "schema": "Data-fixed24-original-collection-final-closeout-no-refit-v1",
+  "at": "2026-11-16T03:42:58.912806+08:00",
+  "source_H_sha256": "efd423623ef97b788ce8f1c9d920c2eb5b3d06d5ed99a6b9121b496200857a12",
+  "physical_and_H_all24_closed": true,
+  "formal_originals_all24_released": true,
+  "not_new_physical_scope_or_dispatch": true,
+  "summary": {
+    "fixed_registered_attempts": 24,
+    "zero_dispatches": 24,
+    "main_dispatches": 24,
+    "closed": 24,
+    "conditional_original_chain_PASS": 10,
+    "closed_nonPASS": 14,
+    "failure_class_counts": {
+      "ORIGINAL_FF_GATE": 6,
+      "ORIGINAL_PREPARATION_SETTLE_TIMEOUT": 6,
+      "ORIGINAL_RUNTIME_BASE_COLLISION_NO_SYNTHETIC_TERMINAL": 2
+    },
+    "closed_resource_censored": 0,
+    "formal_original_releases_count": 24,
+    "formal_original_public_queries": 84,
+    "CLIMB_first_PREPARE_query_present": 12,
+    "CLIMB_native_admitted": 12,
+    "closed_actual_main_commands": 481685,
+    "closed_actual_onboard_frames": 24097,
+    "closed_actual_review_frames": 24097,
+    "closed_actual_raw_third_view_frames": 24097,
+    "closed_ledger_usage_all_known": true,
+    "closed_only_scope_sim_s": 2720.664999999544,
+    "closed_only_scope_wall_s": 19005.873282551067,
+    "closed_scope_highwater_sum_not_current_disk_usage": 3704710741
+  },
+  "fit_allowed": false,
+  "current_critic_refit_allowed": false,
+  "VJEPA_WM_purpose_granted": false,
+  "no_method_gain_or_independent_TEST_claim": true,
+  "files": {
+    "fixed24-final-scalar-snapshot.json": "58d2f8ba8775b2f3220997ffcaaea08787ddf3a997bd83d89de2acac409e4c70",
+    "fixed24-final-authority-resource-proof.json": "92e5125393e000113bbddd834f4c65c668122136ccd95bb827809edebf88a4bb",
+    "original24-release-index.json": "28a2c2aa054bb187b1e8919dfb65556384adaa589fbcc763bfa224b87d33a58c",
+    "purpose-and-no-refit-boundary.json": "dd5fd23c244b5418f65d4c213b0893a9db1147eab5a6a189f6d93d574cf1e637"
+  }
+}
