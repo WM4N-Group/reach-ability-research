@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-15T23:08:31.473585+08:00",
+  "at": "2026-11-15T23:12:18.163401+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
-    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "acf6a1547d958bb7f4302a8ef97d942a3ebc75493189589ddf9dc81cb9139bbc",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "6e5cc1c52e8f80dd5ce84a742d2cffbe3cb737a131d365e3a192b54f06e4a0d4",
     "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "c18e3496b69ef819d8cc34d193d7e4fbf81d3a218cd61efd816e1b845d8263d3"
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",

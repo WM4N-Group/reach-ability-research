@@ -189,7 +189,8 @@ class VLMWMIntentPlanner:
              dict(actual.parameters)==dict(intent.parameters) and receipt.option_sha256==actual.sha256 and
              receipt.status in ('succeeded','failed','hard_stop','budget_expired') and bool(binding_ref),
              'Exact pending semantic intent and actual same-skill/parameters native terminal')
-        self.feedback.append(dict(kind='completion' if receipt.status=='succeeded' else 'failure',
+        self.feedback.append(dict(kind='completion' if receipt.status=='succeeded' else
+                                  'revaluation' if receipt.status=='budget_expired' else 'failure',
             description=intent.skill+' actual '+receipt.status,evidence_ref=receipt.evidence_ref))
         self.pending=None
 

@@ -177,6 +177,9 @@ class SourceSeamTests(unittest.TestCase):
         actual,receipt=self.native(b.options[1]);p.observe_intent(b.options[1],actual,receipt,'FIXTURE_BINDING')
         p.select(self.batch(.1));self.assertEqual(len(backend.requests),2)
         self.assertEqual(backend.requests[1]['payload']['actual_feedback'][0]['kind'],'completion')
+        b2=self.batch(.1);actual,receipt=self.native(b2.options[1],status='budget_expired')
+        p.observe_intent(p.pending,actual,receipt,'FIXTURE_EXPIRED_INTERVAL')
+        p.select(self.batch(.2));self.assertEqual(backend.requests[-1]['payload']['actual_feedback'][0]['kind'],'revaluation')
     def test_B_uses_same_shared_selector_not_extra_WM_or_fake_API0(self):
         backend=FakeBackend();wm=FakeWM();self.current=b=self.batch()
         p=VLMWMIntentPlanner(backend,wm,optimizer_enabled=True,path_cost=self.cost,journal=self.journal,software_fixture=True);s=p.select(b)
