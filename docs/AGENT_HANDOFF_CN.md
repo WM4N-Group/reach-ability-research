@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 12:07：full-2四格终态完整但仅3个CLIMB边界；right原PUSH卸载中止/closed，接full-1真实11:52 main
+
+- 正式9be124b3…完整包已核：full-2 leftPASS119.000sim，right64.170sim原reconciled_reference_FF_intersection_empty/PUSH unload异常，03:24 CAS failure closed/不重试；数据cold全过不是task PASS，只有NAV started/succeeded、PUSH started3回执，无终态failed receipt不补造。原reader核first-PREPARE=None，未选CLIMB，不取早query/零值/旧right填第四格。
+- full-2请求链1/2成功、首次PREPARE覆盖1/2；四格终态4/4、可测first-PREPARE3/4。right成功cost/READY时长/特征行None，失败elapsed64.170单列；scope zero+aux总77.180sim/450.701685ledger wall，full2合209.190sim/1287.339338ledger wall/290578607bytes，旧未知/v1失败账另保。
+- 科学范围诊断：当前critic只条件于已达CLIMB PREPARE，right是模型前的abort，不能编CLIMB负标签或从全任务分母删除；post-PUSH选择也不能回溯解决。保持现模型profile，后续若研究更早prefix可靠性须新时点/动作/horizon协议，不偷用事后输入、不放宽FF门、不把条件成功率冒全链。
+- 当前full-1新程序3b5e9d4d… own-zero/cold过、11:52:50才派唯一main，非03:36起整夜运行；lane−1.8/C质量1kg/μ.3多因素显式，非修full2失败/热改旧helper。尚无本组已消费终态，接真实结果/合法边界；即使PASS不自动三scene训练。下一合格新用途whole-scene数据/功效/停止→G3—G6，独立备选不刷fixture/新schema，真实fit0。
+- 入口`/home/yuanyue/reach-ability-research/operations/G2_FULL2_COMPLETE_AND_MODEL_POPULATION_20261115_CN.md`与operations/G2_FULL2_COMPLETE_POPULATION_20261115.json；旧dirty/closed/失败/未知尾费、12N/4s/identity/immutable/guard/QP/FIFO/stop/TEST0/主要贡献未证不变。本轮无新Reach世界/训练/旧端连接/跨chat派发。
+
 ### 2026-11-15 03:17：full-2 left真实三请求PASS/closed，已测同left跨layout公开差；四格已消费3格，right终态未消费
 
 - full-2 left6ee69a5f…02:52:45 CAS closed/九流cold过，主episode119.000sim，首次PREPARE95.605→READY108.980=13.375，至请求成功终点23.395sim；scope132.010sim含zero/aux、836.637653ledger wall/highwater174466192bytes。非far-bank全任务/策略收益，不能拿与full-4 left121.085差2.085s报优化。

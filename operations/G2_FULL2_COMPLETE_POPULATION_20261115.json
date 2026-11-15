@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-15T12:00:10.829606+08:00",
+  "full2_complete_release_sha256": "9be124b38bb2e29de554f3d4afac28c08f5eef711c3decfb14ee61902778cbff",
+  "planned_full2_attempts": 2,
+  "full2_requested_three_intent_successes": 1,
+  "full2_native_execution_aborts": 1,
+  "full2_CLIMB_PREPARE_population": {
+    "reached": 1,
+    "not_reached": 1,
+    "coverage_fraction": 0.5
+  },
+  "four_cell_grid": {
+    "planned": 4,
+    "terminal_outcomes_available": 4,
+    "first_PREPARE_measurable": 3,
+    "upstream_aborts": 1
+  },
+  "right": {
+    "scope_id": "data-46308-G2-full2-right-PUSH-CLIMB-20261115-v1",
+    "program_sha256": "b0c2d41b07a3bf0d36d488970c17f17814fb205c1cc0b6e6aff01be9a9949f0a",
+    "literal_status": "FAILED_NO_RETRY",
+    "error_class": "RuntimeError",
+    "error": "reconciled_reference_FF_intersection_empty",
+    "failure_stage": "PUSH_UNLOAD_ORIGINAL_RECONCILED_REFERENCE_FF_GUARD",
+    "closed_at": "2026-11-15T03:24:00.654317+08:00",
+    "main_world_elapsed_sim_s": 64.17000000001413,
+    "native_semantic_requests_selected": 2,
+    "bound_native_options": 2,
+    "literal_receipts": 3,
+    "first_CLIMB_PREPARE": null,
+    "current_READY_duration_s": null,
+    "successful_full_completion_s": null,
+    "physical_feature_row_for_CLIMB_predictor": null,
+    "missing_native_terminal_receipt_not_synthesized": true,
+    "source_quality_pass_not_task_success": true,
+    "zero_main_aux_total_sim_s": 77.18000000001389,
+    "ledger_wall_s": 450.7016848628409,
+    "scope_highwater_bytes": 116112415,
+    "usage_known": true
+  },
+  "full2_total_zero_main_aux_sim_s": 209.18999999997794,
+  "full2_total_ledger_wall_s": 1287.3393380399793,
+  "full2_total_scope_highwater_bytes": 290578607,
+  "current_full1": {
+    "scope_id": "data-46308-G2-full1-left-PUSH-CLIMB-20261115-v1",
+    "zero_cold_passed": true,
+    "main_dispatch_at": "2026-11-15T11:52:50.721048+08:00",
+    "program_sha256": "3b5e9d4d4366479394cf825419f47f6c1875c32519fca26c40762ffa4e82ee8f",
+    "main_terminal_result_available": false,
+    "original_registered_C_mass_kg": 1.0,
+    "original_registered_C_bottom_mu": 0.3,
+    "multifactor_not_geometry_only": true
+  },
+  "conditioning_warning": "Current critic is defined only AFTER reaching CLIMB PREPARE; this upstream failure has no predictor input and must remain in overall attempt denominator, not a fake negative row or dropped attempt",
+  "next_study_not_automatic_training_or_retries": true,
+  "training_rows": 0,
+  "model_fit": false,
+  "old_host_connections": 0,
+  "source_pins": {
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_right/main-result.json": "fab63e7923cbe83b4afb151feef23740074a49b3c584a85f472f79432f6b58a6",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_right/actual-main-cold-audit.json": "6e140d80960e976a7ddb20bdf7ee1f69ac551eb42346843d229fd6b35732573d",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_right/CAS-close.json": "2d75cb63505ab7601b0fe58c79a16d4179d9b1128b014ea0e7275c4b4f68b811",
+    "/home/yuanyue/main/work/data-team/manifests/g2-full2-46308-20261115-v1/g2_full2_native_NAV_prefix_right/final-ledger.json": "43a3dcd8aa819c8f6165a74f574afd191da26e7635cc9c6070564f9e84ee8d13"
+  }
+}
