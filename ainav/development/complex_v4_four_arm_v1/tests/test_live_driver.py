@@ -41,15 +41,18 @@ class Tests(unittest.TestCase):
         self.assertIsNone(driver.driver_class())
         with self.assertRaises(ValueError):driver.driver_class(enabled=1)
         self.assertFalse(blocked)
-    def test_five_helpers_borrowed_cannot_overwrite_factor_or_private_capture_binding(self):
+    def test_four_helpers_borrowed_preserve_factor_private_capture_and_original_guard_bytecode(self):
         cls=driver.driver_class(source_root=SOURCE,enabled=True)
         self.assertEqual(cls.__bases__,(object,));self.assertTrue(cls.task_terminal_source_integrated);self.assertFalse(cls.full_task_native_ready)
         methods=driver._original_methods();self.assertEqual(set(methods),set(driver.BASE_METHOD_PINS))
         for name,fn in methods.items():
-            if name not in ('_install_common_stow','capture_grid'):self.assertIs(getattr(cls,name),fn)
+            if name not in ('_install_common_stow','capture_grid','_native_guards'):self.assertIs(getattr(cls,name),fn)
         self.assertFalse(hasattr(cls,'_install_common_stow'))
         self.assertIsNot(cls.capture_grid,methods['capture_grid'])
         self.assertEqual(cls.capture_grid.__module__,'live_driver')
+        self.assertIs(cls._native_guards.original_guard_code,methods['_native_guards'].__code__)
+        self.assertFalse(cls._native_guards.cross_tick_cache)
+        self.assertEqual(cls._native_guards.current_full_path_passes,2)
         self.assertEqual(cls.observe_public.__module__,'live_driver')
         self.assertEqual(cls.judge_intent.__module__,'live_driver')
     def test_owner_explicit_false_or_exception_refuses_before_native_import(self):

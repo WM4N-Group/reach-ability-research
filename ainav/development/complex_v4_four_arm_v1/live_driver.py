@@ -21,7 +21,10 @@ from factor_scope import install_legacy_common, factors
 from climb_nav_source import read_actual_climb_nav_source
 
 BASE_DIR = Path(__file__).resolve().parent.parent / 'complex_dual_route_v1'
-# Only these unchanged methods are consumed. The inherited local tree contains
+# These original methods are reviewed; four are borrowed verbatim. The original
+# guard bytecode has a private per-call full-read adapter; capture has a privacy
+# projection and the old installer is replaced by the shared factor policy.
+# The inherited local tree contains
 # unrelated postponed prefix edits; those constructors/catalogues are NOT used.
 BASE_METHOD_PINS = {
     '_install_common_stow': 'e658b891f50ce0b30a4500f415942159190903e7297a690336d1892323ef236a',
@@ -173,6 +176,10 @@ def driver_class(*, source_root=None, enabled=False):
                     actual_time_s=float(self.r.sim.data.time))
                 self.writer.append_visual(packet, control_tick=self.tick // 4, private_catalog=catalog)
                 self.last_capture_tick = self.tick
+
+        def close_metadata_workers(self):
+            # Own pure-read threads only; Data still owns native/writer/lease teardown.
+            type(self)._native_guards.engine.close()
 
         def _contact_guard(self):
             if self.execution is not None:
@@ -390,11 +397,16 @@ def driver_class(*, source_root=None, enabled=False):
             finally:
                 self.tick = self.loop.physical_tick
 
+    from parallel_alias_guard import make_parallel_guard
+    V4LiveDriver._native_guards = make_parallel_guard(methods['_native_guards'], enabled=True)
+
     for name, function in methods.items():
-        if name not in ('_install_common_stow', 'capture_grid'):  # Preserve explicit factor/privacy adapters.
+        if name not in ('_install_common_stow', 'capture_grid', '_native_guards'):  # Preserve factor/privacy/current-read adapters.
             setattr(V4LiveDriver, name, function)
     V4LiveDriver.source_receipt = dict(original_helpers_reviewed_method_sha256=BASE_METHOD_PINS,
-        original_helpers_borrowed=tuple(n for n in BASE_METHOD_PINS if n not in ('_install_common_stow', 'capture_grid')),
+        original_helpers_borrowed=tuple(n for n in BASE_METHOD_PINS if n not in ('_install_common_stow', 'capture_grid', '_native_guards')),
+        original_guard_bytecode_current_modules_callbacks_world_checks_retained=True,
+        current_parallel8_full_path_reads_pre_post_no_cross_tick_cache=True,
         registered_private_catalog_explicit_no_model_stream_boundary=True,
         legacy_common_stow_separate_from_new_successor_treatment=True,
         obsolete_base_constructor_catalogue_judge_and_ground_terminal_not_inherited=True,
