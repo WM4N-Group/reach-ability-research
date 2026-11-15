@@ -2,6 +2,15 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 15:48：T三箱v2已接source-bound规划factory与原Coordinator，完整公共catalogue门通过；仍无原生A/B
+
+- **本轮真实实现，不是再刷旧审计：** AINav已新增三箱v2 PUBLIC_TASK（99d660de…）与6个同向有限placements（fd295678…）、原scene driver/candidate/goal-seal/终点接口。Reach新增`complex_source_adapter.py:build_source_bound_planner`，用完整SHA固定公共文件，逐fresh原IntentBatch核整个有序NAV/PUSH域/唯一终点ref，拒missing/extra/duplicate/reorder/private ExecutionBatch/旧观察；返回原Selection，不伪造native option或seal。Data可直接传入原ComplexSceneDriver，无需代写方法。
+- **同域与真实计数保持：** 两方共同深4 bundle/256transition/.25s、原catalogue tie、相同公开模型与原门；本地原nav_declarations和原IntentExecutionCoordinator的PREPARE→fresh READY→interaction接缝已软件检查，准备NAV不算新选择/不推进箱预测，最终nominal goal/NAV receipt仍complete=false，须原placements/ground arrival/四足12N停稳证明。公共v2两策略可出现3个非强制名义重构选择；**未证真实3选择/动态可行/A原生败B原生胜**，标准搜索不是新算法贡献。
+- **软件证据与部署：** 本地/46308各13定向单测过；本地87原类＋source NAV helper断言、46308原类/Coordinator子集53断言过，均显式SOFTWARE观测/receipt，无world/Actor/图像读取/训练样本，不能累计成140科学样本。方法实现commit e04c2af1cec7cea5d3d16a4b44eab1b90661d307已本地/GitHub/46308同版；方法协议SHA c0ecb872…与remote原件5d691be6…固定，release见下述入口。新bridge不加载critic/私有路线。
+- **当前精确原生阻塞，不重开closed：** 已核Data组件负结果release c9eaabe4…：v1新MJB/两箱registry/原robot-engine签名通过，但缺原wm_onboard_rgbd，在CAMERA_ABI fail closed；zero1/main0已closed，11.660271547wall，ledger sim None/usage_known=false原样保留。不是T方法失败、不是native Actor/GL资格。AINav修精确camera ABI/新source后Data新程序自己的zero/lease/直接live；本组未声明Data已消费v2包或排队，A/B main0/视频0。
+- **G3不回退重训：** 首次真实TRAIN-only拟合15:04已完成一次且冻结，fit3371ac20…/model a8b1f165…保持；actual gate/fit release `/mnt/yuanyue/reach-runs/G3-TRAIN-only-20261115-v1/TRAIN_GATE_AND_FIT_RELEASE.json` SHA670d4eb5…。原采集协议false不回改，Data旧H gate=false/fitNone不是重新fit理由；CAL实际原件到再同model诊断，VAL不调参/未在此放行。T资格先成仍首资源窗口优先，不等critic/100条。
+- **下一／可独立推进：** Data接本source-bound factory＋AINav修复版完整程序→资格/首对/1×母版与同钟并排；动态UNKNOWN/失败全保，不以旧warehouse/短链/模型图顶替。入口 `/home/yuanyue/reach-ability-research/operations/T_COMPLEX_01_SOURCE_V2_OWNER_ENTRY_CN.md` 与`T_COMPLEX_01_SOURCE_V2_METHOD_RELEASE_20261115.json`，本轮ignored evidence/T-COMPLEX-source-v2-original-intent-adapter-v1。全部旧dirty/closed/12N/4s/identity/immutable/support/guard/QP/FIFO/stop保持，无旧端连接/他组代码authority修改/Goal/子agent/新聊天/自动化。
+
 ### 2026-11-15 15:18：首个真实高层critic已在46308完成TRAIN-only拟合；6新行4PASS/2原门失败源资格齐，T实际公共source与原语义接点已实现
 
 - G2 TRAIN6完整原件已到，01/02 original与05/06 minus成功；03 plus-left原stop_deadline、04 plus-right原forbidden_contact:middle。两失败均决策后CLIMB原门，不是资源censor/上游缺输入；核原frozen SDK Machine.after_step:219、course_tools._contact_guard:320及structured active-machine/stack/start/issued clock见证，保缺literal failed回执，不造terminal。6真实48槽均age0，2prefix/2公共proprio状态/1TRAIN scene、4成功2负，4个成功成本+6个READY监督。六scope763.970sim/4642.471546ledger wall/独立highwater和1013819924bytes，旧账另保。

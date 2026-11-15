@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 最新T实现进展（2026-11-15 15:48）
+
+已接AINav三箱v2公共source与原IntentExecutionCoordinator接缝；新增完整SHA/全catalogue门的source-bound factory，Data可直接传入原scene driver。两端各13定向单测，本地87原类/helper与远端53原类子集断言是软件而非真实A/B。v2公共图3个非强制名义重构选择不等真实动态资格；原生A/B和原片仍0。Data v1组件zero因原camera ABI缺失closed，须源修复新程序own-zero，不重开。首次TRAIN-only拟合保持冻结、不重训。入口operations/T_COMPLEX_01_SOURCE_V2_OWNER_ENTRY_CN.md与T_COMPLEX_01_SOURCE_V2_METHOD_RELEASE_20261115.json。
+
 ## 最新真实进展（2026-11-15 15:04）
 
 未来新用途TRAIN6完整闭合4成功/2原门失败，六行48槽/源标签门通过；46308已完成首次真正TRAIN-only高层logistic/ridge拟合一次，6行/1scene/2prefix，非fixture或Actor/WM训练。数据与权重只远端，模型3371ac20…文件/a8b1f165…内容冻结；常量/均值基线已记，CAL/VAL还未评价，score未校准/不部署。见operations/G3_FIRST_REAL_TRAIN_FIT_20261115.json；Data按原协议实际gate/fit pins接续heldout，T复杂首对优先资源窗口不改。
