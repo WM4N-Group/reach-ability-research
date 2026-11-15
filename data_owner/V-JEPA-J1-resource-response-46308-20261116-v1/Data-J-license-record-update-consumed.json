@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-16T01:29:18.020987+08:00",
+  "current_plan_sha256": "0e9f872b16bcb376bea4bf86c4821ced26931baf90f96a1f58256a93d450b50b",
+  "plan_delta_from_frozen_component": "Only J upstream weight license/revision/SHA verification status changed; native scope remains frozen original bdfc613c plan/program",
+  "J_primary_decision_document_sha256": "b087a2b60fa27e4a99073ff58a7cff12b6dcc912af95b61bcbe128ddcde8b0a8",
+  "J_group_reports_specific_weight_license_immutable_revision_and_upstream_SHA_verified": true,
+  "actual_checkpoint_download_local_byte_SHA_encoder_forward_fit_not_claimed": true,
+  "original_conditional_window_remains_usable_after_J_records_its_verification": true,
+  "no_additional_Data_signature_or_user_secret_needed": true,
+  "original_02_00_deadline_fresh_resource_priority_caps_and_GPU0_lease_unchanged": true,
+  "no_new_Data_model_download_or_native_job": true
+}

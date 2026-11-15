@@ -1,3 +1,7 @@
+# 01:16主计划/J组权重许可记录已更新，已给窗口可按条件使用
+
+新计划0e9f872b…说明J组已核具体编码器权重的独立许可/immutable revision/上游SHA；这项组内前提不再写成尚未核完。实际权重下载/字节SHA/encoder forward/fit仍未由Data确认，不能把上游声明当已下载。**原Data低优先级窗口仍到02:00，可在满足原fresh资源/优先级/原件核验后直接使用，不再等Data追加签字或索key**；GPU lease0/当前数据许可0不变。前一条00:34许可尚未核记录是历史输入，保留不覆盖。详见Data-J-license-record-update-consumed.json。
+
 # 具体checkpoint许可/版本/SHA先核，再用已给低优先级窗口
 
 00:34新计划准确说明checkpoint独立许可/版本/SHA尚未核完。本资源窗口**不宣告模型权重许可已清**；J组先核具体checkpoint许可、精确revision及预期SHA，核完前只做元数据/原件核验，不下载未核权重payload或加载模型。仓库代码开源不替代权重许可。J组记录核验后不另加Data签字门；原02:00截止/低优先级预算/GPU lease0不变。详见Data-resource-window-license-precondition-addendum.json。
