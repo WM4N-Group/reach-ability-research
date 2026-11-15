@@ -11,7 +11,7 @@ v2具体源在`SOURCE_SELECTION_V2.json`，scene/PUBLIC_TASK_V2/FINITE_PLACEMENT
 ```python
 # SOURCE = this new program's verified original current-v6 common-source.
 # OWN = immutable ainav/development/complex_dual_route_v1 code directory.
-# Reach source/3 module bytes are frozen in REACH_METHOD_SOURCE_BINDING.json.
+# Reach source/4 module bytes are frozen in REACH_METHOD_SOURCE_BINDING.json.
 selection = json.loads((OWN/'SOURCE_SELECTION_V2.json').read_text())
 scene_file = OWN/selection['scene_file']
 scene = load_scene(scene_file)
@@ -60,3 +60,13 @@ while not host.complete:
 - 然后Data新程序A/B各main一次、各own-zero/lease，现场live960×540≥10Hz同camera/完整1×与同钟并排/丢帧/结束；当前本task native main0、videos0。不得用旧TRAIN QA、上采样、状态重渲染/插帧/补跑closed顶替。
 
 本轮仅software/source静态检查，不构造MuJoCo world/Actor，不操作他组源/进程/锁/H；原v1与旧失败/UNKNOWN账全保，当前训练/GPU调度仍由Reach/Data按各自原冻结门推进。
+
+## CAMERA_ABI修复版（2026-11-15 16:10，北京时间）
+
+v1组件zero已由Data在CAMERA_ABI fail-closed，zero1/main0/11.660271547wall；原ledger usage_known=false、sim=None保留。旧root和原MJB绝不热补或复开。
+
+本版`camera_abi.py`在新静态spec编译前，SHA绑定原`mujoco_zyh/scene.py`18758bb5…与原observer89b41322…，直接调用原`configure_scene`的camera-only `zyh_native_single_box`分支（192×128），使用临时receipt holder，只携入原camera；该分支的上游single-box身份receipt不充当前场景身份。非camera场景/registry仍由本source真实构造。禁止已有camera/非零时钟/非空FIFO替换；不自己发明同名mount。
+
+编译后在发布新MJB前复核唯一camera、actual base_link parent、原K/T/光学旋转/fovy；原192×128 Observer在实际cold Runtime还会独立复核。HD第三视角不是onboard rig。该实现及软件fixture**不证明新native model/observer/GL已过**，Data必须新完整program/source own-zero/lease，旧失败账保留。
+
+`make_public_planner`已改用Reach第四个原source-bound builder，核完整公共v2文件与actual scene projection、四模块SHA；不再绕过完整有序IntentBatch目录检查的direct planner。两臂上限固定4 bundles/256 transitions/.25s，不允许caller另改；原private execution batch从不交模型。

@@ -32,7 +32,12 @@ def compile_static_asset(*,source_root=None,bundle=None,output_model=None,scene_
     need(float(sim.data.time)==0. and not sim.queue,'Original SDK constructor must be zero-step')
     original=helper.robot_signature(sim.model);scene_file=Path(__file__).with_name('scene.json')if scene_path is None else Path(scene_path).resolve(strict=True)
     if expected_scene_sha256 is not None:need(sha(scene_file)==expected_scene_sha256,'Exact owner-frozen scene SHA')
+    from camera_abi import install_original_camera,verify_compiled_camera
+    # Original cold-MJB Runtime never calls configure_scene. Carry that exact
+    # camera hook into THIS fresh construction, not into a closed failed model.
+    camera_installation=install_original_camera(sim,source_root=root)
     scene=load_scene(scene_file);construction=construct_into_native_spec(sim,scene=scene,main_steps=0);model=sim.spec.compile();guard()
+    camera_abi=verify_compiled_camera(model,source_root=root)
     need(helper.robot_signature(model)==original,'Robot/actuator/engine signature changed')
     # Visual capacity is fixed on this NEW static model before any task Runtime.
     model.vis.global_.offwidth=max(int(model.vis.global_.offwidth),scene['third_view']['width']);model.vis.global_.offheight=max(int(model.vis.global_.offheight),scene['third_view']['height'])
@@ -52,7 +57,7 @@ def compile_static_asset(*,source_root=None,bundle=None,output_model=None,scene_
     finally:
         os.unlink(tmp)
     guard()
-    return dict(model_path=str(out),model_sha256=sha(out),scene_sha256=sha(scene_file),scene_id=scene['scene_id'],robot_engine_signature_sha256=original,source_verification=receipt,construction=construction,offscreen_capacity=[int(model.vis.global_.offwidth),int(model.vis.global_.offheight)],actual_main_steps=0,Actor_forwards=0,source_dynamic_or_task_qualification=False)
+    return dict(model_path=str(out),model_sha256=sha(out),scene_sha256=sha(scene_file),scene_id=scene['scene_id'],robot_engine_signature_sha256=original,source_verification=receipt,construction=construction,camera_installation=camera_installation,compiled_camera_abi=camera_abi,offscreen_capacity=[int(model.vis.global_.offwidth),int(model.vis.global_.offheight)],actual_main_steps=0,Actor_forwards=0,source_dynamic_or_task_qualification=False)
 
 def construct_cold_components(*,source_root=None,bundle=None,model_path=None,model_sha256=None,scene_path=None,expected_scene_sha256=None,guard=None,journal=None,actor_device=None,enabled=False):
     if type(enabled)is not bool:raise ValueError('Explicit owner opt-in')
