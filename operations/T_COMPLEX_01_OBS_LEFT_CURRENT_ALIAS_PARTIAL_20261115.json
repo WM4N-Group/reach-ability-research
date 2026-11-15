@@ -1,0 +1,78 @@
+{
+  "at": "2026-11-15T21:52:18.235059+08:00",
+  "role": "ACTUAL_TWO_OF_THREE_OBSERVABILITY_BOUNDARIES_NOT_FINAL_QUALIFICATION_OR_PUSH_READY",
+  "program_sha256": "9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad",
+  "source_pins": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/T-COMPLEX-observability-study-46308-20261115-v1/OBS/program-freeze.json": "9fdd2076cda187b0749f7f294ef362acb954cac4d7fa95a2feec7e1b3529b7ad",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/contracts.py": "7d995f5a1dcb7135e1ca16d36e391a511bb8c8cefa0aeafd27430eba0932a669",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0002.json": "b92a18b7329383fc13c2136256027946797f9002735781c0f5e3d77666e19b6c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0001.json": "394eadbad5d553ab9a497a2982641ba95415d0c99342218643e69c21d68541b3",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/query-observations/frame-000002/rgb.png": "22587ae736bde49d42e8605c870bd4db9c1c3f0a6b32570e0ff414a35b81ec12"
+  },
+  "independent_journal_prefix": {
+    "rows": 1052,
+    "last_sha256": "cd73cded61fc46e16343b413b8d1a66d805d78dd0183a3137830d5876daae441",
+    "prefix_bytes": 5784793,
+    "prefix_sha256": "d60d83eb993e354b4fe86f167f308e32c9533ddcd2f9f26c41967626826683f0",
+    "append_only_prefix_verified": true,
+    "terminal_journal": false
+  },
+  "actual_observation_boundaries": [
+    {
+      "RGB_file_sha256": "a76e641ef2d5b0cd0162832692a1c12f3e09d687cc7fd2ad8a6ab50fc9d928c0",
+      "accepted_current_public_aliases": [],
+      "boundary": "initial_after_actual_supported_capture",
+      "event": "observability_qualification_actual_public_observation",
+      "meaningful_A_B_decision": false,
+      "observation_sha256": "ff5a166f5c1f4802ba9ae3f6a397c03ae08a937fb9613a02b19d71ba11840988",
+      "original_task_success": false,
+      "private_GT_or_pose_read": false,
+      "target_visible_under_original_binding": false,
+      "time_s": 2.2399999999999745
+    },
+    {
+      "RGB_file_sha256": "22587ae736bde49d42e8605c870bd4db9c1c3f0a6b32570e0ff414a35b81ec12",
+      "accepted_current_public_aliases": [
+        "cuboid_a"
+      ],
+      "boundary": "after_original_left_NAV",
+      "event": "observability_qualification_actual_public_observation",
+      "meaningful_A_B_decision": false,
+      "observation_sha256": "d6f32f9fb5298c5edeb938c9d50549c3660e1d7a1b56760074f0e2117029d75b",
+      "original_task_success": false,
+      "private_GT_or_pose_read": false,
+      "target_visible_under_original_binding": true,
+      "time_s": 14.815000000000916
+    }
+  ],
+  "actual_original_left_NAV_success": {
+    "evidence_ref": "commands:physical_tick=2963",
+    "issued_command_sha256": "2a167227274c56cf472fbd4c437ba339d95089270d811a66cc9bee9f59c07763",
+    "option_sha256": "2ee7dd18e62680fd8a5ab9c667350bec8f9392dacf13d307eb9ee7f09fb6d3e1",
+    "status": "succeeded",
+    "time_s": 14.815000000000916
+  },
+  "left_NAV_option_sha256": "2ee7dd18e62680fd8a5ab9c667350bec8f9392dacf13d307eb9ee7f09fb6d3e1",
+  "left_public_query_file": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-T-COMPLEX-observability-only-20261115-v1/main/intent-observation-0002.json",
+  "public_aliases_verified_from_exact_original_observation": [
+    "cuboid_a"
+  ],
+  "private_pose_or_GT_or_proposer_used_by_Reach": false,
+  "PUSH_READY_or_success_not_inferred": true,
+  "nominal_NAV_target_not_measured_exact_displacement": true,
+  "other_boxes_or_full_scene_feasibility_not_inferred": true,
+  "scripted_measurement_not_A_B_decision": true,
+  "all_three_views_NOT_complete": true,
+  "original_scope_main_open_ledger": {
+    "phase": "main",
+    "PID": 57116,
+    "started_monotonic": 1562638.763788704,
+    "closed": false,
+    "status": "CLAIMED_NOT_RESULT",
+    "sim_s": 31.08999999999928,
+    "wall_s": 9155.1748536909,
+    "output_highwater_bytes": 242380280
+  },
+  "main_result_absent": true,
+  "no_new_physics_fit_dispatch_or_source_change": true
+}

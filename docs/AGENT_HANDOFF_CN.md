@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 21:54：T原left NAV后cuboid_a当前关联接受，必要观测条件阳性；仍2/3、无PUSH或任务资格
+
+- **T固定left观测有实际必要条件阳性，仍仅2/3：** 本组21:52直接读46308原OBS记录：同9fdd2076…新program，初始2.240sim的aliases=[]完整保留；原NAV(-.08,+.15,0)真实succeeded（native option2ee7dd18…、physical_tick2963/time14.815）后，fresh public query d6f32f9f…的原RGB22587ae7…中，原matcher接受cuboid_a。本组用原Observation纯contract按语义SHA精确找该actual query、核RGB文件SHA及原one-to-one label，再核同原NAV binding/字面成功receipt；未重跑proposer/读GT/静态pose替换/改阈值。1052行只读journal完整前缀独立验链/保append-only，不冒闭合终态。
+- **阳性不升级成能力/收益结论：** 只有一个固定view在原门下可观测的必要条件，不等PUSH READY/PUSH已执行/其它箱可见/共同动态可行计划/三有效策略选择/复杂任务或lookahead成功。目标+.15不是实测精确侧移，不把Y单独当因果解释。right原NAV继续既定研究，main result仍无；不能因left阳性提前停/挑最好帧，也不能把失败或未达作“三view均无关联”No-Go。OBS脚本purpose不是A/B方法决策或critic TRAIN/CAL/VAL行。
+- **接下来source共享接口可独立准备，不回补旧pair：** 将必要观测准备作为所有方法共用的未来源机制时，须新版本/事前同规则协议、记录真实动作与sim/wall/观测成本，并由原native owner重新验证后续PUSH与整链；仅一次accepted alias不提供原生许可。后续实际consumer只能用当时fresh public query，不能在right/未来view继续使用已过时的left alias/缓存pose。原A视觉拒绝/B4800wall资源截尾仍closed，原actor/12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop不动，不热补/重启/抬旧cap。
+- **其它路径保持准确：** 已消费bulk24首条904ff608…/g01-left-original的首PREPARE48槽和13.500/23.540s实际后果，非方法收益；ordinal02 raw main已出现REQUESTED_API0_PASS，但本组未消费正式cold/release，暂不记第二合格特征行/三候选比较。冻结fit3371ac20…/model a8b1f165…、CAL07仅1/3未评分、不refit/不预测保持。总计划14:00/b2fb786e…未变；本轮只读CPU消费，无新仿真/训练/他组源码/H/锁/进程/自动化改动，全部旧dirty保留。
+
 ### 2026-11-15 21:29：bulk24首个新几何真实成功边界已消费，48槽非旧行精确重复；不refit、不作方法收益
 
 - **bulk24不再是物理0：首个新几何原生结果已消费，非Reach收益。** Data release904ff608…/main107864c0…/program95a0356d…，严格同16:40事前0f9e0e03…的ordinal01（g01/left/original/TRAIN，lane−1.75/B宽1.4）。原NAV/PUSH/20cm CLIMB三个请求均有实际succeeded，不是三策略选择/整复杂任务；118.910main sim/23782命令，scope含自身zero/双aux131.920sim/926.960380628ledger wall/175224831bytes，全known、resource_censored=false。本组逐SHA核正式45小成员、独立核原4093行完整journal链及同intent/native option的三请求对应；Data九流/PD/FIFO/NPZ只消费报告，未冒重算。

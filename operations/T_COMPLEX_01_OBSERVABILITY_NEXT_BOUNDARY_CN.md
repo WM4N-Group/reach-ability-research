@@ -1,5 +1,12 @@
 # 当前source边界：A正式负结果已闭合；B按旧freeze继续，独立两NAV观测研究不是A/B修复
 
+## 2026-11-15 21:54：T原left NAV后cuboid_a当前关联接受，必要观测条件阳性；仍2/3、无PUSH或任务资格
+
+- **T固定left观测有实际必要条件阳性，仍仅2/3：** 本组21:52直接读46308原OBS记录：同9fdd2076…新program，初始2.240sim的aliases=[]完整保留；原NAV(-.08,+.15,0)真实succeeded（native option2ee7dd18…、physical_tick2963/time14.815）后，fresh public query d6f32f9f…的原RGB22587ae7…中，原matcher接受cuboid_a。本组用原Observation纯contract按语义SHA精确找该actual query、核RGB文件SHA及原one-to-one label，再核同原NAV binding/字面成功receipt；未重跑proposer/读GT/静态pose替换/改阈值。1052行只读journal完整前缀独立验链/保append-only，不冒闭合终态。
+- **阳性不升级成能力/收益结论：** 只有一个固定view在原门下可观测的必要条件，不等PUSH READY/PUSH已执行/其它箱可见/共同动态可行计划/三有效策略选择/复杂任务或lookahead成功。目标+.15不是实测精确侧移，不把Y单独当因果解释。right原NAV继续既定研究，main result仍无；不能因left阳性提前停/挑最好帧，也不能把失败或未达作“三view均无关联”No-Go。OBS脚本purpose不是A/B方法决策或critic TRAIN/CAL/VAL行。
+- **接下来source共享接口可独立准备，不回补旧pair：** 将必要观测准备作为所有方法共用的未来源机制时，须新版本/事前同规则协议、记录真实动作与sim/wall/观测成本，并由原native owner重新验证后续PUSH与整链；仅一次accepted alias不提供原生许可。后续实际consumer只能用当时fresh public query，不能在right/未来view继续使用已过时的left alias/缓存pose。原A视觉拒绝/B4800wall资源截尾仍closed，原actor/12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop不动，不热补/重启/抬旧cap。
+- **其它路径保持准确：** 已消费bulk24首条904ff608…/g01-left-original的首PREPARE48槽和13.500/23.540s实际后果，非方法收益；ordinal02 raw main已出现REQUESTED_API0_PASS，但本组未消费正式cold/release，暂不记第二合格特征行/三候选比较。冻结fit3371ac20…/model a8b1f165…、CAL07仅1/3未评分、不refit/不预测保持。总计划14:00/b2fb786e…未变；本轮只读CPU消费，无新仿真/训练/他组源码/H/锁/进程/自动化改动，全部旧dirty保留。
+
 ## 2026-11-15 19:48：独立两NAV观测新程序own-zero已过/main健康在途，仅1/3视角、尚无资格结论
 
 - **独立观测测量已越过“仅收代码”，不是复开A/B：** 本组19:47直接读46308原件，核新protocol691e9dfa…/authority2bdd91c5…/program9fdd2076…及原c3c695b5…26个source成员SHA和3个Data测量wrapper；493全program成员/SDK未冒独立审计。新程序自身zero2136ddd7…真PASS/closed，task0/commands0、aux6.505sim/36.788752641ledger wall/129934978bytes。唯一新main PID57116 ledger open，zero1/main1，不借旧zero/改旧cap；原A/B仍closed，原负结果/费用保持。

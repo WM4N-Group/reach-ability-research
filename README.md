@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 当前T观测必要条件阳性（2026-11-15 21:54）
+
+原固定left NAV成功后的14.815sim fresh public query，原RGBD门真实接受cuboid_a；本组独立核原query/图像SHA/label与native receipt/1052行日志前缀。仍2/3边界、right在途，不能称PUSH READY或完整任务/规划收益，不挑最好帧或缓存旧alias；原A/B继续closed。见operations/T_COMPLEX_01_OBSERVABILITY_NEXT_BOUNDARY_CN.md。
+
 ## 最新bulk24实际数据边界（2026-11-15 21:29）
 
 Data首个新几何g01/left/original已原生完成三个请求；本组独立核4093行原链和首PREPARE因果48槽，READY相对13.500s/完整请求CLIMB相对23.540s，数值非冻结TRAIN6精确重复但不证可学习/方法收益。原raw为192×128非HD；48向量留远端，未fit/预测/评分或改旧cohort门。T OBS仍无终态。见operations/BULK24_FIRST_PUBLIC_BOUNDARY_CN.md。
