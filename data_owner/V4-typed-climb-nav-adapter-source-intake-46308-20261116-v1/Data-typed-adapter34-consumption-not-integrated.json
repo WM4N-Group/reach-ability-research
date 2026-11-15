@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-16T04:42:07.365193+08:00",
+  "role": "IMMUTABLE_TYPED_INNER_CLIMB_TO_NAV_ADAPTER_INTAKE_NOT_FACTORY_OUTER_CONTACT_OR_PUBLIC_CATALOGUE_INTEGRATION",
+  "source_commit": "fa3c288b5fd4eb64f363892e78061efd2f16a4dd",
+  "all34_exact_remote_local_member_pins_verified": true,
+  "record_sha256": "4357415886365c4839bbe6ca77d1b479cb63bf1a607aaa9705ff76375475e8ee",
+  "adapter_sha256": "38601ecbd362dae50d4934838cde5fed034f298412f9a8a5b6690da334fb4a38",
+  "pending_vs_active_v2_source_correction_consumed": true,
+  "necessary_source32_not_misrepresented_as_original_NAV_witness": true,
+  "typed_new_source_requires_true_CLIMB_and_retained_original_required_placement_NN_STOW_geometry": true,
+  "private_registry_view_not_global_registry_mutation": true,
+  "exact_two_original_NAV_type_and_selected_contact_site_delta_source_only": true,
+  "original_NAV_update_Actor_command_after_step_arrival_preserved_by_source": true,
+  "one_constructor_attempt_and_revocation_on_failure": true,
+  "constructed_owner_pointer_not_installed_entered_active_owner": true,
+  "entry_arrival_selected_four_feet12N_not_false_stationary_all_four_during_active_gait": true,
+  "same_sealed_nav_type_and_exact_witness_identity_required": true,
+  "remaining_native_bridge_integration": [
+    "V4 factory current source resolver",
+    "Selected NAV constructor dispatch",
+    "Outer selected-support contact authority",
+    "Same-support public NAV catalogue"
+  ],
+  "still_missing_whole_task_and_methods": [
+    "Domain-compatible static deck/.40m high access and complete original high terminal",
+    "Actual WM bootstrap/accepted200Hz owner/same96x64 anchor",
+    "Reach current public initial/forecast/exit/full nominal terminal provider"
+  ],
+  "Reach_reference_accounting_only_development_snapshot": {
+    "owner_doc": "/home/yuanyue/reach-ability-research/operations/V4_COMPLETE_REFERENCE_ACCOUNTING_CN.md",
+    "owner_doc_sha256": "dbd6b076e12b077d00faff4ffe9b04f526febcd596f6dd7967e0a2065b5309e0",
+    "owner_code": "/home/yuanyue/reach-ability-research/research/task_conditioned_reachability/execution_preparation/v4_reference_cost.py",
+    "owner_code_sha256": "2598f670c7807583ad6f5f4c03ce92eb12c12c22afae10121f702f39c4784805",
+    "interface": "CompleteReferenceCost path_cost",
+    "units": "metres of complete preparation-skill-preparation_exit reference path, not successful cost seconds",
+    "not_runtime_freeze_or_whole_effect_provider": true,
+    "not_called_by_Data": true
+  },
+  "Data_source_import_fixture_retest_native_NAV_Runtime_Actor_API_WM_forward_fit_calls": 0,
+  "no_new_authority_scope_or_lease": true,
+  "no_closed_scope_reopened_invalidated_or_zero_borrowed": true,
+  "legacy_common_H_AtoE_new_successor_BD_policy14b77d69_unchanged": true,
+  "authority": {
+    "at": "2026-11-16T04:42:07.887380+08:00",
+    "H_sha256": "efd423623ef97b788ce8f1c9d920c2eb5b3d06d5ed99a6b9121b496200857a12",
+    "fixed24_and_old19_25_components_closed": true,
+    "no_H_or_scope_modifications": true
+  },
+  "no_additional_user_box_cost_or_signature_gate": true
+}
