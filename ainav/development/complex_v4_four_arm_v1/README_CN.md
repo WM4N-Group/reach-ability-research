@@ -32,3 +32,11 @@
 `rule_baseline.RuleBaseline`是真实原IntentBatch/Selection/NativeReceipt接口：按公开initial X/public_ref固定工程优先级处理required placement；当前关联缺失时只试一次已声明approach NAV，fresh仍空则明确UNKNOWN/停止，不盲按时间播动作。PUSH只在真实同intent/params succeeded receipt后计入已完成；所有地面placement后，以公开最小下一高度/到goal的一跳名义距离选CLIMB，平局target_ref；无VLM/WM/B-D优化、私有pose/未来轨迹/存在性路线。每次64上界/fresh query，拒绝/失败不换seed或静默fallback。
 
 这是场景公开几何的工程规则，不冒通用规划或最优策略；不使用V4主运行后果调优。当前.2→.6会按同原20cm域明确停止，static-deck/owner/完整终点尚未集成，E不能自行签task success。E接口代码存在不等E具备主运行资格，更不把旧API0实验改名E。
+
+## 已补实际deck接触reader与连续停稳（仍非完整成功门）
+
+`elevated_terminal.read_current_goal_sample`为Data实际runtime编写，不构造Runtime/Actor、不中断或改写世界/FIFO：按真实compiled foot geom/body与static goal_deck geom读取MuJoCo mj_contactForce；只把目标deck接触的法向世界Z分量累积到相应脚，其他箱/地面载荷和侧面法向不冒高台支撑。deck实际几何/姿态、原snapshot源SHA、原脚body与global loads也核。私有样本仅供终点验收，不进VLM/WM/优化/E特征，不能用声明高度替代接触身份。显式pair中的foot geom即使contype/conaffinity为0仍按实际contact纳入，不误排除。
+
+`ElevatedGoalDwell`按真实连续200Hz clock/tick维持原.5s必要停稳：重复clock不积时、漏tick重置、载荷/支撑/速度失效重置，ground同XY不通过。它故意没有task complete属性/回执：原同world已成功owner/stow、三immutable placement与真实CLIMB链仍需单独接入，不把这个ready布尔冒完整任务。
+
+新9项仅验证接触算术/顺序/多geom累积/非有限拒绝/时钟和停稳；没有调用实际MuJoCo collector或产生真实接触样本，原生ABI/平台contact动态资格仍待Data自己的新程序。没有因reader代码写好就恢复旧根或放行五main。
