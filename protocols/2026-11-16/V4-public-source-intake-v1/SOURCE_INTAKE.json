@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-16T00:18:02.884368+08:00",
+  "role": "OWNER_DECLARATION_DEV_SNAPSHOT_NOT_IMMUTABLE_NATIVE_FREEZE",
+  "source_package_manifest_sha256": "1e7fb82541df4d0385e3c865973837ad2f63d5877d72b897acc5a698119aa966",
+  "source_public_file_sha256": {
+    "PUBLIC_EFFECTS.json": "1a3c1205849734ddb2faebe3335194e7b10aa3b8779d2d69d281d683c77c6a9c",
+    "PUBLIC_DECLARED_MAP.json": "9be67e3c24fc96cceab24b286294199f17701be4e316156120005ba9faba0979",
+    "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6"
+  },
+  "source_declarations": 27,
+  "skill_counts": {
+    "NAV": 17,
+    "PUSH": 6,
+    "CLIMB": 4
+  },
+  "complete_source_cost_known_rows": 0,
+  "actual_exit_pose_known_rows": 0,
+  "prep_exit_variants": {
+    "status": "NOT_YET_EXPORTED_OR_NATIVE_QUALIFIED",
+    "variants": [],
+    "missing_means_UNKNOWN_not_zero_or_no_cost": true
+  },
+  "source_native_qualified": false,
+  "Reach_owns_successor_cost_model_not_AINav_or_Data": true,
+  "no_private_state_or_correct_route_or_future_trajectory": true,
+  "Data_single_owner_parallel_capacity_authority_not_granted_by_Reach": true,
+  "source_snapshot_is_not_E_actual_success_or_A_D_live_video": true
+}

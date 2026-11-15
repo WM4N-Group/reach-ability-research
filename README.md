@@ -35,6 +35,10 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 原因果query接口增量（2026-11-16 00:19）
+
+原BehaviorQueryBuffer/filter_full_native/resize_packet三定义已按SHA/原行接成当前observer/200Hz已发参考callback producer；生产校验原model/Buffer和public输入，WM anchor与target8绑定，fixture/audit不可变live。新10检查累计110软件过，另一次source函数SOFTWARE_FIXTURE smoke过但无真实WM预测/V4现场query；此前真权重restore仍1。开发源27声明/24 anchors已接但cost/exit/variants缺，不伪称方法ready；OBS禁止模型输入用途保留。见operations/V4_CAUSAL_QUERY_PORT_NEXT_CN.md。
+
 ## 原WM实际CPU恢复完成（2026-11-15 23:53）
 
 46308已有原7a6权重，精确历史路径/SHA核过；原5文件推理闭包已code-only保管并实际CPU恢复一次BehaviorM/2,819,568参数，原normalization/eval/梯度禁用通过，5.6926wall。真实restore1、WM prediction0、world/Actor/fit0，不是V4 query/native资格。新6检查与原合计100纯软件过，下一为当前sensor/已发200Hz因果IO与公开动作映射，不再等权重迁移；不改用户高台/原门。见operations/V4_ORIGINAL_WM_RESTORE_AND_IO_NEXT_CN.md。

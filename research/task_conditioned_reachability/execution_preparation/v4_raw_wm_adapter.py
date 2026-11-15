@@ -68,6 +68,8 @@ class OriginalBehaviorWMAdapter:
         return adapter
 
     def evaluate(self,batch):
+        from ainav.intents import IntentBatch
+        need(isinstance(batch,IntentBatch),'Public semantic WM candidates only, not private ExecutionBatch')
         actions=[];supported=[];unknown=[]
         need(1<=len(batch.options)<=128, 'Same finite source candidate capability; do not drop roots')
         for option in batch.options:

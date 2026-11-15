@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-16T00:13:35.904871+08:00",
+  "role": "EXPLICIT_SOFTWARE_ORIGINAL_QUERY_FUNCTION_SMOKE_NOT_REAL_MODEL_OR_NATIVE",
+  "exact_original_functions_called": [
+    "resize_packet",
+    "BehaviorQueryBuffer",
+    "filter_full_native"
+  ],
+  "fixture_model_encoder_calls": 1,
+  "fixture_model_latent_updates": 43,
+  "fixture_reference_commands": 43,
+  "original_query_grid_and_tail_passed": true,
+  "production_fixture_relabel_refused": true,
+  "wrong_anchor_refused": true,
+  "fixture_arrays_removed": true,
+  "real_checkpoint_loads": 0,
+  "actual_model_WM_prediction_or_current_V4_queries": 0,
+  "recorded_OBS_or_DEV_model_inputs": 0,
+  "real_native_world_Actor_API_or_fit": 0,
+  "forbidden_attempts": [],
+  "wall_s": 0.2546638650819659
+}

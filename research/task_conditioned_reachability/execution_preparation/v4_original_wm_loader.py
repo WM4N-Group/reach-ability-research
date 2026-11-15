@@ -63,6 +63,7 @@ def restore_original_cpu(checkpoint, *, source_root):
              not any(p.requires_grad for p in model.parameters()),'CPU frozen-eval inference only')
         need(file_sha(path)==CHECKPOINT_SHA,'Checkpoint unchanged while restoring')
         validate_inference_closure(source)
+        model._reach_original_checkpoint_sha256=CHECKPOINT_SHA
         report=dict(checkpoint_path=str(path),checkpoint_sha256=CHECKPOINT_SHA,checkpoint_bytes=path.stat().st_size,
             actual_model_class=type(model).__name__,architecture_id=saved['architecture_id'],
             contract_sha256=saved['contract_sha256'],normalization_sha256=hashlib.sha256(json.dumps(normalization,sort_keys=True).encode()).hexdigest(),

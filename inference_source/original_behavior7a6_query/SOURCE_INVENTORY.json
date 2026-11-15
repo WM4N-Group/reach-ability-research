@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-16T00:05:30.103649+08:00",
+  "role": "ORIGINAL_INFERENCE_FUNCTIONS_ONLY_NOT_TRAINER_OR_RUNTIME_IMPORT",
+  "files": {
+    "BehaviorQueryBuffer.py": {
+      "symbol": "BehaviorQueryBuffer",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/behavior_model_query.py",
+      "original_whole_file_sha256": "fd5488aaed9699feccc729c50ec95c90677e9314c8011596332a371f176150cf",
+      "original_lines": [
+        19,
+        91
+      ],
+      "extracted_bytes_sha256": "e7c778bebe440b9cba79ea03cf605fdb3e6a3ed22dd69ca9bfedc024acac881f",
+      "method": "EXACT_WHOLE_TOPLEVEL_AST_NODE_LINES_NO_REWRITE"
+    },
+    "filter_full_native.py": {
+      "symbol": "filter_full_native",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/train_original_m.py",
+      "original_whole_file_sha256": "5f969f23d4a64a0ab124c511951a8e7913f260af5a809895271e70a9f156638c",
+      "original_lines": [
+        141,
+        159
+      ],
+      "extracted_bytes_sha256": "c55901d8205fbdd16952b4e9dbcd65a084ddd569bce591cb415cdb4d9ee6b0e0",
+      "method": "EXACT_WHOLE_TOPLEVEL_AST_NODE_LINES_NO_REWRITE"
+    },
+    "resize_packet.py": {
+      "symbol": "resize_packet",
+      "source": "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/mujoco_zyh/own_model_control.py",
+      "original_whole_file_sha256": "8af7cadc4b8e4de5458c4a9d272a458535500d07666031a8f4804e4e66b2cd10",
+      "original_lines": [
+        27,
+        37
+      ],
+      "extracted_bytes_sha256": "3b70e23eb54b85d035060b914425a33d178d93986eb3eda502e8d8d06e770921",
+      "method": "EXACT_WHOLE_TOPLEVEL_AST_NODE_LINES_NO_REWRITE"
+    }
+  },
+  "original_training_or_native_module_imported": false,
+  "private_labels_or_training_data_included": false
+}

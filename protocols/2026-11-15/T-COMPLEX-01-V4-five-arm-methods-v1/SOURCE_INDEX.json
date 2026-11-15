@@ -1,18 +1,21 @@
 {
-  "at": "2026-11-15T23:52:23.552763+08:00",
+  "at": "2026-11-16T00:18:02.885114+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
-    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "1028c2c2a7c1cef705b9e948602770b54cac8964620227488ee8208ad18534dd",
+    "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "70a731fc51e14b2f7edb93ad6938ec81fad1f9a48af99c2b6c81c6942a92a1ec",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
     "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
     "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
     "research/task_conditioned_reachability/execution_preparation/test_v4_provider_binding.py": "3e543504941a3534b1477834c901574ffffcd049b64a233e5c850cad74e36a6f",
     "research/task_conditioned_reachability/execution_preparation/v4_box_skill_domain.py": "f9682e1d3b1fc401ede52407e5c124fe7a5aaaaaed366a058c853eaa5339875a",
     "research/task_conditioned_reachability/execution_preparation/test_v4_box_skill_domain.py": "0cd49e67fe7dbcdfe45b50d23b2b1e4f3a718b35632a15f50dd8d6ed696c9d16",
-    "research/task_conditioned_reachability/execution_preparation/v4_original_wm_loader.py": "a2199bc0dd18161f79e816ee0e354e1a16443819027e958e69495887dd1322f3",
+    "research/task_conditioned_reachability/execution_preparation/v4_original_wm_loader.py": "5a06f94396bf8ef0aed77f53f77c7cdffa752f51d9f65d949c31ff9c6147e8f9",
     "research/task_conditioned_reachability/execution_preparation/test_v4_original_wm_loader.py": "5117d38021b39400f9ddcccc0df75883888551b1765c5dd3d74f4d128176dd7d",
-    "operations/restore_original_WM_cpu.py": "6029d104625f96e92c84abb8202fb18748cdcac7e0cb70f99d7ed556fd385f84"
+    "operations/restore_original_WM_cpu.py": "6029d104625f96e92c84abb8202fb18748cdcac7e0cb70f99d7ed556fd385f84",
+    "research/task_conditioned_reachability/execution_preparation/v4_causal_wm_query.py": "c1302bbdb776f1276665b45bcb72026e54f8b64cad5f8dda8180ef0ba1da8619",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_causal_wm_query.py": "ed023095c6d1ba321bd7a75caf41e283aea56043c742584392071875c679de59",
+    "operations/check_original_query_port_CPU.py": "0fd29a3070f46237883bc388f3dad00e4ee02907166273b02a4d5031e0f8ddfd"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
@@ -28,7 +31,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "88551f9861a28e9e93ab47782bb73cd5be5381f50a0711f3a81e4228685ce4bd",
+  "protocol_config_sha256": "761861a3d898b18ef213a6be6612c3b52353680fdfff0b6b2b3aaf4a46db2968",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -40,5 +43,11 @@
     "inference_source/original_behavior7a6/visual_latent_highres.py": "d8587dce8ca1c10f3d225f7b75c0853e761a1ccdfff4041955cc036368ff1643",
     "inference_source/original_behavior7a6/visual_latent_world_model.py": "4e19439f74fc25fe1b3d9cce78aba30b258707ad44a5958970256f99c33ca176",
     "inference_source/original_behavior7a6/visual_shadow_model.py": "0be4a9aadc2dbb087971b7f00f6ec5d1844a822298a3597eac1b8e39a2baa775"
+  },
+  "original_causal_query_parts_sha256": {
+    "inference_source/original_behavior7a6_query/BehaviorQueryBuffer.py": "e7c778bebe440b9cba79ea03cf605fdb3e6a3ed22dd69ca9bfedc024acac881f",
+    "inference_source/original_behavior7a6_query/SOURCE_INVENTORY.json": "aa4b5c060892d1159477972f4a55515c04a12f65e16b02144e55b528bd16fb1d",
+    "inference_source/original_behavior7a6_query/filter_full_native.py": "c55901d8205fbdd16952b4e9dbcd65a084ddd569bce591cb415cdb4d9ee6b0e0",
+    "inference_source/original_behavior7a6_query/resize_packet.py": "3b70e23eb54b85d035060b914425a33d178d93986eb3eda502e8d8d06e770921"
   }
 }

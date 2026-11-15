@@ -126,7 +126,12 @@
     "causal_query_on46308_qualified": false,
     "checkpoint_lookup_missing_resolved": true,
     "causal_IO_and_actual_choice_not_yet_qualified": true,
-    "CPU_restore_report_sha256": "39c9a2f95f6325c5c1fa78b23a5093f38aa2671e4e74adeff92dcd8e9a41e246"
+    "CPU_restore_report_sha256": "39c9a2f95f6325c5c1fa78b23a5093f38aa2671e4e74adeff92dcd8e9a41e246",
+    "causal_query_port_code_implemented": true,
+    "current_source_callback_and_live_query_native_qualified": false,
+    "query_source_functions": "Exact originalBehaviorQueryBuffer/filter_full_native/resize_packet source definitions only; no trainer/native module import",
+    "fixture_provenance_cannot_be_current_model_input": true,
+    "OBS_complete_artifact_not_used_as_WM_input": true
   },
   "preparation_exit_domain": "Only source proposed legal public variants. No arbitrary standoff/arm/yaw/sidepush additions; full variants still source dependent",
   "native_readiness": {
@@ -161,7 +166,7 @@
     "new_scope_or_dispatch_authority_issued": false
   },
   "scalar_reader": "research.task_conditioned_reachability.execution_preparation.v4_outcome_summary",
-  "software_only_tests": 62,
+  "software_only_tests": 72,
   "real_API_WM_Actor_worlds_or_training_started": 0,
   "production_software_fixture_mode": false,
   "production_rejects_fake_WM_or_fixture_AINav_roles": true,
@@ -197,5 +202,15 @@
     "current_values_already_match": true,
     "all_V4_physical_success_not_certified": true,
     "platform_or_layout_not_changed_by_box_request": true
+  },
+  "public_source_development_snapshot": {
+    "source_intake_sha256": "0fdb1cc426b3daf693aed1754bbfd1584dcb3b864f0d90bc2db017fc3fe2a617",
+    "declarations": 27,
+    "skill_counts": {
+      "NAV": 17,
+      "PUSH": 6,
+      "CLIMB": 4
+    },
+    "complete_cost_provider_or_native_domain_qualified": false
   }
 }
