@@ -2,6 +2,19 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-15 23:25：用户要求三箱适配原技能；统一轻箱参数已锁定，当前数值本就吻合，未擅改平台/布局
+
+- **接用户“各箱子的参数都调整到目前技能可行的范围”，三箱统一锁定原轻箱点：** A/B/C均2.4×1.4×0.20m、0.50kg、bottom_mu0.40、foot_top_mu0.80；这是当前原full4 B原型/有ground PUSH→20cm CLIMB成功依据的参数点，不扩成任意质量尺寸连续已验证域。核对发现已确认V4三箱**原本就完全是这些数值**，本轮不为制造调整换成未验证参数；各箱changed_physical_attributes={}，scene仍逐byte6394740e…，明确无数值改动。新增v4_box_skill_domain.normalize_boxes/check_boxes及场景锁定副本，今后生成重箱/高箱/不同材料会归一或拒绝，已冻/在途根不热补。
+- **控制范围与独立高度缺口分开：** 必达地面前推0.60m计原0.11m reference偏置为0.71m，保留15cm候选对应0.26m，均≤原0.80m stroke；不把偏置加进真实箱体goal，不侧推/拉回/任意yaw/箱顶PUSH。三箱0.20m高度匹配当前单次20cm爬升纯谓词，**不等V4整链已过**：C箱顶.20→平台.60的.40增量仍被原门拒；不能把C改.40来假装修好第二段却让第一段越域。整链如也要匹配原20cm域，可选平台降.40或保.60加真实.40中间支撑，均涉及平台/布局而非只调箱体，**本轮未擅自改平台/加台阶**；static-deck当前关联/owner/stop仍需原source资格。
+- **交付与验证：** 参数代码/原scene锁定副本/逐字段报告见`/home/yuanyue/reach-ability-research/operations/V4_BOX_PARAMETERS_CN.md`及`protocols/2026-11-15/T-COMPLEX-01-V4-box-skill-lock-v1/`，五组方法配置已引用同一参数策略。新7项检查核归一旧20kg/高箱但不写原输入、目标超程直接拒绝不偷挪goal、保护平台/完整目标不变；本轮合计56新＋38原共94软件检查，**不是94物理试验、动态资格或方法收益**，真实API/WM/Actor/world/fit/新派发0。
+- **V4五组其它工作保持：** 总计划22:53/26b67d55…不变，B/D共用选择核/C原AINav能力保留/E由AINav规则负责；官方TLS DeepSeek/deepseek-flash公开配置已明确，原构造器≤100调用门已匹配，不再问provider或索key，但未声称已注入/鉴权/实际图像调用。真实WM因果IO、完整后继cost与准备退出/native接缝继续由Reach/AINav按职责推进，UNKNOWN不补0，不以新参数策略称五组ready。所有旧dirty/index/closed/失败censor费用、冻结fit/模型/1of3CAL及12N/4s/identity/immutable/support/guard/QP/FIFO/CLIMB stop保留，未动他组源码/H/锁/进程/自动化，raw/权重/录像不回Git或本地。
+
+### 2026-11-15 23:18：V4统一DeepSeek TLS配置已接入，修正原构造器100次上限；未发API，完整能力缺口保持
+
+- **VLM provider疑问已关闭，不重复索密钥或猜网关：** 已接AINav用户明确的官方TLS DeepSeek/deepseek-flash/thinking disabled公开profile87d38fef…与原backend11e5fdd8…，同profile已保code-only。新v4_provider_binding.runtime_binding逐SHA核实际公开profile/精确原backend，只返回kwargs，不读env/key、不构造backend/transport/发API；C/D继续原RoleRunner/AinavPlanner，A—D同provider/模型/调用门，E调用0。配置已定不代表远端秘密已注入、真实鉴权/served model或图像调用已过，后者仅在必要新程序资格核，不另加无关API探针。
+- **修掉首版方法配置的实际构造器不兼容：** 原DeepSeekBackend只接受max_calls≤100，上一版提议256会在任何真实决策之前被拒；现新V4纯配置/ A-B类默认统一为100，reply≤8192/total≤1000000，原构造器verify_models保持True。新8项公开配置/kwargs/预算/禁止换HTTP或源漂移/不读凭据测试过，累计49新＋38原共87软件检查；真实API/WM/native/训练仍0。仅修未派发V4代码配置，不热补旧frozen program/抬旧scope预算，不把软件检查作推理或方法收益。
+- **主计划26b67d55…/五组其余边界不变：** A/B真实WM当前因果IO/权重接入、Reach-owned完整名义后继cost provider、实际准备/退出与native消费还待接线，UNKNOWN/保backbone不冒有效优化。当前原20cm CLIMB拒V4后继40cm且static-deck绑定/支撑终点未通；不擅改用户图/下调原门。AINav E规则源码已公开信息/原回执语义review但非native资格，Data仍唯一owner；所有旧dirty/index/closed/模型/失败账、12N/4s/identity/immutable/support/guard/QP/FIFO/stop保持。
+
 ### 2026-11-15 23:09：已转V4五组，A—D方法适配/共享核与五组reader实码首版；40cm/static-deck资格仍阻塞完整运行
 
 - **主线已按最新五组切换，不沿旧API0两组排队：** 本轮先读22:40四组计划，写配置前SHA-CAS发现22:53更新26b67d55…，已改当前任务为T-COMPLEX-01-V4-FIVE-ARM：A/B VLM＋WM无/有优化，C/D原AINav无/有同一优化，E由AINav固定规则实现且VLM/WM/本优化0；B−A/D−C主比较。现有WM仅本任务推理允许，未恢复WM/DINO/Actor训练/真机或第二owner。scene6394740e…未改，旧FOUR_ARM_PROTOCOL明确历史，不当当前五组完整authority。

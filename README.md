@@ -35,6 +35,14 @@ python3 -m unittest \
 
 这是软件/内存 fixture 检查，不是训练样本、仿真实测或新研究成绩。历史所有 closed 根继续 closed。
 
+## 用户要求三箱适配原技能（2026-11-15 23:25）
+
+三箱统一锁原2.4×1.4×.20m/0.5kg/底面mu.4/足接触mu.8，必达PUSH.60＋原reference偏置.11=.71≤.80。核当前V4原本就是此点，数值/scene SHA6394740e…未改；新增归一/越域校验和锁定副本，不虚报调参或物理通过。箱顶.20→平台.60的40cm缺口不能靠增高C解决；未擅降平台/加中间台阶。新7检查加既有共94软件过，真实API/WM/native0。见operations/V4_BOX_PARAMETERS_CN.md。
+
+## V4 provider绑定增量（2026-11-15 23:18）
+
+用户已明确官方TLS DeepSeek/deepseek-flash；本组已接精确公开profile87d38fef…/原backend11e5fdd8…，新增纯kwargs绑定，未读env/key或发API。修正新V4提议256与原构造器≤100的冲突，A—D上限100/E0；现49新＋38原共87软件检查。真实WM当前IO/完整后继cost/native与40cm/static-deck缺口仍在，不把配置作为五组ready。见operations/V4_FOUR_ARM_METHODS_AND_GAPS_CN.md。
+
 ## 当前优先V4五组与方法实码（2026-11-15 23:09）
 
 最新22:53计划26b67d55…是A/B VLM＋既有WM无/有优化、C/D原AINav无/有同一优化、E固定规则（AINav负责），不是旧API0两组。Reach已实现共享后继选择核、保原AINav全roles/tree/replan及真实pending消费的C/D接缝、新direct VLM＋原7a6 raw-WM决策适配、五组scalar reader与纯配置；41新＋38原共79软件检查过，真实VLM/WM/native调用0。生产拒fixture。当前selected原20cm CLIMB拒.20→.60高差，static-deck/终点与V4因果WM IO/完整名义cost仍缺，不能称五组ready/优化已真实消费；未改设计或原门。详见operations/V4_FOUR_ARM_METHODS_AND_GAPS_CN.md及protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/。

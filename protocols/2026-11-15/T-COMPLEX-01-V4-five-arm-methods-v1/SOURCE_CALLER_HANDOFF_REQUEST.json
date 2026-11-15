@@ -2,13 +2,17 @@
   "at": "2026-11-15T23:08:31.473779+08:00",
   "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
   "role": "REACH_INCREMENTAL_METHOD_CALLER_HANDOFF_NOT_NEW_SCOPE_OR_NATIVE_PERMISSION",
-  "config_sha256": "5dd0da5c883a7aed48623e33a7ddfad729cf1be186d1d8eacc353c8a54f52002",
+  "config_sha256": "78869e4a69f48f4a305d56276919a5dc7500173644c0a8bf92f3b952c62d44c0",
   "code_files": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
-    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "6e5cc1c52e8f80dd5ce84a742d2cffbe3cb737a131d365e3a192b54f06e4a0d4",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "49f581643176f22402dd8b2bacf36dc24f963ce5706ecf0834d891f71a009173",
     "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "b749c81b63e928f5cc01088b446eea2cf26ebba0eb0201bd1c1c89a5717badcc",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4"
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "6e4765fdf19749f87d1dca2ee3e45ba274e62ed526f2789bf1d30df587e672f4",
+    "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_provider_binding.py": "3e543504941a3534b1477834c901574ffffcd049b64a233e5c850cad74e36a6f",
+    "research/task_conditioned_reachability/execution_preparation/v4_box_skill_domain.py": "f9682e1d3b1fc401ede52407e5c124fe7a5aaaaaed366a058c853eaa5339875a",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_box_skill_domain.py": "0cd49e67fe7dbcdfe45b50d23b2b1e4f3a718b35632a15f50dd8d6ed696c9d16"
   },
   "AINav_source_inputs_needed": [
     "Exact five-arm shared original current IntentBatch/Observation and source journal",
@@ -27,5 +31,10 @@
   "no_user_layout_modified": true,
   "no_credential_or_provider_probe": true,
   "no_additional_receipt_signature_gate": true,
-  "new_scopes_mains_or_leases_issued": 0
+  "new_scopes_mains_or_leases_issued": 0,
+  "explicit_DeepSeek_profile_received_no_further_provider_question": true,
+  "runtime_API_call_cap_ABCD": 100,
+  "real_injected_credential_or_served_model_metadata_not_claimed": true,
+  "box_parameter_lock_report": "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-box-skill-lock-v1/BOX_PARAMETER_LOCK_REPORT.json",
+  "box_parameters_already_match_current_scene_no_numeric_or_platform_edit_needed": true
 }

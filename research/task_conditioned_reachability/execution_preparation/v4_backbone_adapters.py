@@ -97,11 +97,11 @@ class VLMWMIntentPlanner:
     outcomes. Original source execution judge/factory still executes every intent.
     """
     def __init__(self, backend, wm_evaluator, *, optimizer_enabled=False, path_cost=None,
-                 journal, timeout_s=90., max_episode_calls=256, software_fixture=False):
+                 journal, timeout_s=90., max_episode_calls=100, software_fixture=False):
         need(getattr(backend,'kind',None) in ('deepseek_vision_api','openai_compatible_vision_api','local_qwen_vlm'),
              'Same owner-verified actual vision backend as C/D; no endpoint guess')
         need(type(optimizer_enabled) is bool and 0 < timeout_s <= 120 and
-             type(max_episode_calls) is int and max_episode_calls > 0, 'Frozen bounded VLM budget')
+             type(max_episode_calls) is int and 1<=max_episode_calls<=100, 'Frozen bounded VLM budget')
         need(type(software_fixture) is bool, 'Explicit fixture/production identity')
         if not software_fixture:
             from .v4_raw_wm_adapter import OriginalBehaviorWMAdapter

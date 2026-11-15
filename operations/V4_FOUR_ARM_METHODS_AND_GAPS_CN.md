@@ -15,7 +15,7 @@
    - 至少有真实当前model forward且有效raw evidence才允许A/B路线选取；所有行UNKNOWN则明确停在“WM方法不可用”，不会WM开关=true而实用无WM。新V4 query/raw预测是未标定模型输入输出，不扩大旧7a6成功Finish/后继ready No-Go结论。
 5. `build_v4_planner('A'|'B'|'C'|'D',...)`四组明确factory：D拒收暗加WM，A/B拒收把原AINav对象换名当WM路线。只组装方法对象，不建transport、读key或发native命令。
 
-**41项新软件检查已过；真实VLM/WM forward/native main=0。** fixtures显式标注，原AINav纯源码测试不是原生安全/任务资格。五组纯配置/原源逐SHA入口：`protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/`。E由AINav实现，本组不代写场景正确路线。旧research FOUR_ARM_PROTOCOL仅保历史输入，最新总计划和五组config优先。新增预算是新V4方法配置提议，不抬旧scope cap；最终程序/order/VLM身份/技术cap由Data事前freeze。`v4_outcome_summary.py`另已实现五组标量评价reader：缺arm、WM名义开启而无forward、B/D无有效优化选择均不建立方法对比，失败/censor不补成功耗时，E严禁API/WM/优化计数；高台完整成功必须有三placement、原CLIMB、实际支撑和原stop/stow证据。此reader不是native审计替身，尚无五组原件供消费。
+**最新56项新软件检查＋38项旧回归共94项通过；真实VLM/WM forward/native main=0。** fixtures显式标注，原AINav纯源码测试不是原生安全/任务资格。五组纯配置/原源逐SHA入口：`protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/`。E由AINav实现，本组不代写场景正确路线。旧research FOUR_ARM_PROTOCOL仅保历史输入，最新总计划和五组config优先。新增预算是新V4方法配置提议，不抬旧scope cap；最终程序/order/VLM身份/技术cap由Data事前freeze。`v4_outcome_summary.py`另已实现五组标量评价reader：缺arm、WM名义开启而无forward、B/D无有效优化选择均不建立方法对比，失败/censor不补成功耗时，E严禁API/WM/优化计数；高台完整成功必须有三placement、原CLIMB、实际支撑和原stop/stow证据。此reader不是native审计替身，尚无五组原件供消费。
 
 ## 不掩盖的真实阻塞／最小能力方案
 
@@ -29,7 +29,10 @@ AINav22:51原源报告`EXACT_V4_ASSET_AND_SELECTED_CLIMB_GAP.json`核精确selec
 
 原7a6 query/frame/raw ABI已精读、逐SHA列入SOURCE_INDEX；没有把旧预测当当前推理。46308选定reach-assets/ainav-compute/Data部署目录max-depth6文件名检索未取得M64B/behavior-final checkpoint位置；**不等于证明整服务器没有权重**，只是尚无可用remote checkpoint＋V4原因果IO接入证据。不能复制私钥、恢复旧端任务或用旧actual帧作live。source owner提供同一fresh episode的observed-public60/原issued-history/belief、按候选实际公开descriptor/参数及checkpoint路径后，代码可直接调用原头。
 
-AINav已发现两份既有provider元数据冲突（active deepseek/flash与旧sol_gateway/profile），未指定本次哪一份。由其一次性确认本次已有安全Base URL/模型/入口，**无需重新贴明文key，不凭key格式探针、不把新密钥发旧HTTP网关**。本组没有读取key/环境秘密或发API请求。
+**23:13 provider身份已按用户确认收束，不再等服务选择：** AINav发布原公开profile87d38fef…，官方TLS DeepSeek/deepseek-flash/thinking disabled、无fallback、原backend SHA11e5fdd8…。Reach已逐SHA接收并实现`v4_provider_binding.runtime_binding`，只读公开profile/原backend源码，返回合法构造kwargs，不读取key/env、不创建transport或API探针；实际鉴权模型元数据/served identity及受保护进程注入仍由新冻结运行核，不把“配置已定”冒“密钥已注入/调用已过”。
+
+同时定位并修正首版方法配置的真实兼容性bug：原DeepSeekBackend构造器明确`max_calls<=100`，首版提议256会在运行前被拒。现A—D共享cap改为100，A/B类默认同100，reply≤8192/total≤1000000，E调用0。**这是未派发新V4方法配置的修正，绝非抬/改任何旧实验预算或热补frozen program。** 新8项profile/constructor/不读env/禁止HTTP换源/预算边界检查通过；原source未改，无真实API/WM调用。
+
 
 ### 3. source成本与准备/退出变体还需V4真实接缝，不能把回退当优化
 
@@ -44,3 +47,5 @@ Data正式完整release785bd9db…的本地34小成员与远端全部35成员SHA
 ## E信息权限核对（源码静态审阅，不冒原生资格）
 
 已读AINav新FIVE_ARM_METHODS.json与RuleBaseline源码74827bd0…：选择依据是公开initial-X/public_ref排序、原fresh one-to-one alias、公开required goal和source候选/支撑高度；原receipt前不推进，缺关联最多一次公开approach，失败/拒绝不重试，无VLM/WM/本优化或私有存在性路线。明确工程规则先验，符合E角色；完整native/terminal仍未接，不能从6项source软件测试宣称E已可完成V4。E由AINav持有实现，本组不另写第二份或在五组结果后换成正确路线。
+
+用户后续要求三箱参数适配原技能，已补统一轻箱参数锁与7项检查；当前scene三箱本已匹配，未修改数值/平台，具体见V4_BOX_PARAMETERS_CN.md。
