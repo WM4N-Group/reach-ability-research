@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-16T06:56:35.384629+08:00",
+  "role": "DATA_WORKER_SOFTWARE_IO_COST_NARROWING_NOT_NATIVE_SPEEDUP_OR_PHYSICAL_SAMPLE",
+  "plan_sha256": "be3aa7e587e5aa990375d1085dde6affc497861c1d45ab01862edc2793501845",
+  "profiler_sha256": "eff459a9676f3c08022aeb206ae4a38387dedccbdeb19fc5ac71901160fb6207",
+  "profile_sha256": "b57466d353197898b00b94220977610472531a6ea65ace0386b7f91ca7edf275",
+  "actual_closed_program": "a0e8ada09e6cca82e1920774a0010f877b7f9821c4a766e55c3dbc07d09062f1",
+  "actual_closed_result": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+  "measurement_median_seconds": {
+    "H_read_bytes": 0.00048806285485625267,
+    "H_json_parse_in_memory": 0.0005298519972711802,
+    "authority_two_JSON_reads_plus_AUTH_SHA": 0.0019338689744472504,
+    "binding_SHA_read": 0.00045142415910959244,
+    "lease_inode_check_without_flock_or_lease": 1.9600149244070053e-05,
+    "exact_closed_ROOT_output_size_rglob_isfile_stat": 0.01875100121833384,
+    "RSS_getrusage": 1.8370337784290314e-06,
+    "lease_gpu_query_subprocess": 0.10607398906722665,
+    "lease_compute_apps_query_subprocess": 0.06802679901011288,
+    "independent_4KiB_flush_fsync": 0.0021608921233564615
+  },
+  "AINav_own_diagnostic_original_path": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-V4-FIVE-ARM-ASSET-E-RULE-AND-CLIMB-GAP-20261115-v1/BOUNDED_V2_RESOURCE_CENSOR_AND_CPU_ALIAS_HOTSPOT_NO_ADOPTED_FIX.json",
+  "AINav_record_sha256": "994850f9020cc21320a77cf88a1b1190e0cdcc0404b4e0f003856dd15283d2d3",
+  "AINav_metadata_guard_seconds": 1.2439407950732857,
+  "AINav_metadata_Path_resolve_seconds": 1.2359413909725845,
+  "AINav_no_stable_candidate_gain": true,
+  "own_slice_conclusion": "H+AUTH read/parse/SHA about1.934ms; closed25-file output size scan18.751ms; these measured operations alone are much smaller than the separately measured1.244s module-path guard. GPU queries add variable tens-to-hundreds-ms cost on original>=1wall-second lease cadence, not every200Hz command.",
+  "no_original_live_guard_invoked": true,
+  "closed_authority_false_not_overridden": true,
+  "no_lease_or_CUDA_or_model_or_world": true,
+  "no_original_guard_timing_or_full_wall_attribution_claim": true,
+  "no_journal_or_episode_fsync_cost_claim": true,
+  "no_cross_tick_cache_or_module_filter_adopted": true,
+  "no_safety_budget_environment_or_actor_change": true,
+  "no_new_native_program_or_dispatch": true,
+  "no_J_training_purpose_or_fit_or_GPU_grant": true,
+  "source_owner_next": "AINav: source guard/path resolution is the next concrete source-side candidate area; preserve fresh full sys.modules alias/callback and world identities. Existing parent-sharing candidate has no stable gain and is not accepted. Data will only freeze a genuinely repaired full program after concrete semantics-preserving code or operating-condition evidence; do not just extend wall/reuse39.",
+  "cost": {
+    "wall_s": 14.463338079862297,
+    "peak_RSS_bytes": 23629824,
+    "new_probe_bytes": 12288,
+    "owned_bytes": 26134756352,
+    "provider_quota_unknown": true
+  },
+  "limitations": [
+    "No original per-tick profile or full native step attribution",
+    "No Torch/CUDA memory call timing",
+    "Closed-tree size measurement is not time-varying live writer size",
+    "Independent fsync sample not original per-event I/O cost",
+    "No source39 native qualification, safety weakening, budget change, or dispatch"
+  ]
+}

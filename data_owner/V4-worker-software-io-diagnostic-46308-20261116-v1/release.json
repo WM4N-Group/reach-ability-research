@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-16T06:56:35.384629+08:00",
+  "role": "DATA_WORKER_SOFTWARE_IO_COST_NARROWING_NOT_NATIVE_SPEEDUP_OR_PHYSICAL_SAMPLE",
+  "physical_sample": false,
+  "closed_scope_not_reopened": true,
+  "no_adopted_performance_fix": true,
+  "files": {
+    "Data-actual-worker-metadata-slice-profile.json": "b57466d353197898b00b94220977610472531a6ea65ace0386b7f91ca7edf275",
+    "Data-software-io-assessment.json": "928f43f5adc7b04363599fc804a81d420cbda453876ee19e4710eb6586ab583f",
+    "README.md": "20a237edd886e4e9d97bb28f959bf54a9aa1479159bdbfa05c0d2e3a310f8dde"
+  },
+  "only_CPU_metadata_no_fit_or_dispatch": true
+}

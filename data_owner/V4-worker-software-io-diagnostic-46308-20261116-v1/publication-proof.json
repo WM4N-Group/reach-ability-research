@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-16T06:56:35.384629+08:00",
+  "release": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-WORKER-SOFTWARE-IO-DIAGNOSIS-20261116-v1/release.json",
+  "release_sha256": "416490f12cb260957e1f31194daf3c954ebd591c0718051c060b9fa478f67cc6",
+  "first_metadata_publisher_partial_error_preserved": "publication-first-error.txt",
+  "first_three_after_states": [
+    {
+      "path": "/home/yuanyue/main/work/data-team/STATUS.md",
+      "after_sha256": "96e7848e4aa81a7344d4f42bd9131d6df5e2fb7fc1730863397575a50c3c394e",
+      "postread_verified": true,
+      "original_prewrite_SHA_not_persisted_after_later_shared_delimiter_error": true
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/README.md",
+      "after_sha256": "ce49d07497fe7c85a27e59441b82caf18a43d098a95d6b1b1e0556c8348aa35e",
+      "postread_verified": true,
+      "original_prewrite_SHA_not_persisted_after_later_shared_delimiter_error": true
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/AGENTS.md",
+      "after_sha256": "ccda6e242e97ca92a30eb9dd0e63d26e1b46792ccf4cc07a9968f742bbcc5c6b",
+      "postread_verified": true,
+      "original_prewrite_SHA_not_persisted_after_later_shared_delimiter_error": true
+    }
+  ],
+  "shared": {
+    "path": "/home/yuanyue/main/汇总/各小组进展汇总.md",
+    "before_sha256": "4d40b5f73af89e4e1fd693a4fee6b1f520fec4945ace0e019659167af255f2cc",
+    "after_sha256": "dd0af5e178dc5916efb3eda91064940869c3344cfbaf56e0ac29bbd6645f80d7",
+    "directory_file_flock_SHA_CAS_atomic_preserve_mode": true,
+    "mode": 436,
+    "peer_bytes_preserved": true,
+    "only_Data_section": true
+  },
+  "no_H_or_physical_scope_mutation": true
+}

@@ -1,0 +1,395 @@
+{
+  "at": "2026-11-16T06:54:13.371080+08:00",
+  "role": "BOUNDED_CPU_METADATA_SLICES_OF_EXACT_DATA_WORKER_NOT_LIVE_GUARD_OR_NATIVE_PROFILE",
+  "scope_closed": true,
+  "authority_guard_not_invoked_or_bypassed": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "native_model_import_constructor_forward_API_or_physics_calls": 0,
+  "old_pins_unchanged": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/registry/handoff_current_status_20261115.json": "a2b13f619492c55434083f31f0c2893179729db123737cb17a712c3116419929",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/registry/V4_BOUNDED_CLIMB_NAV_AUTHORITY_20261116_v2.json": "536306cb00581ded3f10c65a1fb1365b82912d2f2837687151ebb7383a6d859f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/worker.py": "cb65016cef46b600450ba1a71aea98cb165199b0c6ebd893ca7a590d63c17476",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/protocol.json": "a39d0ba3cf527d394e53955713812c174296592ffb3f9a5ed853cd36379e44e5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v2/result.json": "fe3d5f6cb9231f302ef3f919d247d9440de9ea2a5ef0456eea91d85762c922aa",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v2/ledger.json": "baaa245608b9002124c4e0cb6bd3f7771a54f50f1c15a12ba742abffbff84c12",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v2/events.jsonl": "7eb678eb170ef1d596bc2f7f910a5f0faaa18471368640deabe60d27a1651603"
+  },
+  "Data_native_workers": [],
+  "canonical_inode_observations": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+      "device": 51,
+      "inode": 3428729629,
+      "proc_locks_matches": [],
+      "not_a_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+      "device": 51,
+      "inode": 3428729630,
+      "proc_locks_matches": [],
+      "not_a_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu1.lock",
+      "device": 51,
+      "inode": 3428459217,
+      "proc_locks_matches": [],
+      "not_a_lease": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu1.lock",
+      "device": 51,
+      "inode": 3428459218,
+      "proc_locks_matches": [],
+      "not_a_lease": true
+    }
+  ],
+  "measurements": {
+    "H_read_bytes": {
+      "samples": [
+        {
+          "wall_s": 0.00048806285485625267,
+          "cpu_s": 8.229299999999717e-05
+        },
+        {
+          "wall_s": 0.0005442530382424593,
+          "cpu_s": 7.912100000000144e-05
+        },
+        {
+          "wall_s": 0.00045174011029303074,
+          "cpu_s": 3.395000000000481e-05
+        }
+      ],
+      "median_wall_s": 0.00048806285485625267
+    },
+    "H_json_parse_in_memory": {
+      "samples": [
+        {
+          "wall_s": 0.0005298519972711802,
+          "cpu_s": 0.0005302559999999998
+        },
+        {
+          "wall_s": 0.000551608856767416,
+          "cpu_s": 0.0005467250000000048
+        },
+        {
+          "wall_s": 0.0004980850499123335,
+          "cpu_s": 0.0004984300000000011
+        }
+      ],
+      "median_wall_s": 0.0005298519972711802
+    },
+    "authority_two_JSON_reads_plus_AUTH_SHA": {
+      "samples": [
+        {
+          "wall_s": 0.001988823991268873,
+          "cpu_s": 0.0006353560000000036
+        },
+        {
+          "wall_s": 0.0019338689744472504,
+          "cpu_s": 0.0006756489999999934
+        },
+        {
+          "wall_s": 0.0017787860706448555,
+          "cpu_s": 0.000606901
+        }
+      ],
+      "median_wall_s": 0.0019338689744472504
+    },
+    "binding_SHA_read": {
+      "samples": [
+        {
+          "wall_s": 0.00042418111115694046,
+          "cpu_s": 5.3599000000001396e-05
+        },
+        {
+          "wall_s": 0.00045610195957124233,
+          "cpu_s": 5.189900000000108e-05
+        },
+        {
+          "wall_s": 0.00045142415910959244,
+          "cpu_s": 4.884200000000033e-05
+        }
+      ],
+      "median_wall_s": 0.00045142415910959244
+    },
+    "lease_inode_check_without_flock_or_lease": {
+      "samples": [
+        {
+          "wall_s": 2.8387177735567093e-05,
+          "cpu_s": 2.8369999999999784e-05
+        },
+        {
+          "wall_s": 1.951702870428562e-05,
+          "cpu_s": 1.962499999999534e-05
+        },
+        {
+          "wall_s": 1.9600149244070053e-05,
+          "cpu_s": 1.962499999999534e-05
+        }
+      ],
+      "median_wall_s": 1.9600149244070053e-05
+    },
+    "exact_closed_ROOT_output_size_rglob_isfile_stat": {
+      "samples": [
+        {
+          "wall_s": 0.019370001973584294,
+          "cpu_s": 0.0009386649999999983
+        },
+        {
+          "wall_s": 0.01850318885408342,
+          "cpu_s": 0.0007490910000000003
+        },
+        {
+          "wall_s": 0.01875100121833384,
+          "cpu_s": 0.0007993670000000022
+        }
+      ],
+      "median_wall_s": 0.01875100121833384
+    },
+    "RSS_getrusage": {
+      "samples": [
+        {
+          "wall_s": 6.3211191445589066e-06,
+          "cpu_s": 6.365000000001231e-06
+        },
+        {
+          "wall_s": 1.8370337784290314e-06,
+          "cpu_s": 1.7850000000041444e-06
+        },
+        {
+          "wall_s": 1.4961697161197662e-06,
+          "cpu_s": 1.4779999999992022e-06
+        }
+      ],
+      "median_wall_s": 1.8370337784290314e-06
+    },
+    "lease_gpu_query_subprocess": {
+      "samples": [
+        {
+          "wall_s": 0.16626541805453598,
+          "cpu_s": 0.00045986400000000427
+        },
+        {
+          "wall_s": 0.10607398906722665,
+          "cpu_s": 0.0004420059999999948
+        },
+        {
+          "wall_s": 0.0489782530348748,
+          "cpu_s": 0.0003316729999999976
+        }
+      ],
+      "median_wall_s": 0.10607398906722665
+    },
+    "lease_compute_apps_query_subprocess": {
+      "samples": [
+        {
+          "wall_s": 0.12534895283170044,
+          "cpu_s": 0.0003335439999999981
+        },
+        {
+          "wall_s": 0.0655951309017837,
+          "cpu_s": 0.00034824499999999703
+        },
+        {
+          "wall_s": 0.06802679901011288,
+          "cpu_s": 0.00029316800000000337
+        }
+      ],
+      "median_wall_s": 0.06802679901011288
+    },
+    "independent_4KiB_flush_fsync": {
+      "samples": [
+        {
+          "wall_s": 0.0021608921233564615,
+          "cpu_s": 3.17779999999962e-05
+        },
+        {
+          "wall_s": 0.002132092835381627,
+          "cpu_s": 1.7501999999995632e-05
+        },
+        {
+          "wall_s": 0.004032880999147892,
+          "cpu_s": 1.6532999999999132e-05
+        }
+      ],
+      "median_wall_s": 0.0021608921233564615
+    }
+  },
+  "closed_output_size_bytes": 4487865,
+  "closed_output_file_count": 25,
+  "H_bytes": 104312,
+  "GPU": "0, GPU-297c1146-bcec-a8ee-8437-d9603392a2e1, 24080, 0\n",
+  "GPU_apps": "",
+  "own_GPU_usage_not_claimed_no_context_or_lease": true,
+  "methods": [
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/worker.py",
+      "file_sha256": "cb65016cef46b600450ba1a71aea98cb165199b0c6ebd893ca7a590d63c17476",
+      "method": "authority",
+      "line": 10,
+      "end_line": 11,
+      "method_sha256": "0a287cd77b8755a4972a9358afa28ba532b9b028356f838b09029fe054997538",
+      "direct_calls": []
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/worker.py",
+      "file_sha256": "cb65016cef46b600450ba1a71aea98cb165199b0c6ebd893ca7a590d63c17476",
+      "method": "guard",
+      "line": 34,
+      "end_line": 39,
+      "method_sha256": "eccdcd4523bd1d624162e17fba6fc182f924f5824c0e06c71db4a4118c859150",
+      "direct_calls": [
+        {
+          "line": 35,
+          "expression": "authority"
+        },
+        {
+          "line": 39,
+          "expression": "p.stat"
+        },
+        {
+          "line": 39,
+          "expression": "ROOT.rglob"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_dual_route_v1/scene_driver.py",
+      "file_sha256": "7919278e08a8610359ee3f14e6380bc874f2a579582e0143f13a8420b2c42e08",
+      "method": "_native_guards",
+      "line": 80,
+      "end_line": 86,
+      "method_sha256": "e6e848ce969ed0a94f4ccf52310a542fc8c4ff326c1a8a4607c415b7838b070f",
+      "direct_calls": [
+        {
+          "line": 81,
+          "expression": "self.owner_guard"
+        },
+        {
+          "line": 84,
+          "expression": "Path(path).resolve"
+        },
+        {
+          "line": 85,
+          "expression": "Path(path).resolve"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_dual_route_v1/scene_driver.py",
+      "file_sha256": "7919278e08a8610359ee3f14e6380bc874f2a579582e0143f13a8420b2c42e08",
+      "method": "_after_guard",
+      "line": 92,
+      "end_line": 95,
+      "method_sha256": "364652496c9da858cd6bc109c03985fee40521115b97ecd3dd34093b46278904",
+      "direct_calls": [
+        {
+          "line": 93,
+          "expression": "self._native_guards"
+        },
+        {
+          "line": 93,
+          "expression": "self._contact_guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_dual_route_v1/scene_driver.py",
+      "file_sha256": "7919278e08a8610359ee3f14e6380bc874f2a579582e0143f13a8420b2c42e08",
+      "method": "step_one",
+      "line": 174,
+      "end_line": 195,
+      "method_sha256": "ab39fb77658472386f7ad9fa6147f38c3b966f6520e54e22a9cad1a8bdf904c7",
+      "direct_calls": [
+        {
+          "line": 186,
+          "expression": "self._after_guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_v4_four_arm_v1/live_driver.py",
+      "file_sha256": "5f797ede9d80a2e41e05d48dc9f98bbb30a185ad2cd3ee90042c20141362faf1",
+      "method": "step_one",
+      "line": 311,
+      "end_line": 343,
+      "method_sha256": "fe765fcb576ae4c85ee40eea657e732ae20cadecbed5d32600cda4e8081f05be",
+      "direct_calls": [
+        {
+          "line": 335,
+          "expression": "self._after_guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_v4_four_arm_v1/live_driver.py",
+      "file_sha256": "5f797ede9d80a2e41e05d48dc9f98bbb30a185ad2cd3ee90042c20141362faf1",
+      "method": "checked_guard",
+      "line": 105,
+      "end_line": 106,
+      "method_sha256": "a4de62bb6df5c95eba473acf35486abafdeaf5c9cc1039a474e1484d4b2892be",
+      "direct_calls": [
+        {
+          "line": 106,
+          "expression": "guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/V4-bounded-climb-nav-native-46308-20261116-v2/inputs/ainav/development/complex_v4_four_arm_v1/execution_entry.py",
+      "file_sha256": "77eb11e66aa24b8d3481b2f2c01eb2c29eec017e21fd2460c723d1f7333c40cc",
+      "method": "guards",
+      "line": 138,
+      "end_line": 146,
+      "method_sha256": "a89fddef449752f5a93fad62f4b876a50ef3cb47416ae80f03dc41c76dd9f00d",
+      "direct_calls": [
+        {
+          "line": 139,
+          "expression": "guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/loop.py",
+      "file_sha256": "7a0445e7ae618fe92ebc079a95813d9acf7825a770ff36661d23c90779bacdd5",
+      "method": "_guard",
+      "line": 52,
+      "end_line": 54,
+      "method_sha256": "509a5da4407f49e8bfdd8a7d8aec1b8dd16ba4e432ce1f3a015dcd2c9de1163c",
+      "direct_calls": [
+        {
+          "line": 53,
+          "expression": "self.guard"
+        }
+      ]
+    },
+    {
+      "file": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/loop.py",
+      "file_sha256": "7a0445e7ae618fe92ebc079a95813d9acf7825a770ff36661d23c90779bacdd5",
+      "method": "step_one",
+      "line": 56,
+      "end_line": 112,
+      "method_sha256": "f36d61895589e0f0d3d778e4e71a8280b6b3884bd1cd9a86b6cc7e9f6a55779e",
+      "direct_calls": [
+        {
+          "line": 101,
+          "expression": "self._guard"
+        }
+      ]
+    }
+  ],
+  "wall_s": 14.463338079862297,
+  "peak_RSS_bytes": 23629824,
+  "owned_bytes": 26134756352,
+  "provider_quota_unknown": true,
+  "new_independent_probe_bytes": 12288,
+  "limitations": [
+    "No original per-tick profile or full native step attribution",
+    "No Torch/CUDA memory call timing",
+    "Closed-tree size measurement is not time-varying live writer size",
+    "Independent fsync sample not original per-event I/O cost",
+    "No source39 native qualification, safety weakening, budget change, or dispatch"
+  ]
+}

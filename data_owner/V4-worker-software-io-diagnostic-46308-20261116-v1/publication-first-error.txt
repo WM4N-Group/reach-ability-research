@@ -1,0 +1,7 @@
+2026-11-16 local metadata-only publication:
+STATUS.md, README.md and AGENTS.md directory+file-flock/SHA-CAS/atomic-replace assertions succeeded.
+Shared progress was not changed in this attempt. Bytes.index(str) delimiter typo:
+  File "publish_diagnostic.py", line 34
+    j=before.index('\n## ',i+1)
+TypeError: argument should be integer or bytes-like object, not 'str'
+Do not rerun once-only publisher. Separate shared-only continuation preserves first three poststates.
