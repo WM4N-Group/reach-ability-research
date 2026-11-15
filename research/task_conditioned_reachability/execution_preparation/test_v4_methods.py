@@ -207,6 +207,62 @@ class SourceSeamTests(unittest.TestCase):
         p=VLMWMIntentPlanner(backend,wm,optimizer_enabled=True,path_cost=self.cost,journal=self.journal,software_fixture=True);s=p.select(b)
         self.assertEqual(s.option_sha256,b.options[0].sha256);self.assertTrue(p.last_choice['optimization_applied'])
         self.assertEqual(wm.calls,1);self.assertEqual(len(backend.requests),1)
+    def test_B_D_emit_one_same_schema_factor_event_matching_returned_selection(self):
+        for arm in ('B','D'):
+            with self.subTest(arm=arm):
+                journal=Journal();b=self.batch()
+                if arm=='B':
+                    planner=VLMWMIntentPlanner(FakeBackend(),FakeWM(),optimizer_enabled=True,
+                        path_cost=self.cost,journal=journal,software_fixture=True)
+                else:
+                    planner=AinavSuccessorAdapter(AinavPlanner(self.roles,journal,plan_count=2),
+                        optimizer_enabled=True,path_cost=self.cost,journal=journal,software_fixture=True)
+                selected=planner.select(b)
+                rows=[e for e in journal if e['event']=='reach_v4_shared_optimizer_choice']
+                self.assertEqual(len(rows),1)
+                self.assertEqual(rows[0]['selected_root_sha256'],selected.option_sha256)
+                self.assertEqual(rows[0]['baseline_option_sha256'],b.options[1].sha256)
+                self.assertTrue(rows[0]['optimization_applied']);self.assertTrue(rows[0]['choice_changed'])
+                self.assertFalse(rows[0]['physical_action_issued']);self.assertTrue(rows[0]['software_fixture'])
+                json.dumps(rows)  # Never put a PublicPath/dataclass in the durable source journal.
+                if arm=='B':
+                    selection_row=next(e for e in journal if e['event']=='reach_v4_vlm_wm_selection')
+                    self.assertEqual(selection_row['shared_optimizer_choice_ref'],
+                        'EXPLICIT_SOFTWARE_JOURNAL#'+str(journal.index(rows[0])+1))
+
+    def test_A_C_never_emit_new_treatment_event(self):
+        for arm in ('A','C'):
+            journal=Journal()
+            planner=(VLMWMIntentPlanner(FakeBackend(),FakeWM(),journal=journal,software_fixture=True)
+                if arm=='A' else AinavSuccessorAdapter(AinavPlanner(self.roles,journal,plan_count=2),
+                    journal=journal,software_fixture=True))
+            planner.select(self.batch())
+            self.assertFalse(any(e['event']=='reach_v4_shared_optimizer_choice'for e in journal))
+
+    def test_B_fallback_is_countable_but_not_effective_or_physical_optimization(self):
+        planner=VLMWMIntentPlanner(FakeBackend(),FakeWM(),optimizer_enabled=True,
+            journal=self.journal,software_fixture=True)
+        b=self.batch();selected=planner.select(b)
+        row=next(e for e in self.journal if e['event']=='reach_v4_shared_optimizer_choice')
+        self.assertFalse(row['optimization_applied']);self.assertFalse(row['choice_changed'])
+        self.assertEqual(row['selected_root_sha256'],selected.option_sha256)
+        self.assertEqual(selected.option_sha256,b.options[1].sha256)
+        self.assertGreater(row['unknown_or_partial_paths'],0)
+
+    def test_B_D_missing_shared_event_journal_ref_blocks_dispatch_even_on_fallback(self):
+        class MissingSharedRef(Journal):
+            def __call__(self,row):
+                ref=super().__call__(row)
+                return None if row['event']=='reach_v4_shared_optimizer_choice' else ref
+        for arm in ('B','D'):
+            journal=MissingSharedRef()
+            planner=(VLMWMIntentPlanner(FakeBackend(),FakeWM(),optimizer_enabled=True,
+                journal=journal,software_fixture=True) if arm=='B' else
+                AinavSuccessorAdapter(AinavPlanner(self.roles,journal,plan_count=2),optimizer_enabled=True,
+                    journal=journal,software_fixture=True))
+            with self.assertRaisesRegex(ValueError,'Durable shared optimizer'):
+                planner.select(self.batch())
+
     def test_A_B_no_known_current_WM_predictions_cannot_claim_method_identity(self):
         backend=FakeBackend();wm=FakeWM();wm.unsupported=True
         p=VLMWMIntentPlanner(backend,wm,journal=self.journal,software_fixture=True)

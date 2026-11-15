@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-16T04:18:00+08:00",
+  "at": "2026-11-16T04:45:31.637124+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
-    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "db07d6e6f573c551bb43c8cf4cfdc026e466a993dc1451a0fd8964cf88dddb95",
+    "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "38787016a99e346b92d745a8ca0884128b68356d29beb9fe28e8f140a2865689",
     "research/task_conditioned_reachability/execution_preparation/v4_raw_wm_adapter.py": "f89e2cbbdbe53e81fa451c4b85686294c3ad7bb0b00e04728983557052d6674e",
     "research/task_conditioned_reachability/execution_preparation/v4_outcome_summary.py": "b2dc249d363a419f8c53eab0b36cb7303fb3ece88bc8ef91e824e264c4851509",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "3404ea0cddce0d7f0cc2d88e6ba4f8c7f26fe9dd0a63ccd34aae62b6094fb197",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_methods.py": "17fe328a7826790b9cc830fc64ab05a360858584476934ff6cae2e7742ee03ef",
     "research/task_conditioned_reachability/execution_preparation/v4_provider_binding.py": "c306546fb11d8d0f5dd029a16c818e0c0e92e85b09ffac2b9e1bb162400070a3",
     "research/task_conditioned_reachability/execution_preparation/test_v4_provider_binding.py": "3e543504941a3534b1477834c901574ffffcd049b64a233e5c850cad74e36a6f",
     "research/task_conditioned_reachability/execution_preparation/v4_box_skill_domain.py": "f9682e1d3b1fc401ede52407e5c124fe7a5aaaaaed366a058c853eaa5339875a",
@@ -66,6 +66,7 @@
   "exact_new_runtime_dependency_freeze_still_required": true,
   "current_rule_source_sha256_after_factor_scope_clarification": "d493add4d7963c0876d02f9989767fd2b860c7ea3bc8992eb81f5ce9010578b0",
   "complete_reference_accountant_implemented_public_geometry_effect_model_still_unbound": true,
-  "current_readonly_AINav_source_package_sha256": "adfe550793150ae69d474062d634d9a4c9bd1b2d4100dd23be5ffd3a6434eff5",
-  "current_readonly_AINav_source_members": 32
+  "current_readonly_AINav_source_package_sha256": "d376307de14d1ca5eaf1117a5228bb82d07fc84e64dde8e7a014a6c5a2f8a0fe",
+  "current_readonly_AINav_source_members": 34,
+  "B_D_shared_choice_event_schema_unified_not_effective_or_physical_count": true
 }

@@ -37,3 +37,13 @@ AINav commit **8105e755…/30-source**明确选择`LEGACY_COMMON_NOT_TREATMENT_S
 4. B/D原root/全后继优化状态、legacy-common与treatment-specific准备path实际调用/改变次数分开记录；严格隔离模式下E/A/C的此处理因子callback/kernel次数应0。共同底座模式下不能将旧H误计成新后继优化调用，也不能抹掉其真实原生开销。即使B/D只改本地prep，也不当完整后继预测/新solver或方法收益。
 
 8项新增明确metadata namespace fixtures在本机/46308验证OFF、非法强开、原None guard、旧callback不能伪禁用、task0/不可重绑、别名漂移/先验检查；True路径只mock既有binder安装，不冒真实guard/物理资格。本模块尚未被AINav/Data采用或执行；首次测试的空格SyntaxError已修，未改原gate/expected遮掩。
+
+## 2026-11-16 04:45：修正B/D新selector事件的真实source记账接缝（无五main受影响）
+
+发现具体不一致：AINav原`FactorJournal`只认`reach_v4_shared_optimizer_choice`，D已发此事件，但B只发`reach_v4_vlm_wm_selection`。若未来直接接线，B的选择可能漏掉共同factor计数与fixture拒绝门；这是本组方法适配的记录缺陷，不是已发生的物理污染或方法收益。
+
+现在两者复用同一`_record_shared_choice`：B/D每次selector完成各发一次相同schema的shared event，准确绑定当前query、baseline与selected root、UNKNOWN/预算/有效应用/是否改变，过滤PublicPath对象；B原VLM-WM选择事件只引用该记录，不作第二次优化计数。A/C不发新treatment事件，E及共同legacy-H原样。shared event无持久引用时包括fallback均拒绝返回dispatch selection。零WM/Actor/native算法变更。
+
+**计数含义仍区分：** shared选择事件可以是UNKNOWN保原baseline，不能把事件数等同有效优化次数、实际kernel调用、已发物理动作或任务收益。`optimization_applied`、`choice_changed`与后续native实际消费分别报告，不将WM selection和shared event双计；这里没有替Data伪造effective_choices或修改source ledger。
+
+新增4项专项，连受影响methods/reference/provider共69项软件检查本地/46308两端过（非138实验）。另外逐byte读取原factor_scope（SHA b34a5487…）并只编译原纯`factors`/`FactorJournal`定义的接口smoke确认：真实source gate对B/D的软件fixture shared event均拒绝，A/C无新treatment；没有把fixture改标生产、构造native或修改他组源码。AINav新34-member package d376307d…逐成员核过；typed CLIMB→NAV只是新源，仍未接factory/外层guard/公共目录，非handoff资格。五main/真实WM forward仍0，真实完整效果/cost/退出域与既有布局缺口不变。

@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 04:45：B/D共享优化事件接缝已修正；69软件两端过，不把事件数冒有效优化
+
+- **修复真正方法—source记账不一致，而非新建接口：** 原B只发VLM-WM selection，source FactorJournal只认shared optimizer event，D此前已发。现B/D复用同一记录函数，各次selector完成恰一条shared event，B原selection仅引用该证据；A/C不发、E与legacy H不变。事件绑定当前query/baseline/实际返回root与有效应用/改变/UNKNOWN预算状态；无持久shared引用包括fallback均不返回派发selection。此为运行前正确性修复，五main仍0，不冒已发生优化/污染。
+- **事件数不冒方法贡献：** UNKNOWN fallback也有记录，必须区分选择完成次数、optimization_applied、choice_changed、kernel调用和真实native消费；不能将B两种事件双计或把失败/缺项填0。新增4专项，连方法/参考核算/provider共69软件检查本地与46308两端过；只编译原factor_scope纯定义的额外接口smoke确认B/D fixture均被真实source gate拒绝，A/C无treatment。未改fixture标记/他组代码/H/锁/driver，不调用WM/Actor/API/physics/fit。
+- **最新source/计划与未完成：** 总计划22f570c1…未再变；AINav34-member package d376307d…逐成员核过，typed CLIMB→NAV adapter尚未接factory/外层guard/公共NAV目录，不当已装配/进入/物理资格。Reach完整参考路程核算已有，但公共几何effects/准备退出域/真实WM bootstrap与.20→.60/static deck/完整terminal仍未闭合，五main/真实WM forward0。bulk24 closed/10成功14失败/12决策/4表和fit-refit=false、全部dirty/旧index/数据用途保留，不复开/补标签/热换模型或擅改布局。
+- **可发现交付：** 具体缺陷与计数边界追加至`/home/yuanyue/reach-ability-research/operations/V4_PREPARATION_FACTOR_ISOLATION_CN.md`；方法修正仅本组代码，计算端仍46308，本地只小代码/元数据，无原片/权重/数组新增下载。
+
 ### 2026-11-16 04:18：新增B/D完整参考路程核算组件；65项软件两端过，真实效果模型仍未绑定
 
 - **继续实现共享目标计算，不重复bulk审计：** 新`v4_reference_cost.py::CompleteReferenceCost`供B/D同一path_cost接口；逐步传播公共名义状态，强制preparation/skill/preparation_exit三段参考与步间连续，全部参考路程求和，完整任务terminal未核/退出缺失则UNKNOWN/None。每步同query/primitive/起始状态SHA绑定；不偷用bulk后果/initial blueprint，不以截短树叶冒完整后继。显式静止参考允许路程0，**不表示收臂/验证耗时0**；metric仅m，不是完整成功成本秒/物理安全证书或新求解算法。

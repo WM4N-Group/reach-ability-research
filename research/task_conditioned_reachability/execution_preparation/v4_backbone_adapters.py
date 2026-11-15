@@ -24,6 +24,18 @@ def _validate_cost_provider(path_cost, software_fixture):
          'Fixture cost provider cannot supply production method choices')
 
 
+def _record_shared_choice(journal, *, backbone, query_sha256, baseline_sha256,
+                          decision, software_fixture):
+    # The source factor ledger counts THIS event, not a backbone-specific VLM
+    # selection. Emit once for both B/D, including explicit fallback outcomes.
+    public = {k:v for k,v in decision.items() if k != 'selected_path'}
+    ref = journal(dict(event='reach_v4_shared_optimizer_choice', backbone=backbone,
+        query_sha256=query_sha256, software_fixture=software_fixture,
+        baseline_option_sha256=baseline_sha256, **public, physical_action_issued=False))
+    need(type(ref) is str and bool(ref), 'Durable shared optimizer choice evidence')
+    return ref
+
+
 def _unknown(path, query_sha):
     return NominalCost(path.path_id, query_sha, 'UNKNOWN', None, False,
                        'V4_SOURCE_COMPLETE_SUCCESSOR_COST_NOT_BOUND')
@@ -75,9 +87,8 @@ class AinavSuccessorAdapter:
                 self.path_cost(batch.observation, path, query_sha256=batch.sha256))
         self.last_choice = decision
         selected = decision['selected_path']
-        public = {k:v for k,v in decision.items() if k != 'selected_path'}
-        ref = self.journal(dict(event='reach_v4_shared_optimizer_choice', backbone='AINav', query_sha256=batch.sha256,software_fixture=self.software_fixture,
-            baseline_option_sha256=original.option_sha256, **public, physical_action_issued=False))
+        ref = _record_shared_choice(self.journal, backbone='AINav', query_sha256=batch.sha256,
+            baseline_sha256=original.option_sha256, decision=decision, software_fixture=self.software_fixture)
         if selected is None or not decision['choice_changed']:
             return original
         root = roots[selected.path_id]; option = options[root.step.command_key]
@@ -182,7 +193,12 @@ class VLMWMIntentPlanner:
             choice=dict(selected_path=None,selected_root_sha256=original.sha256,optimization_applied=False,
                         choice_changed=False,reason='OPTIMIZER_OFF_DIRECT_VLM_WM_BASELINE')
         self.last_choice=choice; picked=choice['selected_path']; option=original if picked is None else options[picked.path_id]
+        optimizer_ref = None
+        if self.enabled:
+            optimizer_ref = _record_shared_choice(self.journal, backbone='VLM_WM', query_sha256=batch.sha256,
+                baseline_sha256=original.sha256, decision=choice, software_fixture=self.software_fixture)
         ref=self.journal(dict(event='reach_v4_vlm_wm_selection',query_sha256=batch.sha256,software_fixture=self.software_fixture,
+            shared_optimizer_choice_ref=optimizer_ref,
             baseline_option_sha256=original.sha256,selected_option_sha256=option.sha256,
             WM_forward_batches=evidence['actual_model_forward_batches'],
             **{k:v for k,v in choice.items() if k not in('selected_path','selected_root_sha256')},
