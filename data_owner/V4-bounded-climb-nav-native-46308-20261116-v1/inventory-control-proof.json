@@ -1,0 +1,32 @@
+{
+  "program_sha256": "788c611614972409ba371fd00a8c5806fa5081e7df6d85ac4b96054761b43982",
+  "authorization_sha256": "c5bd3a6eac4e4939007a4db9d409517e95b1ab031a80af69369085082dbe2384",
+  "members": 491,
+  "resources": {
+    "at": "2026-11-16T05:46:32.398467+08:00",
+    "GPU0_free_MiB": 24080,
+    "canonical_GPU0_locks": [
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+        "device": 51,
+        "inode": 3428729629,
+        "free_snapshot_not_lease": true
+      },
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+        "device": 51,
+        "inode": 3428729630,
+        "free_snapshot_not_lease": true
+      }
+    ],
+    "owned_bytes": 26127099392,
+    "conservative_reserve_bytes": 13421772800,
+    "owned_limit_bytes": 42949672960,
+    "provider_quota_unknown": true,
+    "available_RAM_bytes": 122348890112,
+    "legitimate_GPU1_native_PIDs_preserved": [],
+    "no_owned_GPU0_native": true,
+    "no_new_lease_from_snapshot": true
+  },
+  "no_H_write": true
+}

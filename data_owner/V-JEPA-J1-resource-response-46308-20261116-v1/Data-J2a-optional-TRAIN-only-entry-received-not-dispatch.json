@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-16T05:58:35.342423+08:00",
+  "request_path": "/home/yuanyue/main/work/v-jepa/requests/J2a_train_only_push_optional_entry_v1.json",
+  "request_sha256": "3f97e4190df846266771d620c97aa918d36dff65d03ab76757517f466f4bb50a",
+  "parent_request_pin_unchanged": true,
+  "optional_not_second_required_batch": true,
+  "accepted_for_review": {
+    "domain": "single_front_target_ground_push",
+    "minimum_distinct_real_Push_executions": 4,
+    "at_least_public_goal_settings": 2,
+    "maximum_method_segments": 8,
+    "features": "public PUSH parameters6D incl presence masks; no bbox/body ID/target-ref feature",
+    "TRAIN_only_one_ancestor_permitted": true,
+    "method_fit_cap_steps": 25,
+    "no_CAL_EVAL_or_generalization_ranking_system_claim": true,
+    "old_2TRAIN_CAL_comparison_gate_unchanged": true
+  },
+  "current_registered_VJEPA_WM_purpose_release_count": 0,
+  "new_native_collection_or_fit_or_GPU_dispatch_approval": false,
+  "existing_component_probe_not_J_training_data": true,
+  "Data_next_scope_design": "A genuinely new future ground-PUSH purpose/source/stop-registration; not relabel old bulk/critic/audit/V4 or reopen a closed scope",
+  "current_priority": "Finish precise V4 native integration qualification; preserve all recorder failures/costs first",
+  "no_extra_model_license_key_or_signature_gate": true
+}

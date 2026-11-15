@@ -1,0 +1,29 @@
+{
+  "original_result_passed": false,
+  "source_result_sha256": "1469fdb251879c9b834476bc28636917b4016fe6d1dd0a794574b6e315f84525",
+  "all_frozen_source_members": 491,
+  "frozen_source_bytes_verified": true,
+  "journal_chain_verified_rows": 2,
+  "original_error": "Exact private catalog boundary required",
+  "original_failure_stage": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+  "no_Runtime_Actor_Renderer_WM_or_physics_imports": true,
+  "task_success_not_inferred": true,
+  "model_input_allowed": false,
+  "training_allowed": false,
+  "checks": {
+    "episode_storage_complete": true,
+    "continuous_200Hz_commands": true,
+    "original4step_delay_FIFO_exact": true,
+    "raw_PD_reproduction": true,
+    "original_hard_clip": true,
+    "onboard_visual_previous_action": true,
+    "original10Hz_grid_complete": true,
+    "no_teardown_errors": true
+  },
+  "actual_commands": 0,
+  "original_onboard_frames": 0,
+  "max_raw_PD_error": 0.0,
+  "max_hard_clip_error": 0.0,
+  "original_capture_sample_events": 0,
+  "actual_assembly_events": []
+}

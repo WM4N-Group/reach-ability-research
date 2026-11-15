@@ -1,0 +1,23 @@
+{
+  "root": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1",
+  "original_files_sha256": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/claim.json": "afaa689ed05aa32f810fab4e15708ff63ac66f301a62b35d55d693b16d63bb94",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/component-identity-NOT-METHOD-C.json": "7f343a1f54b2dfe17e167512a85e0c915082207906de12b763709fc336522571",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/events.jsonl": "c266a168c0eab450c448f4ca6d826f03fe7116d85586352b1a4c4c59572db934",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/ledger.json": "12da11a0ce00807d412e88c14ef677419698ecc726f3aa609aca24e3789a96c0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/resource-lease.json": "45f385404604c0c2042982e2c9b33556df4d05bc378bd926973f69f510273663",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/result.json": "1469fdb251879c9b834476bc28636917b4016fe6d1dd0a794574b6e315f84525",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/V4-elevated-registry.json": "c7f165ac02424b7545f680184e925c58767e62ba15e54e9a7b69e59b006fab4e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/static-MJB-input.json": "d730b1b3fb2b3835b81d0a0ca1cf64fe4173e4a3b2be9314e72a0e2006b48f26",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/episode/private-catalog.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/episode/closure.json": "2e55578ff9c6ef33134089e143e18f854451c540d2ec856d2d6a722d6a2e99d4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/episode/control-boundaries.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/episode/episode.json": "c278d357d9e043f2a3b4f2531571f176b972ddcfe5ea57993a1e8d8de7c07ba5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-bounded-climb-nav-native-20261116-v1/episode/index.json": "eda00c1024710c86558d6b126ec876ab031ae869e2afd456a8eb55acb146d0e8"
+  },
+  "arrays_MJB_private_journal_kept_remote": true,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "no_VJEPA_purpose_grant": true,
+  "no_full_task_or_skill_success_claim": true
+}

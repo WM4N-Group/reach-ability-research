@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T05:54:02.611061+08:00",
+  "checks_passed": 5,
+  "adapter_sha256": "7c78614689400f18a4439f593784e54c489e555f9a1cf61371a6c1770b0d06fb",
+  "packet_and_private_original_not_mutated": true,
+  "raw_writer_still_checks_all_shapes_clocks_calibration": true,
+  "no_Torch_numpy_Actor_native_or_physics_calls": true,
+  "no_physical_retry_or_old_scope_reopen": true
+}
