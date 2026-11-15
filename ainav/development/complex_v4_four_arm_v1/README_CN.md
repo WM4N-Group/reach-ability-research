@@ -2,6 +2,18 @@
 
 2026-11-15，按22:53总计划。当前优先A/B=VLM+WM无/有共享优化，C/D=原AINav无/有同一共享优化，E=无VLM/WM/优化的固定规则；主比较B−A/D−C。旧API0 greedy/multistep两组不是这五组的代理。
 
+## 2026-11-16：typed live CLIMB→原NAV adapter源（尚未装入factory/目录）
+
+新增`climb_nav_adapter.nav_class`／`make_live_source_witness`默认OFF。它不是把上一版只读Observation直接加入NAV的accepted类型：新`LiveClimbNavSourceWitness`必须消费**同tick真CLIMB source观测＋保留的原成功PUSH placement/NN/STOW_VERIFIED/当前required geometry**，构造私有SceneRegistry view（原objects/goal不变，仅增唯一source surface），持两个原实发global18参考、原guard和软硬limit交集；不是cold Capture/failed-PUSH/HOLD。
+
+原RegisteredCompactNav仅两个source site做精确可逆变化：accepted tuple显式加该新live类型；contact guard给**其真实source对象**entered refs，仍原forbidden-body逻辑。原NAV `update`／Actor／`command`／`after_step`／protected arrival／report全原样继承，原world/FIFO/history/goal/effort/rate/frame检查不删；Reach原H/新treatment因子也不变。不猴补原模块或改Actor权重。
+
+**交接生命周期**：constructor前只认原same-tick succeeded CLIMB；只许一次构造，失败撤销。constructor完成后，只有真正安装且entered的原NativeOptionSession/RegisteredNavMachine、exact native-nav owner、原executor/current issued tick才可继承contact authority，别的owner/failed/expired/旧source重放均拒绝。源placement当前几何继续过原gate，不发明放宽的drift阈值。NAV完成边界再核所选箱实际4脚法向≥12N及原height/footprint/goal margin，原arrival/stow继续必须通过。
+
+**不能把站稳12N门错套成NAV全程四脚不离地**：原NAV是有摆腿的步态，入口／arrival保四脚12N；active gait由实际新NAV owner及原controller/guard/contact/effort/footprint约束，不继续用已过期的旧CLIMB stopped-pose当活动owner，否则会人为禁止原NAV走路。此处没有降低原入口/成功门，也没有拿新类型证明原policy可靠。
+
+调用方应使用返回witness的`witness.nav_type`（与其精确类型seal同次生成），不能再另调nav_class生成另一type。**当前还未接V4 factory的source resolver/选中NAV构造、outer contact authority和同support公共NAV目录**，所以不是可执行handoff资格；下一步须把内外guard及query/witness/dispatcher同步接上，不能仅让某个inner guard放行。新12项只类型/phase/one-shot/源码可逆及原方法identity的SOFTWARE fixtures，未构造任何真实NAV/source或调用Actor/physics/API；Data仍须新准确程序必要资格。static/40cm/完整高台终点与WM bootstrap未因此解决。
+
 ## 2026-11-16：原CLIMB真实终态的NAV-source必要证据观测（不是handoff准入）
 
 新增`climb_nav_source.read_actual_climb_nav_source`默认OFF，Data实际guard后只接受**当前已成功/entered的原NativeOptionSession、RegisteredClimbMachine、ActualClimbSupportWitness**，核同世界model/data/FIFO、selected private option/opaque/body ID与registry。新driver只在真实CLIMB succeeded receipt边界调用，观测PRIVATE evidence，不发控制命令，不喂VLM/WM。**还没有把它接成原NAV可接受witness，也未改变原support/contact gate或宣称CLIMB→NAV已打通。**
