@@ -1,0 +1,190 @@
+{
+  "schema": "Reach-V4-five-arm-method-config-v1",
+  "at": "2026-11-15T23:02:23.706181+08:00",
+  "task_id": "T-COMPLEX-01-V4-FIVE-ARM",
+  "main_plan_sha256": "26b67d55d0d8d8a6312ac8e19ec85de50f3f753bc8e503aaef8fb0eed20a7e9d",
+  "main_plan_version": "2026-11-15 22:53",
+  "historical_four_arm_input_sha256": "cf76b4181f40981a20b32feefceea2180d7d97fc31677fd06db3c954f9154749",
+  "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "state": "METHOD_CODE_IMPLEMENTED_SOFTWARE_SEAMS_ONLY_NOT_NATIVE_PROGRAM_FREEZE",
+  "arms": [
+    {
+      "id": "A",
+      "backbone": "NEW_DIRECT_VLM_PLUS_ORIGINAL7A6_RAW_WM",
+      "our_optimizer": false,
+      "builder": "build_v4_planner",
+      "historical_API0_substitution": false,
+      "WM": true
+    },
+    {
+      "id": "B",
+      "backbone": "NEW_DIRECT_VLM_PLUS_ORIGINAL7A6_RAW_WM",
+      "our_optimizer": true,
+      "builder": "build_v4_planner",
+      "historical_API0_substitution": false,
+      "WM": true
+    },
+    {
+      "id": "C",
+      "backbone": "ORIGINAL_AINAV_ROLES_TREE_ADVISOR_ARBORIST",
+      "our_optimizer": false,
+      "builder": "build_v4_planner",
+      "historical_API0_substitution": false,
+      "WM": false
+    },
+    {
+      "id": "D",
+      "backbone": "ORIGINAL_AINAV_ROLES_TREE_ADVISOR_ARBORIST",
+      "our_optimizer": true,
+      "builder": "build_v4_planner",
+      "historical_API0_substitution": false,
+      "WM": false
+    },
+    {
+      "id": "E",
+      "backbone": "AINAV_OWNED_PREREGISTERED_RULES",
+      "our_optimizer": false,
+      "WM": false,
+      "VLM": false,
+      "implementation_owner": "AINav",
+      "rule_source_not_implemented_by_Reach": true,
+      "rule_content_and_ties_recovery_to_be_frozen_before_results": true,
+      "no_result_tuned_correct_route": true,
+      "independent_baseline_not_replacement_for_ABCD": true,
+      "source_sha256": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237",
+      "max_semantic_selections": 64,
+      "source_review": "STATIC_PUBLIC_INFO_AND_ACTUAL_RECEIPT_UPDATE_ONLY_NOT_NATIVE_QUALIFICATION"
+    }
+  ],
+  "primary_contrasts": [
+    "B-A",
+    "D-C"
+  ],
+  "secondary_backbone_contrasts_not_WM_causal_effect": [
+    "A-C",
+    "B-D"
+  ],
+  "same_optimizer": {
+    "module": "research.task_conditioned_reachability.execution_preparation.v4_successor_choice",
+    "objective": "COMPLETE_DECLARED_REFERENCE_TRAVEL_METERS_INCLUDING_PREPARATION_EXIT_CONNECTORS",
+    "source": "V4 original public path cost provider; no elapsed-WM or outcome labels",
+    "max_paths": 256,
+    "max_public_steps": 16,
+    "max_wall_s": 0.25,
+    "missing_any_path": "KEEP_EXACT_ORIGINAL_BACKBONE_NOT_OPTIMIZATION_GAIN",
+    "partial_scope": "UNKNOWN",
+    "nominal_refutation": "NOT_NATIVE_UNSAFE_PROOF",
+    "solver_novelty_claimed": false
+  },
+  "baseline_preservation": {
+    "C_D": "Always execute original AinavPlanner.select roles/tree/replan; D pre-dispatch override updates exact pending primitive and real outcome hook",
+    "A_B": "New explicit V4 direct full-plan VLM+WM baseline, NOT claimed identical old FiveBox driver; actual receipts/rejections trigger fresh replanning",
+    "E": "Own fixed rules/source/fresh feedback; no VLM/WM/added optimizer, not isolated existence-oracle witness",
+    "no_shared_optimizer_off_baseline_weakening": true
+  },
+  "shared_information_and_budgets": {
+    "public_inputs": "Only original current Observation/semantic candidates and declared geometry; no private ExecutionBatch/GT/existence route",
+    "max_source_root_candidates": 128,
+    "max_proposed_plans": 5,
+    "max_steps_per_plan": 16,
+    "max_VLM_role_calls_per_decision_ceiling": 8,
+    "proposed_episode_VLM_call_cap_ABCD": 100,
+    "proposed_episode_total_token_cap_ABCD": 1000000,
+    "proposed_reply_token_cap_ABCD": 8192,
+    "VLM_timeout_s": 90.0,
+    "E_VLM_calls": 0,
+    "E_WM_calls": 0,
+    "E_added_optimizer_calls": 0,
+    "E_no_fake_API_quota_consumption": true,
+    "WM_only_A_B": true,
+    "WM_batch_candidates": 16,
+    "WM_original_terminal_prediction_interval": "Exact original option budget <=60s, not successful endpoint guarantee",
+    "same_VLM_provider_model_and_sampling": "USER_CONFIRMED_OFFICIAL_TLS_DEEPSEEK_FLASH_THINKING_DISABLED_SAME_ORIGINAL_BACKEND; actual served metadata and runtime injection still required",
+    "actual_calls_wall_tokens_and_WM_work_reported": true,
+    "previous256_call_proposal_invalid_for_original_constructor_superseded_before_any_run": true
+  },
+  "WM": {
+    "checkpoint_sha256": "7a6ba61e89d824cd3e0a78f469a0925f91c784ab1f77ed4273365d6c313f569c",
+    "ABI": "BehaviorM.predict_behavior actual current belief/public60/target8/action11",
+    "load": "Owner supplied original frozen eval object and same-byte remote checkpoint; adapter validates SHA, never downloads or trains",
+    "native_query": "Original causal real RGBD + issued native history; observed skill never overwritten with candidate",
+    "new_context_prediction_role": "UNCALIBRATED_RAW_RESPONSE_NOT_SUCCESSFUL_FINISH_MODEL",
+    "absolute_PUSH": "UNKNOWN until exact causal public relative action11 mapping exists; no subtracting private/world initial pose",
+    "CLIMB": "UNKNOWN when original public approachXY absent; surface_height alone insufficient",
+    "success_logit": "RAW_UNCALIBRATED_NOT_NATIVE_PERMISSION",
+    "success_Finish_time_pose_READY": "UNKNOWN; not inferred from terminal raw heads",
+    "no_valid_current_predictions": "AB_METHOD_UNAVAILABLE_STOP_NOT_FAKE_WM_SWITCH",
+    "checkpoint_and_causal_IO_on46308_qualified": false,
+    "actual_WM_forwards_this_release": 0
+  },
+  "preparation_exit_domain": "Only source proposed legal public variants. No arbitrary standoff/arm/yaw/sidepush additions; full variants still source dependent",
+  "native_readiness": {
+    "V4_asset_and_E_owner": "AINav",
+    "current_selected_CLIMB": "Original20cm height predicate rejects proposed0.2->0.6 step; exact source report available",
+    "static_goal_deck_binding": "Original RegisteredClimbAdapter requires current RGBD registry.objects target; static SurfaceSpec unsupported",
+    "complete_successor_cost_provider": false,
+    "live_VLM_and_WM_seam_qualified": false,
+    "native_zero": 0,
+    "five_arm_mains": 0,
+    "original_videos": 0,
+    "evaluation_ready": false
+  },
+  "physical": {
+    "owner": "Data",
+    "server": "180.97.68.228:46308",
+    "five_new_main_maximum": 5,
+    "main_per_arm": 1,
+    "run_order_proposal": [
+      "E",
+      "A",
+      "C",
+      "B",
+      "D"
+    ],
+    "E_may_run_after_its_own_qualification_without_waiting_for_WM": true,
+    "E_outcome_not_used_to_tune_other_arms_and_call_it_unseen": true,
+    "order_and_exact_program_still_Data_freeze_required": true,
+    "automatic_retry": false,
+    "original_guards_and_weights_unchanged": true,
+    "closed_roots_not_reopened": true,
+    "new_scope_or_dispatch_authority_issued": false
+  },
+  "scalar_reader": "research.task_conditioned_reachability.execution_preparation.v4_outcome_summary",
+  "software_only_tests": 56,
+  "real_API_WM_Actor_worlds_or_training_started": 0,
+  "production_software_fixture_mode": false,
+  "production_rejects_fake_WM_or_fixture_AINav_roles": true,
+  "same_clock_readonly_rejection_replan_allowed_with_fresh_query_and_actual_feedback": true,
+  "method_implementation_gaps_owned_by_Reach": [
+    "V4 causal original model query/target8/action11 mapping and actual frozen WM checkpoint input on46308",
+    "Shared complete nominal successor path-cost provider AFTER public source capability/surface interface is available",
+    "Live source/Selection/native-option consumption and five-arm result parser binding"
+  ],
+  "VLM_public_runtime_profile": {
+    "profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
+    "backend_sha256": "11e5fdd868a41aa008469db6eb04f31d451c9e8cb35943fd65580573430a5919",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "TLS": true,
+    "thinking": "disabled",
+    "fallback_provider": null,
+    "secret_read_or_backend_construction_or_API_calls": 0,
+    "binding_module": "research.task_conditioned_reachability.execution_preparation.v4_provider_binding",
+    "configured_does_not_mean_injected_or_authenticated": true
+  },
+  "same_box_parameter_point_for_all_arms": {
+    "policy_report_sha256": "8c183d87915cff36bbac6252043565261db315660b52175d3f83a9afc249ad0d",
+    "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+    "size_m": [
+      2.4,
+      1.4,
+      0.2
+    ],
+    "mass_kg": 0.5,
+    "bottom_mu": 0.4,
+    "foot_top_mu": 0.8,
+    "current_values_already_match": true,
+    "all_V4_physical_success_not_certified": true,
+    "platform_or_layout_not_changed_by_box_request": true
+  }
+}

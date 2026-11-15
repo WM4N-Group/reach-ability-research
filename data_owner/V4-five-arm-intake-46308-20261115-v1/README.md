@@ -1,3 +1,7 @@
+# 当前箱参数授权已确认，不再重复反问
+
+用户本轮明确已要求Reach把各箱参数锁到现有技能可行范围。Reach23:22锁定表已消费；当前入口`/home/yuanyue/main/work/data-team/manifests/V4-box-skill-lock-consumption-46308-20261115-v1/README.md`。下方23:15“需设计决定”是当时部分源记录，**不是本轮再次索箱参数许可**；箱参数与高台/支撑接续分层处理。DeepSeek profile和原100次构造门也已明确，旧provider疑问关闭。
+
 # 当前：22:53 V4五组，E资格齐备可先执行
 
 主计划26b67d55…新增E=事前固定规则策略，独立第五组，不替代A—D、不调用VLM/WM/B-D共享优化。E由AINav实现共同底座，Reach核共同公开信息/对照，Data独立资格/lease/ownzero/main/录制；**E合格可先跑，不等WM，顺序/规则/恢复/tie和预算事前固定**，E真实结果不可反调A—D后仍称同一未见对比。

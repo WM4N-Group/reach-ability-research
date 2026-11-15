@@ -1,0 +1,130 @@
+{
+  "at": "2026-11-15T23:22:27.487613+08:00",
+  "role": "USER_REQUESTED_ALL_BOXES_CURRENT_SKILL_PARAMETER_LOCK_NOT_FULL_TASK_QUALIFICATION",
+  "user_request": "各箱子的参数都调整到目前技能可行的范围",
+  "source_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "locked_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "box_prototype": {
+    "size_m": [
+      2.4,
+      1.4,
+      0.2
+    ],
+    "mass_kg": 0.5,
+    "bottom_mu": 0.4,
+    "foot_top_mu": 0.8
+  },
+  "current_numeric_values_already_match": true,
+  "box_changes": [
+    {
+      "public_ref": "cuboid_a",
+      "changed_physical_attributes": {}
+    },
+    {
+      "public_ref": "cuboid_b",
+      "changed_physical_attributes": {}
+    },
+    {
+      "public_ref": "cuboid_c",
+      "changed_physical_attributes": {}
+    }
+  ],
+  "box_domain_checks": [
+    {
+      "public_ref": "cuboid_a",
+      "size_m": [
+        2.4,
+        1.4,
+        0.2
+      ],
+      "mass_kg": 0.5,
+      "bottom_mu": 0.4,
+      "foot_top_mu": 0.8,
+      "candidates": [
+        {
+          "goal_world_x_m": 2.15,
+          "declared_box_displacement_m": 0.1499999999999999,
+          "declared_native_drive_m": 0.2599999999999999
+        },
+        {
+          "goal_world_x_m": 2.6,
+          "declared_box_displacement_m": 0.6000000000000001,
+          "declared_native_drive_m": 0.7100000000000001
+        }
+      ],
+      "required_displacement_m": 0.6000000000000001,
+      "source_support_height_m": 0.0,
+      "nominal_ground_to_box_top_rise_m": 0.2,
+      "native_task_success_not_inferred": true
+    },
+    {
+      "public_ref": "cuboid_b",
+      "size_m": [
+        2.4,
+        1.4,
+        0.2
+      ],
+      "mass_kg": 0.5,
+      "bottom_mu": 0.4,
+      "foot_top_mu": 0.8,
+      "candidates": [
+        {
+          "goal_world_x_m": 6.65,
+          "declared_box_displacement_m": 0.15000000000000036,
+          "declared_native_drive_m": 0.26000000000000034
+        },
+        {
+          "goal_world_x_m": 7.1,
+          "declared_box_displacement_m": 0.5999999999999996,
+          "declared_native_drive_m": 0.7099999999999996
+        }
+      ],
+      "required_displacement_m": 0.5999999999999996,
+      "source_support_height_m": 0.0,
+      "nominal_ground_to_box_top_rise_m": 0.2,
+      "native_task_success_not_inferred": true
+    },
+    {
+      "public_ref": "cuboid_c",
+      "size_m": [
+        2.4,
+        1.4,
+        0.2
+      ],
+      "mass_kg": 0.5,
+      "bottom_mu": 0.4,
+      "foot_top_mu": 0.8,
+      "candidates": [
+        {
+          "goal_world_x_m": 11.15,
+          "declared_box_displacement_m": 0.15000000000000036,
+          "declared_native_drive_m": 0.26000000000000034
+        },
+        {
+          "goal_world_x_m": 11.6,
+          "declared_box_displacement_m": 0.5999999999999996,
+          "declared_native_drive_m": 0.7099999999999996
+        }
+      ],
+      "required_displacement_m": 0.5999999999999996,
+      "source_support_height_m": 0.0,
+      "nominal_ground_to_box_top_rise_m": 0.2,
+      "native_task_success_not_inferred": true
+    }
+  ],
+  "empirical_point_not_arbitrary_continuous_mass_size_range": true,
+  "source_lineage": "Original full4 B prototype/current exact AINav complex_scene validator; bulk01 real ground PUSH and20cm CLIMB succeeded, not V4 joint qualification",
+  "source_floor_wall_goal_and_platform_unchanged": true,
+  "platform_top_m": 0.6,
+  "remaining_box_to_deck_rise_m": 0.4,
+  "selected_original_CLIMB_rise_m": 0.2,
+  "all_boxes_compatible_does_not_fix_static_deck_or40cm_climb": true,
+  "unapproved_extra_platform_or_goal_lowering_not_applied": true,
+  "actor_weights_native_guards_or_inflight_sources_changed": false,
+  "new_world_Actor_API_WM_fit_or_dispatch": 0,
+  "original_source_pins": {
+    "/home/yuanyue/main/work/ainav/development/complex_dual_route_v1/complex_scene.py": "613a18e735addf31edfe448e6f46e58ad0c130f4066c9b4393a8720d686d78c0",
+    "/home/yuanyue/main/work/data-team/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/scene_registry.py": "1d5baefee91a46d0b92f72663eff59b49eb7e7cc18754f95ef036458502566bf",
+    "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-BULK24-ORDINAL-01-ORIGINAL-ACTUAL-20261115-v1/release.json": "904ff60895f6de27365b8c967c14d75983c3e3a3590040e373bb2ca1a0c9314c"
+  }
+}

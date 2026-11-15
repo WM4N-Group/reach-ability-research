@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-15T23:26:05.924195+08:00",
+  "current_user_instruction": "各箱子的参数都调整到目前技能可行的范围，已告知Reach",
+  "box_parameter_adjustment_permission_already_granted_no_repeat_request": true,
+  "source_report_sha256": "8c183d87915cff36bbac6252043565261db315660b52175d3f83a9afc249ad0d",
+  "locked_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "box_prototype": {
+    "size_m": [
+      2.4,
+      1.4,
+      0.2
+    ],
+    "mass_kg": 0.5,
+    "bottom_mu": 0.4,
+    "foot_top_mu": 0.8
+  },
+  "source_numeric_values_already_match": true,
+  "all_box_declared_native_drive_within_0p8": true,
+  "ground_to_box_declared_rise_m": 0.2,
+  "scope_of_acknowledgment": "BOX_PARAMETERS_AND_CURRENT_SKILL_REFERENCE_POINT_NOT_FULL_MISSION_QUALIFICATION",
+  "platform_preserved_by_Reach_lock_m": 0.6,
+  "remaining_declared_box_to_deck_rise_m": 0.4,
+  "remaining_joint_task_geometry_and_static_support_caller_separate_from_box_permission": true,
+  "no_unilateral_extra_platform_or_goal_lowering": true,
+  "provider_config_question_closed_by_existing_user_confirmed_public_profile": true,
+  "provider_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
+  "method_config_sha256": "78869e4a69f48f4a305d56276919a5dc7500173644c0a8bf92f3b952c62d44c0",
+  "ABCD_VLM_call_cap": 100,
+  "E_VLM_WM_optimizer_calls": 0,
+  "no_credentials_env_or_API_probe": true,
+  "source_files_before_after_identical": {
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-box-skill-lock-v1/BOX_PARAMETER_LOCK_REPORT.json": "8c183d87915cff36bbac6252043565261db315660b52175d3f83a9afc249ad0d",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-box-skill-lock-v1/SCENE_BOX_PARAMETERS_LOCKED.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/V4_METHOD_CONFIG.json": "78869e4a69f48f4a305d56276919a5dc7500173644c0a8bf92f3b952c62d44c0",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/SOURCE_INDEX.json": "0393caef2575ffd6a9207ed786486ca874d63ea20788624566deeb242b78c9c2",
+    "/home/yuanyue/reach-ability-research/protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/SOURCE_CALLER_HANDOFF_REQUEST.json": "961dba2ed4b5442350fd0b8c2e4e6f5ec2475fe2cb0d1bfbfdfb49eca2da55e9"
+  },
+  "no_repeat_87_source_CPU_checks": true,
+  "V4_new_zero_main_WM_API_world_calls": 0,
+  "H_native_inflight_program_caps_not_written": true,
+  "whole_package_not_model_input": true
+}
