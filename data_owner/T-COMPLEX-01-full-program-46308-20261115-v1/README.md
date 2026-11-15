@@ -7,3 +7,11 @@ Frozen native programs A626400b8…/B0ba38395…, zero/main1 each, no retry or o
 Necessary Data-only recorder alias: unchanged RegisteredObserver PRIVATE catalog has model_input=False/time_s while unchanged original recorder requires model_input_allowed=False. Preserve exact original catalog sidecar; add aliases on a copy at PRIVATE recording boundary only, INPUT8/native/GT-to-planner unmodified. Both arms same adapter,5 software-only regression checks passed; not5 physical examples.
 
 This directory is code custody, not authority on another host. SDK/assets/raw/MJB/videos/weights/H/ledgers remain remote and outside Git. Every phase needs own current SHA CAS, original source/API pins and canonical GPU0 live lease.
+
+## Actual A qualification/admission (2026-11-15)
+
+A own full-host zero passed, result15947a2e…, model numericfebcd592…; original onboard INPUT8/private recorder alias/review/direct HD one frame, task0/commands0, zero close errors. Actual zero35.978013324wall/6.505aux sim, RSS2630660096bytes, sampled GPU peak767557632bytes. Separate readonly cold passed, no new native call.
+
+A main CAS-dispatched once at16:56:33+08:00, native PID42697. At17:01:56 snapshot it was alive in original real cold capture, task.785sim/main ledger307.838wall incl initialization; witness/high-level decisions/full task result were not yet available. B remainszero/main0. Do not restart zero/main or claim full task/AB/video/advantage. This first DEV source diagnostic retains all source/infra/ordinary failures and spending; no source hotpatch or limit expansion. The one main-run controller continues only this bounded phase, no automatic B.
+
+Authoritative H/current metadata outside Git: /home/yuanyue/main/work/data-team/manifests/T-COMPLEX-01-full-program-46308-20261115-v1/. Follow existing PID/ledger first, never redispatch an already claimed phase.
