@@ -1,0 +1,34 @@
+{
+  "schema": "Data-one-full-host-zero-main-ledger-v1",
+  "scope_id": "data-native-prefix-left-PUSH-CLIMB-20261114-v1",
+  "provenance": "ACTUAL",
+  "program_sha256": "5472a8bb0709f2a4cce7a4354bdf99558d10ea06a9a30320261d798dbdf6193d",
+  "authorization_sha256": "c9787048453367833c4314f02399cefc6153cac86386d2277c3f86cfb67c165f",
+  "stopped": false,
+  "rows": [
+    {
+      "phase": "zero",
+      "PID": 3970326,
+      "started_monotonic": 1489678.786094547,
+      "closed": true,
+      "status": "OWN_ZERO_PASS",
+      "sim_s": 6.5049999999998835,
+      "wall_s": 42.51091388287023,
+      "output_highwater_bytes": 43552187,
+      "report_sha256": "333c26cdc6c4e1fa1eb385dc16db15545cc7f8a8b3afeb9fc4e7f4be94fe8393",
+      "usage_known": true
+    },
+    {
+      "phase": "main",
+      "PID": 3970779,
+      "started_monotonic": 1489767.973322814,
+      "closed": true,
+      "status": "REQUESTED_API0_PASS",
+      "sim_s": 127.58999999996225,
+      "wall_s": 909.8905702219345,
+      "output_highwater_bytes": 177089038,
+      "report_sha256": "9a879643f89143078dd1fd55f468f16b27ecfd68329faf28b71c1f41088bffc5",
+      "usage_known": true
+    }
+  ]
+}

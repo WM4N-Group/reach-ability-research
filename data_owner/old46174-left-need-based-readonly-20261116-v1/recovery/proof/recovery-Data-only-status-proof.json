@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-16T18:16:12.214414+08:00",
+  "release_sha256": "dce8b55447c3fa3d8ff289ac231ea643c320e1ffa08f8e64db2abca8f316b0f2",
+  "changes": [
+    {
+      "path": "/home/yuanyue/main/汇总/各小组进展汇总.md",
+      "before_sha256": "eada495a09e684b9d73b6b3d2200fcaa4af9e8c229d9146758cb2c6126c9ad0a",
+      "after_sha256": "e8dc49506956938ceb77c6f7a0c0b83f5edba59d1198732698c8b9414eb6be6e",
+      "directory_file_flock_SHA_CAS_atomic_replace": true,
+      "mode_preserved": true,
+      "peer_bytes_preserved": true
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/STATUS.md",
+      "before_sha256": "2ca983f0ca475308169818f41585124933897cdacd4271d0ba1e1f752dcc3c37",
+      "after_sha256": "2585765a9bcf470c227e89205a364a7386d7fdbfccb736c2be6a65af06f96d9e",
+      "directory_file_flock_SHA_CAS_atomic_replace": true,
+      "mode_preserved": true,
+      "peer_bytes_preserved": false
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/AGENTS.md",
+      "before_sha256": "fd0dc07af53ec52af6e08e0cfe7bc03cbff425b5cbaee146932dbee98d26a415",
+      "after_sha256": "94680e7a87fff7177a536e183c2e168abdd3cdb28acd939cf70b332eadbdad8d",
+      "directory_file_flock_SHA_CAS_atomic_replace": true,
+      "mode_preserved": true,
+      "peer_bytes_preserved": false
+    }
+  ],
+  "no_new_physics_no_old_scope_changes": true
+}

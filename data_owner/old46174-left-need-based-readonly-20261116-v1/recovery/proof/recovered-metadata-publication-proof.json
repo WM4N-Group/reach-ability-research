@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-OLD46174-LEFT-RECOVERED-ORIGINAL-METADATA-PASS-NOT-NEW-RUN-20261116-v1/release.json",
+  "release_sha256": "dce8b55447c3fa3d8ff289ac231ea643c320e1ffa08f8e64db2abca8f316b0f2",
+  "all_files_SHA_match": true,
+  "no_native_or_old_server_or_current_H_mutation": true
+}

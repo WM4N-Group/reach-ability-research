@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T18:18:15.809805+08:00",
+  "before_sha256": "e8dc49506956938ceb77c6f7a0c0b83f5edba59d1198732698c8b9414eb6be6e",
+  "after_sha256": "4f56fdce54b3593f95c03451f60d7f4fe75ede8cfa2f95a7d5bf75846ef6f572",
+  "archived_Data_sha256": "88c0cffae438bb0de56362f3e507b1f40e7bbab0aa5e80f30769861ae2c807d7",
+  "directory_file_flock_SHA_CAS_atomic_replace": true,
+  "peer_bytes_preserved": true,
+  "mode_preserved": true
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "Data-old46174-left-recovered-original-report-ledger-not-new-physical-run-v1",
+  "at": "2026-11-16T18:14:31.673806+08:00",
+  "scope_id": "data-native-prefix-left-PUSH-CLIMB-20261114-v1",
+  "old_program_sha256": "5472a8bb0709f2a4cce7a4354bdf99558d10ea06a9a30320261d798dbdf6193d",
+  "main_result_sha256": "9a879643f89143078dd1fd55f468f16b27ecfd68329faf28b71c1f41088bffc5",
+  "original_ledger_sha256": "5825aa3d97054de9c4796144bb7ff7de2a6d4d18ebbf3634acd4c34187f1abd1",
+  "original_reported_main_passed": true,
+  "original_reported_requested_success_count": 3,
+  "whole_task_success": false,
+  "new_physical_runs": 0,
+  "old_main_dispatch_count_unchanged": 1,
+  "previous_UNKNOWN_snapshot_preserved": true,
+  "old_H_not_current_authority": true,
+  "no_raw_cold_reaudit_claim": true,
+  "training_allowed": false,
+  "model_input_allowed": false,
+  "files": {
+    "recovery-assessment.json": "10ffdd2faa32b1c1331e1295d5cb76c4b3c338a9ea705b9ec6faf150d1699311",
+    "README_CN.md": "3d138d1a873bc0efa8ebb9de9a83fc47b245ae829595ab6ab1098f15ac8930cb",
+    "original/accounting/ledger.json": "5825aa3d97054de9c4796144bb7ff7de2a6d4d18ebbf3634acd4c34187f1abd1",
+    "original/main/result.json": "9a879643f89143078dd1fd55f468f16b27ecfd68329faf28b71c1f41088bffc5"
+  }
+}

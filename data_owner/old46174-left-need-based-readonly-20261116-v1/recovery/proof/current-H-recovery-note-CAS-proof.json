@@ -1,0 +1,7 @@
+{
+  "before_H_sha256": "6857666451dc0e765eaced10337860a79b3572cb2c0d7f9b75d6acf1a07c67c4",
+  "after_H_sha256": "0ff2347923b198f01c216dfdf53233529fd62e6b4d3f5ba6dd64326db1b6c0f2",
+  "all_prior_fields_unchanged_except_updated_at": true,
+  "added_field": "old46174_left_recovered_metadata_20261116_v1",
+  "no_old_server_H_or_scope_or_ledger_mutation": true
+}
