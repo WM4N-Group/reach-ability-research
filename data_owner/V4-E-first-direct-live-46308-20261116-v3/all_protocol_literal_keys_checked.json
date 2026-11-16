@@ -1,0 +1,27 @@
+{
+  "required": [
+    "GPU_UUID",
+    "appearance_revision",
+    "camera_candidates",
+    "cameras",
+    "ffmpeg_path",
+    "ffmpeg_sha256",
+    "main_task_sim_cap_s",
+    "main_task_step_cap",
+    "main_wall_cap_s",
+    "model_path",
+    "model_sha256",
+    "output_cap_bytes",
+    "own_GPU_cap_bytes",
+    "own_RSS_cap_bytes",
+    "plan_sha256",
+    "scene_sha256",
+    "scope_id",
+    "source_commit",
+    "zero_wall_cap_s"
+  ],
+  "all_present": true,
+  "camera_lists_equal": true,
+  "own_zero_max_and_main_max_emitted_and_required_match": true,
+  "no_native_test": true
+}

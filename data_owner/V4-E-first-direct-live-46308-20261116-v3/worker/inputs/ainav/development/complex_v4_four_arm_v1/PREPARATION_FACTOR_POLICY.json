@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-16T03:20:47.566954+08:00",
+  "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1",
+  "decision_owner": "AINav pre-first-main shared-execution factor clarification",
+  "current_plan_sha256": "42c8a90d31e84d8d3b0c832a405b0a654ad82319f3c0b7f5da49982c1f3cfc3a",
+  "mode": "LEGACY_COMMON_NOT_TREATMENT_SPECIFIC",
+  "legacy_common_stow_H": {
+    "enabled_for_arms": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "binder_sha256": "23c1d6b5d160de10259d469d43c57bf7c6d6e1616d4568b895ab8fdf76ac65a5",
+    "kernel_sha256": "f330cd5facba98922e995730ebd48ba4eb7a51a789b0ca9041a78758f2a97383",
+    "unchanged_original_guarded_finite_waypoint_kernel": true,
+    "not_attributable_to_B_minus_A_or_D_minus_C": true,
+    "all_actual_costs_included_in_each_arm": true,
+    "no_removal_to_weaken_original_C_or_force_literal_zero": true
+  },
+  "new_successor_optimizer": {
+    "enabled_for_arms": [
+      "B",
+      "D"
+    ],
+    "disabled_for_arms": [
+      "A",
+      "C",
+      "E"
+    ],
+    "owner": "Reach common complete successor selector, not this legacy H wrapper",
+    "legacy_kernel_install_not_proof_this_factor_ran_or_is_complete": true
+  },
+  "E_caption": "E: public fixed rules; VLM=0, WM=0, new successor optimizer=OFF; fixed legacy-common H execution layer same as A-D, not necessarily zero legacy kernel attempts",
+  "counting": {
+    "legacy": [
+      "attempts",
+      "completed",
+      "failed",
+      "kernel_result_changed",
+      "callback_choice_events"
+    ],
+    "new": [
+      "shared_successor_choice_events",
+      "choice_changed_events"
+    ],
+    "kernel_proposed_path_change_not_actual_issued_command_change_or_task_gain": true,
+    "new_kernel_invocations_not_inferred_from_choice_events": true,
+    "missing_completion_after_attempt_is_unknown_censor_not_zero": true
+  },
+  "runtime_binding": "factor_scope.install_legacy_common at fresh task0, explicit arm and same original journal; private binder globals copy changes only optimize to evidence wrapper; no Reach source/module or native source mutation",
+  "original_scope_artifacts_or_frozen_programs_modified": false,
+  "source_only_no_main_or_native_qualification": true,
+  "full_program_still_requires_exact_dependency_freeze_own_zero_lease_and_original_gates": true
+}
