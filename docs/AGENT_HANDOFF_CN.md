@@ -4,6 +4,7 @@
 
 ### 2026-11-16 21:57：PERF-01先真runner；旧2000前缀已核，不能混初始化/loop计时
 
+- **收尾新程序已具体冻结，不再笼统等runner：** Data21:59生成PERF-01独立scope `data-46308-perf-NAV2000-indexed-20261116-v1`、program cbc751e4…/510成员；本组22:00核远端freeze与authority960112bb…原件SHA。该时点未见zero/main result（不据此断言未派发/未构造Runtime），下一项是Data本程序必要zero与已定2000步性能测量，不是再加接口或本组签字。
 - **已接21:47 PERF-01收敛计划4af564bb…：** 唯一下一优先是Data真实runner/必要zero与固定同条件原生窗口结论，不继续扩guard/接口、不重刷CPU套件。当前Data新ResourceWatch8cd57028…原子oldest/completed已实装，与AINav87a桥14软件/端组合已由owner报告通过；本组核当前源/回执SHA后关闭“Data仍缺pair”的旧反馈，不能再拿其历史发布0c版本阻挡当前接线。
 - **实际runner已有源码，但未冒实际派发/测量：** Data新worker限定NAV前2000命令/10sim，装真实recorder/raw/受控publisher、FD/stdout/encoder与lease/health，源码/CPU contract不是新freeze或own-zero。按现有runner完成资格由Data直接执行，不增加Reach签字、wrapper或先整链成功前置。未收到新性能原件前，本轮口径是“未形成有效新原生测量”，不是已达标/已失败测量。
 - **旧参考窗口已直接核原件，发现并指出可避免的计时误比：** 旧E20 2000步checkpoint18:58:01为1205.163951803wall/10sim（120.516395wall/sim）；原worker SHA dad9fa32…显示该wall从main start、含prepare/初始化。新worker的window_wall_s从loop_start计，不能直接相除；对应字段应为scope_start_to_window_end_wall_s，冷启动/收束/编码另列。只有同口径与行为/保护条件通过后，<=241.032790s才是该总窗口5×的算术门槛，并非资格或已测结果。

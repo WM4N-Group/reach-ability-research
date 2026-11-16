@@ -154,7 +154,28 @@
   "do_not_sum_nested_original_metrics": true,
   "new_PERF01_native_result_not_yet_consumed": true,
   "PERF01_current_conclusion": "NO_VALID_NEW_NATIVE_MEASUREMENT_YET_NOT_A_MEASURED_PERFORMANCE_FAILURE",
-  "remaining_owner": "Data: freeze exact already-integrated real runner; required own-zero, held lease and preregistered bounded NAV2000 main; then compare matching clocks/commands/receipts/frames and cycle coverage.",
+  "remaining_owner": "Data: exact new PERF01 program freeze is now present and SHA-verified; complete required own-zero/held lease and one bounded NAV2000 main, then publish matching-origin throughput/cycle/behavior/cost conclusion.",
   "training_allowed": false,
-  "model_input_allowed": false
+  "model_input_allowed": false,
+  "PERF01_new_program_build_increment": {
+    "build_record_path": "/home/yuanyue/main/work/data-team/manifests/perf-runner-assembly-20261116-v1/actual-program-build.json",
+    "build_record_sha256": "d2ac6cd067188a9dd711388d55ff5536d7022407099bf544b65b24db8576025e",
+    "build_record": {
+      "at": "2026-11-16T21:59:06.868764+08:00",
+      "scope_id": "data-46308-perf-NAV2000-indexed-20261116-v1",
+      "worker_root": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/perf-NAV2000-indexed-46308-20261116-v1",
+      "manifest_root": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/manifests/perf-NAV2000-indexed-46308-20261116-v1",
+      "authorization": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/registry/PERF01_NAV2000_INDEXED_AUTHORITY_20261116_v1.json",
+      "authorization_sha256": "960112bb5acd474125aee0bc0db23a0c8860f65020f6ca31482ae7fd6c490804",
+      "program_sha256": "cbc751e43b257e291ddc8fa46073d567e7c53bb704b951fece30c83df786fc04",
+      "files": 510,
+      "new_runtime_not_created": true,
+      "native_calls": 0
+    },
+    "exact_remote_freeze_and_authorization_SHA_verified": true,
+    "observation_at": "2026-11-16T22:00:39.350670+08:00",
+    "new_zero_result_exists": false,
+    "new_main_result_exists": false,
+    "absence_of_result_not_claim_of_no_dispatch_or_no_Runtime": true
+  }
 }
