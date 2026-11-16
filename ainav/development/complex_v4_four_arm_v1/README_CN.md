@@ -253,3 +253,35 @@ CLIMB approach/full effects、static/multisource或.20→.60能力域。E仍无V
 明确fake method/typed软件回执，图像核验仅在测试内mock；没有实际传感器/Runtime/模型/API/Actor/物理调用。
 受影响driver原13项另核；不重刷未改动旧套件。当前Data **af09/aecec palette-v2保持原freeze**，
 不得为采用source55重跑成功scope、热换其源码或把其结果倒贴为55资格。
+
+## Source57：真实closed结果触发的cold Runtime→原selected-PUSH terrain ABI修复
+
+Data palette-v2/af09原结果 `ecbd2a5c…` 已closed：新palette后fresh关联和准备NAV成功，
+semantic READY后进入原selected PUSH构造，但在`terrain=runtime.staircase`处AttributeError；
+没有NativeMachine/session返回/安装或PUSH电机命令。不是PUSH控制器失败/原NN门失败，
+更不是CLIMB失败；旧root/结果/费用不能改写或恢复。
+
+`native_entry.construct_cold_components`现在在**同一原cold constructor返回之后、task0**
+安装`runtime_terrain.install_cold_registered_terrain`；原construction函数字节码与三callback不改。
+绑定的是**真正原RegisteredTerrain子类＋精确V4实际registry**，不是None/空对象/平地proxy，
+`surface_geometry/height_at/climb_geometry`逐对象原样继承（真实ray、原20cm门均保留）。
+拒绝任何已有staircase、非0步/非空FIFO、错scene/registry/guard/journal；所有qpos/qvel/
+clock/last command/FIFO/world引用前后不变，只新增cold runtime的这个metadata alias。
+
+还检查了原SDK Machine的后续`dock_metrics`消费，避免仅补属性后再次缺方法：
+新terrain对actual selected body/同world view和queue、原冻结六contract的native drive goal唯一匹配后，
+**直接调用原PlacementTerrain(contract).dock_metrics**。不使用旧integrated B/C固定几何，不用初始pose猜目标，
+不新造placement成功阈值；原原生AttemptTerrain.push_ready仍按原代码消费native-settled，
+原NN/两阶段placement/STOW/FF/QP/FIFO/12N/4s/stop所有代码不改。
+
+新增12项软件检查使用真实RegisteredTerrain/PlacementTerrain/六原contract和明确fake arrays/runtime；
+另按原source AST只执行eager fetch＋AttemptTerrain两个节点复现缺属性/修复后delegation，
+**没有构造实际selected PUSH controller/NativeOptionSession、Runtime、Actor或physics**。
+初次2项fixture误用frozenset.add的错误完整保留，修fixture而非放松原registry语义；最终12与受影响native-entry5检查通过。
+原静态MJB读取计数不增加；源码修复不是原生通过，需要Data新root/fresh lease/冻结程序验证。
+本改动不要求采用source53 shared prior或source55共同NAV prefix，后者仍默认OFF。
+
+E完整成功与完整直接录制视频继续硬目标。此次ABI修复不解决原V4 .20→.60的40cm高差，
+static-deck/multisource也未因此被授予。不得改高度/布置/原成功门追胜，不得把bounded组件片
+冒完整E片，不能为补片自动重开closed arm。先交Data必要新资格、真实E与同步direct-live录制，
+资源/终点未资格前不虚称E main已开放或已成功。

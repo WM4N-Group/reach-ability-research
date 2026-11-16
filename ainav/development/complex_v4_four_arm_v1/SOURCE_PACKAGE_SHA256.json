@@ -7,7 +7,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "da0fbcdc784b7ee789f4d8f41a6e56eb65d52b8f872e208ce46ff24227e227b0",
+    "README_CN.md": "ef256e6562d5079f90fb58708b6906e72f8d01f8fd7b8bbd4447390f5c121c84",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "SHARED_APPEARANCE_DECLARED_MAP.json": "802d3651187052d46c4006717d21fd27f21a2fde61ecc7e93a857197dd894cb6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -23,10 +23,11 @@
     "factor_scope.py": "9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424",
     "live_driver.py": "ca2e147d5c959fbaed533d20feb900cde91f1e57256d2e1073160aea95282475",
     "method_entry.py": "ccbdc1d90bc4ea1dc05c0eb396da434e4206d2762907a9babea455622aa52d13",
-    "native_entry.py": "5edcd0082ec582584c57f499e64864a0e524c16c237f47b896bac9b0f4e73fa4",
+    "native_entry.py": "d4b83f4a2696416cd357030883a446262d3857b1a865e31c4e6319c8e6cf314f",
     "parallel_alias_guard.py": "90d4e91b246ea487cba4cfe8e502f8aea0c8d2b8964488668575c706a4132009",
     "public_candidates.py": "8ddab47eb9d1b214f22e10a615eb24174e37c2d6fea3b2c8f927109981b4bdaa",
     "rule_baseline.py": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+    "runtime_terrain.py": "13becb451d6d9373c05d46e0686e8d524018641e76ed74cfb36724b92e233a7f",
     "scene.json": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
     "shared_appearance_public.py": "65545ff30d3e210e51d5b478c149f5460216a769b37b64ceb34a3540767080ab",
     "task_factory.py": "24a575b7782d544ca267499d82732135fc3442984dc74f7d00d0501804dccc2a",
@@ -48,6 +49,7 @@
     "tests/test_private_catalog_stream.py": "15c98b5c707b4e0f6d27a2d9b765da9ad746c09d6e1afb0bb2d3c31293caea4a",
     "tests/test_public_candidates.py": "1ec402f4ce641c0ac5f3373dabfec53d1d5abca0aee30c5ea2bbf001eb5c741d",
     "tests/test_rule_baseline.py": "3f4e6d6e2314ae46368878f6043b05b391a3608dd31a895c8e885474cbeae599",
+    "tests/test_runtime_terrain.py": "38aaa959c8b9e2c4a57b669d7e0f77920955c6506265224aee0996d258edada0",
     "tests/test_shared_appearance_public.py": "bdac611ee8c9afa487bf4b3307ea251ec7e7b3ae3dfd6cace6ddedbd6ef8ced7",
     "tests/test_task_factory.py": "d85f62168fe3e98579da390004492f902b72d0133960d79c4066efeea5d959a0",
     "tests/test_task_terminal.py": "c834091ea666a6e2606604c417e3f5dca1c6b4a96fe5872878199e2b10e7f4ca",
@@ -82,5 +84,6 @@
   "optional_current_raw_grid_accepted_global_native18_to_Reach_port_no_bootstrap_or_native_qualification": true,
   "optional_NEW_shared_review_palette_render_revision_NOT_adopted_or_native_qualified": true,
   "optional_same_five_public_palette_declaration_schema_original_NOT_adopted_or_WM_native_qualified": true,
-  "optional_same_all_five_existing_public_NAV_auxiliary_coordinator_caller_NOT_adopted_native_or_WM_qualified": true
+  "optional_same_all_five_existing_public_NAV_auxiliary_coordinator_caller_NOT_adopted_native_or_WM_qualified": true,
+  "cold_actual_registered_terrain_and_original_PlacementTerrain_diagnostics_ABI_fix_NOT_native_PUSH_qualified": true
 }

@@ -61,5 +61,9 @@ def construct_cold_components(*,enabled=False,**owner_kwargs):
     if not enabled:return None
     result=_bound_original('construct_cold_components')(enabled=True,**owner_kwargs)
     v4.require(result['registry'].goal.surface_ref=='goal_deck'and result['registry'].surfaces['goal_deck'].top_z_m==.6,'Actual elevated V4 registry, never ground-only fallback')
+    from runtime_terrain import install_cold_registered_terrain
+    result['V4_runtime_terrain_ABI_receipt'] = install_cold_registered_terrain(result,
+        source_root=owner_kwargs['source_root'], guard=owner_kwargs['guard'],
+        journal=owner_kwargs['journal'], enabled=True)
     result['V4_whole_chain_or_method_admission']=False
     return result
