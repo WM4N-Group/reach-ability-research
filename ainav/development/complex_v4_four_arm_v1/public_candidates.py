@@ -64,10 +64,16 @@ def capability_contract():
         'Three original placements, actual CLIMB receipts, same-world owners and a four-foot goal_deck supported stop are required for complete task success.',
         'No VLM/WM/optimizer/rule may consume private force/pose, future trajectory or an isolated existence route.']))
 
-def intent_catalogue(scene,observation,*,sequence):
+def intent_catalogue(scene,observation,*,sequence,shared_appearance=None):
     from ainav.intents import SkillIntent
     from ainav.contracts import Observation
-    require(type(observation)is Observation and observation.value['declared_map']==declared_map(scene),'Original public observation with this exact same-five-arm declared map')
+    expected=declared_map(scene)
+    if shared_appearance is not None:
+        from shared_appearance_public import SharedAppearanceDeclaration
+        from v4_native_asset import load_scene
+        require(scene==load_scene()and type(shared_appearance)is SharedAppearanceDeclaration,'Exact source-scene-bound shared public prior, not arbitrary map')
+        expected=shared_appearance.public_map()
+    require(type(observation)is Observation and observation.value['declared_map']==expected,'Original public observation with this exact same-five-arm declared map')
     require(type(sequence)is int and sequence>=0,'Actual original public acquisition sequence required')
     rows=declarations(scene);return tuple(SkillIntent('v4-intent-%d-%d'%(sequence,i),r['skill'],r['target_ref'],tuple(sorted(r['parameters'].items())))for i,r in enumerate(rows))
 

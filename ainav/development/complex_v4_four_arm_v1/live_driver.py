@@ -126,12 +126,16 @@ def driver_class(*, source_root=None, enabled=False):
         task_terminal_source_integrated = True
         full_task_native_ready = False
 
-        def __init__(self, components, *, bundle, output_root, writer, planner, journal, guard, arm):
+        def __init__(self, components, *, bundle, output_root, writer, planner, journal, guard, arm, shared_appearance=None):
             require(callable(guard) and callable(journal), 'Actual Data owner guard/journal')
             def checked_guard():
                 require(guard() is not False, 'Original Data owner/resource guard refused')
             checked_guard()
             factors(arm)  # Reject an undeclared arm before any native import.
+            if shared_appearance is not None:
+                from shared_appearance_public import require_live_declaration
+                require_live_declaration(shared_appearance)  # Reject fixtures BEFORE native imports.
+                shared_appearance.verify_bound_components(components)
             import numpy as np
             from mujoco_zyh import native_behavior_executor as api
             from ainav.native.observation import AcquisitionPublisher
@@ -143,6 +147,7 @@ def driver_class(*, source_root=None, enabled=False):
                     'Fresh zero-step worker only, not a resumed/closed root')
             require(callable(getattr(planner, 'select', None)) and callable(getattr(planner, 'observe_intent', None))
                     and callable(getattr(planner, 'reject_intent', None)), 'Actual public semantic method adapter required')
+            self.shared_appearance = shared_appearance
             self.components, self.registry = components, components['registry']
             self.capture, self.observer = components['capture'], components['observer']
             self.source_root, self.bundle = root, bundle
@@ -228,16 +233,26 @@ def driver_class(*, source_root=None, enabled=False):
             # Rebuilt every acquisition: [] on a new frame must discard old aliases.
             self.entity_by_public, objects = current_aliases(descriptors, self.execution['resolver'], self.public_body)
             obs = self.publisher.publish(packet, now=now, descriptors=objects,
-                declared_map=declared_map(self.scene), goal=self.scene['task']['instruction'], events=[])
+                declared_map=self.declared_public_map(), goal=self.scene['task']['instruction'], events=[])
             self.sequence += 1
             (self.root / ('intent-observation-%04d.json' % self.sequence)).write_text(obs.encoded + '\n')
             self.current_observation = obs
             self.factory.begin_acquisition(obs)
             return obs
 
+        def declared_public_map(self):
+            context = getattr(self, 'shared_appearance', None)
+            if context is None:
+                return declared_map(self.scene)  # Original default unchanged for current component scopes.
+            from shared_appearance_public import require_live_declaration
+            require_live_declaration(context)
+            context.verify_bound_components(self.components)
+            return context.public_map()
+
         def intent_catalogue(self, observation):
             require(observation is self.current_observation, 'Same actual public acquisition')
-            return intent_catalogue(self.scene, observation, sequence=self.sequence)
+            return intent_catalogue(self.scene, observation, sequence=self.sequence,
+                shared_appearance=getattr(self, 'shared_appearance', None))
 
         def _blocked(self, intent, now, reason):
             ref = self.journal(dict(event='V4_selected_intent_blocked', time_s=now,

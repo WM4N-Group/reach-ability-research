@@ -1,3 +1,9 @@
+> **未来五组共用公开先验接线，不是当前Data palette资格的新前置**：新增默认OFF `shared_appearance_public.build_shared_appearance_declaration`及driver可选`shared_appearance=`。只绑定已通过原加载器receipt、实际loaded Model三箱新RGBA/matid及新asset机械delta proof的fresh0-step组件，不构造/读取MJB、创建Runtime或调用渲染/检测/WM/API。用Reach已发布的固定公开map方案（SHA802d3651…），只在原schema的source_ref/anchor.description追加五组同样的review颜色和12条条件NAV subject；27 anchors坐标/不确定度/顺序、30 intents和原contracts都不改，8个generic NAV仍无subject。没有动态pose/物理ID/正确路线/Native准入或真实语义身份。
+>
+> 原intent_catalogue和live observe_public已接同一个typed immutable context，避免只建独立map函数却被旧exact-map gate拒绝；普通Data component默认None仍走原map。wrong/old asset、跨world、midstream重绑、arbitrary dict或fixture进入live driver均拒绝，fixture在任何native import前拒绝；E不能凭声明颜色把空current objects当可见目标。用真实Reach DeclaredPaletteAnchorAssociation构造验证新map的共有标记/12 NAV关系，未调用图像producer/geometry plane/WM forward。新12＋受影响public7/driver13是软件metadata checks，不是任务样本；实际两端结果见交付记录。
+>
+> Data已有af09 palette程序/在途/成功资格应原样接续，**不能为了新公开map采用而重跑成功scope或热换其source**；本接线仅供未来完整方法程序显式采用，不能把af09结果倒贴成新source的native或WM资格。Reach conditional producer仍default OFF，scene-specific色先验是hypothesis而非物理ID；A/B bootstrap、absolute PUSH/CLIMB action映射/完整effects及40cm域等仍缺，不能把注释当真实target8/READY/方法跑通。
+
 > **真实首次palette资格的具体源码修复，旧root不复开**：Data e74acd…/source23cc1fe…在fresh spec、Runtime之前被新helper误加的“全部geom名字唯一”约束拦住（result9cd6125d…）。MuJoCo/原SDK允许匿名非目标geom，不能把非目标匿名项当非法。现只要求三条声明的目标箱geom各精确出现一次，仍先全量验证三目标后才改RGBA；全部非目标项改为**按index逐项保存/核对RGBA**，不再用name-keyed字典折叠多个空名。重复/缺失目标仍拒绝，原compiler对真正非法命名的检查及全non-RGBA/options/安全/视觉门照旧。
 >
 > 新回归包括多个不同RGBA的匿名非目标geom原样保留、重复目标原样拒绝；这纠正的是新helper的SDK ABI假设，不降低原64px/深度/同色歧义/12N/NN/STOW/FF/QP/FIFO/4s/stop。实际首次尝试15.4439wall后已closed/no retry，新MJB未产出，raw task/aux字段null与usage_known=false保持未知，不补零或把初始化费用说成已知0。修复版仍需Data新准确程序必要资格，绝不在旧冻结/closed worker热改或同root重试，不借新source冒已native/渲染通过。
