@@ -1,0 +1,109 @@
+test_disabled_no_files_or_child (test_controlled_outputs.Outputs.test_disabled_no_files_or_child) ... ERROR
+test_dual_large_pipe_no_deadlock (test_controlled_outputs.Outputs.test_dual_large_pipe_no_deadlock) ... ERROR
+test_final_report_drain_after_irreversible_seal (test_controlled_outputs.Outputs.test_final_report_drain_after_irreversible_seal) ... ERROR
+test_missing_executable_closes_handles (test_controlled_outputs.Outputs.test_missing_executable_closes_handles) ... ERROR
+test_nonzero_not_success (test_controlled_outputs.Outputs.test_nonzero_not_success) ... ERROR
+test_over_cap_latches_and_terminates_only_own_child (test_controlled_outputs.Outputs.test_over_cap_latches_and_terminates_only_own_child) ... ERROR
+test_stdin_pipe_no_parent_counter_in_child (test_controlled_outputs.Outputs.test_stdin_pipe_no_parent_counter_in_child) ... ERROR
+test_timeout_records_incomplete (test_controlled_outputs.Outputs.test_timeout_records_incomplete) ... ERROR
+
+======================================================================
+ERROR: test_disabled_no_files_or_child (test_controlled_outputs.Outputs.test_disabled_no_files_or_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_dual_large_pipe_no_deadlock (test_controlled_outputs.Outputs.test_dual_large_pipe_no_deadlock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_final_report_drain_after_irreversible_seal (test_controlled_outputs.Outputs.test_final_report_drain_after_irreversible_seal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_missing_executable_closes_handles (test_controlled_outputs.Outputs.test_missing_executable_closes_handles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_nonzero_not_success (test_controlled_outputs.Outputs.test_nonzero_not_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_over_cap_latches_and_terminates_only_own_child (test_controlled_outputs.Outputs.test_over_cap_latches_and_terminates_only_own_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_stdin_pipe_no_parent_counter_in_child (test_controlled_outputs.Outputs.test_stdin_pipe_no_parent_counter_in_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+======================================================================
+ERROR: test_timeout_records_incomplete (test_controlled_outputs.Outputs.test_timeout_records_incomplete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_controlled_outputs.py", line 16, in setUp
+    self.b = ScopeIO(self.root, cap_bytes=1024*1024, reserve_bytes=65536)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/scoped_io.py", line 22, in __init__
+    if type(max_open)is not int or not 1<=max_open<=64 or type(text_buffer_bytes)is not int or text_buffer_bytes<=0 or reserve_bytes<max_open*text_buffer_bytes:raise ValueError('Bound all open text buffers inside reserve')
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound all open text buffers inside reserve
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+FAILED (errors=8)

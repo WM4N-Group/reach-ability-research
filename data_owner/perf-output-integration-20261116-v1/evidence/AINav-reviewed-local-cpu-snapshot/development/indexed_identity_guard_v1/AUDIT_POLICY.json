@@ -1,0 +1,23 @@
+{
+  "role": "INTENTIONAL_STATIC_AUDIT_CALL_STRATEGY_REVISION_NOT_PER_TICK_EQUIVALENCE",
+  "policy_id": "AINAV_INDEXED_STATIC_IDENTITY_BOUNDED_AUDIT_20261116_v1",
+  "plan_sha256": "02dc65edff1a562a4e1d47b6f24ebd8b169d99d780bd69c8c6a9063cb1a73064",
+  "default_off": true,
+  "new_program_only": true,
+  "module_poll_max_calls": 20,
+  "module_poll_max_wall_s": 0.25,
+  "file_metadata_max_wall_s": 5,
+  "canonical_recheck_max_wall_s": 60,
+  "audit_budget_s": 5,
+  "owner_stamp_max_age_s": 2,
+  "transient_filesystem_rebinding_detection_not_guaranteed": true,
+  "blocking_IO_no_new_physics_steps": true,
+  "blocking_kernel_IO_requires_external_Data_watchdog": true,
+  "readonly_enforcement_proven": false,
+  "expected_source_SHA_required_and_bootstrap_trust_declared": true,
+  "no_runtime_Hot_reload_or_arbitrary_callback_replacement": true,
+  "native_dynamic_safety_frequency_parameters_unchanged": true,
+  "Data_owns_incremental_disk_budget_and_external_supervision": true,
+  "real_capacity_lease_or_native_qualified": false,
+  "end_to_end_5x_target_not_claimed": true
+}

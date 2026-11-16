@@ -1,0 +1,20 @@
+{
+  "schema": "Data-future-output-coverage-boundaries-v1",
+  "source": "closed actual E20 tree93files; original content not copied",
+  "categories": {
+    "episode47files": "private original writer IO injection works on CPU40 synthetic command rows; no data transform",
+    "events_journal": "private original Journal100 rows byte-identical on CPU",
+    "raw_third_view20files": "exact original _flush serializer in private Path namespace: 4 synthetic frames byte-identical; full live camera/metadata/index lifecycle still pending new runner",
+    "query_observations8files": "two explicit private IO-only PNG/NPY file-object rewrites; original validation/Observation JSON unchanged; two synthetic acquisitions produce 8 byte-identical files; fresh driver binding API CPU exercised, actual native constructor/lifecycle pending",
+    "intent_observations2files": "fresh task0 driver.root binds to controlled Path before identity seal; same 2 synthetic intent JSON byte-identical; live driver integration pending",
+    "claim_lease_progress_result_ledger": "runner_outputs.write_json controlled temp+replace and sealed final report CPU passed; every actual runner write-site and authority files outside phase root still require explicit ownership accounting",
+    "PNG_qualification": "runner_outputs.write_png uses explicit controlled file object; real Pillow synthetic PNG passed, native camera task0 framing not re-run",
+    "controller_stdout_stderr": "ControlledProcess parent PIPE readers bounded8192bytes each: dual-stream409600bytes exact, cap/timeout/nonzero fail closed; actual native controller remains pending. NEVER share counter/root with child writers; dedicated stream root plus aggregate reservation or same-process FD capture required before native",
+    "encoder_MP4_and_stderr": "pinned real /usr/bin/ffmpeg streamed 4 SYNTHETIC16x16/10Hz frames via stdin; fragmented MP4 stdout1761bytes and stderr counted, ffprobe4 frames; native already sealed. Actual raw-master encoder call-site not yet switched/new frozen"
+  },
+  "no_silent_all_writers_covered_claim": true,
+  "native_admission": false,
+  "original_native_guards_require_AINav_identity_policy": true,
+  "integration_revision": "20261116-output-integration-v1",
+  "AINav_real_ResourceWatch_bridge": "actual watch+callbacks and full fresh adapter6 SOFTWARE compositions passed; separate exact reviewed source copy hash5aa94c79, upstream published remote hash4e0157d9 differs; no native runtime/lease qualification"
+}

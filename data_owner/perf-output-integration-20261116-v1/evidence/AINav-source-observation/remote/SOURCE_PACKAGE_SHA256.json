@@ -1,0 +1,17 @@
+{
+  "role": "NEW_INDEXED_IDENTITY_GUARD_SOURCE_DEFAULT_OFF_NOT_NATIVE_DISPATCH",
+  "parent_cloud_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "files_sha256": {
+    "AUDIT_POLICY.json": "c12123674163d7c8c1bceebc73822de2210a014abb80b42cea210a06510bc520",
+    "README_CN.md": "06ac5b8e6827154e9c6b2a674196ca4e2084aa6d5e3775d35ece129375fec4c5",
+    "benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
+    "indexed_guard.py": "4e0157d99936053dff79ac6f4080dddca9da2e29d321f911ec845ca4ed2b2a63",
+    "install_fresh_driver.py": "4c8e9a64a06ed2b4900aca75b866e079645d81a54670a197c6490493292723d5",
+    "tests/test_indexed_guard.py": "6ee33adabd5c7bdb7c7f0db979533b1bee18fd87755d239ffdc6fbc757b9f375",
+    "tests/test_install_fresh_driver.py": "3332a75885e77538725626c18c7af20ae023ee0491427e53f871fbcbbe0dc50c"
+  },
+  "source_members": 7,
+  "original_04a_E20_all_sources_unchanged": true,
+  "actual_native_Actor_world_GPU_API_calls": 0,
+  "changed_static_audit_detection_latency": true
+}

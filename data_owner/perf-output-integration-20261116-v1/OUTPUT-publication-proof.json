@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-16T21:14:46.108642+08:00",
+  "local_release": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PERF-OUTPUT-INTEGRATION-CPU-NOT-NATIVE-20261116-v1/release.json",
+  "release_sha256": "5d3eb95e799185a4b8868fca937aa5f7bd23d83cec30063c89276fe758cdfd72",
+  "remote": {
+    "files": 53,
+    "all_SHA": true,
+    "release_sha256": "5d3eb95e799185a4b8868fca937aa5f7bd23d83cec30063c89276fe758cdfd72"
+  },
+  "archive_bytes": 98444,
+  "no_large_assets_or_credentials": true,
+  "native_ready": false
+}

@@ -1,0 +1,13 @@
+test_disabled_no_files_or_child (test_controlled_outputs.Outputs.test_disabled_no_files_or_child) ... ok
+test_dual_large_pipe_no_deadlock (test_controlled_outputs.Outputs.test_dual_large_pipe_no_deadlock) ... ok
+test_final_report_drain_after_irreversible_seal (test_controlled_outputs.Outputs.test_final_report_drain_after_irreversible_seal) ... ok
+test_missing_executable_closes_handles (test_controlled_outputs.Outputs.test_missing_executable_closes_handles) ... ok
+test_nonzero_not_success (test_controlled_outputs.Outputs.test_nonzero_not_success) ... ok
+test_over_cap_latches_and_terminates_only_own_child (test_controlled_outputs.Outputs.test_over_cap_latches_and_terminates_only_own_child) ... ok
+test_stdin_pipe_no_parent_counter_in_child (test_controlled_outputs.Outputs.test_stdin_pipe_no_parent_counter_in_child) ... ok
+test_timeout_records_incomplete (test_controlled_outputs.Outputs.test_timeout_records_incomplete) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.127s
+
+OK

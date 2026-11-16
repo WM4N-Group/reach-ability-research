@@ -1,0 +1,40 @@
+RAW_REPORTS_SYNTHETIC
+{"role": "SYNTHETIC_SERIALIZERS_NOT_LIVE_CAMERA_OR_NATIVE", "original_raw_sha256": "5b54173004576cfb27f5d792560049294371b8a496ee1799ba38554442ac34c8", "raw_chunk_byte_identical": true, "synthetic_raw_frames": 4, "Data_progress_atomic_replace_and_final_report": true, "PNG_controlled_file_object": true, "budget": {"used_bytes": 795, "controlled_logical_highwater_bytes": 795, "reserve_bytes": 262144, "finalizing": true, "failed": false, "failure": null, "open_files": 0, "metrics": {"write_calls": 43, "bytes_requested": 1061, "reconcile_calls": 1, "reconcile_wall_s": 0.00013331719674170017, "paths_opened": 6}}, "Runtime_Actor_GPU_physics_training_calls": 0}
+POLICY_REGRESSION_AFTER_LOCALE_FIX
+test_blocked_probe_stales_real_clock (test_policy.AdditionalSafetyTests.test_blocked_probe_stales_real_clock) ... ok
+test_concurrent_writes_cannot_overreserve (test_policy.AdditionalSafetyTests.test_concurrent_writes_cannot_overreserve) ... ok
+test_failure_record_uses_reserve_without_resuming (test_policy.AdditionalSafetyTests.test_failure_record_uses_reserve_without_resuming) ... ok
+test_append_cannot_seek_undercount (test_policy.PolicyTests.test_append_cannot_seek_undercount) ... ok
+test_atomic_replace_and_peak (test_policy.PolicyTests.test_atomic_replace_and_peak) ... ok
+test_binary_text_utf8_exact (test_policy.PolicyTests.test_binary_text_utf8_exact) ... ok
+test_cap_admission_before_write (test_policy.PolicyTests.test_cap_admission_before_write) ... ok
+test_cheap_health_refusal (test_policy.PolicyTests.test_cheap_health_refusal) ... ok
+test_closed_watch_cannot_restart (test_policy.PolicyTests.test_closed_watch_cannot_restart) ... ok
+test_deleted_known_file (test_policy.PolicyTests.test_deleted_known_file) ... ok
+test_duplicate_writer (test_policy.PolicyTests.test_duplicate_writer) ... ok
+test_event_loss_stops (test_policy.PolicyTests.test_event_loss_stops) ... ok
+test_final_reserve_and_sealed_guard (test_policy.PolicyTests.test_final_reserve_and_sealed_guard) ... ok
+test_foreign_root (test_policy.PolicyTests.test_foreign_root) ... ok
+test_hardlink_reject (test_policy.PolicyTests.test_hardlink_reject) ... ok
+test_hot_guard_no_probe_no_filesystem (test_policy.PolicyTests.test_hot_guard_no_probe_no_filesystem) ... ok
+test_partial_write_reservation_retained (test_policy.PolicyTests.test_partial_write_reservation_retained) ... ok
+test_private_path_no_global_monkeypatch (test_policy.PolicyTests.test_private_path_no_global_monkeypatch) ... ok
+test_probe_error_and_false (test_policy.PolicyTests.test_probe_error_and_false) ... ok
+test_read_error_latched (test_policy.PolicyTests.test_read_error_latched) ... ok
+test_same_size_inode_replace (test_policy.PolicyTests.test_same_size_inode_replace) ... ok
+test_stale_stops_and_never_recovers (test_policy.PolicyTests.test_stale_stops_and_never_recovers) ... ok
+test_symlink_reject (test_policy.PolicyTests.test_symlink_reject) ... ok
+test_truncate_exact (test_policy.PolicyTests.test_truncate_exact) ... ok
+test_unknown_writer (test_policy.PolicyTests.test_unknown_writer) ... ok
+test_wrong_token (test_policy.PolicyTests.test_wrong_token) ... ok
+test_zip_seek_header_rewrites (test_policy.PolicyTests.test_zip_seek_header_rewrites) ... ok
+test_disk_low_unknown_and_one_lease_call (test_policy.ProbeCompositionTests.test_disk_low_unknown_and_one_lease_call) ... ok
+test_lease_revocation_propagates (test_policy.ProbeCompositionTests.test_lease_revocation_propagates) ... ok
+test_blocked_probe_close_is_not_silently_successful (test_policy.ShutdownSafetyTests.test_blocked_probe_close_is_not_silently_successful) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.309s
+
+OK
+ORIGINAL_WRITER_REGRESSION
+{"original_40_command_recorder_fixture_byte_identical": true, "direct_numpy_compressed_file_interface_pass": true, "original_100_journal_rows_fixture_byte_identical": true, "no_original_module_monkeypatch": true, "CUDA_initialized": false, "Runtime_Actor_model_restore_forward_renderer_physics_calls": 0, "recorder": {"used_bytes": 22190, "controlled_logical_highwater_bytes": 22190, "reserve_bytes": 1048576, "finalizing": true, "failed": false, "failure": null, "open_files": 0, "metrics": {"write_calls": 25, "bytes_requested": 22247, "reconcile_calls": 1, "reconcile_wall_s": 0.0002665240317583084, "paths_opened": 16}}, "journal": {"used_bytes": 22980, "controlled_logical_highwater_bytes": 22980, "reserve_bytes": 262144, "finalizing": true, "failed": false, "failure": null, "open_files": 0, "metrics": {"write_calls": 100, "bytes_requested": 22980, "reconcile_calls": 1, "reconcile_wall_s": 4.7563109546899796e-05, "paths_opened": 1}}, "SOFTWARE_FIXTURE_NOT_TASK": true}

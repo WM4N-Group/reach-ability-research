@@ -1,0 +1,17 @@
+{
+  "role": "DATA_OWNED_CPU_CANDIDATE_COPY_NOT_UPSTREAM_CLOUD_COMMIT_OR_NATIVE_AUTHORITY",
+  "copied_source_pins": {
+    "development/indexed_identity_guard_v1/AUDIT_POLICY.json": "c12123674163d7c8c1bceebc73822de2210a014abb80b42cea210a06510bc520",
+    "development/indexed_identity_guard_v1/README_CN.md": "c5fe1e907825ec36f9aca3ebeea25e1c4d3433ec2cba097448b685d8a4569b8c",
+    "development/indexed_identity_guard_v1/install_fresh_driver.py": "e83a8cbe4b778b4b1899041b6fd6b5435015bdce959cf298750d164a6bba6f21",
+    "development/indexed_identity_guard_v1/indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+    "development/indexed_identity_guard_v1/benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
+    "development/complex_dual_route_v1/scene_driver.py": "cdf8ce964044066e89bf4edc360fc2e23085a9c4363bb593fe9b8d75b85c856f",
+    "development/indexed_identity_guard_v1/tests/test_indexed_guard.py": "5db4919704396c739b29fe3ddcb7779888ea3090a47e22e9085b494b9ce9d522",
+    "development/indexed_identity_guard_v1/tests/test_install_fresh_driver.py": "f18ddefe32bd874ab9d9dfb58824e953c997a224dd0ed1b8ac8f7feed1caf9f7"
+  },
+  "upstream_commit_path_not_enough": true,
+  "api_advertised_package_SHA": "0e894959712d5710715654c91eaec74451bc5cc7752b8cb8b5a788af17dc9ca9",
+  "local_manifest_SHA": "8cee8edbb8fbf2bd374ee1329e6ebc8f97b26c7b0a8fc03a957553439acb8ae7",
+  "native_ready": false
+}

@@ -1,0 +1,64 @@
+--- manifests/perf-output-integration-20261116-v1/AINav-source-observation/remote/indexed_guard.py	2026-11-16 21:11:08.749013914 +0800
++++ manifests/perf-output-integration-20261116-v1/AINav-source-observation/local/indexed_guard.py	2026-11-16 21:11:07.976307863 +0800
+@@ -78,30 +78,37 @@
+     roots alone never authorize a new file: it must be measured in this map.
+     No chmod/mount changes. Root/native attackers can bypass Python monitoring.
+     """
+-    def __init__(self,roots,records,missing):
++    def __init__(self,roots,records,missing,aliases):
+         self.roots=tuple(roots);self.records=MappingProxyType(dict(records));self.missing=frozenset(missing)
++        self.aliases=MappingProxyType(dict(aliases))
+         self.record=dict(policy=POLICY_ID,roots=list(roots),files={k:dict(signature=v.signature,sha256=v.sha256,
+-            writable_at_freeze=v.writable_at_freeze)for k,v in sorted(records.items())},missing=sorted(missing),
++            writable_at_freeze=v.writable_at_freeze)for k,v in sorted(records.items())},missing=sorted(missing),raw_to_canonical=dict(sorted(aliases.items())),
+             readonly_enforcement_proven=False,initial_trust='OWNER_AUTHORIZED_BOOTSTRAP_MEASUREMENT_NOT_EXTERNAL_AUTHENTICITY')
+         self.sha256=digest(self.record)
+     @classmethod
+     def measure(cls,paths,*,roots,expected_hashes=None,allow_missing=()):
+         roots=tuple(str(Path(r).resolve(strict=True))for r in roots);need(roots,'Explicit allowed source/asset roots')
+-        missing={str(Path(p).absolute())for p in allow_missing};records={};allowed_missing=set();expected_hashes=expected_hashes or {}
++        missing={str(Path(p).absolute())for p in allow_missing};records={};aliases={};allowed_missing=set();expected_hashes=expected_hashes or {}
+         for raw in dict.fromkeys(os.fspath(p)for p in paths):
+             raw=str(Path(raw).absolute());canonical=str(Path(raw).resolve())
+             need(any(Path(canonical).is_relative_to(r)for r in roots),'File outside authorized inventory roots: '+raw)
++            aliases[raw]=canonical
+             before=_signature(canonical,missing=raw in missing)
+             if before is None:
+-                need(raw in missing,'Explicit missing-module declaration required');allowed_missing.add(raw);continue
++                need(raw in missing and expected_hashes.get(raw)is None and expected_hashes.get(canonical)is None,
++                     'Expected existing source/asset cannot be whitelisted missing')
++                allowed_missing.add(raw);continue
+             need(stat.S_ISREG(before[2]),'Only regular source/weight/asset files can be pinned')
+             if canonical not in records:
+                 value=_hash_file(canonical);after=_signature(canonical)
+                 need(before==after,'File changed during bootstrap SHA measurement')
+-                expected=expected_hashes.get(canonical,expected_hashes.get(raw))
+-                need(expected is None or value==expected,'Frozen expected source/asset SHA mismatch')
+                 records[canonical]=FilePin(before,value,os.access(canonical,os.W_OK))
+-        return cls(roots,records,allowed_missing)
++            # Honor BOTH raw and canonical declarations, including aliases which
++            # deduplicate to a file hashed earlier; never silently discard a pin.
++            for key in dict.fromkeys((raw,canonical)):
++                expected=expected_hashes.get(key)
++                need(expected is None or records[canonical].sha256==expected,'Frozen expected source/asset SHA mismatch')
++        return cls(roots,records,allowed_missing,aliases)
+ 
+ _active=None
+ _hook_installed=False
+@@ -214,11 +221,14 @@
+             need(len(self.module_map)==len(self.modules),'New/deleted module requires paused boundary')
+             need(_token_equal(_token_capture(self.tokens(host)),self.token_snapshot),'Session/target/goal/config binding changed')
+     def _index(self,host):
+-        before=self._capture_modules();raws=dict.fromkeys(raw for _,_,raw in before if raw is not None)
++        before=self._capture_modules();raws=dict.fromkeys([raw for _,_,raw in before if raw is not None]+list(self.files.aliases))
+         index={};monitored={};critical=[]
+         for raw in raws:
+             canonical=str(Path(raw).resolve());self.metrics['canonical_resolves']+=1
+-            absolute=str(Path(raw).absolute());pin=self.files.records.get(canonical)
++            absolute=str(Path(raw).absolute())
++            frozen_canonical=self.files.aliases.get(absolute)
++            need(frozen_canonical is None or canonical==frozen_canonical,'Frozen raw source/asset canonical alias changed')
++            pin=self.files.records.get(canonical)
+             if pin is None:
+                 need(absolute in self.files.missing and _signature(raw,missing=True)is None,
+                      'Unapproved/missing module file: '+raw)

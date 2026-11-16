@@ -1,0 +1,17 @@
+ORIGINAL_OBSERVATION_CPU
+{"role": "SYNTHETIC_SERIALIZER_NOT_LIVE_NATIVE", "original_source_sha256": "0db148c54b4697c0de196aba29755a620258b6ed6f6bb52c19432ccfefb4c5c6", "two_IO_sites_intentionally_changed": true, "ten_files_byte_identical": true, "query_files": 8, "intent_files": 2, "controlled_bytes": 3810, "snapshot": {"used_bytes": 3810, "controlled_logical_highwater_bytes": 3810, "reserve_bytes": 262144, "finalizing": false, "failed": false, "failure": null, "open_files": 0, "metrics": {"write_calls": 30, "bytes_requested": 3810, "reconcile_calls": 1, "reconcile_wall_s": 0.0002011321485042572, "paths_opened": 10}}, "binding_receipt": {"IO_only_rewrites": ["PNG explicit file object", "NPY explicit file object"], "native_qualified": false, "original_modules_unchanged": true}, "original_modules_unchanged": true, "Runtime_Actor_GPU_physics_training_calls": 0}
+REAL_WATCH_BRIDGE_SOFTWARE
+test_actual_probe_failure_latches_both_callbacks (__main__.Bridge.test_actual_probe_failure_latches_both_callbacks) ... ok
+test_finalization_seal_denies_both_callbacks (__main__.Bridge.test_finalization_seal_denies_both_callbacks) ... ok
+test_foreign_process_token_denied (__main__.Bridge.test_foreign_process_token_denied) ... ok
+test_original_success_timestamp_no_duplicate_external_probe (__main__.Bridge.test_original_success_timestamp_no_duplicate_external_probe) ... ok
+test_real_periodic_thread_refreshes_without_guard_probes (__main__.Bridge.test_real_periodic_thread_refreshes_without_guard_probes) ... ok
+test_stale_uses_genuine_age_no_self_refresh (__main__.Bridge.test_stale_uses_genuine_age_no_self_refresh) ... ok
+test_unknown_output_latches_at_reconcile_not_silently_rebased (__main__.Bridge.test_unknown_output_latches_at_reconcile_not_silently_rebased) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.026s
+
+OK
+ENCODER_SYNTHETIC_INTERFACE
+{"role": "SYNTHETIC_FFMPEG_INTERFACE_ONLY_NOT_TASK_OR_RENDERING", "frames": 4, "capture": {"returncode": 0, "timed_out": false, "complete": true, "errors": [], "streams": {"stdout": {"read_bytes": 1761, "written_bytes": 1761, "refused_bytes": 0}, "stderr": {"read_bytes": 0, "written_bytes": 0, "refused_bytes": 0}}, "bounded_userspace_chunk_bytes_per_reader": 8192, "kernel_pipe_bytes_not_counted_as_persisted_output": true, "descendant_or_blocked_kernel_termination_guaranteed": false}, "ffprobe": {"programs": [], "streams": [{"width": 16, "height": 16, "avg_frame_rate": "10/1", "nb_read_frames": "4"}]}, "budget": {"used_bytes": 1761, "controlled_logical_highwater_bytes": 1761, "reserve_bytes": 262144, "finalizing": true, "failed": false, "failure": null, "open_files": 0, "metrics": {"write_calls": 3, "bytes_requested": 1761, "reconcile_calls": 1, "reconcile_wall_s": 0.00014360900968313217, "paths_opened": 2}}, "actual_live_camera_binding": false, "old_E20_video_unchanged": true}

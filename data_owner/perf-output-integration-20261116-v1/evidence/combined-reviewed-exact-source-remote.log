@@ -1,0 +1,11 @@
+test_controlled_output_and_gated_step_no_repeated_external_probe (__main__.Combined.test_controlled_output_and_gated_step_no_repeated_external_probe) ... ok
+test_finalization_denies_original_issue (__main__.Combined.test_finalization_denies_original_issue) ... ok
+test_foreign_queue_before_issue (__main__.Combined.test_foreign_queue_before_issue) ... ok
+test_foreign_runtime (__main__.Combined.test_foreign_runtime) ... ok
+test_foreign_session_after_authorized_no_step_boundary (__main__.Combined.test_foreign_session_after_authorized_no_step_boundary) ... ok
+test_revoke_before_next_original_issue (__main__.Combined.test_revoke_before_next_original_issue) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.101s
+
+OK

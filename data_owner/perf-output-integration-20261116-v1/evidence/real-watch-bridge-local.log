@@ -1,0 +1,12 @@
+test_actual_probe_failure_latches_both_callbacks (__main__.Bridge.test_actual_probe_failure_latches_both_callbacks) ... ok
+test_finalization_seal_denies_both_callbacks (__main__.Bridge.test_finalization_seal_denies_both_callbacks) ... ok
+test_foreign_process_token_denied (__main__.Bridge.test_foreign_process_token_denied) ... ok
+test_original_success_timestamp_no_duplicate_external_probe (__main__.Bridge.test_original_success_timestamp_no_duplicate_external_probe) ... ok
+test_real_periodic_thread_refreshes_without_guard_probes (__main__.Bridge.test_real_periodic_thread_refreshes_without_guard_probes) ... ok
+test_stale_uses_genuine_age_no_self_refresh (__main__.Bridge.test_stale_uses_genuine_age_no_self_refresh) ... ok
+test_unknown_output_latches_at_reconcile_not_silently_rebased (__main__.Bridge.test_unknown_output_latches_at_reconcile_not_silently_rebased) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.023s
+
+OK

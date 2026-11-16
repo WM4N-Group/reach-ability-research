@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/test_observation_io_cpu.py", line 16, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
