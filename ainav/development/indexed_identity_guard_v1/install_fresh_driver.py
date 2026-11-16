@@ -6,6 +6,7 @@ are explicit and cannot issue physical commands. Unexpected later lazy code
 installation fails closed; qualify/warm its imports BEFORE sealing, not retry.
 """
 from types import MethodType
+import math
 from indexed_guard import make_indexed_guard,GuardViolation,need,POLICY_ID,OwnerStamp
 
 
@@ -80,24 +81,32 @@ def install(driver=None,*,enabled=False,files=None,owner_fast=None,owner_refresh
                 strict_unplanned_import_exec_refusal=True,native_or_system_speedup_qualified=False)
 
 
-def data_resource_watch_callbacks(watch,*,epoch):
-    """Bridge Data ResourceWatch v1; never invent a new checked_at or probe.
+def data_resource_watch_callbacks(watch,*,epoch,observation_stamp=None):
+    """Bridge a SUCCESSFUL probe's immutable (oldest, completed) observation.
 
-    Its own background worker polls external resources. check(token) enforces
-    PID, revocation, capacity/health and max staleness. Both callbacks here only
-    ACK that real current result. Data owns starting/closing the watch/lease.
+    Completion-only last_ok is insufficient: a slow probe may contain stale
+    early measurements even immediately after completion. No fallback to it.
+    Data supplies an atomic pair from the SAME successful probe, or exposes
+    watch.last_observation_stamp. The bridge never invents time or probes twice.
     """
     need(type(epoch)is str and epoch and callable(getattr(watch,'check',None))and
-         0<watch.max_stale<=2.,'Data watch epoch and <=2s genuine external freshness required')
+         0<watch.max_stale<=2.,'Data watch epoch and <=2s observation-age policy required')
     token=watch.token
-    def fast(host):
+    read_stamp=(lambda:getattr(watch,'last_observation_stamp',None))if observation_stamp is None else observation_stamp
+    need(callable(read_stamp),'Atomic oldest/completed observation reader required')
+    def sample():
         answer=watch.check(token)
         need(answer is None or answer is True,'Data resource watch refused/returned an unknown result')
-        checked=watch.last_ok  # One atomic Python reference read; supervisor may refresh concurrently.
-        need(checked is not None,'External watch never successfully checked')
-        checked=float(checked)
+        pair=read_stamp()  # Exactly ONE immutable-pair read, not two races.
+        need(type(pair)is tuple and len(pair)==2 and all(type(v)in(int,float)for v in pair),
+             'Completion-only last_ok is not an oldest-observation stamp; Data probe must supply the pair')
+        oldest,completed=map(float,pair)
+        need(all(math.isfinite(v)for v in(oldest,completed))and
+             oldest<=completed and completed-oldest<=watch.max_stale,
+             'Over-age/invalid completed probe cannot refresh execution authority')
+        return oldest
+    def fast(host):
+        checked=sample()
         return OwnerStamp(epoch,checked,checked+watch.max_stale,True)
-    def acknowledge(host):
-        answer=watch.check(token)  # Do NOT run a duplicate full external probe here.
-        need(answer is None or answer is True,'Data resource watch refused/returned an unknown result')
+    def acknowledge(host):sample()  # ACK real existing probe, never duplicate it.
     return fast,acknowledge

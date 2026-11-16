@@ -84,7 +84,7 @@ class Tests(unittest.TestCase):
   self.assertEqual(self.driver.r.step_count,0)
 
  def test_Data_watch_bridge_keeps_real_timestamp_and_no_extra_probe(self):
-  watch=NS(max_stale=2.,token=object(),last_ok=123.,checks=0)
+  watch=NS(max_stale=2.,token=object(),last_ok=123.,last_observation_stamp=(123.,123.1),checks=0)
   def check(token):
    self.assertIs(token,watch.token);watch.checks+=1
   watch.check=check;fast,ack=data_resource_watch_callbacks(watch,epoch='scope-authority-epoch')
@@ -92,7 +92,7 @@ class Tests(unittest.TestCase):
   self.assertEqual((stamp.checked_at,stamp.valid_until),(123.,125.));self.assertEqual(watch.checks,2)
  def test_Data_watch_bridge_revocation_propagates_not_self_signed_true(self):
   def revoked(token):raise RuntimeError('real supervisor revoked')
-  watch=NS(max_stale=2.,token=object(),last_ok=123.,check=revoked)
+  watch=NS(max_stale=2.,token=object(),last_ok=123.,last_observation_stamp=(123.,123.1),check=revoked)
   fast,ack=data_resource_watch_callbacks(watch,epoch='scope-authority-epoch')
   with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):fast(self.driver)
   with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):ack(self.driver)
@@ -104,8 +104,8 @@ class Tests(unittest.TestCase):
    reads=0
    def check(self,token):pass
    @property
-   def last_ok(self):
-    self.reads+=1;return 123.+self.reads
+   def last_observation_stamp(self):
+    self.reads+=1;return(123.+self.reads,123.+self.reads+.1)
   watch=ChangingWatch();fast,_=data_resource_watch_callbacks(watch,epoch='scope-epoch')
   stamp=fast(self.driver)
   self.assertEqual(watch.reads,1);self.assertEqual(stamp.valid_until-stamp.checked_at,2.)
@@ -116,6 +116,22 @@ class Tests(unittest.TestCase):
    fast,ack=data_resource_watch_callbacks(watch,epoch='scope-epoch')
    with self.assertRaises(GuardViolation):fast(self.driver)
    with self.assertRaises(GuardViolation):ack(self.driver)
+
+ def test_legacy_completion_only_stamp_cannot_prove_oldest_age(self):
+  watch=NS(max_stale=2.,token=object(),last_ok=4.,check=lambda token:None)
+  fast,ack=data_resource_watch_callbacks(watch,epoch='scope-epoch')
+  with self.assertRaises(GuardViolation):fast(self.driver)
+  with self.assertRaises(GuardViolation):ack(self.driver)
+
+ def test_overage_probe_completion_rejected_without_hot_checks_during_probe(self):
+  watch=NS(max_stale=2.,token=object(),last_ok=4.,last_observation_stamp=(1.,4.),check=lambda token:None)
+  fast,ack=data_resource_watch_callbacks(watch,epoch='scope-epoch')
+  with self.assertRaisesRegex(GuardViolation,'Over-age'):fast(self.driver)
+  with self.assertRaisesRegex(GuardViolation,'Over-age'):ack(self.driver)
+ def test_deadline_uses_oldest_not_completion(self):
+  watch=NS(max_stale=2.,token=object(),last_ok=4.,last_observation_stamp=(3.,4.),check=lambda token:None)
+  fast,_=data_resource_watch_callbacks(watch,epoch='scope-epoch')
+  stamp=fast(self.driver);self.assertEqual((stamp.checked_at,stamp.valid_until),(3.,5.))
 
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))

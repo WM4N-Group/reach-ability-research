@@ -79,7 +79,7 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 当前证据/下一验收
 
-46新policy/失效/文件/owner/foreign identity纯软件＋14 fresh adapter/owner-bridge fixtures本机通过；
+46新policy/失效/文件/owner/foreign identity纯软件＋17 fresh adapter/owner-bridge fixtures本机通过；
 不是native/容量/真实lease/5倍系统资格。相同CPU loaded模块、文件树和相同合成call轨迹的
 旧batch32与本版配对benchmark由`benchmark_same_loaded_cpu.py`提供，cold SHA/边界成本
 分开、exclusive hot分项不相加重计。真实同阶段性能验证只由Data新scope实施，未达目标
@@ -88,9 +88,11 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 与Data当前ResourceWatch接口的具体接缝
 
-`data_resource_watch_callbacks(watch, epoch=scope_and_authority_epoch)`直接对接Data v1的
-`check(token)/last_ok/max_stale/token`，要求max_stale≤2秒。它保留监督线程真正检查的last_ok，
-不以本次guard调用的now伪造freshness；refresh回调只是ACK现有有效结果，**不额外probe**，
+`data_resource_watch_callbacks(watch, epoch=scope_and_authority_epoch, observation_stamp=reader)`
+对接Data的check(token)/max_stale/token；reader必须一次返回同次成功probe的不可变tuple
+`(oldest_observed_at, completed_at)`，或由watch.last_observation_stamp提供。
+OwnerStamp.checked_at必须是**最早观测**，而非完成时刻；完成耗时超过max_stale拒绝，
+旧completion-only last_ok无fallback。refresh回调只ACK现有有效结果，**不额外probe**，
 从而不与Data每1秒的外部监督重复检查。Data自行持有原lease并start/close监督线程，
 容量/磁盘/撤销失败由watch.check传播。本桥接器没有证明真实watch已通过资格，仍需Data测量。
 
@@ -102,7 +104,7 @@ native动态库、pyc来源、Actor权重或MJB。Data必须把真实依赖闭�
 纳入同一授权inventory并按原source/环境manifest核SHA；CPU benchmark的约1300模块文件
 **不是完整可执行环境或native资格证明**。初始化测量root范围也不是外部真实性签名。
 
-owner桥接仅一次读取真实last_ok再构造同一stamp，避免后台线程更新时拼出虚假更长有效期；
+owner桥接仅一次读取原子最早观测/完成pair再构造同一stamp，避免后台线程更新时拼出虚假更长有效期；
 对应并发读fixture的修复前失败保留，不是物理失败或改变检查时限。
 
 
@@ -126,3 +128,14 @@ Data资格验证，不把新DirEntry或chmod说成即时防篡改证明。
 新seal拒绝bootstrap后别名指向变化；文件内容SHA仍仅在可信初始化测量，不降低5s/60s检测层。
 
 owner桥同时要求watch.check返回None或True；False/未知结果不可被包装成有效stamp，拒绝回归首版失败另保留。
+
+
+## Reach21:11反馈已落实：完成戳不能冒观测年龄
+
+Data最初ResourceWatch在probe完成时设置last_ok；若t1读owner、probe到t4才结束，
+把t4当checked_at会漏掉早期观测已3秒的事实。旧bridge在这个case未拒绝，失败fixture保留。
+当前桥要求Data明确提供一次成功probe的原子(oldest,completed) pair：最安全可用probe开始
+作为保守oldest；过龄完成拒绝，deadline=oldest+max_stale，不是completion+max_stale。
+Data仍需自己改/冻结probe记录并测试真监督；本组不热改其代码/进程、也不假装当前
+completion-only Data release已经具备这个接口。此项是**进入native资格前的具体必要接缝**，
+不是新的经济审批/额外物理组件。不能由调用guard的当前时间补造oldest。

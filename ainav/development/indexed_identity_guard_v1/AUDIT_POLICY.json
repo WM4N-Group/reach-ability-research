@@ -19,5 +19,8 @@
   "native_dynamic_safety_frequency_parameters_unchanged": true,
   "Data_owns_incremental_disk_budget_and_external_supervision": true,
   "real_capacity_lease_or_native_qualified": false,
-  "end_to_end_5x_target_not_claimed": true
+  "end_to_end_5x_target_not_claimed": true,
+  "owner_checked_at_semantics": "OLDEST_OBSERVATION_OF_SAME_COMPLETED_SUCCESSFUL_PROBE",
+  "completion_only_last_ok_not_qualified": true,
+  "owner_probe_duration_over_age_refused": true
 }
