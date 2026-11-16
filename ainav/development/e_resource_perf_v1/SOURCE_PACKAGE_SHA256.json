@@ -1,0 +1,13 @@
+{
+  "role": "NEXT_PROGRAM_FULL_FRESH_DIRECTORY_SCAN_PARALLEL_CPU_ONLY_NOT_NATIVE_QUALIFIED",
+  "parent_cloud_commit": "9e7d32b67e31fd6273f25bb61bf64c70eb7358f5",
+  "files_sha256": {
+    "README_CN.md": "9eb49de01684a993c3449d20b45efd926879f2e216a884ab1e05ff537a485746",
+    "fresh_size_parallel.py": "052747ca762c3c0c31c6d4b45ed3c0a7828d931868b403e575d9f16fc424c556",
+    "tests/test_fresh_size_parallel.py": "d98d23fc47f959b8516649097f593c4555f7c9fafceda6b85f293e292f653da1"
+  },
+  "source_members": 3,
+  "native_calls": 0,
+  "limit_and_check_frequency_unchanged": true,
+  "Data_only_physical_owner": true
+}
