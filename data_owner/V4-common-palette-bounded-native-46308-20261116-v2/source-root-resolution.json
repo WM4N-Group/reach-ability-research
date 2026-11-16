@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T11:23:16.080090+08:00",
+  "source_record_missing_remote_code_root": true,
+  "original_failure": "KeyError: remote_code_root",
+  "original_source_record_bytes_and_SHA_unchanged": true,
+  "observed_remote_directory": "/mnt/yuanyue/ainav-compute/code/af09da7ddbaa791782cf5fd4873d14064d64b1fd/ainav",
+  "continuation_requires_both_staging_directories_empty_and_no_H_scope": true,
+  "no_physical_or_model_or_H_operation_in_failed_transport": true
+}
