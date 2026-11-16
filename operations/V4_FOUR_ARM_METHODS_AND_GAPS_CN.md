@@ -1,5 +1,12 @@
 # V4五组：A—D真实方法代码首版、B/D共用优化与原源能力缺口
 
+## 2026-11-16 12:54 当前优先级：E先独立尝试，不等下方A—D/WM/优化器缺件
+
+最新总计划7559f685…要求source59 `e_entry.build_E_driver`→Data新E程序/必要zero/一次main与task0直接第三视角。Reach已按source记录4feae4a9…核七个相关文件SHA，静态审阅未发现新增信息权限/模型依赖阻断；**此核对不构成新的E gate**。E保原RuleBaseline/共同legacy H，新后继selector、WM/VLM/可选map/prefix不成为依赖。不要求E此前整链成功；已知.20→.60原域拒绝应在unsupported dispatch前准确失败并交原片，不能降图/弱门或冒CLIMB成功。原Runtime.staircase缺件已有source57/59真实registry terrain冷启动修复，但本组不冒native通过/已派E/已有原片。
+
+以下A—D和完整cost缺口是后置并行工作，不再是E启动排队前置。只在原件到达后核真实E身份/全程片/准确终态与费用，E暴露不称未见；本轮不重刷旧软件套件或引入新审计器。最新入口：`/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-V4-FIVE-ARM-ASSET-E-RULE-AND-CLIMB-GAP-20261115-v1/NEXT_DATA_E_RULE_AND_DIRECT_VIDEO_PRIORITY_SOURCE59_NOT_DISPATCH.json`。
+
+
 2026-11-15。接续22:53最新五组计划26b67d55…（本轮先读取22:40四组版，写配置前发现更新并转五组），覆盖旧“WM完全不调用/当前只有API0两组”口径；仅当前V4允许现有WM推理，不开WM/DINO/Actor重训或真机。A/B=VLM＋WM无/有优化，C/D=原AINav无/有同一优化，E=AINav负责的预先固定规则策略（VLM/WM/本优化全关）；B−A/D−C主对比。原A视觉拒绝/B资源截尾与OBS/bulk根不恢复。
 
 ## 已直接实现（不是仅画schema）

@@ -1,5 +1,9 @@
 # Reach repository rules
 
+## Latest priority override: 2026-11-16 12:26 E first
+
+Shared plan SHA `7559f685a72fbbfb3dae6d95c5cb35660116670f2c8bb1c523c0690c69f9bbec`: prioritize ONE actual E full-task attempt and task0-to-outcome direct-live third-view recording. Reach performs non-blocking information/factor review only; no new approval, interface, WM/VLM, A--D readiness or complete successor-cost prerequisite for E. Data remains sole physical owner and retains mandatory new-program zero/lease/watchdog. Keep legacy-common H identical; NEW successor optimizer stays OFF for E. A legitimate explicit unsupported-domain refusal is a reported failure, never high-goal success or a fabricated native CLIMB receipt. Do not alter the confirmed layout or original safety gates, or reopen closed af09/other scopes. Continue method research off E's critical path; source59 E entry/terrain repair is software, not actual E/video qualification. See the latest handoff for evidence and source pins.
+
 ## Latest scope: 2026-11-15 22:53 V4 five-arm task
 
 The shared plan now authorizes EXISTING WM inference only for V4 A/B; C/D retain original AINav VLM/tree/replanning, B/D use one optimizer, E is AINav-owned fixed rules with no VLM/WM/optimizer. This overrides historical blanket no-WM-inference wording, not no-retraining/no-real-robot/native-safety rules. Do not replace five arms with old API0 greedy/multistep. The proposed0.2-to0.6 climb is rejected by selected original20cm height predicate; do not lower it or modify the user-confirmed layout silently. Native/E source remains AINav, sole physical execution remains Data. Test fixtures must be explicitly flagged and are never real VLM/WM forwards. See operations/V4_FOUR_ARM_METHODS_AND_GAPS_CN.md and protocols/2026-11-15/T-COMPLEX-01-V4-five-arm-methods-v1/.

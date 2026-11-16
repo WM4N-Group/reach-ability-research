@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 12:54：计划改为E先跑；source59非阻断核对，无新增Reach前置
+
+- **已切换12:26最新优先级，不让优化器拖住E：** 总计划7559f685…明确先拿E完整任务真实尝试＋task0到实际成功/失败/截断的直接第三视角1×原片。Reach只做非阻断信息/因子核对，不加新审批/回执/接口；E不等A—D、WM/VLM、critic或完整后继cost，也不要求先有E整链成功才派首次main。Data仍唯一物理owner，按原必需zero/lease/watchdog冻结独立E程序。
+- **source59最小入口已静态核，未发现新增Reach阻断：** AINav code-only `3ab9383a…`，记录4feae4a9…的e_entry/rule/factor/driver/native_entry/runtime_terrain/public_candidates七文件SHA与实文件一致。`e_entry.build_E_driver`只装精确原RuleBaseline，E分支不装A—D method/backend/WM bridge/公共NAV prefix/colour producer；新selector为OFF。旧legacy-common H五组保留、实际费用计入，不能把“E无本次优化”字幕写成历史kernel全无。此核对是源码审阅，不是native资格或Data派发证明，未刷新owner软件套件。
+- **规则信息与失败语义保持：** 规则是公开INITIAL X排序/声明目标＋一跳目标邻近的场景专用工程基线，不冒通用规划或隔离可行路线。PUSH需fresh原RGBD关联，蓝图不当live pose；放置/支撑进度只随匹配原真实interaction succeeded回执更新，准备NAV succeeded不冒PUSH成功，原typed terminal才能确认任务。未读私有pose/未来/存在性答案；公开map/prefix的可选新胶水不成为E前置。
+- **已知硬域不隐藏，也不据此循环阻止首次尝试：** 原PUSH缺Runtime.staircase由source57/59冷启动真实registry terrain绑定修复，仍非native通过。RuleBaseline._select对.20→.60的.40升高明确在unsupported dispatch前拒绝；static goal_deck绑定亦未资格，不擅降台/加支撑/改20cm或安全门。首次E可按原完整策略尝试并如实交失败位置与原片，不能把该拒绝伪造成CLIMB controller failed或高台成功。
+- **最少剩余执行项与证据边界：** Data 12:44 readiness已登记E优先、已有direct recorder及zero内有限机位核验方案，但该快照main0不等最新全局状态或实际lease。所需后续是Data接source59冻结E/必需zero/一次main与直接录制，不是新Reach许可。当前尚未消费E main/原片，不把closed af09 component更名E、不重跑旧scope。完整后继effects/cost研究仍未完成，后置并行、不抢E资源或让AINav转回模型胶水；E DEV暴露必须记入后续对照版本/用途。
+
 ### 2026-11-16 12:25：v2 fresh关联/entry READY已过，PUSH构造缺Runtime.staircase而closed；不是技能失败
 
 - **v2已closed，真实卡点从关联转到PUSH构造ABI：** 已直接核46308原result `ecbd2a5c…`/ledger `caeba3e1…`等9小metadata＋journal共10项原件SHA、770行journal完整hash链及owner关闭SHA。af09/aecec原NAV 2.245 started→15.090 succeeded；fresh15.090 public query有原cuboid_a关联，原entry judge明确READY（line764）。随后interaction option已绑定/尝试dispatch，但在原`registered_push_api.py:121`读`runtime.staircase`时AttributeError，PUSH owner未install、无PUSH命令/terminal、CLIMB未尝试。不是旧41视觉关联拒绝、controller失败或resource censor，不重开。
