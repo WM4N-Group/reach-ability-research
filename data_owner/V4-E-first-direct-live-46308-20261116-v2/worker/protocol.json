@@ -1,0 +1,107 @@
+{
+  "schema": "Data-E-first-original-rule-full-V4-goal-and-direct-live-v1",
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v2",
+  "source_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+  "source_record_sha256": "4feae4a94769828c7f45eea805ea4d9a6fab239809556b9db277e22dd943e788",
+  "plan_sha256": "7559f685a72fbbfb3dae6d95c5cb35660116670f2c8bb1c523c0690c69f9bbec",
+  "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "model_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/complex-static-new-palette.mjb",
+  "model_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "GPU_UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+  "own_GPU_cap_bytes": 3221225472,
+  "own_RSS_cap_bytes": 4294967296,
+  "output_cap_bytes": 1073741824,
+  "zero_wall_cap_s": 300.0,
+  "main_wall_cap_s": 36000.0,
+  "main_task_sim_cap_s": 600.0,
+  "main_task_step_cap": 120000,
+  "own_zero_max": 1,
+  "main_max": 1,
+  "E_selection_max64": true,
+  "VLM_WM_fit_calls_allowed": 0,
+  "known_original_policy_refusal_at_rise040_not_blind_CLIMB_call": true,
+  "no_layout_height_or_skill_guard_change": true,
+  "no_prior_complete_E_success_required": true,
+  "no_component_as_E_main": true,
+  "ffmpeg_path": "/usr/bin/ffmpeg",
+  "ffmpeg_sha256": "36d94a605d612e4090d1b8aec889d0c0801c6eafb1593c90f5c0dfd2e2966a45",
+  "camera_candidates": [
+    {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        6.5,
+        0.0,
+        0.2
+      ],
+      "distance": 18.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    },
+    {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        7.5,
+        0.0,
+        0.4
+      ],
+      "distance": 20.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    }
+  ],
+  "camera_choice_in_required_task0_zero_only": true,
+  "frame_private_evidence_not_model_input": true,
+  "known_actual_prefix_cost_basis": "closed af09:2151.132wall/2570 native preparation commands; cap is finite not completion promise; fresh scandir I/O guard preserves every-call sums, no cached budget",
+  "no_other_arm_WM_J_or_extra_component_wait": true,
+  "own_zero_required": true,
+  "allowed_zero1_main1": true,
+  "cameras": [
+    {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        6.5,
+        0.0,
+        0.2
+      ],
+      "distance": 18.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    },
+    {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        7.5,
+        0.0,
+        0.4
+      ],
+      "distance": 20.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    }
+  ],
+  "fixed_E_rule_sha256": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+  "E_max_selections": 64,
+  "known_040rise_original_rule_may_refuse_before_unsupported_call": true,
+  "no_world_replay_or_layout_lowering_or_NN_gate_change": true,
+  "Data_v1_metadata_schema_failure_retained_no_native_zero_main": true
+}
