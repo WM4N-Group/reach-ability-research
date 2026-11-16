@@ -79,7 +79,7 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 当前证据/下一验收
 
-46新policy/失效/文件/owner/foreign identity纯软件＋13 fresh adapter/owner-bridge fixtures本机通过；
+46新policy/失效/文件/owner/foreign identity纯软件＋14 fresh adapter/owner-bridge fixtures本机通过；
 不是native/容量/真实lease/5倍系统资格。相同CPU loaded模块、文件树和相同合成call轨迹的
 旧batch32与本版配对benchmark由`benchmark_same_loaded_cpu.py`提供，cold SHA/边界成本
 分开、exclusive hot分项不相加重计。真实同阶段性能验证只由Data新scope实施，未达目标
@@ -124,3 +124,5 @@ Data资格验证，不把新DirEntry或chmod说成即时防篡改证明。
 有expected hash的必需文件不能放进missing白名单；显式额外权重/资产的raw→canonical关系
 也必须进入metadata/canonical审核，不能只监控module文件。当前inventory记录全部raw别名，
 新seal拒绝bootstrap后别名指向变化；文件内容SHA仍仅在可信初始化测量，不降低5s/60s检测层。
+
+owner桥同时要求watch.check返回None或True；False/未知结果不可被包装成有效stamp，拒绝回归首版失败另保留。

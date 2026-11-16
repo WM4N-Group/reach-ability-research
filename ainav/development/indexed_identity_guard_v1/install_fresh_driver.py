@@ -91,11 +91,13 @@ def data_resource_watch_callbacks(watch,*,epoch):
          0<watch.max_stale<=2.,'Data watch epoch and <=2s genuine external freshness required')
     token=watch.token
     def fast(host):
-        watch.check(token)
+        answer=watch.check(token)
+        need(answer is None or answer is True,'Data resource watch refused/returned an unknown result')
         checked=watch.last_ok  # One atomic Python reference read; supervisor may refresh concurrently.
         need(checked is not None,'External watch never successfully checked')
         checked=float(checked)
         return OwnerStamp(epoch,checked,checked+watch.max_stale,True)
     def acknowledge(host):
-        watch.check(token)  # Do NOT run a duplicate full external probe here.
+        answer=watch.check(token)  # Do NOT run a duplicate full external probe here.
+        need(answer is None or answer is True,'Data resource watch refused/returned an unknown result')
     return fast,acknowledge

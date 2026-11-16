@@ -110,6 +110,13 @@ class Tests(unittest.TestCase):
   stamp=fast(self.driver)
   self.assertEqual(watch.reads,1);self.assertEqual(stamp.valid_until-stamp.checked_at,2.)
 
+ def test_Data_watch_explicit_false_or_bad_return_refused(self):
+  for result in (False,object()):
+   watch=NS(max_stale=2.,token=object(),last_ok=123.,check=lambda token,value=result:value)
+   fast,ack=data_resource_watch_callbacks(watch,epoch='scope-epoch')
+   with self.assertRaises(GuardViolation):fast(self.driver)
+   with self.assertRaises(GuardViolation):ack(self.driver)
+
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
  print(json.dumps(dict(role='FRESH_ADAPTER_EXPLICIT_SOFTWARE_NOT_NATIVE',checks=r.testsRun,failures=len(r.failures),errors=len(r.errors),blocked=blocked,native_Runtime_Actor_physics_GPU_API_calls=0)))

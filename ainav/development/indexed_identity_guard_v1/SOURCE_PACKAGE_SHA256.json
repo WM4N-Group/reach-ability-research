@@ -3,12 +3,12 @@
   "parent_cloud_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
   "files_sha256": {
     "AUDIT_POLICY.json": "c12123674163d7c8c1bceebc73822de2210a014abb80b42cea210a06510bc520",
-    "README_CN.md": "cff74b2ff31ad4242aa79ff2bb88682bf6b9147afe7db09e786cf3be86a11ffa",
+    "README_CN.md": "c5fe1e907825ec36f9aca3ebeea25e1c4d3433ec2cba097448b685d8a4569b8c",
     "benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
     "indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
-    "install_fresh_driver.py": "4c8e9a64a06ed2b4900aca75b866e079645d81a54670a197c6490493292723d5",
+    "install_fresh_driver.py": "e83a8cbe4b778b4b1899041b6fd6b5435015bdce959cf298750d164a6bba6f21",
     "tests/test_indexed_guard.py": "5db4919704396c739b29fe3ddcb7779888ea3090a47e22e9085b494b9ce9d522",
-    "tests/test_install_fresh_driver.py": "3332a75885e77538725626c18c7af20ae023ee0491427e53f871fbcbbe0dc50c"
+    "tests/test_install_fresh_driver.py": "f18ddefe32bd874ab9d9dfb58824e953c997a224dd0ed1b8ac8f7feed1caf9f7"
   },
   "source_members": 7,
   "original_04a_E20_all_sources_unchanged": true,
