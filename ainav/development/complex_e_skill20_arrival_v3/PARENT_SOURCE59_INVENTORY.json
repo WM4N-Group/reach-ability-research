@@ -1,0 +1,26 @@
+{
+  "role": "CODE_DERIVATIVE_FROM_COMPLETE_ORIGINAL_V6_283_BASE_NOT_NEW_METHOD",
+  "parent_cloud_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+  "parent_own_source": "complex_v4_four_arm_v1",
+  "parent_scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "copied_files_sha256": {
+    "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
+    "native_entry.py": "d4b83f4a2696416cd357030883a446262d3857b1a865e31c4e6319c8e6cf314f",
+    "runtime_terrain.py": "13becb451d6d9373c05d46e0686e8d524018641e76ed74cfb36724b92e233a7f",
+    "e_entry.py": "e69fce29a6ed18c137f2a4359f690c91589dd3db7cf5bf3d9aab934f8fea43d8",
+    "rule_baseline.py": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+    "public_candidates.py": "8ddab47eb9d1b214f22e10a615eb24174e37c2d6fea3b2c8f927109981b4bdaa",
+    "live_driver.py": "ca2e147d5c959fbaed533d20feb900cde91f1e57256d2e1073160aea95282475",
+    "execution_entry.py": "e7fd5242a758cd7b4b507a755ba724d18772a9503f2adde352c7b3b550dd9374",
+    "task_factory.py": "24a575b7782d544ca267499d82732135fc3442984dc74f7d00d0501804dccc2a",
+    "destination_climb.py": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
+    "climb_nav_source.py": "c888ef67e392ac20c3ec3ec1a9dae39149195e02f775c713b5e12de3f33860e0",
+    "climb_nav_adapter.py": "f5f398feb5cc2e2b9a0f5c88d27444edc7266530ee624d5c7287c11b64986697",
+    "task_terminal.py": "71bc3f9d6bda6bb90b882fe08acf06255874a384c20a0504ca7d7cce5038cf6b",
+    "elevated_terminal.py": "aac30006cb0edbd0e63ae3b4f72948de90f0ae61dd6a75f6ea2f21dce5554242",
+    "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
+    "factor_scope.py": "9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424",
+    "parallel_alias_guard.py": "90d4e91b246ea487cba4cfe8e502f8aea0c8d2b8964488668575c706a4132009"
+  },
+  "original_v4_source_directory_not_modified": true
+}
