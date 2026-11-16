@@ -137,6 +137,11 @@ class AnchorTarget8Provider:
         need(association_ref is None or type(association_ref)is str and bool(association_ref),
              'Original optional public semantic hypothesis evidence reference')
         targets = {}; evidence = {}
+        # Original geometry is a pure function of this immutable anchor, exact
+        # frame-local ref and diagnostic standoff. Reuse ONLY inside this call;
+        # no source/alias/identity or stale-frame cache survives the query.
+        # Keep numeric type in the key: original proof JSON may distinguish1/1.0.
+        geometry_by_request = {}
         for option in options:
             row = selected[option.sha256]
             targets[option.sha256] = None
@@ -148,27 +153,35 @@ class AnchorTarget8Provider:
                  and type(row['declared_standoff_m']) in (float,int)
                  and math.isfinite(row['declared_standoff_m']) and .5 <= row['declared_standoff_m'] <= 1.5,
                  'Only same-frame visual ref and original bounded declared diagnostic standoff, not hidden world pose')
-            try:
-                proof = self.api.describe_visible_goal(anchor['rgb'],anchor['depth_m'],anchor['camera_K'],
-                    anchor['T_base_optical'],frame_local_ref=row['frame_local_ref'],
-                    current_RGB_sha256=rgb_sha,standoff_m=row['declared_standoff_m'])
-            except ValueError as error:
-                # Original missing/ambiguous RGBD/plane rejection does not get a valid zero target.
-                evidence[option.sha256] = dict(status='UNKNOWN',reason='ORIGINAL_VISIBLE_PLANE_REFUSED',
-                    original_reason=str(error))
-                continue
-            need(proof['RGB_sha256'] == rgb_sha and proof['calibration_sha256'] == calibration
-                 and proof['frame_local_ref'] == row['frame_local_ref']
-                 and proof['uses_only_current_RGBD_and_calibration'] is True
-                 and proof['physical_action_admitted'] is False, 'Original current visible-only proof')
-            vector = tuple(float(v) for v in self.api.geometry_vector(proof))
-            need(len(vector) == 8 and all(math.isfinite(v) for v in vector) and vector[7] == 1.,
-                 'Exact observed plane descriptor, never imputed target8')
+            geometry_key = (row['frame_local_ref'], type(row['declared_standoff_m']), row['declared_standoff_m'])
+            if geometry_key not in geometry_by_request:
+                try:
+                    proof = self.api.describe_visible_goal(anchor['rgb'],anchor['depth_m'],anchor['camera_K'],
+                        anchor['T_base_optical'],frame_local_ref=row['frame_local_ref'],
+                        current_RGB_sha256=rgb_sha,standoff_m=row['declared_standoff_m'])
+                except ValueError as error:
+                    # Same exact pure request remains UNKNOWN; no per-option
+                    # retry, bigger blob selection or valid zero descriptor.
+                    geometry_by_request[geometry_key] = (None, dict(status='UNKNOWN',
+                        reason='ORIGINAL_VISIBLE_PLANE_REFUSED', original_reason=str(error)))
+                else:
+                    need(proof['RGB_sha256'] == rgb_sha and proof['calibration_sha256'] == calibration
+                         and proof['frame_local_ref'] == row['frame_local_ref']
+                         and proof['uses_only_current_RGBD_and_calibration'] is True
+                         and proof['physical_action_admitted'] is False, 'Original current visible-only proof')
+                    vector = tuple(float(v) for v in self.api.geometry_vector(proof))
+                    need(len(vector) == 8 and all(math.isfinite(v) for v in vector) and vector[7] == 1.,
+                         'Exact observed plane descriptor, never imputed target8')
+                    geometry_by_request[geometry_key] = (vector, dict(
+                        status='CURRENT_VISIBLE_PLANE_NOT_NATIVE_ASSOCIATION_OR_WORLD_POSE',
+                        association_evidence_ref=association_ref,
+                        frame_local_ref=row['frame_local_ref'],proof_sha256=hashlib.sha256(
+                            json.dumps(proof,sort_keys=True,allow_nan=False).encode()).hexdigest()))
+            vector, geometry_evidence = geometry_by_request[geometry_key]
             targets[option.sha256] = vector
-            evidence[option.sha256] = dict(status='CURRENT_VISIBLE_PLANE_NOT_NATIVE_ASSOCIATION_OR_WORLD_POSE',
-                association_evidence_ref=association_ref,
-                frame_local_ref=row['frame_local_ref'],proof_sha256=hashlib.sha256(
-                    json.dumps(proof,sort_keys=True,allow_nan=False).encode()).hexdigest())
+            evidence[option.sha256] = dict(geometry_evidence)  # Distinct candidate evidence, not a shared mutable row.
+            if vector is None:
+                continue
             if association_scope is not None:
                 evidence[option.sha256].update(association_scope=association_scope,
                     declared_conditioning_subject=declared_subjects[option.sha256],semantic_identity_verified=False)
