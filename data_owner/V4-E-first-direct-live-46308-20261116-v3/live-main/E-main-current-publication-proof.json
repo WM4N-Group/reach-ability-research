@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-16T13:30:22.678246+08:00",
+  "files": [
+    {
+      "path": "/home/yuanyue/main/work/data-team/STATUS.md",
+      "before_sha256": "984b3814cb56ca9f6b9465b2ec29c053883652adbdd659472f84e30778666ca6",
+      "after_sha256": "7266f16fec22d353efc848dbf3ff378582b37e4f5fe4b81f7bf8e168b0293d98",
+      "mode": 436,
+      "Data_only": true,
+      "peer_bytes_preserved": false
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/README.md",
+      "before_sha256": "43faf9c62615f46883493ae5f5a7ab454870076d2226bc2c68cad1220d4faffc",
+      "after_sha256": "0944b1f7288ffcf1296c75dc368eaf9e0f820b33d5433f753b6f82bc45ae8503",
+      "mode": 436,
+      "Data_only": true,
+      "peer_bytes_preserved": false
+    },
+    {
+      "path": "/home/yuanyue/main/work/data-team/AGENTS.md",
+      "before_sha256": "6b48a1d450adb258c53330b5f452a684f1edb0607eba91b8a7c2829b301170c0",
+      "after_sha256": "1daa794c6e7ad6fa1ac328139dc7bf3aa14c80c580548a8527ec10556c082d59",
+      "mode": 436,
+      "Data_only": true,
+      "peer_bytes_preserved": false
+    },
+    {
+      "path": "/home/yuanyue/main/汇总/各小组进展汇总.md",
+      "before_sha256": "5ccbb58e40f82a85cac20ebd061ce0f806d30c72645eed5b1b6d8db66c1421de",
+      "after_sha256": "0b426d21438da5c54e3d83d568d6ca1f57a7aeb39243294d1689790506201416",
+      "mode": 436,
+      "Data_only": true,
+      "peer_bytes_preserved": true
+    }
+  ],
+  "CAS_flock_atomic_preserve_mode": true,
+  "no_frozen_source_H_camera_or_cap_change": true
+}

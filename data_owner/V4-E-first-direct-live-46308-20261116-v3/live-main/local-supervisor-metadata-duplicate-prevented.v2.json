@@ -1,0 +1,7 @@
+{
+  "original_shell_duplicate_main_metadata_action_will_be_refused_before_SSH": true,
+  "wrapper_duplicate_guard_active": true,
+  "post_main_once_follows_result_then_encode_and_close_only": true,
+  "no_native_worker_signal_or_retry_or_frozen_source_change": true,
+  "earlier_optional_note_json_NameError_left_empty_file_preserved": true
+}

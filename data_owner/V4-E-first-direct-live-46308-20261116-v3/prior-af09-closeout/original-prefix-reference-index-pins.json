@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-16T12:27:39.365655+08:00",
+  "role": "EXACT_PUBLISHED_INDEX_AUTHENTICATION_FOR_READONLY_PREFIX_COMPARISON",
+  "old_release_sha256": "4d8029def9859c91744b15e509355c3562c8585c10ae7bec16198081d4e7a57a",
+  "new_release_sha256": "0a41bb540f8ffb1dc5f1db40cdcc26fa887518f331d68271a5e8b03df237b330",
+  "remote_original_indices": [
+    {
+      "scope": "data-46308-V4-parallel-guard-bounded-native-20261116-v1",
+      "index_sha256": "39e3991af76ec4585cdbc04c79c130fd6cd5ad78855c37f8407f444cc2a4fcad",
+      "exact_original_published_index": true
+    },
+    {
+      "scope": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+      "index_sha256": "d9337f15fb39949e8ecd37471308bfb3ccce5313407570b47c4e327d577bec00",
+      "exact_original_published_index": true
+    }
+  ],
+  "no_world_or_array_replay_or_mutation": true
+}

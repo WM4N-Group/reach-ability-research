@@ -1,0 +1,15 @@
+{
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+  "program_sha256": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70",
+  "phase_invocations": 1,
+  "closed": true,
+  "status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "result_sha256": "ecbd2a5c622ce958335d562f83e7a8282169d5d890b0b213915f4c64def42235",
+  "actual_auxiliary_sim_s": 6.5049999999998835,
+  "actual_task_sim_s": 15.090000000000959,
+  "wall_s": 2614.5083306080196,
+  "usage_known": true,
+  "output_bytes": 99354059,
+  "AB_main_calls": 0,
+  "automatic_retry": false
+}
