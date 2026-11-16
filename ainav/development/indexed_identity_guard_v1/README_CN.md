@@ -79,7 +79,7 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 当前证据/下一验收
 
-43新policy/失效/文件/owner/foreign identity纯软件＋13 fresh adapter/owner-bridge fixtures本机通过；
+46新policy/失效/文件/owner/foreign identity纯软件＋13 fresh adapter/owner-bridge fixtures本机通过；
 不是native/容量/真实lease/5倍系统资格。相同CPU loaded模块、文件树和相同合成call轨迹的
 旧batch32与本版配对benchmark由`benchmark_same_loaded_cpu.py`提供，cold SHA/边界成本
 分开、exclusive hot分项不相加重计。真实同阶段性能验证只由Data新scope实施，未达目标
@@ -116,3 +116,11 @@ output tree、不跨audit留DirEntry，不降原5s/60s周期。原same-inode par
 最终基准保留原两条调用轨迹，并增加每5s都触发的完整周期轨迹，防止只挑稀疏区间报收益。
 文件系统缓存/可见性不由Python绝对控制；上表为应用poll上界，真实FUSE backend延迟仍须
 Data资格验证，不把新DirEntry或chmod说成即时防篡改证明。
+
+
+## Bootstrap别名和额外资产的回归加固
+
+新增三个失败复现已保留并修复：同canonical文件的raw alias不能忽略冲突expected SHA；
+有expected hash的必需文件不能放进missing白名单；显式额外权重/资产的raw→canonical关系
+也必须进入metadata/canonical审核，不能只监控module文件。当前inventory记录全部raw别名，
+新seal拒绝bootstrap后别名指向变化；文件内容SHA仍仅在可信初始化测量，不降低5s/60s检测层。

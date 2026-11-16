@@ -220,6 +220,23 @@ class Tests(unittest.TestCase):
   self.other.write_text('# fresh modification after successful audit\n');self.advance(.51)
   with self.assertRaises(GuardViolation):self.g.check(self.host)
 
+ def test_conflicting_expected_hash_for_same_canonical_alias_refused(self):
+  link=self.root/'alias.py';link.symlink_to(self.owned);correct=hashlib.sha256(self.owned.read_bytes()).hexdigest()
+  with self.assertRaises(GuardViolation):
+   FrozenFiles.measure([self.owned,link],roots=[self.root],expected_hashes={str(self.owned):correct,str(link):'0'*64})
+ def test_expected_existing_hash_cannot_be_declared_missing(self):
+  missing=self.root/'required.py'
+  with self.assertRaises(GuardViolation):
+   FrozenFiles.measure([missing],roots=[self.root],allow_missing=[missing],expected_hashes={str(missing):'0'*64})
+ def test_extra_asset_raw_alias_canonical_mapping_is_monitored(self):
+  asset=self.root/'asset.bin';asset.write_bytes(b'EXPLICIT NONMODEL FIXTURE')
+  folder=self.root/'asset-folder';folder.mkdir();(folder/'asset.bin').hardlink_to(asset)
+  link=self.root/'asset-parent';link.symlink_to(folder,target_is_directory=True);raw=link/'asset.bin'
+  self.g.close();self.g=self.new_guard(self.inventory([asset,raw]));self.addCleanup(self.g.close);self.seal()
+  link.unlink();link.symlink_to(self.root,target_is_directory=True);self.advance(.51);self.g.check(self.host)
+  self.advance(.51)
+  with self.assertRaisesRegex(GuardViolation,'Canonical alias'):self.g.check(self.host)
+
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
  print(json.dumps(dict(role='REVISED_AUDIT_DETECTION_POLICY_SOFTWARE_NOT_NATIVE_QUALIFICATION',checks=r.testsRun,failures=len(r.failures),errors=len(r.errors),forbidden_attempts=blocked,native_world_Actor_GPU_API_calls=0)))
