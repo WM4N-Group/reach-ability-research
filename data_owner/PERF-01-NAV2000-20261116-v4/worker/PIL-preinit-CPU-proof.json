@@ -1,0 +1,49 @@
+{
+  "role": "ONE_TARGETED_CPU_ONLY_PREINIT_PNG_NPY_NO_NATIVE_SIGNOFF",
+  "strict_code_events_after_preinit": [],
+  "actual_PIL_preinit_state": 1,
+  "PNG_bytes": 69,
+  "NPY_bytes": 224,
+  "fixture_shape": [
+    4,
+    6
+  ],
+  "new_modules_before_seal": [
+    "PIL.BmpImagePlugin",
+    "PIL.GifImagePlugin",
+    "PIL.ImageMath",
+    "PIL.ImageOps",
+    "PIL.JpegImagePlugin",
+    "PIL.JpegPresets",
+    "PIL.PpmImagePlugin",
+    "PIL._imagingmath",
+    "_locale",
+    "_posixsubprocess",
+    "fcntl",
+    "locale",
+    "select",
+    "selectors",
+    "signal",
+    "subprocess"
+  ],
+  "files_sha256": {
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/BmpImagePlugin.py": "f9235d8f682876668a600734f1d12783acf79913db6181dece3bde211e5efad5",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/GifImagePlugin.py": "4a45dba19c314e896ad2eb5e5d85f49dcad9894c72012cb0a80bab39c5408b75",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/Image.py": "f7925e7e2d901487d960ec9f1cd0514f006dc2b9cd66c9f9a02b0b42c04b74af",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/ImageMath.py": "5dab0cb208da0fda763996bb9da39da44002ab7c8997e4364464dfe31a3b0a03",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/ImageOps.py": "03af6a8edfa6c4323df77f3bcffe1c1c8fb0b47f3948b2ff10d4c8f4478e4062",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/JpegImagePlugin.py": "59a0994e9766cee08ce668b8e1b372378a751173ac9cacfadeabf85c46e6f0db",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/JpegPresets.py": "967a961e8e032c81c8ba571d1e9d0d27b0967b11edf13df0e759082a52df9080",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/PngImagePlugin.py": "8cf04da99e74b71147588b038a471d91e7817cb358d4fc53e70cdc3cc7267264",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/PpmImagePlugin.py": "40933e57ea1d57bc3ea6b03b0796cb45073291d0b877b389e4105b0af3cf2336",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/PIL/_imagingmath.cpython-311-x86_64-linux-gnu.so": "210be7038a9a937f8ed3c43056f8163fa09bdd47e1b27606e68cb446200ee076",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/lib-dynload/_posixsubprocess.cpython-311-x86_64-linux-gnu.so": "cf5bd5c52fe10c92072d7a49dfe5297438ce8fbe098c79f1ecbc58254f420b91",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/lib-dynload/fcntl.cpython-311-x86_64-linux-gnu.so": "4081c53fc1b8ae863af847147e9bb5cfa6f6fac67803ca5be2d60b7124314f47",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/locale.py": "ac828df41b2fac93ba3e66a2735216c98c0e1853b8dfb9b859e301fe64153feb",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/lib-dynload/select.cpython-311-x86_64-linux-gnu.so": "525c3fe14d09eee1358ffde05cd00bf6c00f41a9d806e2d9015f162141f6a8e1",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/selectors.py": "1eeb102373e18c96311203f30c516e785bd8642275aa0bd66e43a284c9692385",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/signal.py": "0363c964c90ac0b3e515de5749205e6e6454051a1211058375d84d91eab6071a",
+    "/mnt/yuanyue/envs/go2-isaac/lib/python3.11/subprocess.py": "baa9f9138d8d20df6284f67e7d2e790f847f65e2c5370de322d54cccd737f2d9"
+  },
+  "Runtime_Actor_EGL_Model_Physics_calls": 0
+}
