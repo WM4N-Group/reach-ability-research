@@ -1,0 +1,41 @@
+{
+  "schema": "Data-NAV-prefix-preload-specific-next-config-revision-v1",
+  "at": "2026-11-16T23:44:56.967876+08:00",
+  "candidate_only_not_deployed_or_authorized": true,
+  "base_closed_program": "2c529934ee02d92aaad7c378ee035b0f0b0630b9ec4c2c4718f5fc0eeb994212",
+  "base_closed_scope": "data-46308-perf-NAV2000-indexed-20261116-v4",
+  "do_not_reopen_or_resume_base": true,
+  "actual_current_maintenance_owner": "01a1e4e1-3037-7333-9019-a3f37effe5da",
+  "require_fresh_real_owner_again_at_next_freeze": true,
+  "plan_sha256": "47709c411ff1c7c5d923a295a498769dce2abe1efc93634a211a58713ca23a08",
+  "specific_reason": "Original RegisteredCompactNav.update first imports surface_nav_observation after seal; move actual unchanged helper module import before seal through existing reviewed_preload_modules only",
+  "reviewed_preload_modules_append": [
+    "mujoco_zyh.integrated_course",
+    "mujoco_zyh.moving_arm_reference"
+  ],
+  "frozen_inventory_files_add_sha256": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/registered_compact_nav.py": "bd173adeb4d31f651f5d8d5a9c2e37c6129421aa21c39edd09e5e986ac501361",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/contact_failure_exit_contract.py": "a86b71aa39a6467af979ea78acd6004a2cbfc6f000b86dc41836fcd307df2d96",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/failure_exit_backoff_contract.py": "038866373431599ca355d52f8dc6ed5e63c01df66febe09b1be185cf4eed4b8d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/initial_contact_progress_monitor.py": "5ef4e31c077951ea57969923dba19056e149818f3fc9b0c4c88a869f8b4df8f4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/__init__.py": "3057b75568ea524c65d57a2061cf093b8bbb97a5ce9b89c5ac70f8382451191f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/failure_capsules.py": "99face5897bfc81afd993988381c506f3a833521607b752a3d6acbbfa400bb19",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/integrated_course.py": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/moving_arm_reference.py": "b4a48f67dde7eb0a0aebe417f51ac21070f786964b7aa08bc8be878b240cb168",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/nav_efficiency.py": "878fe53241784c6f2dfbd8125b0664a1607033460766847f0876c7f1c64d0efd",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/recovery_design.py": "4ea51bc66ecf63457e8004d15f9a83cd8f1c03cd74eac6d35ce2c92fb53bb6e0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/reselect_B.py": "d0c56bd8d0caf9969911f999d0d77874c42df6577f4425c00824dfe28de93af7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/resume_nav.py": "776b8168d9e7062133c7e7a74e94e5bd88f53a61712d1edc2f68883e4cb2e24a",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/scene.py": "18758bb505f1af255fb04e0a757dc21427faa35263a305ff471e0b21fe6bf76e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/source_bundle.py": "689be5c169265f87ec324d11908b331d5830f9409c73b153298418be4627ebd1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/stall_stow.py": "38b12bae7f6aa718801655e1ed82e272adf2bc18d5d7acb4872efa739e199f8c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/recovery_reference_intersection.py": "9c98e1e8474b59ce470ad2c2b63cc2b7f5be9653a3f58231405330dfe2f41737"
+  },
+  "already_in_v4_freeze_count": 16,
+  "CPU_import_evidence": "/home/yuanyue/main/work/data-team/manifests/perf-runner-assembly-20261116-v4/NAV-helper-CPU-intake.json",
+  "CPU_import_evidence_sha256": "693b88de64da3ca1ea6cdfdc1b207d4d726332c0fdf16bc83bc1aa8bc6f18561",
+  "scope_AUTH_freeze_prepare_own_zero_main_for_next_program_complete": false,
+  "no_new_worker_or_full_guard_framework": true,
+  "no_automatic_dispatch_or_retry": true,
+  "original_guard_control_safety_not_changed": true
+}
