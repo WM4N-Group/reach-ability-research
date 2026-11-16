@@ -1,0 +1,34 @@
+{
+  "role": "EXPLICIT_ORIGINAL_NAV_PREFIX_IMPORT_CLOSURE_ONLY_NO_CONTROL_CHANGE",
+  "reviewed_preload_modules_append": [
+    "runtime",
+    "mujoco_zyh.native_nav_arrival_witness",
+    "osqp.ext_builtin"
+  ],
+  "import_paths_prepend": [
+    "/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle/switch"
+  ],
+  "files_sha256": {
+    "/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle/switch/runtime.py": "2e12846c7a7789b2f44953a12685b3d0221fbd0f9449cd704e8232916877aff5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/native_nav_arrival_witness.py": "ee1e91a147170335995eca7c98bda6948b6ad9ebc31e8837b4a0f02fddbb4a48",
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/osqp/__init__.py": "a918686c59347e101c31ab51223a7341cf93285cbf526c6ea1b9eb0f3147a437",
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/osqp/interface.py": "9dc9792ea2f337435b1dbebd3a2180f2826abb07cd6bf83c505f3e0d6de7fa7e",
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/osqp/ext_builtin.cpython-311-x86_64-linux-gnu.so": "3e166569c1c6e6876fee433d75dfc1882a22a22dcce6cea3cc40b4d608f82802",
+    "/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle/push/finish.py": "83cd73a3c460ced4ac7254a22aef0c3589d0369ccc466972d88f9b5960de4052",
+    "/mnt/yuanyue/ainav-execution-reference-20261112-v1/sdk-bundle/push/balance.py": "c24b0c8df8e76519f47490bfadf3d1d8760df0b3ac02677d57bd4f96f087067a"
+  },
+  "CPU_command_fixture_cases": 5,
+  "CPU_strict_code_events": 0,
+  "CPU_two_tiny_QP_statuses": [
+    "solved",
+    "solved"
+  ],
+  "CPU_QP_not_real_Controller_or_native_qualification": true,
+  "actual_old_arrival_entry_sim_s": 8.099999999999866,
+  "original_Finish_Balance_constructor_and_solve_dynamic_code_calls": [],
+  "old_v5_UNKNOWN_not_backfilled": true,
+  "no_solver_backend_or_control_parameters_forced": true,
+  "backend_observed_not_forced": "builtin",
+  "worker_source_reused": "PERF-01-NAV2000-20261117-v6",
+  "explicit_only_bootstrap_config_revision": true
+}
