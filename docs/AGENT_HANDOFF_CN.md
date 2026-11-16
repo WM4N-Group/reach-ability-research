@@ -2,6 +2,11 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 19:43：E20唯一40mm main停止，制动期间原settled确认丢失；不重跑
+
+- **收尾新E20终态已直接核，不再称在途：** program39ef86d5/source04a的唯一40mm main结果99411e6f…、原ledger closed/main1/no retry。5482命令/27.410sim报`Original native settled confirmation lost during placement brake`；原NAV15.090 succeeded、PUSH15.095 started，但无PUSH terminal，成功cost=None，E semantic成功0，未进CLIMB。旧H/新selector均0；原DEV提前brake事件存在，不把更早异常停止称提速或证明40mm已修复。
+- **新终态账与后续：** main3522.131102207wall/27.410task＋6.505aux、38,191,493bytes、known/close0、非resource censor；只核原result/ledger/journal SHA与receipt集合，未冒完整cold/正式交付。远端新MP4文件已存在且SHA2b6c43ce…，本组未下载/目检全片或拿旧片替代。该main已用尽，不换ID盲试；新的吞吐专项按独立同条件性能验证开展，不把旧E59与新E20不同终点/失败阶段的wall相除当算法收益。新小记录`operations/E20_V3_PREARRIVAL40_REAL_MAIN_FAILURE_INTAKE_20261116.json`。
+
 ### 2026-11-16 19:40：新计划先去热循环I/O；结果reader拒跨性能profile比较，22软件两端过
 
 - **已切换19:35最高优先级：** 总计划02dc65ed…先消除热循环重复I/O再派新增任务。AINav负责一次冻结/可失效canonical索引＋每step便宜内存身份，Data负责受控写入增量容量/有限周期外部资源核验；这允许有声明的审计时延变化，不再强求静态全文件逐tick fresh等价，但动态碰撞/12N/FF/QP/FIFO/immutable/NN/STOW/4s/stop频率与参数不降。在途E20仍39ef86d5/source04a原样，不热换/不自行停任务。
