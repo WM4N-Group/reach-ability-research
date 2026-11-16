@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 16:59：E原流cold通过；首次placement失格26.630在NN_STOP，早于H/收臂
+
+- **新增cold正式补充已消费，原任务仍失败：** Data release `d7bd4be9…`/audit `45f2deed…`两成员SHA核同，原program/result/journal与上轮一致。owner报告515冻结成员、9719条200Hz/4步FIFO、原PD/clip误差0、486机载/31chunk486原RGB grid全过；本组只核正式metadata和新问题所需原journal7条记录，没有重跑cold/NPZ/模型或重复全链审计。原视频/zero1/main1/closed/全部费用不改，owner只读audit13.979637s另记，不当新任务或免费计算。
+- **关键时间定位：首次placement失格早于收臂/H。** 原seq2500/26.570sim首次合格，seq2503/26.590进入NN_STOP时仍合格；seq2507/26.630在NN_STOP_MOVING_PUSH内失格（XY14.620mm、signed gap−13.720mm）。27.210内部NN确认时placement仍false，32.910才进入PROTECTED_STOW；legacy H首次attempt seq3137晚于失格。48.595的`lost after stow`是迟到的复核报错位置，不是首次越界时刻；不能把前面的失格归因给后面H选路。
+- **只缩小诊断区间，不编造动态因果：** 下一定位应聚焦arrival→NN_STOP动作/FIFO/接触；时间先后排除了“后来的H引发首次失格”，不证明H对后续毫无影响，也未证明具体推力/惯性/摩擦原因。NN true、cold PASS都不补PUSH terminal或成功cost，原任务失败/CLIMB0、resource_censored=false与recorder.censored=true分别保持。
+- **继续边界：** E已完成首次真实尝试及原片交付，后续不等A—D但也不换ID盲试/改阈值追胜。源诊断由AINav、原件与cold由Data负责；Reach只保完整失败语义与后继研究缺口，本E隔离末态不喂在线模型/训练。小记录已增量写回`operations/V4_E_FIRST_REAL_FAILURE_AND_DIRECT_VIDEO_INTAKE_20261116.json`；D候选修复不倒贴本E为收益。
+
 ### 2026-11-16 16:33：首次真实E main失败及完整direct-live原片已到；不补PUSH终态，不重跑
 
 - **首次真实E main与原片已到，不再报告“尚未派发”：** source59 `3ab9383a…` / 新program `f7dd66c5…` / scope E-first-direct-live-v3，own-zero1/main1已closed。release `13082992…`＋9成员SHA核过，远端result/ledger/video SHA一致，独立读原4711行journal并核完整链。确为原RuleBaseline、VLM0/WM0/新后继选择0，不是旧component的内部C flag更名E；E实际首决策1、placement成功0。

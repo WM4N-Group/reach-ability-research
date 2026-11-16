@@ -197,11 +197,82 @@
     "existing_owner_decoded_48s_frame_visually_inspected": true,
     "full_motion_or_arm_detail_review_not_claimed": true
   },
-  "full_stream_cold_audit": "PENDING_OWNER_AUDIT_NOT_GATE_TO_DELIVER_ORIGINAL_FAILURE_VIDEO",
+  "full_stream_cold_audit": "OWNER_PUBLISHED_PASS_ACCEPTED_NOT_REACH_INDEPENDENT_NPZ_PD_FIFO_REAUDIT",
   "E_first_DEV_exposure": true,
   "no_comparative_method_ranking": true,
   "model_input_allowed": false,
   "training_allowed": false,
   "automatic_retry": false,
-  "no_new_Run_Actor_WM_API_fit_or_tests": true
+  "no_new_Run_Actor_WM_API_fit_or_tests": true,
+  "full_stream_cold_audit_at_minimum_delivery": "PENDING_OWNER_AUDIT_NOT_GATE_TO_DELIVER_ORIGINAL_FAILURE_VIDEO",
+  "cold_addendum_intake": {
+    "at": "2026-11-16T16:59:17.616799+08:00",
+    "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-E59-CLOSED-STREAM-COLD-PASS-NNSTOP-FIRST-PLACEMENT-LOSS-20261116-v1/release.json",
+    "release_sha256": "d7bd4be94aeab1662c0b973ec358971aefee7b422abd01711ae2a8268d38faba",
+    "verified_small_members_sha256": {
+      "original-stream-cold-audit.json": "45f2deedf3f834502063ded32e8a31a12211f918d9bca451ccae489d6c6b680f",
+      "README_CN.md": "9b77d7c2d66c62608996eb350ee89f41e9d93201bd7eb8a846605597b05be57f"
+    },
+    "owner_cold_checks": {
+      "all_frozen_members_SHA": true,
+      "journal_chain_verified": true,
+      "episode_storage_complete": true,
+      "continuous200Hz": true,
+      "FIFO4step_exact": true,
+      "raw_PD_reproduction": true,
+      "hard_effort_clip": true,
+      "previous_actions_onboard_exact": true,
+      "onboard10Hz_grid_complete": true,
+      "raw_RGB_grid_complete": true,
+      "actual_task_count_and_time": true,
+      "close_errors0": true
+    },
+    "owner_readonly_audit_wall_s": 13.979637454962358,
+    "owner_counts": {
+      "all_frozen_members": 515,
+      "journal_rows": 4711,
+      "command_rows": 9719,
+      "onboard_frames": 486,
+      "raw_frames": 486,
+      "raw_chunks": 31,
+      "max_raw_PD_error": 0.0,
+      "max_clip_error": 0.0
+    },
+    "independent_Reach_raw_array_reaudit": false,
+    "old_full_journal_chain_not_revalidated_again": true,
+    "selected_rows_rechecked_on_same_SHA_original_journal": {
+      "2500": "357ce3c0f47ad9568c0fd993d0982365788df2b742d43e560acb46c411f95f33",
+      "2503": "cecba3cb67558bb4c247de395b4bee219cb7154fa71108d03df01d088ad58ace",
+      "2507": "b0173824350e3604b62467938e7d813c7e6f89cd98decc93cfb7dbd701da9361",
+      "2565": "76c50b5e30e57f475bd39f426eb236171a95414dfe58296267cf3e32d220dc88",
+      "3137": "0c48d0c67ecc956ec596ee714afbf6e85fdf628fb8766f44578bf94bc1df79e7",
+      "3139": "72261a0f36361e2af6cd07525cb32226e98c4810f86cfda393fc32a519726bd2",
+      "4710": "49846da02273c1d0ca361ca60ff1260a95d7946f45b725fad18e93be66efb37d"
+    },
+    "first_pass_by_owner_scan_selected_original_row_corrob": {
+      "sequence": 2500,
+      "time_s": 26.569999999999,
+      "phase": "run",
+      "placement_geometry_verified": true,
+      "task_geometry_pass": true,
+      "public_XY_error_m": 0.008855114958241437,
+      "actual_signed_dock_gap_m": 0.00346226897331281,
+      "native_result": false
+    },
+    "first_loss_by_owner_scan_selected_original_row_corrob": {
+      "sequence": 2507,
+      "time_s": 26.629999999998986,
+      "phase": "NN_STOP_MOVING_PUSH",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.014620226352646403,
+      "actual_signed_dock_gap_m": -0.013720126974703817,
+      "native_result": false
+    },
+    "first_loss_precedes_H_selection": true,
+    "late_error_not_first_loss_time": true,
+    "does_not_establish_cause_or_all_later_H_effects": true,
+    "no_changed_failure_labels_costs_video_or_physical_counts": true,
+    "no_fit_or_new_model_input_permission": true
+  }
 }
