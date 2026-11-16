@@ -1,0 +1,33 @@
+{
+  "role": "WINDOW_HANDOFF_CODE_AND_METADATA_ONLY_NOT_NEW_RESEARCH_RESULT",
+  "at": "2026-11-16T22:49:36.080187+08:00",
+  "source_head_before_handoff": "deaad30c31fa0fca595a2e39d2812809d54d314e",
+  "branch": "main",
+  "main_clean_before_handoff": true,
+  "plan_sha256": "c7cd77abebfcc33808389ec211284b46802a23de02ddb4ee6e6158cf805ea2e7",
+  "critical_file_SHA_at_handoff": {
+    "/home/yuanyue/main/汇总/各小组下一步研究计划.md": "c7cd77abebfcc33808389ec211284b46802a23de02ddb4ee6e6158cf805ea2e7",
+    "/home/yuanyue/reach-ability-research/AGENTS.md": "3b45ce3ea810724589af5615be5eceea5fa853b3d1d9d0a46d32be5d797e3c40",
+    "/home/yuanyue/reach-ability-research/operations/PERF01_ZERO_DELETED_EXECUTABLE_MAPPING_FAILURE_INTAKE_20261116.json": "0a0dd9c6adb9a4b37e134e1188e6475c3f6414092bc85c8ef12661e5f3aaa7cf",
+    "/home/yuanyue/reach-ability-research/operations/PERF01_OLD_E20_2000_PREFIX_REFERENCE_20261116.json": "8b11ef1f1dddef77529b84bc003725ad92587c29a0b154db88ee12a29c1d50f3"
+  },
+  "legacy": {
+    "path": "/home/yuanyue/re-nav -piper-manipulation-reachability/GO2-PIPER-SIM2REAL",
+    "branch": "feature/go2-piper-reachability-p0",
+    "HEAD": "4c998be60b2264999c5c033a2d011843bfd202a5",
+    "index_empty": true,
+    "status_porcelain_z_SHA_at_handoff": "b9c6f44be32ea79ee8706153d7830a9998e037ae3e56b8fb1343b986bb10c822",
+    "status_NUL_entry_count": 1160,
+    "status_bytes": 106565,
+    "do_not_treat_entry_count_as_tracked_files_or_revert_work": true,
+    "all_dirty_preserved": true
+  },
+  "docs_count": 5,
+  "prompt_path": "/home/yuanyue/reach-ability-research/operations/handoff/2026-11-16-2245/NEW_WINDOW_PROMPT_CN.md",
+  "prompt_sha256": "36cb9b31ad1231211c4fad275e1a24510892c8f538dfc4f4e2785e5f9ddcc665",
+  "PERF01_conclusion": "NO_VALID_MEASUREMENT_ZERO1_MAIN0_CLOSED",
+  "next_primary_owner": "Data",
+  "native_calls_in_handoff": 0,
+  "do_not_create_or_pause_goal_agent_chat_or_automation": true,
+  "new_diagnostic_scope_status_not_independently_verified_by_Reach": true
+}

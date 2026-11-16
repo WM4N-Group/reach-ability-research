@@ -2,6 +2,12 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 22:49 新窗口交接入口（换窗，不停工）
+
+完整prompt：`/home/yuanyue/reach-ability-research/operations/handoff/2026-11-16-2245/NEW_WINDOW_PROMPT_CN.md`；workspace快照：`/home/yuanyue/reach-ability-research/operations/handoff/2026-11-16-2245/WORKSPACE_STATE.json`。新窗先读该prompt再走最短入口，不通读本文件历史。交接不新增运行/批准/研究结果，全部dirty/index与closed保持，不删除heartbeat。
+
+当前PERF-01 cbc751…真实zero1/main0已closed，结论未形成有效测量。收尾核到AINav22:38已消费Data单次独立EGL库诊断（41967314…，16×16 EGL后8192-byte deleted memfd RX，释放后消失）；不是原zero精确身份/唯一因果证明。Reach只核该回执，下一窗优先读**已经执行**的Data诊断/关闭原件，不重复开GPU诊断；Data负责明确运行时RX信任/校验策略和新的有限资格，不扩guard/重开cbc。
+
 ### 2026-11-16 22:37：PERF-01真实zero在deleted RX映射准入处失败；main0，未形成有效测量
 
 - **PERF-01首轮已有实际结论：未形成有效测量。** Data正式release036c8920…/12小成员SHA已核，cbc751e4…已真实own-zero1、main0并closed/no retry；本组不再报告笼统等登记/lease/zero。新indexed guard未装入原生，2000步窗口未发生，任何加速比/new wall-sim/分位/静态占比均UNKNOWN；不能用zero17.762s去除旧main1205.164s或称5×/10%通过。
