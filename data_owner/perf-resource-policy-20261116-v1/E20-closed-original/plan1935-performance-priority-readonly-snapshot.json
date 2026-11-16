@@ -1,0 +1,213 @@
+{
+  "at": "2026-11-16T19:45:58.137445+08:00",
+  "H_sha256": "b93b8922510a23b4e0bbc61b4a0d6bf4f1cb92b00d63db84149f15b981862052",
+  "active": false,
+  "phase": "CLOSED_E_MAIN",
+  "main_count": 1,
+  "PID248453_alive": false,
+  "progress": {
+    "at": "2026-11-16T19:33:23.770670+08:00",
+    "task_steps": 5200,
+    "time_s": 25.999999999999112,
+    "wall_s": 3327.146641399944,
+    "method": "E",
+    "metrics": {
+      "Data_guard_inclusive": {
+        "calls": 30483,
+        "wall_s": 1096.4841328368057
+      },
+      "actual_driver_step": {
+        "calls": 5201,
+        "commands": 5200,
+        "wall_s": 3242.377675255062
+      },
+      "fresh_size_parallel": {
+        "calls": 30483,
+        "directories_requested": 439535,
+        "wall_s": 263.02789071877487
+      },
+      "loaded_metadata_guard": {
+        "full_path_passes": 10404,
+        "path_occurrences_requested": 15100494,
+        "resolve_wall_s": 2009.4643408705015,
+        "original_check_passes": 10404,
+        "original_check_inclusive_wall_s": 826.2720235083252
+      }
+    }
+  },
+  "milestones": [
+    {
+      "event": "intent_actual_native_outcome",
+      "execution_role": "preparation",
+      "intent_sha256": "8af907c5744f9f311b2197e93e01b5f6d154a39ee2b73f215fe23b57780b42eb",
+      "intent_succeeded": false,
+      "native_option_sha256": "46bbe3f0089a1208dda1c0b55925a7fcb7dd597a50443a76b33aa91376a04329",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=3018",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "46bbe3f0089a1208dda1c0b55925a7fcb7dd597a50443a76b33aa91376a04329",
+        "status": "succeeded",
+        "time_s": 15.090000000000959
+      },
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "E",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    },
+    {
+      "actual_box_linear_velocity_m_s": [
+        0.34250774088373626,
+        -0.0016335088987650087,
+        -0.04244843767410543
+      ],
+      "actual_box_position_m": [
+        2.5624766920523396,
+        -0.006568863178776043,
+        0.10023227105843929
+      ],
+      "actual_box_rotation": [
+        [
+          0.9999935493283243,
+          0.003565637446722061,
+          0.0004330488854283033
+        ],
+        [
+          -0.003565623859746254,
+          0.9999936426264455,
+          -3.214315035720633e-05
+        ],
+        [
+          -0.00043316074319534086,
+          3.05988535739771e-05,
+          0.9999999057177351
+        ]
+      ],
+      "actual_signed_dock_gap_m": 0.034991797652422774,
+      "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+      "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+      "event": "DEV_pre_arrival_original_brake_entry",
+      "fixed_early_margin_m": 0.04,
+      "geometry_relabelled": false,
+      "model_input": false,
+      "native_confirmation": false,
+      "native_drive_goal_error_m": 0.147669521589319,
+      "native_goal_confirmed_separately_required": true,
+      "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+      "placement_geometry_verified": false,
+      "policy": "DEV_PRE_ARRIVAL_ORIGINAL_BRAKE_40MM_20261116_v1",
+      "protected_stow_completion_separately_required": true,
+      "public_XY_error_m": 0.03809394443735695,
+      "state_is_private_native_control_not_planner_input": true,
+      "task_geometry_pass": false,
+      "task_success_declared": false,
+      "time_s": 26.46999999999902,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "E",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    },
+    {
+      "actual_box_linear_velocity_m_s": [
+        -5.73479830172594e-06,
+        -3.126488889431009e-06,
+        9.254518229972058e-05
+      ],
+      "actual_box_position_m": [
+        2.629430848436465,
+        -0.01206994481929197,
+        0.09977787665280724
+      ],
+      "actual_box_rotation": [
+        [
+          0.9999975006746735,
+          -0.0022357610536322546,
+          4.113198296631587e-06
+        ],
+        [
+          0.0022357610444224845,
+          0.9999975006806392,
+          2.2423147304699842e-06
+        ],
+        [
+          -4.118201296379819e-06,
+          -2.2331129976763934e-06,
+          0.9999999999890272
+        ]
+      ],
+      "actual_signed_dock_gap_m": -0.030993293303445357,
+      "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+      "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+      "event": "placement_original_native_clock_confirmed",
+      "model_input": false,
+      "native_clock": {
+        "actual_last_native_sample_s": 27.189999999998875,
+        "actual_last_read_s": 27.189999999998875,
+        "actual_started_s": 15.090000000000959,
+        "caller_reads": 4063,
+        "failed": false,
+        "model_input": false,
+        "native_advances": 605,
+        "native_buffers_never_reset": true,
+        "native_contact_seen": true,
+        "native_duration_s": 0.5000000596046448,
+        "native_goal_actor_and_motor_queue_not_modified": true,
+        "native_predicate_sha256": "d3cf0468608e453fd33e78fb14e635b32d30fea37b859300cd5c33eefee0c61d",
+        "native_result": true,
+        "native_term_class_preserved": "PushSettled",
+        "original_hold_time_s": 0.5,
+        "original_step_dt_s": 0.02,
+        "schema": "ainav-native-settled-physical-clock-v1"
+      },
+      "native_drive_goal_error_m": 0.08146826313693302,
+      "native_goal_confirmed_separately_required": true,
+      "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+      "placement_geometry_verified": false,
+      "protected_stow_completion_separately_required": true,
+      "public_XY_error_m": 0.031809721904331546,
+      "task_geometry_pass": false,
+      "time_s": 27.189999999998875,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "E",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    },
+    {
+      "actual_physical_tick": 5482,
+      "automatic_retry": false,
+      "error": "Original native settled confirmation lost during placement brake",
+      "event": "ainav_chain_hard_stop",
+      "fixed_route_fallback": false,
+      "native_safety_handling_required": true,
+      "task_success_inferred": false,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "E",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "raw_chunks": 18,
+  "result_exists": true,
+  "current_new_plan_sha256": "02dc65edff1a562a4e1d47b6f24ebd8b169d99d780bd69c8c6a9063cb1a73064",
+  "inflight_frozen_plan_kept": true,
+  "no_signal_or_new_dispatch": true
+}

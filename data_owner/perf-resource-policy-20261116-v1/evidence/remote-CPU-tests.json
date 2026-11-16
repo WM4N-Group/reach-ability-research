@@ -1,0 +1,24 @@
+{
+  "runs": {
+    "unit": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_append_cannot_seek_undercount (test_policy.PolicyTests.test_append_cannot_seek_undercount) ... ok\ntest_atomic_replace_and_peak (test_policy.PolicyTests.test_atomic_replace_and_peak) ... ok\ntest_binary_text_utf8_exact (test_policy.PolicyTests.test_binary_text_utf8_exact) ... ok\ntest_cap_admission_before_write (test_policy.PolicyTests.test_cap_admission_before_write) ... ok\ntest_cheap_health_refusal (test_policy.PolicyTests.test_cheap_health_refusal) ... ok\ntest_closed_watch_cannot_restart (test_policy.PolicyTests.test_closed_watch_cannot_restart) ... ok\ntest_deleted_known_file (test_policy.PolicyTests.test_deleted_known_file) ... ok\ntest_duplicate_writer (test_policy.PolicyTests.test_duplicate_writer) ... ok\ntest_event_loss_stops (test_policy.PolicyTests.test_event_loss_stops) ... ok\ntest_final_reserve_and_sealed_guard (test_policy.PolicyTests.test_final_reserve_and_sealed_guard) ... ok\ntest_foreign_root (test_policy.PolicyTests.test_foreign_root) ... ok\ntest_hardlink_reject (test_policy.PolicyTests.test_hardlink_reject) ... ok\ntest_hot_guard_no_probe_no_filesystem (test_policy.PolicyTests.test_hot_guard_no_probe_no_filesystem) ... ok\ntest_partial_write_reservation_retained (test_policy.PolicyTests.test_partial_write_reservation_retained) ... ok\ntest_private_path_no_global_monkeypatch (test_policy.PolicyTests.test_private_path_no_global_monkeypatch) ... ok\ntest_probe_error_and_false (test_policy.PolicyTests.test_probe_error_and_false) ... ok\ntest_read_error_latched (test_policy.PolicyTests.test_read_error_latched) ... ok\ntest_same_size_inode_replace (test_policy.PolicyTests.test_same_size_inode_replace) ... ok\ntest_stale_stops_and_never_recovers (test_policy.PolicyTests.test_stale_stops_and_never_recovers) ... ok\ntest_symlink_reject (test_policy.PolicyTests.test_symlink_reject) ... ok\ntest_truncate_exact (test_policy.PolicyTests.test_truncate_exact) ... ok\ntest_unknown_writer (test_policy.PolicyTests.test_unknown_writer) ... ok\ntest_wrong_token (test_policy.PolicyTests.test_wrong_token) ... ok\ntest_zip_seek_header_rewrites (test_policy.PolicyTests.test_zip_seek_header_rewrites) ... ok\ntest_disk_low_unknown_and_one_lease_call (test_policy.ProbeCompositionTests.test_disk_low_unknown_and_one_lease_call) ... ok\ntest_lease_revocation_propagates (test_policy.ProbeCompositionTests.test_lease_revocation_propagates) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.014s\n\nOK\n"
+    },
+    "original-recorder-cpu": {
+      "exit": 0,
+      "stdout": "{\"original_40_command_recorder_fixture_byte_identical\": true, \"direct_numpy_compressed_file_interface_pass\": true, \"original_100_journal_rows_fixture_byte_identical\": true, \"no_original_module_monkeypatch\": true, \"CUDA_initialized\": false, \"Runtime_Actor_model_restore_forward_renderer_physics_calls\": 0, \"recorder\": {\"used_bytes\": 22190, \"controlled_logical_highwater_bytes\": 22190, \"reserve_bytes\": 1048576, \"finalizing\": true, \"failed\": false, \"failure\": null, \"open_files\": 0, \"metrics\": {\"write_calls\": 25, \"bytes_requested\": 22247, \"reconcile_calls\": 1, \"reconcile_wall_s\": 0.0003039590083062649, \"paths_opened\": 16}}, \"journal\": {\"used_bytes\": 22980, \"controlled_logical_highwater_bytes\": 22980, \"reserve_bytes\": 262144, \"finalizing\": true, \"failed\": false, \"failure\": null, \"open_files\": 0, \"metrics\": {\"write_calls\": 100, \"bytes_requested\": 22980, \"reconcile_calls\": 1, \"reconcile_wall_s\": 5.229818634688854e-05, \"paths_opened\": 1}}, \"SOFTWARE_FIXTURE_NOT_TASK\": true}\n",
+      "stderr": ""
+    }
+  },
+  "pins": {
+    "resource_watch.py": "5718b87ae387952a124d3bea85689c4ea30e37db6cc04ce7e3c31c89226f2310",
+    "scoped_io.py": "3409293c6bc45749e28fb06e968e76317862e512bd081820d6b7286835a68ae2",
+    "private_writer_binding.py": "c18f6f7b446a1363a7fbcfb1b7e5d62199e9e1cbbe72f0ddf9dcc02962db9601",
+    "test_policy.py": "2fbe1d74fdaf2764cc6e265e11b4d3caa521660701c994abd7655537c4cc757b",
+    "test_original_writer_cpu.py": "6a3d66265531ba88d31366c805a11b245f57ffcd27b3fc2dd58968402b19ecfa",
+    "original_writer_pins.json": "50100f2cee4f449f4f7c06e53dbddce7f81f5c1249c2d9bdcd71649bcc1bd8b9",
+    "benchmark_policy.py": "6bdc35d696c876b73fd66045560501ef4beee6de778d6a3e0133277d29be5dc6"
+  },
+  "no_native_dispatch_or_current_H_change": true
+}

@@ -1,0 +1,5 @@
+{
+  "encoded": true,
+  "stdout": "{\"video_path\": \"/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-E20-prearrival40-direct-live-20261116-v3/main/E-direct-live-1x.mp4\", \"video_sha256\": \"2b6c43ce4edb1208d73457f5cd8aadf1b0335ca753e48d6ef291605a127f18ed\", \"actual_raw_frames\": 275, \"width\": 1280, \"height\": 720, \"fps\": 10.0, \"playback_speed\": 1, \"source\": \"actual direct-live raw master\", \"native_end_time_s\": 27.40999999999883, \"native_time_not_inferred_from_clip_duration\": true, \"no_state_replay_renderer_interpolation_resize_or_selected_success_cut\": true, \"raw_master_retained\": true, \"encoder_wall_s\": 7.03513204283081}\n",
+  "stderr": ""
+}

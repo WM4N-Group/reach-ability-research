@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-E20-40MM-ACTUAL-ENTRY-NATIVE-CONFIRMATION-LOST-COMPLETE-VIDEO-20261116-v1/release.json",
+  "release_sha256": "af92e23aa0b8df1d27786cfa8c2c5b6ba1159cfa843129ac2ac13c27db8cc942",
+  "all_files_SHA_match": true,
+  "no_frozen_or_closed_runtime_or_H_mutation": true
+}

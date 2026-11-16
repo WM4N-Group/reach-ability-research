@@ -1,0 +1,18 @@
+{
+  "schema": "Data-future-output-coverage-boundaries-v1",
+  "source": "closed actual E20 tree93files; original content not copied",
+  "categories": {
+    "episode47files": "private original writer IO injection works on CPU40 synthetic command rows; no data transform",
+    "events_journal": "private original Journal100 rows byte-identical on CPU",
+    "raw_third_view20files": "direct NumPy compression sink interface passed; actual live-camera/end-to-end binding pending",
+    "query_observations8files": "needs explicit publisher IO opener/root injection, not currently controlled",
+    "intent_observations2files": "needs explicit serializer IO binding, not currently controlled",
+    "claim_lease_progress_result_ledger": "Data own runner write sites must bind to same budget; report reserve path implemented in component",
+    "PNG_qualification": "caller must save through controlled file object; not covered merely by passing a filename",
+    "controller_stdout_stderr": "separate bounded controlled sink/reservation still required; counter cannot be shared by fork",
+    "encoder_MP4_and_stderr": "must use controlled output or separately bounded reservation; existing filename-only ffmpeg output is NOT accounted by this prototype"
+  },
+  "no_silent_all_writers_covered_claim": true,
+  "native_admission": false,
+  "original_native_guards_require_AINav_identity_policy": true
+}

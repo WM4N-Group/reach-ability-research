@@ -1,0 +1,50 @@
+from pathlib import Path
+import json,hashlib,datetime,fcntl,os,tempfile
+B=Path('/home/yuanyue/main/work/data-team');M=Path(__file__).resolve().parent;E=B/'manifests/E20-prearrival40-direct-live-46308-20261116-v3';P=B/'development/perf-resource-policy-20261116-v1';D=B/'consumer-deliveries';bench=json.loads((M/'primary-performance-assessment.json').read_bytes());proof=json.loads((M/'CPU-candidate-publication-proof.json').read_bytes());assert bench['Native_ready']is False;now=datetime.datetime.now().astimezone().isoformat();A=M/'status-before-performance-priority';A.mkdir();sha=lambda b:hashlib.sha256(b).hexdigest()
+body=f'''更新：{now}（北京时间；19:35新计划吞吐专项已实施Data候选与同条件组件测量；E20已按旧规则自然失败并交完整原片）
+
+**当前状态**
+- **最高优先已切到消除热循环重复I/O，不再先排新E/五组/bulk。** 主计划 **02dc65ed…**已消费。Data新代码`{P}`已实现受控文件增长预记账、UTF8/压缩ZIP/临时替换/并发限额与final reserve，以及便宜PID/token/闩锁/心跳检查＋周期原lease/磁盘/全目录核账。**只供下一完整新程序，不曾安装到原39ef在途/closed run**。1s probe/2s成功心跳失效上界有意改变旧逐调用检测延迟：最迟下一个原guard边界拒绝，native/OS阻塞时间另计；未知外写/替换/alias/丢事件/读失败闩锁停步，不静默重建账。原碰撞/FF/QP/FIFO/目标/NN/STOW/12N/4s/stop不降，不把缓存/chmod冒绝对防篡改。
+- **有代码与实测，不只软件case数量：** 本地30项、目标机26＋3＋1项CPU安全测试过；私有globals绑定的原recorder 40条synthetic command及原Journal100行与原输出逐byte同，直接NumPy压缩sink接口过；原模块/pathlib未猴补，所有fixture均无Runtime/Actor恢复或forward/renderer/GPU/物理/训练调用。正式CPU候选release **{proof['release_sha256']}**，**native_ready=false**：库能运行不等整个新runner已资格齐备，未新增物理派发。
+- **主性能结果严格对标当前已部署parallel8，不挑较大倍率：** 在46308 **fuseblk**相同93文件/38,388,712逻辑bytes稀疏fixture和同一合成调用时间表（旧平均0.108283306s/调用，非未记录的真实逐调用时刻），3轮每轮1000调用：原helper SHA052747ca…扫描1000次／**8.209、8.640、8.359s**；新101次扫描、含bootstrap+loop **1.889、1.899、1.977s**，配对中位**4.346×目录/资源组件改善**，热guard约1.175µs/调用。旧serial基线9.38×与本地5ms fixture38.55×保留但不作主对标；本结果含策略频率改变，**不是系统端到端5×、不是实际稳态静态审计<10%或方法收益，不与AINav倍率相乘**。输入仅旧树path/size，未搬原NPZ/图像或重放状态。
+- **原E20完整失败原片已交，不再写“仍在途”。** source04a9c0fe…／program39ef86d5…／scope`data-46308-E20-prearrival40-direct-live-20261116-v3`唯一main，26.470sim真实触发40mm原brake（gap34.992mm、geometry仍false）；27.190原NN clock内部true，但placement仍false；**27.410sim／5482tick原settled确认丢失硬停**，error=`Original native settled confirmation lost during placement brake`。PUSH复合terminal=None、后箱/CLIMB0、共有H attempt0；不补native failed/成功cost，不归因性能或假称提前触发已修复。此仍是C箱顶20cm seen-DEV，不是原.60m高台成功。未人为中断/热改，整个40mm动态main合计1已closed，不扫margin或换seed追胜。
+- **完整275帧1×原片与成本保真：** 1280×720/10Hz，18 raw chunks逐SHA、ffprobe实际275帧通过；video **2b6c43ce…**，本机仅196166bytes副本`{E/'E20-direct-live-1x.mp4'}`，原master留远端，无回放/重渲染/插帧/成功剪辑。末grid5480tick/27.400sim、真实终态27.410以event/result为准。main **3522.131102207wall／27.410task+6.505auxsim**、zero另18.663792928wall+6.505auxsim，usage known/resource_censored=false/close0；原episode.censored=true为异常截断不改为资源失败。新静态11.758566817wall、旧静态失败10.479544644wall、Data v2漏privacy helper的zero授权1/Runtime0/main0及wall/RSS未知全部保留，不清零。最少正式release **af92e23a…**；完整FIFO/PD cold尚待补，不能冒已通过。主run两helper实际计时resolve2121.002s、Data guard1163.921s含size281.162s、driver3432.377s有嵌套，不相加；15.926M为路径出现请求非内核I/O次数。
+- **原版本/用途/执行边界保持：** 原E59失败/full video/cold与40836ff0…命令窗口、旧46174 left恢复元数据dce8b554…、失联时UNKNOWN原件和全费用均不改；fixed24仍10PASS/14非PASS、closed/no refit。compute仅46308，Data真实owner不变，主任务PID248453已退出、GPU0两原canonical inode已释放，权威H已closed、镜像一致；不把空闲当新lease，不动他组源/进程/锁/自动化，不新建chat/agent/Goal。不改critic/V-JEPA/旧audit或科学库存用途。
+
+**下一步（具体剩余接线，不新增资格循环）**
+- 按`IO_COVERAGE.json`补全8个query-observation、2个intent证据、Data自身metadata/PNG、controller stdout/stderr与encoder输出的受控写入/独立有界预留；当前不能仅给文件名就宣称计账已覆盖。保64MiB drain/report reserve，先封native再写终态，不允许失败后恢复执行；真实全盘高水位与受控逻辑高水位区分，外写峰值未知不能补0。
+- 接AINav新canonical/增量身份guard；在完整模块/权重/私有writer namespace装配后一次身份核验，显式边界重核，新module/alias/file/foreign runtime/session/queue须拒绝或停步重核。Data的wrong-token fixture不冒这些native资格。
+- 这些具体防护接缝合格后才注册独立**性能验证**scope，按同场景/seed/动作阶段比较端到端wall/sim、step分位、exclusive物理/Actor/render/writer/guard成本、完整帧/命令/回执及内存；5×和<10%只是目标。未通过前不派新E/五组/bulk，不延长watchdog/降物理与安全率求快；E失败原片/最少结果已先交，补cold不阻提速研发。
+
+**详细入口**
+- Data可运行CPU候选/API/明确检测延迟及未覆盖路径：`{P/'README_CN.md'}`、`{P/'POLICY.json'}`、`{P/'IO_COVERAGE.json'}`；正式包`{D/'AINAV-DATA-PERF-CONTROLLED-IO-PERIODIC-GUARD-CPU-QUALIFIED-NOT-NATIVE-20261116-v1/release.json'}`；主实测`{M/'exact-current-parallel8-comparison.json'}`、`{M/'primary-performance-assessment.json'}`。
+- E20原结局/账本/275帧完整片/40mm触发和NN丢失原标量：`{D/'AINAV-DATA-E20-40MM-ACTUAL-ENTRY-NATIVE-CONFIRMATION-LOST-COMPLETE-VIDEO-20261116-v1/release.json'}`；旧E59、Data两类前置失败、旧left和fixed24完整入口保存在本组历史与`{A}`，没有重开/重跑。
+'''
+(M/'CURRENT_STATUS_CN.md').write_text(body);changes=[]
+def cas(path,fn,peer=False):
+ old=path.read_bytes();new=fn(old);(A/(path.name+'.before')).write_bytes(old);dfd=os.open(path.parent,os.O_RDONLY|os.O_DIRECTORY)
+ try:
+  fcntl.flock(dfd,fcntl.LOCK_EX)
+  with path.open('rb')as f:
+   fcntl.flock(f,fcntl.LOCK_EX);st=os.fstat(f.fileno());assert f.read()==old and path.stat().st_ino==st.st_ino;fd,tmp=tempfile.mkstemp(prefix='.Data-perf-current-',dir=path.parent)
+   try:
+    os.fchmod(fd,st.st_mode&0o7777)
+    with os.fdopen(fd,'wb')as out:out.write(new);out.flush();os.fsync(out.fileno())
+    assert path.read_bytes()==old;os.replace(tmp,path);os.fsync(dfd)
+   finally:
+    if os.path.exists(tmp):os.unlink(tmp)
+ finally:os.close(dfd)
+ changes.append(dict(path=str(path),before_sha256=sha(old),after_sha256=sha(new),directory_file_flock_SHA_CAS_atomic_replace=True,mode_preserved=True,peer_bytes_preserved=peer))
+def shared(raw):
+ a=raw.index('## Data组\n'.encode());b=raw.index(b'\n## ',a+1);out=raw[:a]+('## Data组\n\n'+body.rstrip()+'\n').encode()+raw[b:];assert out[:a]==raw[:a]and out.endswith(raw[b:]);return out
+cas(Path('/home/yuanyue/main/汇总/各小组进展汇总.md'),shared,True)
+def status(raw):
+ a=raw.index(b'<!-- NEXT_QUESTION_SAMPLING_CURRENT_BEGIN -->');b=raw.index(b'<!-- NEXT_QUESTION_SAMPLING_CURRENT_END -->',a);s=(raw[:a]+('<!-- NEXT_QUESTION_SAMPLING_CURRENT_BEGIN -->\n'+body).encode()+raw[b:]).decode();lines=s.splitlines(keepends=True)
+ for i,line in enumerate(lines):
+  if line.startswith('更新：'):lines[i]='更新：'+now+'（北京时间；Data吞吐组件CPU资格/目标机同树主测已交；E20原NN丢失失败及完整片已交，无新物理）\n';break
+ return ''.join(lines).encode()
+cas(B/'STATUS.md',status)
+def agents(raw):
+ a=raw.index('## 当前最高执行入口'.encode());b=raw.index('## 最新用户服务器'.encode(),a);return raw[:a]+('## 当前最高执行入口：吞吐专项Data受控IO/周期guard；E20已closed，禁止热改或重跑\n\n'+body+'\n').encode()+raw[b:]
+cas(B/'AGENTS.md',agents)
+(M/'Data-only-perf-priority-status-proof.json').write_text(json.dumps(dict(at=now,changes=changes,CPU_candidate_release=proof['release_sha256'],no_new_physics_or_old_run_modification=True),ensure_ascii=False,indent=2)+'\n');print('Shared Data and own current entry updated to measured future-only performance candidate; peers preserved')

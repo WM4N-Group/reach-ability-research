@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-PERF-CONTROLLED-IO-PERIODIC-GUARD-CPU-QUALIFIED-NOT-NATIVE-20261116-v1/release.json",
+  "release_sha256": "543af841e8405ebf7e718b033a52333c87fb877b9b1a1a45b834978f7f7fcca9",
+  "all_files_SHA_match": true,
+  "no_frozen_worker_H_or_runtime_mutation": true
+}

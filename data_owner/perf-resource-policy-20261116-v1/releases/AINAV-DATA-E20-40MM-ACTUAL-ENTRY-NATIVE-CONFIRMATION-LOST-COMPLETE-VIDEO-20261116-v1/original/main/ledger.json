@@ -1,0 +1,13 @@
+{
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v3",
+  "phase": "main",
+  "closed": true,
+  "result_sha256": "99411e6fb43426dfe359d784f905d7381c08b3907931e18e669f139dec33c39a",
+  "actual_task_sim_s": 27.40999999999883,
+  "actual_aux_sim_s": 6.5049999999998835,
+  "wall_s": 3522.131102206884,
+  "usage_known": true,
+  "output_bytes": 38191493,
+  "main_calls": 1,
+  "automatic_retry": false
+}

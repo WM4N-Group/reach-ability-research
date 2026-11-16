@@ -1,0 +1,374 @@
+[
+  {
+    "path": "main/E-direct-live-1x.mp4",
+    "bytes": 196166
+  },
+  {
+    "path": "main/claim.json",
+    "bytes": 237
+  },
+  {
+    "path": "main/direct-third-view/closure.json",
+    "bytes": 6830
+  },
+  {
+    "path": "main/direct-third-view/metadata.json",
+    "bytes": 1239
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000000.npz",
+    "bytes": 858583
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000001.npz",
+    "bytes": 859369
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000002.npz",
+    "bytes": 858769
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000003.npz",
+    "bytes": 859049
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000004.npz",
+    "bytes": 858778
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000005.npz",
+    "bytes": 858302
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000006.npz",
+    "bytes": 858146
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000007.npz",
+    "bytes": 857809
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000008.npz",
+    "bytes": 857855
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000009.npz",
+    "bytes": 858176
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000010.npz",
+    "bytes": 858797
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000011.npz",
+    "bytes": 858624
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000012.npz",
+    "bytes": 859318
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000013.npz",
+    "bytes": 860043
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000014.npz",
+    "bytes": 861317
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000015.npz",
+    "bytes": 861502
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000016.npz",
+    "bytes": 861598
+  },
+  {
+    "path": "main/direct-third-view/raw-rgb/000017.npz",
+    "bytes": 162063
+  },
+  {
+    "path": "main/encoder.stderr",
+    "bytes": 0
+  },
+  {
+    "path": "main/episode/closure.json",
+    "bytes": 781
+  },
+  {
+    "path": "main/episode/commands/000000.npz",
+    "bytes": 188625
+  },
+  {
+    "path": "main/episode/commands/000001.npz",
+    "bytes": 199884
+  },
+  {
+    "path": "main/episode/commands/000002.npz",
+    "bytes": 153821
+  },
+  {
+    "path": "main/episode/commands/000003.npz",
+    "bytes": 122663
+  },
+  {
+    "path": "main/episode/commands/000004.npz",
+    "bytes": 122836
+  },
+  {
+    "path": "main/episode/commands/000005.npz",
+    "bytes": 123429
+  },
+  {
+    "path": "main/episode/commands/000006.npz",
+    "bytes": 123758
+  },
+  {
+    "path": "main/episode/commands/000007.npz",
+    "bytes": 122116
+  },
+  {
+    "path": "main/episode/commands/000008.npz",
+    "bytes": 193266
+  },
+  {
+    "path": "main/episode/commands/000009.npz",
+    "bytes": 196256
+  },
+  {
+    "path": "main/episode/commands/000010.npz",
+    "bytes": 196750
+  },
+  {
+    "path": "main/episode/commands/000011.npz",
+    "bytes": 189982
+  },
+  {
+    "path": "main/episode/commands/000012.npz",
+    "bytes": 177064
+  },
+  {
+    "path": "main/episode/commands/000013.npz",
+    "bytes": 176263
+  },
+  {
+    "path": "main/episode/commands/000014.npz",
+    "bytes": 175438
+  },
+  {
+    "path": "main/episode/commands/000015.npz",
+    "bytes": 204682
+  },
+  {
+    "path": "main/episode/commands/000016.npz",
+    "bytes": 207281
+  },
+  {
+    "path": "main/episode/commands/000017.npz",
+    "bytes": 208314
+  },
+  {
+    "path": "main/episode/commands/000018.npz",
+    "bytes": 207057
+  },
+  {
+    "path": "main/episode/commands/000019.npz",
+    "bytes": 207075
+  },
+  {
+    "path": "main/episode/commands/000020.npz",
+    "bytes": 203146
+  },
+  {
+    "path": "main/episode/commands/000021.npz",
+    "bytes": 119098
+  },
+  {
+    "path": "main/episode/commands/000022.npz",
+    "bytes": 118984
+  },
+  {
+    "path": "main/episode/commands/000023.npz",
+    "bytes": 118814
+  },
+  {
+    "path": "main/episode/commands/000024.npz",
+    "bytes": 120428
+  },
+  {
+    "path": "main/episode/commands/000025.npz",
+    "bytes": 126704
+  },
+  {
+    "path": "main/episode/commands/000026.npz",
+    "bytes": 138547
+  },
+  {
+    "path": "main/episode/commands/000027.npz",
+    "bytes": 58420
+  },
+  {
+    "path": "main/episode/control-boundaries.jsonl",
+    "bytes": 1167516
+  },
+  {
+    "path": "main/episode/episode.json",
+    "bytes": 2185
+  },
+  {
+    "path": "main/episode/index.json",
+    "bytes": 7335
+  },
+  {
+    "path": "main/episode/private-catalog.jsonl",
+    "bytes": 597115
+  },
+  {
+    "path": "main/episode/visual/000000.npz",
+    "bytes": 844606
+  },
+  {
+    "path": "main/episode/visual/000001.npz",
+    "bytes": 1394815
+  },
+  {
+    "path": "main/episode/visual/000002.npz",
+    "bytes": 1442269
+  },
+  {
+    "path": "main/episode/visual/000003.npz",
+    "bytes": 1309791
+  },
+  {
+    "path": "main/episode/visual/000004.npz",
+    "bytes": 1245191
+  },
+  {
+    "path": "main/episode/visual/000005.npz",
+    "bytes": 1320002
+  },
+  {
+    "path": "main/episode/visual/000006.npz",
+    "bytes": 1291380
+  },
+  {
+    "path": "main/episode/visual/000007.npz",
+    "bytes": 1442356
+  },
+  {
+    "path": "main/episode/visual/000008.npz",
+    "bytes": 870627
+  },
+  {
+    "path": "main/events.jsonl",
+    "bytes": 5573854
+  },
+  {
+    "path": "main/intent-observation-0001.json",
+    "bytes": 7185
+  },
+  {
+    "path": "main/intent-observation-0002.json",
+    "bytes": 7203
+  },
+  {
+    "path": "main/ledger.json",
+    "bytes": 409
+  },
+  {
+    "path": "main/progress.jsonl",
+    "bytes": 8125
+  },
+  {
+    "path": "main/query-observations/frame-000001/calibration.json",
+    "bytes": 282
+  },
+  {
+    "path": "main/query-observations/frame-000001/depth_m.npy",
+    "bytes": 98432
+  },
+  {
+    "path": "main/query-observations/frame-000001/observation.json",
+    "bytes": 7185
+  },
+  {
+    "path": "main/query-observations/frame-000001/rgb.png",
+    "bytes": 3399
+  },
+  {
+    "path": "main/query-observations/frame-000002/calibration.json",
+    "bytes": 282
+  },
+  {
+    "path": "main/query-observations/frame-000002/depth_m.npy",
+    "bytes": 98432
+  },
+  {
+    "path": "main/query-observations/frame-000002/observation.json",
+    "bytes": 7203
+  },
+  {
+    "path": "main/query-observations/frame-000002/rgb.png",
+    "bytes": 3560
+  },
+  {
+    "path": "main/resource-lease.json",
+    "bytes": 802
+  },
+  {
+    "path": "main/result.json",
+    "bytes": 14100
+  },
+  {
+    "path": "main/video-encoding-result.json",
+    "bytes": 644
+  },
+  {
+    "path": "zero/camera-0.png",
+    "bytes": 68006
+  },
+  {
+    "path": "zero/camera-1.png",
+    "bytes": 66690
+  },
+  {
+    "path": "zero/claim.json",
+    "bytes": 237
+  },
+  {
+    "path": "zero/episode/closure.json",
+    "bytes": 788
+  },
+  {
+    "path": "zero/episode/control-boundaries.jsonl",
+    "bytes": 0
+  },
+  {
+    "path": "zero/episode/episode.json",
+    "bytes": 2192
+  },
+  {
+    "path": "zero/episode/index.json",
+    "bytes": 80
+  },
+  {
+    "path": "zero/episode/private-catalog.jsonl",
+    "bytes": 0
+  },
+  {
+    "path": "zero/events.jsonl",
+    "bytes": 4151
+  },
+  {
+    "path": "zero/ledger.json",
+    "bytes": 394
+  },
+  {
+    "path": "zero/resource-lease.json",
+    "bytes": 802
+  },
+  {
+    "path": "zero/result.json",
+    "bytes": 5035
+  }
+]

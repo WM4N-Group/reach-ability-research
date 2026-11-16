@@ -1,0 +1,31 @@
+test_append_cannot_seek_undercount (test_policy.PolicyTests.test_append_cannot_seek_undercount) ... ok
+test_atomic_replace_and_peak (test_policy.PolicyTests.test_atomic_replace_and_peak) ... ok
+test_binary_text_utf8_exact (test_policy.PolicyTests.test_binary_text_utf8_exact) ... ok
+test_cap_admission_before_write (test_policy.PolicyTests.test_cap_admission_before_write) ... ok
+test_cheap_health_refusal (test_policy.PolicyTests.test_cheap_health_refusal) ... ok
+test_closed_watch_cannot_restart (test_policy.PolicyTests.test_closed_watch_cannot_restart) ... ok
+test_deleted_known_file (test_policy.PolicyTests.test_deleted_known_file) ... ok
+test_duplicate_writer (test_policy.PolicyTests.test_duplicate_writer) ... ok
+test_event_loss_stops (test_policy.PolicyTests.test_event_loss_stops) ... ok
+test_final_reserve_and_sealed_guard (test_policy.PolicyTests.test_final_reserve_and_sealed_guard) ... ok
+test_foreign_root (test_policy.PolicyTests.test_foreign_root) ... ok
+test_hardlink_reject (test_policy.PolicyTests.test_hardlink_reject) ... ok
+test_hot_guard_no_probe_no_filesystem (test_policy.PolicyTests.test_hot_guard_no_probe_no_filesystem) ... ok
+test_partial_write_reservation_retained (test_policy.PolicyTests.test_partial_write_reservation_retained) ... ok
+test_private_path_no_global_monkeypatch (test_policy.PolicyTests.test_private_path_no_global_monkeypatch) ... ok
+test_probe_error_and_false (test_policy.PolicyTests.test_probe_error_and_false) ... ok
+test_read_error_latched (test_policy.PolicyTests.test_read_error_latched) ... ok
+test_same_size_inode_replace (test_policy.PolicyTests.test_same_size_inode_replace) ... ok
+test_stale_stops_and_never_recovers (test_policy.PolicyTests.test_stale_stops_and_never_recovers) ... ok
+test_symlink_reject (test_policy.PolicyTests.test_symlink_reject) ... ok
+test_truncate_exact (test_policy.PolicyTests.test_truncate_exact) ... ok
+test_unknown_writer (test_policy.PolicyTests.test_unknown_writer) ... ok
+test_wrong_token (test_policy.PolicyTests.test_wrong_token) ... ok
+test_zip_seek_header_rewrites (test_policy.PolicyTests.test_zip_seek_header_rewrites) ... ok
+test_disk_low_unknown_and_one_lease_call (test_policy.ProbeCompositionTests.test_disk_low_unknown_and_one_lease_call) ... ok
+test_lease_revocation_propagates (test_policy.ProbeCompositionTests.test_lease_revocation_propagates) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.011s
+
+OK

@@ -1,8 +1,19 @@
+# 最新：E20已自然失败关闭，275帧完整原片已交（旧在途记录以下留历史）
+
+原program39ef86d5…唯一main在27.410sim/5482tick因`Original native settled confirmation lost during placement brake`硬停，40mm确于26.470sim触发但未修复复合PUSH；PUSH terminal=None、CLIMB0，不重跑。完整1280×720/10Hz/275帧1×原片SHA2b6c43ce…，本机：`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v3/E20-direct-live-1x.mp4`。
+
+正式最少原件release af92e23a…：`/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-E20-40MM-ACTUAL-ENTRY-NATIVE-CONFIRMATION-LOST-COMPLETE-VIDEO-20261116-v1/release.json`。全流FIFO/PD cold尚未补，不冒通过。
+
+当前19:35主计划02dc65ed…优先吞吐专项，Data候选/API/周期检测风险与目标机对标见`/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/README_CN.md`；native_ready=false，尚无新性能scope或新物理任务。以下为原在途阶段记录，不能当现在仍active。
+
+---
+
 # E20/40mm当前真实main与技术失败血缘
 
 更新：2026-11-16T18:42:01.882053+08:00（北京时间；E20单点40mm首次动态main真实在途；前置静态及Data漏包失败均保留，原E59不重开）
 
 **当前状态**
+- **E20阶段更新（2026-11-16T19:23:42.502169+08:00）：** 同一program39ef86d5…的准备NAV已有原生succeeded（3018tick／15.090sim），首cuboid_a PUSH已admitted并于3019tick／15.095sim原生started；当前仍在首PUSH执行，尚无PUSH终态或40mm提前brake进入记录，不推动态修复成功。最近检查点4000命令／20.000sim、2481.794wall；直接第三视角已落盘13个raw分块，PID248453／H镜像／监督器正常，zero1/main1未增加。源/相机/资源门未改。只读证据：`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v3/heartbeat-1122-readonly-192252.json`。
 - **E20真实main已启动，不再停在资产/接口前置。** source **04a9c0fe…**、新program **39ef86d5184e5edd1898ec7b05abd4db638c78510eb7a373e2d11177c2ef1652**，scope `data-46308-E20-prearrival40-direct-live-20261116-v3`；18:37:42 CAS main1，18:37:57实际claim，**PID248453在途**、H镜像一致。该程序own-zero1真实通过（18.663792928wall、task0、aux6.505sim、close0），主程序另起fresh Runtime，不恢复旧world。固定规则43998a23…/VLM0/WM0/fit0/新后继优化0＋共有H；单个40mm提前同原brake假设只作seen-DEV，原NN/STOW/4s/XY/dock/FIFO/FF/QP/12N/stop门不降。**整个40mm family动态main合计仅1，任务结局和动态修复效果未知。**
 - **新环境/截图/录像身份清楚：** 用户授权适配的E-SKILL20是三箱地面PUSH＋真实C箱顶20cm CLIMB/最终NAV与停稳，**不是原0.60m高台成功或修复40cm技能域**；未来方法必须同环境/共同entry policy，不能跨版本拼排名。新静态MJB **ed6267bb…**由source04唯一实际构造/编译通过（11.758566817wall、原robot/engine signature66972ce2…、非目标RGBA不变），本program只读复用此STATIC asset，不复用Runtime/zero。新task0直接截图：`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v3/camera-1.png`（SHA02d39ef2…）；预声明camera1已于main前CAS固定，**1280×720/10Hz/1×**直接live原始master从t0录制，尚不是完整MP4。广角覆盖狗/三箱/辅助台与场地，狗臂相对小，不假称近景；紫色C箱是新任务目标，旁侧淡蓝辅助台不是原.60m终点。源码/相机/上限均冻结，不热改。
 - **前置失败不能洗掉，Data自己的漏包明确负责。** v1/source5a静态geom名字查询None失败，10.479544644wall、zero0/main0已closed（正式6e9b4438…）。v2/source04已真实修过静态接口并编出新MJB，但Data新wrapper漏带原`private_catalog_boundary.py`，own-zero授权1在import时失败，**lease/Runtime/Actor/task/aux均未进入、main0**；原worker result/ledger未写，wall/RSS未知保持None，不补免费0。v2/program738ef31e…已维护CAS closed，zero计数1保留，未在其冻源热补/重跑。v3只补同一原privacy注释helper并在prepare前实际导入全部迟导入本地依赖；新完整freeze/自身zero/lease后才main，不再编静态模型，不改控制/成功门或扫margin。原错误/claim/exit/维护闭合在`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v2/zero-startup-maintenance-close-proof.json`。

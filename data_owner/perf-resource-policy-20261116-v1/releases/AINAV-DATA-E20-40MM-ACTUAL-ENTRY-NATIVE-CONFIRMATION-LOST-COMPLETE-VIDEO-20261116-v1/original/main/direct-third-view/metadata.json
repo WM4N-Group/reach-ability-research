@@ -1,0 +1,34 @@
+{
+  "schema": "Data-direct-third-view-raw-metadata-v1",
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v3",
+  "episode_id": "data-46308-E20-prearrival40-direct-live-20261116-v3-main",
+  "program_sha256": "39ef86d5184e5edd1898ec7b05abd4db638c78510eb7a373e2d11177c2ef1652",
+  "origin": "DIRECT_CURRENT_LIVE_MUJOCO_RGB",
+  "role": "PRIVATE_VIDEO_EVIDENCE_NOT_PLANNER_INPUT_OR_FIT",
+  "camera_spec": {
+    "kind": "fixed_free",
+    "width": 1280,
+    "height": 720,
+    "stride_physics_ticks": 20,
+    "chunk_frames": 16,
+    "max_bytes": 536870912,
+    "lookat": [
+      7.5,
+      0.0,
+      0.4
+    ],
+    "distance": 20.0,
+    "azimuth": 110.0,
+    "elevation": -58.0
+  },
+  "camera_spec_sha256": "c9b2d3aa96294c7bc9959cdb6479e31ac6940e69b4d7d351dadd97d62598e8fc",
+  "mujoco_version": "3.3.2",
+  "current_live_model_object_id": 140200758878320,
+  "current_live_data_object_id": 140200758878512,
+  "no_state_file_or_saved_review_model_input": true,
+  "current_capture_only_not_historical_P0_binding": true,
+  "current_renderer_source_sha256": "458ed1f75d3b19b328b7e251dc7a7318a97e2d41bca4627773cd6af764abfdd7",
+  "native_success_gate": false,
+  "raw_frame_master_not_state_replay": true,
+  "encoded_video_created": false
+}

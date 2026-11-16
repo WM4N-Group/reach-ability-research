@@ -1,0 +1,151 @@
+{
+  "task_id": "E-SKILL20-20261116-v1",
+  "environment_revision": "E_SKILL20_DYNAMIC_C_GOAL_20261116_v1",
+  "entry_policy": "DEV_PRE_ARRIVAL_ORIGINAL_BRAKE_40MM_20261116_v1",
+  "fixed_margin_m": 0.04,
+  "old_E59_DEV_informed": true,
+  "not_original060_or_unseen_comparison": true,
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v3",
+  "phase": "zero",
+  "program_sha256": "39ef86d5184e5edd1898ec7b05abd4db638c78510eb7a373e2d11177c2ef1652",
+  "source_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "PID": 248090,
+  "passed": true,
+  "method": "E_technical_own_zero_NOT_main",
+  "full_task_success": false,
+  "VLM_calls": 0,
+  "WM_calls": 0,
+  "fit_calls": 0,
+  "training_allowed": false,
+  "main_invocations": 0,
+  "automatic_retry": false,
+  "asset_sha256": "ed6267bbaa7fa0e0dda0906f5e55f4abbf2c129d1b9ee5ffa0f17e54490934b1",
+  "status": "E_TECHNICAL_ZERO_PASS_NEEDS_FROZEN_CAMERA_CHOICE_NOT_MAIN",
+  "camera_frames": [
+    {
+      "index": 0,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-E20-prearrival40-direct-live-20261116-v3/zero/camera-0.png",
+      "sha256": "76caec1ca1d5cab5033e32145642d05f33ed9a7ce5a447e76143024f353f9798",
+      "spec": {
+        "kind": "fixed_free",
+        "width": 1280,
+        "height": 720,
+        "stride_physics_ticks": 20,
+        "chunk_frames": 16,
+        "max_bytes": 536870912,
+        "lookat": [
+          6.5,
+          0.0,
+          0.2
+        ],
+        "distance": 18.0,
+        "azimuth": 110.0,
+        "elevation": -58.0
+      }
+    },
+    {
+      "index": 1,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-E20-prearrival40-direct-live-20261116-v3/zero/camera-1.png",
+      "sha256": "02d39ef2e8d6538f3e6bc13f43973eb27fdbca71d777cf104f96f858f873a43b",
+      "spec": {
+        "kind": "fixed_free",
+        "width": 1280,
+        "height": 720,
+        "stride_physics_ticks": 20,
+        "chunk_frames": 16,
+        "max_bytes": 536870912,
+        "lookat": [
+          7.5,
+          0.0,
+          0.4
+        ],
+        "distance": 20.0,
+        "azimuth": 110.0,
+        "elevation": -58.0
+      }
+    }
+  ],
+  "task_commands": 0,
+  "E_rule": {
+    "decisions": 0,
+    "native_semantic_successes": 0,
+    "placed": [],
+    "support_height": 0.0,
+    "complete": false
+  },
+  "factor_counts": {
+    "legacy_kernel_attempts": 0,
+    "legacy_kernel_completed": 0,
+    "legacy_kernel_failed": 0,
+    "legacy_kernel_result_changed": 0,
+    "legacy_callback_choice_events": 0,
+    "new_successor_choice_events": 0,
+    "new_successor_choice_changed_events": 0
+  },
+  "episode_closure": {
+    "schema": "piper-mujoco-episode-closure-v2",
+    "caller_outcome": "E_TECHNICAL_ZERO_PASS_NEEDS_FROZEN_CAMERA_CHOICE_NOT_MAIN",
+    "terminal_time_s": 0.0,
+    "censored": false,
+    "storage_complete": true,
+    "storage_error": null,
+    "observations": 0,
+    "physical_command_steps": 0,
+    "compressed_payload_bytes": 0,
+    "episode_sha256": "ac5b01aca52da9dceb36bd7ea7e050257978f90f06e2df23ddda6c3efe8482e9",
+    "index_sha256": "eda00c1024710c86558d6b126ec876ab031ae869e2afd456a8eb55acb146d0e8",
+    "private_catalog_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control_boundaries_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task_success_not_inferred_from_recorder": true,
+    "no_auto_reset_or_terminal_frame_backfill": true
+  },
+  "actual_task_steps": 0,
+  "actual_task_sim_s": 0.0,
+  "actual_auxiliary_calibration": {
+    "worlds": 1,
+    "sim_seconds": 6.5049999999998835,
+    "source": "original zyh reference_stance + settle",
+    "main_world_unchanged": true,
+    "separate_initialization_state_adjustments_not_task_recovery": true,
+    "used_as_training_episode": false
+  },
+  "final_GPU": {
+    "UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+    "index": 0,
+    "free_MiB": 23588,
+    "utilization_percent": 3,
+    "PID": 248090,
+    "own_compute_bytes": 507510784,
+    "own_observation_state": "MEASURED",
+    "peak_own_compute_bytes": 645922816
+  },
+  "loaded_helpers": {
+    "fresh_size_parallel_sha256": "052747ca762c3c0c31c6d4b45ed3c0a7828d931868b403e575d9f16fc424c556",
+    "metadata_guard_sha256": "8539c4b6642bf1138543cdbf16a3e8a997c90a3e74d68c309b2b886685bc53d9",
+    "no_cross_tick_size_or_metadata_cache": true,
+    "all_original_check_call_sites_kept": true
+  },
+  "close_errors": [],
+  "wall_s": 18.663792927982286,
+  "peak_RSS_bytes": 2167771136,
+  "usage_known": true,
+  "metrics": {
+    "Data_guard_inclusive": {
+      "calls": 10,
+      "wall_s": 0.5894735737238079
+    },
+    "loaded_metadata_guard": {
+      "full_path_passes": 0,
+      "path_occurrences_requested": 0,
+      "resolve_wall_s": 0.0,
+      "original_check_passes": 0,
+      "original_check_inclusive_wall_s": 0.0
+    },
+    "fresh_size_parallel": {
+      "calls": 10,
+      "directories_requested": 34,
+      "wall_s": 0.05246854806318879
+    }
+  },
+  "guard_and_step_times_overlap": true
+}

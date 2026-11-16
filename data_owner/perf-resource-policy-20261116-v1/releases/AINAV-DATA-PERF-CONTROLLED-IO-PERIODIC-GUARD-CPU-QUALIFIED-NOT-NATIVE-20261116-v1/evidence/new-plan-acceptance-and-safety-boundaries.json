@@ -1,0 +1,8 @@
+{
+  "plan_sha256": "02dc65edff1a562a4e1d47b6f24ebd8b169d99d780bd69c8c6a9063cb1a73064",
+  "future_policy_only": true,
+  "current_or_closed_frozen_workers_unmodified": true,
+  "static_resource_audit_schedule_intentionally_changed_not_equivalent": true,
+  "Native_ready": false,
+  "simulation_dispatches": 0
+}

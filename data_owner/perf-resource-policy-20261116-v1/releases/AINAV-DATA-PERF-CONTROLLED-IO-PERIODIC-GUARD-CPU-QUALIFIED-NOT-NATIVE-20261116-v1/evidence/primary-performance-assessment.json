@@ -1,0 +1,30 @@
+{
+  "primary_comparison": "exact currently deployed parallel8 helper, pinned source052747ca…",
+  "target_filesystem": "fuseblk",
+  "old_scan_wall_s": [
+    8.20905798021704,
+    8.640211774036288,
+    8.359085165895522
+  ],
+  "new_bootstrap_plus_loop_wall_s": [
+    1.8889807451050729,
+    1.899304331978783,
+    1.9765492680016905
+  ],
+  "paired_component_ratios": [
+    4.345760538581042,
+    4.549145510048153,
+    4.229130688124275
+  ],
+  "median_paired_component_ratio": 4.345760538581042,
+  "directory_scans_per1000_calls": [
+    1000,
+    101
+  ],
+  "median_hot_guard_microseconds_per_call": 1.174925360828638,
+  "trace": "1000 same uniformly spaced synthetic calls at old run mean0.10828330624425504s, not unavailable original timestamps",
+  "old_serial_baseline9p38_and_local38p55_are_not_primary_current_baseline": true,
+  "changed_detection_latency_intentional": true,
+  "not_native_end_to_end5x_or_static_audit_share_under10_evidence": true,
+  "Native_ready": false
+}
