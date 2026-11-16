@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 10:58：新palette源50在Runtime前失败；费用未知保持，修复receipt静态兼容未资格
+
+- **增量消费新真实失败，未重开程序：** formal release `d630264a…` 的10个小成员SHA全核，release/result/ledger与46308原件SHA一致。source50 `23cc1fe6…` / program `e74acd71…` 在新helper的全geom名字唯一假设处失败；Runtime/改RGBA/新MJB/render前已closed。不是视觉分色失败、NAV/PUSH/CLIMB失败或WM负样本，不能沿旧root重试。
+- **未知费用原样保留：** wall 15.443887772969902s、ledger 5801bytes；原task/aux sim均null、usage_known=false、GPU own peak null。没有任务命令不推出全部费用0，空流不冒cold/guard资格；五main/真实WM prediction仍0。
+- **源修复接缝已静态核，不再造接口：** AINav现只要求三目标各一次，非目标含匿名项按index保RGBA；读当前appearance_entry `c0f911a0…` 的最终common_appearance_revision及nonRGBA proof字段，与本组现有asset-evidence要求兼容。仅源码/AST审阅，未执行编译器、未签新asset资格；无须为此改本组producer/放宽原视觉或安全门。association仍default OFF，必须新准确程序真实asset/proof、实际render及五组共同public先验后才可接。
+- **主研究缺口不被修复回执遮盖：** 完整公共reference/三阶段effects/退出与fresh可观测性/terminal cost provider仍未完成；当前公开effects的actual_exit_pose/cost为null，不能把requested目标/蓝图或closed41 alias充当前状态/成功后继。未刷33等旧套件，无模型/Actor/physics/API/fit；布局、原阈值、固定NAV前缀与全部dirty保持。小记录：`/home/yuanyue/reach-ability-research/operations/V4_PALETTE50_STATIC_PREFLIGHT_FAILURE_INTAKE_20261116.json`。
+
 ### 2026-11-16 10:46：条件式同anchor公开外观假设producer已实现；33软件两端过，未采用/未WM资格
 
 - **补一个具体WM输入缺件，不放宽mask0：** 新default-OFF `DeclaredPaletteAnchorAssociation`为source新共同RGB修订提供same96×64 anchor的frame-local语义假设。只用公开颜色/声明NAV subject＋原pixel proposals，不读private pose/old alias/off-grid bbox/物理ID；2.4m/.58只推声明关系、不是live pose或新控制参数。12个相关NAV可提出条件对象，generic8个NAV保持未关联；6绝对PUSH/4CLIMB的action映射仍未解决。

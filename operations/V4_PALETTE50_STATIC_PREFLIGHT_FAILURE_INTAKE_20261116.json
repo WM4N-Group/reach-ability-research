@@ -1,0 +1,78 @@
+{
+  "role": "AUDIT_ONLY_PREFLIGHT_FAILURE_INTAKE_NOT_PLANNER_INPUT_OR_OPTIMIZER_GAIN",
+  "at": "2026-11-16T10:58:47.135415+08:00",
+  "plan_sha256": "be3aa7e587e5aa990375d1085dde6affc497861c1d45ab01862edc2793501845",
+  "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-PALETTE50-STATIC-NAME-PREFLIGHT-FAILED-NO-TASK-20261116-v1/release.json",
+  "release_sha256": "d630264a1561ade588a581c40bf409620338ec806c897ee61b25b417020b7e11",
+  "verified_local_members_sha256": {
+    "claim.json": "5239afb1f31e6250ed194436c9d758ca5f9e379b098833aa81bbc032b0e5e47f",
+    "result.json": "9cd6125df6b1ffe30d762f3031fb0a0df7395e5cbc05d6a5178ef8c32866cbe8",
+    "ledger.json": "3277f034d8304262527446acc05b9cb4230e541792091840ca9d7913f3ed0900",
+    "resource-lease.json": "1b9ddc73ca56663812ed745e891c01aa1248c0a4ef7e3411827ed90114b4be8c",
+    "protocol.json": "b0c5f687c6cace28f825bbc948e6ab69f95c11b7dde51c7fe75c1a9293f5248f",
+    "program-freeze.json": "e74acd7141590e4928b744cd806ffb8d165948457741e99ffd3c9f0adec42f6a",
+    "COMMON_APPEARANCE_REVISION.json": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+    "Data-static-name-failure-assessment.json": "4ba8752ddd97b687bd499d77a8800eed4bcb34746b9690b39d7d32fc8ef82de0",
+    "original-reference-geom-name-metadata.json": "448477d4f8e4c9731c981835a07a786e23c60f4d8cfb20536b480bac544ea5fe",
+    "remote-only-original-reference.json": "ef4b7f7a1f3839357bee2f9bbe4b1f12b344d5f5e8cae2b8794eb8bb23dd9f16"
+  },
+  "remote_readonly_release_result_ledger_SHA_match": true,
+  "program_sha256": "e74acd7141590e4928b744cd806ffb8d165948457741e99ffd3c9f0adec42f6a",
+  "source_commit": "23cc1fe6e4c2e6fb2718e544fdda17102f8a9c0f",
+  "status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "error": "Unique fresh spec geometry names",
+  "failure_class": "NEW_HELPER_GLOBAL_GEOM_NAME_ASSUMPTION_BEFORE_RGBA_WRITE_COMPILER_RETURN_RUNTIME_RENDER",
+  "original_cost_fields": {
+    "wall_s": 15.443887772969902,
+    "actual_task_sim_s": null,
+    "actual_auxiliary_sim_s": null,
+    "usage_known": false,
+    "output_bytes": 5801
+  },
+  "task_steps_raw": null,
+  "five_arm_main_calls": 0,
+  "new_MJB_or_render_verified": false,
+  "no_skill_or_visual_failure_label": true,
+  "no_WM_ready_or_native_admission_claim": true,
+  "no_retry_or_refit": true,
+  "source_repair_readonly_review": {
+    "path": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/appearance_entry.py",
+    "sha256": "c0f911a040f8622e88d0997aee25c4730d91bdf24e4695c1943827190b256e8b",
+    "receipt_keys": {
+      "verify_compiled_render_only_delta": [
+        "only_changed_array",
+        "only_changed_rows",
+        "unchanged_nonRGBA_array_count",
+        "unchanged_nonRGBA_arrays_sha256",
+        "engine_options_unchanged",
+        "topology_names_paths_unchanged",
+        "actual_render_or_current_association_or_native_admission"
+      ],
+      "compile_new_shared_palette_asset": [
+        "revision_id",
+        "contract_sha256",
+        "reference_static_MJB_sha256",
+        "new_static_MJB_sha256",
+        "compiled_render_only_delta_proof",
+        "all_five_same_new_asset_required",
+        "actual_render_or_current_association_or_task_qualified"
+      ]
+    },
+    "target_each_exactly_once_other_geoms_RGBA_preserved_by_index": true,
+    "compatibility_scope": "AST_RECEIPT_FIELD_NAMES_AND_SOURCE_REVIEW_ONLY_NOT_EXECUTED_COMPILER_OR_NATIVE_QUALIFICATION",
+    "Reach_association_code_change_needed_from_this_repair": false,
+    "must_obtain_new_actual_asset_proof_before_enabling": true
+  },
+  "not_completed": [
+    "current_public_reference_state",
+    "three_phase_preparation_skill_exit_effects",
+    "complete_terminal_successor_provider",
+    "fresh_observation_availability_prediction",
+    "PUSH_CLIMB_WM_action_mapping",
+    "modelled_owner_three_frame_bootstrap",
+    "legal_complete_high_platform_chain"
+  ],
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "new_software_tests_or_model_forwards_or_physics_API_fit_calls": 0
+}
