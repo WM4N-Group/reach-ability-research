@@ -1,3 +1,9 @@
+> 新`wm_stream_bridge.attach_current_wm_stream`默认OFF，仅A/B、仅task0/空history/forward0及same-arm FactorJournal，接已经构造的原WM adapter→**同一个Reach CausalWMQueryPort**；不restore权重/建模型或读凭据。装饰fresh driver.writer，**先写原raw流再callback**，不改原observer/native/guard/borrowed helper：只原10Hz记录帧入原resize_packet（96×64），只实发200Hz、完整global5×18逐byte等于runtime.last的position18和**真正installed native session的skill**入原port。不喂planned action、delayed/local joint、私有catalog或off-grid public query帧。
+>
+> SupportedCapture每条实发命令走`on_unmodelled_issued`清model窗口，**不冒HOLD/NAV/RECOVER**；真实新NativeOptionSession后须3张新grid帧/连续accepted history，准备NAV不写成高层待选PUSH；protected exit当前也保UNKNOWN，不能按label猜编码。失配/漏步/重放/源漂移/回调失败关闭bridge，原raw已保存、原loop after_step/guard/teardown仍照跑；无额外world/Actor/update。新增16是明确fake buffer/typed-session __new__壳＋真实Reach port的软件检查，不是推理/物理资格；初次fixture漏20-tick帧的失败保留，补齐fixture没有放宽连续grid门。
+>
+> **仍未解决首select的合法modelled-owner bootstrap、同96×64 anchor的公开语义关联、绝对PUSH/CLIMB action映射和完整effects/provider**；没有旧帧backfill、有效零target8、VLM-only降级或完整方法宣称。此bridge尚未进入Data程序；Data source41/edb786…在途原样接续，不热换、不因新source重跑成功scope。C/D/E不加WM，45原C/D方法胶水及41所有执行源逐byte未改。
+
 > 新`method_entry.build_original_cd_method`默认OFF，仅C/D；在bare原AINav骨架外装**Reach实际canonical AinavSuccessorAdapter**，逐SHA/模块路径核adapter38787016…与共同selector bb0d6ca0…。C无path-cost；D必须显式传与B相同的cost callable（完整性/同provider跨arm核验仍由真实caller负责，UNKNOWN不补零、不把参考米当秒）。不构造backend、读凭据/transport/env、发API或执行cost/VLM/WM/Actor。返回的是装配候选，不是方法/物理准入。
 >
 > 共同factor安装时，为这个新C/D入口将**同一个FactorJournal**同时绑定wrapper、原AinavPlanner和原RoleRunner，修正只重绑wrapper导致原role/tree事件绕过factor-tag的接缝；仅首决策前0 calls/0 token/pending None可绑，split journals/非canonical类/使用过的backend拒绝，不改counter、tree、pending或方法。旧Data工程component没有此装配标记，沿原安装分支。**Data已冻/在途41原样接续，不热换此候选或为采用它重跑成功scope。** 新12 composition/__new__ metadata与原受影响11 factor fixtures，不是API认证/真实方法/仿真/训练。

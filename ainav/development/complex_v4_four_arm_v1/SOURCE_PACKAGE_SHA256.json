@@ -6,7 +6,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "f14c917554d699aa3296efea5e510dc73e3473dcda558a20ccbe260d5b322494",
+    "README_CN.md": "9a8ce1879c977ab0449bb31220caacc830efe3e6713a1860fdacbb60ef846727",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
     "backbone_entry.py": "bd3622d0e0c67278e2aa86c155e557a9ec085661c3700ef601a1aa0ce3e7b81c",
@@ -45,7 +45,9 @@
     "tests/test_task_terminal.py": "c834091ea666a6e2606604c417e3f5dca1c6b4a96fe5872878199e2b10e7f4ca",
     "tests/test_terminal_owner_wrapper.py": "70e70316dc0ae6f40bd7ef056891a2829014fa4990bc3e38205757c5e7e244dc",
     "tests/test_v4_native_asset.py": "8e389cfbb51b96c9c11289d2ab3aec4d2d7d1c03b6a3dc5ea1a663f406e57df4",
-    "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71"
+    "tests/test_wm_stream_bridge.py": "a143fa25d3f29a64a0502d250e70726839ed899c4022b14551876a5534e47739",
+    "v4_native_asset.py": "41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71",
+    "wm_stream_bridge.py": "c9e0158476c045752e657d3c328ec88bcf39e48c7769846ffd288c305c00fa10"
   },
   "source_native_qualified": false,
   "physical_dispatches": 0,
@@ -68,5 +70,6 @@
   "original_registered_private_catalog_explicit_no_model_stream_projection_not_native_qualified": true,
   "parallel8_two_current_full_path_passes_original_guard_bytecode_and_fresh_callback_world_checks_not_native_qualified": true,
   "parallel_metadata_workers_common_all_arms_not_successor_treatment_or_cross_tick_cache": true,
-  "original_C_D_full_AINav_backbone_existing_DeepSeek_object_assembly_only_no_backend_probe_or_calls": true
+  "original_C_D_full_AINav_backbone_existing_DeepSeek_object_assembly_only_no_backend_probe_or_calls": true,
+  "optional_current_raw_grid_accepted_global_native18_to_Reach_port_no_bootstrap_or_native_qualification": true
 }
