@@ -1,0 +1,160 @@
+{
+  "role": "READONLY_CLOSED_OLD_E20_REFERENCE_NOT_NEW_BASELINE_RUN",
+  "root": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-E20-prearrival40-direct-live-20261116-v3/main",
+  "result_sha256": "99411e6fb43426dfe359d784f905d7381c08b3907931e18e669f139dec33c39a",
+  "ledger_sha256": "f129e7a96a876a4524b3c4c9d3767d467c1e1479b9ad47a9acb09b31b27110a3",
+  "progress_sha256": "6eeabb1f23f8d94b70b121f8ab9714be990a182b83ccfa2f3991b76f1edfe10f",
+  "journal_sha256": "e48d48951f62f358ac449489202daab7ab34b240ca8175eea1061c29f9298b65",
+  "program_sha256": "39ef86d5184e5edd1898ec7b05abd4db638c78510eb7a373e2d11177c2ef1652",
+  "source_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "asset_sha256": "ed6267bbaa7fa0e0dda0906f5e55f4abbf2c129d1b9ee5ffa0f17e54490934b1",
+  "checkpoint_records": [
+    {
+      "at": "2026-11-16T18:58:01.787981+08:00",
+      "task_steps": 2000,
+      "time_s": 10.000000000000163,
+      "wall_s": 1205.1639518029988,
+      "method": "E",
+      "metrics": {
+        "Data_guard_inclusive": {
+          "calls": 9568,
+          "wall_s": 375.4580577290617
+        },
+        "actual_driver_step": {
+          "calls": 2001,
+          "commands": 2000,
+          "wall_s": 1162.9740998330526
+        },
+        "fresh_size_parallel": {
+          "calls": 9568,
+          "directories_requested": 130901,
+          "wall_s": 80.09229741781019
+        },
+        "loaded_metadata_guard": {
+          "full_path_passes": 4002,
+          "path_occurrences_requested": 5763686,
+          "resolve_wall_s": 757.920482036192,
+          "original_check_passes": 4002,
+          "original_check_inclusive_wall_s": 313.7489871622529
+        }
+      }
+    },
+    {
+      "at": "2026-11-16T19:19:18.418452+08:00",
+      "task_steps": 4000,
+      "time_s": 20.000000000000306,
+      "wall_s": 2481.7944195759483,
+      "method": "E",
+      "metrics": {
+        "Data_guard_inclusive": {
+          "calls": 21783,
+          "wall_s": 800.4377099401318
+        },
+        "actual_driver_step": {
+          "calls": 4001,
+          "commands": 4000,
+          "wall_s": 2414.0612071042415
+        },
+        "fresh_size_parallel": {
+          "calls": 21783,
+          "directories_requested": 309035,
+          "wall_s": 185.31730275484733
+        },
+        "loaded_metadata_guard": {
+          "full_path_passes": 8004,
+          "path_occurrences_requested": 11594378,
+          "resolve_wall_s": 1531.7511861720122,
+          "original_check_passes": 8004,
+          "original_check_inclusive_wall_s": 629.4989204464946
+        }
+      }
+    }
+  ],
+  "literal_native_receipts": [
+    {
+      "evidence_ref": "commands:physical_tick=449",
+      "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+      "option_sha256": "46bbe3f0089a1208dda1c0b55925a7fcb7dd597a50443a76b33aa91376a04329",
+      "status": "started",
+      "time_s": 2.2449999999999743
+    },
+    {
+      "evidence_ref": "commands:physical_tick=3018",
+      "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+      "option_sha256": "46bbe3f0089a1208dda1c0b55925a7fcb7dd597a50443a76b33aa91376a04329",
+      "status": "succeeded",
+      "time_s": 15.090000000000959
+    },
+    {
+      "evidence_ref": "commands:physical_tick=3019",
+      "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+      "option_sha256": "d516b9231dcd6e3578ece5490ee69d83182300636fad062f11357f41e7972362",
+      "status": "started",
+      "time_s": 15.09500000000096
+    }
+  ],
+  "video_metadata_sha256": "af2c2a9b5c1224095bd5db4a27f72ad09b5dbd39d9b3e19aa2d53175467d5049",
+  "camera_spec_sha256": "c9b2d3aa96294c7bc9959cdb6479e31ac6940e69b4d7d351dadd97d62598e8fc",
+  "video_grid_endpoints": {
+    "origin_tick": 0,
+    "last_tick": 5480,
+    "total_frames": 275
+  },
+  "no_NPZ_or_frame_or_model_reads": true,
+  "no_whole_journal_chain_or_FIFO_reaudit": true,
+  "old_main_not_reopened": true,
+  "recorded_at": "2026-11-16T21:57:59.667207+08:00",
+  "plan_sha256": "4af564bbc558a558ce1b42f91fda8e0b48db77ad47fa7a497475d091129d4a10",
+  "comparison_purpose": "PERF01_REFERENCE_ONLY_NOT_NEW_BASELINE_RUN_OR_METHOD_COMPARISON",
+  "primary_endpoint": {
+    "commands": 2000,
+    "sim_s": 10.000000000000163,
+    "old_main_start_to_endpoint_wall_s": 1205.1639518029988,
+    "old_wall_per_sim_s": 120.5163951802979,
+    "old_sim_per_wall_s": 0.008297626215121647,
+    "new_matching_field": "scope_start_to_window_end_wall_s",
+    "do_not_compare_directly_to_new_loop_only_field": "window_wall_s",
+    "conditional_5x_matching_total_wall_s_upper": 241.03279036059976,
+    "threshold_not_qualification_or_observed_speedup": true
+  },
+  "alternative4000_only_if_preregistered_before_new_dispatch": {
+    "commands": 4000,
+    "sim_s": 20.000000000000306,
+    "old_main_start_wall_s": 2481.7944195759483,
+    "posthoc_window_selection_forbidden": true
+  },
+  "old_clock_source": {
+    "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v3/worker.py",
+    "sha256": "dad9fa32b03ca8682d8f7f59dc1585da236eb4b914b66102f64b619360491663",
+    "start_line": 28,
+    "progress_wall_line": 73,
+    "origin": "time.monotonic start before prepare/cold setup; not pure step loop"
+  },
+  "new_worker_development_readonly": {
+    "path": "/home/yuanyue/main/work/data-team/development/perf-native-runner-20261116-v1/worker.py",
+    "sha256": "576bf45df4d9820e66bbfbd43d0d65b4b7e77656a191a8023f36fec32dacd0c5",
+    "not_frozen_native_program_attestation": true,
+    "new_main_start_before_prepare": true,
+    "loop_wall_excludes_initialization": true,
+    "old_seed_not_recorded_as_acknowledged_by_new_worker": true,
+    "step_quantiles_scope": "driver.step_one + due video capture; pre-call guard outside timed sample, not whole-loop iteration"
+  },
+  "unavailable_old_directly_comparable_metrics": {
+    "initialization_wall_s": null,
+    "loop_only_2000_wall_s": null,
+    "step_p50_s": null,
+    "step_p95_s": null,
+    "step_p99_s": null,
+    "step_max_s": null,
+    "exclusive_static_directory_audit_share": null,
+    "old_seed": null,
+    "prefix_command_bytes_independently_verified_by_Reach": false
+  },
+  "do_not_infer_latency_quantiles_from_400_step_mean": true,
+  "do_not_sum_nested_original_metrics": true,
+  "new_PERF01_native_result_not_yet_consumed": true,
+  "PERF01_current_conclusion": "NO_VALID_NEW_NATIVE_MEASUREMENT_YET_NOT_A_MEASURED_PERFORMANCE_FAILURE",
+  "remaining_owner": "Data: freeze exact already-integrated real runner; required own-zero, held lease and preregistered bounded NAV2000 main; then compare matching clocks/commands/receipts/frames and cycle coverage.",
+  "training_allowed": false,
+  "model_input_allowed": false
+}

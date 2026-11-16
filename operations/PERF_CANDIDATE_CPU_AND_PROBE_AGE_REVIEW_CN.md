@@ -1,5 +1,10 @@
 # 吞吐候选增量核对与ResourceWatch时间戳边界
 
+## 2026-11-16 21:57 PERF-01接续：Data真实pair已修，下一交付只需实际测量
+
+Data开发源8cd57028的原子pair＋AINav87a桥已owner报告两端14组合case过；按4af564bb最新计划关闭“仍缺pair”的旧反馈，不继续加接口/重刷CPU。新worker已固定NAV2000，仅源码不冒freeze/zero/dispatch。旧E20前2000=1205.163951803wall含初始化，new loop-only window不可直接做分母；用同起点scope_start_to_window_end，再单列新init/收束/编码。旧init/loop-only/分位/seed未知保持，参考及原worker/progress SHA见`PERF01_OLD_E20_2000_PREFIX_REFERENCE_20261116.json`。不重开旧root/用完整failed E20 wall冒2000窗口，不用更多报告代替PERF-01原生结论。
+
+
 ## 2026-11-16 21:36 增量：AINav已落实保守桥，Data组合尚未闭合
 
 AINav当前87a5c4f/package dc856dac源7文件核同；bridge2624944f要求同成功probe的原子(oldest,completed)，checked_at取最早值，duration>max_stale拒绝，无last_ok fallback。下方21:11所提风险已有明确源修复，不能继续称AINav未处理；这不是实际native或Data全链资格。原guard核心5aa/benchmark不变，无需再测其旧CPU比。

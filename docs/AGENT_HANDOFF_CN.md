@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 21:57：PERF-01先真runner；旧2000前缀已核，不能混初始化/loop计时
+
+- **已接21:47 PERF-01收敛计划4af564bb…：** 唯一下一优先是Data真实runner/必要zero与固定同条件原生窗口结论，不继续扩guard/接口、不重刷CPU套件。当前Data新ResourceWatch8cd57028…原子oldest/completed已实装，与AINav87a桥14软件/端组合已由owner报告通过；本组核当前源/回执SHA后关闭“Data仍缺pair”的旧反馈，不能再拿其历史发布0c版本阻挡当前接线。
+- **实际runner已有源码，但未冒实际派发/测量：** Data新worker限定NAV前2000命令/10sim，装真实recorder/raw/受控publisher、FD/stdout/encoder与lease/health，源码/CPU contract不是新freeze或own-zero。按现有runner完成资格由Data直接执行，不增加Reach签字、wrapper或先整链成功前置。未收到新性能原件前，本轮口径是“未形成有效新原生测量”，不是已达标/已失败测量。
+- **旧参考窗口已直接核原件，发现并指出可避免的计时误比：** 旧E20 2000步checkpoint18:58:01为1205.163951803wall/10sim（120.516395wall/sim）；原worker SHA dad9fa32…显示该wall从main start、含prepare/初始化。新worker的window_wall_s从loop_start计，不能直接相除；对应字段应为scope_start_to_window_end_wall_s，冷启动/收束/编码另列。只有同口径与行为/保护条件通过后，<=241.032790s才是该总窗口5×的算术门槛，并非资格或已测结果。
+- **缺项保持未知，不再开物理补好看数字：** 旧初始化单独时长、loop-only2000耗时、step p50/p95/p99/max、exclusive静态占比、seed记录均未从该旧checkpoint获得，保None，不拿400步均值造分位数/将inclusive重叠项相加。旧4000/20sim=2481.794420wall只作派发前备选，不得结果后挑窗口；当前新worker已选2000。新step样本范围为driver+到期video，不含前置guard，表中应如实标范围。旧main不复开/不读NPZ或再审cold，具体基准小原件`operations/PERF01_OLD_E20_2000_PREFIX_REFERENCE_20261116.json`已给Data使用。
+
 ### 2026-11-16 21:36：AINav原子最早观测桥已修，Data输出CPU接线增量；真实watch pair仍待组合
 
 - **21:11观测戳反馈已在AINav新桥落实，仍不冒Data整链完成：** 当前87a5c4f…/package dc856dac…逐SHA核7文件，bridge2624944f…要求同一次成功probe的原子(oldest,completed) pair，checked_at取oldest、过龄完成拒绝，AST核无last_ok fallback；原guard核心5aa与既有benchmark字节同，不重刷。此为源码边界闭合，不是native资格或额外Reach许可。

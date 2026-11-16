@@ -307,5 +307,20 @@
     "benchmark_core_unchanged_no_need_rerun": true,
     "no_Reach_peer_source_patch_or_test_rerun": true,
     "no_new_native_or_5x_evidence": true
+  },
+  "PERF01_plan_and_current_pair_increment": {
+    "at": "2026-11-16T21:57:59.667207+08:00",
+    "plan_sha256": "4af564bbc558a558ce1b42f91fda8e0b48db77ad47fa7a497475d091129d4a10",
+    "actual_pair_record": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-INDEXED-IDENTITY-PERFORMANCE-REVISION-20261116-v1/ACTUAL_DATA_WATCH_OLDEST_PAIR_CPU_INTEGRATION_NOT_NATIVE.json",
+    "actual_pair_record_sha256": "f6af1f80e0bba3a89763723c775774a8b83a4529a613c37f76bc5c452f2e73b3",
+    "Data_current_watch_sha256": "8cd57028cc4d195e130662832239467b44028894dc6cd1d6784f9ac6d53f57af",
+    "AINav_with_actual_Data_watch_14_CPU_each_owner_reported": true,
+    "previous_missing_Data_pair_feedback_closed_at_development_source_layer": true,
+    "not_transfer_old_CPU_release_to_native": true,
+    "new_native_runner_development_path": "/home/yuanyue/main/work/data-team/development/perf-native-runner-20261116-v1/worker.py",
+    "new_native_runner_source_SHA_at_review": "576bf45df4d9820e66bbfbd43d0d65b4b7e77656a191a8023f36fec32dacd0c5",
+    "no_Reach_new_wrapper_or_test_or_benchmark_rerun": true,
+    "native_dispatch_or_result_not_attested_from_source_file": true,
+    "old_reference_file": "operations/PERF01_OLD_E20_2000_PREFIX_REFERENCE_20261116.json"
   }
 }
