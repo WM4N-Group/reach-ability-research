@@ -1,5 +1,9 @@
 # Reach repository rules
 
+## Latest priority: 2026-11-16 19:35 throughput revision
+
+Plan SHA `02dc65edff1a562a4e1d47b6f24ebd8b169d99d780bd69c8c6a9063cb1a73064`: prioritize removing repetitive filesystem/path/resource scans from the simulation hot loop before dispatching NEW E/five-arm/bulk tasks. AINav owns frozen/invalidation-aware path and runtime identity checks; Data owns incremental output accounting and bounded external resource/lease detection. Explicitly changed static-audit detection latency is allowed only with documented bounds/failure behavior; do not require the former all-files-per-tick strategy as an impossible equivalence condition. Dynamic safety, controls, immutable goals, sampling clocks and original gates stay unchanged. Do not hot-patch or stop active E20. Same-condition offline/exclusive benchmarks and a separately frozen native performance verification are required before claiming speedups; <10% metadata share and5x are targets, not evidence. Reach's offline comparison metadata check is NOT an extra runtime approval/dispatch prerequisite.
+
 ## Environment revision intake: 2026-11-16 17:59
 
 AINav's recorded user instruction at12:53 authorizes environment parameters within existing skill capability. The separate E20 candidate ends on actual movable C at20cm, with explicit new geometry; it is NOT original V4/.60m success. Future comparisons must share the same environment and common brake policy. Old freezes/closed scopes, original safety/success predicates and weights remain immutable. E20+40mm source5a1a92b static compile failed before zero/main; no dynamic40mm result. This updates stale blanket "no environment authorization" wording, not permission for Reach to take physical ownership or hot-patch peer code. See the latest handoff and authorization-record pin.

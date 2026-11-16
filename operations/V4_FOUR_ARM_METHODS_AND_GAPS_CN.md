@@ -1,5 +1,16 @@
 # V4五组：A—D真实方法代码首版、B/D共用优化与原源能力缺口
 
+## 2026-11-16 19:40：共同执行profile是离线比较证据，不是新增运行门
+
+最新19:35计划02dc65ed优先去热循环重复I/O；允许明确有检测时延变化的新版静态/资源保护协议，不能声称与旧逐tick全文件扫描完全等价。AINav/Data实现，原在途E20不热改；未来各arm共享同一性能/保护版本，不能混用后归因新优化。
+
+`v4_outcome_summary.summarize`新增可选结果metadata：`common_execution_profile_sha256`及`common_execution_profile_ref`。它们由已有原件消费方从**原冻结共同执行配置**映射，至少明确性能/静态完整性检测策略及最大延迟、公共brake/原技能控制、资源/lease/录像策略；不使用整arm程序SHA（不同arm的VLM/WM/treatment配置本应不同）。两字段格式有效且SHA同才可能比较，缺失/错误保留UNKNOWN，SHA不同拒对比。源内容核验责任在原件消费方；本reader只检查传入标量，不认证文件真实性或完备性，严禁手工统一hash冒同条件。
+
+新status：`COMMON_EXECUTION_PROFILE_UNVERIFIED`、`COMMON_EXECUTION_PROFILE_MISMATCH`。均保留原成败/censor/单arm数字，`successful_sim_delta=None`；同profile仍须原方法身份与完整成功证据才能计算单次DEV差。相同profile本身不是独立重复/未见泛化资格。没有profile的单独E结果照常收，不修改runner/zero/main要求、不添加peer接口/许可前置。旧历史原件不回填新字段来伪造资格。
+
+实现619dbac。修前9新用例4比较FAIL+2缺字段error/3pass，修后9新+13受影响summary=22本地/46308过，均显式软件metadata，不是性能benchmark或新增native/模型调用。未重刷D树/WM等无关测试；本修改不解决完整后继effects/cost，也不宣称提高仿真吞吐。
+
+
 ## 2026-11-16 12:54 当前优先级：E先独立尝试，不等下方A—D/WM/优化器缺件
 
 最新总计划7559f685…要求source59 `e_entry.build_E_driver`→Data新E程序/必要zero/一次main与task0直接第三视角。Reach已按source记录4feae4a9…核七个相关文件SHA，静态审阅未发现新增信息权限/模型依赖阻断；**此核对不构成新的E gate**。E保原RuleBaseline/共同legacy H，新后继selector、WM/VLM/可选map/prefix不成为依赖。不要求E此前整链成功；已知.20→.60原域拒绝应在unsupported dispatch前准确失败并交原片，不能降图/弱门或冒CLIMB成功。原Runtime.staircase缺件已有source57/59真实registry terrain冷启动修复，但本组不冒native通过/已派E/已有原片。

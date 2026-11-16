@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 19:40：新计划先去热循环I/O；结果reader拒跨性能profile比较，22软件两端过
+
+- **已切换19:35最高优先级：** 总计划02dc65ed…先消除热循环重复I/O再派新增任务。AINav负责一次冻结/可失效canonical索引＋每step便宜内存身份，Data负责受控写入增量容量/有限周期外部资源核验；这允许有声明的审计时延变化，不再强求静态全文件逐tick fresh等价，但动态碰撞/12N/FF/QP/FIFO/immutable/NN/STOW/4s/stop频率与参数不降。在途E20仍39ef86d5/source04a原样，不热换/不自行停任务。
+- **本组完成一处与新性能版本相关的比较修复，不冒提速代码：** 原结果reader只核scene，可能将同场景但不同性能/保护profile的B−A/D−C误列可比。现核共同执行profile SHA及来源ref；缺失/格式错→UNVERIFIED，不同→MISMATCH，不出successful_sim_delta；原成败/截断/成本记录保留，E单独缺profile也照常收结果。方法身份/完整成功证据门仍在，不能用profile替代实际WM/VLM/optimizer事件或native成功。
+- **仅离线结果口径，不给运行加前置：** common_execution_profile是结果消费时对原冻结共同配置的映射，应覆盖性能/检测时延/公共brake/控制/资源/录制策略；不hash包含method差异的整arm program，也不能手填相同SHA冒同条件。reader不认证磁盘/文件本体，owner原件先核；缺证据只限制后续对比，不阻E/zero/main/视频交付。不新增runtime schema/审批，不改AINav/Data源、H、guard、锁/进程。
+- **验证与未完成范围：** 修前9新用例出现4个比较FAIL＋2个新字段缺失error；修后9新＋13原summary回归=22项本地/46308都过。实现619dbac已三端同步，无模型/Actor/physics/API/fit/性能benchmark，不把22软件或reader改动称吞吐改善。真正perf候选须同module/tree/trace离线exclusive测量与新独立同阶段原生验证，10%/5×只是目标；不能把inclusive项相加、局部倍率相乘或不同任务阶段wall差算方法收益。完整后继effects/cost仍未完成。
+
 ### 2026-11-16 18:58：E20新资产/自身zero已过，唯一40mm main真实启动；尚无结果
 
 - **E20真正进入一次main，不再仅软件/静态失败：** source04a9c0f…新spec修复实际compile过，MJB ed6267bb…远端保管。Data v2后续zero因漏原privacy writer在native前导入失败，main0、原result/ledger缺失及wall/RSS未知保留；新v3纳入原writer、复用已成功冷MJB重新freeze39ef86d5…，不是热补旧root/借失败zero或无故重编。
