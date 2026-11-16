@@ -236,7 +236,7 @@
   "original_phase_timings_overlapping_not_additive": true,
   "closed": true,
   "automatic_retry": false,
-  "formal_final_release_not_yet_consumed": true,
+  "formal_final_release_not_yet_consumed": false,
   "direct_originals_and_owner_closed_SHA_used": true,
   "close_snapshot": {
     "path": "/home/yuanyue/main/work/data-team/manifests/V4-common-palette-bounded-native-46308-20261116-v2/readonly-20261116T121730.json",
@@ -264,5 +264,15 @@
   "real_WM_forward": 0,
   "Reach_new_model_physics_API_fit_tests": 0,
   "no_arrays_RGBD_frames_MJB_weights_read": true,
-  "new_model_input_or_training_permission": false
+  "new_model_input_or_training_permission": false,
+  "formal_final_release_incremental_intake": {
+    "at": "2026-11-16T13:27:06+08:00",
+    "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PALETTE-V2-FRESH-ASSOCIATION-PASS-PUSH-RUNTIME-ABI-FAILED-20261116-v1/release.json",
+    "release_sha256": "0a41bb540f8ffb1dc5f1db40cdcc26fa887518f331d68271a5e8b03df237b330",
+    "verified_members": 18,
+    "same_original_result_and_ledger": true,
+    "same_scope_not_new_sample": true,
+    "previous_interpretation_unchanged": true,
+    "no_repeat_journal_or_raw_reads": true
+  }
 }
