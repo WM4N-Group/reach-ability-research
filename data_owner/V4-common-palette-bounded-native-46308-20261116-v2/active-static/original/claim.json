@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T11:27:21.900351+08:00",
+  "PID": 178420,
+  "program_sha256": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70",
+  "phase": "component_zero",
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+  "task_main": false,
+  "invocation": 1
+}

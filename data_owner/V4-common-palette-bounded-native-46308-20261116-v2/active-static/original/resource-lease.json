@@ -1,0 +1,29 @@
+{
+  "locks": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+      "device": 51,
+      "inode": 3428729629,
+      "independent_contention_blocked": true,
+      "holder_PID": 178420
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+      "device": 51,
+      "inode": 3428729630,
+      "independent_contention_blocked": true,
+      "holder_PID": 178420
+    }
+  ],
+  "GPU": {
+    "UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+    "index": 0,
+    "free_MiB": 24080,
+    "utilization_percent": 0,
+    "PID": 178420,
+    "own_compute_bytes": null,
+    "own_observation_state": "CUDA_UNINITIALIZED_NO_PID_ROW",
+    "peak_own_compute_bytes": null
+  },
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480"
+}

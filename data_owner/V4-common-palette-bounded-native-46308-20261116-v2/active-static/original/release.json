@@ -1,0 +1,36 @@
+{
+  "schema": "Data-new-common-palette-static-model-proof-subset-inflight-not-task-v1",
+  "at": "2026-11-16T11:31:46.418721+08:00",
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+  "program_sha256": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70",
+  "source_commit": "af09da7ddbaa791782cf5fd4873d14064d64b1fd",
+  "static_asset_delta_passed": true,
+  "actual_new_MJB_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "appearance_revision_id": "V4_COMMON_REVIEW_PALETTE_RENDER_ONLY_20261116_v1",
+  "appearance_contract_sha256": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+  "original_static_reference_sha256": "0b3547b0f85005afa01b958b13d20d448a67e5cf3206f545f71b8174745f768e",
+  "all398_nonRGBA_arrays_engine_options_topology_names_paths_identical": true,
+  "only_three_geom_RGBA_rows_changed": {
+    "complex_box_a_geom": 85,
+    "complex_box_b_geom": 86,
+    "complex_box_c_geom": 87
+  },
+  "new_environment_not_old_brown_same_arm_comparison": true,
+  "future_five_arms_must_use_same_new_asset_if_adopted": true,
+  "component_still_inflight_not_native_or_task_qualified": true,
+  "full_component_result_or_ledger_not_available": true,
+  "component_zero_dispatches": 1,
+  "five_arm_main_calls": 0,
+  "same_scope_subset_no_new_physical_sample_or_invocation": true,
+  "no_first_WM_forward_or_J_purpose_grant": true,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "files": {
+    "new-common-appearance-static-delta-proof.json": "c2e0217915e209cd593b9799323c77c81a1fce250ce3a47d8de29877771ac3fb",
+    "claim.json": "fa419ab712f01598cb392a2b76f178f212139d34cf5c798027c836bef59bef31",
+    "resource-lease.json": "c13e3d46a7e9f2efc927a443636b02bbc204ee619e2e51511d9cac3c4cbb7a2d",
+    "protocol.json": "abab5067be8886d77720a781cc102c6610305efe3d561914b691ce6131a9040a",
+    "COMMON_APPEARANCE_REVISION.json": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+    "program-freeze.json": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70"
+  }
+}

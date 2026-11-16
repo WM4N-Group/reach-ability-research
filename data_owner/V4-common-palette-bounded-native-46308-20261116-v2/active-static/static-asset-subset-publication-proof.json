@@ -1,0 +1,8 @@
+{
+  "local_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PALETTE-V2-STATIC-DELTA-PASS-NATIVE-INFLIGHT-20261116-v1/release.json",
+  "release_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-PALETTE-V2-STATIC-DELTA-PASS-NATIVE-INFLIGHT-20261116-v1/release.json",
+  "release_sha256": "8bcc837edaff6716bc8c3aa220e0b34466747e0a62d0a622ad261d2fb00bb893",
+  "new_MJB_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "static_nonRGBA398_proof": true,
+  "H_sha256": "e4778dc700a91f0e4272e05af1950be876133bd6ccf55c75b439359a155d4aec"
+}

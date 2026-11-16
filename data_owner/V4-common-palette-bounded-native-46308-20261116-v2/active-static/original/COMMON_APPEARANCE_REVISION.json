@@ -1,0 +1,22 @@
+{
+  "schema": "AINav-V4-common-visible-appearance-revision-v1",
+  "revision_id": "V4_COMMON_REVIEW_PALETTE_RENDER_ONLY_20261116_v1",
+  "role": "NEW_SHARED_RENDER_ASSET_CANDIDATE_NOT_ADOPTED_OR_NATIVE_QUALIFIED",
+  "scene_sha256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+  "reference_static_MJB_sha256": "0b3547b0f85005afa01b958b13d20d448a67e5cf3206f545f71b8174745f768e",
+  "shared_arms": ["A", "B", "C", "D", "E"],
+  "colors_from_existing_review_palette_are_new_NATIVE_appearance_not_previous_approval_claim": true,
+  "body_geom_review_hex": {
+    "complex_box_a_geom": "#e6a23c",
+    "complex_box_b_geom": "#31a9a0",
+    "complex_box_c_geom": "#9177dc"
+  },
+  "old_all_box_rgba": [0.55, 0.36, 0.19, 1.0],
+  "allowed_compiled_array_change": "EXACT_THREE_DECLARED_BOX_ROWS_OF_geom_rgba_ONLY",
+  "no_geometry_mass_friction_contact_robot_Actor_camera_goal_or_detector_change": true,
+  "same_family_ambiguity_minimum64_depth_and_current_native_binding_gates_unchanged": true,
+  "physical_success_or_current_visual_association_claimed": false,
+  "all_five_must_freeze_same_new_asset_before_main_not_compare_old_brown_as_same_environment": true,
+  "not_new_method_optimizer_contribution_or_general_multi_instance_solution": true,
+  "old_closed_roots_and_static_MJB_must_not_be_modified": true
+}

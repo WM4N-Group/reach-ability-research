@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-16T11:35:57.910131+08:00",
+  "role": "AF09_NEW_EXACT_PALETTE_V2_STATIC_RENDER_ONLY_DELTA_ACTUALLY_PASSED_NATIVE_COMPONENT_STILL_INFLIGHT",
+  "source_commit": "af09da7ddbaa791782cf5fd4873d14064d64b1fd",
+  "program_sha256": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70",
+  "authority_sha256": "d012d5ff451b0970e039a2bd11897fea7d608c45b3accb20ba5ba76ea7104d5f",
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+  "PID": 178420,
+  "component_zero1_main0": true,
+  "actual_new_MJB_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "appearance_revision_id": "V4_COMMON_REVIEW_PALETTE_RENDER_ONLY_20261116_v1",
+  "appearance_contract_sha256": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+  "static_398_nonRGBA_arrays_options_counts_names_paths_unchanged": true,
+  "only_changed_RGBA_rows": {
+    "complex_box_a_geom": 85,
+    "complex_box_b_geom": 86,
+    "complex_box_c_geom": 87
+  },
+  "static_proof_subset_release": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PALETTE-V2-STATIC-DELTA-PASS-NATIVE-INFLIGHT-20261116-v1/release.json",
+  "static_proof_subset_release_sha256": "8bcc837edaff6716bc8c3aa220e0b34466747e0a62d0a622ad261d2fb00bb893",
+  "whole_component_still_inflight_not_native_or_method_qualified": true,
+  "current_capture_checkpoint": {
+    "at": "2026-11-16T11:33:16.709440+08:00",
+    "event": "bounded_progress",
+    "task_steps": 400,
+    "task_sim_s": 1.9999999999999793,
+    "wall_s": 356.04682144802064,
+    "phase": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+    "metrics": {
+      "Data_owner_resource_guard_inclusive": {
+        "calls": 1612,
+        "wall_s": 109.86656363075599,
+        "commands": 0
+      },
+      "new_static_compile_and_nonRGBA_model_proof": {
+        "calls": 1,
+        "wall_s": 7.482100744964555,
+        "commands": 0
+      },
+      "capture_or_assembly": {
+        "calls": 400,
+        "wall_s": 315.444383274531,
+        "commands": 400
+      }
+    },
+    "component_only_not_method_gain": true
+  },
+  "post_NAV_fresh_association_and_Push_CLIMB_topNAV_success_unproved": true,
+  "old_brown_not_same_visible_environment_comparison": true,
+  "all_five_future_arms_must_freeze_same_new_asset_if_adopted": true,
+  "old_palette_v1_null_aux_usage_false_and_all_old_costs_preserved": true,
+  "staging_KeyError_missing_remote_root_preserved_only_empty_transport_continued": true,
+  "no_WM_API_fit_or_J_grant": true,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "resources": {
+    "at": "2026-11-16T11:26:31.114924+08:00",
+    "GPU0_free_MiB": 24080,
+    "canonical_GPU0_locks": [
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+        "device": 51,
+        "inode": 3428729629,
+        "free_snapshot_not_lease": true
+      },
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+        "device": 51,
+        "inode": 3428729630,
+        "free_snapshot_not_lease": true
+      }
+    ],
+    "owned_bytes": 26154941952,
+    "conservative_reserve_bytes": 13421772800,
+    "owned_limit_bytes": 42949672960,
+    "provider_quota_unknown": true,
+    "available_RAM_bytes": 122348601344,
+    "legitimate_GPU1_native_PIDs_preserved": [],
+    "no_owned_GPU0_native": true,
+    "no_new_lease_from_snapshot": true
+  }
+}
