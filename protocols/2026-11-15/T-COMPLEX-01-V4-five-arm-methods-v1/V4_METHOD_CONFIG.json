@@ -101,7 +101,7 @@
     "max_steps_per_plan": 16,
     "max_VLM_role_calls_per_decision_ceiling": 8,
     "proposed_episode_VLM_call_cap_ABCD": 100,
-    "proposed_episode_total_token_cap_ABCD": 1000000,
+    "proposed_episode_total_token_cap_ABCD": 900000,
     "proposed_reply_token_cap_ABCD": 8192,
     "VLM_timeout_s": 90.0,
     "E_VLM_calls": 0,
@@ -113,7 +113,10 @@
     "WM_original_terminal_prediction_interval": "Exact original option budget <=60s, not successful endpoint guarantee",
     "same_VLM_provider_model_and_sampling": "USER_CONFIRMED_OFFICIAL_TLS_DEEPSEEK_FLASH_THINKING_DISABLED_SAME_ORIGINAL_BACKEND; actual served metadata and runtime injection still required",
     "actual_calls_wall_tokens_and_WM_work_reported": true,
-    "previous256_call_proposal_invalid_for_original_constructor_superseded_before_any_run": true
+    "previous256_call_proposal_invalid_for_original_constructor_superseded_before_any_run": true,
+    "common_API_capacity_source": "EXACT_SELECTED_ORIGINAL_FULL_COURSE_CONSTRUCTOR_NOT_BACKEND_IMPLEMENTATION_MAXIMUM",
+    "original_full_course_constructor_source_sha256": "038ce0455eba232755d6bf1354131a5c907964a9c084588c108e49bd9846b952",
+    "previous1000000_backend_legal_total_not_original_full_course_budget_superseded_before_any_V4_main": true
   },
   "WM": {
     "checkpoint_sha256": "7a6ba61e89d824cd3e0a78f469a0925f91c784ab1f77ed4273365d6c313f569c",
@@ -242,7 +245,7 @@
     "complete_cost_provider_or_native_domain_qualified": false
   },
   "latest_plan_seen": {
-    "at": "2026-11-16T07:50:15.636560+08:00",
+    "at": "2026-11-16T08:15:12.919555+08:00",
     "version": "2026-11-16 00:03",
     "sha256": "be3aa7e587e5aa990375d1085dde6affc497861c1d45ab01862edc2793501845",
     "new_parallel_group": "V-JEPA",

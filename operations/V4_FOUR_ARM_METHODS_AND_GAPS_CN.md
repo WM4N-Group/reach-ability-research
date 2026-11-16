@@ -71,3 +71,13 @@ Data已经独立冻结原35源＋自身privacy-annotation adapter的v2程序a0e8
 下一步是**有限只读性能定位**后修真正热点/保持安全语义、再由Data冻结独立新用途/程序必要资格；wchan filesystem wait尚不能归因某函数。AINav当前alias-path解析性能改动仍在development WIP，既有39-source manifest没有涵盖新编辑，不能当immutable/实测加速或偷偷热换a0e8。Reach不另起world/接管其进程，继续本组真实WM及完整名义effects/退出域；这些仍未由本次capture/NAV部分轨迹解决，五main/真实WM forward0。
 
 可复核小摘要`operations/V4_BOUNDED_V2_RESOURCE_CENSOR_INTAKE_20261116.json` SHA **1c147d0e6c8e6ad00a8725f94d066bc11865f50e7c5d55c309c47f303415e150**。原包whole_artifact_model_input_allowed=false/training=false，不因含真NAV帧就追溯喂WM/critic/J训练。本轮没有代码/测试变化，不刷74项旧回归；初次只读消费的小文件预设大小及事件过滤检查已在同一原metadata上纠正，原result/journal/lease和物理从未改变。总计划be3aa7e5…未再更新，旧模型/数据用途/dirty全部保留。
+
+## 2026-11-16 08:15：按原C/D完整宿主统一真实API容量，修正backend上限与所选profile混淆
+
+AINav新C/D backbone assembly候选开始准确复用原full-course constructor；读取其接点后，本组发现原`run_full_course.py`（SHA038ce045…）明确`create_vision_backend(max_calls=100,max_tokens=8192,max_total_tokens=900000)`。本组原binding/config给1,000,000，只是DeepSeek构造器允许的**实现最大值**，不是所选原C/D容量。如果A/B照旧而C/D保原，四组token预算会不等。五main/API仍0，此处没有已发生的不公平运行或事后预算修饰。
+
+现 `v4_provider_binding.runtime_binding` 默认total改900,000，并硬pin原full-course文件，只AST解析这一条字面构造调用，**不import/exec原launcher、不构造backend/RoleRunner/planner、不读env/key/opener或发model metadata探针**；当前V4只接受完全相同的100/8192/900000组合，backend本身虽允许的其他组合（如72次、4096reply、1M total）不再冒本五组统一profile。原backend≤100/≤8192/≤1M实现约束也保留；未来另选四组共同容量需结果前显式新协议，不能偷偷单arm覆盖。
+
+纯方法config的A—D total同步900,000，E0调用/无假配额、同一provider/model/timeout不变；C/D原VLM/树/advisor/arborist/replanning和原constructor profile完全保留，不为了对齐削弱C。原旧已耗scope/预算/失败都不改。binding输出明确`all_four_actual_backend_instances_compared=false`：这里只保证声明/来源一致，不冒四个真正authenticated实例已构造或方法ready。
+
+新增3项profile解析/非匹配合法cap/错launcher拒绝专项，连原8 provider检查=**11项软件本地/46308两端过**；未刷其余74或15 prefix检查，未发API/模型/physics/fit。原caller assembler尚属开发源，当前完整cost/退出域与WM causal wiring/bootstrap仍未闭合，五main/真实WM forward0。共同NAV前缀固定proposal仍默认OFF/未采用，未因本修正偷偷执行。总计划be3aa7e5…未变，原dirty/closed/用途全保。

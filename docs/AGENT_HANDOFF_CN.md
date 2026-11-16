@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 08:15：原full-course API profile对齐为100/8192/900000；11软件两端过，无真实API
+
+- **修正真实源接缝的四组预算差异：** 原C/D完整宿主run_full_course（038ce045…）选100次/8192reply/**900000 total**；本组先前1M是backend实现上限而非所选宿主profile。现binding/config A—D统一原100/8192/900000，非匹配组合提前拒绝，不削弱C的VLM/tree/replanning，不动任何旧scope预算。五main/API0，未发生后再改结果。
+- **只读解析准确来源，不冒API ready：** 新binding硬pin原full-course，AST读字面构造，不import/exec launcher或构造backend/roles/planner；不读env/key/opener/发探针。明确四个实际backend实例尚未比较/构造，不把声明profile一致当已认证运行。新增3专项连原8=11纯软件本地/46308两端过，其他74/15旧套件不刷；物理/API/WM/fit0。
+- **未完成仍实事求是：** 共同NAV(.22,0,ground)辅助prefix代码/固定proposal已有，但默认OFF、尚未源采用；真实10Hz/accepted200Hz owner/同96×64目标语义与原WM forward、完整公共名义effects/cost/准备退出域仍未闭合，五main/真实WM forward0。source parallel-path性能候选属五组共同底座而非Reach优化收益，源C/D backbone assembler仍候选，均不借closed资格。
+- **权限/保管：** 总计划be3aa7e5…未再更新；两个bounded scope与bulk24全closed、不延budget/重试/热换模型/转J，原场景/三箱/布局询问/原Actor/12N/4s/FF/QP/FIFO/stop、全部dirty/index/原模型/CAL/VAL用途全保。修正追加`/home/yuanyue/reach-ability-research/operations/V4_FOUR_ARM_METHODS_AND_GAPS_CN.md`，本轮未动他组源码/H/锁/进程，raw/权重/env仍远端。
+
 ### 2026-11-16 07:50：共同NAV观察前缀固定目标/代码已就绪；15软件两端过，尚未源采用或真实WM
 
 - **推进真实WM启动依赖，不再停留泛提案：** 新default-OFF `CommonNavObservationPrelude`固定选现有共同公开NAV `v4-ground-nav-007`=(.22,0,ground)，A—E同一目标、每arm最多一次、无view扫描/重试。作为capture后/首次方法前的共同工程观察准备，原judge/factory/executor/回执消费；只原NAV succeeded后要求fresh observation交回同一真实arm method。全部成本入各arm task0，prefix模型/新优化0，不是A/B的VLM-only兜底/优化贡献/正确路线。已曝光DEV选择不冒盲定/未见，不读私有actual approach或改布局。
