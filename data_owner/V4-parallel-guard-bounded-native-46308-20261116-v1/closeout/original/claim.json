@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T08:23:41.017694+08:00",
+  "PID": 167290,
+  "program_sha256": "edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc",
+  "phase": "component_zero",
+  "scope_id": "data-46308-V4-parallel-guard-bounded-native-20261116-v1",
+  "task_main": false,
+  "invocation": 1
+}

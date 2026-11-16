@@ -1,0 +1,306 @@
+{
+  "original_result_passed": false,
+  "source_result_sha256": "2c56de1c69e1f6915b985052b345a88081c5923d81fef5599bb17157335c039e",
+  "all_frozen_source_members": 498,
+  "frozen_source_bytes_verified": true,
+  "journal_chain_verified_rows": 765,
+  "original_error": "Original component admission rejection:ValueError: Current original RGBD association unavailable; no old alias/static-pose substitute; no replacement",
+  "original_failure_stage": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+  "no_Runtime_Actor_Renderer_WM_or_physics_imports": true,
+  "task_success_not_inferred": true,
+  "model_input_allowed": false,
+  "training_allowed": false,
+  "checks": {
+    "episode_storage_complete": true,
+    "continuous_200Hz_commands": true,
+    "original4step_delay_FIFO_exact": true,
+    "raw_PD_reproduction": true,
+    "original_hard_clip": true,
+    "onboard_visual_previous_action": true,
+    "original10Hz_grid_complete": true,
+    "no_teardown_errors": true
+  },
+  "actual_commands": 3018,
+  "original_onboard_frames": 151,
+  "max_raw_PD_error": 0.0,
+  "max_hard_clip_error": 0.0,
+  "original_capture_sample_events": 448,
+  "actual_assembly_events": [
+    {
+      "actual_capture": {
+        "actual_issued_steps": 448,
+        "kind": "actual_cold_start_supported_capture",
+        "model_input": false,
+        "no_NAV_arrival_claimed": true,
+        "no_PUSH_failure_claimed": true,
+        "support_ref": "ground",
+        "time_s": 2.2399999999999745
+      },
+      "bounded_CLIMB_NAV_source_wiring_present": true,
+      "connected_skills": [
+        "NAV",
+        "PUSH",
+        "CLIMB"
+      ],
+      "current_controller_constructed": false,
+      "event": "V4_actual_capture_to_original_execution_assembled",
+      "model_input": false,
+      "native_CLIMB_NAV_or_full_task_qualification": false,
+      "native_commands_issued": 0,
+      "static_deck_40cm_or_task_ready": false,
+      "time_s": 2.2399999999999745,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "journal_event_counts": {
+    "registered_cold_capture_constructed": 1,
+    "V4_two_factor_policy_bound_at_task_zero": 1,
+    "cold_capture_actual_sample": 448,
+    "cold_capture_actual_loaded_anchor_reference": 1,
+    "cold_capture_compact_transfer_started": 1,
+    "V4_actual_capture_to_original_execution_assembled": 1,
+    "Data_bounded_API0_component_public_intent_selected": 1,
+    "skill_intent_selected": 1,
+    "skill_execution_judgment": 1,
+    "registered_common_query_prebound": 1,
+    "complex_private_constructor_query_bound": 1,
+    "intent_native_execution_bound": 1,
+    "execution_refinement_dispatch": 1,
+    "registered_compact_NAV_started": 1,
+    "registered_NAV_exact_session_constructed": 1,
+    "V4_selected_original_session_bound": 1,
+    "native_option_installed": 1,
+    "ainav_native_admitted": 1,
+    "registered_NAV_actual_actor_forward": 294,
+    "ainav_native_receipt": 2,
+    "registered_NAV_actual_goal_hold_then_arrival_capture": 1,
+    "intent_actual_native_outcome": 1,
+    "V4_selected_intent_blocked": 1,
+    "ainav_chain_hard_stop": 1
+  },
+  "actual_native_preparation_bindings": [
+    {
+      "capability_contract": "{\"constraints\":[\"Choose tasks/objects/skills from the same public catalogue. These are semantic intents, NOT native motor permission.\",\"Declared initial/required placement geometry is not live pose. Current original RGBD association and actual receipts remain mandatory.\",\"All PUSH actions originate on ground, +world X, immutable absolute goal; original entry/NN/placement/STOW_VERIFIED gates remain.\",\"NAV stays on the actual current support layer; a declared elevated NAV cannot replace CLIMB or certify success at ground XY.\",\"CLIMB surface_height_m is the public DESTINATION height. Source support and original20cm rise/current binding must be established privately by the original judge.\",\"Current static goal_deck CLIMB binding and the V4 .2-to-.6 rise are NOT qualified by this catalogue. Unsupported prerequisites mean UNKNOWN/rejection, never success.\",\"Three original placements, actual CLIMB receipts, same-world owners and a four-foot goal_deck supported stop are required for complete task success.\",\"No VLM/WM/optimizer/rule may consume private force/pose, future trajectory or an isolated existence route.\"],\"skills\":[\"NAV\",\"PUSH\",\"CLIMB\"],\"source_ref\":\"V4 five-arm common semantic intents, not native admission\"}",
+      "event": "intent_native_execution_bound",
+      "execution_role": "preparation",
+      "intent": {
+        "budget_s": 60.0,
+        "parameters": [
+          [
+            "goal_world_x_m",
+            2.6
+          ],
+          [
+            "goal_world_y_m",
+            0.0
+          ],
+          [
+            "surface_height_m",
+            0.0
+          ]
+        ],
+        "skill": "PUSH",
+        "target_ref": "cuboid_a",
+        "token": "v4-intent-1-20"
+      },
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "intent_source": "API0_BOUNDED_COMPONENT_ENGINEERING_NOT_C_OR_E_METHOD",
+      "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-parallel-guard-bounded-native-20261116-v1/events.jsonl#456",
+      "model_input": false,
+      "model_selection_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-parallel-guard-bounded-native-20261116-v1/events.jsonl#454",
+      "native_option": {
+        "attempt_id": "",
+        "budget_s": 60.0,
+        "mandatory_protection": false,
+        "native_preconditions_receipt": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-parallel-guard-bounded-native-20261116-v1/events.jsonl#456",
+        "original_push_goal_sha256": "",
+        "parameters": [
+          [
+            "goal_world_x_m",
+            0.22000000000000008
+          ],
+          [
+            "goal_world_y_m",
+            1.8797838865806863e-16
+          ],
+          [
+            "surface_height_m",
+            0.0
+          ]
+        ],
+        "skill": "NAV",
+        "target_ref": "cuboid_a",
+        "token": "v4-entry-NAV-1"
+      },
+      "native_option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "physical_decision_id": "ainav-execution-000002",
+      "physical_observation_sha256": "69a5eb24da9e4c6d8c2c25f36498178c4c2946cfd4b996f108997d9c4dabd569",
+      "physical_query_sha256": "6a5f22c51648cf0bf3ca62abcec778354dd3ef299c033cf9323b38a09c8ad463",
+      "preparation_count": 1,
+      "preparation_counts_as_model_skill_selection": false,
+      "task_success_claimed": false,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "actual_native_preparation_outcomes": [
+    {
+      "event": "intent_actual_native_outcome",
+      "execution_role": "preparation",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "intent_succeeded": false,
+      "native_option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=3018",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+        "status": "succeeded",
+        "time_s": 15.090000000000959
+      },
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "literal_native_receipts": [
+    {
+      "evidence_ref": "commands:physical_tick=449",
+      "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+      "option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "status": "started",
+      "time_s": 2.2449999999999743
+    },
+    {
+      "evidence_ref": "commands:physical_tick=3018",
+      "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+      "option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "status": "succeeded",
+      "time_s": 15.090000000000959
+    }
+  ],
+  "actual_intent_admission_blocked": [
+    {
+      "event": "V4_selected_intent_blocked",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "model_input": false,
+      "reason": "ValueError: Current original RGBD association unavailable; no old alias/static-pose substitute",
+      "time_s": 15.090000000000959,
+      "v4_factor_scope": {
+        "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+        "arm": "C",
+        "legacy_H_costs_included_in_all_arms": true,
+        "legacy_H_is_not_new_treatment": true,
+        "legacy_common_stow_H_enabled": true,
+        "new_successor_optimizer_enabled": false,
+        "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+      }
+    }
+  ],
+  "current_public_query_pair": [
+    {
+      "path": "intent-observation-0001.json",
+      "sha256": "b669fef440ad8e6e7c65afa6895d6c682c0f72f85fad90ec784e3d7d1801439a",
+      "time_s": 2.2399999999999745,
+      "objects": [
+        {
+          "bbox_xyxy": [
+            47,
+            49,
+            145,
+            75
+          ],
+          "evidence_ref": "RGBD:7add806755f66a767595dc9622fbe8e4dffa21f019ac90023372c9d5622ba8b6",
+          "geometry": {
+            "source": "unavailable",
+            "status": "unknown",
+            "uncertainty": {},
+            "values": {}
+          },
+          "label": "cuboid_a; current original RGBD one-to-one association",
+          "target_ref": "course-target-58415ff6732e45cf80f4d2e826fdc5ba"
+        }
+      ]
+    },
+    {
+      "path": "intent-observation-0002.json",
+      "sha256": "8840c703e95fb38d2981ae683427b35a7510938afa4e4b34ab269a71936c6815",
+      "time_s": 15.090000000000959,
+      "objects": []
+    }
+  ],
+  "actual_capture_completion_boundary": {
+    "task_steps": 448,
+    "task_sim_s": 2.2399999999999745,
+    "report": {
+      "kind": "cold_start_supported_capture",
+      "complete": true,
+      "phase": "COMPACT_TRANSFER",
+      "actual_steps": 448,
+      "stable_seconds": 0.49999999999998956,
+      "metrics": {
+        "foot_normal_N": [
+          52.38009698561048,
+          52.389940647312784,
+          54.37110724417728,
+          54.38083670595904
+        ],
+        "max_foot_speed": 5.0055856644589514e-05,
+        "base_linear_speed": 0.0004999164084940913,
+        "base_angular_speed": 0.0005995096419026136,
+        "tilt_rad": 0.0005869399984643858,
+        "arm_error": 0.00024976552925343176,
+        "arm_speed": 0.0002769655639352366,
+        "reference_error": 0.0,
+        "reference_speed": 0.0,
+        "hand_force_N": 0.0,
+        "on_declared_support": true,
+        "drift_m": 0.0019821318858657157
+      },
+      "support_ref": "ground",
+      "original_goal_sha256": "df255f74b31eca106ad0f53b67f14e57410efe271feeb212bffec13e804ad5a0",
+      "no_failed_PUSH_created": true,
+      "no_NAV_arrival_claimed": true,
+      "model_decision": false
+    }
+  },
+  "Data_phase_timings": {
+    "Data_owner_resource_guard_inclusive": {
+      "calls": 14658,
+      "wall_s": 947.2570439798292,
+      "commands": 0
+    },
+    "capture_or_assembly": {
+      "calls": 449,
+      "wall_s": 331.18017114070244,
+      "commands": 448
+    },
+    "original_native_execution": {
+      "calls": 2571,
+      "wall_s": 2178.0762399665546,
+      "commands": 2570
+    }
+  },
+  "guard_timings_overlap_step_intervals_not_additive": true,
+  "metadata_read_pool_closed": true
+}

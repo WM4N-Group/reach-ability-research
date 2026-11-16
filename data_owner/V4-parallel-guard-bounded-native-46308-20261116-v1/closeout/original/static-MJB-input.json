@@ -1,0 +1,5 @@
+{
+  "model_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-capture-execution-zero-20261116-v1/complex-static.mjb",
+  "model_sha256": "0b3547b0f85005afa01b958b13d20d448a67e5cf3206f545f71b8174745f768e",
+  "static_asset_only_not_prior_Runtime_or_zero": true
+}

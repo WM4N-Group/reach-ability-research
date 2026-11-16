@@ -1,0 +1,35 @@
+{
+  "task_steps": 448,
+  "task_sim_s": 2.2399999999999745,
+  "report": {
+    "kind": "cold_start_supported_capture",
+    "complete": true,
+    "phase": "COMPACT_TRANSFER",
+    "actual_steps": 448,
+    "stable_seconds": 0.49999999999998956,
+    "metrics": {
+      "foot_normal_N": [
+        52.38009698561048,
+        52.389940647312784,
+        54.37110724417728,
+        54.38083670595904
+      ],
+      "max_foot_speed": 5.0055856644589514e-05,
+      "base_linear_speed": 0.0004999164084940913,
+      "base_angular_speed": 0.0005995096419026136,
+      "tilt_rad": 0.0005869399984643858,
+      "arm_error": 0.00024976552925343176,
+      "arm_speed": 0.0002769655639352366,
+      "reference_error": 0.0,
+      "reference_speed": 0.0,
+      "hand_force_N": 0.0,
+      "on_declared_support": true,
+      "drift_m": 0.0019821318858657157
+    },
+    "support_ref": "ground",
+    "original_goal_sha256": "df255f74b31eca106ad0f53b67f14e57410efe271feeb212bffec13e804ad5a0",
+    "no_failed_PUSH_created": true,
+    "no_NAV_arrival_claimed": true,
+    "model_decision": false
+  }
+}

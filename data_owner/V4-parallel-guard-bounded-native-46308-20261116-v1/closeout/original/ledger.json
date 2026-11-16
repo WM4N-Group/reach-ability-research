@@ -1,0 +1,15 @@
+{
+  "scope_id": "data-46308-V4-parallel-guard-bounded-native-20261116-v1",
+  "program_sha256": "edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc",
+  "phase_invocations": 1,
+  "closed": true,
+  "status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "result_sha256": "2c56de1c69e1f6915b985052b345a88081c5923d81fef5599bb17157335c039e",
+  "actual_auxiliary_sim_s": 6.5049999999998835,
+  "actual_task_sim_s": 15.090000000000959,
+  "wall_s": 2611.899700073991,
+  "usage_known": true,
+  "output_bytes": 12858924,
+  "AB_main_calls": 0,
+  "automatic_retry": false
+}

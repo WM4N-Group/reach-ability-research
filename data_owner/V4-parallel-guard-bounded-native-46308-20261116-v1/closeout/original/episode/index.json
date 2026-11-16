@@ -1,0 +1,154 @@
+{
+  "schema": "piper-mujoco-chunk-index-v2",
+  "visual": [
+    {
+      "path": "visual/000000.npz",
+      "sha256": "8e431d0da9e503ee5dc858b256c3c4000b16c9a92725d1faebe87e8dd873bf7d",
+      "bytes": 841352,
+      "first": 0,
+      "last": 155
+    },
+    {
+      "path": "visual/000001.npz",
+      "sha256": "5db77f91ced5947912895c6916dd6baaaa22b37c54986b729ddb21e4c4875024",
+      "bytes": 1394418,
+      "first": 160,
+      "last": 315
+    },
+    {
+      "path": "visual/000002.npz",
+      "sha256": "5cc571b5acd53e8942ac1884b16f575246c9ff18c6bbfeeb4ec9331600b492ab",
+      "bytes": 1440784,
+      "first": 320,
+      "last": 475
+    },
+    {
+      "path": "visual/000003.npz",
+      "sha256": "8023069a0b05ed1a5a7d150b7dc844ea8d2f427b4279b003a681cbc42b196b14",
+      "bytes": 1309067,
+      "first": 480,
+      "last": 635
+    },
+    {
+      "path": "visual/000004.npz",
+      "sha256": "1f8958fa5b257545804d69b1b8062f101681b0616b49aa60652f775384f670f3",
+      "bytes": 877592,
+      "first": 640,
+      "last": 750
+    }
+  ],
+  "commands": [
+    {
+      "path": "commands/000000.npz",
+      "sha256": "d852610b3c99fa73406f68159afd51c74809f936698bb6f522022e9758ffb420",
+      "bytes": 188625,
+      "first": 1,
+      "last": 200
+    },
+    {
+      "path": "commands/000001.npz",
+      "sha256": "c8e7e1e3aa934b982b0f7b909427db87755af77ef5d75439db29e8e384f4af98",
+      "bytes": 199884,
+      "first": 201,
+      "last": 400
+    },
+    {
+      "path": "commands/000002.npz",
+      "sha256": "6d545ac1abb821eb7bfb9941d7ff9e04f3aa0afd91b12fc153922fcda7a03b8a",
+      "bytes": 153821,
+      "first": 401,
+      "last": 600
+    },
+    {
+      "path": "commands/000003.npz",
+      "sha256": "d31a30d6c2e3170b16a5e04f91af5a3a67d602c114746d6cdde0ab0336e157ba",
+      "bytes": 122663,
+      "first": 601,
+      "last": 800
+    },
+    {
+      "path": "commands/000004.npz",
+      "sha256": "8f38d1e444a41ec34963ef05d47d7684e21123eb4bff820d0e0e70abd429eb10",
+      "bytes": 122836,
+      "first": 801,
+      "last": 1000
+    },
+    {
+      "path": "commands/000005.npz",
+      "sha256": "a0335b094ae87115fad4d11859549c87f92da4453eb88b949da3c8a259c68094",
+      "bytes": 123429,
+      "first": 1001,
+      "last": 1200
+    },
+    {
+      "path": "commands/000006.npz",
+      "sha256": "7e1a0e9ec06af99234c9515927d3d38f0ace9ef11ce689f6b331aa51e8a227d3",
+      "bytes": 123758,
+      "first": 1201,
+      "last": 1400
+    },
+    {
+      "path": "commands/000007.npz",
+      "sha256": "3a028868b9b09a32bf8558973504fa82fd76331c164151944c04bedb8492f8e1",
+      "bytes": 122116,
+      "first": 1401,
+      "last": 1600
+    },
+    {
+      "path": "commands/000008.npz",
+      "sha256": "9ed67bf0532f3b4ef25882ec0a4f948952d8b3b268d02f6ca6a95d053a419b69",
+      "bytes": 193266,
+      "first": 1601,
+      "last": 1800
+    },
+    {
+      "path": "commands/000009.npz",
+      "sha256": "9315c974472f96cc308bfd01f479d63bc27899eee727d6b0b8717f69a2a749dd",
+      "bytes": 196256,
+      "first": 1801,
+      "last": 2000
+    },
+    {
+      "path": "commands/000010.npz",
+      "sha256": "84a4388bf819678e4167d3bdaea72a536a7a72331acdfdbafe98b8397e62c971",
+      "bytes": 196750,
+      "first": 2001,
+      "last": 2200
+    },
+    {
+      "path": "commands/000011.npz",
+      "sha256": "f7b32daf619cbb72b97a6d372f485590a110c1c1242f3da39e38844dd8199b05",
+      "bytes": 189982,
+      "first": 2201,
+      "last": 2400
+    },
+    {
+      "path": "commands/000012.npz",
+      "sha256": "4f481aee4cc2ff167d235431eeb0d34fbcfaa7d15bf1c6e4e59df2b999f911f2",
+      "bytes": 177064,
+      "first": 2401,
+      "last": 2600
+    },
+    {
+      "path": "commands/000013.npz",
+      "sha256": "f4c0ee164679368d256364ad9f3e60e4a9aa6f1c6d1cacf875a03630c8fb735e",
+      "bytes": 176263,
+      "first": 2601,
+      "last": 2800
+    },
+    {
+      "path": "commands/000014.npz",
+      "sha256": "c931b570836c5b4027ea8c39a57477d14e8feb4ef5be42ae7c6327b865e7e4b5",
+      "bytes": 175438,
+      "first": 2801,
+      "last": 3000
+    },
+    {
+      "path": "commands/000015.npz",
+      "sha256": "0a9d86cb9676366a88b6005d27f17b1f043a0b1ae80e9e990f261f50d4f32a37",
+      "bytes": 17784,
+      "first": 3001,
+      "last": 3018
+    }
+  ]
+}
