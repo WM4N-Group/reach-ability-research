@@ -70,6 +70,44 @@ def registry(scene, registry_api):
     return registry_type(registry_api)(objects, surfaces, registry_api.GoalSpec('cuboid_c', tuple(scene['task']['goal_bounds_xy_m'])))
 
 
+def _apply_current_spec_palette(spec,scene,bindings):
+    """Use enumerated handles, not the uncompiled new-name lookup seam.
+
+    Exactly the predeclared three fresh box geoms; no fallback/dummy/skip-color.
+    Full input validation precedes writes. Metadata only, never compile/step.
+    """
+    objects=scene['objects'];refs={o['public_ref']for o in objects}
+    require(set(bindings)==refs,'Exact original constructor box bindings')
+    geoms=tuple(spec.geoms);names=tuple(g.name for g in geoms)
+    wanted={};indices={}
+    for obj in objects:
+        name=obj['body_name']+'_geom'
+        require(bindings[obj['public_ref']]==dict(body=obj['body_name'],geom=name),
+                'Exact original body/geom mapping, not a guessed color target')
+        color=obj['review_color']
+        require(type(color)is str and len(color)==7 and color[0]=='#' and
+                all(c in '0123456789abcdefABCDEF'for c in color[1:]),'Exact declared hex palette')
+        wanted[name]=[*(int(color[i:i+2],16)/255. for i in (1,3,5)),1.]
+        matches=[i for i,g in enumerate(geoms)if g.name==name]
+        require(len(matches)==1,'Every current fresh box geom must appear exactly once')
+        indices[name]=matches[0]
+    before=tuple(tuple(float(v)for v in g.rgba)for g in geoms)
+    for name,i in indices.items():
+        require(len(before[i])==4 and all(abs(a-b)<=1e-7 for a,b in zip(before[i],(.55,.36,.19,1.))),
+                'Only original freshly constructed brown boxes, not a previous palette/hot asset')
+    # These are the actual current MjsGeom handles enumerated from this spec.
+    # Duplicate unnamed robot geoms remain separate and are never overwritten.
+    for name,i in indices.items():geoms[i].rgba=wanted[name]
+    require(tuple(g.name for g in spec.geoms)==names,'No geometry name/cardinality change during palette write')
+    for i,g in enumerate(geoms):
+        actual=tuple(float(v)for v in g.rgba)
+        if i not in indices.values():require(actual==before[i],'Non-task geom palette changed')
+    require(all(len(geoms[i].rgba)==4 and all(abs(float(a)-b)<=1e-7 for a,b in zip(geoms[i].rgba,wanted[name]))
+                for name,i in indices.items()),'All three actual handle palette writes required')
+    return dict(all_three_exact_current_handles=True,target_geom_names=sorted(wanted),
+        named_lookup_used=False,non_target_RGBA_unchanged=True,physics_or_compile_calls=0)
+
+
 def construct_into_native_spec(sim, *, scene, main_steps, base_module, expected_base_sha256, mujoco_api):
     """Called ONLY by Data's guarded fresh constructor. Does not compile/step.
 
@@ -82,20 +120,21 @@ def construct_into_native_spec(sim, *, scene, main_steps, base_module, expected_
     path = Path(base_module.__file__).resolve(strict=True)
     require(hashlib.sha256(path.read_bytes()).hexdigest() == expected_base_sha256, 'Exact base constructor source')
     base_module.validate(scene)
-    names = {g.name for g in sim.spec.geoms}
+    spec=sim.spec
+    names = {g.name for g in spec.geoms}
     require('goal_deck' not in names, 'No repeat or hot install')
-    require(not any(o['body_name'] in {b.name for b in sim.spec.bodies} for o in scene['objects']), 'No previously installed boxes')
+    require(not any(o['body_name'] in {b.name for b in spec.bodies} for o in scene['objects']), 'No previously installed boxes')
     deck = scene['platforms'][0]
     x0, x1, y0, y1 = deck['bounds_xy_m']; z0, z1 = deck['bottom_z_m'], deck['top_z_m']
-    sim.spec.worldbody.add_geom(name=deck['name'], type=mujoco_api.mjtGeom.mjGEOM_BOX,
+    spec.worldbody.add_geom(name=deck['name'], type=mujoco_api.mjtGeom.mjGEOM_BOX,
         pos=[(x0+x1)/2, (y0+y1)/2, (z0+z1)/2], size=[(x1-x0)/2, (y1-y0)/2, (z1-z0)/2],
         contype=2, conaffinity=3, friction=[.7, 0., 0.], group=1, rgba=[.56, .74, .77, 1.])
     result = base_module.construct_into_native_spec(sim, scene=scene, main_steps=main_steps)
     # This is a NEW geometry asset, not old398 render-only proof. Same public
     # review colors are explicit on the three new task geoms before compile.
-    for obj in scene['objects']:
-        value=obj['review_color'];sim.spec.geom(obj['body_name']+'_geom').rgba=[*(int(value[i:i+2],16)/255. for i in (1,3,5)),1.]
+    require(sim.spec is spec,'Base and palette must share the same fresh spec; no replacement/lookup fallback')
+    palette=_apply_current_spec_palette(spec,scene,result['bindings'])
 
-    return dict(base=result, added_surface='goal_deck', goal_surface_height_m=.2,
+    return dict(base=result,palette=palette, added_surface='goal_deck', goal_surface_height_m=.2,
         new_physics_steps=0, native_compilation_verified=False, CLIMB_driver_integrated=False,
         actual_terminal_evaluator_integrated=False, physical_dispatch_authorized=False)

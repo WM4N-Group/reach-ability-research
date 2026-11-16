@@ -42,3 +42,14 @@ e_entry.build_E_driver。新task_factory在选定PUSH原session构造后、任�
 补充真实SDK ABI核对：原Machine.__init__为startup/index=-1，prepare是在session.enter之后。
 b22初候选误把prepare当构造态，已在任何native调用前源码审阅发现，保留失败记录；
 当前修正生产attach与软件fixture为真正startup/index=-1/entered=false，并拒绝post-enter prepare。
+
+
+## 后续静态接口修复（旧5a1 scope不恢复）
+Data唯一静态构造在新geom的按名lookup处返回None，compile/新MJB/zero/main均未到；
+旧scope已closed，10.4795wall/RSS与GPU peak=None原账保留。当前只修这个真实接缝：
+绑定同一个fresh spec贯穿deck/base/palette，按spec.geoms枚举的现存句柄核三个精确目标，
+逐个匹配原base.bindings并确认fresh brown；全部验证后才写相同三色，非目标含重复无名geom保持。
+不猜缓存唯一原因、不跳调色、不造dummy、不先编译查名、不修改原base/几何/物理或40mm策略。
+14个新纯fake-spec回归＋16E20/8E入口本机过，不是native构造/新MJB资格。
+STATIC_SPEC_PALETTE_INTERFACE_REVISION.json明确额外一个纯接口修复新root；原静态失败不洗，
+仍最多一个40mm动态main，不能在失败spec/旧root继续或扫margin。Data须新完整freeze/lease/compile/zero。

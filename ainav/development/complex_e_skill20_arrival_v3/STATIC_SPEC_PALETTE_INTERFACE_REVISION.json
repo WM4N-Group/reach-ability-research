@@ -1,0 +1,22 @@
+{
+  "role": "STATIC_PALETTE_LOOKUP_INTERFACE_FIX_NOT_PHYSICAL_POLICY_OR_SUCCESS_CHANGE",
+  "parent_cloud_commit": "5a1a92b153a23a91a5ec79ef4355f36af2d3fe51",
+  "failed_scope_closed": "data-46308-E20-prearrival40-direct-live-20261116-v1",
+  "failed_static_program_sha256": "c3e14456694d99c376f9fa9aeabe4f1f18fbc8e8cde78a9a45f52d42938c5a4e",
+  "old_static_calls": 1,
+  "old_zero_calls": 0,
+  "old_main_calls": 0,
+  "original_costs_preserved": true,
+  "new_static_interface_scope_max": 1,
+  "new_static_compile_max": 1,
+  "new_own_zero_max": 1,
+  "new_main_max": 1,
+  "total_40mm_dynamic_main_attempts_still_max": 1,
+  "new_scope_required_not_retry_failed_spec": true,
+  "margin_m_unchanged": 0.04,
+  "scene_and_actor_and_success_safety_unchanged": true,
+  "spec_binding": "One same fresh sim.spec object through deck/base/palette; enumerate exact current handles and prevalidate all targets before writes",
+  "no_named_new_geom_lookup_or_skip_color_or_dummy": true,
+  "original_base_constructor_unchanged": true,
+  "native_qualified": false
+}
