@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 18:58：E20新资产/自身zero已过，唯一40mm main真实启动；尚无结果
+
+- **E20真正进入一次main，不再仅软件/静态失败：** source04a9c0f…新spec修复实际compile过，MJB ed6267bb…远端保管。Data v2后续zero因漏原privacy writer在native前导入失败，main0、原result/ledger缺失及wall/RSS未知保留；新v3纳入原writer、复用已成功冷MJB重新freeze39ef86d5…，不是热补旧root/借失败zero或无故重编。
+- **自身zero与main身份已核：** v3 zero result02b08e2e…/ledger147db94b…本地/远端SHA一致且program/scope匹配，task0、aux6.505sim、18.663793wall、known/close0。main真实claim18:37:57.788032、PID248453；本组18:57:52只读见进程存活/result无，最近原checkpoint18:53:55为1600命令/8.000sim/958.642374wall。单point40mm用途动态main总计1，不加派/不调watchdog。
+- **新图与录制边界：** 新E20初态1280×720 camera1文件02d39ef2…已核，与旧.60m/旧E59片分开；真实紫色C箱目标位置后的.20m箱顶才是终点，辅助浅蓝台不是终点。main direct-live metadata已核同program，录制在途不是完整片/成功证明；不拿zero图代主片、不重渲染。截图入口`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v3/camera-1.png`。
+- **不提前宣布早刹/提速/方法收益：** 当前只到原NAV准备，在途checkpoint不能填成功cost或乘局部perf倍率；40mm动态效果、PUSH/CLIMB、完整E20成功均未证。原E59失败/完整片/cold、v1静态失败/v2导入缺项及所有费用保留；新场景/公共brake/工程提速不是孤立Reach treatment，真实WM仍0，完整后继effects/cost仍未完成。小记录`operations/E20_V3_ZERO_PASS_MAIN_STARTED_INTAKE_20261116.json`。
+
 ### 2026-11-16 18:28：E20 fresh-spec修复仅软件；旧46174 left原PASS元数据恢复但不增试验
 
 - **当前E20接缝已有新源，不把软件修复冒通过：** AINav04a9c0f…只在同fresh spec用现存geom句柄/原binding核三目标后写RGBA，scene08a/规则/40mm/原安全门不改；owner软件通过仍非Data新compile/zero/main资格。上一静态失败root保持closed，40mm动态main总上限仍1；本组不重刷owner套件、不改他组源/排额外前置。
