@@ -42,6 +42,9 @@ class Tests(unittest.TestCase):
     def setUp(self):self.c=a.contract();self.scene=a.load_scene()
     def spec(self):
         geoms=[NS(name='EXPLICIT_SOFTWARE_floor',rgba=(.1,.2,.3,1.),mass=0.,size=[1.,1.,1.],friction=[.7,0.,0.])]
+        # Distinct anonymous non-target render geoms are legitimate in SDK specs.
+        geoms.extend([NS(name='',rgba=(.2,.3,.4,1.),mass=0.,size=[.1,.1,.1],friction=[.7,0.,0.]),
+                      NS(name='',rgba=(.8,.7,.6,1.),mass=0.,size=[.2,.2,.2],friction=[.7,0.,0.])])
         for name in a.palette(self.c):geoms.append(NS(name=name,rgba=tuple(self.c['old_all_box_rgba']),mass=.5,size=[1.2,.7,.1],friction=[.4,0.,0.]))
         return NS(data=NS(time=0.),queue=[],spec=NS(geoms=geoms))
     def revised(self):
@@ -61,7 +64,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(set(a.declared_hue_families(self.c).values()),{'warm','green','violet'})
         bad=copy.deepcopy(self.c);bad['body_geom_review_hex']['complex_box_b_geom']='#e6a23c'
         with self.assertRaises(ValueError):a.declared_hue_families(bad)
-    def test_only_three_fresh_spec_rgba_fields_changed_no_material_geometry(self):
+    def test_three_target_rgba_only_and_different_anonymous_geom_rows_preserved(self):
         sim=self.spec();old=copy.deepcopy(sim);report=a.apply_fresh_spec_palette(sim,enabled=True,scene=self.scene,guard=lambda:None)
         for before,after in zip(old.spec.geoms,sim.spec.geoms):
             wanted=a.palette(self.c).get(before.name,before.rgba)
@@ -69,9 +72,10 @@ class Tests(unittest.TestCase):
             self.assertEqual({k:v for k,v in vars(before).items()if k!='rgba'},{k:v for k,v in vars(after).items()if k!='rgba'})
         self.assertFalse(report['compiled_mechanics_or_render_or_native_qualified'])
     def test_missing_or_changed_old_box_validated_before_any_color_write(self):
-        for kind in ('missing','wrong_rgba'):
+        for kind in ('missing','wrong_rgba','duplicate_target'):
             sim=self.spec()
             if kind=='missing':sim.spec.geoms.pop()
+            elif kind=='duplicate_target':sim.spec.geoms.append(copy.deepcopy(sim.spec.geoms[-1]))
             else:sim.spec.geoms[-1].rgba=(1.,0.,0.,1.)
             before=copy.deepcopy(sim)
             with self.assertRaises(ValueError):a.apply_fresh_spec_palette(sim,enabled=True,guard=lambda:None)

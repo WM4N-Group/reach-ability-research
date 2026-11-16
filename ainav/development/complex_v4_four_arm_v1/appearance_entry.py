@@ -60,18 +60,24 @@ def apply_fresh_spec_palette(sim,*,enabled=False,scene=None,main_steps=0,guard=N
             and getattr(sim,'step_count',0)==0 and float(sim.data.time)==0. and not sim.queue,
             'Exact scene on a fresh ZERO-step spec, not a live/resumed model')
     c=contract();wanted=palette(c);geoms=list(sim.spec.geoms)
-    require(len({g.name for g in geoms})==len(geoms),'Unique fresh spec geometry names')
-    selected={g.name:g for g in geoms if g.name in wanted}
-    require(set(selected)==set(wanted),'All three actual existing box geoms must be present')
-    before={g.name:tuple(float(v)for v in g.rgba)for g in geoms}
+    # MuJoCo permits multiple unnamed robot/visual geoms. Require uniqueness
+    # ONLY for our three named targets; preserve all other geoms by index, not
+    # a name-keyed dict that would collapse legitimate empty names.
+    indices={name:[i for i,g in enumerate(geoms)if g.name==name]for name in wanted}
+    require(all(len(found)==1 for found in indices.values()),
+            'Each of the three declared target geoms must be present exactly once')
+    selected={name:geoms[found[0]]for name,found in indices.items()}
+    before=[tuple(float(v)for v in g.rgba)for g in geoms]
     for name in wanted:
-        require(len(before[name])==4 and all(abs(a-b)<=1e-7 for a,b in zip(before[name],c['old_all_box_rgba'])),
+        original_rgba=before[indices[name][0]]
+        require(len(original_rgba)==4 and all(abs(a-b)<=1e-7 for a,b in zip(original_rgba,c['old_all_box_rgba'])),
                 'Only exact old shared brown appearance, never overwrite a previous revision')
     # Validate every target before ANY write. Only the fresh spec's three rgba
     # fields are written; old MJB bytes and every other spec field stay untouched.
     require(guard()is not False,'Owner refused fresh appearance revision')
     for name,rgba in wanted.items():selected[name].rgba=rgba
-    require(all(tuple(float(v)for v in g.rgba)==before[g.name]for g in geoms if g.name not in wanted),
+    target_indices={found[0]for found in indices.values()}
+    require(all(tuple(float(v)for v in g.rgba)==before[i]for i,g in enumerate(geoms)if i not in target_indices),
             'No other geometry appearance may change')
     return dict(revision_id=c['revision_id'],contract_sha256=CONTRACT_SHA,
         old_all_box_rgba=c['old_all_box_rgba'],new_box_rgba=wanted,

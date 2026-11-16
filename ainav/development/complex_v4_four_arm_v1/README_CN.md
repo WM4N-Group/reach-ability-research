@@ -1,3 +1,7 @@
+> **真实首次palette资格的具体源码修复，旧root不复开**：Data e74acd…/source23cc1fe…在fresh spec、Runtime之前被新helper误加的“全部geom名字唯一”约束拦住（result9cd6125d…）。MuJoCo/原SDK允许匿名非目标geom，不能把非目标匿名项当非法。现只要求三条声明的目标箱geom各精确出现一次，仍先全量验证三目标后才改RGBA；全部非目标项改为**按index逐项保存/核对RGBA**，不再用name-keyed字典折叠多个空名。重复/缺失目标仍拒绝，原compiler对真正非法命名的检查及全non-RGBA/options/安全/视觉门照旧。
+>
+> 新回归包括多个不同RGBA的匿名非目标geom原样保留、重复目标原样拒绝；这纠正的是新helper的SDK ABI假设，不降低原64px/深度/同色歧义/12N/NN/STOW/FF/QP/FIFO/4s/stop。实际首次尝试15.4439wall后已closed/no retry，新MJB未产出，raw task/aux字段null与usage_known=false保持未知，不补零或把初始化费用说成已知0。修复版仍需Data新准确程序必要资格，绝不在旧冻结/closed worker热改或同root重试，不借新source冒已native/渲染通过。
+
 > **新的共有可见外观候选（不是在旧root上改色，也不是声称原review色已是native批准）**：原`complex_scene.py`在三箱循环统一硬写`rgba=[.55,.36,.19,1]`，未消费已有A/B/C review_palette。closed41后query同warm 3552＋64px被原single-visible门整体拒绝；64px区域真实身份尚未资格，不能说一定是B或一定换色能修。新`COMMON_APPEARANCE_REVISION.json`固定把已有review hex作为**新**native shared render revision（A/B/C为warm/green/violet），拟五组完全共用，不映射质量/成功率/正确路线，不能把旧brown run当同环境arm比较。
 >
 > `appearance_entry.compile_new_shared_palette_asset`默认OFF，仅Data新准确程序/guard调用：原compiler**相同字节码**＋private constructor delta，在fresh0-step spec上只改三个已存在箱geom的RGBA，不改base模块/旧MJB/sceneJSON。新模型输出后，读原0b3547…静态参考与新MJB的**MjModel metadata（无MjData/Actor/step）**，强制全部non-RGBA arrays逐byte、engine options/counts/names/paths相同，只许geom_rgba的精确三行变化，第四行/物理/相机/材料差异拒绝。额外RGBA1e-7只对视觉通道字节量化核验，不改任何native安全门。
