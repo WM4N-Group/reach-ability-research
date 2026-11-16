@@ -194,6 +194,10 @@ def driver_class(*, source_root=None, enabled=False):
                 check_object_contacts(self.r, self.registry)
 
         def _connect_execution(self):
+            prelude = getattr(self, '_v4_common_nav_prelude', None)
+            if prelude is not None:
+                from common_nav_prelude import require_live_prelude
+                require_live_prelude(prelude)  # Fixture cannot enter native execution assembly.
             from ainav.native.intent_execution import IntentExecutionCoordinator
             from ainav.native.loop import AinavLoop
             self.execution = build_after_actual_capture(self.components, source_root=root, bundle=self.bundle,
@@ -222,6 +226,8 @@ def driver_class(*, source_root=None, enabled=False):
                 catalogue=self.intent_catalogue, judge=self.judge_intent, bind=self.factory.bind_batch,
                 snapshot=lambda: self._snapshot(self.r), protection=lambda now: None,
                 journal=self.journal, capability_contract=self.capabilities)
+            if prelude is not None:
+                prelude.bind_coordinator(self.coordinator)  # Auxiliary phase only; self.planner stays original.
             self.loop = AinavLoop(runtime=self.r, executor=self.executor, planner=self.coordinator,
                 batch_provider=self.coordinator, snapshot=self._snapshot, command_writer=self._write_command,
                 after_step_guard=self._after_guard, journal=self.journal, physical_tick=self.tick)

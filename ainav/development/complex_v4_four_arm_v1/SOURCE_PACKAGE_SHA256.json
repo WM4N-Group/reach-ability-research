@@ -7,7 +7,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "8fdd766e439d937569054b82819c0193ac531a4e3239ae7a998c1bc42c9f6d69",
+    "README_CN.md": "da0fbcdc784b7ee789f4d8f41a6e56eb65d52b8f872e208ce46ff24227e227b0",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "SHARED_APPEARANCE_DECLARED_MAP.json": "802d3651187052d46c4006717d21fd27f21a2fde61ecc7e93a857197dd894cb6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -16,11 +16,12 @@
     "capability_boundary.py": "5295098431fe56b279491788b2c8f2b5aa51e02f288cd57ebde03ab0a5fde996",
     "climb_nav_adapter.py": "f5f398feb5cc2e2b9a0f5c88d27444edc7266530ee624d5c7287c11b64986697",
     "climb_nav_source.py": "c888ef67e392ac20c3ec3ec1a9dae39149195e02f775c713b5e12de3f33860e0",
+    "common_nav_prelude.py": "b95c6abf4095747f4e395d82aba3c7a66fc6cb0b69c693993e5ffa805ac0343d",
     "destination_climb.py": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
     "elevated_terminal.py": "aac30006cb0edbd0e63ae3b4f72948de90f0ae61dd6a75f6ea2f21dce5554242",
     "execution_entry.py": "e7fd5242a758cd7b4b507a755ba724d18772a9503f2adde352c7b3b550dd9374",
     "factor_scope.py": "9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424",
-    "live_driver.py": "86677b7a3647f8da1c39cb21d4e8092626c8e89af714104fba301dbe30e53598",
+    "live_driver.py": "ca2e147d5c959fbaed533d20feb900cde91f1e57256d2e1073160aea95282475",
     "method_entry.py": "ccbdc1d90bc4ea1dc05c0eb396da434e4206d2762907a9babea455622aa52d13",
     "native_entry.py": "5edcd0082ec582584c57f499e64864a0e524c16c237f47b896bac9b0f4e73fa4",
     "parallel_alias_guard.py": "90d4e91b246ea487cba4cfe8e502f8aea0c8d2b8964488668575c706a4132009",
@@ -35,6 +36,7 @@
     "tests/test_climb_nav_adapter.py": "6e33239f342520d3b1201adb4ada30a980ce9bdeb7222743c87a4c562f7f98a7",
     "tests/test_climb_nav_integration.py": "1d98455ebfdc6dd623001bec87e8d7f884cb484e04332e3df37da503ae2885f1",
     "tests/test_climb_nav_source.py": "a3ca236b0acef294ea2b91cec1b4339604b68ea8187cd9f7098314fc0a03c494",
+    "tests/test_common_nav_prelude.py": "8cfe01a79a97bbd7d10720f2315adeb324ab50627843ac85df517c29b3e7f8a7",
     "tests/test_destination_climb.py": "913658da17ca717b357fad73e75209142ff949747732661c7474dcb186ef7992",
     "tests/test_elevated_terminal.py": "32b53771209bc332fdb85c3d286e01ce5b9d169d740690f2732a0e9ce05ed00b",
     "tests/test_execution_entry.py": "8abc6f8154fc7a96954eedb70c4785ae410b401ef24a6abcc6730b643ee2b1a4",
@@ -79,5 +81,6 @@
   "original_C_D_full_AINav_backbone_existing_DeepSeek_object_assembly_only_no_backend_probe_or_calls": true,
   "optional_current_raw_grid_accepted_global_native18_to_Reach_port_no_bootstrap_or_native_qualification": true,
   "optional_NEW_shared_review_palette_render_revision_NOT_adopted_or_native_qualified": true,
-  "optional_same_five_public_palette_declaration_schema_original_NOT_adopted_or_WM_native_qualified": true
+  "optional_same_five_public_palette_declaration_schema_original_NOT_adopted_or_WM_native_qualified": true,
+  "optional_same_all_five_existing_public_NAV_auxiliary_coordinator_caller_NOT_adopted_native_or_WM_qualified": true
 }

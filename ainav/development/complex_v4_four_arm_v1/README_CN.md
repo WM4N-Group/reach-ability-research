@@ -218,3 +218,38 @@ components = construct_cold_components(enabled=True, source_root=exact_common_so
 必须传当前原ExecutionBatch/同一个选中option、current query clock/原图SHA与live source witness，binding前后原world/FIFO不变，并将两种高度/同native option hash写private journal（不进model）。8项新软件检查含：原AINav observe_intent的same-params与receipt-hash检查原封不动通过destination=.20、改回source=0仍拒；.20→.60仍由原20cm门拒、static goal_deck仍因非movable current-RGBD object拒。测试用明确geometry/receipt fixture，没有实际CLIMB构造或actor。
 
 这解决**参数语义接缝的代码**，不是V4完整factory/driver、static-deck binding、CLIMB→NAV owner或40cm能力已经接通。现场调用与资格仍待Data实际程序。Data若已冻结19-member原生组件source/程序b125b188…，必须继续该immutable版本，不把这个后续binder热补进去，也不因更新重跑其组件scope。
+
+## Source55：同五组公开NAV观察prefix的实际coordinator caller（默认OFF）
+
+`common_nav_prelude.attach_common_nav_prelude`复用Reach已发布的精确policy
+`3cb37d8e…`，不是重写规则或替换A—E。它必须在Data构造**真实arm planner**、
+原driver/同一FactorJournal之后、task0任何step之前显式挂接。原driver在自身capture完成、
+构造原`IntentExecutionCoordinator`时才绑定这个辅助阶段。`driver.planner`始终保留原方法对象；
+仅coordinator.model暂用一次辅助policy，目标是已有共同目录的
+`v4-ground-nav-007=(.22,0,0)`，不是新增路标、正确顺序或私有存在性路线。
+
+```python
+# FUTURE NEW FREEZE ONLY: do not inject into current af09 scope or old closed roots.
+from common_nav_prelude import attach_common_nav_prelude
+prefix = attach_common_nav_prelude(enabled=True, driver=actual_fresh_V4_driver,
+    reach_source_root=exact_Reach_source_root)  # identically enabled/frozen for A--E
+# A/B additionally need the existing actual current-WM stream attachment BEFORE steps.
+# Data alone owns runtime stepping, native receipts, lease/watchdog and recording.
+```
+
+原coordinator仍以同一judge/factory/executor/loop执行。只有**原NAV完整succeeded回执**
+清空pending后，下一次原coordinator的**一次新公开acquisition**通过原helper校验，才返回同一个
+原arm方法。started/READY/预测/准备成功均不代完整回执；拒绝、失败、expiry、错world/coordinator/
+method/journal、guard/image/持久化异常都拒绝，不扫描其他视点、不重试、不静默VLM-only。
+软件fixture不能进入driver原生assembly，不重新加载WM/Actor、不创建world或补history。
+
+这是**候选caller源码，不是共同prefix已采用/执行或A/B bootstrap实测成功**。
+未来五组采用须同一新freeze、同共有policy；从各arm task0计算capture/NAV/收臂/验证/观察/全部资源费用，
+不能去掉warmup或当BD优化收益。A/B仍要原3张10Hz图、完整实际200Hz新owner参考、
+同96×64 anchor目标关联和真实WM forward；本段不代query门、不解决绝对PUSH/action11、
+CLIMB approach/full effects、static/multisource或.20→.60能力域。E仍无VLM/WM/新优化。
+
+新增14项软件fixture直接使用**真实原IntentExecutionCoordinator＋真实Reach policy**、
+明确fake method/typed软件回执，图像核验仅在测试内mock；没有实际传感器/Runtime/模型/API/Actor/物理调用。
+受影响driver原13项另核；不重刷未改动旧套件。当前Data **af09/aecec palette-v2保持原freeze**，
+不得为采用source55重跑成功scope、热换其源码或把其结果倒贴为55资格。
