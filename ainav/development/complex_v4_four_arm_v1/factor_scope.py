@@ -144,7 +144,14 @@ def install_legacy_common(host, *, arm, planner, journal):
     host._stow_callback_name, host._stow_allowed, host._stow_installed = module.CALLBACK, allowed, {}
     host._v4_factor_journal, host.journal = ledger, ledger
     # This is a NEW, task-zero adapter instance, never a running method/profile.
-    planner.journal = ledger
+    if getattr(planner, '_v4_original_CD_assembly', None) is not None:
+        # New source-only C/D caller: the original roles/planner must not retain
+        # a bypass journal when the wrapper receives the common factor ledger.
+        # Existing bounded engineering policies have no such marker/path.
+        from method_entry import bind_original_cd_journal
+        bind_original_cd_journal(planner, ledger)
+    else:
+        planner.journal = ledger
     def emit(row):
         ledger(row)
         value = dict(row)
