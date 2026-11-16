@@ -34,6 +34,10 @@ class Model:
         self.pair_friction=Array([.8]*4,(4,));self.cam_pos=Array([0.,0.,0.]*4,(4,3))
     def geom(self,name):return NS(id=self.ids[name])
 
+class ExplicitOptionEnum:
+    def __init__(self,name,value):self.name=name;self.value=value
+    def __int__(self):return self.value
+
 class Tests(unittest.TestCase):
     def setUp(self):self.c=a.contract();self.scene=a.load_scene()
     def spec(self):
@@ -93,14 +97,18 @@ class Tests(unittest.TestCase):
         self.assertEqual([k for k in original.__globals__ if bound.__globals__[k]is not original.__globals__[k]],['construct_into_native_spec'])
         self.assertEqual(bound.__kwdefaults__,original.__kwdefaults__)
     def test_compiled_metadata_only_rgba_rows_positive_and_readonly(self):
-        before,after=self.revised();old=before.geom_rgba.tobytes();out=a.verify_compiled_render_only_delta(before,after)
+        before,after=self.revised();before.opt.integrator=ExplicitOptionEnum('EULER',0);after.opt.integrator=ExplicitOptionEnum('EULER',0);old=before.geom_rgba.tobytes();out=a.verify_compiled_render_only_delta(before,after)
         self.assertEqual(out['only_changed_array'],'geom_rgba');self.assertEqual(len(out['only_changed_rows']),3)
         self.assertEqual(out['unchanged_nonRGBA_array_count'],4);self.assertEqual(before.geom_rgba.tobytes(),old)
         self.assertFalse(out['actual_render_or_current_association_or_native_admission'])
     def test_nonrgba_mass_contact_calibration_or_engine_option_delta_rejects(self):
-        for name in ('body_mass','pair_friction','cam_pos','options'):
+        for name in ('body_mass','pair_friction','cam_pos','options','enum','opaque'):
             before,after=self.revised()
             if name=='options':after.opt.timestep=.01
+            elif name=='enum':
+                before.opt.integrator=ExplicitOptionEnum('EULER',0);after.opt.integrator=ExplicitOptionEnum('RK4',1)
+            elif name=='opaque':
+                before.opt.unknown=object();after.opt.unknown=object()
             else:getattr(after,name).values[0]+=.01
             with self.assertRaises(ValueError):a.verify_compiled_render_only_delta(before,after)
     def test_fourth_rgba_bad_alpha_dtype_or_row_ids_rejects(self):

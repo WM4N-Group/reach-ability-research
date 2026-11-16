@@ -104,6 +104,16 @@ def _options(option):
         elif isinstance(value,(int,float,bool)):
             require(not isinstance(value,float)or math.isfinite(value),'Finite unchanged engine options')
             result[name]=value
+        elif callable(value):
+            continue
+        else:
+            # Do not silently omit a public engine field (including a pybind
+            # enum) and then claim complete option equality.
+            require(type(getattr(value,'name',None))is str
+                    and callable(getattr(value,'__int__',None)),
+                    'Unclassified compiled engine option field: '+name)
+            result[name]=dict(enum_type=type(value).__module__+'.'+type(value).__qualname__,
+                              enum_name=value.name,enum_value=int(value))
     return result
 
 
