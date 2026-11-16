@@ -62,7 +62,8 @@ def machine_class(*,source_root=None,enabled=False):
     def attach(session):
         old=session.machine
         require(type(old)is Base and old.brake is None and old._result is None and
-                not old.confirmed and old.entry_receipt is None and old.native.phase=='prepare',
+                not old.confirmed and old.entry_receipt is None and session.entered is False and
+                old.native.phase=='startup' and old.native.index==-1,
                 'Only original pristine selected PUSH constructor, never resume/replace live state')
         require(old.services.native is old.native and old.services.session is session,
                 'Retain the original session/services/native bindings')

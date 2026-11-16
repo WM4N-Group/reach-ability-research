@@ -23,7 +23,7 @@ next_command/after_step/complete/results全部继承原对象，无伪测量/成
 ## 实际接线
 Data fresh进程将本目录置sys.path最前，仍compile_static_asset→construct_cold_components→
 e_entry.build_E_driver。新task_factory在选定PUSH原session构造后、任何PUSH命令/admission前，
-只对原prepare/未brake/未confirmed machine接新subclass，原native/services/session保持同对象。
+只对原startup/index=-1/entered=false/未brake/未confirmed machine接新subclass，原native/services/session保持同对象。
 非PUSH不接；live/重复替换拒绝。原destination/CLIMB20/NAV和最终三placement证明全部保持。
 场景仍08a260a4的E20任务；不是原0.60m任务成功，也未证明新20cm链或动态修复。
 
@@ -35,6 +35,10 @@ e_entry.build_E_driver。新task_factory在选定PUSH原session构造后、任�
 如果Data发现具体source/安全调用硬阻塞则准确拒绝，不以本README推native资格。
 
 ## 软件证据边界
-22新增状态机/构造边界fixtures＋16 E20＋8 E入口本机通过；全部明确fake runtime/receipts，
+24新增状态机/构造边界fixtures＋16 E20＋8 E入口本机通过；全部明确fake runtime/receipts，
 无新Runtime/MjData/Actor/模型/physics/API调用。两个测试fixture错误（误读原literal、缺inner.sha）
 已保留并修正fixture，未改原成功expected或控制源遮掩失败。原生资格/成功/视频仍未取得。
+
+补充真实SDK ABI核对：原Machine.__init__为startup/index=-1，prepare是在session.enter之后。
+b22初候选误把prepare当构造态，已在任何native调用前源码审阅发现，保留失败记录；
+当前修正生产attach与软件fixture为真正startup/index=-1/entered=false，并拒绝post-enter prepare。

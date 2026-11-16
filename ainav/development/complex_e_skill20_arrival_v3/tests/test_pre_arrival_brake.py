@@ -22,9 +22,9 @@ class Tests(unittest.TestCase):
   self.contract=PlacementContract('fixture',(2.6,0.),3.8,(2.4,1.4,.2),0.,.11,'declared_native_stop_offset')
   self.rows=[];self.ready=False;self.steps=0;self.brake_updates=0;self.begins=0
   self.phase='prepare';self.pose=[2.565,0.,.1];self.velocity=[.3,0.,0.]
-  self.native=NS(phase='prepare',finish=None,results=[],update=lambda:setattr(self,'steps',self.steps+1))
+  self.native=NS(phase='startup',index=-1,finish=None,results=[],update=lambda:setattr(self,'steps',self.steps+1))
   self.brake=NS(complete=False,update=lambda:setattr(self,'brake_updates',self.brake_updates+1),report=lambda:dict(explicit_software_fixture=True),command=lambda:'original_brake_command',after_step=lambda:None)
-  self.session=NS(machine=None)
+  self.session=NS(machine=None,entered=False)
   self.services=NS(native=self.native,session=self.session,contract=self.contract,assert_immutable=lambda:None,measure=self.measure,native_ready=lambda:self.ready,clock_report=lambda:dict(explicit_software_fixture=True),promote_confirmed_landing=lambda brake:False,begin_brake=self.begin)
   self.session.machine=Base(self.native,self.services,self.rows.append)
   self.old=self.session.machine;self.machine=self.cls.attach_pristine(self.session);self.native.phase='run'
@@ -101,7 +101,7 @@ class Tests(unittest.TestCase):
           require=lambda ok,msg:None if ok else (_ for _ in ()).throw(ValueError(msg)))
   exec(compile(ast.Module(body=[node],type_ignores=[]),str(path),'exec'),ns)
   for skill in ('PUSH','NAV'):
-   self.native.phase='prepare';self.session.machine=self.old
+   self.native.phase='startup';self.session.machine=self.old
    outer=NS(sha256='fixture',skill=skill,target_ref='fixture')
    host=NS(_outer_batch=NS(options=(outer,)),api=NS(world_snapshot=lambda _: 'same'),r=object(),
            _outer_world='same',_constructor_options={'fixture':NS(sha256='fixture-inner')},
@@ -115,6 +115,15 @@ class Tests(unittest.TestCase):
   with patch.object(helper,'__file__','/not-the-new-package/pre_arrival_brake.py'):
    with self.assertRaisesRegex(ValueError,'ambient pre-arrival helper'):
     task_factory.factory_class(source_root=SOURCE,enabled=True)
+
+ def test_post_enter_prepare_is_not_a_pristine_constructor(self):
+  self.session.machine=self.old;self.native.phase='prepare';self.session.entered=True
+  with self.assertRaises(ValueError):self.cls.attach_pristine(self.session)
+ def test_startup_with_non_pristine_index_or_entered_flag_refused(self):
+  self.session.machine=self.old;self.native.phase='startup';self.native.index=0
+  with self.assertRaises(ValueError):self.cls.attach_pristine(self.session)
+  self.native.index=-1;self.session.entered=True
+  with self.assertRaises(ValueError):self.cls.attach_pristine(self.session)
 
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
