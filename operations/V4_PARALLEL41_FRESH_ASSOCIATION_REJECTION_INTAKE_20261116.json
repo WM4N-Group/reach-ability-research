@@ -1,0 +1,137 @@
+{
+  "original_journal_sha256": "fb2e300887139dfed6918e5246029a5de0195f104c29b7f53f1bae36a2781284",
+  "original_journal_chain": {
+    "rows": 765,
+    "last_sha256": "19e70d39321738f21cc310e5dc9f4e68b93467b69962e1d63eac68dc5d319e9b",
+    "valid": true
+  },
+  "verified_small_original_metadata": 10,
+  "capture_actual_commands": 448,
+  "capture_completion_time_s": 2.2399999999999745,
+  "only_native_admitted": {
+    "skill": "NAV",
+    "parameters": {
+      "goal_world_x_m": 0.22000000000000008,
+      "goal_world_y_m": 1.8797838865806863e-16,
+      "surface_height_m": 0.0
+    },
+    "native_option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd"
+  },
+  "literal_native_receipts": [
+    {
+      "evidence_ref": "commands:physical_tick=449",
+      "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+      "option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "status": "started",
+      "time_s": 2.2449999999999743
+    },
+    {
+      "evidence_ref": "commands:physical_tick=3018",
+      "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+      "option_sha256": "06cf1d719d0306825cfafe59ac08882b4ce056d8c672c8bcb455a82f369d88dd",
+      "status": "succeeded",
+      "time_s": 15.090000000000959
+    }
+  ],
+  "fresh_public_observation_boundaries": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-parallel-guard-bounded-native-20261116-v1/intent-observation-0001.json",
+      "sha256": "b669fef440ad8e6e7c65afa6895d6c682c0f72f85fad90ec784e3d7d1801439a",
+      "time_s": 2.2399999999999745,
+      "accepted_objects": [
+        {
+          "target_ref": "course-target-58415ff6732e45cf80f4d2e826fdc5ba",
+          "label": "cuboid_a; current original RGBD one-to-one association"
+        }
+      ]
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-parallel-guard-bounded-native-20261116-v1/intent-observation-0002.json",
+      "sha256": "8840c703e95fb38d2981ae683427b35a7510938afa4e4b34ab269a71936c6815",
+      "time_s": 15.090000000000959,
+      "accepted_objects": []
+    }
+  ],
+  "actor_event_counts": {
+    "registered_NAV_actual_actor_forward": 294
+  },
+  "fresh_Push_admission_block_events": 1,
+  "actual_requested_PUSH_or_CLIMB_native_admissions": 0,
+  "first_query_to_preparation_NAV_success_s": 12.850000000000986,
+  "PUSH_READY_elapsed_s": null,
+  "requested_PUSH_or_CLIMB_success_cost_s": null,
+  "source_worker_process_present": false,
+  "no_arrays_RGBD_frames_MJB_weights_read": true,
+  "Runtime_Actor_WM_API_fit_calls": 0,
+  "schema": "Reach-source41-post-NAV-fresh-association-rejection-original-intake-v1",
+  "at": "2026-11-16T09:17:06.042544+08:00",
+  "scope_id": "data-46308-V4-parallel-guard-bounded-native-20261116-v1",
+  "program_sha256": "edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc",
+  "source_commit": "2ab8b8aed166f74039db25e50fc7cabf1e0610cc",
+  "source_result_sha256": "2c56de1c69e1f6915b985052b345a88081c5923d81fef5599bb17157335c039e",
+  "source_ledger_sha256": "000031ad5880c634ceeff6dd839d16850378d61171dd7decdb15ec3fd4daa536",
+  "source_small_files_sha256": {
+    "intent-observation-0002.json": "8840c703e95fb38d2981ae683427b35a7510938afa4e4b34ab269a71936c6815",
+    "intent-observation-0001.json": "b669fef440ad8e6e7c65afa6895d6c682c0f72f85fad90ec784e3d7d1801439a",
+    "static-MJB-input.json": "d730b1b3fb2b3835b81d0a0ca1cf64fe4173e4a3b2be9314e72a0e2006b48f26",
+    "resource-lease.json": "7646ee2212c5e84d5dc93ec211f71e0bd80a2c1ffeba1183924a1fc57150e931",
+    "V4-elevated-registry.json": "c7f165ac02424b7545f680184e925c58767e62ba15e54e9a7b69e59b006fab4e",
+    "claim.json": "0c9680e072f27b4e27565955df3bb37f7ef5aca69289fa4cf402c6f6c150483b",
+    "result.json": "2c56de1c69e1f6915b985052b345a88081c5923d81fef5599bb17157335c039e",
+    "component-identity-NOT-METHOD-C.json": "7f343a1f54b2dfe17e167512a85e0c915082207906de12b763709fc336522571",
+    "actual-supported-capture-completion-boundary.json": "ad49bac801f2031bbafb4ae85d730068080b748e870ac32be771dba677904b0d",
+    "ledger.json": "000031ad5880c634ceeff6dd839d16850378d61171dd7decdb15ec3fd4daa536"
+  },
+  "source_close_proof": {
+    "path": "/home/yuanyue/main/work/data-team/manifests/V4-parallel-guard-bounded-native-46308-20261116-v1/close-control-proof.json",
+    "sha256": "92774e921fef4c6d4796d3aeca74aafb014b194a9fe0fdcac22f23c0e739eda2",
+    "all_non_component_H_fields_preserved": true
+  },
+  "original_result_status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "original_error": "Original component admission rejection:ValueError: Current original RGBD association unavailable; no old alias/static-pose substitute; no replacement",
+  "classification": "FRESH_RGBD_ASSOCIATION_REJECTED_AFTER_ORIGINAL_NAV_SUCCESS_NOT_RESOURCE_CENSOR_OR_PUSH_CLIMB_CONTROLLER_FAILURE",
+  "resource_wall_censored": false,
+  "actual_task_commands": 3018,
+  "actual_task_sim_s": 15.090000000000959,
+  "actual_NAV_preparation_commands": 2570,
+  "costs": {
+    "ledger_wall_s": 2611.899700073991,
+    "task_sim_s": 15.090000000000959,
+    "auxiliary_sim_s": 6.5049999999998835,
+    "output_bytes": 12858924,
+    "usage_known": true,
+    "success_cost_s": null
+  },
+  "original_phase_timings_are_overlapping_not_additive": {
+    "Data_owner_resource_guard_inclusive": {
+      "calls": 14658,
+      "wall_s": 947.2570439798292,
+      "commands": 0
+    },
+    "capture_or_assembly": {
+      "calls": 449,
+      "wall_s": 331.18017114070244,
+      "commands": 448
+    },
+    "original_native_execution": {
+      "calls": 2571,
+      "wall_s": 2178.0762399665546,
+      "commands": 2570
+    }
+  },
+  "closed": true,
+  "automatic_retry": false,
+  "five_arm_main_calls": 0,
+  "actual_Reach_WM_forward": 0,
+  "internal_C_flag_not_C_or_E_method": true,
+  "no_new_training_or_model_input_permission_granted": true,
+  "old_alias_or_declared_pose_not_reused": true,
+  "formal_release_not_yet_consumed_direct_original_result_and_closed_CAS_proof_used": true,
+  "common_NAV_prelude_proposal_parent": {
+    "path": "/home/yuanyue/reach-ability-research/protocols/2026-11-16/V4-common-public-NAV-observation-prelude-v1/PROPOSAL.json",
+    "sha256": "7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb",
+    "parameters_changed": false,
+    "source_adopted_or_helper_physically_run": false,
+    "caution": "Same nominal .22 region was exposed in this different engineering probe. Does not prove helper failure or WM target absence, but NAV success cannot certify fresh semantic binding or WM-ready. No new target scan or retrospective model use."
+  }
+}

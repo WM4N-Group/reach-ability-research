@@ -42,3 +42,16 @@ AINav/Data新V4 caller可直接绑定上述两个callbacks与当前descriptor pr
 新增15项明确SOFTWARE测试本地/46308两端过，包括**真实原IntentExecutionCoordinator纯语义接口**的auxiliary→回执→fresh acquisition→同一arm-method交回测试；没有Runtime/Actor/physics/真实WM/API。不是15次NAV或native资格，旧74项本轮不刷。helper default OFF、源没有接，**当前main config只记录proposal，不改变现有执行协议或表示已排队**；AINav/Data可按现有流程技术集成，新准确程序自身资格，不加Reach签字/收件门。
 
 当前source41 packageec62709d…逐成员SHA只读核过，parallel metadata guard候选属五组共同底座，不算B/D新贡献或实际吞吐改善；旧v1/v2仍closed。完整几何effects/cost/准备退出域、.40m/static deck/后续source链与真task终点资格仍未解决；这个小前缀不冒优化器或五组完成。
+
+## 2026-11-16 09:22：新41源已到真正NAV succeeded，但fresh关联丢失；不是PUSH READY/WM-ready
+
+Data新程序 **edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc**（source2ab8b8ae…/41＋准确新freeze）已09:07关闭，不再依据旧README称“仅构建/在途”。直接原result **2c56de1c69e1f6915b985052b345a88081c5923d81fef5599bb17157335c039e**、ledger及Data关闭CAS proof核同；10份本地/远端原小metadata逐SHA核过，原journal **765行**完整hash-chain独立通过。此时只读消费的是原结果＋closed proof，尚未消费完整formal release/NPZ cold；没有把包裹未齐变运行门，也不冒独立流/动力学重算。
+
+- 真capture：448命令/2.240sim完成；PUSH语义query当时原public observations接受一个cuboid_a当前关联。
+- 真issued owner仍是地面**NAV准备**：2.245 started，**15.090原succeeded**；唯一admitted option即该NAV（nominal goal约.22,0），2570条后续命令、294次原NAV Actor forward，合计3018命令。该段first query→NAV成功约12.850s，但**不是PUSH READY准备成本**。
+- 在同15.090的**新**原public observation，objects=[]；原judge按“Current original RGBD association unavailable; no old alias/static-pose substitute”拒绝PUSH。未派发PUSH interaction/CLIMB/动态箱NAV，没有这些技能的failed/succeeded receipt。PUSH_READY、所请求交互成功成本/CLIMB标签仍None，不能把NAV succeeded当后继已可用，也不能缓存2.240的旧alias/蓝图pose绕过门。
+- 本次不是wall-censor：原resource_wall_censored=false，generic `COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY`保留；2611.899700074wall、15.090task＋6.505aux sim、12,858,924bytes、known/close0。源码parallel guard属共同工程底座，不用与旧短截断不同长度run的比值冒匹配提速或B/D收益；Data guard14658次/947.257s与capture331.180/执行loop2178.076的区间重叠，不能相加；loop非纯Actor时间。
+
+**对本组固定前缀的准确含义：** 新原NAV到了与proposal相同的nominal .22区域，说明在一个已曝光的、不同的API0工程probe里，NAV成功后合法fresh关联仍可能缺失；**不是本helper已执行/已证失败，不证明WM96×64没有任何可见目标，不证明整个任务不可行或C/E失败**。固定proposal与helper目标/参数/次数逐byte不改、仍default OFF/未采用；本次结果只作parent proposal的审计child说明，不为了追可见性换点或重跑。前缀只能解决modelled-owner/history的必要启动条件，绝不自签same-anchor语义或WM ready。其后的后继模型/退出域必须把合法fresh观测/关联可用性列为缺失条件；仅到几何点或省参考路程不构成完整可执行后继。当前这个条件的预测模型仍未实现，不能把此case查表灌进在线cost。
+
+本组小摘要 `operations/V4_PARALLEL41_FRESH_ASSOCIATION_REJECTION_INTAKE_20261116.json` SHA **73d0d0e93e71a9b986d338c832eee8387daaf0720c67ccbdfeab1e6eba9a9db3**。没有读取RGBD帧/NPZ/MJB/权重，没有做模型调用/fit、像素/阈值扫描或重跑软件测试；没有获得本包新的WM/J训练用途。仅依据public metadata，不能断言“物体物理不可见”，当前只证原accepted association为空。source45新C/D胶水保持未实际方法资格，不把41结果倒贴45；五main/真实WM forward0，旧closed/失败/费用/dirty/布局授权全保。

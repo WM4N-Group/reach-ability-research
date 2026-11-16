@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 09:22：新41源原NAV成功后fresh关联丢失；所请求PUSH仍未READY，固定前缀不改
+
+- **新41源已closed，首次拿到原NAV succeeded，但不是后继READY：** 新程序edb78627…/原result2c56de1c…及ledger/关闭CAS proof直接核同，10原小metadata本/远端SHA与765行原journal链独立核过；formal release/NPZ冷审此时尚未消费，不冒完整流重算。capture448步/2.240sim真完成；唯一原NAV在2.245 started→15.090 succeeded，准备2570命令/294原Actor forward，总3018命令。PUSH仍只语义意图，未进入interaction/CLIMB/动态handoff。
+- **具体后继可用性缺口：** 2.240原public query有当前cuboid_a关联，15.090 NAV成功后的fresh query objects=[]，原judge拒绝PUSH并无替代/旧alias复用。NAV成功耗时约12.850s不能填PUSH_READY成本；PUSH_READY/交互成功成本/CLIMB标签None。不把此component称C/E失败、技能controller失败或全部任务不可行；也不凭metadata声称RGBD物理无目标或WM无可见plane。
+- **固定前缀不追胜改点：** helper/proposal(.22,0)仍default OFF/未源采用，原bytes/参数/次数不改；此different API0 probe到同nominal区域只是已曝光DEV风险child，不是本前缀已测试/失败。共同prefix只给modelled-owner/history必要条件，不能自签fresh语义/WM ready。后继效果/退出模型仍需合法fresh关联的可用性条件，不能仅凭到点/参考米或将本case查表当预测；该模型尚未完成。
+- **费用/身份/产物：** 原resource_wall_censored=false，generic failed状态保留；2611.899700074wall、15.090task＋6.505aux sim、12,858,924bytes、known/close0；owner guard947.257s与step区间重叠不相加，非Actor独占成本/匹配提速或B/D收益。source41不倒贴45胶水资格，五main/真实WM forward0。小摘要`/home/yuanyue/reach-ability-research/operations/V4_PARALLEL41_FRESH_ASSOCIATION_REJECTION_INTAKE_20261116.json`；未读帧/数组/权重、无模型/physics/API/fit/重复测试，不改他组source/H/锁/进程。总计划be3aa7e5…未变；旧scopes/费用/dirty/index/原模型/用途/布局边界均保。
+
 ### 2026-11-16 08:15：原full-course API profile对齐为100/8192/900000；11软件两端过，无真实API
 
 - **修正真实源接缝的四组预算差异：** 原C/D完整宿主run_full_course（038ce045…）选100次/8192reply/**900000 total**；本组先前1M是backend实现上限而非所选宿主profile。现binding/config A—D统一原100/8192/900000，非匹配组合提前拒绝，不削弱C的VLM/tree/replanning，不动任何旧scope预算。五main/API0，未发生后再改结果。
