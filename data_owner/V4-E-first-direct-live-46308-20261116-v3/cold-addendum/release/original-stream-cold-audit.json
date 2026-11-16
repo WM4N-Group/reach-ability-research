@@ -1,0 +1,1055 @@
+{
+  "schema": "Data-closed-E-original-stream-cold-and-placement-gate-timeline-v1",
+  "at": "2026-11-16T16:39:55.914299+08:00",
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "source_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+  "program_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+  "original_result_sha256": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+  "original_task_passed": false,
+  "original_task_error": "Original immutable public/native placement lost after stow",
+  "native_PUSH_terminal_label": null,
+  "resource_censored": false,
+  "recorder_censored_original": true,
+  "cold_checks": {
+    "all_frozen_members_SHA": true,
+    "journal_chain_verified": true,
+    "episode_storage_complete": true,
+    "continuous200Hz": true,
+    "FIFO4step_exact": true,
+    "raw_PD_reproduction": true,
+    "hard_effort_clip": true,
+    "previous_actions_onboard_exact": true,
+    "onboard10Hz_grid_complete": true,
+    "raw_RGB_grid_complete": true,
+    "actual_task_count_and_time": true,
+    "close_errors0": true
+  },
+  "all_frozen_members": 515,
+  "journal_rows": 4711,
+  "command_rows": 9719,
+  "onboard_frames": 486,
+  "raw_frames": 486,
+  "raw_chunks": 31,
+  "max_raw_PD_error": 0.0,
+  "max_clip_error": 0.0,
+  "first_placement_pass": {
+    "sequence": 2500,
+    "time_s": 26.569999999999,
+    "phase": "run",
+    "placement_geometry_verified": true,
+    "task_geometry_pass": true,
+    "public_XY_error_m": 0.008855114958241437,
+    "actual_signed_dock_gap_m": 0.00346226897331281,
+    "native_result": false
+  },
+  "first_loss_after_pass": {
+    "sequence": 2507,
+    "time_s": 26.629999999998986,
+    "phase": "NN_STOP_MOVING_PUSH",
+    "placement_geometry_verified": false,
+    "task_geometry_pass": false,
+    "public_XY_error_m": 0.014620226352646403,
+    "actual_signed_dock_gap_m": -0.013720126974703817,
+    "native_result": false
+  },
+  "observed_placement_phase_or_gate_transitions": [
+    {
+      "sequence": 774,
+      "time_s": 15.090000000000959,
+      "phase": "prepare",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.6000000000000001,
+      "actual_signed_dock_gap_m": 0.5999999999999999,
+      "native_result": false
+    },
+    {
+      "sequence": 1337,
+      "time_s": 20.710000000000164,
+      "phase": "blend",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.6000000000000001,
+      "actual_signed_dock_gap_m": 0.5999999999999999,
+      "native_result": false
+    },
+    {
+      "sequence": 1368,
+      "time_s": 20.910000000000124,
+      "phase": "run",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.6000000000000001,
+      "actual_signed_dock_gap_m": 0.5999999999999999,
+      "native_result": false
+    },
+    {
+      "sequence": 2500,
+      "time_s": 26.569999999999,
+      "phase": "run",
+      "placement_geometry_verified": true,
+      "task_geometry_pass": true,
+      "public_XY_error_m": 0.008855114958241437,
+      "actual_signed_dock_gap_m": 0.00346226897331281,
+      "native_result": false
+    },
+    {
+      "sequence": 2503,
+      "time_s": 26.589999999998994,
+      "phase": "NN_STOP_MOVING_PUSH",
+      "placement_geometry_verified": true,
+      "task_geometry_pass": true,
+      "public_XY_error_m": 0.007144195678927965,
+      "actual_signed_dock_gap_m": -0.0033172122439470986,
+      "native_result": false
+    },
+    {
+      "sequence": 2507,
+      "time_s": 26.629999999998986,
+      "phase": "NN_STOP_MOVING_PUSH",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.014620226352646403,
+      "actual_signed_dock_gap_m": -0.013720126974703817,
+      "native_result": false
+    },
+    {
+      "sequence": 2786,
+      "time_s": 29.389999999998437,
+      "phase": "BRAKE_MOVING_PUSH",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.037718631204015265,
+      "actual_signed_dock_gap_m": -0.03658521292352246,
+      "native_result": true
+    },
+    {
+      "sequence": 2868,
+      "time_s": 30.209999999998274,
+      "phase": "UNLOAD_CAPTURE",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.037718631204015265,
+      "actual_signed_dock_gap_m": -0.03658521292352246,
+      "native_result": true
+    },
+    {
+      "sequence": 3141,
+      "time_s": 32.909999999998384,
+      "phase": "PROTECTED_STOW",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.037718631204015265,
+      "actual_signed_dock_gap_m": -0.03658521292352246,
+      "native_result": true
+    },
+    {
+      "sequence": 4311,
+      "time_s": 44.61000000000437,
+      "phase": "STOW_VERIFY",
+      "placement_geometry_verified": false,
+      "task_geometry_pass": false,
+      "public_XY_error_m": 0.03771863120401526,
+      "actual_signed_dock_gap_m": -0.03658521292352246,
+      "native_result": true
+    }
+  ],
+  "original_milestone_events": [
+    {
+      "sequence": 2501,
+      "event": "placement_arrival_original_brake_started",
+      "original_payload": {
+        "actual_box_linear_velocity_m_s": [
+          0.3664420532634619,
+          -0.019164307005164576,
+          -0.02727001478831694
+        ],
+        "actual_box_position_m": [
+          2.5941202503185883,
+          -0.006621299314153455,
+          0.10013115972943758
+        ],
+        "actual_box_rotation": [
+          [
+            0.9999941213598145,
+            0.0033975275974874567,
+            0.0004626575808026654
+          ],
+          [
+            -0.0033975170467981162,
+            0.999994228144091,
+            -2.3588568080721954e-05
+          ],
+          [
+            -0.0004627350532208132,
+            2.2016542394410284e-05,
+            0.9999998926957656
+          ]
+        ],
+        "actual_signed_dock_gap_m": 0.00346226897331281,
+        "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+        "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+        "entry": {
+          "NN_confirmed_landing_used": false,
+          "actual_stop_seed_first_issue_s": 26.554999999999,
+          "actual_stop_seed_time_s": 26.549999999999002,
+          "arm_policy": "reconciled_unload",
+          "last_actually_issued_command_sha256": "1ba163b3ac961c499aed3280dc840003db6efae22edda28bf5567430d3128c5a",
+          "model_input": false,
+          "native_confirmation_before_brake": false,
+          "necessary_math_only": true,
+          "original_FIFO_screen": {
+            "actual_dynamic_safety_certified": false,
+            "actuator_command_authorized": false,
+            "constant_velocity_screen_only": true,
+            "failures": [],
+            "immutable_prefix_axis_samples": 72,
+            "queue_or_delay_modified": false,
+            "screen_pass": true
+          },
+          "original_first_arm_step_receipts": [
+            {
+              "FF_interval": [
+                -1.0,
+                1.0
+              ],
+              "axis": 0,
+              "effort_limit": 20.0,
+              "ff": 1.0,
+              "ff_objective": 1.3530456559637811,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  -0.17039754235844295,
+                  0.5305327651761522
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  -2.608000003262002,
+                  2.608000003262002
+                ],
+                "lower": 0.22182029900550843,
+                "rate_interval": [
+                  0.22182029900550843,
+                  0.22187029900550842
+                ],
+                "upper": 0.22187029900550842
+              },
+              "rate_interval": [
+                0.2218203240055084,
+                0.22187027400550843
+              ],
+              "raw_torque_0_20_60ms": [
+                1.6133908181975711,
+                1.9312190259543167,
+                2.5668754414678094
+              ],
+              "reference": 0.22187027400550843,
+              "reference_interval": [
+                0.2218203240055084,
+                0.22187027400550843
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.004995000000002081
+            },
+            {
+              "FF_interval": [
+                -1.0,
+                1.0
+              ],
+              "axis": 1,
+              "effort_limit": 20.0,
+              "ff": -0.18412176303897,
+              "ff_objective": -0.18412176303897,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  2.4501550380820496,
+                  3.169283890339021
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  0.01,
+                  3.129999816941817
+                ],
+                "lower": 2.499975,
+                "rate_interval": [
+                  2.499975,
+                  2.500025
+                ],
+                "upper": 2.500025
+              },
+              "rate_interval": [
+                2.499975025,
+                2.500024975
+              ],
+              "raw_torque_0_20_60ms": [
+                -15.46294576695105,
+                -15.477464896001534,
+                -15.506503154102477
+              ],
+              "reference": 2.500024975,
+              "reference_interval": [
+                2.499975025,
+                2.500024975
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.0049950000000187345
+            },
+            {
+              "FF_interval": [
+                -0.75,
+                0.75
+              ],
+              "axis": 2,
+              "effort_limit": 15.0,
+              "ff": 0.75,
+              "ff_objective": 1.0750006705136599,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  -1.9389500616681148,
+                  -1.6213634002726405
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  -2.9569998072658334,
+                  -0.01
+                ],
+                "lower": -1.8322586673736572,
+                "rate_interval": [
+                  -1.8322586673736572,
+                  -1.8322086673736573
+                ],
+                "upper": -1.8322086673736573
+              },
+              "rate_interval": [
+                -1.8322586423736573,
+                -1.8322086923736571
+              ],
+              "raw_torque_0_20_60ms": [
+                -4.960690456443381,
+                -4.429668093656038,
+                -3.3676233680813334
+              ],
+              "reference": -1.8322086923736571,
+              "reference_interval": [
+                -1.8322586423736573,
+                -1.8322086923736571
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.0049950000000187345
+            },
+            {
+              "FF_interval": [
+                -0.35000000000000003,
+                0.35000000000000003
+              ],
+              "axis": 3,
+              "effort_limit": 7.0,
+              "ff": -0.03831906073725122,
+              "ff_objective": -0.03831906073725122,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  1.2469860417723224,
+                  1.6668813789032786
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  -1.7349999521255413,
+                  1.7349999521255413
+                ],
+                "lower": 1.4472452741622925,
+                "rate_interval": [
+                  1.4472452741622925,
+                  1.4472952741622924
+                ],
+                "upper": 1.4472952741622924
+              },
+              "rate_interval": [
+                1.4472452991622924,
+                1.4472952491622926
+              ],
+              "raw_torque_0_20_60ms": [
+                -0.2875838922295765,
+                -0.28863052092001185,
+                -0.29072377830088925
+              ],
+              "reference": 1.4472952491622926,
+              "reference_interval": [
+                1.4472452991622924,
+                1.4472952491622926
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.0049950000000187345
+            },
+            {
+              "FF_interval": [
+                -0.25,
+                0.25
+              ],
+              "axis": 4,
+              "effort_limit": 5.0,
+              "ff": 0.07225425282932607,
+              "ff_objective": 0.07225425282932607,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  -0.2987348695590323,
+                  -0.00804716256557501
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  -1.209999954319697,
+                  1.209999954319697
+                ],
+                "lower": -0.18486600699424743,
+                "rate_interval": [
+                  -0.18486600699424743,
+                  -0.18481600699424744
+                ],
+                "upper": -0.18481600699424744
+              },
+              "rate_interval": [
+                -0.18486598199424745,
+                -0.18481603199424743
+              ],
+              "raw_torque_0_20_60ms": [
+                -0.8030660828601722,
+                -0.896189012925599,
+                -1.0824348730564526
+              ],
+              "reference": -0.18481603199424743,
+              "reference_interval": [
+                -0.18486598199424745,
+                -0.18481603199424743
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.004995000000002081
+            },
+            {
+              "FF_interval": [
+                -0.25,
+                0.25
+              ],
+              "axis": 5,
+              "effort_limit": 5.0,
+              "ff": 0.08229874823383021,
+              "ff_objective": 0.08229874823383021,
+              "original_native_motor_interval": {
+                "actual_q_dq_not_modified": true,
+                "actuator_command_authorized": false,
+                "effort_interval": [
+                  -1.4985299546120636,
+                  -1.0522473737378606
+                ],
+                "feasible": true,
+                "feedforward_and_target_velocity_accounted": true,
+                "geometry_contact_queue_or_physics_certified": false,
+                "inner_reference_interval": [
+                  -2.0843997629251034,
+                  2.0843997629251034
+                ],
+                "lower": -1.270473327064514,
+                "rate_interval": [
+                  -1.270473327064514,
+                  -1.2704233270645142
+                ],
+                "upper": -1.2704233270645142
+              },
+              "rate_interval": [
+                -1.2704733020645143,
+                -1.270423352064514
+              ],
+              "raw_torque_0_20_60ms": [
+                0.06213205095098832,
+                0.08691484512297079,
+                0.1364804334669313
+              ],
+              "reference": -1.270423352064514,
+              "reference_interval": [
+                -1.2704733020645143,
+                -1.270423352064514
+              ],
+              "unchanged_FF_slew_fraction": 0.05,
+              "unchanged_acceleration_limit": 1.0,
+              "unchanged_effort_reserve": 0.9,
+              "unchanged_inner_margin": 0.01,
+              "unchanged_speed_limit": 0.45,
+              "velocity": 0.0049950000000187345
+            }
+          ],
+          "original_goal_and_FIFO_not_modified": true,
+          "physics_steps": 0,
+          "reconciled_unload_binding": {
+            "actually_committed": 0,
+            "effort": [
+              20.0,
+              20.0,
+              15.0,
+              7.0,
+              5.0,
+              5.0
+            ],
+            "fixed_goal": [
+              0.2286721501069618,
+              2.8050206899162227,
+              -1.7483792250402863,
+              1.4554296387636305,
+              -0.168572427758129,
+              -1.2663171679288743
+            ],
+            "fixed_start": [
+              0.22184529900550842,
+              2.5,
+              -1.8322336673736572,
+              1.4472702741622925,
+              -0.18484100699424744,
+              -1.2704483270645142
+            ],
+            "kd": [
+              3.0,
+              2.0,
+              3.0,
+              3.0,
+              2.5,
+              1.0
+            ],
+            "kp": [
+              50.0,
+              50.0,
+              80.0,
+              30.0,
+              30.0,
+              20.0
+            ],
+            "limits": [
+              [
+                -2.3561999797821045,
+                2.3561999797821045
+              ],
+              [
+                0.15700006484985352,
+                2.982999801635742
+              ],
+              [
+                -2.8186497688293457,
+                -0.14835000038146973
+              ],
+              [
+                -1.5704998970031738,
+                1.5704998970031738
+              ],
+              [
+                -1.097999930381775,
+                1.097999930381775
+              ],
+              [
+                -1.8849596977233887,
+                1.8849596977233887
+              ]
+            ],
+            "max_proposals": 2001,
+            "model_input_allowed": false,
+            "original_actor_landing_stow_or_safety_gates_replaced": false,
+            "original_command_code_object_reused": true,
+            "original_command_source_sha256": "6156d3661dac24d441aa64649aae0f3a92f678d76d72ea39b979bae6958dbded",
+            "original_module_global_unchanged": true,
+            "private_only": true,
+            "proposals": 0,
+            "refusal": null,
+            "schema": "ainav-private-reconciled-unload-binding-v1",
+            "task_success_inferred": false
+          },
+          "reverse_leg_release": {
+            "confirmed_at_s": null,
+            "current_scale": 1.0,
+            "model_input_allowed": false,
+            "original_actor_input_history_and_native_action_mapping_retained": true,
+            "original_blend_source_sha256": "17f20f120a1a1c1bacfd4b3d4d91b8c6bf1e206563862b3885bb4fd4345d89ea",
+            "original_landing_dwell_WBC_stow_or_safety_gates_changed": false,
+            "original_ramp_s": 0.7,
+            "original_stop_command_source_sha256": "00ea9765f3c7f965762c754fd756817a35468917c48f66b9b994cc6940660e8e",
+            "policy_proposals": 0,
+            "private_only": true,
+            "schema": "ainav-native-reverse-leg-release-v1",
+            "seed_scale": 1.0,
+            "stable_owner_or_task_success_claimed": false
+          }
+        },
+        "event": "placement_arrival_original_brake_started",
+        "genuine_native_confirmation": false,
+        "model_input": false,
+        "native_drive_goal_error_m": 0.11606880214665347,
+        "native_goal_confirmed_separately_required": true,
+        "native_success_not_declared": true,
+        "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+        "placement_geometry_verified": true,
+        "protected_stow_completion_separately_required": true,
+        "public_XY_error_m": 0.008855114958241437,
+        "task_geometry_pass": true,
+        "time_s": 26.569999999999,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 2565,
+      "event": "placement_original_native_clock_confirmed",
+      "original_payload": {
+        "actual_box_linear_velocity_m_s": [
+          -2.95342730851557e-07,
+          1.8064434266319064e-06,
+          1.6215600677640267e-05
+        ],
+        "actual_box_position_m": [
+          2.635586889032418,
+          -0.011031462763954475,
+          0.09978332948080512
+        ],
+        "actual_box_rotation": [
+          [
+            0.9999997509486185,
+            -0.000705763880553037,
+            2.120604778639348e-07
+          ],
+          [
+            0.0007057638808275,
+            0.9999997509477998,
+            -1.2969917304641352e-06
+          ],
+          [
+            -2.111450551330687e-07,
+            1.297141072072381e-06,
+            0.999999999999136
+          ]
+        ],
+        "actual_signed_dock_gap_m": -0.03608064609319506,
+        "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+        "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+        "event": "placement_original_native_clock_confirmed",
+        "model_input": false,
+        "native_clock": {
+          "actual_last_native_sample_s": 27.20999999999887,
+          "actual_last_read_s": 27.20999999999887,
+          "actual_started_s": 15.090000000000959,
+          "caller_reads": 4058,
+          "failed": false,
+          "model_input": false,
+          "native_advances": 606,
+          "native_buffers_never_reset": true,
+          "native_contact_seen": true,
+          "native_duration_s": 0.5000000596046448,
+          "native_goal_actor_and_motor_queue_not_modified": true,
+          "native_predicate_sha256": "d3cf0468608e453fd33e78fb14e635b32d30fea37b859300cd5c33eefee0c61d",
+          "native_result": true,
+          "native_term_class_preserved": "PushSettled",
+          "original_hold_time_s": 0.5,
+          "original_step_dt_s": 0.02,
+          "schema": "ainav-native-settled-physical-clock-v1"
+        },
+        "native_drive_goal_error_m": 0.07522639119256935,
+        "native_goal_confirmed_separately_required": true,
+        "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+        "placement_geometry_verified": false,
+        "protected_stow_completion_separately_required": true,
+        "public_XY_error_m": 0.037257480345806164,
+        "task_geometry_pass": false,
+        "time_s": 27.20999999999887,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 2566,
+      "event": "original_leg_release_reverse_confirmed",
+      "original_payload": {
+        "event": "original_leg_release_reverse_confirmed",
+        "model_input": false,
+        "no_owner_or_task_success_declared": true,
+        "original_ramp_s": 0.7,
+        "seed_scale": 1.0,
+        "time_s": 27.20999999999887,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 2567,
+      "event": "placement_original_NN_confirmed_landing_promoted_without_reset",
+      "original_payload": {
+        "actual_box_linear_velocity_m_s": [
+          -2.95342730851557e-07,
+          1.8064434266319064e-06,
+          1.6215600677640267e-05
+        ],
+        "actual_box_position_m": [
+          2.635586889032418,
+          -0.011031462763954475,
+          0.09978332948080512
+        ],
+        "actual_box_rotation": [
+          [
+            0.9999997509486185,
+            -0.000705763880553037,
+            2.120604778639348e-07
+          ],
+          [
+            0.0007057638808275,
+            0.9999997509477998,
+            -1.2969917304641352e-06
+          ],
+          [
+            -2.111450551330687e-07,
+            1.297141072072381e-06,
+            0.999999999999136
+          ]
+        ],
+        "actual_signed_dock_gap_m": -0.03608064609319506,
+        "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+        "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+        "event": "placement_original_NN_confirmed_landing_promoted_without_reset",
+        "model_input": false,
+        "native_clock": {
+          "actual_last_native_sample_s": 27.20999999999887,
+          "actual_last_read_s": 27.20999999999887,
+          "actual_started_s": 15.090000000000959,
+          "caller_reads": 4060,
+          "failed": false,
+          "model_input": false,
+          "native_advances": 606,
+          "native_buffers_never_reset": true,
+          "native_contact_seen": true,
+          "native_duration_s": 0.5000000596046448,
+          "native_goal_actor_and_motor_queue_not_modified": true,
+          "native_predicate_sha256": "d3cf0468608e453fd33e78fb14e635b32d30fea37b859300cd5c33eefee0c61d",
+          "native_result": true,
+          "native_term_class_preserved": "PushSettled",
+          "original_hold_time_s": 0.5,
+          "original_step_dt_s": 0.02,
+          "schema": "ainav-native-settled-physical-clock-v1"
+        },
+        "native_drive_goal_error_m": 0.07522639119256935,
+        "native_goal_confirmed_separately_required": true,
+        "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+        "placement_geometry_verified": false,
+        "protected_stow_completion_separately_required": true,
+        "public_XY_error_m": 0.037257480345806164,
+        "task_geometry_pass": false,
+        "time_s": 27.20999999999887,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 3137,
+      "event": "V4_legacy_common_H_kernel_attempt",
+      "original_payload": {
+        "attempt": 1,
+        "event": "V4_legacy_common_H_kernel_attempt",
+        "model_input": false,
+        "new_successor_optimizer_call": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 3138,
+      "event": "V4_legacy_common_H_kernel_returned",
+      "original_payload": {
+        "actual_motor_change_or_task_gain_inferred": false,
+        "attempt": 1,
+        "event": "V4_legacy_common_H_kernel_returned",
+        "model_input": false,
+        "new_successor_optimizer_call": false,
+        "proposed_waypoint_path_changed": true,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    },
+    {
+      "sequence": 4710,
+      "event": "ainav_chain_hard_stop",
+      "original_payload": {
+        "actual_physical_tick": 9719,
+        "automatic_retry": false,
+        "error": "Original immutable public/native placement lost after stow",
+        "event": "ainav_chain_hard_stop",
+        "fixed_route_fallback": false,
+        "native_safety_handling_required": true,
+        "task_success_inferred": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      }
+    }
+  ],
+  "event_counts": {
+    "registered_cold_capture_constructed": 1,
+    "V4_cold_original_registered_terrain_ABI_installed_SOURCE_NOT_PUSH_qualified": 1,
+    "V4_two_factor_policy_bound_at_task_zero": 1,
+    "V4_E_actual_unchanged_rule_driver_assembled_NOT_task_success": 1,
+    "cold_capture_actual_sample": 448,
+    "cold_capture_actual_loaded_anchor_reference": 1,
+    "cold_capture_compact_transfer_started": 1,
+    "V4_actual_capture_to_original_execution_assembled": 1,
+    "V4_E_fixed_rule_selected": 1,
+    "skill_intent_selected": 1,
+    "skill_execution_judgment": 2,
+    "registered_common_query_prebound": 2,
+    "complex_private_constructor_query_bound": 2,
+    "intent_native_execution_bound": 2,
+    "execution_refinement_dispatch": 2,
+    "registered_compact_NAV_started": 1,
+    "registered_NAV_exact_session_constructed": 1,
+    "V4_selected_original_session_bound": 2,
+    "native_option_installed": 2,
+    "ainav_native_admitted": 2,
+    "registered_NAV_actual_actor_forward": 294,
+    "ainav_native_receipt": 3,
+    "registered_NAV_actual_goal_hold_then_arrival_capture": 1,
+    "intent_actual_native_outcome": 1,
+    "registered_common_PUSH_exact_session_constructed": 1,
+    "placement_actual_20ms_measurement": 1676,
+    "native_PUSH_settled_actual_clock_sample": 1675,
+    "body_reference_native_observation_proposed": 293,
+    "body_reference_native_observation_actually_committed": 284,
+    "placement_arrival_original_brake_started": 1,
+    "placement_original_native_clock_confirmed": 1,
+    "original_leg_release_reverse_confirmed": 1,
+    "placement_original_NN_confirmed_landing_promoted_without_reset": 1,
+    "V4_legacy_common_H_kernel_attempt": 1,
+    "V4_legacy_common_H_kernel_returned": 1,
+    "reach_selected_ground_confirmed_stow_path_choice": 1,
+    "ainav_chain_hard_stop": 1
+  },
+  "immutable_originals_sha256": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/encoder.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/result.json": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/claim.json": "6003b0104b1298fa931cbbb1fd34fad23b2e9477a16fe2597b9c4ad6621d34c4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/resource-lease.json": "0664cc085fc98bae1da32333115b29ef1de4f357cb5a148f0bfc4f2dac710bb6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/ledger.json": "34f4eb585c04802d802f1cca77c29775b1d1f9a8717d5435aa0f4d8fbb64a01a",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/video-encoding-result.json": "f9086250684278e186605eadfe8f6312ef4742005b204ee2c0cf607c8fbe443d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/E-direct-live-1x.mp4": "172e2878f3496bdcf04a88f3c3e49bde6d669ed5ecc01281b3b0475392dddad9",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/intent-observation-0001.json": "aed0fb2f1004a04bf046897b5b2eb2e6a5a441ab0de4b518eb11f5e8baecdb6f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/intent-observation-0002.json": "abd86e6b7088a586b5b3c647778849688e566f29e0c161acef643477b99b801f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/events.jsonl": "3bf039ed11c0bc9fca435f6fcdba152d1b7758ddb759d1d00249fdde07a3630d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/progress.jsonl": "141457bfcdaddf62b11e744e899f775af2acd606d76d370cd178d885e4c7acec",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/closure.json": "61c0a6521d5b7b7dae0cc1231858650d331d15e44a60073837f3b8f9cdd91e2d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/metadata.json": "d09412289f47ff20bac75c6946adec795a15504110a81965cafc0d362165fb08",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000006.npz": "d99f406ba965b169b8d14d76ab124f75f4f4c48ec3967febef768f77bda751fc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000015.npz": "14810d8517e64f31c17f879958b36d060d7a02ccac107ec03cafaead667fc575",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000024.npz": "9fcd46d2b75938c9d20cae053d960b9632ec3543bd62e264bd7b8de6dd82c642",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000026.npz": "d7b863f96d7402c2d6471bae839f2d7c5b27e2186fab0b1bf8f6eb241633208f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000018.npz": "618772ac4e91f6801e003c004a9a8b83d51cd358981094ff344cb210d3c34737",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000022.npz": "40d11586075ad3a37874ff3617a860d010e60152dd496c7119bd491fc6e89412",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000027.npz": "bf5cbff6bdc87ffff6f157e5f93a006869be488534f0e647187eb64ab6b860d7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000002.npz": "205d3a1e0c3016c3a9d788a548a3fccee58269b193dd1b963666a6c622e85f07",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000007.npz": "524fc002f8b692bd1fbc7abe699b4a41410b5bc0057b7ddbc5cf43a7be2b42cc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000009.npz": "6575cc94666faec3f207b760d367686a46f4c81c9cae9f4907bdc2dcbc1fbf22",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000013.npz": "93819be26a7dbd6ea52a6161eac2a7d7dfcf63cc64611c5e9e9587cac6278ea7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000016.npz": "c36c02eea30e96fd49846454e446af3e4e9e21b5178d029d10b315498719373e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000030.npz": "a825c4e07054d5509a9e06ef722e5435be038c74fda9927101e92a05a1cad387",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000004.npz": "d7e9230f325dc81d71c58252b725d5516222ac2317698e87a7b3094829c33764",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000010.npz": "ccfbecc5dd9085385a8cd3cfe6853cc0bbff8247d100711f645ecd9dadca800c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000012.npz": "4d0e027e91e80869c587f98ce21ff1dd4b125109471d7eab46aaa5872d77bd7b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000020.npz": "879b9f871d68a834f621ef32692c6914e56d9b7ef61070a5926ae405f005f706",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000023.npz": "01ea2c23bfcc7b466b7160e23f938d27ed33e81137daa92df8252a4cb0f49d22",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000028.npz": "03f50a3ad61914f75a7e81ae0696c5c5a38b78267c452f0a0ccd3c3c7d0eaa26",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000011.npz": "1091924172b9a15dfd9ed49472567e25928cdc2bb4d9a5ee264c701a5d5c2bba",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000017.npz": "daf410a7db2f878d48b02911635daa21c83307e10b9f42adcfd0194eb9554f73",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000019.npz": "e257f60a7bb75512fb74285c22448f7505a6e5f231f7a367ca18d78d0776bcb3",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000005.npz": "4f6fa9d9d932c115d27cf4420642563fb91fd8f9f997a1dda26f5923e11799b6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000021.npz": "1f12f4178d2ffdbfe7a86d4cec048349b71a4860456424ff1a11d52dcb188a3b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000025.npz": "e805e7feadcf33021f7503233a78393570f432515d4ed1afc2848fbffe35d0ca",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000029.npz": "c9d1c1e422d9e502f4836c35dce674c301545060b33fde9067edb0ec59372ea5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000001.npz": "23d081d85de4e4bebecb9c09d89b689be896e3e35b578e8bb4b991d00a8f73b0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000000.npz": "ae2b9ad7cc9b1b89397a39fa1f593109d7da39c4442427c26dd35cce4fe28fe7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000003.npz": "83410b48eff64e5d9aa7d4c4ec2f623b42c3e3e28320dd5d53494571947967b8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000008.npz": "487fb9d741c346c992da53b6a046d54f9e44a249edcd688066ec6bff264d8fef",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/direct-third-view/raw-rgb/000014.npz": "62cf8bc54b2f325678827028ed78ba6f5a06575ccb8f7d424a109181639b8ed0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000001/calibration.json": "9ed7ee4108002b855e239550368fc5197d0c65f407e5e2254c67b23e08dd4717",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000001/depth_m.npy": "0df397169e661deb7452f2660ef445ffa0f9173aca9ce74f0b12438dcf4089a1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000001/observation.json": "aed0fb2f1004a04bf046897b5b2eb2e6a5a441ab0de4b518eb11f5e8baecdb6f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000001/rgb.png": "dda873f51ad44cb39b3c79fabc5d1d777890a6467b3a2b113ff60d2982812505",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000002/calibration.json": "abe9a116d0f60647dbe86c357d1c907b783ed9b97cbb0fa7a6fbfd53db30120c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000002/depth_m.npy": "e2e92ad174bd71b1d94c3e39add7aaebfbaac51baae56779c8cc3b772a9a0447",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000002/observation.json": "abd86e6b7088a586b5b3c647778849688e566f29e0c161acef643477b99b801f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/query-observations/frame-000002/rgb.png": "862ace8317e782c9f052b26f0c70197f330f1e784df19eb632c0007a7c551354",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/control-boundaries.jsonl": "0867e665a4c1fbc242edb609d25c5ccb97dccf7aea5ccbd2cf9c858ef6132bb0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/episode.json": "7e216b82b9c877426d8be60841f80839029c6314dee71383ebaeeeb4dc7c89ad",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/index.json": "328b6d6de9391eadb141f725608602222a1c13c7981a68e0c9922872cb06b092",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/private-catalog.jsonl": "babcb732ac36261e1b15263b0fef1feddb870d00ea8180913c6cd9cd443f62d4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/closure.json": "2181c11a81d705c4d58121996c5c8a654771830ffa92485c8e72da3c96504895",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000023.npz": "9f64d83ac8aeacf36a36ed032f3986c3e3e341b559d9c519a691b388827e1819",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000027.npz": "1597e13d5ba1d5875edb5918957a071e7a6105150ef40458d3b4e43a177784f6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000029.npz": "b552969a24ad21747fbf3421f07feef5e754814cf371272752352320077b6eef",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000033.npz": "9f5c45e7447644314f578849ccefc7a86b738c484995ee47b67e6dd414a132f6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000043.npz": "3b6e9764848e56e382a9f8e5d0df4127bb0cbb4e64e1e792b13285a4441aa3fa",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000004.npz": "8f38d1e444a41ec34963ef05d47d7684e21123eb4bff820d0e0e70abd429eb10",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000011.npz": "f7b32daf619cbb72b97a6d372f485590a110c1c1242f3da39e38844dd8199b05",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000013.npz": "f4c0ee164679368d256364ad9f3e60e4a9aa6f1c6d1cacf875a03630c8fb735e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000020.npz": "280402a93c1356554a4f8f8ecfa72ce2485d1b3170fdf3c2d06aaafc8c458d2f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000022.npz": "862a22516b03a500f949863c89ebdb3be6b3e751ebbb202e93a6fb68ae3996de",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000025.npz": "506b693c0f2fcf3810b9f36af4dfb4429b4eb3427afce41ab26289956ac8bcc7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000031.npz": "e2ee06b4f8d6695c7c3d85215178781b2184c9dda4e2d47a1509d902bb094d58",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000034.npz": "6df168440e3533cb20768b68204f4dcf8eae44ff3640d775b9b637088486f098",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000045.npz": "35ad28747a2fc393f9d6a64f6260838a49383af36b30373bd35570f3a5c4679b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000046.npz": "4157ce2a03298bd1b7182553a019d95c566dcd309ef71815c49cdb20e1f2fa05",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000000.npz": "d852610b3c99fa73406f68159afd51c74809f936698bb6f522022e9758ffb420",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000014.npz": "c931b570836c5b4027ea8c39a57477d14e8feb4ef5be42ae7c6327b865e7e4b5",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000032.npz": "b0ec2a4b6bde118daab077746d373e71ac33fb6713e3e7b6db3b5a3c4fbd553f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000037.npz": "9f8b3dbdcf7a31c737fbbe0867bce0cc7bc2182f53290cc883202556a09d0711",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000042.npz": "62ab3f814a94780147c35745a2e220e110db6a82b9e9836742314606eae4e96b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000016.npz": "95558a1131498c326088db42abc612d842a9d44440d8e65f9c1b4c5055e041e1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000021.npz": "8fd0adcff2719f54a12879e7c8d63d067fdc3e56e3a19e99eacfb0cf64e3999b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000028.npz": "55a8f35dde28391ce1d4de3c8ff8bf827ad61b4fc4c6e09a54b0c76a1c79eb6d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000038.npz": "77668564feddfe57d28f2371f8dbe6bb2452fa739a2faedf4aa7ea2bcf062ab7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000039.npz": "a2706d0d497e8d1ce5b190b3e549830f20b156cb08cf9979668c7faae41dfc5c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000040.npz": "8788560066ca586b753da97ada2c5b5a3917f48aa17a9ab6f6d136e9cc0ef04f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000041.npz": "045e19c0e8090879c350fa69e1d3c51a73fec87ab5ce036ebd96fd9cd70ff666",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000044.npz": "a608ec089bffa9e0cab09b52889fa0497abf84069fe21f25b297fbd11822e0fa",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000006.npz": "7e1a0e9ec06af99234c9515927d3d38f0ace9ef11ce689f6b331aa51e8a227d3",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000010.npz": "84a4388bf819678e4167d3bdaea72a536a7a72331acdfdbafe98b8397e62c971",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000019.npz": "35d129d8ecb160edffdf22ca5a5ff44679355c32a6b52ba7391fc4a0bda9661f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz": "cf2e1cb808344d1ac45e4ea0ee1c1df0513705571d3699f4b6ae94e42251b0b2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000036.npz": "e789b1758a5c14fa21fbe2462c901e599f7e982c51fb55979b96dc19fc5c80b9",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000001.npz": "c8e7e1e3aa934b982b0f7b909427db87755af77ef5d75439db29e8e384f4af98",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000002.npz": "6d545ac1abb821eb7bfb9941d7ff9e04f3aa0afd91b12fc153922fcda7a03b8a",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000003.npz": "d31a30d6c2e3170b16a5e04f91af5a3a67d602c114746d6cdde0ab0336e157ba",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000009.npz": "9315c974472f96cc308bfd01f479d63bc27899eee727d6b0b8717f69a2a749dd",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000017.npz": "de9f9db5d68d5b07d8e0d551f5398ba17cf75a28c5456bad5d9421c12864bf3b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000024.npz": "dd587380de2621c5c6232478ec197afb2987eaf4ef81b9998f1862f382cee2c6",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000005.npz": "a0335b094ae87115fad4d11859549c87f92da4453eb88b949da3c8a259c68094",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000007.npz": "3a028868b9b09a32bf8558973504fa82fd76331c164151944c04bedb8492f8e1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000008.npz": "9ed67bf0532f3b4ef25882ec0a4f948952d8b3b268d02f6ca6a95d053a419b69",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000012.npz": "4f481aee4cc2ff167d235431eeb0d34fbcfaa7d15bf1c6e4e59df2b999f911f2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000015.npz": "0048f45a4c8554e6e6086e0fa04010b55fbdb7482d8a0bdc9aad097b6f881755",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000030.npz": "51f7816c6be329fa3c5f41991d854e69da597e13735ee93bda62975379296c1b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000048.npz": "2d0c50930aaaa243d3f16b539d8e988cd9b5735ae839a65a0303ba5dff40145f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000018.npz": "54cb91c7a2ff3de49c5861c58edc3fc192c14a2c87f63062c146286edb2d8f45",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000035.npz": "4594b447c8c507cd7086470944da5080f0e397ca8a91926416b848733fc120dc",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000047.npz": "697d69219ae31d468a30a39f4adeaa34adaa0f93c1e19bce2e73fde71f4aca12",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000000.npz": "27a990f7f5f824eb150fe2a4e2be68cceeae870f0ada8fe31ff34562f0c20fab",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000002.npz": "50da0112e706510230c0b21d4c039f60a987b05985b860c885254ab4d90a3838",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000005.npz": "c546c483b1288c996bafe37508f543552bf2f1c82e09ca097254e9094f5b99e1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000009.npz": "f4c39fdd3246d0f5b0056f3e37f419ef2f96a9a61efe82a622782100d9908aee",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000003.npz": "c8a25728cb44906f87cc096a16389adcbc56b84f0a82962117eecdc13e984a97",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000007.npz": "1b26a669205a40f5e4fc7f65502385cfc65a51d7613db5a5e30c936a1e4d9187",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000011.npz": "38193515f95d7fd0425bf9a2c33f3a5f4dab1666e7def2f61736c23f268fe052",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000015.npz": "1d98aacaaa20986d57c4ff7059bd76baf2b75a3e472a54d25239bf042718d0fe",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000001.npz": "e0f792b9ae2f43e00d4700ca92f8a210580f61e72bddfabf788b24e02f51842d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000004.npz": "e53d3da5aee65d6be52f5c6803b69e0928041935a0ada5cbdd130ef7d7325186",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000008.npz": "39380def7e630db7ae690732717a72645318f084b1f15fb44abafbd06da4818b",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000012.npz": "c2d2b06227b3f604ff7ca9d45bf6748636f5892851bf13d7cfaf2946d45ec10c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000013.npz": "4f665e41948345fa1931eb9b4cd6a50d7bfb05ec2313913d430ffebd239d3577",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000006.npz": "a9e5451038da95c5ae99f9ff4084bf29a698e4946c482b7549201142297373f8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000010.npz": "ec6b1d7b706e03385db4c93912705fc858531491fb8094f4a8df8b3debdb40a2",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/visual/000014.npz": "067f9be71fac3de7a574719eb82dad24da1678c6159521837554023ff2746ecb",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/camera-1.png": "50b12b45e07de7e1ff4c991b67bdd0f98e284384dfb7d39dc8716cba66c62922",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/resource-lease.json": "5e95419ec5c055e0752f4199b102c4705843a67637e276cd5fc955a1fadf349c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/camera-0.png": "e36abdfcd6b865b27d99346bf5266f895916d17af09bf1119226c87a6fccd578",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/claim.json": "9e952c11ffaef666dec11b72395f8e06248b1323d164868af53a7be8e87a72d9",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/events.jsonl": "3aafbfdb52f08bf72b00b8ebba451c6f4f4c1366909c35770e3f22aa113f7c78",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/ledger.json": "109a1c8d8e29e4c6e037c28e4d9660f9b65361607898e73f9e244107d8e6011e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/result.json": "ea6efba2201940dbe6c6cff6333711434ed717350086389f5bf25ea2316bebbf",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/episode/closure.json": "95e87a8c19abcfb1e75d1f942caf506cf37c2f9154d023f543a57eb7590cb41d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/episode/control-boundaries.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/episode/episode.json": "840834d7953ed82c655c4e9ae5020dd258d6af2259dba250d25a5c910c6ea494",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/episode/index.json": "eda00c1024710c86558d6b126ec876ab031ae869e2afd456a8eb55acb146d0e8",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/episode/private-catalog.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "closed_scope_and_H_unchanged": true,
+  "CPU_readonly_audit_wall_s": 13.979637454962358,
+  "task_success_not_inferred_from_cold_checks": true,
+  "reason_for_drift_not_determined_by_this_readonly_timeline": true,
+  "original_FIFO_PD_and_placement_thresholds_not_changed": true,
+  "no_native_Actor_Runtime_renderer_WM_or_physics_imports": true,
+  "no_simulation_or_replay_or_recovery": true,
+  "model_input_allowed": false,
+  "training_allowed": false
+}

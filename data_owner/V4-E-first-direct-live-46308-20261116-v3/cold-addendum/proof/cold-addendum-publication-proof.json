@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-E59-CLOSED-STREAM-COLD-PASS-NNSTOP-FIRST-PLACEMENT-LOSS-20261116-v1/release.json",
+  "release_sha256": "d7bd4be94aeab1662c0b973ec358971aefee7b422abd01711ae2a8268d38faba",
+  "all_files_SHA_match": true,
+  "no_closed_runtime_source_H_or_old_release_mutation": true
+}
