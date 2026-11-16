@@ -1,0 +1,22 @@
+{
+  "role": "ONE_DEV_PREREGISTERED_EARLY_ORIGINAL_BRAKE_HYPOTHESIS_NOT_NATIVE_QUALIFIED",
+  "parent_cloud_commit": "4eb15564321eb8cc9c542e7b34bd5d46b7094e98",
+  "policy": "DEV_PRE_ARRIVAL_ORIGINAL_BRAKE_40MM_20261116_v1",
+  "fixed_margin_m": 0.04,
+  "purpose": "Test whether starting the same original brake before strict docking goal crossing can retain actual final placement",
+  "DEV_informed_by_closed_E59_failure": true,
+  "not_unseen_or_method_comparison": true,
+  "no_sweep_or_margin_adaptation": true,
+  "max_new_scope": 1,
+  "own_zero_max": 1,
+  "main_max": 1,
+  "automatic_retry": false,
+  "Data_only_physical_owner": true,
+  "dispatch": false,
+  "user_environment_adjustment_authorized": true,
+  "economic_reapproval_required": false,
+  "strict_original_completion": true,
+  "thresholds_actor_FIFO_Goals_NN_STOW_FF_QP_12N_4s_stop_unchanged": true,
+  "entry_predicate_is_NOT_a_stopping_distance_model_or_success_proof": true,
+  "does_NOT_claim_physics_fix": true
+}

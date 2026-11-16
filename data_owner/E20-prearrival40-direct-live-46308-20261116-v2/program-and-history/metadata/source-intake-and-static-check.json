@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-16T18:21:19.767257+08:00",
+  "source_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "source_package_sha256": "472bf93bf1189bb1771f186a5c28ad6afb80eb5d0dd3d299c8be2257d17dd5cf",
+  "source_members": 30,
+  "all_source_pins_match": true,
+  "AST_and_protocol_keys_pass": true,
+  "all_old_v1_frozen_files_untouched": true,
+  "same_margin_rule_scene_Goals_safety_pins": true,
+  "total40mm_main_max1_enforced": true,
+  "old_v1_main_count": 0,
+  "no_new_dispatch_yet": true
+}

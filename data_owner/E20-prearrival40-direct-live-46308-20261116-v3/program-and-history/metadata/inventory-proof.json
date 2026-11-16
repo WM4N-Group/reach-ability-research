@@ -1,0 +1,14 @@
+{
+  "program_sha256": "39ef86d5184e5edd1898ec7b05abd4db638c78510eb7a373e2d11177c2ef1652",
+  "authority_sha256": "aa07c47f4130466f958198558224940b93df6a3b4e41af27cfa291f7269d72b9",
+  "members": 491,
+  "resources": {
+    "at": "2026-11-16T18:33:51.917764+08:00",
+    "owned_bytes": 26421585408,
+    "limit_bytes": 42949672960,
+    "provider_quota_unknown": true,
+    "GPU0_free_MiB": 24080,
+    "other_Data_workers0": true,
+    "canonical_original_inodes_free_not_new_lease": true
+  }
+}

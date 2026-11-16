@@ -1,0 +1,7 @@
+{
+  "new_model_sha256": "ed6267bbaa7fa0e0dda0906f5e55f4abbf2c129d1b9ee5ffa0f17e54490934b1",
+  "protocol_sha256": "583620eb5f1dfc4276d5fa90533509c41302d821e2f59ed76069c80ac9faee3f",
+  "model_from_same_new_static_compile": true,
+  "old_v1_not_reopened": true,
+  "not_task_success": true
+}

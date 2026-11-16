@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-16T18:22:40.644977+08:00",
+  "commit": "e2bc31e875ccd8cbe0d0ac5bb9214b704af99ff0",
+  "parent": "a635a34acec9a6e6a7aa148d9955e10407dd6dc7",
+  "local_GitHub_remote_verified_clean": true,
+  "remote": {
+    "commit": "e2bc31e875ccd8cbe0d0ac5bb9214b704af99ff0",
+    "all_files_SHA_match": true,
+    "clean": true,
+    "no_native_or_H_mutation": true
+  },
+  "metadata_only_transport_repair": true,
+  "original_failure": "Missing remote manifest parent before D.mkdir; Git/GitHub commit already completed; only transport resumed, no new commit or physics",
+  "files": {
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/proof/current-H-recovery-note-CAS-proof.json": "fd272311210084686cdf18a2480c3fbd0c999be967ac88100dc8dce14d3edf52",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/proof/recovered-metadata-publication-proof.json": "82c38bd9a0cf94cea6bfffa2191bb2a78f5dd15e93b1bbbe57491e8d60905095",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/proof/recovery-Data-only-status-proof.json": "1bdfba4a0e29029456cf1b7c770dc7305d9a12894bf0e5b7df675df9ada7e9c7",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/proof/shared-Data-current-compaction-proof.json": "5a0412c03d268630226b9e3341c1805d7fd103bf32fe3f98768e59fef45e687c",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/release/README_CN.md": "3d138d1a873bc0efa8ebb9de9a83fc47b245ae829595ab6ab1098f15ac8930cb",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/release/original/accounting/ledger.json": "5825aa3d97054de9c4796144bb7ff7de2a6d4d18ebbf3634acd4c34187f1abd1",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/release/original/main/result.json": "9a879643f89143078dd1fd55f468f16b27ecfd68329faf28b71c1f41088bffc5",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/release/recovery-assessment.json": "10ffdd2faa32b1c1331e1295d5cb76c4b3c338a9ea705b9ec6faf150d1699311",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/release/release.json": "dce8b55447c3fa3d8ff289ac231ea643c320e1ffa08f8e64db2abca8f316b0f2",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/scripts/append_current_H_recovery_note.py": "d21da2fd09a7e2122db88b689d678f4ce7fe5207d7ccc3803f9e20fba0e061c5",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/scripts/publish_recovered_metadata.py": "dd848c4cedbc618388dfd2551ba7bbf19f017ee8391fda7afcf7000c465664ec",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/scripts/sync_recovery_code.py": "10911dc13f66077aa72a1b5c323aaa5c0fb2b988d0b2fba662e7a1a448b26a7b",
+    "data_owner/old46174-left-need-based-readonly-20261116-v1/recovery/scripts/update_recovery_Data_status.py": "30100822c71fc0a9b71334b4db28b8d8c26e0fd4e34e9b0db3851e75148e4c28"
+  }
+}

@@ -20,7 +20,7 @@ git('add','-f','--',*selected);assert set(git('diff','--cached','--name-only').s
 payload=dict(parent=parent,commit=commit,bundle=base64.b64encode(bundle.read_bytes()).decode(),sha256=sha(bundle.read_bytes()),pins={rel:sha(p.read_bytes())for rel,p in selected.items()});code=r'''
 from pathlib import Path
 import json,sys,subprocess,base64,hashlib
-x=json.load(sys.stdin);R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');G=R/'code/reach-ability-research';D=R/'workspace/manifests/old46174-left-need-based-readonly-20261116-v1/old-left-recovery-code-custody';assert not D.exists();D.mkdir();bundle=D/'old-left-recovery-code.bundle';raw=base64.b64decode(x['bundle']);assert hashlib.sha256(raw).hexdigest()==x['sha256']
+x=json.load(sys.stdin);R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');G=R/'code/reach-ability-research';D=R/'workspace/manifests/old46174-left-need-based-readonly-20261116-v1/old-left-recovery-code-custody';assert not D.exists();D.mkdir(parents=True);bundle=D/'old-left-recovery-code.bundle';raw=base64.b64decode(x['bundle']);assert hashlib.sha256(raw).hexdigest()==x['sha256']
 with bundle.open('xb')as f:f.write(raw)
 def git(*args):
  r=subprocess.run(['git',*args],cwd=G,capture_output=True,text=True,timeout=120);assert r.returncode==0,(args,r.stderr);return r.stdout.strip()

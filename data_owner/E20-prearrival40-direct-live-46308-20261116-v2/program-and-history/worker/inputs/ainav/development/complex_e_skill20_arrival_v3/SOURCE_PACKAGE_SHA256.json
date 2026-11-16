@@ -1,0 +1,57 @@
+{
+  "role": "DEV_PRE_ARRIVAL_E20_SOURCE_NOT_NATIVE_FIX_OR_DISPATCH",
+  "parent_cloud_commit": "4eb15564321eb8cc9c542e7b34bd5d46b7094e98",
+  "files_sha256": {
+    "ENTRY_POLICY_REVISION.json": "41e4b54beb3787f356f3b44b47c2b1cdbd5e91dc0c15cc61c02d84f17dd29c5a",
+    "ENVIRONMENT_REVISION.json": "000d3b7ec8c3ad32ffbcd6838ceba8a38f1bdfac5faef29a823ee34eaff61254",
+    "PARENT_SOURCE59_INVENTORY.json": "98fa1252a0d0ca8d12cf3890d2980ba6844bdab610bfcd84943d460613991bc0",
+    "README_CN.md": "263423d935dfb65f14c4da85bcf2cd7cd16cd4f048b5b2b172c9a5f19eaf2d46",
+    "STATIC_SPEC_PALETTE_INTERFACE_REVISION.json": "0cc9aa40db081a08b540d4b20de0289dc14b519bedc3df4cf8084651a9033c32",
+    "capability_boundary.py": "9d1ce7652aa541562fe0a38431c679f92d1975ec574a0ca93bc21ca27d07fc17",
+    "climb_nav_adapter.py": "1f09915aed6c950706c4f45bbef9bfc15e669a5a61bb6ba4283064271fdc820c",
+    "climb_nav_source.py": "c888ef67e392ac20c3ec3ec1a9dae39149195e02f775c713b5e12de3f33860e0",
+    "destination_climb.py": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
+    "e_entry.py": "71910a8f3c4b983003cab35cc3009bed9f28a406d490775f679667158301a29c",
+    "elevated_terminal.py": "fcc375fe8fa4dd056afb057ffedd153a52b466bc13bb3ae000f86cea62fb387c",
+    "execution_entry.py": "7bf7a07d868c18894256fa099800d0a89c589eaef165406741c453fe32582c22",
+    "factor_scope.py": "9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424",
+    "goal_support.py": "1243b21a72c714df2e77bc51260ae5f2557acfcac209c482237b8bdd085d546f",
+    "live_driver.py": "93569aee1d3b95c3eb26f73e3c72b01c0ad9fc4ac62bd83a3b61fdc77ecf1346",
+    "native_entry.py": "75de8a5d86968b733b90b0fdcdcba687a17214f1593a197ab98d8647c110a4a6",
+    "parallel_alias_guard.py": "8539c4b6642bf1138543cdbf16a3e8a997c90a3e74d68c309b2b886685bc53d9",
+    "pre_arrival_brake.py": "2ccafc6493126935f226c0e32c28249dbf2eb9e3f73625847204608d9253094c",
+    "public_candidates.py": "e7ed23d70741a7c96429507a84f5c543583bb890a2ae901cab0acc8824f70905",
+    "rule_baseline.py": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+    "runtime_terrain.py": "06f014af8298935d2dd405b5025a477dd960c55511da13368e38eb99338d123b",
+    "scene.json": "08a260a4bda6de75e1f0012e12a4a3a04a5c682b0534f785a7b504af4a666381",
+    "task_factory.py": "d6fcd7836172ad340d85c180b33f6e2a1aa3fb74bd76d64ef0181e5c605a4ee0",
+    "task_terminal.py": "b9c92f6db696d9d5dd74466c5504b82e181fef85d7f404586cafa86872d815df",
+    "tests/test_asset_spec_palette.py": "d07419f1a2a5502ee7eb0be296d14e542df1fcf2f7f7b5736d4188856c7bfdf8",
+    "tests/test_e_entry.py": "b47c642d82217a858afc2d46f33587590ea296c1e5d1c4b806ebf2e3b1b9a0c3",
+    "tests/test_parallel_alias_guard.py": "7cf572c915abb9dbeec31516b865f05983172c5b123a80ab5c62d2a7a0963a2a",
+    "tests/test_pre_arrival_brake.py": "e177f8f5ba35ae47bc6f1a08c637d640e8ef5d8a418bebb341eaab9f73f6d555",
+    "tests/test_skill20_environment.py": "8b2381b44ba44cab91814810ac387f542dfadd8251215aad2e47ca4bb3cf1aa8",
+    "v4_native_asset.py": "ca06a8e044b02904ce2dc718d51d0a24b77c328e9c0a6801bc7ae937c808aa66"
+  },
+  "source_members": 30,
+  "scene_sha256": "08a260a4bda6de75e1f0012e12a4a3a04a5c682b0534f785a7b504af4a666381",
+  "rule_sha256": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
+  "changed_parent_executable": [
+    "task_factory.py"
+  ],
+  "new_executable": [
+    "pre_arrival_brake.py"
+  ],
+  "actual_native_calls": 0,
+  "evaluation_ready": false,
+  "holdout": 0,
+  "corrected_constructor_ABI_from_b22": {
+    "actual_pristine_phase": "startup",
+    "index": -1,
+    "session_entered": false,
+    "actual_SDK_machine_source_sha256": "703c701d92c8adb06369d6775307c8162a0f8688af6e4ac4fa65d45828aa1b9e",
+    "before_native_calls": true
+  },
+  "static_interface_revision_parent": "5a1a92b153a23a91a5ec79ef4355f36af2d3fe51",
+  "static_palette_current_handle_fix_not_native_qualified": true
+}

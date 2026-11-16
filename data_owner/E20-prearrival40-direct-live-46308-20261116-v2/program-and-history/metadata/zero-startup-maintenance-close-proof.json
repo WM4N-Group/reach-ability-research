@@ -1,0 +1,56 @@
+{
+  "note": {
+    "at": "2026-11-16T18:30:32.218661+08:00",
+    "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v2",
+    "program_sha256": "738ef31e8c0313e1a63e269baddb609d8e46f62ade5ca05c5acd2b06b2a454b9",
+    "source_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+    "error": "Data deployment omitted original private_catalog_boundary.py; import failed before native try/lease/Runtime",
+    "zero_dispatches_consumed": 1,
+    "main_dispatches": 0,
+    "Runtime_calls": 0,
+    "Actor_forwards": 0,
+    "task_steps": 0,
+    "aux_sim_s": 0.0,
+    "original_worker_wall_s": null,
+    "original_peak_RSS_bytes": null,
+    "original_result_and_ledger_missing": true,
+    "usage_partial_known_not_free_zero": true,
+    "original_exit": {
+      "exit_code": 1,
+      "at": "2026-11-16T18:26:05.950949+08:00"
+    },
+    "original_child": {
+      "PID": 247074,
+      "at": "2026-11-16T18:26:04.621620+08:00"
+    },
+    "original_claim": {
+      "at": "2026-11-16T18:26:05.834793+08:00",
+      "PID": 247074,
+      "scope": "data-46308-E20-prearrival40-direct-live-20261116-v2",
+      "phase": "zero",
+      "program_sha256": "738ef31e8c0313e1a63e269baddb609d8e46f62ade5ca05c5acd2b06b2a454b9"
+    },
+    "original_stderr": "Traceback (most recent call last):\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v2/worker.py\", line 107, in <module>\n    else:sys.exit(run(a.program_sha256,a.phase))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v2/worker.py\", line 32, in run\n    from private_catalog_boundary import PrivateCatalogBoundaryWriter\nModuleNotFoundError: No module named 'private_catalog_boundary'\n",
+    "static_asset_compile_pass_not_invalidated": true,
+    "static_compile_wall_s": 11.758566817035899,
+    "canonical_locks": [
+      {
+        "kind": "physics",
+        "device": 51,
+        "inode": 3428729629,
+        "free": true
+      },
+      {
+        "kind": "sdk",
+        "device": 51,
+        "inode": 3428729630,
+        "free": true
+      }
+    ],
+    "no_source_or_old_result_mutation": true,
+    "no_retry": true
+  },
+  "before_H_sha256": "83274a75d0eaf29cfee60ee7a8641870da5eba4557e7eb1ab35ed493fbb8bac7",
+  "after_H_sha256": "322dbc44a14a6cb2f959ef84049e244c96ef881372618aab4ea9a7927ac0715c",
+  "all_other_fields_unchanged": true
+}

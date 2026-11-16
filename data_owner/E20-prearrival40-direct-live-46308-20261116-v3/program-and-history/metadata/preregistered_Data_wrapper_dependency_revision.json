@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-16T18:32:01.912943+08:00",
+  "question": "Correct missing original recorder privacy helper and preflight all late local imports before own-zero; no dynamics or policy change",
+  "source_commit": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "reuse_only_immutable_new_E20_static_MJB": "ed6267bbaa7fa0e0dda0906f5e55f4abbf2c129d1b9ee5ffa0f17e54490934b1",
+  "new_static_compiles": 0,
+  "old_v2_scope_closed_not_retried": true,
+  "old_v2_zero_dispatch1_Runtime0_and_unknown_wall_preserved": true,
+  "new_program_own_zero_max1": true,
+  "total40mm_main_max1": true,
+  "original_private_boundary_helper_pin": "7c78614689400f18a4439f593784e54c489e555f9a1cf61371a6c1770b0d06fb",
+  "all_AST_and_literal_protocol_keys_checked": true,
+  "Rule_scene_margin_Actor_success_safety_unchanged": true,
+  "no_new_training_or_model_calls": true
+}
