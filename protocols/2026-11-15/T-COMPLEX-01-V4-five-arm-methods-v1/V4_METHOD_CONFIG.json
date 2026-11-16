@@ -271,5 +271,13 @@
     "sha256": "7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb",
     "status": "PROPOSED_OPT_IN_AUXILIARY_CODE_NOT_SOURCE_BOUND_NOT_NATIVE_QUALIFIED_OR_DISPATCHED",
     "changes_current_runtime_protocol": false
+  },
+  "declared_palette_anchor_association_proposal": {
+    "path": "protocols/2026-11-16/V4-declared-palette-WM-association-proposal-v1/PROPOSAL.json",
+    "sha256": "b9e586c44e9984390eb979f34f4880398705258a54e5c2e78918729634495544",
+    "status": "DEFAULT_OFF_CONDITIONAL_PUBLIC_PRIOR_CODE_NOT_ADOPTED_NOT_NATIVE_OR_WM_QUALIFIED",
+    "changes_current_runtime_protocol": false,
+    "all_five_same_new_asset_and_shared_public_map_required": true,
+    "old_brown_or_closed_data_not_eligible": true
   }
 }

@@ -1,0 +1,11 @@
+{
+  "role": "PUBLIC_PRIORS_ONLY_NEW_RENDER_PROPOSAL_NOT_NATIVE_ADOPTION",
+  "source_root": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1",
+  "files_sha256": {
+    "COMMON_APPEARANCE_REVISION.json": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+    "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
+    "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda"
+  },
+  "old_brown_runs_not_relabelled": true,
+  "model_WM_API_physics_calls": 0
+}

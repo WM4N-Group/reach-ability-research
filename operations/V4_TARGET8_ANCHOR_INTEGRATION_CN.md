@@ -72,3 +72,25 @@ Data新**25-source/475-member**程序f1991adb…已真实完成SupportedCapture4
 建议AINav/研究在**五组共同初态协议**中事前固定一个必要的公开原NAV观察准备（从共同27目录选择；具体目标/次数由其在结果前冻结），五组都先取得真实NAV原回执，并计入从task t0开始的全部时间/费用/完整原片；A/B接真实NAV已发history，C/D仍保原AINav所有能力，E仍零VLM/WM/优化。准备动作不是方法决策或正确完整路线，不能据其结果调五组策略/选赢家，也不能只给A/B独占prefix。
 
 **这只是用于消除bootstrap依赖的共享方案，不是本组新派发/新权限或已采纳的条件。** 本轮未硬编码/执行某条NAV、未改五组协议或场景、未让Data运行新scope、未借448条closed capture做WM输入；若未来采纳，要在新full program精确freeze/必要own-zero/lease里验证，不重开任何closed组件。若不采用共同prefix，必须显式解决其他合法的原模型观测编码/启动方案，不能暗中丢掉A/B的WM要求。平台.20→.60/static deck/动态箱NAV与完整后继cost仍独立未解决。
+
+## 2026-11-16 10:46：补足一个具体same-anchor关联producer，但只限未来共同新外观/共同公开先验
+
+source47新增实际writer→本组CausalWMQueryPort桥接代码，端口/Raw adapter SHA与本组一致；仍未native采用，不等首query/WM已通。source50又明确：原native compiler三箱全brown，而review palette未被原资产消费；新appearance_entry是**未来三行RGBA-only共同资产修订候选**，不是重着色旧root或旧brown run已具新色。Native端192×128两个warm component的诊断不等WM96×64结果，更不能把64px阈值调小/选最大块。本组补的是这个新条件下缺失的**公开先验→当前WM anchor appearance hypothesis**，不是新detector或Native ID证书。
+
+### 已实现的具体代码与边界
+
+- 新`v4_declared_palette_association.DeclaredPaletteAnchorAssociation`，默认OFF。仅在Data新准确程序明确选定新appearance revision、新MJB SHA以及原appearance compiler的`common_appearance_revision`证明后才可enable；核revision/contract/MJB一致、geom_rgba仅三box行、nonRGBA摘要/engine/topology不变等**metadata**。本类不读MjModel、不证明文件真实或实际render；Data仍须核实际compiler proof与真正载入模型绑定、必要新render/native资格，不能手填SHA当批准。旧0b3547…brown MJB与无proof均拒。
+- **不让A/B独占语义/几何答案：** proposal给`PROPOSED_COMMON_PUBLIC_MAP.json`及`PROPOSED_COMMON_CONDITIONING_RELATIONS.json`；必须由source在所有五组**同一public observation**发布后才可enable。A/B只有私下constructor字典而当前Observation仍旧map时明确拒绝。公开内容是已有review hex的scene-specific A/warm、B/green、C/violet先验，以及原2.4m箱长/固定.58声明算术对应的12个box approach/top NAV subject关系；保“INITIAL不是live pose”，generic8个NAV不当箱面。未来五组必须冻结同一新asset/先验；不能把旧brown条件与新色当同环境比较或归因B/D。
+- 仅在原96×64实际anchor上调用**原propose_visual_candidates**；所有同family兄弟（包括深度不合格者）照数，唯一且depth valid才给frame-local hypothesis，不挑最大/合并/降64门。当前frame缺失/两碎片/背景同family/clock/K/RGB不符均UNKNOWN或拒绝；不取off-grid query bbox/旧alias/private current pose/物理ID，也不把颜色映射mass/成功率。
+- NAV subject只是**声明条件对象**，不是“waypoint就是平面”或“箱当前就在initial/goal”；对其选中的当前visible component仍经原`describe_visible_goal`/front_plane/geometry_vector，原plane拒绝优先于先验。`.58`只为原几何proof诊断参数，不更改Native approach/目标或产生准备自由度。target8 mask0弃权保持，PUSH absolute→relative和CLIMB approach action11仍未支持，不因有subject就补出来。
+- 输出明确`SHARED_DECLARED_APPEARANCE_HYPOTHESIS_NOT_NATIVE_IDENTITY`、`semantic_identity_verified=false`与声明subject/证据ref；由现Raw adapter原有target8-evidence字段进入VLM payload。**单一颜色component仍可能是背景/错误对象，假设不是物理ID验证**；不能据此直接派发PUSH或覆盖原current RGBD gate。8维数值只是真当前visible plane，原模型输入/权重未改，新palette上的预测准确性也未建立。原安全/identity/immutable/12N/4s/FF/QP/FIFO/CLIMB stop全部保。
+
+### Source/owner未来如何接（本轮没有替其改代码/运行）
+
+1. source/Data显式采用并资格新的RGBA-only资产，公开同一增强map给A—E；核实际new-model proof，不沿旧default brown native_entry盲重跑。新MJB/appearance是新的共同环境条件，不消耗/修改旧closed root。
+2. 构造真实arm/driver后，在task0、空WM history/forward0时，用**同一个FactorJournal**构造本association；`selected_asset_evidence=asset_result['common_appearance_revision']`，active revision/MJB来自真实已选asset。把它作为`AnchorTarget8Provider(geometry_source_root=.../inference_source/original_behavior7a6_geometry, association_provider=...)`，在首次query前给同一个CausalWMQueryPort.target_provider；source47流桥仍负责真grid/accepted owner。不得以本组件替换真arm planner或Native binder。
+3. 已固定共同NAV prefix(.22,0)proposal逐byte不改，仍未源采用；真实modelled-owner/3新grid/完整200Hz history仍必须先齐，不能拿SupportedCapture冒HOLD/NAV。source新外观也可能仍碎片/遮挡/plane拒绝，第一A/B必须确有合格真实WM预测才算身份；不降为VLM-only、不用closed帧或假有效zero target8。
+
+新增**20项**metadata/公开映射/错asset-proof/独占先验拒绝/fixture隔离专项，连受影响原anchor13项=**33项纯软件本地/46308两端过**；初次fixture缺观察时钟已修fixture，未松原clock。没有再跑原74/15/11套件，没有模型restore/forward、真实图像/NPZ/Native编译/render/Actor/physics/API/fit；原single-visible、plane/geometry三源字节未变。额外修复parent拒绝fixture association被装进production，并给当前call的可选证据ref/明确hypothesis范围，不通过旧class属性拿stale证据。
+
+proposal `protocols/2026-11-16/V4-declared-palette-WM-association-proposal-v1/PROPOSAL.json` SHA **b9e586c44e9984390eb979f34f4880398705258a54e5c2e78918729634495544**；3份source公共文件仅字节保管，增强map/relations为**尚未采用**的共同公开先验建议。当前main config只登记候选，不启用，不把producer字段数/测试当完整WM或优化器；完整public nominal effects/cost/准备退出域与.40m/static deck/后续owner/真实task资格仍未完成。formal41 release4d8029de…18小成员SHA已补核，与既有2c56de1c…/765行结论相同，未重提journal/帧或训练。总计划be3aa7e5…不变，全部dirty/closed/用途和原模型/CAL/VAL保留。

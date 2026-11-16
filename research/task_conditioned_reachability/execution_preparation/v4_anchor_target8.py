@@ -88,6 +88,8 @@ class AnchorTarget8Provider:
         need(type(software_fixture) is bool, 'Explicit software-only fixture mode')
         need(association_provider is None or callable(association_provider), 'Actual source association callback')
         need(fixture_api is None or software_fixture, 'Fixture geometry cannot become production target producer')
+        need(software_fixture or not getattr(association_provider,'software_fixture',False),
+             'Fixture semantic association cannot become a production target producer')
         self.software_fixture = software_fixture
         self.api = fixture_api if fixture_api is not None else load_original_geometry(geometry_source_root)
         self.associate = association_provider
@@ -110,16 +112,30 @@ class AnchorTarget8Provider:
         keys = {o.sha256 for o in options}
         need(len(keys) == len(options), 'Distinct exact same-query public candidates')
         selected = {key:None for key in keys}
+        association_ref = None
+        association_scope = None; declared_subjects = {}
         if self.associate is not None:
             association = self.associate(observation,tuple(options),anchor)
-            need(set(association) == {'WM_anchor_RGB_bytes_sha256','WM_anchor_time_s',
-                 'WM_anchor_calibration_sha256','frame_local_ref_by_option_sha256'}, 'Public same-anchor association only')
+            required = {'WM_anchor_RGB_bytes_sha256','WM_anchor_time_s',
+                        'WM_anchor_calibration_sha256','frame_local_ref_by_option_sha256'}
+            need(required <= set(association) <= required | {'association_evidence_ref','association_scope','declared_subject_by_option_sha256'},
+                 'Public same-anchor association only')
+            association_ref = association.get('association_evidence_ref')
+            association_scope = association.get('association_scope')
+            declared_subjects = association.get('declared_subject_by_option_sha256',{})
+            need(association_scope is None or association_scope ==
+                 'SHARED_DECLARED_APPEARANCE_HYPOTHESIS_NOT_NATIVE_IDENTITY', 'Explicit non-certified semantic hypothesis scope')
+            need(association_scope is None and not declared_subjects or association_scope is not None and
+                 set(declared_subjects)==keys and all(v is None or v in ('cuboid_a','cuboid_b','cuboid_c')
+                 for v in declared_subjects.values()), 'Same finite public hypothesis domain, never private body IDs')
             need(association['WM_anchor_RGB_bytes_sha256'] == rgb_sha
                  and association['WM_anchor_time_s'] == anchor['time_s']
                  and association['WM_anchor_calibration_sha256'] == calibration,
                  'No old alias, raw onboard or other off-grid image/calibration association')
             selected = association['frame_local_ref_by_option_sha256']
             need(set(selected) == keys, 'Explicit association or missing mask for every candidate')
+        need(association_ref is None or type(association_ref)is str and bool(association_ref),
+             'Original optional public semantic hypothesis evidence reference')
         targets = {}; evidence = {}
         for option in options:
             row = selected[option.sha256]
@@ -150,8 +166,12 @@ class AnchorTarget8Provider:
                  'Exact observed plane descriptor, never imputed target8')
             targets[option.sha256] = vector
             evidence[option.sha256] = dict(status='CURRENT_VISIBLE_PLANE_NOT_NATIVE_ASSOCIATION_OR_WORLD_POSE',
+                association_evidence_ref=association_ref,
                 frame_local_ref=row['frame_local_ref'],proof_sha256=hashlib.sha256(
                     json.dumps(proof,sort_keys=True,allow_nan=False).encode()).hexdigest())
+            if association_scope is not None:
+                evidence[option.sha256].update(association_scope=association_scope,
+                    declared_conditioning_subject=declared_subjects[option.sha256],semantic_identity_verified=False)
         need(anchor['time_s'] == anchor_time
              and hashlib.sha256(anchor['depth_m'].tobytes()).hexdigest() == depth_sha
              and hashlib.sha256(anchor['rgb'].tobytes()).hexdigest() == rgb_sha

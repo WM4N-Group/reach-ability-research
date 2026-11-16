@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 10:46：条件式同anchor公开外观假设producer已实现；33软件两端过，未采用/未WM资格
+
+- **补一个具体WM输入缺件，不放宽mask0：** 新default-OFF `DeclaredPaletteAnchorAssociation`为source新共同RGB修订提供same96×64 anchor的frame-local语义假设。只用公开颜色/声明NAV subject＋原pixel proposals，不读private pose/old alias/off-grid bbox/物理ID；2.4m/.58只推声明关系、不是live pose或新控制参数。12个相关NAV可提出条件对象，generic8个NAV保持未关联；6绝对PUSH/4CLIMB的action映射仍未解决。
+- **严格条件与公平性，不是已部署识别器：** 要新asset/compiler proof及新MJB，拒旧brown/无proof；本类只核metadata一致，不认证实际加载/render/Native。还必须source把同一颜色/subject先验放入A—E共同public map，否则拒绝A/B私下先验。same-family兄弟含bad depth都保，多个/缺失/原plane拒绝就UNKNOWN，不挑最大/降64门；输出semantic_identity_verified=false与hypothesis范围，经现有Raw evidence传VLM，颜色唯一也不等物理ID/Native许可。新palette域预测准确性未建立。
+- **已验证的软件身份：** 20新专项＋13受影响anchor=33本地/46308纯软件检查过，含错asset/独占先验/fixture生产升级拒绝；旧74/15/11不刷。原plane/geometry源码字节及7a6权重不变，无真实帧/NPZ读取、模型restore/forward/Native编译/render/Actor/physics/API/fit；parent加可选当前证据ref/明确假设scope，不改变模型tensor。代码/公共快照及未采用proposal在protocols/2026-11-16/V4-declared-palette-WM-association-proposal-v1/。
+- **实际完成度不冒进：** main config仅登记default-OFF候选，不改已冻/closed程序；源47流桥仍未Native采用，固定NAV prefix原bytes/参数不改。真modelled-owner/3帧/连续200Hz/第一WM预测与新共同asset/共享map资格仍待，五main/真实WM forward0。完整名义effects/cost/退出域、.40m/static deck/后续owner/真实终点未解决，Colour/原AINav/软件检查不当Reach优化收益。formal41 release4d8029de…18小成员SHA已补核、原结果不变不重提；总计划be3aa7e5…及所有dirty/closed/用途/布局边界保持。详见`/home/yuanyue/reach-ability-research/operations/V4_TARGET8_ANCHOR_INTEGRATION_CN.md`。
+
 ### 2026-11-16 09:22：新41源原NAV成功后fresh关联丢失；所请求PUSH仍未READY，固定前缀不改
 
 - **新41源已closed，首次拿到原NAV succeeded，但不是后继READY：** 新程序edb78627…/原result2c56de1c…及ledger/关闭CAS proof直接核同，10原小metadata本/远端SHA与765行原journal链独立核过；formal release/NPZ冷审此时尚未消费，不冒完整流重算。capture448步/2.240sim真完成；唯一原NAV在2.245 started→15.090 succeeded，准备2570命令/294原Actor forward，总3018命令。PUSH仍只语义意图，未进入interaction/CLIMB/动态handoff。

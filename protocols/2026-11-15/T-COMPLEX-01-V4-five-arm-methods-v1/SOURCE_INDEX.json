@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16T08:15:12.919555+08:00",
+  "at": "2026-11-16T10:46:35.215590+08:00",
   "Reach_code_sha256": {
     "research/task_conditioned_reachability/execution_preparation/v4_successor_choice.py": "bb0d6ca0a7243354eea5e88f88534fc58bbaeea0eca9cbbf4fc7bcdf911eb1c9",
     "research/task_conditioned_reachability/execution_preparation/v4_backbone_adapters.py": "38787016a99e346b92d745a8ca0884128b68356d29beb9fe28e8f140a2865689",
@@ -16,12 +16,14 @@
     "research/task_conditioned_reachability/execution_preparation/v4_causal_wm_query.py": "d79f6b00d9b927649abdf0cdf8f5b9357681baf3817838da434e4d00871c8e96",
     "research/task_conditioned_reachability/execution_preparation/test_v4_causal_wm_query.py": "ed023095c6d1ba321bd7a75caf41e283aea56043c742584392071875c679de59",
     "operations/check_original_query_port_CPU.py": "0fd29a3070f46237883bc388f3dad00e4ee02907166273b02a4d5031e0f8ddfd",
-    "research/task_conditioned_reachability/execution_preparation/v4_anchor_target8.py": "c4bb1b516498abd415a36057a764c4911fd848bc1d96cb381b147825557e8742",
+    "research/task_conditioned_reachability/execution_preparation/v4_anchor_target8.py": "d0ba31e797ce3c799df6585389b71f2d628bc7850b8610721e668432f34060bf",
     "research/task_conditioned_reachability/execution_preparation/v4_stow_factor.py": "b36fbae234946d2c0d2fcf8bede6dd829caf96a195c24afab87e07505fddb896",
     "research/task_conditioned_reachability/execution_preparation/v4_reference_cost.py": "2598f670c7807583ad6f5f4c03ce92eb12c12c22afae10121f702f39c4784805",
     "research/task_conditioned_reachability/execution_preparation/test_v4_reference_cost.py": "8d300229ce6243c1a15633a2f4b51def35c08917f1badab1b874bb209826a3b1",
     "research/task_conditioned_reachability/execution_preparation/v4_common_nav_prelude.py": "3cb37d8e3c770951283cd6f093d5c545826ff06ef01531c4f41f2bf94311ab3a",
-    "research/task_conditioned_reachability/execution_preparation/test_v4_common_nav_prelude.py": "8e3de3bc4411fc4a266c28161604b8370d5e4025ead985745f8a689b2cdf428c"
+    "research/task_conditioned_reachability/execution_preparation/test_v4_common_nav_prelude.py": "8e3de3bc4411fc4a266c28161604b8370d5e4025ead985745f8a689b2cdf428c",
+    "research/task_conditioned_reachability/execution_preparation/v4_declared_palette_association.py": "f03aecbb94e32626603b0faeae2954640aff14ee96ac5b2d46fc632b16d8c46e",
+    "research/task_conditioned_reachability/execution_preparation/test_v4_declared_palette_association.py": "4c2f2266b6a8b278a8656afaf62606495f30b0d26a38f8f4252864062b1dd095"
   },
   "read_only_original_source_pins": {
     "/home/yuanyue/re-nav/GO2-PIPER/scripts/piper_world_model/visual_latent_behavior.py": "838efe40945261ae4a6276e21ffa9d62b7089818356565add8a8ec68d42f671c",
@@ -37,7 +39,7 @@
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/FIVE_ARM_METHODS.json": "be710e3d0f05144303a4e35bd3740cfb05f15ced5fbde0aea7a7a5d3cf02e724",
     "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/rule_baseline.py": "74827bd00e47dd8057549855b735cda49adb762c12b602fbffc669eb6f019237"
   },
-  "protocol_config_sha256": "9f8ac5cb556abd3f968ddbaf239b1dd4b3cfc97d72fa9e6b75894b32543a14d1",
+  "protocol_config_sha256": "cde4d477f8fcf214d22c96bbf0f79b469f2c7858154199dd44c7359ab63f934c",
   "historical_four_arm_input_NOT_latest_five_arm_authority": true,
   "no_original_source_or_old_dirty_rewritten": true,
   "VLM_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -74,5 +76,6 @@
   "component_zero_excluded_from_five_arm_main_reader": true,
   "current_readonly_E_rule_source_sha256": "43998a23f4e49161074658bdc26b72c47b6b501b97830b906b84b50751c98634",
   "common_public_NAV_prefix_proposal_sha256_not_runtime_adoption": "7a28c1c2606d67e3ff44c8d4f2fb7f742de6fe3635dcc3a4b61d0366c462eacb",
-  "original_full_course_API_constructor_profile_sha256": "038ce0455eba232755d6bf1354131a5c907964a9c084588c108e49bd9846b952"
+  "original_full_course_API_constructor_profile_sha256": "038ce0455eba232755d6bf1354131a5c907964a9c084588c108e49bd9846b952",
+  "declared_palette_anchor_association_proposal_SHA_not_runtime_adoption": "b9e586c44e9984390eb979f34f4880398705258a54e5c2e78918729634495544"
 }

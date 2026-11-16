@@ -1,0 +1,329 @@
+{
+  "role": "NEW_SHARED_PUBLIC_PRIOR_PROPOSAL_NOT_ADOPTED",
+  "all_five_must_receive_same_prior": true,
+  "relations": [
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-000",
+      "parameters": {
+        "goal_world_x_m": -0.08,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-001",
+      "parameters": {
+        "goal_world_x_m": -0.08,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-002",
+      "parameters": {
+        "goal_world_x_m": 4.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-003",
+      "parameters": {
+        "goal_world_x_m": 4.1,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-004",
+      "parameters": {
+        "goal_world_x_m": 7.5,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-005",
+      "parameters": {
+        "goal_world_x_m": 9.3,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-006",
+      "parameters": {
+        "goal_world_x_m": 9.3,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-007",
+      "parameters": {
+        "goal_world_x_m": 0.22,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-008",
+      "parameters": {
+        "goal_world_x_m": 0.37,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-009",
+      "parameters": {
+        "goal_world_x_m": 0.82,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-010",
+      "parameters": {
+        "goal_world_x_m": 4.72,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-011",
+      "parameters": {
+        "goal_world_x_m": 4.87,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-012",
+      "parameters": {
+        "goal_world_x_m": 5.32,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-013",
+      "parameters": {
+        "goal_world_x_m": 9.22,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-014",
+      "parameters": {
+        "goal_world_x_m": 9.37,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-ground-nav-015",
+      "parameters": {
+        "goal_world_x_m": 9.82,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.6,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 7.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-box-top-cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.6,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.15,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_a",
+      "parameters": {
+        "goal_world_x_m": 2.6,
+        "goal_world_y_m": 0.0,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 6.65,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_b",
+      "parameters": {
+        "goal_world_x_m": 7.1,
+        "goal_world_y_m": 2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.15,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "PUSH",
+      "target_ref": "cuboid_c",
+      "parameters": {
+        "goal_world_x_m": 11.6,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.0
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_a:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_a",
+      "not_native_admission": true
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_b:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_b",
+      "not_native_admission": true
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "cuboid_c:upper-entry",
+      "parameters": {
+        "surface_height_m": 0.2
+      },
+      "declared_box_subject": "cuboid_c",
+      "not_native_admission": true
+    },
+    {
+      "skill": "CLIMB",
+      "target_ref": "goal_deck",
+      "parameters": {
+        "surface_height_m": 0.6
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    },
+    {
+      "skill": "NAV",
+      "target_ref": "v4-goal-elevated",
+      "parameters": {
+        "goal_world_x_m": 14.1,
+        "goal_world_y_m": -2.6,
+        "surface_height_m": 0.6
+      },
+      "declared_box_subject": null,
+      "not_native_admission": true
+    }
+  ],
+  "actual_WM_or_native_calls": 0
+}
