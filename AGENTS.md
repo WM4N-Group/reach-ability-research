@@ -1,5 +1,9 @@
 # Reach repository rules
 
+## Latest resource clarification: 2026-11-16 14:08
+
+Shared plan `e56951c29f4b9827e27519c6e3a7bae1864b9a6e5229ab57ada16324dae4c68b` retains E-first and46308-only compute. Old46174 may now be inspected READ-ONLY for a specific missing historical file; no broad scanning, continuous polling, resumed launcher/closed run, training/simulation or old lease reuse. No need to reconnect when required data already exists locally/on46308.
+
 ## Latest priority override: 2026-11-16 12:26 E first
 
 Shared plan SHA `7559f685a72fbbfb3dae6d95c5cb35660116670f2c8bb1c523c0690c69f9bbec`: prioritize ONE actual E full-task attempt and task0-to-outcome direct-live third-view recording. Reach performs non-blocking information/factor review only; no new approval, interface, WM/VLM, A--D readiness or complete successor-cost prerequisite for E. Data remains sole physical owner and retains mandatory new-program zero/lease/watchdog. Keep legacy-common H identical; NEW successor optimizer stays OFF for E. A legitimate explicit unsupported-domain refusal is a reported failure, never high-goal success or a fabricated native CLIMB receipt. Do not alter the confirmed layout or original safety gates, or reopen closed af09/other scopes. Continue method research off E's critical path; source59 E entry/terrain repair is software, not actual E/video qualification. See the latest handoff for evidence and source pins.

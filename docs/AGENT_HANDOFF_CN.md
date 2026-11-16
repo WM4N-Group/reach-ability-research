@@ -4,6 +4,7 @@
 
 ### 2026-11-16 14:14：修复D组terminal前缀候选遗漏；30软件两端过，E不等待
 
+- **收尾时核到14:08新计划e56951c2…：** E优先/46308唯一计算端不变；仅新增旧46174按明确缺失资料需要只读核查的授权，非恢复计算/旧root/旧lease。本组本轮无缺失资料需求，未连接旧端，不把资料恢复当新样本。
 - **并行推进一处真实方法正确性修复，不给E加前置：** 原AINav前缀树会把“已声明到目标的短计划”和“同前缀的更长计划”合并，terminal节点可能仍有children；本组D adapter原先仅枚举叶子，漏掉短候选。使用原纯AINav planner/tree＋明确软件roles复现：5项中3 FAIL/2 PASS，B有短候选而D丢失，还会遗漏该短候选的UNKNOWN。
 - **修复只在本组适配器：** terminal节点或叶子都形成候选，同时继续遍历children；terminal只是VLM假设，不自证完整任务/成本/Native许可。仍经同一个cost provider，任何UNKNOWN/partial保原决策；不将非terminal内部前缀凭空补成完整计划、不裁剪原树、原16步/256候选预算及C原流程保留。未改原AINav、E、selector或控制源。
 - **已完成必要验证/代码保管：** 7个新专项＋23个受影响SourceSeam回归，本地/46308两端均通过；保留先前3个失败的复现记录，不刷WM/Actor/native旧套件。实现提交6945666已同步本地/GitHub/46308，adapter新SHA c9310385…；软件合成cost/图像不当物理实验、训练样本或B/D增益。无模型/API/physics/fit。
