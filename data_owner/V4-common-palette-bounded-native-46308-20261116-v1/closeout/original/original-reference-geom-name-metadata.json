@@ -1,0 +1,19 @@
+{
+  "role": "READONLY_ORIGINAL_BROWN_MJMODEL_GEOM_NAMES_NOT_FAILED_SPEC_RECONSTRUCTION",
+  "reference_sha256": "0b3547b0f85005afa01b958b13d20d448a67e5cf3206f545f71b8174745f768e",
+  "ngeom": 88,
+  "unnamed_compiled_geoms": 44,
+  "duplicate_compiled_name_counts": {
+    "": 44
+  },
+  "nonempty_compiled_names_unique": true,
+  "three_box_geom_ids": {
+    "complex_box_a_geom": 85,
+    "complex_box_b_geom": 86,
+    "complex_box_c_geom": 87
+  },
+  "static_model_binary_reads": 1,
+  "actual_MjData_Runtime_MjSpec_constructor_Actor_Renderer_WM_physics_calls": 0,
+  "inference": "Original valid compiled SDK asset contains multiple unnamed geometries; requiring global uniqueness of every fresh spec geom.name is incompatible with this legitimate name domain. Exact failed-spec duplicate inventory was not retained and is NOT reconstructed or claimed here.",
+  "no_source_guard_relaxation_or_retry": true
+}

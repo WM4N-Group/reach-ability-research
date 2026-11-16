@@ -1,0 +1,29 @@
+{
+  "schema": "Data-source50-static-compile-name-preflight-failure-no-task-release-v1",
+  "at": "2026-11-16T10:30:50.995229+08:00",
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v1",
+  "source_commit": "23cc1fe6e4c2e6fb2718e544fdda17102f8a9c0f",
+  "program_sha256": "e74acd7141590e4928b744cd806ffb8d165948457741e99ffd3c9f0adec42f6a",
+  "result_sha256": "9cd6125df6b1ffe30d762f3031fb0a0df7395e5cbc05d6a5178ef8c32866cbe8",
+  "passed": false,
+  "component_zero_calls": 1,
+  "five_arm_main_calls": 0,
+  "actual_task_motor_commands": 0,
+  "new_MJB_or_render_verified": false,
+  "not_Push_CLIMB_or_visual_outcome_failure": true,
+  "original_aux_usage_unknown_preserved": true,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false,
+  "files": {
+    "claim.json": "5239afb1f31e6250ed194436c9d758ca5f9e379b098833aa81bbc032b0e5e47f",
+    "result.json": "9cd6125df6b1ffe30d762f3031fb0a0df7395e5cbc05d6a5178ef8c32866cbe8",
+    "ledger.json": "3277f034d8304262527446acc05b9cb4230e541792091840ca9d7913f3ed0900",
+    "resource-lease.json": "1b9ddc73ca56663812ed745e891c01aa1248c0a4ef7e3411827ed90114b4be8c",
+    "protocol.json": "b0c5f687c6cace28f825bbc948e6ab69f95c11b7dde51c7fe75c1a9293f5248f",
+    "program-freeze.json": "e74acd7141590e4928b744cd806ffb8d165948457741e99ffd3c9f0adec42f6a",
+    "COMMON_APPEARANCE_REVISION.json": "75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+    "Data-static-name-failure-assessment.json": "4ba8752ddd97b687bd499d77a8800eed4bcb34746b9690b39d7d32fc8ef82de0",
+    "original-reference-geom-name-metadata.json": "448477d4f8e4c9731c981835a07a786e23c60f4d8cfb20536b480bac544ea5fe",
+    "remote-only-original-reference.json": "ef4b7f7a1f3839357bee2f9bbe4b1f12b344d5f5e8cae2b8794eb8bb23dd9f16"
+  }
+}

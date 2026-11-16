@@ -1,0 +1,13 @@
+{
+  "root": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1",
+  "files_sha256": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1/claim.json": "5239afb1f31e6250ed194436c9d758ca5f9e379b098833aa81bbc032b0e5e47f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1/events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1/ledger.json": "3277f034d8304262527446acc05b9cb4230e541792091840ca9d7913f3ed0900",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1/resource-lease.json": "1b9ddc73ca56663812ed745e891c01aa1248c0a4ef7e3411827ed90114b4be8c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v1/result.json": "9cd6125df6b1ffe30d762f3031fb0a0df7395e5cbc05d6a5178ef8c32866cbe8"
+  },
+  "new_MJB_or_raw_arrays_or_task_frames_exist": false,
+  "whole_artifact_model_input_allowed": false,
+  "training_allowed": false
+}
