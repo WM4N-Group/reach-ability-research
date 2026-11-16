@@ -1,0 +1,744 @@
+{
+  "at": "2026-11-16T16:09:07.976589+08:00",
+  "H_sha256": "f4779fa24e1c282e1825af60b5d25c540e07cd0910c2c16a27cc058b3911d724",
+  "H_scope": {
+    "active": false,
+    "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+    "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+    "phase": "CLOSED_E_MAIN",
+    "authorization_sha256": "4d10aadfd88ff1d2a783d7976542dd7bb7f0545889bb83c05076c5a65e4f6865",
+    "whole_program_freeze_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+    "zero_dispatch_count": 1,
+    "main_dispatch_count": 1,
+    "zero_passed": true,
+    "camera_sha256": "c9b2d3aa96294c7bc9959cdb6479e31ac6940e69b4d7d351dadd97d62598e8fc",
+    "source_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+    "plan_sha256": "7559f685a72fbbfb3dae6d95c5cb35660116670f2c8bb1c523c0690c69f9bbec",
+    "automatic_retry": false,
+    "resources": {
+      "at": "2026-11-16T13:23:01.296603+08:00",
+      "owned_bytes": 26260551680,
+      "limit_bytes": 42949672960,
+      "provider_quota_unknown": true,
+      "GPU0_free_MiB": 24080,
+      "other_Data_workers0": true,
+      "canonical_original_inodes_free_not_new_lease": true
+    },
+    "dispatch_at": "2026-11-16T13:23:01.309428+08:00",
+    "zero_result_sha256": "ea6efba2201940dbe6c6cff6333711434ed717350086389f5bf25ea2316bebbf",
+    "chosen_camera": {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        7.5,
+        0.0,
+        0.4
+      ],
+      "distance": 20.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    },
+    "camera_spec": {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        7.5,
+        0.0,
+        0.4
+      ],
+      "distance": 20.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    },
+    "camera_selection_reason": "Actual task0 frames: view0 clips goal deck; view1 covers dog/three boxes/deck/full arena. Dog remains small in wide shot; no task outcome used.",
+    "closed_at": "2026-11-16T16:03:05.862830+08:00",
+    "result_sha256": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+    "native_task_success": false,
+    "usage_known": true,
+    "resource_snapshot": {
+      "at": "2026-11-16T16:03:05.847552+08:00",
+      "owned_bytes": 26331264512,
+      "limit_bytes": 42949672960,
+      "provider_quota_unknown": true,
+      "GPU0_free_MiB": 24080,
+      "other_Data_workers0": true,
+      "canonical_original_inodes_free_not_new_lease": true
+    }
+  },
+  "video": {
+    "remote": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/E-direct-live-1x.mp4",
+    "bytes": 237186,
+    "sha256": "172e2878f3496bdcf04a88f3c3e49bde6d669ed5ecc01281b3b0475392dddad9",
+    "ffprobe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1280,
+          "height": 720,
+          "coded_width": 1280,
+          "coded_height": 720,
+          "closed_captions": 0,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 31,
+          "chroma_location": "left",
+          "refs": 4,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "r_frame_rate": "10/1",
+          "avg_frame_rate": "10/1",
+          "time_base": "1/10240",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 497664,
+          "duration": "48.600000",
+          "bit_rate": "37943",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "486",
+          "nb_read_frames": "486",
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/E-direct-live-1x.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "48.600000",
+        "size": "237186",
+        "bit_rate": "39042",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf58.76.100"
+        }
+      }
+    },
+    "raw_chunks_all_SHA_verified": true,
+    "raw_frames": 486,
+    "raw_master_retained": true
+  },
+  "event_counts": {
+    "registered_cold_capture_constructed": 1,
+    "V4_cold_original_registered_terrain_ABI_installed_SOURCE_NOT_PUSH_qualified": 1,
+    "V4_two_factor_policy_bound_at_task_zero": 1,
+    "V4_E_actual_unchanged_rule_driver_assembled_NOT_task_success": 1,
+    "cold_capture_actual_sample": 448,
+    "cold_capture_actual_loaded_anchor_reference": 1,
+    "cold_capture_compact_transfer_started": 1,
+    "V4_actual_capture_to_original_execution_assembled": 1,
+    "V4_E_fixed_rule_selected": 1,
+    "skill_intent_selected": 1,
+    "skill_execution_judgment": 2,
+    "registered_common_query_prebound": 2,
+    "complex_private_constructor_query_bound": 2,
+    "intent_native_execution_bound": 2,
+    "execution_refinement_dispatch": 2,
+    "registered_compact_NAV_started": 1,
+    "registered_NAV_exact_session_constructed": 1,
+    "V4_selected_original_session_bound": 2,
+    "native_option_installed": 2,
+    "ainav_native_admitted": 2,
+    "registered_NAV_actual_actor_forward": 294,
+    "ainav_native_receipt": 3,
+    "registered_NAV_actual_goal_hold_then_arrival_capture": 1,
+    "intent_actual_native_outcome": 1,
+    "registered_common_PUSH_exact_session_constructed": 1,
+    "placement_actual_20ms_measurement": 1676,
+    "native_PUSH_settled_actual_clock_sample": 1675,
+    "body_reference_native_observation_proposed": 293,
+    "body_reference_native_observation_actually_committed": 284,
+    "placement_arrival_original_brake_started": 1,
+    "placement_original_native_clock_confirmed": 1,
+    "original_leg_release_reverse_confirmed": 1,
+    "placement_original_NN_confirmed_landing_promoted_without_reset": 1,
+    "V4_legacy_common_H_kernel_attempt": 1,
+    "V4_legacy_common_H_kernel_returned": 1,
+    "reach_selected_ground_confirmed_stow_path_choice": 1,
+    "ainav_chain_hard_stop": 1
+  },
+  "selected_original_events": [
+    {
+      "payload": {
+        "VLM_calls": 0,
+        "WM_calls": 0,
+        "decision_count": 1,
+        "event": "V4_E_fixed_rule_selected",
+        "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+        "native_permission_claimed": false,
+        "our_optimizer_calls": 0,
+        "private_pose_or_future_or_existence_route_read": false,
+        "query_sha256": "6e694c494edc70700a09c62c1aae2b8631e547a03aa7d6b842bb1224c928782b",
+        "rule_prior": "declared_initial_X_order_then_one_hop_goal_proximity_engineering_rule",
+        "rule_stage": "placement",
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "7b24a72808d87834c9bfeefee80b7a0222f1d4c27c0da3fbebe881dc8e0d84a4",
+      "sequence": 455,
+      "sha256": "d81400c958cd2a12c24ee09c4b17384a1cf5ac3e19eab9298a018df1ab819324"
+    },
+    {
+      "payload": {
+        "event": "ainav_native_admitted",
+        "option": {
+          "attempt_id": "",
+          "budget_s": 60.0,
+          "mandatory_protection": false,
+          "native_preconditions_receipt": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/events.jsonl#458",
+          "original_push_goal_sha256": "",
+          "parameters": [
+            [
+              "goal_world_x_m",
+              0.22000000000000008
+            ],
+            [
+              "goal_world_y_m",
+              1.8797838865806863e-16
+            ],
+            [
+              "surface_height_m",
+              0.0
+            ]
+          ],
+          "skill": "NAV",
+          "target_ref": "cuboid_a",
+          "token": "v4-entry-NAV-1"
+        },
+        "physical_command_issued": false,
+        "query_sha256": "e27ea42ef85084f98d3fc649abe042a6380b4a9c384eeaf7770ccf743cfdb573",
+        "receipt": {
+          "evidence_ref": "native-option-installed:ainav-execution-000002",
+          "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+          "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+          "status": "admitted",
+          "time_s": 2.2399999999999745
+        },
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "2a6149cea96718a27cc85d827be192de1bce38c06eb7f148a7de7179c9b41d48",
+      "sequence": 466,
+      "sha256": "3155282abf6854aa65421fe6793d334064129c0d7bb86059ffbcb6dfcb19f414"
+    },
+    {
+      "payload": {
+        "event": "ainav_native_receipt",
+        "receipt": {
+          "evidence_ref": "commands:physical_tick=449",
+          "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+          "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+          "status": "started",
+          "time_s": 2.2449999999999743
+        },
+        "task_success_inferred": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "becff005f3f1fbfb0965ba89518be3307cfc89f77efe71a4c82ee138a0ad849a",
+      "sequence": 468,
+      "sha256": "3980f8dcc633dddfbb5478446d5d455ee98636ff5071df394a777127fa3f5ad5"
+    },
+    {
+      "payload": {
+        "event": "intent_actual_native_outcome",
+        "execution_role": "preparation",
+        "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+        "intent_succeeded": false,
+        "native_option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+        "receipt": {
+          "evidence_ref": "commands:physical_tick=3018",
+          "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+          "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+          "status": "succeeded",
+          "time_s": 15.090000000000959
+        },
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "bab0f4644b68d59ae003d01c00f0f8eb3c93b0d4cecc910d261335508f2baf99",
+      "sequence": 763,
+      "sha256": "74dd855933cba14a8abcd75ce7ccae8d57674e1441a6037b107dc29dd305fed8"
+    },
+    {
+      "payload": {
+        "event": "ainav_native_receipt",
+        "receipt": {
+          "evidence_ref": "commands:physical_tick=3018",
+          "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+          "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+          "status": "succeeded",
+          "time_s": 15.090000000000959
+        },
+        "task_success_inferred": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "74dd855933cba14a8abcd75ce7ccae8d57674e1441a6037b107dc29dd305fed8",
+      "sequence": 764,
+      "sha256": "7bd182eb4d42c21f29ab1278254323644c7c238902dced3f1a4de426e646a40b"
+    },
+    {
+      "payload": {
+        "event": "ainav_native_admitted",
+        "option": {
+          "attempt_id": "v4-selected-push-2",
+          "budget_s": 60.0,
+          "mandatory_protection": false,
+          "native_preconditions_receipt": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/events.jsonl#766",
+          "original_push_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+          "parameters": [
+            [
+              "goal_world_x_m",
+              2.6
+            ],
+            [
+              "goal_world_y_m",
+              0.0
+            ],
+            [
+              "surface_height_m",
+              0.0
+            ]
+          ],
+          "skill": "PUSH",
+          "target_ref": "cuboid_a",
+          "token": "v4-PUSH-2"
+        },
+        "physical_command_issued": false,
+        "query_sha256": "acf7c44203efbacd52eebdffc2adadb0cf64d1f84bd48fb4076c5939b4894150",
+        "receipt": {
+          "evidence_ref": "native-option-installed:ainav-execution-000003",
+          "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+          "option_sha256": "ec8f16e665cefec9925d2065f0860cc970719d29906ce74328f217aa65b88f25",
+          "status": "admitted",
+          "time_s": 15.090000000000959
+        },
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "0c8e5a2736e1818c7930d48872d2e53923a6a93f8d5c2e9900e9681f5f4bdefe",
+      "sequence": 773,
+      "sha256": "569589aafa5bf5be4aa578c307daabc744678f4a3fe8648abcdcd8d3e96791bf"
+    },
+    {
+      "payload": {
+        "event": "ainav_native_receipt",
+        "receipt": {
+          "evidence_ref": "commands:physical_tick=3019",
+          "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+          "option_sha256": "ec8f16e665cefec9925d2065f0860cc970719d29906ce74328f217aa65b88f25",
+          "status": "started",
+          "time_s": 15.09500000000096
+        },
+        "task_success_inferred": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "0ff7476834174b955c9bc5f7d5f50e442bcf0affe7750240d63371bf3bd39dc8",
+      "sequence": 775,
+      "sha256": "ee99e230c5ca4d2b04549bfd64ceea54b0aadbeaa4db6ae2a5f87e085907b9be"
+    },
+    {
+      "payload": {
+        "attempt": 1,
+        "event": "V4_legacy_common_H_kernel_attempt",
+        "model_input": false,
+        "new_successor_optimizer_call": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "4c498dd7b8747662325b4c869259cce0cdf863a895bb8ec87ae956a540df4741",
+      "sequence": 3137,
+      "sha256": "0c48d0c67ecc956ec596ee714afbf6e85fdf628fb8766f44578bf94bc1df79e7"
+    },
+    {
+      "payload": {
+        "actual_motor_change_or_task_gain_inferred": false,
+        "attempt": 1,
+        "event": "V4_legacy_common_H_kernel_returned",
+        "model_input": false,
+        "new_successor_optimizer_call": false,
+        "proposed_waypoint_path_changed": true,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "0c48d0c67ecc956ec596ee714afbf6e85fdf628fb8766f44578bf94bc1df79e7",
+      "sequence": 3138,
+      "sha256": "be567be8fa49bf4cba27af348462d8776aa53f90b01737b70273f98fd6dc743f"
+    },
+    {
+      "payload": {
+        "actual_physical_safety_certificate": false,
+        "actual_successor_repair_cost_s": null,
+        "actual_total_completion_cost_s": null,
+        "assigned_reference_upper_bound_reduction_s": 1.1917473205142315,
+        "baselines": {
+          "direct_same_endpoint": {
+            "lower_s": 11.690028412954462,
+            "nominal_s": 11.690028412954462,
+            "upper_s": 11.690028412954462
+          },
+          "original_guarded_path": {
+            "lower_s": 12.863025733468696,
+            "nominal_s": 12.872400733468695,
+            "upper_s": 12.881775733468693
+          }
+        },
+        "changed": true,
+        "chosen_path_indices": [
+          0,
+          2
+        ],
+        "chosen_reference_duration_interval_s": {
+          "lower_s": 11.690028412954462,
+          "nominal_s": 11.690028412954462,
+          "upper_s": 11.690028412954462
+        },
+        "chosen_waypoints": [
+          [
+            0.0,
+            0.3,
+            -0.3,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "consumer_stage": "selection_before_original_full_path_recheck",
+        "distinct_from_original_and_direct": false,
+        "edge_witnesses": [
+          {
+            "guard_pass": true,
+            "guard_reasons": [],
+            "source": 0,
+            "target": 1,
+            "timing": {
+              "actual_completion_time_upper_s": null,
+              "lower_s": 2.2583840479068806,
+              "nominal_s": 2.2583840479068806,
+              "source_reference_origin_tolerance_rad": 0.0,
+              "upper_s": 2.2583840479068806
+            }
+          },
+          {
+            "guard_pass": true,
+            "guard_reasons": [],
+            "source": 0,
+            "target": 2,
+            "timing": {
+              "actual_completion_time_upper_s": null,
+              "lower_s": 11.690028412954462,
+              "nominal_s": 11.690028412954462,
+              "source_reference_origin_tolerance_rad": 0.0,
+              "upper_s": 11.690028412954462
+            }
+          },
+          {
+            "guard_pass": true,
+            "guard_reasons": [],
+            "source": 1,
+            "target": 2,
+            "timing": {
+              "actual_completion_time_upper_s": null,
+              "lower_s": 10.604641685561814,
+              "nominal_s": 10.614016685561813,
+              "source_reference_origin_tolerance_rad": 0.002,
+              "upper_s": 10.623391685561813
+            }
+          }
+        ],
+        "equivalent_to_direct_baseline": true,
+        "event": "reach_selected_ground_confirmed_stow_path_choice",
+        "execution_authorized": false,
+        "finite_DAG_edges": 3,
+        "finite_guard_pass_is_not_a_continuous_or_dynamic_certificate": true,
+        "guarded_candidate_found": true,
+        "later_segment_origin_guard_neighborhood_certified": false,
+        "model_input": false,
+        "native_guard_queries": 5,
+        "objective": "upper bound on assigned reference schedule, conditional on original segment transitions",
+        "original_capture_queue_branch": true,
+        "original_per_step_support_effort_geometry_and_four_second_verification_required": true,
+        "original_reference_duration_interval_s": {
+          "lower_s": 12.863025733468696,
+          "nominal_s": 12.872400733468695,
+          "upper_s": 12.881775733468693
+        },
+        "original_runtime_full_path_recheck_required": true,
+        "physical_commands_issued_by_optimizer": 0,
+        "same_original_compact_endpoint": [
+          0.0,
+          0.3,
+          -0.3,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "schema": "reach-native-terminal-preserving-stow-path-choice-v1",
+        "selection_wall_s": 0.580380325904116,
+        "status": "OPTIMIZED_REFERENCE_PATH",
+        "unchanged_original_final_verify_min_s": 4.0,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "be567be8fa49bf4cba27af348462d8776aa53f90b01737b70273f98fd6dc743f",
+      "sequence": 3139,
+      "sha256": "72261a0f36361e2af6cd07525cb32226e98c4810f86cfda393fc32a519726bd2"
+    },
+    {
+      "payload": {
+        "actual_physical_tick": 9719,
+        "automatic_retry": false,
+        "error": "Original immutable public/native placement lost after stow",
+        "event": "ainav_chain_hard_stop",
+        "fixed_route_fallback": false,
+        "native_safety_handling_required": true,
+        "task_success_inferred": false,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "45ad752e1ea35ff38c9ed800913bdcfe4d2a13c836e1cf2302f85414fda71082",
+      "sequence": 4710,
+      "sha256": "49846da02273c1d0ca361ca60ff1260a95d7946f45b725fad18e93be66efb37d"
+    }
+  ],
+  "last_original_samples": {
+    "placement_actual_20ms_measurement": {
+      "payload": {
+        "actual_box_linear_velocity_m_s": [
+          -3.793196938513035e-22,
+          9.613325933598305e-17,
+          -1.143871122117908e-15
+        ],
+        "actual_box_position_m": [
+          2.636055656682262,
+          -0.011076315322135068,
+          0.09978448915956764
+        ],
+        "actual_box_rotation": [
+          [
+            0.9999997134753812,
+            -0.0007570001011467781,
+            -8.654042133302858e-21
+          ],
+          [
+            0.0007570001011467781,
+            0.9999997134753812,
+            -8.452139237531468e-17
+          ],
+          [
+            7.263674223088654e-20,
+            8.452136160674427e-17,
+            0.9999999999999988
+          ]
+        ],
+        "actual_signed_dock_gap_m": -0.03658521292352246,
+        "body_braking_reference_sha256": "1d7f4c1f7cd6feed257dcae574d73a4b0c3287f165edaf6b810156db3b8564b0",
+        "contract_sha256": "cc64214871c971e8fbad626ccc463ffa365dc30be4692bfee092a74c3ec28b71",
+        "event": "placement_actual_20ms_measurement",
+        "model_input": false,
+        "native_clock": {
+          "actual_last_native_sample_s": 48.590000000006405,
+          "actual_last_read_s": 48.590000000006405,
+          "actual_started_s": 15.090000000000959,
+          "caller_reads": 25441,
+          "failed": false,
+          "model_input": false,
+          "native_advances": 1675,
+          "native_buffers_never_reset": true,
+          "native_contact_seen": true,
+          "native_duration_s": 21.88031005859375,
+          "native_goal_actor_and_motor_queue_not_modified": true,
+          "native_predicate_sha256": "d3cf0468608e453fd33e78fb14e635b32d30fea37b859300cd5c33eefee0c61d",
+          "native_result": true,
+          "native_term_class_preserved": "PushSettled",
+          "original_hold_time_s": 0.5,
+          "original_step_dt_s": 0.02,
+          "schema": "ainav-native-settled-physical-clock-v1"
+        },
+        "native_drive_goal_error_m": 0.0747693540918603,
+        "native_goal_confirmed_separately_required": true,
+        "original_native_drive_goal_sha256": "0644fe5c47d10deb2039d1c451006eb140ec93ad3f1b9ece8c7abfb4e4148393",
+        "phase": "STOW_VERIFY",
+        "placement_geometry_verified": false,
+        "protected_stow_completion_separately_required": true,
+        "public_XY_error_m": 0.03771863120401526,
+        "task_geometry_pass": false,
+        "time_s": 48.590000000006405,
+        "v4_factor_scope": {
+          "E_zero_VLM_WM_and_new_optimizer_not_zero_all_legacy_algorithms": true,
+          "arm": "E",
+          "legacy_H_costs_included_in_all_arms": true,
+          "legacy_H_is_not_new_treatment": true,
+          "legacy_common_stow_H_enabled": true,
+          "new_successor_optimizer_enabled": false,
+          "policy": "V4_FIXED_LEGACY_COMMON_H_NEW_SUCCESSOR_TREATMENT_SEPARATE_v1"
+        }
+      },
+      "previous_sha256": "2f4b9c57011c280f323defd201ace1cf8cc8b59769bbf5c9e3902eaba1e7235a",
+      "sequence": 4709,
+      "sha256": "45ad752e1ea35ff38c9ed800913bdcfe4d2a13c836e1cf2302f85414fda71082"
+    },
+    "native_PUSH_settled_actual_clock_sample": {
+      "payload": {
+        "actual_20ms_advances": 1675,
+        "event": "native_PUSH_settled_actual_clock_sample",
+        "model_input": false,
+        "native_contact_seen": true,
+        "native_duration_s": 21.88031005859375,
+        "native_predicate_sha256": "d3cf0468608e453fd33e78fb14e635b32d30fea37b859300cd5c33eefee0c61d",
+        "native_result": true,
+        "original_hold_time_s": 0.5,
+        "time_s": 48.590000000006405
+      },
+      "previous_sha256": "0615e92d98ab3162832ffb0d3b4be666f7bede3bad78da8a48011295ccaef4d8",
+      "sequence": 4708,
+      "sha256": "2f4b9c57011c280f323defd201ace1cf8cc8b59769bbf5c9e3902eaba1e7235a"
+    }
+  },
+  "locks": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+      "device": 51,
+      "inode": 3428729629,
+      "unheld_at_check": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+      "device": 51,
+      "inode": 3428729630,
+      "unheld_at_check": true
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu1.lock",
+      "device": 51,
+      "inode": 3428459217,
+      "unheld_at_check": false
+    },
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu1.lock",
+      "device": 51,
+      "inode": 3428459218,
+      "unheld_at_check": false
+    }
+  ],
+  "owned_bytes": 26331265536,
+  "owned_limit_bytes": 42949672960,
+  "provider_quota_unknown": true,
+  "no_native_or_renderer_or_physics_run": true,
+  "no_full_command_PD_FIFO_cold_audit_claim_yet": true
+}

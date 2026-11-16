@@ -1,0 +1,15 @@
+{
+  "video_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/E-direct-live-1x.mp4",
+  "video_sha256": "172e2878f3496bdcf04a88f3c3e49bde6d669ed5ecc01281b3b0475392dddad9",
+  "actual_raw_frames": 486,
+  "width": 1280,
+  "height": 720,
+  "fps": 10.0,
+  "playback_speed": 1,
+  "source": "actual direct-live raw master",
+  "native_end_time_s": 48.59500000000641,
+  "native_time_not_inferred_from_clip_duration": true,
+  "no_state_replay_renderer_interpolation_resize_or_selected_success_cut": true,
+  "raw_master_retained": true,
+  "encoder_wall_s": 11.898402910213917
+}

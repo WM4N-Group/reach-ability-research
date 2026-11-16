@@ -1,0 +1,127 @@
+{
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "phase": "zero",
+  "program_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+  "source_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+  "PID": 191345,
+  "passed": true,
+  "method": "E_technical_own_zero_NOT_main",
+  "full_task_success": false,
+  "VLM_calls": 0,
+  "WM_calls": 0,
+  "fit_calls": 0,
+  "training_allowed": false,
+  "main_invocations": 0,
+  "automatic_retry": false,
+  "asset_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "status": "E_TECHNICAL_ZERO_PASS_NEEDS_FROZEN_CAMERA_CHOICE_NOT_MAIN",
+  "camera_frames": [
+    {
+      "index": 0,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/camera-0.png",
+      "sha256": "e36abdfcd6b865b27d99346bf5266f895916d17af09bf1119226c87a6fccd578",
+      "spec": {
+        "kind": "fixed_free",
+        "width": 1280,
+        "height": 720,
+        "stride_physics_ticks": 20,
+        "chunk_frames": 16,
+        "max_bytes": 536870912,
+        "lookat": [
+          6.5,
+          0.0,
+          0.2
+        ],
+        "distance": 18.0,
+        "azimuth": 110.0,
+        "elevation": -58.0
+      }
+    },
+    {
+      "index": 1,
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/zero/camera-1.png",
+      "sha256": "50b12b45e07de7e1ff4c991b67bdd0f98e284384dfb7d39dc8716cba66c62922",
+      "spec": {
+        "kind": "fixed_free",
+        "width": 1280,
+        "height": 720,
+        "stride_physics_ticks": 20,
+        "chunk_frames": 16,
+        "max_bytes": 536870912,
+        "lookat": [
+          7.5,
+          0.0,
+          0.4
+        ],
+        "distance": 20.0,
+        "azimuth": 110.0,
+        "elevation": -58.0
+      }
+    }
+  ],
+  "task_commands": 0,
+  "E_rule": {
+    "decisions": 0,
+    "native_semantic_successes": 0,
+    "placed": [],
+    "support_height": 0.0,
+    "complete": false
+  },
+  "factor_counts": {
+    "legacy_kernel_attempts": 0,
+    "legacy_kernel_completed": 0,
+    "legacy_kernel_failed": 0,
+    "legacy_kernel_result_changed": 0,
+    "legacy_callback_choice_events": 0,
+    "new_successor_choice_events": 0,
+    "new_successor_choice_changed_events": 0
+  },
+  "episode_closure": {
+    "schema": "piper-mujoco-episode-closure-v2",
+    "caller_outcome": "E_TECHNICAL_ZERO_PASS_NEEDS_FROZEN_CAMERA_CHOICE_NOT_MAIN",
+    "terminal_time_s": 0.0,
+    "censored": false,
+    "storage_complete": true,
+    "storage_error": null,
+    "observations": 0,
+    "physical_command_steps": 0,
+    "compressed_payload_bytes": 0,
+    "episode_sha256": "840834d7953ed82c655c4e9ae5020dd258d6af2259dba250d25a5c910c6ea494",
+    "index_sha256": "eda00c1024710c86558d6b126ec876ab031ae869e2afd456a8eb55acb146d0e8",
+    "private_catalog_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control_boundaries_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task_success_not_inferred_from_recorder": true,
+    "no_auto_reset_or_terminal_frame_backfill": true
+  },
+  "actual_task_steps": 0,
+  "actual_task_sim_s": 0.0,
+  "actual_auxiliary_calibration": {
+    "worlds": 1,
+    "sim_seconds": 6.5049999999998835,
+    "source": "original zyh reference_stance + settle",
+    "main_world_unchanged": true,
+    "separate_initialization_state_adjustments_not_task_recovery": true,
+    "used_as_training_episode": false
+  },
+  "final_GPU": {
+    "UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+    "index": 0,
+    "free_MiB": 23588,
+    "utilization_percent": 0,
+    "PID": 191345,
+    "own_compute_bytes": 507510784,
+    "own_observation_state": "MEASURED",
+    "peak_own_compute_bytes": 645922816
+  },
+  "close_errors": [],
+  "wall_s": 19.590225649997592,
+  "peak_RSS_bytes": 2164371456,
+  "usage_known": true,
+  "metrics": {
+    "Data_guard_inclusive": {
+      "calls": 10,
+      "wall_s": 0.7955159537959844
+    }
+  },
+  "guard_and_step_times_overlap": true
+}

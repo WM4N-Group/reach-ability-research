@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-E-FIRST-FULL-V4-ATTEMPT-STOW-PLACEMENT-REJECTED-DIRECT-LIVE-20261116-v1/release.json",
+  "release_sha256": "13082992532fe8b8ae537671129121d7558312d7d715a6a7a4f9257864d9269a",
+  "all_files_SHA_match": true,
+  "no_runtime_source_H_or_closed_result_mutation": true
+}

@@ -1,0 +1,13 @@
+{
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "phase": "main",
+  "closed": true,
+  "result_sha256": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+  "actual_task_sim_s": 48.59500000000641,
+  "actual_aux_sim_s": 6.5049999999998835,
+  "wall_s": 9382.50252012699,
+  "usage_known": true,
+  "output_bytes": 68359373,
+  "main_calls": 1,
+  "automatic_retry": false
+}
