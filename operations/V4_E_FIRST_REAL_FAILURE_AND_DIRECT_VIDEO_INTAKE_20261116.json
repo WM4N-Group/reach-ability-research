@@ -1,0 +1,207 @@
+{
+  "role": "AUDIT_ONLY_REAL_E_MAIN_NOT_TRAINING_OR_PLANNER_INPUT",
+  "at": "2026-11-16T16:33:35.141449+08:00",
+  "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-E-FIRST-FULL-V4-ATTEMPT-STOW-PLACEMENT-REJECTED-DIRECT-LIVE-20261116-v1/release.json",
+  "release_sha256": "13082992532fe8b8ae537671129121d7558312d7d715a6a7a4f9257864d9269a",
+  "verified_local_members_sha256": {
+    "README_CN.md": "4557e014d8b24a549c2671f86a6b3c4168b44bf59987b4ea6a4d8290b4c57290",
+    "minimum-readonly-verification.json": "f87c10c3ec35533bb9391e28bb4ec63322e52b3ee8a0ae53ea633261ba9bf73f",
+    "original/main/direct-third-view/closure.json": "61c0a6521d5b7b7dae0cc1231858650d331d15e44a60073837f3b8f9cdd91e2d",
+    "original/main/direct-third-view/metadata.json": "d09412289f47ff20bac75c6946adec795a15504110a81965cafc0d362165fb08",
+    "original/main/ledger.json": "34f4eb585c04802d802f1cca77c29775b1d1f9a8717d5435aa0f4d8fbb64a01a",
+    "original/main/result.json": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+    "original/main/video-encoding-result.json": "f9086250684278e186605eadfe8f6312ef4742005b204ee2c0cf607c8fbe443d",
+    "original/zero/ledger.json": "109a1c8d8e29e4c6e037c28e4d9660f9b65361607898e73f9e244107d8e6011e",
+    "original/zero/result.json": "ea6efba2201940dbe6c6cff6333711434ed717350086389f5bf25ea2316bebbf"
+  },
+  "remote_result_ledger_video_sha_match": true,
+  "program_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+  "source_commit": "3ab9383a02bd5eeb1179cb3b273427744c3cb325",
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "actual_E_main_identity": {
+    "original_method": "E_original_RuleBaseline_full_V4_goal_attempt",
+    "original_phase": "main",
+    "H_main_dispatch_count": 1,
+    "zero_dispatch_count": 1,
+    "closed": true,
+    "VLM_calls": 0,
+    "WM_calls": 0,
+    "new_successor_choice_events": 0,
+    "not_component_relabelled": true
+  },
+  "journal_independent_remote_read": {
+    "sha256": "3bf039ed11c0bc9fca435f6fcdba152d1b7758ddb759d1d00249fdde07a3630d",
+    "rows": 4711,
+    "last_sha256": "49846da02273c1d0ca361ca60ff1260a95d7946f45b725fad18e93be66efb37d",
+    "entire_hash_chain_valid": true,
+    "not_PD_FIFO_or_NPZ_cold_audit": true
+  },
+  "selected_original_scalar_events": [
+    {
+      "sequence": 455,
+      "record_sha256": "d81400c958cd2a12c24ee09c4b17384a1cf5ac3e19eab9298a018df1ab819324",
+      "event": "V4_E_fixed_rule_selected"
+    },
+    {
+      "sequence": 466,
+      "record_sha256": "3155282abf6854aa65421fe6793d334064129c0d7bb86059ffbcb6dfcb19f414",
+      "event": "ainav_native_admitted",
+      "skill": "NAV",
+      "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+      "time_s": 2.2399999999999745
+    },
+    {
+      "sequence": 468,
+      "record_sha256": "3980f8dcc633dddfbb5478446d5d455ee98636ff5071df394a777127fa3f5ad5",
+      "event": "ainav_native_receipt",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=449",
+        "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+        "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+        "status": "started",
+        "time_s": 2.2449999999999743
+      }
+    },
+    {
+      "sequence": 763,
+      "record_sha256": "74dd855933cba14a8abcd75ce7ccae8d57674e1441a6037b107dc29dd305fed8",
+      "event": "intent_actual_native_outcome"
+    },
+    {
+      "sequence": 764,
+      "record_sha256": "7bd182eb4d42c21f29ab1278254323644c7c238902dced3f1a4de426e646a40b",
+      "event": "ainav_native_receipt",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=3018",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "7717d8205353676132463fefd46fad07e0a363cc3d722132e2d2c5783e8cc296",
+        "status": "succeeded",
+        "time_s": 15.090000000000959
+      }
+    },
+    {
+      "sequence": 773,
+      "record_sha256": "569589aafa5bf5be4aa578c307daabc744678f4a3fe8648abcdcd8d3e96791bf",
+      "event": "ainav_native_admitted",
+      "skill": "PUSH",
+      "option_sha256": "ec8f16e665cefec9925d2065f0860cc970719d29906ce74328f217aa65b88f25",
+      "time_s": 15.090000000000959
+    },
+    {
+      "sequence": 775,
+      "record_sha256": "ee99e230c5ca4d2b04549bfd64ceea54b0aadbeaa4db6ae2a5f87e085907b9be",
+      "event": "ainav_native_receipt",
+      "receipt": {
+        "evidence_ref": "commands:physical_tick=3019",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "ec8f16e665cefec9925d2065f0860cc970719d29906ce74328f217aa65b88f25",
+        "status": "started",
+        "time_s": 15.09500000000096
+      }
+    },
+    {
+      "sequence": 3137,
+      "record_sha256": "0c48d0c67ecc956ec596ee714afbf6e85fdf628fb8766f44578bf94bc1df79e7",
+      "event": "V4_legacy_common_H_kernel_attempt"
+    },
+    {
+      "sequence": 3138,
+      "record_sha256": "be567be8fa49bf4cba27af348462d8776aa53f90b01737b70273f98fd6dc743f",
+      "event": "V4_legacy_common_H_kernel_returned"
+    },
+    {
+      "sequence": 3139,
+      "record_sha256": "72261a0f36361e2af6cd07525cb32226e98c4810f86cfda393fc32a519726bd2",
+      "event": "reach_selected_ground_confirmed_stow_path_choice",
+      "changed": true,
+      "equivalent_to_direct_baseline": true,
+      "actual_total_completion_cost_s": null,
+      "actual_successor_repair_cost_s": null
+    },
+    {
+      "sequence": 4710,
+      "record_sha256": "49846da02273c1d0ca361ca60ff1260a95d7946f45b725fad18e93be66efb37d",
+      "event": "ainav_chain_hard_stop",
+      "actual_physical_tick": 9719,
+      "error": "Original immutable public/native placement lost after stow"
+    }
+  ],
+  "full_task_success": false,
+  "task_stop_reason": "Original immutable public/native placement lost after stow",
+  "resource_censored": false,
+  "original_recorder_censored": true,
+  "recorder_censor_meaning": "CALLER_EXCEPTION_TRUNCATION_NOT_RESOURCE_WATCHDOG_OR_NATIVE_TERMINAL_LABEL",
+  "native_PUSH_terminal_label": null,
+  "PUSH_success_cost_s": null,
+  "CLIMB_label": null,
+  "stages": {
+    "NAV_started_s": 2.2449999999999743,
+    "NAV_succeeded_s": 15.090000000000959,
+    "PUSH_started_s": 15.09500000000096,
+    "NN_internal_confirmed_s": 27.20999999999887,
+    "stow_after_placement_rejection_s": 48.59500000000641
+  },
+  "actual_task_commands": 9719,
+  "E_rule_actual": {
+    "decisions": 1,
+    "native_semantic_successes": 0,
+    "placed": [],
+    "support_height": 0.0,
+    "complete": false
+  },
+  "legacy_H_counts": {
+    "legacy_kernel_attempts": 1,
+    "legacy_kernel_completed": 1,
+    "legacy_kernel_failed": 0,
+    "legacy_kernel_result_changed": 1,
+    "legacy_callback_choice_events": 1,
+    "new_successor_choice_events": 0,
+    "new_successor_choice_changed_events": 0
+  },
+  "legacy_H_same_all_five_not_new_BD_treatment": true,
+  "no_causal_attribution_to_legacy_H_or_geometry_drift": true,
+  "no_success_cost_from_failure_elapsed": true,
+  "cost_scope": "THIS_V3_ONLY_NOT_ALL_PRECEDING_E_PREPARATION_OR_TOTAL_PROJECT",
+  "main_costs": {
+    "wall_s": 9382.50252012699,
+    "task_sim_s": 48.59500000000641,
+    "aux_sim_s": 6.5049999999998835,
+    "output_bytes": 68359373,
+    "usage_known": true
+  },
+  "v3_zero_plus_main_wall_s": 9402.092745776987,
+  "v3_zero_plus_main_aux_sim_s": 13.009999999999767,
+  "video": {
+    "local_existing_copy": "/home/yuanyue/main/work/data-team/manifests/V4-E-first-direct-live-46308-20261116-v3/E-direct-live-1x.mp4",
+    "video_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/E-direct-live-1x.mp4",
+    "video_sha256": "172e2878f3496bdcf04a88f3c3e49bde6d669ed5ecc01281b3b0475392dddad9",
+    "actual_raw_frames": 486,
+    "width": 1280,
+    "height": 720,
+    "fps": 10.0,
+    "playback_speed": 1,
+    "source": "actual direct-live raw master",
+    "native_end_time_s": 48.59500000000641,
+    "native_time_not_inferred_from_clip_duration": true,
+    "no_state_replay_renderer_interpolation_resize_or_selected_success_cut": true,
+    "raw_master_retained": true,
+    "encoder_wall_s": 11.898402910213917,
+    "bytes": 237186,
+    "local_and_remote_SHA_verified": true,
+    "chunk_manifest_count": 31,
+    "grid_manifest_frames": 486,
+    "last_grid_tick": 9700,
+    "final_task_tick": 9719,
+    "no_final_frame_backfill": true,
+    "raw_chunk_contents_not_independently_read_by_Reach": true,
+    "existing_owner_decoded_48s_frame_visually_inspected": true,
+    "full_motion_or_arm_detail_review_not_claimed": true
+  },
+  "full_stream_cold_audit": "PENDING_OWNER_AUDIT_NOT_GATE_TO_DELIVER_ORIGINAL_FAILURE_VIDEO",
+  "E_first_DEV_exposure": true,
+  "no_comparative_method_ranking": true,
+  "model_input_allowed": false,
+  "training_allowed": false,
+  "automatic_retry": false,
+  "no_new_Run_Actor_WM_API_fit_or_tests": true
+}

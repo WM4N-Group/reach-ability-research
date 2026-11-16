@@ -2,6 +2,14 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 16:33：首次真实E main失败及完整direct-live原片已到；不补PUSH终态，不重跑
+
+- **首次真实E main与原片已到，不再报告“尚未派发”：** source59 `3ab9383a…` / 新program `f7dd66c5…` / scope E-first-direct-live-v3，own-zero1/main1已closed。release `13082992…`＋9成员SHA核过，远端result/ledger/video SHA一致，独立读原4711行journal并核完整链。确为原RuleBaseline、VLM0/WM0/新后继选择0，不是旧component的内部C flag更名E；E实际首决策1、placement成功0。
+- **完整目标尝试失败，准确停在首次PUSH后stow placement复核：** 原NAV 15.090 succeeded，PUSH 15.095 started；27.210只有原内部NN确认，不等复合技能/任务成功。48.595sim/9719命令在原placement_handoff复核报`Original immutable public/native placement lost after stow`。原PUSH没有succeeded/failed终态回执，保持None，不补技能负类/成功cost；后续箱、CLIMB/高台未到，不归因40cm域。
+- **原片先交，cold边界不冒进：** 已有本地237186-byte原MP4，SHA172e2878…；1280×720/10Hz/486帧/1×，原始直接live RGB编码。核原closure31chunk/完整0→9700tick采样grid，末帧48.5s，任务终态48.595不从片长推断/不补末帧。仅目检owner已有48s解码帧，广角覆盖全场但狗臂小，不冒完整逐帧/臂细节判读。raw仍远端，本组未拉数组/重渲染；完整PD/FIFO cold尚待，不阻本次真实失败原片交付。
+- **费用/因子与数据用途：** main9382.502520127wall、48.595task＋6.505aux、68,359,373 ledger bytes；本v3 zero＋main9402.092745777wall/13.010aux，known/close0，非全部E前置或项目总费。resource_censored=false而原recorder.censored=true（调用方异常截断）两者均保。共有legacy H本次attempt/completed/changed各1、chosen与direct等价，非B/D新增treatment，也无因果证据说H导致失败/带来收益；旧费用全保。
+- **下一步不复活closed：** AINav按原immutable placement/退出阶段定位真实不合格原因，Data只读补cold/成本；Reach保失败分母、NONE终态及E DEV暴露，不把隔离末态/旧帧拿来填在线cost或训练，不据E结果调四组后仍冒未见。完整后继effects/cost仍未完成，D前缀修复不倒贴本E。原片入口：`/home/yuanyue/main/work/data-team/manifests/V4-E-first-direct-live-46308-20261116-v3/E-direct-live-1x.mp4`；本组小记录`operations/V4_E_FIRST_REAL_FAILURE_AND_DIRECT_VIDEO_INTAKE_20261116.json`。
+
 ### 2026-11-16 14:14：修复D组terminal前缀候选遗漏；30软件两端过，E不等待
 
 - **收尾时核到14:08新计划e56951c2…：** E优先/46308唯一计算端不变；仅新增旧46174按明确缺失资料需要只读核查的授权，非恢复计算/旧root/旧lease。本组本轮无缺失资料需求，未连接旧端，不把资料恢复当新样本。
