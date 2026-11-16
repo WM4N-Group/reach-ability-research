@@ -70,11 +70,15 @@ class AinavSuccessorAdapter:
             steps = steps + (canonical(node.step.public()),); ids = ids + (node.node_id,)
             if len(steps) > 16 or len(paths) >= 256:
                 overflow = True; return
-            if not node.children:
+            # Original prefix merging can leave a proposed goal endpoint with
+            # children from a longer plan. Preserve BOTH proposals; leaf-only
+            # enumeration silently removes the short plan from D's cost domain.
+            # terminal is a VLM hypothesis, never a complete-cost/native proof:
+            # the same provider must still evaluate it (including UNKNOWN).
+            if node.terminal or not node.children:
                 path_id = 'ainav:' + '/'.join(ids)
                 paths.append(PublicPath(path_id, options[root.step.command_key].sha256, steps)); roots[path_id] = root
-            else:
-                for child in node.children.values(): visit(child, steps, ids, root)
+            for child in node.children.values(): visit(child, steps, ids, root)
         for root in self.baseline.tree.root.children.values():
             if root.step.command_key in options: visit(root, (), (), root)
         need(paths, 'Original retained legal tree root paths only')
