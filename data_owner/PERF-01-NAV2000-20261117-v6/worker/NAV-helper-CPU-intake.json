@@ -1,0 +1,86 @@
+{
+  "role": "TARGETED_CPU_ONLY_ACTUAL_NAV_HELPER_IMPORT_INTAKE_NOT_NEW_NATIVE_QUALIFICATION",
+  "source_revision": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "v4_failure_exact_method": "RegisteredCompactNav.update -> from mujoco_zyh.integrated_course import surface_nav_observation",
+  "preload_modules": [
+    "mujoco_zyh.integrated_course",
+    "mujoco_zyh.moving_arm_reference"
+  ],
+  "new_modules": [
+    "contact_failure_exit_contract",
+    "failure_exit_backoff_contract",
+    "initial_contact_progress_monitor",
+    "mujoco_zyh",
+    "mujoco_zyh.failure_capsules",
+    "mujoco_zyh.integrated_course",
+    "mujoco_zyh.moving_arm_reference",
+    "mujoco_zyh.nav_efficiency",
+    "mujoco_zyh.recovery_design",
+    "mujoco_zyh.reselect_B",
+    "mujoco_zyh.resume_nav",
+    "mujoco_zyh.scene",
+    "mujoco_zyh.source_bundle",
+    "mujoco_zyh.stall_stow",
+    "recovery_reference_intersection"
+  ],
+  "CPU_import_succeeded": true,
+  "CUDA_initialized": false,
+  "watched_native_constructor_loader_forward_step_calls": [],
+  "profile_is_targeted_not_arbitrary_C_security_proof": true,
+  "original_NAV_method_import_sites": {
+    "__init__": [
+      "import numpy as np",
+      "from .supported_capture import ActualCaptureWitness",
+      "from .push_stow_witness import ActualPushStowSupportWitness",
+      "from mujoco_zyh.resume_nav import make_compact_nav, nominal_compact_ee, NAV_ARM, compact_contract",
+      "from mujoco_zyh.stall_stow import history_sha",
+      "from mujoco_zyh.native_behavior_executor import world_snapshot, array_sha"
+    ],
+    "check_guards": [
+      "import numpy as np",
+      "from mujoco_zyh.stall_stow import history_sha",
+      "from mujoco_zyh.native_behavior_executor import array_sha",
+      "from .registered_guards import check_object_contacts"
+    ],
+    "_sync_arrival": [],
+    "update": [
+      "import numpy as np",
+      "import torch",
+      "from mujoco_zyh.resume_nav import NAV_ARM",
+      "from mujoco_zyh.integrated_course import surface_nav_observation",
+      "from mujoco_zyh.native_nav_arrival_witness import NativeNAVArrivalWitness",
+      "from mujoco_zyh.stall_stow import ProtectedStow"
+    ],
+    "command": [
+      "import numpy as np",
+      "from mujoco_zyh.moving_arm_reference import brake_arm_hold",
+      "from mujoco_zyh.resume_nav import NAV_ARM",
+      "from runtime import blend_command"
+    ],
+    "after_step": [],
+    "report": [
+      "import numpy as np"
+    ]
+  },
+  "source_files_sha256": {
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/registered_compact_nav.py": "bd173adeb4d31f651f5d8d5a9c2e37c6129421aa21c39edd09e5e986ac501361",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/contact_failure_exit_contract.py": "a86b71aa39a6467af979ea78acd6004a2cbfc6f000b86dc41836fcd307df2d96",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/failure_exit_backoff_contract.py": "038866373431599ca355d52f8dc6ed5e63c01df66febe09b1be185cf4eed4b8d",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/initial_contact_progress_monitor.py": "5ef4e31c077951ea57969923dba19056e149818f3fc9b0c4c88a869f8b4df8f4",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/__init__.py": "3057b75568ea524c65d57a2061cf093b8bbb97a5ce9b89c5ac70f8382451191f",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/failure_capsules.py": "99face5897bfc81afd993988381c506f3a833521607b752a3d6acbbfa400bb19",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/integrated_course.py": "4f95873e1b34b5778c28b18711e0461d18ab7f13d3e31b547f93b901e593a6fb",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/moving_arm_reference.py": "b4a48f67dde7eb0a0aebe417f51ac21070f786964b7aa08bc8be878b240cb168",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/nav_efficiency.py": "878fe53241784c6f2dfbd8125b0664a1607033460766847f0876c7f1c64d0efd",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/recovery_design.py": "4ea51bc66ecf63457e8004d15f9a83cd8f1c03cd74eac6d35ce2c92fb53bb6e0",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/reselect_B.py": "d0c56bd8d0caf9969911f999d0d77874c42df6577f4425c00824dfe28de93af7",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/resume_nav.py": "776b8168d9e7062133c7e7a74e94e5bd88f53a61712d1edc2f68883e4cb2e24a",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/scene.py": "18758bb505f1af255fb04e0a757dc21427faa35263a305ff471e0b21fe6bf76e",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/source_bundle.py": "689be5c169265f87ec324d11908b331d5830f9409c73b153298418be4627ebd1",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/mujoco_zyh/stall_stow.py": "38b12bae7f6aa718801655e1ed82e272adf2bc18d5d7acb4872efa739e199f8c",
+    "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/recovery_reference_intersection.py": "9c98e1e8474b59ce470ad2c2b63cc2b7f5be9653a3f58231405330dfe2f41737"
+  },
+  "new_scope_registered": false,
+  "actual_prepare_zero_main_for_next_program": false,
+  "original_source_not_modified": true
+}
