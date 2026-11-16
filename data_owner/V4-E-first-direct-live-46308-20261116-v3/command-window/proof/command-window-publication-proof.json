@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-E59-ARRIVAL-NNSTOP-BOUNDED-COMMAND-EVIDENCE-20261116-v1/release.json",
+  "release_sha256": "40836ff0b1197721e58033a727c93a24cc15e043dd83cdc07ebd0ce9f70bc11e",
+  "all_files_SHA_match": true,
+  "no_runtime_or_H_mutation": true
+}

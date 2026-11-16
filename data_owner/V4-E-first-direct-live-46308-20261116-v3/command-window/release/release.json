@@ -1,0 +1,30 @@
+{
+  "schema": "Data-E59-arrival-NNSTOP-original-bounded-command-evidence-v1",
+  "at": "2026-11-16T17:11:28.236762+08:00",
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "program_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+  "original_result_sha256": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+  "original_journal_sha256": "3bf039ed11c0bc9fca435f6fcdba152d1b7758ddb759d1d00249fdde07a3630d",
+  "prior_cold_release_sha256": "d7bd4be94aeab1662c0b973ec358971aefee7b422abd01711ae2a8268d38faba",
+  "ticks_inclusive": [
+    5308,
+    5332
+  ],
+  "rows": 25,
+  "exact_landmark_ticks": [
+    5314,
+    5315,
+    5319,
+    5322,
+    5326
+  ],
+  "FIFO_exact": true,
+  "no_unique_root_cause_claim": true,
+  "no_physics_replay_or_retry": true,
+  "training_allowed": false,
+  "model_input_allowed": false,
+  "files": {
+    "README_CN.md": "da2770e06e7387fc26d4bb791fbac434ccadd92fdc926c15d550ac9c8148bedb",
+    "original-window.json": "a0dbf866d656f459a8f21da4895e8be4d51bff83d368d058171ae2ca3ff62aba"
+  }
+}

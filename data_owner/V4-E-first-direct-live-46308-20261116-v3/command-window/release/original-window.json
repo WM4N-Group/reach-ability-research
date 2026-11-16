@@ -1,0 +1,3295 @@
+{
+  "schema": "Data-E59-bounded-original-arrival-NNSTOP-command-window-v1",
+  "at": "2026-11-16T17:09:51.615969+08:00",
+  "scope_id": "data-46308-V4-E-first-direct-live-20261116-v3",
+  "program_sha256": "f7dd66c58d988adb135b5573abd2481deba785874524159fa616af326ff1bf17",
+  "result_sha256": "f74842a970f20126a0adba1f1b64a8d8d954bfd391aee72bc1617e41cf658f4a",
+  "original_journal_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/events.jsonl",
+  "original_journal_sha256": "3bf039ed11c0bc9fca435f6fcdba152d1b7758ddb759d1d00249fdde07a3630d",
+  "original_index_sha256": "328b6d6de9391eadb141f725608602222a1c13c7981a68e0c9922872cb06b092",
+  "physical_tick_window_inclusive": [
+    5308,
+    5332
+  ],
+  "window_command_rows": 25,
+  "exact_original_landmark_ticks": [
+    5314,
+    5315,
+    5319,
+    5322,
+    5326
+  ],
+  "command_field_order": [
+    "q_reference",
+    "dq_reference",
+    "Kp",
+    "Kd",
+    "feedforward_torque"
+  ],
+  "full_vector_byte_pins_are_dtype_shape_plus_C_order_not_JSON_hash": true,
+  "original_parent_NPZ": [
+    {
+      "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "sha256": "cf2e1cb808344d1ac45e4ea0ee1c1df0513705571d3699f4b6ae94e42251b0b2",
+      "original_index_entry": {
+        "path": "commands/000026.npz",
+        "sha256": "cf2e1cb808344d1ac45e4ea0ee1c1df0513705571d3699f4b6ae94e42251b0b2",
+        "bytes": 137852,
+        "first": 5201,
+        "last": 5400
+      }
+    }
+  ],
+  "original_command_rows": [
+    {
+      "physical_tick": 5308,
+      "actual_time_s": 26.539999999999004,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 107,
+      "FIFO_source_issued_tick": 5304,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "3011d5e541f72696f4ff4d35a1ddd87aa4efb6ec3b0290c22b6cc44c98aa3684"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "67a2ead2de34d568105b088c48f58fd21d5235e9954cbc354f16f35577eb3bb6"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "760e5965f6ee89ade38b2cf8b27544e876d7fd91832992d13bc23e3a158b366e"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "83a2da2c78493c9907d486ba0fd3dd6ecf88279d41d2ca569c2a3ebfac4f3894"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "83a2da2c78493c9907d486ba0fd3dd6ecf88279d41d2ca569c2a3ebfac4f3894"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20093411207199097,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5309,
+      "actual_time_s": 26.544999999999003,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 108,
+      "FIFO_source_issued_tick": 5305,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "3011d5e541f72696f4ff4d35a1ddd87aa4efb6ec3b0290c22b6cc44c98aa3684"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "75e207f61dd881b5b17ffef469a608a4fed48ec329b725ae3febe79101b16673"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "c7e67d9a3bc182ec0bed8c7df9c3e028b68221c21c668bc9333a50f5d2774c0f"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "76192f807bec146103c828ee8b7762520b3afe445622ad6f0e4b5466e0cf3b61"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "76192f807bec146103c828ee8b7762520b3afe445622ad6f0e4b5466e0cf3b61"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20093411207199097,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5310,
+      "actual_time_s": 26.549999999999002,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 109,
+      "FIFO_source_issued_tick": 5306,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "3011d5e541f72696f4ff4d35a1ddd87aa4efb6ec3b0290c22b6cc44c98aa3684"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "de5b5a95fe77b3094e766d40698e5df14570ff4a0bed725312573eb885f3af8a"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "4e1bbe73664f3a8ec267cf4d6786df63fcc2144610edc5909ba2e1f8a6da1703"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "9816fb364967466ec871d48cb085064accb6b489d3ce40c184dff6638da7b60f"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "9816fb364967466ec871d48cb085064accb6b489d3ce40c184dff6638da7b60f"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20093411207199097,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5311,
+      "actual_time_s": 26.554999999999,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 110,
+      "FIFO_source_issued_tick": 5307,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "3e7dd4e0e60feb0903bbe3a55ea66796b9db7d6cf98167771a39a7d5cdcab927"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "4613ec1b668e3a801b225d7cb59deae005db5ccd93cc57bdadcc14d6d017d8d2"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "740276b9030dd53081261ae73a73075c8efd1b04d02e5e761e76c53869e52c01"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "740276b9030dd53081261ae73a73075c8efd1b04d02e5e761e76c53869e52c01"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5312,
+      "actual_time_s": 26.559999999999,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 111,
+      "FIFO_source_issued_tick": 5308,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "f18fbcff80f70cf521b63b61bef919494911ad7a0b25075fc2a9cf569f34851a"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "dd2e3c3057565a687c6e55f84accc7b3e726dc67c3d5d4143ffe8a639def4603"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "a009e7fb36ac2a5f9cabddb44bdc0899a5bc503e01a821605df4b25b1b391669"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "a009e7fb36ac2a5f9cabddb44bdc0899a5bc503e01a821605df4b25b1b391669"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5313,
+      "actual_time_s": 26.564999999999,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 112,
+      "FIFO_source_issued_tick": 5309,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "cf515500f6154b2fb1b5e6ced885a3c8af91102ee82dd06d7c88194e3bc09977"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d9c716927f71311c156c73cf0b4e47150c7627992389a97a4eda5054b8dca208"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "fd43b45384d676980d79f7a1aa5f9ced17dc99e85a664c592492dd715c17bd34"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "fd43b45384d676980d79f7a1aa5f9ced17dc99e85a664c592492dd715c17bd34"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5314,
+      "actual_time_s": 26.569999999999,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 113,
+      "FIFO_source_issued_tick": 5310,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "e2f0dcda4623c671d9cc0185952c3899ab2d3cd13ce62d3bfe3489c3572b32d8"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "2a8dc147409c6c7074a3149b0cb21d3d45d7e65f3dd9e66c8d53e59f8a185d2d"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "6065bbca034937b8b82c9e47c26490e23eede22d0556a4bd4fb99b1deda7671a"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "f0ff243365de59a3213105a07c85a97afa92c4996ac3af16d537a9c0be1b1a9b"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "f0ff243365de59a3213105a07c85a97afa92c4996ac3af16d537a9c0be1b1a9b"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_original_fields": {
+        "issued": [
+          [
+            0.19434433579444885,
+            0.6949445188045502,
+            -1.1339678466320038,
+            0.02313458770513535,
+            0.9042571291327477,
+            -1.8172253370285034,
+            -0.09349544057622552,
+            1.0467094592750072,
+            -1.9096174836158752,
+            -0.022467711567878718,
+            1.0096971914172173,
+            -1.1982221603393555,
+            0.22184529900550842,
+            2.5,
+            -1.8322336673736572,
+            1.4472702741622925,
+            -0.18484100699424744,
+            -1.2704483270645142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "delayed": [
+          [
+            0.07179600894451141,
+            0.7583343118429184,
+            -1.144873946905136,
+            0.050331985950469976,
+            0.9072918251156807,
+            -1.7285433411598206,
+            -0.04507751986384392,
+            1.0474747084081173,
+            -1.882265955209732,
+            0.012700757384300237,
+            0.9556320458650589,
+            -1.3032686412334442,
+            0.2214086651802063,
+            2.5,
+            -1.8279671669006348,
+            1.4465324878692627,
+            -0.18769250810146332,
+            -1.2687485218048096
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "q_before": [
+          0.05108543504827326,
+          0.9613907327434079,
+          -1.930787674432633,
+          0.036425250470650615,
+          0.9776188518503212,
+          -1.7948700002326916,
+          -0.03629989469743505,
+          1.0235754602448792,
+          -1.8631403143920453,
+          0.17999923042449648,
+          0.906370146902591,
+          -1.590742563802161,
+          0.23026129114574553,
+          2.80494809427097,
+          -1.746719780156576,
+          1.455420916857877,
+          -0.1693484521753409,
+          -1.2660073830017244
+        ],
+        "dq_before": [
+          0.11787712865312483,
+          0.9521310821562046,
+          0.0718502615046261,
+          0.1647846604403234,
+          0.9125641956316237,
+          -0.3231447354136038,
+          0.6599752199404189,
+          1.3578406686532525,
+          -0.9257795319912061,
+          0.3807347924987227,
+          0.4332980897798938,
+          0.3306752623997298,
+          -0.2736502227220209,
+          0.005347661279653455,
+          -0.3307876274858104,
+          0.0031205000229453795,
+          0.19343989217832358,
+          -0.06590987469766701
+        ],
+        "raw_torque": [
+          0.5505909396952696,
+          -6.662971276308406,
+          23.534301668922133,
+          0.3183312681303868,
+          -2.6573493194181865,
+          2.183686613434294,
+          -0.6593138869565174,
+          -0.09772695629480921,
+          -0.01830150533587893,
+          -5.2473950667051215,
+          1.2178781150061009,
+          8.425812519621667,
+          0.3783193698891009,
+          -15.258100036107814,
+          -5.507428057067276,
+          -0.27601436972726195,
+          -1.0339214082294816,
+          0.01108709863596441
+        ],
+        "torque": [
+          0.5505909396952696,
+          -6.662971276308406,
+          23.534301668922133,
+          0.3183312681303868,
+          -2.6573493194181865,
+          2.183686613434294,
+          -0.6593138869565174,
+          -0.09772695629480921,
+          -0.01830150533587893,
+          -5.2473950667051215,
+          1.2178781150061009,
+          8.425812519621667,
+          0.3783193698891009,
+          -15.258100036107814,
+          -5.507428057067276,
+          -0.27601436972726195,
+          -1.0339214082294816,
+          0.01108709863596441
+        ]
+      }
+    },
+    {
+      "physical_tick": 5315,
+      "actual_time_s": 26.574999999998997,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 114,
+      "FIFO_source_issued_tick": 5311,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "da11ac145a84d2c5e21824446d4830aa05b771feb841284e6dff08cd2c84faa1"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "ffad580094f40482256ef99ff72a8cb5227fa87d6155aa6ee2e6d60ac223717c"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "713508e0aad3a78a645e8e9661d6c9bd9ec8881b64eef644fbc4803d23dced9e"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "3fb11e8bc115507aa1e266662a37cec39752f9cd19354280b742de77afd9667d"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "3fb11e8bc115507aa1e266662a37cec39752f9cd19354280b742de77afd9667d"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.13593819737434387,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_original_fields": {
+        "issued": [
+          [
+            0.2174835443496704,
+            0.7473497979342938,
+            -1.2699060440063477,
+            -0.019562417268753046,
+            0.8885668396949769,
+            -1.7984241247177124,
+            -0.06970217861235142,
+            1.0468513369560242,
+            -1.879703938961029,
+            0.0036060050129890497,
+            1.0545292347669601,
+            -1.2242365181446075,
+            0.22187027400550843,
+            2.500024975,
+            -1.8322086923736571,
+            1.4472952491622926,
+            -0.18481603199424743,
+            -1.270423352064514
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            -0.18412176303897,
+            0.75,
+            -0.03831906073725122,
+            0.07225425282932607,
+            0.08229874823383021
+          ]
+        ],
+        "delayed": [
+          [
+            0.19434433579444885,
+            0.6949445188045502,
+            -1.1339678466320038,
+            0.02313458770513535,
+            0.9042571291327477,
+            -1.8172253370285034,
+            -0.09349544057622552,
+            1.0467094592750072,
+            -1.9096174836158752,
+            -0.022467711567878718,
+            1.0096971914172173,
+            -1.1982221603393555,
+            0.22184529900550842,
+            2.5,
+            -1.8322336673736572,
+            1.4472702741622925,
+            -0.18484100699424744,
+            -1.2704483270645142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "q_before": [
+          0.051540865587310726,
+          0.965910936688629,
+          -1.9301052110865078,
+          0.03714207210935771,
+          0.9818236284558947,
+          -1.7962988165809106,
+          -0.032757162845181834,
+          1.0299462843983547,
+          -1.86753025575905,
+          0.1820462766333325,
+          0.9081140624777772,
+          -1.5888100156516973,
+          0.2286721501069618,
+          2.8050206899162227,
+          -1.7483792250402863,
+          1.4554296387636305,
+          -0.168572427758129,
+          -1.2663171679288743
+        ],
+        "dq_before": [
+          0.0910861078074937,
+          0.904040789044229,
+          0.13649266922506864,
+          0.14336432774141933,
+          0.8409553211146945,
+          -0.28576326964379145,
+          0.7085463704506434,
+          1.2741648306951059,
+          -0.8779882734009622,
+          0.4094092417672061,
+          0.34878311503723003,
+          0.3865096300927669,
+          -0.3178282077567463,
+          0.014519129050475815,
+          -0.33188897674209483,
+          0.0017443811507289809,
+          0.15520488344237823,
+          -0.061956985429953905
+        ],
+        "raw_torque": [
+          4.229452441529648,
+          -8.671417009948902,
+          23.80222533210008,
+          -0.5062431287715223,
+          -2.8315681723632258,
+          -0.45633765164150913,
+          -2.247276154201697,
+          -0.26160365211748626,
+          -0.7358238716641778,
+          -6.381065191096661,
+          2.838223999160865,
+          11.485729881314596,
+          0.6121420681975706,
+          -15.280072753912085,
+          -5.712688456443389,
+          -0.25001408149232807,
+          -0.8760695856894987,
+          -0.020666197282843767
+        ],
+        "torque": [
+          4.229452441529648,
+          -8.671417009948902,
+          23.80222533210008,
+          -0.5062431287715223,
+          -2.8315681723632258,
+          -0.45633765164150913,
+          -2.247276154201697,
+          -0.26160365211748626,
+          -0.7358238716641778,
+          -6.381065191096661,
+          2.838223999160865,
+          11.485729881314596,
+          0.6121420681975706,
+          -15.280072753912085,
+          -5.712688456443389,
+          -0.25001408149232807,
+          -0.8760695856894987,
+          -0.020666197282843767
+        ]
+      }
+    },
+    {
+      "physical_tick": 5316,
+      "actual_time_s": 26.579999999998996,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 115,
+      "FIFO_source_issued_tick": 5312,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "6d61938abffb60e786a3e90aae06bee70af7c37edb101b92bdfcf72f7a00abad"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "54852655fb42e31c4342f0d199208946b26530a342cfe5c1ad751e1a7c273075"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "c520546f438b31a5133ea12cb90cbb9ae0d699a021229e6c0ad60f0870cdb548"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "56c0a51dd746b87384ec029ae907a2d03957f6676e2b7793a47bf3f686356610"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "56c0a51dd746b87384ec029ae907a2d03957f6676e2b7793a47bf3f686356610"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.13593819737434387,
+        0.0,
+        0.0,
+        0.0,
+        1.352531321704747
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5317,
+      "actual_time_s": 26.584999999998995,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 116,
+      "FIFO_source_issued_tick": 5313,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "c1ae46db989103b569e25f54d7e1f7ef088ec2b6b8b762d54c8fa6cca3be7212"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "43eaabcc1c714ad0134fc1bfa11de105eb4f5a44a15fef288489b44080dfde1e"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "b7e865b799a162fff00d7d94996362ee5a17e01a2c9d2bc3a68a7433f830096b"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "3cb0dcbcf5bcb7b46761938ec7454316ea793dbba8f186ba24529bf8af36dde0"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "3cb0dcbcf5bcb7b46761938ec7454316ea793dbba8f186ba24529bf8af36dde0"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.13593819737434387,
+        0.0,
+        0.0,
+        0.0,
+        1.3485957673529387
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5318,
+      "actual_time_s": 26.589999999998994,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 117,
+      "FIFO_source_issued_tick": 5314,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "a18873693bc6737fd35f384f4cb4b6becf6bc1b26ba57a856e1fde6c3336da0c"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "d057634689b6f60eb796748421439a47ab74f8a5da2fec9c6dea815041be1a50"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "c34f714c908f4a5b5ee319a03e9ef5e3350ec1f358c7dfe2c4ceb563fd861219"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "e802b9d9a3a2941fe1dc4634e5dbdd661a5b69c0ec089dbe59822a4134a1152f"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "b84ce81d0229ea3848131ade79913d3b673be0f10dfb682309c376c7f899a44b"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "b84ce81d0229ea3848131ade79913d3b673be0f10dfb682309c376c7f899a44b"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.13593819737434387,
+        0.0,
+        0.0,
+        0.0,
+        1.3413114721564035
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.12254832684993744,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_tick": 5319,
+      "actual_time_s": 26.594999999998993,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 118,
+      "FIFO_source_issued_tick": 5315,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "7387cb1daea92add402df19721e72aa3818235e124df499c1491498a1820100b"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "da11ac145a84d2c5e21824446d4830aa05b771feb841284e6dff08cd2c84faa1"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "b9840450146163edeb5a5c73c76d739e1044584d05b86dd66f1027f4876e10a7"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "43a72204d383643a6f6f5428b97b56bc196acc317df78ee17c9897c572ad538f"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "197f0b522b5bf1f628376ebd727fd85e14d63d59b5b8fbafbd7378a9ce78d85a"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "197f0b522b5bf1f628376ebd727fd85e14d63d59b5b8fbafbd7378a9ce78d85a"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20365259051322937,
+        0.0,
+        0.0,
+        0.0,
+        1.3306972711828902
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.145687535405159,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "exact_original_fields": {
+        "issued": [
+          [
+            0.21060090661048889,
+            0.7833150729537011,
+            -1.3376204371452332,
+            -0.03670645654201507,
+            0.8964296609163285,
+            -1.7631362080574036,
+            -0.03512403219938279,
+            1.0261058546602726,
+            -1.8529387414455414,
+            0.04899979233741761,
+            1.0521867386996746,
+            -1.2880282253026962,
+            0.22221992400550858,
+            2.5003746250000014,
+            -1.8318590423736558,
+            1.4476448991622939,
+            -0.18446638199424728,
+            -1.2700737020645128
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.3306972711828902,
+            -0.24206961795846738,
+            1.01033462067835,
+            -0.04719735778204459,
+            0.06602234240795024,
+            0.07530554597673422
+          ]
+        ],
+        "delayed": [
+          [
+            0.2174835443496704,
+            0.7473497979342938,
+            -1.2699060440063477,
+            -0.019562417268753046,
+            0.8885668396949769,
+            -1.7984241247177124,
+            -0.06970217861235142,
+            1.0468513369560242,
+            -1.879703938961029,
+            0.0036060050129890497,
+            1.0545292347669601,
+            -1.2242365181446075,
+            0.22187027400550843,
+            2.500024975,
+            -1.8322086923736571,
+            1.4472952491622926,
+            -0.18481603199424743,
+            -1.270423352064514
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            -0.18412176303897,
+            0.75,
+            -0.03831906073725122,
+            0.07225425282932607,
+            0.08229874823383021
+          ]
+        ],
+        "q_before": [
+          0.054322866721926474,
+          0.9801866177258118,
+          -1.9258778173750715,
+          0.04098659245443818,
+          0.9940240195671817,
+          -1.8089981004073865,
+          -0.026119737740542815,
+          1.043751584290774,
+          -1.8868039307825695,
+          0.1909372370759688,
+          0.9090698668209979,
+          -1.5757419339782897,
+          0.22171609030031325,
+          2.804510918750082,
+          -1.7551607976912438,
+          1.455566992653535,
+          -0.16636581173649845,
+          -1.2676771370718956
+        ],
+        "dq_before": [
+          0.1666876065859918,
+          0.6164629649175197,
+          0.23216198805450794,
+          0.21575286893839066,
+          0.451225934957478,
+          -0.7194506274587308,
+          0.09774016784282882,
+          0.3363376567674929,
+          -0.9051758662017487,
+          0.4615891132093999,
+          -0.09982556195569472,
+          0.7703934911427599,
+          -0.36031088548445583,
+          -0.04755950984659253,
+          -0.3506971768899051,
+          0.0011801739344699993,
+          0.0715238546805725,
+          -0.057321137586870255
+        ],
+        "raw_torque": [
+          4.794807764880723,
+          -7.354982372696053,
+          19.539856008229012,
+          -1.945922013058771,
+          -3.434450957140631,
+          0.7488896471654618,
+          -1.3661173268599556,
+          -0.10881001410299307,
+          0.7561052743672618,
+          -5.896890429815032,
+          4.423676375552285,
+          10.082926380324809,
+          2.0886418417131267,
+          -15.313299930849874,
+          -4.361740043923353,
+          -0.2900118872779359,
+          -0.6600619916045745,
+          0.08469558596833023
+        ],
+        "torque": [
+          4.794807764880723,
+          -7.354982372696053,
+          19.539856008229012,
+          -1.945922013058771,
+          -3.434450957140631,
+          0.7488896471654618,
+          -1.3661173268599556,
+          -0.10881001410299307,
+          0.7561052743672618,
+          -5.896890429815032,
+          4.423676375552285,
+          10.082926380324809,
+          2.0886418417131267,
+          -15.313299930849874,
+          -4.361740043923353,
+          -0.2900118872779359,
+          -0.6600619916045745,
+          0.08469558596833023
+        ]
+      }
+    },
+    {
+      "physical_tick": 5320,
+      "actual_time_s": 26.599999999998992,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 119,
+      "FIFO_source_issued_tick": 5316,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "5ab4f61b632c69de4d7aa96fd5d8b0fe659066ef2ffa032f4ff6da0de0adfeac"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "6d61938abffb60e786a3e90aae06bee70af7c37edb101b92bdfcf72f7a00abad"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "12874e74b025c5614924d34d3465c8fa5a23dfd0acb78747213c9048bab5baff"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "0af0c3d595d1498e0f35cc5b3308d5f3ff676472268003b6dd2aae9a45ba2a16"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "62441b98cd6dcc2715e7e81955b155567c734c88d29ef8035ed58db6868fa7df"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "62441b98cd6dcc2715e7e81955b155567c734c88d29ef8035ed58db6868fa7df"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20365259051322937,
+        0.0,
+        0.0,
+        0.0,
+        1.3168615256766003
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.145687535405159,
+        0.0,
+        0.0,
+        0.0,
+        1.352531321704747
+      ]
+    },
+    {
+      "physical_tick": 5321,
+      "actual_time_s": 26.60499999999899,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 120,
+      "FIFO_source_issued_tick": 5317,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "ea544d8bcb2ff495b26136fc7ebad46158a40f9fd36067c95aad1f8de35fd842"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "c1ae46db989103b569e25f54d7e1f7ef088ec2b6b8b762d54c8fa6cca3be7212"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "2066d53bf874ae37e82f521ef3e92e267b566952388e18af23b6cee3c1974579"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "6562814065de078351a0d7895d638f306624adb65bf45b075ffcbc7beca96e70"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "69d9e1ec040a73fb3060f5fe3fc6c572db488064cb79e3925a697c28476e89b9"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "69d9e1ec040a73fb3060f5fe3fc6c572db488064cb79e3925a697c28476e89b9"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20365259051322937,
+        0.0,
+        0.0,
+        0.0,
+        1.300074185073722
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.145687535405159,
+        0.0,
+        0.0,
+        0.0,
+        1.3485957673529387
+      ]
+    },
+    {
+      "physical_tick": 5322,
+      "actual_time_s": 26.60999999999899,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 121,
+      "FIFO_source_issued_tick": 5318,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "cab50da33af01bc7a8a2fc46f23e7fe0dc4b4f9f58e7f2e588c12519036d4570"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "a18873693bc6737fd35f384f4cb4b6becf6bc1b26ba57a856e1fde6c3336da0c"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "438aed35b734af67c39a6b1f51392cba46adcb75d647607d72124fb0f040fe60"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "5264934e1d1260662bd7c6a22e6a5c12992f149ac263adbdbd88d03058f60c10"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "bf403ecba409f2f86d7441308a20d32f054027d3d283719e40f453a934d5367f"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "bf403ecba409f2f86d7441308a20d32f054027d3d283719e40f453a934d5367f"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20365259051322937,
+        0.0,
+        0.0,
+        0.0,
+        1.2805046457747067
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.145687535405159,
+        0.0,
+        0.0,
+        0.0,
+        1.3413114721564035
+      ],
+      "exact_original_fields": {
+        "issued": [
+          [
+            0.21060090661048889,
+            0.7833150729537011,
+            -1.3376204371452332,
+            -0.03670645654201507,
+            0.8964296609163285,
+            -1.7631362080574036,
+            -0.03512403219938279,
+            1.0261058546602726,
+            -1.8529387414455414,
+            0.04899979233741761,
+            1.0521867386996746,
+            -1.2880282253026962,
+            0.2227443990055088,
+            2.5008991000000034,
+            -1.8313345673736539,
+            1.4481693741622959,
+            -0.18394190699424706,
+            -1.2695492270645108
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.2805046457747067,
+            -0.28838061008503146,
+            0.951137526897675,
+            -0.06397340756581027,
+            0.04464824131465145,
+            0.06481790729761983
+          ]
+        ],
+        "delayed": [
+          [
+            0.2174835443496704,
+            0.7473497979342938,
+            -1.2699060440063477,
+            -0.019562417268753046,
+            0.8885668396949769,
+            -1.7984241247177124,
+            -0.06970217861235142,
+            1.0468513369560242,
+            -1.879703938961029,
+            0.0036060050129890497,
+            1.0545292347669601,
+            -1.2242365181446075,
+            0.22209504900550853,
+            2.500249750000001,
+            -1.8319839173736563,
+            1.4475200241622934,
+            -0.18459125699424733,
+            -1.2701985770645132
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.3413114721564035,
+            -0.2259477093891089,
+            1.0288113684200866,
+            -0.043584115546846824,
+            0.06982268362308547,
+            0.07780280275603246
+          ]
+        ],
+        "q_before": [
+          0.05823458953703225,
+          0.9899519979868453,
+          -1.92663343275884,
+          0.044688509787341145,
+          0.9993963826892835,
+          -1.8155021259805209,
+          -0.026535836617133705,
+          1.042760307936633,
+          -1.8903867941417563,
+          0.19801696931425494,
+          0.9068414457804806,
+          -1.5645575096750781,
+          0.21728482153356238,
+          2.8017396956835277,
+          -1.7583729699236286,
+          1.455155432614154,
+          -0.16645638829632217,
+          -1.2677554876690653
+        ],
+        "dq_before": [
+          0.2994254985706814,
+          0.6405401789686535,
+          -0.1337594014247184,
+          0.26951824415214415,
+          0.30962862208760317,
+          -0.2935543571963414,
+          -0.0822194780278375,
+          -0.23078855716729801,
+          0.03118227828016426,
+          0.4700900578719787,
+          -0.17336738950069022,
+          0.7425801929281488,
+          -0.2624798130879952,
+          -0.2487676351882868,
+          -0.1428798008150184,
+          -0.021797915748335017,
+          -0.030701690041005616,
+          0.0028546747303488107
+        ],
+        "raw_torque": [
+          4.597813345236736,
+          -7.662390108957737,
+          19.7820773034296,
+          -2.0892387581741123,
+          -3.510663463081763,
+          0.6884726522020583,
+          -1.245658573039829,
+          0.26120400488211415,
+          0.3017762884537175,
+          -6.114382963761164,
+          4.534654103294799,
+          9.764081630157229,
+          2.3692622850176965,
+          -14.80290972318887,
+          -4.4314250251370755,
+          -0.20725262185766022,
+          -0.39746915221215534,
+          0.02608634011672553
+        ],
+        "torque": [
+          4.597813345236736,
+          -7.662390108957737,
+          19.7820773034296,
+          -2.0892387581741123,
+          -3.510663463081763,
+          0.6884726522020583,
+          -1.245658573039829,
+          0.26120400488211415,
+          0.3017762884537175,
+          -6.114382963761164,
+          4.534654103294799,
+          9.764081630157229,
+          2.3692622850176965,
+          -14.80290972318887,
+          -4.4314250251370755,
+          -0.20725262185766022,
+          -0.39746915221215534,
+          0.02608634011672553
+        ]
+      }
+    },
+    {
+      "physical_tick": 5323,
+      "actual_time_s": 26.61499999999899,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 122,
+      "FIFO_source_issued_tick": 5319,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "85862e45f081f9587b29d7e0f347009e75d9402c2b3c830c5e306d2f52363cc5"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "7387cb1daea92add402df19721e72aa3818235e124df499c1491498a1820100b"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "e06c8879deffdbda7756178b5f5a4fe96de5bfb7611c080a1180f660b94ec82c"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "b0454722631ec135800befd8207baa0255a57d12b6b8f62f4408a7fad9ff49aa"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "91e6854d37fc526d6985a0aeaa50646a424d19dd103ecabb8a33ceab48933937"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "91e6854d37fc526d6985a0aeaa50646a424d19dd103ecabb8a33ceab48933937"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20921331644058228,
+        0.0,
+        0.0,
+        0.0,
+        1.2584099826124704
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19274649024009705,
+        0.0,
+        0.0,
+        0.0,
+        1.3306972711828902
+      ]
+    },
+    {
+      "physical_tick": 5324,
+      "actual_time_s": 26.61999999999899,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 123,
+      "FIFO_source_issued_tick": 5320,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "20f23cf41aee59214e9905dc821bcfe1a7e9e1d049a666482e9cc901b24afb35"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "5ab4f61b632c69de4d7aa96fd5d8b0fe659066ef2ffa032f4ff6da0de0adfeac"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "998f1277b93552dbe4655f42c26fcc9d181940988355e0d16aff13b08e68114b"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "a3f63e66011de438282c7792d417d93828a81c4dc0316c03897647280f77c1cc"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d902fdb5e1b8dfced9a12bbff27218ccb69797d5dcd2ad51c909555d45ca18b8"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d902fdb5e1b8dfced9a12bbff27218ccb69797d5dcd2ad51c909555d45ca18b8"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20921331644058228,
+        0.0,
+        0.0,
+        0.0,
+        1.231500483157967
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19274649024009705,
+        0.0,
+        0.0,
+        0.0,
+        1.3168615256766003
+      ]
+    },
+    {
+      "physical_tick": 5325,
+      "actual_time_s": 26.624999999998987,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 124,
+      "FIFO_source_issued_tick": 5321,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "1801b6786d5828b1dcbc358fa017e753d60a78580c2b5653f34dcc9241ff519f"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "ea544d8bcb2ff495b26136fc7ebad46158a40f9fd36067c95aad1f8de35fd842"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "6e2049e1e7f8e46cd47affb6705a3591cc8962db3a47101d083810e4a4fe4f49"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "65a74d0a855e50f7c1ce5c68d801da0c122e4764ef321d52e9e40ffcb0880629"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "dd49fd33f5659645d3ea344d125d0bbcd47fdc60ba5088af796e1e3b63b8914b"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "dd49fd33f5659645d3ea344d125d0bbcd47fdc60ba5088af796e1e3b63b8914b"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20921331644058228,
+        0.0,
+        0.0,
+        0.0,
+        1.2006904230574058
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19274649024009705,
+        0.0,
+        0.0,
+        0.0,
+        1.300074185073722
+      ]
+    },
+    {
+      "physical_tick": 5326,
+      "actual_time_s": 26.629999999998986,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 125,
+      "FIFO_source_issued_tick": 5322,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "24104fb42547f1ab2c65f8138a1ba0d804446a923cb80e8aab2afcb84a6ffd07"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "cab50da33af01bc7a8a2fc46f23e7fe0dc4b4f9f58e7f2e588c12519036d4570"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "18d285805a6f1f685e3830bb408203bffbfffcd3f630771bbac2088d2061292f"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "9e0c04c0024d2638bdc024ebbe90e74e987d18624b5e1a714dc94576b966f66e"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "599b9a9a56097e2af61e75f3229bbf86bb4eb03cea39fd0f68c543dd5d3cdd28"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "599b9a9a56097e2af61e75f3229bbf86bb4eb03cea39fd0f68c543dd5d3cdd28"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.20921331644058228,
+        0.0,
+        0.0,
+        0.0,
+        1.1667457219961508
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19274649024009705,
+        0.0,
+        0.0,
+        0.0,
+        1.2805046457747067
+      ],
+      "exact_original_fields": {
+        "issued": [
+          [
+            0.18271278738975524,
+            0.8090952338650823,
+            -1.343181163072586,
+            -0.0650380790233612,
+            0.9085231006145478,
+            -1.6723769307136536,
+            -0.005929833650588995,
+            1.0132547728717327,
+            -1.8267552554607391,
+            0.09711675196886063,
+            1.0241013560444117,
+            -1.387663871049881,
+            0.22379334900550923,
+            2.5019480500000073,
+            -1.83028561737365,
+            1.4492183241622998,
+            -0.18289295699424662,
+            -1.2685002770645069
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.1667457219961508,
+            -0.34958570133278677,
+            0.8601562307242645,
+            -0.0968333481958874,
+            -0.0004243930065744306,
+            0.043842841364167384
+          ]
+        ],
+        "delayed": [
+          [
+            0.21060090661048889,
+            0.7833150729537011,
+            -1.3376204371452332,
+            -0.03670645654201507,
+            0.8964296609163285,
+            -1.7631362080574036,
+            -0.03512403219938279,
+            1.0261058546602726,
+            -1.8529387414455414,
+            0.04899979233741761,
+            1.0521867386996746,
+            -1.2880282253026962,
+            0.2227443990055088,
+            2.5008991000000034,
+            -1.8313345673736539,
+            1.4481693741622959,
+            -0.18394190699424706,
+            -1.2695492270645108
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            80.0,
+            30.0,
+            30.0,
+            20.0
+          ],
+          [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.2805046457747067,
+            -0.28838061008503146,
+            0.951137526897675,
+            -0.06397340756581027,
+            0.04464824131465145,
+            0.06481790729761983
+          ]
+        ],
+        "q_before": [
+          0.066392532959619,
+          1.0025146628943682,
+          -1.9323694221823624,
+          0.05216818582322047,
+          1.0043152729481954,
+          -1.8161743173334879,
+          -0.02573411192267649,
+          1.0312142344882944,
+          -1.8763333906489685,
+          0.2079594755610032,
+          0.904045749096322,
+          -1.5518683590974547,
+          0.21334407897880664,
+          2.7946046615305247,
+          -1.7588220758050697,
+          1.4549709220365479,
+          -0.16716414986753608,
+          -1.267564796545197
+        ],
+        "dq_before": [
+          0.47191429064504287,
+          0.6276404884780015,
+          -0.36033053262383086,
+          0.4412376023939607,
+          0.26691309375087735,
+          0.004944771597659627,
+          0.19214386966837332,
+          -0.7543126450698012,
+          1.0672481230546422,
+          0.5173253883901877,
+          -0.09049627335597422,
+          0.5448820969479331,
+          -0.15948656468798778,
+          -0.39831979468688755,
+          0.01606284231451266,
+          -0.005305845319610846,
+          -0.042623973003754374,
+          0.01538794181269409
+        ],
+        "raw_torque": [
+          4.043102635139071,
+          -6.952571991306815,
+          18.05866787068818,
+          -2.9309818323934427,
+          -3.3967162172065355,
+          1.588176415323934,
+          -0.3969839301022129,
+          0.2993361922012263,
+          0.06149060227002934,
+          -5.07918572974168,
+          4.498527452114164,
+          7.588274755673994,
+          2.228980341173778,
+          -14.17701909723732,
+          -4.898050325532599,
+          -0.2521023078345384,
+          -0.352124539977292,
+          0.009741355098650935
+        ],
+        "torque": [
+          4.043102635139071,
+          -6.952571991306815,
+          18.05866787068818,
+          -2.9309818323934427,
+          -3.3967162172065355,
+          1.588176415323934,
+          -0.3969839301022129,
+          0.2993361922012263,
+          0.06149060227002934,
+          -5.07918572974168,
+          4.498527452114164,
+          7.588274755673994,
+          2.228980341173778,
+          -14.17701909723732,
+          -4.898050325532599,
+          -0.2521023078345384,
+          -0.352124539977292,
+          0.009741355098650935
+        ]
+      }
+    },
+    {
+      "physical_tick": 5327,
+      "actual_time_s": 26.634999999998985,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 126,
+      "FIFO_source_issued_tick": 5323,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "eec95c9daae8d159e5c2dd17653ba0f1dd64bea1aed96c4d2079d952ac380412"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "85862e45f081f9587b29d7e0f347009e75d9402c2b3c830c5e306d2f52363cc5"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "bb84793cac2e3a2a172208c3641b6e85e9ab0bbb6e6571bc41d99b26c44f5e78"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "70581e0527b4654761cceb42503ae34942df682d38d30df94c575854f159c61b"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "ae1273765a5c45e4c6b159f83deb5316c7036742438be45edd6238a0784d3bf4"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "ae1273765a5c45e4c6b159f83deb5316c7036742438be45edd6238a0784d3bf4"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.35362621396780014,
+        0.0,
+        0.0,
+        0.0,
+        1.1303408661344803
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19830721616744995,
+        0.0,
+        0.0,
+        0.0,
+        1.2584099826124704
+      ]
+    },
+    {
+      "physical_tick": 5328,
+      "actual_time_s": 26.639999999998984,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 127,
+      "FIFO_source_issued_tick": 5324,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "55e0b16875e81a6bb4e70e7f9dbdaf1e9ef1a58eafb031a769089e4f742ca1f1"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "20f23cf41aee59214e9905dc821bcfe1a7e9e1d049a666482e9cc901b24afb35"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "328ce410c5a21c3cb25b6403bd27ea10f06110da23a4284cc01aa1c9a506b5d3"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "8db661a21b8f343a1cab318ff4424c8cf28da5d1590831a558bd6abb1ab566d5"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "1ad76bc263b6d638944a8d727cce336017410a65044629f256e083ddcdd31701"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "1ad76bc263b6d638944a8d727cce336017410a65044629f256e083ddcdd31701"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.35362621396780014,
+        0.0,
+        0.0,
+        0.0,
+        1.0905975214269839
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19830721616744995,
+        0.0,
+        0.0,
+        0.0,
+        1.231500483157967
+      ]
+    },
+    {
+      "physical_tick": 5329,
+      "actual_time_s": 26.644999999998983,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 128,
+      "FIFO_source_issued_tick": 5325,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "a4a0cec6e16b172509ca25bf03cb60a179b3ff40a49212f8a1a9cfde2d46e268"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "1801b6786d5828b1dcbc358fa017e753d60a78580c2b5653f34dcc9241ff519f"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d85c14d828a348e0b465798530c1a1055d69f9a1f524e72bef50fca826a5939b"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "1295948e3a71b5658bb091f82a6aa310392765af82ee8d29fa81f2b5392b3865"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "1edd6c4c14a29a53b93e7f53b6190828b9201afc43cbc03c5f45233d816a359e"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "1edd6c4c14a29a53b93e7f53b6190828b9201afc43cbc03c5f45233d816a359e"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.35362621396780014,
+        0.0,
+        0.0,
+        0.0,
+        1.0485048865583542
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19830721616744995,
+        0.0,
+        0.0,
+        0.0,
+        1.2006904230574058
+      ]
+    },
+    {
+      "physical_tick": 5330,
+      "actual_time_s": 26.649999999998983,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 129,
+      "FIFO_source_issued_tick": 5326,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "ed75a072b7175f67cc6b9734e9e29c11952a71061e839163cead8cca7a7958f5"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "24104fb42547f1ab2c65f8138a1ba0d804446a923cb80e8aab2afcb84a6ffd07"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "397094675a2b4b3f2c2cb25f73296cb3a7c33d611dd63a3f016531c9d11600e6"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "0250ba5285b5ff14876a0089c643efadde478a8749b5a71661df506618988d4b"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "ac7789c46e389b05516be440c736ec3a89d4199d6682f58172235ef6fda4e12a"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "ac7789c46e389b05516be440c736ec3a89d4199d6682f58172235ef6fda4e12a"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.35362621396780014,
+        0.0,
+        0.0,
+        0.0,
+        1.004817437122158
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.19830721616744995,
+        0.0,
+        0.0,
+        0.0,
+        1.1667457219961508
+      ]
+    },
+    {
+      "physical_tick": 5331,
+      "actual_time_s": 26.65499999999898,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 130,
+      "FIFO_source_issued_tick": 5327,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "3085d1036a2e163a1a763737f921ee6dfce6af3fcb163a41edb85a047eb28020"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "eec95c9daae8d159e5c2dd17653ba0f1dd64bea1aed96c4d2079d952ac380412"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "595c61bb438cb8b87dca397e2df43e76acddc64b9702cd98648dcf8c29567f3f"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "8c6253d7014aa901909fb667bfd37323db867a9682412924b512cdeb12c9003f"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "c2776ba432a28fe29f6fe4bf61aca0d0c8ae30bd6fa82e44f5a27bc6b946dca8"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "c2776ba432a28fe29f6fe4bf61aca0d0c8ae30bd6fa82e44f5a27bc6b946dca8"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.5321106612682343,
+        0.0,
+        0.0,
+        0.0,
+        0.9608629640807853
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.2649442180991173,
+        0.0,
+        0.0,
+        0.0,
+        1.1303408661344803
+      ]
+    },
+    {
+      "physical_tick": 5332,
+      "actual_time_s": 26.65999999999898,
+      "original_NPZ": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-E-first-direct-live-20261116-v3/main/episode/commands/000026.npz",
+      "original_row_index": 131,
+      "FIFO_source_issued_tick": 5328,
+      "field_byte_pins": {
+        "issued": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "6d158215d9afdf107f3870d6c75fbc5208e11f41321cd52054a877753de75abd"
+        },
+        "delayed": {
+          "dtype": "float64",
+          "shape": [
+            5,
+            18
+          ],
+          "sha256": "55e0b16875e81a6bb4e70e7f9dbdaf1e9ef1a58eafb031a769089e4f742ca1f1"
+        },
+        "q_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "6063c45c904ceaabaaa73fc014412f0e223075e6847cea30dd6ee216b901ae3d"
+        },
+        "dq_before": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "62e731fcaf64cfd608be8f20f3a91913ebd00e3534cbcfc8c2d9d3b980d23c16"
+        },
+        "raw_torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d541a1eabe42b1685c4cc70d4508a69dddae889b0952ffad4cc135558bc36329"
+        },
+        "torque": {
+          "dtype": "float64",
+          "shape": [
+            18
+          ],
+          "sha256": "d541a1eabe42b1685c4cc70d4508a69dddae889b0952ffad4cc135558bc36329"
+        }
+      },
+      "issued_max_abs_delta_vs_tick5314_by_command_field": [
+        0.5321106612682343,
+        0.0,
+        0.0,
+        0.0,
+        0.917964300804275
+      ],
+      "delayed_max_abs_delta_vs_tick5314_by_command_field": [
+        0.2649442180991173,
+        0.0,
+        0.0,
+        0.0,
+        1.0905975214269839
+      ]
+    }
+  ],
+  "journal_markers": [
+    {
+      "sequence": 2496,
+      "journal_record_sha256": "4ace5321f38514edffeb036128b7919a67a6e5d9021b8e267f3df9af5688c433",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.549999999999002,
+        "phase": "run",
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.014279740635649445,
+        "actual_signed_dock_gap_m": 0.01008269181884236
+      }
+    },
+    {
+      "sequence": 2500,
+      "journal_record_sha256": "357ce3c0f47ad9568c0fd993d0982365788df2b742d43e560acb46c411f95f33",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.569999999999,
+        "phase": "run",
+        "placement_geometry_verified": true,
+        "task_geometry_pass": true,
+        "public_XY_error_m": 0.008855114958241437,
+        "actual_signed_dock_gap_m": 0.00346226897331281
+      }
+    },
+    {
+      "sequence": 2501,
+      "journal_record_sha256": "acc66e2c61e7c442b20de00315a4494f9cd055c3f20adcef1344c28aad7cdaec",
+      "event": "placement_arrival_original_brake_started",
+      "original_scalar_fields": {
+        "time_s": 26.569999999999,
+        "placement_geometry_verified": true,
+        "task_geometry_pass": true,
+        "public_XY_error_m": 0.008855114958241437,
+        "actual_signed_dock_gap_m": 0.00346226897331281,
+        "genuine_native_confirmation": false
+      }
+    },
+    {
+      "sequence": 2503,
+      "journal_record_sha256": "cecba3cb67558bb4c247de395b4bee219cb7154fa71108d03df01d088ad58ace",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.589999999998994,
+        "phase": "NN_STOP_MOVING_PUSH",
+        "placement_geometry_verified": true,
+        "task_geometry_pass": true,
+        "public_XY_error_m": 0.007144195678927965,
+        "actual_signed_dock_gap_m": -0.0033172122439470986
+      }
+    },
+    {
+      "sequence": 2505,
+      "journal_record_sha256": "8878a78875630285031a2404c6a1dd2dc023fc22f7b7f35d3cc66808d9b6b545",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.60999999999899,
+        "phase": "NN_STOP_MOVING_PUSH",
+        "placement_geometry_verified": true,
+        "task_geometry_pass": true,
+        "public_XY_error_m": 0.01026630061283556,
+        "actual_signed_dock_gap_m": -0.008823198138506072
+      }
+    },
+    {
+      "sequence": 2507,
+      "journal_record_sha256": "b0173824350e3604b62467938e7d813c7e6f89cd98decc93cfb7dbd701da9361",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.629999999998986,
+        "phase": "NN_STOP_MOVING_PUSH",
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.014620226352646403,
+        "actual_signed_dock_gap_m": -0.013720126974703817
+      }
+    },
+    {
+      "sequence": 2509,
+      "journal_record_sha256": "eb88221a0cbcf57b4172fe6fc7b953bf7cdb9ec9e6a5c46dd6fe58eca9f3491a",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.649999999998983,
+        "phase": "NN_STOP_MOVING_PUSH",
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.019355891191449946,
+        "actual_signed_dock_gap_m": -0.018326512555352004
+      }
+    },
+    {
+      "sequence": 2511,
+      "journal_record_sha256": "63680250d0498778c5a86bfef741ae9bd77df777b5c6b6f04dc8989696415ca5",
+      "event": "placement_actual_20ms_measurement",
+      "original_scalar_fields": {
+        "time_s": 26.66999999999898,
+        "phase": "NN_STOP_MOVING_PUSH",
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.023585556483633245,
+        "actual_signed_dock_gap_m": -0.022433039363045637
+      }
+    },
+    {
+      "sequence": 2565,
+      "journal_record_sha256": "76c50b5e30e57f475bd39f426eb236171a95414dfe58296267cf3e32d220dc88",
+      "event": "placement_original_native_clock_confirmed",
+      "original_scalar_fields": {
+        "time_s": 27.20999999999887,
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.037257480345806164,
+        "actual_signed_dock_gap_m": -0.03608064609319506
+      }
+    },
+    {
+      "sequence": 2567,
+      "journal_record_sha256": "024f6844604cbe521d040835265ae7a7bb06f44d5ee3cb71dbca35147b12999a",
+      "event": "placement_original_NN_confirmed_landing_promoted_without_reset",
+      "original_scalar_fields": {
+        "time_s": 27.20999999999887,
+        "placement_geometry_verified": false,
+        "task_geometry_pass": false,
+        "public_XY_error_m": 0.037257480345806164,
+        "actual_signed_dock_gap_m": -0.03608064609319506
+      }
+    }
+  ],
+  "FIFO_within_window_exact": true,
+  "interpretation": {
+    "first_pass_measurement_tick": 5314,
+    "first_post_measurement_issued_tick": 5315,
+    "that_issued_command_FIFO_applies_at_tick": 5319,
+    "first_loss_measurement_tick": 5326,
+    "delayed_at_first_loss_is_issued_tick": 5322,
+    "actual_command_changes_not_unique_physical_cause": true,
+    "controller_mode_origin_not_inferred_from_array_difference": true
+  },
+  "closed_H_and_parent_NPZ_unchanged": true,
+  "no_new_task_world_replay_or_training": true,
+  "model_input_allowed": false,
+  "training_allowed": false,
+  "role": "PRIVATE_COMMAND_EVIDENCE_NOT_PLANNER_INPUT"
+}
