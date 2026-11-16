@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-16T13:07:04.671791+08:00",
+  "before_unfrozen_staging_sha256": {
+    "encode_video.py": "7b60327cc110b3d7209191c1600603301502929d187ca0116dcf6d0a8cb5c305",
+    "fresh_size.py": "a7803a10aacfed1271ee247b499cc353f5598ff63854bceb971af14339385284",
+    "private_catalog_boundary.py": "7c78614689400f18a4439f593784e54c489e555f9a1cf61371a6c1770b0d06fb",
+    "protocol.json": "87970d5d1a96510c29704d432cabf817683afeffddbe20dffaae6a7ee50e002f",
+    "worker.py": "b70c1135958d20107dee5182a2e63c180148f6d497733085f9d105e2360c1d29"
+  },
+  "final_files_sha256": {
+    "protocol.json": "3da9d5c6297fe9e8ff97d7d0d051f8c001bbb6373de70af6ca644fafaf20ead4",
+    "worker.py": "b70c1135958d20107dee5182a2e63c180148f6d497733085f9d105e2360c1d29",
+    "encode_video.py": "7b60327cc110b3d7209191c1600603301502929d187ca0116dcf6d0a8cb5c305",
+    "fresh_size.py": "a7803a10aacfed1271ee247b499cc353f5598ff63854bceb971af14339385284",
+    "private_catalog_boundary.py": "7c78614689400f18a4439f593784e54c489e555f9a1cf61371a6c1770b0d06fb"
+  },
+  "libx264_available": true,
+  "no_H_or_native_operation": true
+}

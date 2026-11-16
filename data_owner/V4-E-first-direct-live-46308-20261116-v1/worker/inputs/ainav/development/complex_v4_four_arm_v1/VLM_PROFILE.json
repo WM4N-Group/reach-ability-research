@@ -1,0 +1,22 @@
+{
+  "schema": "AINav-V4-explicit-DeepSeek-runtime-profile-v1",
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "thinking": "disabled",
+  "transport_TLS": true,
+  "fallback_provider": null,
+  "api_key_environment": "DEEPSEEK_API_KEY",
+  "credential_value_persisted": false,
+  "credential_command_line_argument_allowed": false,
+  "original_backend_source": "ainav/deepseek.py",
+  "original_backend_sha256": "11e5fdd868a41aa008469db6eb04f31d451c9e8cb35943fd65580573430a5919",
+  "use_original_RoleRunner_and_AinavPlanner_for_C_D": true,
+  "A_D_same_frozen_provider_model_sampling_and_limits": true,
+  "E_VLM_calls": 0,
+  "API_call_token_timeout_limits": "Data must freeze before constructing backend; no constructor called by this profile",
+  "original_authenticated_model_metadata_verification_required": true,
+  "actual_served_model_identity_must_be_frozen": true,
+  "actual_API_calls_in_this_delivery": 0,
+  "secret_presence_or_injection_not_claimed": true
+}

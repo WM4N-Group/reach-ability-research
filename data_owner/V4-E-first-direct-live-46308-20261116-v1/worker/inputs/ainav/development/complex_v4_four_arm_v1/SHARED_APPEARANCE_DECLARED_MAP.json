@@ -1,0 +1,383 @@
+{
+  "source_ref": "V4 same-five-arm PUBLIC declaration catalogue; not private actual geometry; SHARED_PUBLIC_APPEARANCE_PRIOR:75842a43ee8313edf95e8d92bbc6dc5b22d5f18474c316fa7c5f92a67e895457",
+  "anchors": [
+    {
+      "target_ref": "cuboid_a",
+      "position_xyz_m": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared INITIAL task blueprint only, never live box pose/association or native permission; SHARED_REVIEW_RGB=#e6a23c; declared prior, not native identity"
+    },
+    {
+      "target_ref": "cuboid_b",
+      "position_xyz_m": [
+        6.5,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared INITIAL task blueprint only, never live box pose/association or native permission; SHARED_REVIEW_RGB=#31a9a0; declared prior, not native identity"
+    },
+    {
+      "target_ref": "cuboid_c",
+      "position_xyz_m": [
+        11.0,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared INITIAL task blueprint only, never live box pose/association or native permission; SHARED_REVIEW_RGB=#9177dc; declared prior, not native identity"
+    },
+    {
+      "target_ref": "v4-ground-nav-000",
+      "position_xyz_m": [
+        -0.08,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-001",
+      "position_xyz_m": [
+        -0.08,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-002",
+      "position_xyz_m": [
+        4.1,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-003",
+      "position_xyz_m": [
+        4.1,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-004",
+      "position_xyz_m": [
+        7.5,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-005",
+      "position_xyz_m": [
+        9.3,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-006",
+      "position_xyz_m": [
+        9.3,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    },
+    {
+      "target_ref": "v4-ground-nav-007",
+      "position_xyz_m": [
+        0.22,
+        0.0,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_a; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-008",
+      "position_xyz_m": [
+        0.37,
+        0.0,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_a; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-009",
+      "position_xyz_m": [
+        0.82,
+        0.0,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_a; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-010",
+      "position_xyz_m": [
+        4.72,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_b; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-011",
+      "position_xyz_m": [
+        4.87,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_b; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-012",
+      "position_xyz_m": [
+        5.32,
+        2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_b; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-013",
+      "position_xyz_m": [
+        9.22,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_c; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-014",
+      "position_xyz_m": [
+        9.37,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_c; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-ground-nav-015",
+      "position_xyz_m": [
+        9.82,
+        -2.6,
+        0.0
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_c; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-box-top-cuboid_a",
+      "position_xyz_m": [
+        2.6,
+        0.0,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_a; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-box-top-cuboid_b",
+      "position_xyz_m": [
+        7.1,
+        2.6,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_b; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "v4-box-top-cuboid_c",
+      "position_xyz_m": [
+        11.6,
+        -2.6,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose; WM_CONDITIONING_SUBJECT=cuboid_c; declaration relation only, not current pose or READY"
+    },
+    {
+      "target_ref": "cuboid_a:upper-entry",
+      "position_xyz_m": [
+        2.6,
+        0.0,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared destination surface after required placement only; current binding/support/20cm rise still unqualified"
+    },
+    {
+      "target_ref": "cuboid_b:upper-entry",
+      "position_xyz_m": [
+        7.1,
+        2.6,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared destination surface after required placement only; current binding/support/20cm rise still unqualified"
+    },
+    {
+      "target_ref": "cuboid_c:upper-entry",
+      "position_xyz_m": [
+        11.6,
+        -2.6,
+        0.2
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared destination surface after required placement only; current binding/support/20cm rise still unqualified"
+    },
+    {
+      "target_ref": "goal_deck",
+      "position_xyz_m": [
+        13.9,
+        -2.85,
+        0.6
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared destination surface after required placement only; current binding/support/20cm rise still unqualified"
+    },
+    {
+      "target_ref": "v4-goal-elevated",
+      "position_xyz_m": [
+        14.1,
+        -2.6,
+        0.6
+      ],
+      "uncertainty_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Declared same-support NAV reference, not a measured current robot pose"
+    }
+  ]
+}
