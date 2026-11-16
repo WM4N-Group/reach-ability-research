@@ -1,0 +1,160 @@
+{
+  "role": "CPU_PERF_CANDIDATE_INTAKE_AND_FAKE_CLOCK_BOUNDARY_REVIEW_NOT_NATIVE_QUALIFICATION",
+  "at": "2026-11-16T21:11:06.729422+08:00",
+  "plan_sha256": "02dc65edff1a562a4e1d47b6f24ebd8b169d99d780bd69c8c6a9063cb1a73064",
+  "Data_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PERF-CONTROLLED-IO-PERIODIC-GUARD-CPU-QUALIFIED-NOT-NATIVE-20261116-v1/release.json",
+  "Data_release_sha256": "543af841e8405ebf7e718b033a52333c87fb877b9b1a1a45b834978f7f7fcca9",
+  "Data_verified_members_sha256": {
+    "evidence/remote-shutdown-safety-test.json": "6f40364958c42db957e3fb508f295d62a0b6f09fa027b063590d371bf44b25fb",
+    "evidence/remote-additional-tests-and-FUSE-benchmark.json": "e5713346e7cdadfdf1aa5493804ab85ad945dd379353d17700a8f1bc6952ae54",
+    "evidence/closed-tree-sizes-only.json": "9d0316b1abd4017db66aa8f0f017670beb995b26a38b86fb80c09fc310c05aeb",
+    "evidence/remote-CPU-tests.json": "bea271cf5c8c8bb26d16c56f01eac9b8b90e176a5dc06bc7deb8df4978958017",
+    "evidence/new-plan-acceptance-and-safety-boundaries.json": "c47617edd7422cc4dbe8cfc8dbbba7c7d43896c692e55f29ef3cb6d9041e3c71",
+    "evidence/primary-performance-assessment.json": "f6770822bcf88d59e3e3e5b73c723f0eeb73a1e3808198006a4db04f1d1fddfc",
+    "evidence/local-final-tests.stderr": "6073a0b661494d51e11fead105695a25784afec0f7a04cb6aba952877724bb96",
+    "evidence/local-same-tree-benchmark.json": "cd4ddf0f438631c86947668432a03503f675073acfc2c7001c2e64ef1dbf0165",
+    "evidence/exact-current-parallel8-comparison.json": "60f0f9b273a00d898344486cd28238bb0cd39c2ba201d9618cbb38bfd117227e",
+    "code/resource_watch.py": "0c0eb1412b738496cd64bf527cede45afc1a06b16f7d0ec91c9e3f6812397815",
+    "code/scoped_io.py": "3409293c6bc45749e28fb06e968e76317862e512bd081820d6b7286835a68ae2",
+    "code/IO_COVERAGE.json": "e74820a638c2c17f84152d663aceaa7d3850d86dd0dd9ba5786e024c86941742",
+    "code/private_writer_binding.py": "c18f6f7b446a1363a7fbcfb1b7e5d62199e9e1cbbe72f0ddf9dcc02962db9601",
+    "code/POLICY.json": "fd804b144793818b2a8b6fef3c799ca0e96ac595569f8fea6a608aae2fe00554",
+    "code/README_CN.md": "59b0a29f6df21ca490f6544046b0ee3d95da2cd18f4e29e196c7343d8f171129",
+    "code/test_policy.py": "71a86ac65f0208aba508b8e2c681ea4aec231d615a52b6c9097453e144c45d48",
+    "code/test_original_writer_cpu.py": "6a3d66265531ba88d31366c805a11b245f57ffcd27b3fc2dd58968402b19ecfa",
+    "code/original_writer_pins.json": "50100f2cee4f449f4f7c06e53dbddce7f81f5c1249c2d9bdcd71649bcc1bd8b9",
+    "code/benchmark_policy.py": "fafdce9af2cc7dc439867e936616f0e543def21cfca73fe0465708ad184e2ae0"
+  },
+  "Data_primary_component_comparison": {
+    "primary_baseline": "exact deployed parallel8 source052747ca…",
+    "filesystem": "fuseblk",
+    "files": 93,
+    "bytes": 38388712,
+    "calls_per_round": 1000,
+    "rounds": 3,
+    "scan_counts": [
+      1000,
+      101
+    ],
+    "median_paired_directory_ratio": 4.345760538581042,
+    "detection_schedule_changed": true
+  },
+  "Data_IO_unbound_sites": {
+    "episode47files": "private original writer IO injection works on CPU40 synthetic command rows; no data transform",
+    "events_journal": "private original Journal100 rows byte-identical on CPU",
+    "raw_third_view20files": "direct NumPy compression sink interface passed; actual live-camera/end-to-end binding pending",
+    "query_observations8files": "needs explicit publisher IO opener/root injection, not currently controlled",
+    "intent_observations2files": "needs explicit serializer IO binding, not currently controlled",
+    "claim_lease_progress_result_ledger": "Data own runner write sites must bind to same budget; report reserve path implemented in component",
+    "PNG_qualification": "caller must save through controlled file object; not covered merely by passing a filename",
+    "controller_stdout_stderr": "separate bounded controlled sink/reservation still required; counter cannot be shared by fork",
+    "encoder_MP4_and_stderr": "must use controlled output or separately bounded reservation; existing filename-only ffmpeg output is NOT accounted by this prototype"
+  },
+  "AINav_prior_interface": {
+    "path": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-INDEXED-IDENTITY-PERFORMANCE-REVISION-20261116-v1/IMPLEMENTED_SOURCE_API_FOR_DATA_NOT_NATIVE_SIGNOFF.json",
+    "sha256": "b63630e52b24693e9a5ca7e7402974a370042e6e28428aad0a75facbbdd7d20b",
+    "source_commit": "a35428d9982c5621ae363c00e8918516e5f52510",
+    "not_same_as_latest_local_corpus_snapshot": true
+  },
+  "AINav_current_software_source": {
+    "source_commit": "c7c5dbd0e05a7a5f47950c94d308e6609a5dee0e",
+    "manifest_path": "/home/yuanyue/main/work/ainav/development/indexed_identity_guard_v1/SOURCE_PACKAGE_SHA256.json",
+    "manifest_sha256": "8cee8edbb8fbf2bd374ee1329e6ebc8f97b26c7b0a8fc03a957553439acb8ae7",
+    "verified_7_files_sha256": {
+      "AUDIT_POLICY.json": "c12123674163d7c8c1bceebc73822de2210a014abb80b42cea210a06510bc520",
+      "README_CN.md": "c5fe1e907825ec36f9aca3ebeea25e1c4d3433ec2cba097448b685d8a4569b8c",
+      "benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
+      "indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+      "install_fresh_driver.py": "e83a8cbe4b778b4b1899041b6fd6b5435015bdce959cf298750d164a6bba6f21",
+      "tests/test_indexed_guard.py": "5db4919704396c739b29fe3ddcb7779888ea3090a47e22e9085b494b9ce9d522",
+      "tests/test_install_fresh_driver.py": "f18ddefe32bd874ab9d9dfb58824e953c997a224dd0ed1b8ac8f7feed1caf9f7"
+    },
+    "benchmark_path": "/home/yuanyue/main/work/ainav/manifests/indexed_identity_guard_20261116_v1/same-loaded-benchmark-remote.stdout",
+    "benchmark_sha256": "8a96276cc0fb90cc4e07ca46cc0b1ad7ee18ad035e2b9cdac4028cc94cc4f45b",
+    "benchmark_summary": {
+      "steady_16_preissue_calls": {
+        "old_median_s": 4.817140841390938,
+        "new_median_s": 0.0005333609879016876,
+        "guard_only_ratio": 9031.670764564547,
+        "not_same_detection_latency": true
+      },
+      "bounded_periodic_audits_12_calls": {
+        "old_median_s": 3.7168987565673888,
+        "new_median_s": 1.7235577773535624,
+        "guard_only_ratio": 2.1565269266891085,
+        "not_same_detection_latency": true
+      },
+      "full_5s_audit_cadence_14_calls": {
+        "old_median_s": 4.248780631460249,
+        "new_median_s": 3.945222956012003,
+        "guard_only_ratio": 1.0769430977242145,
+        "not_same_detection_latency": true
+      }
+    },
+    "initial_SHA_snapshot_wall_s": 3.5777925739530474,
+    "total_benchmark_process_wall_s": 54.30412112385966,
+    "original_negative_periodic_measurement": {
+      "old_s": 3.547449419857003,
+      "new_s": 5.727867368957959,
+      "ratio": 0.6193316275237657,
+      "reason": "Duplicate stat work and serial file metadata; corrected source coalesces fresh directory entries without widening 5s/60s bounds"
+    },
+    "not_Reach_independent_benchmark_rerun": true
+  },
+  "detection_bounds": {
+    "module_calls": 20,
+    "module_wall_s": 0.25,
+    "file_metadata_s": 5,
+    "canonical_s": 60,
+    "audit_budget_s": 5,
+    "resource_poll_s": 1,
+    "owner_stamp_max_age_s": 2,
+    "transient_rebinding_not_guaranteed": true,
+    "blocked_kernel_IO_requires_Data_watchdog": true
+  },
+  "new_Reach_probe_age_cases": {
+    "role": "EXPLICIT_SOFTWARE_FAKE_CLOCK_PROBE_AGE_BOUNDARY_NOT_REAL_OWNER_REVOCATION",
+    "source_sha256": {
+      "resource_watch.py": "0c0eb1412b738496cd64bf527cede45afc1a06b16f7d0ec91c9e3f6812397815",
+      "scoped_io.py": "3409293c6bc45749e28fb06e968e76317862e512bd081820d6b7286835a68ae2"
+    },
+    "cases": [
+      {
+        "check_during_stall": false,
+        "earliest_probe_sample_s": 1.0,
+        "completion_s": 4.0,
+        "published_last_ok_s": 4.0,
+        "max_stale_s": 2.0,
+        "earliest_sample_age_on_next_check_s": 3.0,
+        "next_check_accepted": true,
+        "probe_error": null,
+        "check_error": null
+      },
+      {
+        "check_during_stall": true,
+        "earliest_probe_sample_s": 1.0,
+        "completion_s": 4.0,
+        "published_last_ok_s": 0.0,
+        "max_stale_s": 2.0,
+        "earliest_sample_age_on_next_check_s": 3.0,
+        "next_check_accepted": false,
+        "probe_error": "Resource supervisor stale; stop at next guard boundary",
+        "check_error": "Resource supervisor stale; stop at next guard boundary"
+      }
+    ],
+    "finding": "Completion-time last_ok is not the earliest composite resource observation time when guard checks are delayed; continuous hot checks do stop the stalled probe case.",
+    "risk_scope": "Policy already allows blocked-IO extra delay: owner must define/retain oldest observation age or explicitly qualify the combined bound. Not a claim of a live exploit or that existing continuous staleness protection is absent.",
+    "suggested_owner_action": "Data: conservatively publish probe-start/oldest observation stamp, reject over-age or over-budget completion, or explicitly provide per-signal observation/deadline semantics before native use.",
+    "real_lease_GPU_probe_thread_native_Runtime_model_physics_API_fit_calls": 0,
+    "peer_source_modified": false
+  },
+  "diagnosis_scope": "Completion stamp differs from earliest observation time under delayed hot checks; not a claimed deployed/native safety failure or a new runtime approval gate.",
+  "suggested_owner": "Data: preserve oldest observation/start stamp or explicitly qualify duration-plus-staleness semantics; AINav bridge must not turn it into an unqualified <=2s measurement-age claim.",
+  "guard_or_IO_source_modified_by_Reach": false,
+  "prior_E20_closed_source_or_counts_changed": false,
+  "all_original_dynamic_native_gates_required": true,
+  "end_to_end_5x_or_static_share_under10_percent_measured": false,
+  "new_Reach_native_Runtime_model_Actor_GPU_physics_API_fit_calls": 0,
+  "model_input_allowed": false,
+  "training_allowed": false
+}

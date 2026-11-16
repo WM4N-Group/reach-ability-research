@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 21:11：吞吐候选CPU证据已接；完整周期仅1.077×，probe完成戳边界已反馈
+
+- **性能新候选已到，区分实现与native资格：** Data受控IO/周期resource候选release543af841…/19成员SHA核过；同93文件FUSE树、1000合成calls/3轮，旧parallel8对比目录扫描1000→101、paired组件median4.346×。query/intent/管理文件、controller输出、encoder等写入尚须完整接counter或预留，native_ready=false；不把CPU writer/journal字节相同冒实际全覆盖。
+- **AINav真实周期收益不能只看快路径：** 20:46接口a354与后续当前7afc416/manifest470047…分别记录，7源文件SHA核同；owner同corpus无周期热路径很快，但完整5s审计cadence只有4.24878→3.94522s（1.077×），稀疏周期2.157×；原0.619×负结果保持。一次SHA3.578s/benchmark54.304s另记，本组未重跑benchmark；不能把热约9032×、Data目录4.346×、本组WM几何局部数相乘或称系统5×/10%目标已达。
+- **新增具体时间戳边界反馈，未改peer源：** 用正式Data代码两个fake-clock情形：t1读owner、模拟审核3s后t4把last_ok设完成戳，无期间hotcheck时下一check通过，但最早读数已3s；持续hotcheck则原stale保护正确latch拒绝。政策已披露blocked-IO额外延迟，本组不冒已部署安全故障；需Data明确最早观测年龄/过龄完成或合成延迟语义，AINav桥不能将completion戳直接说成全部测量<=2s。建议保守start/oldest stamp或拒过龄完成，不重复外部probe，不新增审批。
+- **下一关键项仍是既定集成与同阶段性能验证：** AINav守住module/file失效及每step真实session/queue/goal/callback，Data接齐所有writer/真实lease/健康与监督，原动态门/采样不降。按新准确程序做性能资格，而非再试40mm、改阈值或恢复closed根。本组只读/2个确定性CPU情形，无world/模型/physics/API/fit；详细回执与复现见`operations/PERF_CANDIDATE_CPU_AND_PROBE_AGE_REVIEW_CN.md`，主effects/退出fresh/cost仍未完成。
+
 ### 2026-11-16 19:59：同anchor重复几何已合并/CPU成对实测；非当前E提速，E20原片补正式
 
 - **不重写AINav/Data guard，消除本组一处真实重复计算：** AnchorTarget8Provider对同一不可变anchor、同frame-local ref、同数值类型/standoff在一次call内只执行一次原plane/vector；原实现可按16个候选重复16次。cache为局部变量，调用返回即丢弃，不跨query/帧/当前关联复用；不同ref/参数独立、UNKNOWN仍UNKNOWN，每候选独立证据，原源/拷贝anchor时钟/深度/RGB/calibration只读复核与原plane/mask门保留。
