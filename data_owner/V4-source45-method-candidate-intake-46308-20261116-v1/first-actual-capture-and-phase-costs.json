@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-16T08:52:12.414111+08:00",
+  "role": "FIRST_ACTUAL_EXACT41_CAPTURE_BOUNDARY_AND_LIVE_SOFTWARE_PHASE_COSTS_NOT_SUCCESS_OR_CAUSAL_SPEEDUP",
+  "program_sha256": "edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc",
+  "source_commit": "2ab8b8aed166f74039db25e50fc7cabf1e0610cc",
+  "raw_observation_path": "/home/yuanyue/main/work/data-team/manifests/V4-parallel-guard-bounded-native-46308-20261116-v1/readonly-20261116T085039.json",
+  "raw_observation_sha256": "b1321292c5391b5ed24a6bca34844f817e3766b28b05d9e314f025d61a132c95",
+  "actual_capture_completion_boundary": {
+    "task_steps": 448,
+    "task_sim_s": 2.2399999999999745,
+    "report": {
+      "kind": "cold_start_supported_capture",
+      "complete": true,
+      "phase": "COMPACT_TRANSFER",
+      "actual_steps": 448,
+      "stable_seconds": 0.49999999999998956,
+      "metrics": {
+        "foot_normal_N": [
+          52.38009698561048,
+          52.389940647312784,
+          54.37110724417728,
+          54.38083670595904
+        ],
+        "max_foot_speed": 5.0055856644589514e-05,
+        "base_linear_speed": 0.0004999164084940913,
+        "base_angular_speed": 0.0005995096419026136,
+        "tilt_rad": 0.0005869399984643858,
+        "arm_error": 0.00024976552925343176,
+        "arm_speed": 0.0002769655639352366,
+        "reference_error": 0.0,
+        "reference_speed": 0.0,
+        "hand_force_N": 0.0,
+        "on_declared_support": true,
+        "drift_m": 0.0019821318858657157
+      },
+      "support_ref": "ground",
+      "original_goal_sha256": "df255f74b31eca106ad0f53b67f14e57410efe271feeb212bffec13e804ad5a0",
+      "no_failed_PUSH_created": true,
+      "no_NAV_arrival_claimed": true,
+      "model_decision": false
+    }
+  },
+  "actual_last_checkpoint": {
+    "at": "2026-11-16T08:46:12.221198+08:00",
+    "event": "bounded_progress",
+    "task_steps": 1600,
+    "task_sim_s": 7.999999999999852,
+    "wall_s": 1352.424208075041,
+    "phase": "ORIGINAL_CAPTURE_THEN_BOUNDED_LIVE_DRIVER",
+    "metrics": {
+      "Data_owner_resource_guard_inclusive": {
+        "calls": 7563,
+        "wall_s": 483.2169360902626,
+        "commands": 0
+      },
+      "capture_or_assembly": {
+        "calls": 449,
+        "wall_s": 331.18017114070244,
+        "commands": 448
+      },
+      "original_native_execution": {
+        "calls": 1152,
+        "wall_s": 956.7662740475498,
+        "commands": 1152
+      }
+    },
+    "component_only_not_method_gain": true
+  },
+  "avg_capture_plus_assembly_wall_per_command": 0.739241453439068,
+  "avg_native_execution_loop_wall_per_command": 0.8305262795551648,
+  "Data_guard_cost_overlaps_step_intervals_not_additive_total": true,
+  "no_original_v2_matched_counterfactual_or_method_speedup": true,
+  "no_native_Push_CLIMB_topNAV_success_inferred": true,
+  "usage_still_inflight_no_final_ledger_or_cold_NPZ_audit": true,
+  "source45_received_not_hot_adopted": "0270381f18b48951329c09f701cb7b755befdf52",
+  "five_arm_or_WM_API_fit_calls": 0
+}
