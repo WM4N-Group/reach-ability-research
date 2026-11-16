@@ -62,7 +62,7 @@ class Tests(unittest.TestCase):
             obs=self.obs(ctx);catalogue=public.intent_catalogue(self.scene,obs,sequence=1,shared_appearance=ctx)
             batch=IntentBatch('EXPLICIT_SOFTWARE_'+arm,obs,catalogue,public.capability_contract())
             self.assertEqual(len(batch.options),30);digests.append(common._sha(obs.value['declared_map']))
-        self.assertEqual(len(set(digests)),1);self.assertFalse(self.rows[-1]['current_identity_visibility_pose_native_admission_or_WM_prediction_claimed'])
+        self.assertEqual(len(set(digests)),1);self.assertTrue(self.rows[-1]['all_five_same_static_prior_required_not_actual_runs_attested']);self.assertFalse(self.rows[-1]['current_identity_visibility_pose_native_admission_or_WM_prediction_claimed'])
     def test_REAL_Reach_constructor_accepts_shared_markers_12_NAV_subjects_8_unknown(self):
         ctx=self.build();obj=producer.DeclaredPaletteAnchorAssociation(public_appearance=common.contract(),public_map=ctx.public_map(),
             public_effects=public.public_effects(self.scene),journal=self.journal,enabled=True,

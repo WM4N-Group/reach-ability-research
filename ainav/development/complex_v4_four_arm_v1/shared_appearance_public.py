@@ -122,7 +122,7 @@ def build_shared_appearance_declaration(*,enabled=False,components=None,compiled
         software_fixture=software_fixture,common_map_file_sha256=MAP_SHA,common_map_value_sha256=_sha(public),
         common_appearance_contract_sha256=CONTRACT_SHA,selected_new_MJB_sha256=digest,
         checked_asset_public_metadata_sha256=_sha(e),public_effects_sha256=_sha(public_effects(components['scene'])),
-        all_five_receive_same_static_prior=True,no_extra_anchor_geometry_or_continuous_goal=True,
+        all_five_same_static_prior_required_not_actual_runs_attested=True,no_extra_anchor_geometry_or_continuous_goal=True,
         current_identity_visibility_pose_native_admission_or_WM_prediction_claimed=False,
         no_frame_model_restore_constructor_API_or_physics_call=True,model_input=False))
     require(type(ref)is str and bool(ref),'Durable source declaration evidence required')
