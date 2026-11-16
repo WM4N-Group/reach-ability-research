@@ -79,8 +79,17 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 当前证据/下一验收
 
-42新policy/失效/文件/owner/foreign identity纯软件＋10 fresh adapter fixtures本机通过；
+42新policy/失效/文件/owner/foreign identity纯软件＋12 fresh adapter/owner-bridge fixtures本机通过；
 不是native/容量/真实lease/5倍系统资格。相同CPU loaded模块、文件树和相同合成call轨迹的
 旧batch32与本版配对benchmark由`benchmark_same_loaded_cpu.py`提供，cold SHA/边界成本
 分开、exclusive hot分项不相加重计。真实同阶段性能验证只由Data新scope实施，未达目标
 如实报告，不回退无限加watchdog或偷偷缩门。未来五组共用同性能/保护策略。
+
+
+## 与Data当前ResourceWatch接口的具体接缝
+
+`data_resource_watch_callbacks(watch, epoch=scope_and_authority_epoch)`直接对接Data v1的
+`check(token)/last_ok/max_stale/token`，要求max_stale≤2秒。它保留监督线程真正检查的last_ok，
+不以本次guard调用的now伪造freshness；refresh回调只是ACK现有有效结果，**不额外probe**，
+从而不与Data每1秒的外部监督重复检查。Data自行持有原lease并start/close监督线程，
+容量/磁盘/撤销失败由watch.check传播。本桥接器没有证明真实watch已通过资格，仍需Data测量。

@@ -6,7 +6,7 @@ are explicit and cannot issue physical commands. Unexpected later lazy code
 installation fails closed; qualify/warm its imports BEFORE sealing, not retry.
 """
 from types import MethodType
-from indexed_guard import make_indexed_guard,GuardViolation,need,POLICY_ID
+from indexed_guard import make_indexed_guard,GuardViolation,need,POLICY_ID,OwnerStamp
 
 
 def install(driver=None,*,enabled=False,files=None,owner_fast=None,owner_refresh=None,tokens=None,policy=None):
@@ -78,3 +78,22 @@ def install(driver=None,*,enabled=False,files=None,owner_fast=None,owner_refresh
     receipt=engine.seal(driver,label='fully-loaded-task0-before-first-command')
     return dict(receipt,default_off=False,no_physics_Actor_or_model_called=True,
                 strict_unplanned_import_exec_refusal=True,native_or_system_speedup_qualified=False)
+
+
+def data_resource_watch_callbacks(watch,*,epoch):
+    """Bridge Data ResourceWatch v1; never invent a new checked_at or probe.
+
+    Its own background worker polls external resources. check(token) enforces
+    PID, revocation, capacity/health and max staleness. Both callbacks here only
+    ACK that real current result. Data owns starting/closing the watch/lease.
+    """
+    need(type(epoch)is str and epoch and callable(getattr(watch,'check',None))and
+         0<watch.max_stale<=2.,'Data watch epoch and <=2s genuine external freshness required')
+    token=watch.token
+    def fast(host):
+        watch.check(token)
+        need(watch.last_ok is not None,'External watch never successfully checked')
+        return OwnerStamp(epoch,float(watch.last_ok),float(watch.last_ok)+watch.max_stale,True)
+    def acknowledge(host):
+        watch.check(token)  # Do NOT run a duplicate full external probe here.
+    return fast,acknowledge

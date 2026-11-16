@@ -5,7 +5,7 @@ import ast,json,sys,tempfile,unittest
 OWN=Path(__file__).resolve().parents[1];ROOT=OWN.parents[1];sys.path.insert(0,str(OWN))
 import indexed_guard as mod
 from indexed_guard import FrozenFiles,OwnerStamp,GuardViolation
-from install_fresh_driver import install
+from install_fresh_driver import install,data_resource_watch_callbacks
 SOURCE=ROOT/'development/complex_dual_route_v1/scene_driver.py'
 blocked=[]
 def fence(event,args):
@@ -82,6 +82,20 @@ class Tests(unittest.TestCase):
   session=NS(machine=NS(services=NS(begin_brake=unsafe)));self.driver.executor.start(session)
   with self.assertRaises(GuardViolation):session.machine.services.begin_brake(confirmed=False)
   self.assertEqual(self.driver.r.step_count,0)
+
+ def test_Data_watch_bridge_keeps_real_timestamp_and_no_extra_probe(self):
+  watch=NS(max_stale=2.,token=object(),last_ok=123.,checks=0)
+  def check(token):
+   self.assertIs(token,watch.token);watch.checks+=1
+  watch.check=check;fast,ack=data_resource_watch_callbacks(watch,epoch='scope-authority-epoch')
+  stamp=fast(self.driver);ack(self.driver)
+  self.assertEqual((stamp.checked_at,stamp.valid_until),(123.,125.));self.assertEqual(watch.checks,2)
+ def test_Data_watch_bridge_revocation_propagates_not_self_signed_true(self):
+  def revoked(token):raise RuntimeError('real supervisor revoked')
+  watch=NS(max_stale=2.,token=object(),last_ok=123.,check=revoked)
+  fast,ack=data_resource_watch_callbacks(watch,epoch='scope-authority-epoch')
+  with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):fast(self.driver)
+  with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):ack(self.driver)
 
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
