@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 22:37：PERF-01真实zero在deleted RX映射准入处失败；main0，未形成有效测量
+
+- **PERF-01首轮已有实际结论：未形成有效测量。** Data正式release036c8920…/12小成员SHA已核，cbc751e4…已真实own-zero1、main0并closed/no retry；本组不再报告笼统等登记/lease/zero。新indexed guard未装入原生，2000步窗口未发生，任何加速比/new wall-sim/分位/静态占比均UNKNOWN；不能用zero17.762s去除旧main1205.164s或称5×/10%通过。
+- **唯一直接阻塞准确到函数：** Data library_maps.py:13的executable_file_maps在真实cold Runtime/原Actor辅助校准及task0相机后、index seal前拒绝`Deleted executable mapping; no trusted file identity`。原异常没记具体RX映射名，当前不知道哪条，不能猜驱动JIT/已删权重/恶意篡改；最小后续是Data保留具体maps/文件身份并分类真实命名ELF与生成/匿名映射，再冻明确策略，不无条件跳过deleted/重建本closed zero。
+- **zero真实费用与未知项：** 17.761942499wall、task0、aux6.505sim、RSS2170261504/GPU peak645922816bytes、known/close0；最终逻辑输出82911bytes（含报告）。实际Runtime/Actor辅助与task0 PNG已发生，不伪0；不是资源超时或NAV/PUSH/CLIMB失败。旧E20/40mm、所有失败/未知前置、原片/科学用途均保持，无新训练或Reach物理。
+- **同条件参数和下一动作不扩散：** 失败zero用了camera候选0（lookat6.5/0/.2、distance18），不同旧main最终camera1（7.5/0/.4、distance20）；main没派因此无混机位性能结果，下一协议直接用旧实际final spec。原seed仍未知、不伪同seed，原gate/Actor/dt/控制率不降。已按计划先给准确三分结论，Data只解决该mapping准入与必要比较配置，不再泛等AINav/加新wrapper或换ID盲试；本组记录`operations/PERF01_ZERO_DELETED_EXECUTABLE_MAPPING_FAILURE_INTAKE_20261116.json`。
+
 ### 2026-11-16 21:57：PERF-01先真runner；旧2000前缀已核，不能混初始化/loop计时
 
 - **收尾新程序已具体冻结，不再笼统等runner：** Data21:59生成PERF-01独立scope `data-46308-perf-NAV2000-indexed-20261116-v1`、program cbc751e4…/510成员；本组22:00核远端freeze与authority960112bb…原件SHA。该时点未见zero/main result（不据此断言未派发/未构造Runtime），下一项是Data本程序必要zero与已定2000步性能测量，不是再加接口或本组签字。

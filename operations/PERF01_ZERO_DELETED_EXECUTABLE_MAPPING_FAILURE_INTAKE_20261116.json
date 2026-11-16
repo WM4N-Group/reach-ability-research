@@ -1,0 +1,117 @@
+{
+  "role": "ACTUAL_PERF01_ZERO_ADMISSION_FAILURE_NO_NATIVE_MEASUREMENT",
+  "at": "2026-11-16T22:37:43.304148+08:00",
+  "conclusion": "未形成有效测量",
+  "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/PERF01-DATA-ACTUAL-ZERO-ELF-MAPPING-ADMISSION-FAILED-NO-MAIN-20261116-v1/release.json",
+  "release_sha256": "036c8920b8ead5f4198b0d6a1323660253ed94abeb29d9f93af32bfa72132e41",
+  "verified12_small_members_sha256": {
+    "actual-prepare.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "actual-worker-code-custody-proof.json": "6163545859c66ad4665f61c4f2d4a83c4cdfb0fb01a35474e4b6d7916cc44cd9",
+    "ACTUAL_PERF01_CONCLUSION.json": "3448a180a23d8ae6c3bd9362e6c5f2b262ffa905b27dbe5c76ee979da3dae45a",
+    "PERF01_结论表.md": "6e9014289ccae23a8c6b12e2b08aff2c5fd144da13dc18d1d7ef85c2b6b17828",
+    "old-reference-window-readonly.json": "c54c1ee16bfc048dc01a448eedcaf78b784ca83145ffce345609713f0ab247bc",
+    "close-proof.json": "e8b6b6052ae0c259adb54b5eb3c21aae4d93e83773db626fe88bc96ee3961c39",
+    "actual-prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "zero-image-reference.json": "e40aeca039a066881848cbd36fac3b23ad8bed5dd58ddea9d71cf1e605b4b0c7",
+    "actual-program-build.json": "d2ac6cd067188a9dd711388d55ff5536d7022407099bf544b65b24db8576025e",
+    "actual-zero/result.json": "a9e27d2d26fedb5122dac91556113bbfd59a36b45b1a74a6af7349fc659da3aa",
+    "actual-zero/ledger.json": "133c5edbe1c567a5b16293d6b279baa94fbdcb72c6b6f9b1c3cfe0688dcc9a53",
+    "actual-zero/final-output-accounting.json": "003c5849287d6d90e19998c76b28fe961d1a54c87a022c3f6ee004bd0ff96030"
+  },
+  "program_sha256": "cbc751e43b257e291ddc8fa46073d567e7c53bb704b951fece30c83df786fc04",
+  "scope_id": "data-46308-perf-NAV2000-indexed-20261116-v1",
+  "zero_dispatches": 1,
+  "main_dispatches": 0,
+  "closed": true,
+  "automatic_retry": false,
+  "actual_task_steps": 0,
+  "actual_task_sim_s": 0.0,
+  "actual_auxiliary_calibration": {
+    "worlds": 1,
+    "sim_seconds": 6.5049999999998835,
+    "source": "original zyh reference_stance + settle",
+    "main_world_unchanged": true,
+    "separate_initialization_state_adjustments_not_task_recovery": true,
+    "used_as_training_episode": false
+  },
+  "original_error": "RuntimeError('Deleted executable mapping; no trusted file identity')",
+  "failure_stage": "REAL_COLD_RUNTIME_ACTOR_AUX_AND_TASK0_CAMERA_DONE_BEFORE_INDEXED_SEAL_INSTALL",
+  "native_skill_failure_not_inferred": true,
+  "guard_actual_native_installed": false,
+  "scope_performance_success_or_speed_ratio": null,
+  "static_audit_share": null,
+  "step_latency_quantiles": null,
+  "zero_original_ledger": {
+    "scope_id": "data-46308-perf-NAV2000-indexed-20261116-v1",
+    "phase": "zero",
+    "closed": true,
+    "result_sha256": "a9e27d2d26fedb5122dac91556113bbfd59a36b45b1a74a6af7349fc659da3aa",
+    "output_controlled_logical_bytes_before_ledger": 82282,
+    "wall_s": 17.761942498851568,
+    "usage_known": true,
+    "main_calls": 0,
+    "automatic_retry": false
+  },
+  "zero_wall_s": 17.761942498851568,
+  "peak_RSS_bytes": 2170261504,
+  "original_final_GPU": {
+    "UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+    "index": 0,
+    "free_MiB": 23588,
+    "utilization_percent": 2,
+    "PID": 280151,
+    "own_compute_bytes": 507510784,
+    "own_observation_state": "MEASURED",
+    "peak_own_compute_bytes": 645922816
+  },
+  "close_errors": [],
+  "final_output_accounting": {
+    "schema": "Data-exact-final-controlled-logical-output-v1",
+    "final_controlled_logical_bytes": 82911,
+    "controlled_logical_highwater_bytes": 82911,
+    "file_count_including_this_report": 15,
+    "native_sealed": true,
+    "not_filesystem_allocated_or_external_writer_peak": true
+  },
+  "source_readonly_location": {
+    "path": "/home/yuanyue/main/work/data-team/development/perf-resource-policy-20261116-v1/library_maps.py",
+    "sha256": "0a94e0f7c62ae341fdc9a254456d9664b52783015f1d41c5b0498a5edc15326e",
+    "function": "executable_file_maps",
+    "line": 13
+  },
+  "exact_deleted_mapping_identity": null,
+  "no_JIT_or_tamper_cause_inferred": true,
+  "unique_immediate_owner": "Data: capture concrete executable-map identities/descriptor or snapshot evidence at the failure boundary, distinguish stable named files from generated/anonymous mappings and freeze explicit trust/failure policy; never unconditionally allow all deleted maps.",
+  "camera_comparability": {
+    "failed_zero_actual_spec": {
+      "kind": "fixed_free",
+      "width": 1280,
+      "height": 720,
+      "stride_physics_ticks": 20,
+      "chunk_frames": 16,
+      "max_bytes": 536870912,
+      "lookat": [
+        6.5,
+        0.0,
+        0.2
+      ],
+      "distance": 18.0,
+      "azimuth": 110.0,
+      "elevation": -58.0
+    },
+    "old_main_reference_spec_sha256": "c9b2d3aa96294c7bc9959cdb6479e31ac6940e69b4d7d351dadd97d62598e8fc",
+    "old_main_lookat": [
+      7.5,
+      0.0,
+      0.4
+    ],
+    "old_main_distance": 20.0,
+    "main_not_dispatched_so_no_comparison_yet": true,
+    "next_protocol_must_use_old_actual_final_camera_not_candidate0": true
+  },
+  "full_result_ledger_and_close_proof_consumed_not_independent510_file_or_NPZ_reaudit": true,
+  "old_E20_old_reference_and_prior_costs_not_changed": true,
+  "no_new_Reach_native_or_tests_or_benchmarks": true,
+  "training_allowed": false,
+  "model_input_allowed": false
+}
