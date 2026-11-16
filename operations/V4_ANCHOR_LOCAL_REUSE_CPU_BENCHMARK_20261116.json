@@ -1,0 +1,180 @@
+{
+  "recorded_at": "2026-11-16T19:59:44.132650+08:00",
+  "implementation_commit": "db3799c",
+  "validation": {
+    "local_metadata_checks": 23,
+    "remote_metadata_checks": 23,
+    "remote_rounds_per_case": 3,
+    "fixture_errors_preserved": "Initial test helper self.options shadowed fixture tuple; corrected fixture naming. A too-specific error-message assertion was widened to preserve any original ValueError refusal.",
+    "corrected_old_code_checks": 10,
+    "corrected_old_code_performance_failures": 4,
+    "corrected_old_code_passes": 6
+  },
+  "measurement": {
+    "role": "SYNTHETIC_SOFTWARE_ORIGINAL_GEOMETRY_CPU_ONLY_NOT_SIMULATION",
+    "baseline_commit": "c6bccd1",
+    "baseline_source_sha256": "d0ba31e797ce3c799df6585389b71f2d628bc7850b8610721e668432f34060bf",
+    "candidate_source_sha256": "f40129375dfaade49d62c3c8a85179c9ecde8c55100b6fd0909bc9cf96a8eb95",
+    "original_geometry_pins": {
+      "visual_box_proposals.py": "837e95ecd7bc3249154b8a53097f71fd90974a2df9fb4a35d87116d0254af304",
+      "visible_surface_goal.py": "b7ccf787db0db1e8496d2d6627e9efeb941bb6c06d7638791ce1628a81068da4",
+      "geometry_vector.py": "f02cbefb7dca72cc5b4f0b54014eb3af0aa8e5eda8faa0c9bab432f4ae9d137f"
+    },
+    "synthetic_rgb_sha256": "3ff59ca432ee9be8ed4914e03ca832dbb34342ce6868438a37f7664ff9a6576f",
+    "actual_affinity": [
+      67
+    ],
+    "rounds": 3,
+    "cases": [
+      {
+        "case": "16_candidates_one_geometry",
+        "candidates": 16,
+        "unique_geometry_requests": 1,
+        "rounds": 3,
+        "provider_wall_s_by_round": {
+          "baseline": [
+            1.2956180649343878,
+            1.2968752630986273,
+            1.304933532141149
+          ],
+          "per_call_reuse": [
+            0.08190601086243987,
+            0.08113150391727686,
+            0.08022747607901692
+          ]
+        },
+        "geometry_inclusive_subtime_s_by_round": {
+          "baseline": [
+            1.2930886093527079,
+            1.294399655656889,
+            1.3026055335067213
+          ],
+          "per_call_reuse": [
+            0.08125277003273368,
+            0.08073154394514859,
+            0.07973247789777815
+          ]
+        },
+        "geometry_subtime_not_additive_to_provider": true,
+        "original_plane_calls_by_round": {
+          "baseline": [
+            16,
+            16,
+            16
+          ],
+          "per_call_reuse": [
+            1,
+            1,
+            1
+          ]
+        },
+        "all_public_output_and_evidence_exactly_equal": true,
+        "output_sha256": "5f9a37130248f9c8667280f32f2d0d8f077e9109f65cda7f9709ade3c654498a",
+        "baseline_median_s": 1.2968752630986273,
+        "reuse_median_s": 0.08113150391727686,
+        "isolated_provider_ratio": 15.984854224087165
+      },
+      {
+        "case": "16_candidates_four_geometries",
+        "candidates": 16,
+        "unique_geometry_requests": 4,
+        "rounds": 3,
+        "provider_wall_s_by_round": {
+          "baseline": [
+            1.3009575142059475,
+            1.2980793800670654,
+            1.306293057044968
+          ],
+          "per_call_reuse": [
+            0.3269380598794669,
+            0.325655953027308,
+            0.3235490608494729
+          ]
+        },
+        "geometry_inclusive_subtime_s_by_round": {
+          "baseline": [
+            1.2983843346592039,
+            1.2955058454535902,
+            1.3039575521834195
+          ],
+          "per_call_reuse": [
+            0.3261353988200426,
+            0.32481714780442417,
+            0.3227458887267858
+          ]
+        },
+        "geometry_subtime_not_additive_to_provider": true,
+        "original_plane_calls_by_round": {
+          "baseline": [
+            16,
+            16,
+            16
+          ],
+          "per_call_reuse": [
+            4,
+            4,
+            4
+          ]
+        },
+        "all_public_output_and_evidence_exactly_equal": true,
+        "output_sha256": "e5408f94fefcf041052d34340097a7ee3021aaf8143fdc7c7a463794085369d9",
+        "baseline_median_s": 1.3009575142059475,
+        "reuse_median_s": 0.325655953027308,
+        "isolated_provider_ratio": 3.9948832567383015
+      },
+      {
+        "case": "four_unique_geometries_control",
+        "candidates": 4,
+        "unique_geometry_requests": 4,
+        "rounds": 3,
+        "provider_wall_s_by_round": {
+          "baseline": [
+            0.3139744088985026,
+            0.32217968301847577,
+            0.31697691208682954
+          ],
+          "per_call_reuse": [
+            0.312899666139856,
+            0.3152564140036702,
+            0.31586668989621103
+          ]
+        },
+        "geometry_inclusive_subtime_s_by_round": {
+          "baseline": [
+            0.3132695979438722,
+            0.3211141412612051,
+            0.31598786800168455
+          ],
+          "per_call_reuse": [
+            0.31199817219749093,
+            0.3144928100518882,
+            0.3149316089693457
+          ]
+        },
+        "geometry_subtime_not_additive_to_provider": true,
+        "original_plane_calls_by_round": {
+          "baseline": [
+            4,
+            4,
+            4
+          ],
+          "per_call_reuse": [
+            4,
+            4,
+            4
+          ]
+        },
+        "all_public_output_and_evidence_exactly_equal": true,
+        "output_sha256": "a73ff97b5d6f4f8b00b207692dfc39fad9e07b53159fe2f914c18e5a28718481",
+        "baseline_median_s": 0.31697691208682954,
+        "reuse_median_s": 0.3152564140036702,
+        "isolated_provider_ratio": 1.005457456237954
+      }
+    ],
+    "current_E20_uses_WM": false,
+    "current_E20_or_physics_or_WM_inference_speedup_claimed": false,
+    "model_native_renderer_physics_API_fit_calls": 0,
+    "no_source_array_or_sensor_frame_read": true,
+    "no_cross_query_reuse": true
+  }
+}

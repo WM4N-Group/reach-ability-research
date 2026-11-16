@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 19:59：同anchor重复几何已合并/CPU成对实测；非当前E提速，E20原片补正式
+
+- **不重写AINav/Data guard，消除本组一处真实重复计算：** AnchorTarget8Provider对同一不可变anchor、同frame-local ref、同数值类型/standoff在一次call内只执行一次原plane/vector；原实现可按16个候选重复16次。cache为局部变量，调用返回即丢弃，不跨query/帧/当前关联复用；不同ref/参数独立、UNKNOWN仍UNKNOWN，每候选独立证据，原源/拷贝anchor时钟/深度/RGB/calibration只读复核与原plane/mask门保留。
+- **实现与成对测量已完成，不只报测试数量：** db3799c同步三端；10新＋13受影响anchor=23纯软件两端过。46308单核67、BLAS/OMP1、原3份几何源码逐SHA不变、合成64×96图，3轮交替次序完整provider基准：16候选/1几何median1296.875→81.132ms（局部15.985×）；16候选/4几何1300.958→325.656ms（3.995×）；4唯一control316.977→315.256ms（1.005×，基本无收益）。所有target8与全部证据字段逐值一致，plane次数16→1/16→4/4→4；subtime嵌在provider内不相加。复用前4项性能断言fail，初次fixture命名/错误消息问题另保。
+- **这不是当前E仿真提速或新WM能力：** 当前E没有WM，本改动不消除其63%路径扫描、不冒5×端到端或<10%目标已达，不与任何局部倍率相乘；benchmark纯CPU合成输入，无真实帧/数组读取、WM restore/forward、Actor/physics/API/fit。真正原生guard/capacity改造仍由AINav/Data实施及同阶段验证；本组件仍需未来准确方法程序显式采用，不能热换旧freeze/给E加前置，语义/exit/effects/cost与真实WM bootstrap缺口不变。
+- **E20完整失败原片正式补齐：** 新release原9成员SHA与已核99411e6f结果/原ledger/视频2b6c43ce一致；275帧/1280×720/10Hz/1×、18chunk完整事前grid，末5480tick/27.400与真实stop5482/27.410分开，不补末帧。原26.470提前brake、27.190 NN内部true、27.410确认丢失失败不改，PUSH terminal/cost仍None、无H/新selector。full FIFO/PD cold仍pending，未冒独立raw/decode全审；正式图/片不是新样本。原片现成本地小副本：`/home/yuanyue/main/work/data-team/manifests/E20-prearrival40-direct-live-46308-20261116-v3/E20-direct-live-1x.mp4`。
+
 ### 2026-11-16 19:43：E20唯一40mm main停止，制动期间原settled确认丢失；不重跑
 
 - **收尾新E20终态已直接核，不再称在途：** program39ef86d5/source04a的唯一40mm main结果99411e6f…、原ledger closed/main1/no retry。5482命令/27.410sim报`Original native settled confirmation lost during placement brake`；原NAV15.090 succeeded、PUSH15.095 started，但无PUSH terminal，成功cost=None，E semantic成功0，未进CLIMB。旧H/新selector均0；原DEV提前brake事件存在，不把更早异常停止称提速或证明40mm已修复。
