@@ -1,0 +1,268 @@
+{
+  "schema": "Reach-palette-v2-closed-entry-READY-constructor-failure-intake-v1",
+  "at": "2026-11-16T12:25:11.277061+08:00",
+  "role": "AUDIT_ONLY_NOT_PLANNER_OR_FIT",
+  "scope_id": "data-46308-V4-common-palette-bounded-native-20261116-v2",
+  "program_sha256": "aecec6eb471e1ace37fc3b0ab9cf75789f67d0fdfdb8b37c13b621c2e906ed70",
+  "source_commit": "af09da7ddbaa791782cf5fd4873d14064d64b1fd",
+  "actual_new_MJB_sha256": "a89119217e1aa18ec344ce63f55fceb69806a07c47cf56c2ac79a9f6d7959e87",
+  "source_small_files_sha256": {
+    "actual-supported-capture-completion-boundary.json": "ad49bac801f2031bbafb4ae85d730068080b748e870ac32be771dba677904b0d",
+    "claim.json": "fa419ab712f01598cb392a2b76f178f212139d34cf5c798027c836bef59bef31",
+    "component-identity-NOT-METHOD-C.json": "7f343a1f54b2dfe17e167512a85e0c915082207906de12b763709fc336522571",
+    "events.jsonl": "e3735e5591aa01027d653c2c535a347b0df238a42c2d2711545b291e7de798b7",
+    "intent-observation-0001.json": "6d456c3a91df797325a426e097632fa2ca277fd17e88f22b40b095b92b31cb4d",
+    "intent-observation-0002.json": "e0a212260812359ce0637ddf773850e7e80cf10a6ff7834db806ceb4d60a0206",
+    "ledger.json": "caeba3e1dd9bfc2f67af91409d5f317cd5a1f04318ca3737868eabc14771c4a8",
+    "new-common-appearance-static-delta-proof.json": "c2e0217915e209cd593b9799323c77c81a1fce250ce3a47d8de29877771ac3fb",
+    "resource-lease.json": "c13e3d46a7e9f2efc927a443636b02bbc204ee619e2e51511d9cac3c4cbb7a2d",
+    "result.json": "ecbd2a5c622ce958335d562f83e7a8282169d5d890b0b213915f4c64def42235"
+  },
+  "original_journal_chain": {
+    "last_sha256": "6acb62aee2f5140aef41f333b28516258c0da2b657d78f4211784cde1586f4a1",
+    "rows": 770,
+    "valid": true
+  },
+  "original_selected_events_without_private_state": [
+    {
+      "sequence": 455,
+      "original_record_sha256": "677e4746067b4be5440188f53df9df2189a0db10d7f3d27db97c0ba9cfe4081e",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#456",
+      "event": "skill_execution_judgment",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "status": "PREPARE",
+      "reasons": [
+        "outside_original_approach_pose"
+      ],
+      "original_judgment_sim_time_s": 2.2399999999999745
+    },
+    {
+      "sequence": 459,
+      "original_record_sha256": "983c716c28c2c0679aaf66054b3b048c0fb8bc333af3d271aea615266aa001fd",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#460",
+      "event": "execution_refinement_dispatch",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "native_option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+      "execution_role": "preparation",
+      "physical_action_issued": false,
+      "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#456"
+    },
+    {
+      "sequence": 463,
+      "original_record_sha256": "5a67589eacdaf8d0741e75fbfface7b770d2d653274bee0dca60476bd975b11f",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#464",
+      "event": "native_option_installed",
+      "physical_command_already_issued": false
+    },
+    {
+      "sequence": 464,
+      "original_record_sha256": "3a9bf886471b8b6eea249a6462457318b56fdee0d421f8b3deaf0b564158e34e",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#465",
+      "event": "ainav_native_admitted",
+      "physical_command_issued": false,
+      "literal_native_receipt": {
+        "evidence_ref": "native-option-installed:ainav-execution-000002",
+        "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+        "option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+        "status": "admitted",
+        "time_s": 2.2399999999999745
+      }
+    },
+    {
+      "sequence": 466,
+      "original_record_sha256": "079c4e6e77de301acf18d1e25fa10510763c9882f1f859aebe90e8d8c263f1e9",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#467",
+      "event": "ainav_native_receipt",
+      "literal_native_receipt": {
+        "evidence_ref": "commands:physical_tick=449",
+        "issued_command_sha256": "9deb8375ed7b4630ab0a321d377cadebf9bcc5033b40ab4184b2df2496985ec2",
+        "option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+        "status": "started",
+        "time_s": 2.2449999999999743
+      }
+    },
+    {
+      "sequence": 761,
+      "original_record_sha256": "e9f4b0a751397aabc099f691d92cf5e3ff271fe99d2d0d2cf4381cd4fd32fe89",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#762",
+      "event": "intent_actual_native_outcome",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "native_option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+      "execution_role": "preparation",
+      "literal_native_receipt": {
+        "evidence_ref": "commands:physical_tick=3018",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+        "status": "succeeded",
+        "time_s": 15.090000000000959
+      }
+    },
+    {
+      "sequence": 762,
+      "original_record_sha256": "939649e2ecd736139a28e0340d2c77d5049998e9a81f6e9370c9cb9783f1f711",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#763",
+      "event": "ainav_native_receipt",
+      "literal_native_receipt": {
+        "evidence_ref": "commands:physical_tick=3018",
+        "issued_command_sha256": "5976ed463f19cdf0ffd4fcc9ec5ef9db5401f0692134dfa7d4cf25fede882cb4",
+        "option_sha256": "90cdce994c8243db3db90292be9d81cb8aaaa736ff724219489df85a9b2d3213",
+        "status": "succeeded",
+        "time_s": 15.090000000000959
+      }
+    },
+    {
+      "sequence": 763,
+      "original_record_sha256": "5a757f818127ca2e810d32a75791705e2f4dcf858c8d8491e4ba070a112c2487",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#764",
+      "event": "skill_execution_judgment",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "status": "READY",
+      "reasons": [],
+      "original_judgment_sim_time_s": 15.090000000000959
+    },
+    {
+      "sequence": 767,
+      "original_record_sha256": "0312fc988b102123d02ae657786d058e59b8d3419d025cb3bc111a5c0be8cf4c",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#768",
+      "event": "execution_refinement_dispatch",
+      "intent_sha256": "dc82b1ea74f426d7964275e255a46325e733dc5f91cd0b70d9de83f0d8db4c79",
+      "native_option_sha256": "cdf37f6af23e59bfde6dbd26ab6aa40dae041764278bc77874c4515971f0124d",
+      "execution_role": "interaction",
+      "physical_action_issued": false,
+      "judgment_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#764"
+    },
+    {
+      "sequence": 768,
+      "original_record_sha256": "7858e3faeeff5ad07901572f750ce6fcf86d3923aa70b1684ec665e112eaf12f",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#769",
+      "event": "ainav_dispatch_failed",
+      "error": "'Runtime' object has no attribute 'staircase'"
+    },
+    {
+      "sequence": 769,
+      "original_record_sha256": "6acb62aee2f5140aef41f333b28516258c0da2b657d78f4211784cde1586f4a1",
+      "evidence_ref": "/mnt/yuanyue/data-team/deployments/46308-20261114/runtime/workers/data-46308-V4-common-palette-bounded-native-20261116-v2/events.jsonl#770",
+      "event": "ainav_chain_hard_stop",
+      "error": "'Runtime' object has no attribute 'staircase'",
+      "actual_physical_tick": 3018
+    }
+  ],
+  "public_observation_metadata": [
+    {
+      "file": "intent-observation-0001.json",
+      "image_dimensions": [
+        192,
+        128
+      ],
+      "image_not_opened": true,
+      "image_sha256": "dda873f51ad44cb39b3c79fabc5d1d777890a6467b3a2b113ff60d2982812505",
+      "objects": [
+        {
+          "bbox_xyxy": [
+            46,
+            49,
+            145,
+            75
+          ],
+          "evidence_ref": "RGBD:1ce76e74a1c266ffaecc57d16d739148bf989478b49adea736614b9179ae5dea",
+          "geometry": {
+            "source": "unavailable",
+            "status": "unknown",
+            "uncertainty": {},
+            "values": {}
+          },
+          "label": "cuboid_a; current original RGBD one-to-one association",
+          "target_ref": "course-target-fb9eae21b738454d8449b2259f35dc27"
+        }
+      ],
+      "sha256": "6d456c3a91df797325a426e097632fa2ca277fd17e88f22b40b095b92b31cb4d",
+      "time_s": 2.2399999999999745
+    },
+    {
+      "file": "intent-observation-0002.json",
+      "image_dimensions": [
+        192,
+        128
+      ],
+      "image_not_opened": true,
+      "image_sha256": "862ace8317e782c9f052b26f0c70197f330f1e784df19eb632c0007a7c551354",
+      "objects": [
+        {
+          "bbox_xyxy": [
+            11,
+            49,
+            146,
+            96
+          ],
+          "evidence_ref": "RGBD:e4db1a562333b26ccf7c06727323a839090f733e816c329180c7020a346cb11c",
+          "geometry": {
+            "source": "unavailable",
+            "status": "unknown",
+            "uncertainty": {},
+            "values": {}
+          },
+          "label": "cuboid_a; current original RGBD one-to-one association",
+          "target_ref": "course-target-fb9eae21b738454d8449b2259f35dc27"
+        }
+      ],
+      "sha256": "e0a212260812359ce0637ddf773850e7e80cf10a6ff7834db806ceb4d60a0206",
+      "time_s": 15.090000000000959
+    }
+  ],
+  "original_result_status": "COMPONENT_PREFLIGHT_FAILED_CLOSED_NO_RETRY",
+  "original_error": "'Runtime' object has no attribute 'staircase'",
+  "classification": "POST_NAV_CURRENT_ASSOCIATION_AND_ENTRY_JUDGE_READY_BUT_PUSH_CONSTRUCTION_ABI_FAILURE_BEFORE_OWNER_INSTALL",
+  "not_visual_gate_refusal_or_PUSH_controller_failure_or_resource_censor": true,
+  "capture_commands": 448,
+  "actual_NAV_preparation_commands": 2570,
+  "actual_task_commands": 3018,
+  "actual_task_sim_s": 15.090000000000959,
+  "actor_forward_events": 294,
+  "entry_predicate_READY_elapsed_from_initial_public_query_s": 12.850000000000986,
+  "entry_READY_scope": "ORIGINAL_SKILL_EXECUTION_JUDGMENT_ONLY_NOT_NATIVE_PUSH_OWNER_CONSTRUCTION_OR_SUCCESS",
+  "native_PUSH_installed_READY_elapsed_s": null,
+  "requested_PUSH_success_cost_s": null,
+  "CLIMB_labels": null,
+  "original_ledger_costs": {
+    "actual_auxiliary_sim_s": 6.5049999999998835,
+    "actual_task_sim_s": 15.090000000000959,
+    "wall_s": 2614.5083306080196,
+    "usage_known": true,
+    "output_bytes": 99354059
+  },
+  "peak_RSS_bytes": 2520408064,
+  "peak_GPU_own_bytes": 663748608,
+  "close_errors": [],
+  "original_phase_timings_overlapping_not_additive": true,
+  "closed": true,
+  "automatic_retry": false,
+  "formal_final_release_not_yet_consumed": true,
+  "direct_originals_and_owner_closed_SHA_used": true,
+  "close_snapshot": {
+    "path": "/home/yuanyue/main/work/data-team/manifests/V4-common-palette-bounded-native-46308-20261116-v2/readonly-20261116T121730.json",
+    "sha256": "069d7f73f4b96d8b048f65b0975edf1d0ed035ebff2cb99720423acab949e018",
+    "at": "2026-11-16T12:17:30.517342+08:00"
+  },
+  "source_readonly_findings": {
+    "frozen_source_path": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source/ainav/native/registered_push_api.py",
+    "frozen_source_sha256": "02b3ed66ec750a793e4806d6e23126dc98e821935255be119f9bdd65fc38d025",
+    "frozen_source_line": 121,
+    "local_readonly_counterpart_path": "/home/yuanyue/main/work/ainav/src/ainav/native/registered_push_api.py",
+    "local_counterpart_sha256": "1ceb43c844b3f38bf4e69b1b2d0272c5b16528d574658b630d5591c10b0d0980",
+    "local_counterpart_line": 140,
+    "local_dirty_counterpart_not_claimed_exact_frozen_source": true,
+    "statement": "terrain = runtime.staircase",
+    "not_fixed_by_Reach_no_other_group_write": true,
+    "repair_owner": "AINav; new exact program qualification required, never hot-patch closed scope"
+  },
+  "association_success_is_one_current_original_192x128_query_not_96x64_WM_anchor_qualification": true,
+  "public_objects_geometry_still_unknown_not_current_world_pose": true,
+  "no_causal_or_general_palette_success_claim": true,
+  "source53_not_in_this_af09_program": true,
+  "common_NAV_prefix_not_executed_or_changed": true,
+  "five_arm_main_calls": 0,
+  "real_WM_forward": 0,
+  "Reach_new_model_physics_API_fit_tests": 0,
+  "no_arrays_RGBD_frames_MJB_weights_read": true,
+  "new_model_input_or_training_permission": false
+}

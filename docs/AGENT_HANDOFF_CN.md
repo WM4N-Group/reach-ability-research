@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 12:25：v2 fresh关联/entry READY已过，PUSH构造缺Runtime.staircase而closed；不是技能失败
+
+- **v2已closed，真实卡点从关联转到PUSH构造ABI：** 已直接核46308原result `ecbd2a5c…`/ledger `caeba3e1…`等9小metadata＋journal共10项原件SHA、770行journal完整hash链及owner关闭SHA。af09/aecec原NAV 2.245 started→15.090 succeeded；fresh15.090 public query有原cuboid_a关联，原entry judge明确READY（line764）。随后interaction option已绑定/尝试dispatch，但在原`registered_push_api.py:121`读`runtime.staircase`时AttributeError，PUSH owner未install、无PUSH命令/terminal、CLIMB未尝试。不是旧41视觉关联拒绝、controller失败或resource censor，不重开。
+- **首次有entry谓词READY端点，严格不冒完整可执行READY：** 初始query2.240→原entry READY15.090=12.850sim，仅已观测entry predicate成本；native PUSH构造/安装READY与PUSH成功成本仍None。总3018命令=capture448＋NAV准备2570、294原Actor forward。两次public query的几何仍unknown；192×128当前关联不等96×64 WM anchor/公开world pose或新palette泛化保证，不能拿closed帧/私有judge state填在线后继provider。
+- **闭合费用实记，不作优化收益：** 2614.5083306080196wall、15.090task＋6.505aux sim、99,354,059 ledger bytes、usage_known=true、close_errors=[]；guard与step计时重叠不相加。通道色资产与原NAV/entry工程均非B/D treatment；内部C flag仍非真实C/E，五main/WM forward0。旧v1未知账及41结果全部保持。
+- **明确移交源缺件，不抢owner/造回执：** 本组只读定位原API terrain=runtime.staircase接缝，未给Runtime补假terrain、未改AINav/Data源码/进程/H或再派资格。需AINav完成真实terrain契约并由Data新准确程序资格；不在本closed scope热修/重试。source53/同公开map与固定NAV前缀仍不倒贴此af09资格。完整reference/三阶段effects/cost/退出fresh模型、WM bootstrap及40cm/static/后继owner仍未完成。小记录：`/home/yuanyue/reach-ability-research/operations/V4_PALETTE_V2_ENTRY_READY_CONSTRUCTOR_FAILURE_INTAKE_20261116.json`。
+
 ### 2026-11-16 11:54：v2新MJB静态delta实际通过；source53接共同先验，native组件仍在途
 
 - **新实际资产静态子资格已过，不是完整任务通过：** 已核Data release `8bcc837e…`及6小成员SHA，release/proof与46308原件SHA一致。af09/v2程序`aecec6eb…`实际编译新MJB `a8911921…`；proof给出398项nonRGBA及options/names/paths一致，只改箱85/86/87三条RGBA。本组仅独立核metadata/绑定，不重复读MJB或比较模型数组；同一component zero子交付不加样本/次数，不能称原brown同环境对照或B/D收益。

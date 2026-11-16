@@ -1,5 +1,10 @@
 # 原WM实际anchor的target8计算已接；语义关联与现场因果流仍需source接入
 
+## 2026-11-16 12:25 增量：af09/v2已closed；当前原关联成功不等WM anchor资格
+
+新palette的该root原NAV在15.090s succeeded，fresh原192×128 query仍有cuboid_a关联，原entry judge READY；随后PUSH构造读取Runtime.staircase缺失而失败，尚无PUSH owner安装/命令/terminal。故不再称本scope在途；同时不能将其当source53/完整方法/96×64 anchor资格。query public geometry仍unknown，不从private judge base pose或closed图片补online reference/target8。entry谓词端点12.850s已观测，native-owner READY/成功成本未知；完整原件与770行链直接核过，见`operations/V4_PALETTE_V2_ENTRY_READY_CONSTRUCTOR_FAILURE_INTAKE_20261116.json`。原fixed prefix/producer/default开关及source53proposal不改，旧root不重开，原ABI应由AINav在新源修复、Data新程序资格。
+
+
 ## 2026-11-16 11:54 增量：source53已接本proposal的共同map；af09新asset仅静态delta资格
 
 AINav source53 `530dfeae69873d854481669bc4c84bf6e3fd0dd2`已将固定增强map `802d3651187052d46c4006717d21fd27f21a2fde61ecc7e93a857197dd894cb6`接入默认OFF的`shared_appearance_public.build_shared_appearance_declaration`，driver可选`shared_appearance=`使observe_public/intent_catalogue消费同一typed context。下方“未源采用”历史应拆分为：**源码软件接收已完成；当前物理程序与五方法运行均未采用**。27 anchors原几何/不确定度/顺序与12 subject关系不变；不改本组原proposal bytes/producer默认开关或原视觉门。
