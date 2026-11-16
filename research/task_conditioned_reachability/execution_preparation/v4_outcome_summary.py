@@ -4,11 +4,30 @@ Pure scalar reader, not a native result verifier or publisher. Source adapter mu
 supply SHA-bound original facts. Missing arms and method-unavailable runs are not
 wins; API/resource censor is separate from native failure. No statistical claim
 from one DEV run/arm. Does not evaluate, fit or read the frozen critic/heldout.
+
+Comparison only: the source consumer supplies common_execution_profile_sha256
+and common_execution_profile_ref from the ORIGINAL frozen shared execution
+configuration (performance/audit/detection policy, common brake/control and
+resource/recording policy). Do not hash the whole arm program: method-specific
+VLM/WM/optimizer differences are the intended treatments. This scalar reader
+cannot authenticate the referenced bytes; source consumption must do that.
+Missing/malformed profiles preserve result rows but withhold method contrasts.
+These fields are NOT new runtime/zero/E-dispatch prerequisites.
 """
 import math
 from .v4_successor_choice import need
 
 ARMS=tuple('ABCDE')
+
+
+def _common_execution_profile(row):
+    digest = row.get('common_execution_profile_sha256')
+    ref = row.get('common_execution_profile_ref')
+    if (type(digest) is str and len(digest) == 64 and
+            all(c in '0123456789abcdef' for c in digest) and
+            type(ref) is str and bool(ref.strip())):
+        return digest
+    return None
 
 
 def summarize(rows, *, scene_sha256):
@@ -57,8 +76,15 @@ def summarize(rows, *, scene_sha256):
         if treatment not in by_arm or baseline not in by_arm:
             contrasts[key]=dict(status='MISSING_ORIGINAL_ARM_NOT_COMPARABLE');continue
         t,b=by_arm[treatment],by_arm[baseline]
-        valid=t['method_identity_established'] and b['method_identity_established'] and t['optimizer_effective']
-        contrasts[key]=dict(status='SINGLE_DEV_DESCRIPTIVE_ONLY' if valid else 'METHOD_CONTRAST_NOT_ESTABLISHED',
+        method_valid=t['method_identity_established'] and b['method_identity_established'] and t['optimizer_effective']
+        tp, bp = _common_execution_profile(t), _common_execution_profile(b)
+        profile_match = None if tp is None or bp is None else tp == bp
+        valid = method_valid and profile_match is True
+        status = ('METHOD_CONTRAST_NOT_ESTABLISHED' if not method_valid else
+                  'COMMON_EXECUTION_PROFILE_UNVERIFIED' if profile_match is None else
+                  'COMMON_EXECUTION_PROFILE_MISMATCH' if not profile_match else
+                  'SINGLE_DEV_DESCRIPTIVE_ONLY')
+        contrasts[key]=dict(status=status, common_execution_profile_match=profile_match,
             treatment_actual_success=t['task_success'],baseline_actual_success=b['task_success'],
             treatment_censored=t['resource_censored'] or t['api_censored'],
             baseline_censored=b['resource_censored'] or b['api_censored'],
