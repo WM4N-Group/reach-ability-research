@@ -7,7 +7,7 @@
     "PREPARATION_FACTOR_POLICY.json": "14b77d694e7160c2b1ddb0fc5b49d228947d1dfe245854e04e30499795d32b3e",
     "PUBLIC_DECLARED_MAP.json": "b24475b8f8b1e10f24cb30c84df61d97e97f537d2801f80eb83e1bd9829ed269",
     "PUBLIC_EFFECTS.json": "24a7ffea5bc6243df79f5d0820e10113351fb1dc206f935518c57396bbe0dfda",
-    "README_CN.md": "ef256e6562d5079f90fb58708b6906e72f8d01f8fd7b8bbd4447390f5c121c84",
+    "README_CN.md": "7b19b992065d36524afa06ef9ad0ba50706125c492b07204061b9e2bafb0a4fb",
     "RUN_ACCEPTANCE_REQUIREMENTS.json": "32d7b29c252d646bd7a0fbe19667e85667366e6cc6149a64b66d882d59a8c5b6",
     "SHARED_APPEARANCE_DECLARED_MAP.json": "802d3651187052d46c4006717d21fd27f21a2fde61ecc7e93a857197dd894cb6",
     "VLM_PROFILE.json": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
@@ -18,6 +18,7 @@
     "climb_nav_source.py": "c888ef67e392ac20c3ec3ec1a9dae39149195e02f775c713b5e12de3f33860e0",
     "common_nav_prelude.py": "b95c6abf4095747f4e395d82aba3c7a66fc6cb0b69c693993e5ffa805ac0343d",
     "destination_climb.py": "08f7e57735aef2a40251b4a15e551e96dec986027cd147c5a1150fea4a293914",
+    "e_entry.py": "e69fce29a6ed18c137f2a4359f690c91589dd3db7cf5bf3d9aab934f8fea43d8",
     "elevated_terminal.py": "aac30006cb0edbd0e63ae3b4f72948de90f0ae61dd6a75f6ea2f21dce5554242",
     "execution_entry.py": "e7fd5242a758cd7b4b507a755ba724d18772a9503f2adde352c7b3b550dd9374",
     "factor_scope.py": "9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424",
@@ -39,6 +40,7 @@
     "tests/test_climb_nav_source.py": "a3ca236b0acef294ea2b91cec1b4339604b68ea8187cd9f7098314fc0a03c494",
     "tests/test_common_nav_prelude.py": "8cfe01a79a97bbd7d10720f2315adeb324ab50627843ac85df517c29b3e7f8a7",
     "tests/test_destination_climb.py": "913658da17ca717b357fad73e75209142ff949747732661c7474dcb186ef7992",
+    "tests/test_e_entry.py": "b47c642d82217a858afc2d46f33587590ea296c1e5d1c4b806ebf2e3b1b9a0c3",
     "tests/test_elevated_terminal.py": "32b53771209bc332fdb85c3d286e01ce5b9d169d740690f2732a0e9ce05ed00b",
     "tests/test_execution_entry.py": "8abc6f8154fc7a96954eedb70c4785ae410b401ef24a6abcc6730b643ee2b1a4",
     "tests/test_factor_scope.py": "7d6c562f8d8f06f74e9ee216130d0063704023ee036bbb0e8d3a622aaa1e5a0e",
@@ -85,5 +87,6 @@
   "optional_NEW_shared_review_palette_render_revision_NOT_adopted_or_native_qualified": true,
   "optional_same_five_public_palette_declaration_schema_original_NOT_adopted_or_WM_native_qualified": true,
   "optional_same_all_five_existing_public_NAV_auxiliary_coordinator_caller_NOT_adopted_native_or_WM_qualified": true,
-  "cold_actual_registered_terrain_and_original_PlacementTerrain_diagnostics_ABI_fix_NOT_native_PUSH_qualified": true
+  "cold_actual_registered_terrain_and_original_PlacementTerrain_diagnostics_ABI_fix_NOT_native_PUSH_qualified": true,
+  "E_only_actual_RuleBaseline_entry_no_optional_models_or_previous_full_success_dependency_NOT_executed": true
 }

@@ -285,3 +285,39 @@ E完整成功与完整直接录制视频继续硬目标。此次ABI修复不解�
 static-deck/multisource也未因此被授予。不得改高度/布置/原成功门追胜，不得把bounded组件片
 冒完整E片，不能为补片自动重开closed arm。先交Data必要新资格、真实E与同步direct-live录制，
 资源/终点未资格前不虚称E main已开放或已成功。
+
+## Source59：按12:26新计划仅装配真正E，不等A—D/模型或先有整链成功
+
+`e_entry.build_E_driver`是Data现成runner的E最小入口：使用Data已经构造的fresh
+components/writer/lease guard，只创建原封不动的`RuleBaseline(max_selections=64)`，
+再交同一个原V4 driver、FactorJournal与五组共有H。没有可替换planner/backend/WM参数；
+默认OFF路径不初始化任何driver/模型。实际E入口不import/初始化A—D method、VLM backend、
+WM stream/history/forward、55 prefix或53 prior。这些不是E的运行前置。
+
+```python
+from native_entry import construct_cold_components
+from e_entry import build_E_driver
+# Data-only: exact already-frozen scene/model/SDK; new own-zero/lease/watchdog/root.
+components = construct_cold_components(enabled=True, source_root=exact_original_source,
+    bundle=verified_sdk_bundle, model_path=frozen_model_path, model_sha256=frozen_model_sha,
+    expected_scene_sha256=exact_V4_scene_sha, guard=Data_fresh_guard,
+    journal=original_journal, actor_device=isolated_device)
+driver = build_E_driver(enabled=True, components=components, source_root=exact_original_source,
+    bundle=verified_sdk_bundle, output_root=fresh_output_root, writer=actual_original_writer,
+    journal=original_journal, guard=Data_fresh_guard)
+# Data's actual runner owns stepping, original safety teardown and direct third-view
+# recording FROM TASK0. This entrypoint does not certify or synthesize video.
+```
+
+**不把之前没有E完整成功当首main禁令。** Data做新E程序必需own-zero后，冻结实际规则与录制
+并派一次完整任务尝试即可，不先排新的无关ABI/模型component循环。原规则/driver将只发出
+通过原judge的合法原技能；若到`.20→.60`，原RuleBaseline._select在构造/派发CLIMB之前以
+`E_selected_original20cm_CLIMB_domain_excludes_next_declared_height_no_guard_relaxation`
+明确终止。static deck的registered-object绑定亦未被此入口补造。该失败是方法/适用域硬阻塞，
+不是假造的CLIMB controller负例，更不是高台成功；原始错误、实际sim-clock、已执行技能与全费必须保留。
+
+首交是一条真正E从task0到原成功/失败/资源终止的完整第三视角1×原片＋最少结果；
+不等另外四组/五栏工具，不把component或NAV片改名E。原相机/尺寸/fps在新freeze前如实测定，
+不能靠回放/插帧补片，媒体在远端。没有摄像/真正native运行时只能标未交付，不能由本入口日志自证。
+新增8软件检查使用真实未改E规则＋明确fake driver-construction fixture，并硬拦可选模型/硬件/API import；
+不作第二次V4物理资格或E成功证据。
