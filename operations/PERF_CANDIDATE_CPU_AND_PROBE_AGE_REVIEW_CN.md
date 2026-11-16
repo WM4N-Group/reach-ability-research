@@ -1,5 +1,12 @@
 # 吞吐候选增量核对与ResourceWatch时间戳边界
 
+## 2026-11-16 21:36 增量：AINav已落实保守桥，Data组合尚未闭合
+
+AINav当前87a5c4f/package dc856dac源7文件核同；bridge2624944f要求同成功probe的原子(oldest,completed)，checked_at取最早值，duration>max_stale拒绝，无last_ok fallback。下方21:11所提风险已有明确源修复，不能继续称AINav未处理；这不是实际native或Data全链资格。原guard核心5aa/benchmark不变，无需再测其旧CPU比。
+
+Data正式输出增量5d3eb95e/53成员核同，query/intent/PNG/raw/report/childPIPE/小FFmpeg已有CPU合成证据。但其ResourceWatch仍为0c0eb141、未发布成功probe原子pair；旧7 bridge/6组合CPU检查覆盖的是之前API，不能替代当前严桥资格。Data在原接入职责内提供last_observation_stamp或explicit reader＋新准确source组合即可；不要求额外研究审批/物理新采样、不以旧completion戳或now绕过。真实runner/所有输出/lease-health与同阶段native性能仍待，不能因文件字节通过宣告系统5×。旧E20不重跑，原失败/费用不改。
+
+
 更新时间2026-11-16 21:11，计划02dc65ed不变。所有检查为源码/小metadata及两个确定性fake-clock CPU情形；没有重跑owner测试/benchmark、真实lease/GPU/线程/Runtime/Actor/physics/API/fit，没有修改他组源、H/锁或旧closed程序。
 
 ## 已收到的实现与同条件测量

@@ -156,5 +156,156 @@
   "end_to_end_5x_or_static_share_under10_percent_measured": false,
   "new_Reach_native_Runtime_model_Actor_GPU_physics_API_fit_calls": 0,
   "model_input_allowed": false,
-  "training_allowed": false
+  "training_allowed": false,
+  "newest_increment": {
+    "at": "2026-11-16T21:36:29.404493+08:00",
+    "Data_output_release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-PERF-OUTPUT-INTEGRATION-CPU-NOT-NATIVE-20261116-v1/release.json",
+    "Data_output_release_sha256": "5d3eb95e799185a4b8868fca937aa5f7bd23d83cec30063c89276fe758cdfd72",
+    "Data_verified53_members_sha256": {
+      "README_CN.md": "657a2a91001ecb41afd480a69e3a655ebd4914a9824ccd16ea557080f3dcebc3",
+      "evidence/controlled-output-local-tests-python3.log": "70e189107c5023ab69ffc9463b61bf9f58271e04135320218ddc6a1815aa1fd5",
+      "evidence/AINav-remote-pin-mismatch-observation.log": "7c5eb1921642c48154b28dcff4dc165ec4cdc3f5356d201e4961d43f54413bd4",
+      "evidence/observation-io-local-first.log": "c7e400632a077c72782cb018250e1a2ac092b6c4a2359561fb8bff9b4592ae32",
+      "evidence/remote-output-integration-first.log": "53592f2109444aa52195732bdf3966e5426720ee5c7e048a7b2d252e4c7e0d7c",
+      "evidence/fresh_readonly_snapshot.py": "ea33daf421cdc0a0e7b7b3da46f9a925bd8d37ddbc96e717a3438f2fbd7aeb9a",
+      "evidence/publish_output_candidate.py": "99d7872d77b80d3998af58f79b6a82a960c12d07986b3d6d89678dc1005ac5b4",
+      "evidence/combined-reviewed-exact-source-remote.log": "c0ea1cc96684b3c8e770665e50947cc572f6db3df2219c27e85ef327886fef74",
+      "evidence/fresh-readonly-snapshot.json": "0a68189e7566edec22981a1a1adbb15bdff7be926ca69ad27c4a95f19f97546c",
+      "evidence/first_snapshot_script_pin_assertion_preserved.py": "9e747023b6d630843fdcb37809a3ffcbb26d5f6042967ee30df8e4eeda3bd265",
+      "evidence/remote-output-integration-UTF8-fixed.log": "f72d9989d58dac8adee65f4826295b6c03aa2d66b949f95379c14b43060dc591",
+      "evidence/AINav-reviewed-local-cpu-snapshot-pins.json": "d2da09b2996b4890a05cff223de9547d2719eb255b3a0b635c3137f14b6c95e3",
+      "evidence/OUTPUT_INTEGRATION_ASSESSMENT.json": "eac60f39a5c5dab7ae0744bd84338e0626108bea4f8a5640ba74c107141364f6",
+      "evidence/controlled-output-local-tests.log": "0ae5252586dbde260a2b7e6859e2e0d26fa39885064e26ba7d6abc5dc371c72d",
+      "evidence/controlled-output-local-tests-fixed.log": "4880298002781788f6450b95a090528ee790cd3f455fb610cb50161d2f6a4776",
+      "evidence/real-watch-bridge-local.log": "6ae02e922d8731aee206eba73aaa157372d2a1a29febcf96e769541ca7ea32e1",
+      "evidence/remote-raw-reports-and-regression.log": "d792848c6c7069148dac9664a3a7841f976dc3829e8c416a4de5ecdc511bd18d",
+      "evidence/combined-indexed-watch-local.log": "e158675964f9e7086dbbd48a4638211ce6defe34226bdda09026fb665a131b0c",
+      "evidence/combined-indexed-watch-remote.log": "fd819c9e9b9c58b69b94675fbf38af6297b014859d2a398565ac301a723342a1",
+      "code/controlled_process.py": "e4e96293f82dc33c83ba777048b2585a597c948855c831d13fefde343f8ff479",
+      "code/test_observation_io_cpu.py": "e67ea472d5e689a34be089b9373cdd6b3783f45c33ed69f22389b07e2fbccd4b",
+      "code/resource_watch.py": "0c0eb1412b738496cd64bf527cede45afc1a06b16f7d0ec91c9e3f6812397815",
+      "code/scoped_io.py": "a6d7be97349b130f49dd36a703a4d1e0e6372e0e45eca47aadba7cecc1ffa164",
+      "code/IO_COVERAGE.json": "ac825373127c8246e53e98c85e38595817d98668547e1e24d3f02b1d32e03c00",
+      "code/test_indexed_composition_cpu.py": "2f39402cbf2d27e3e6ad7d2957e658ac152fcb817155797a63d624a8afb3fb06",
+      "code/test_raw_and_reports_cpu.py": "76239fd21e06236af1c7506662b8d4fd3f99e14a25886620fb0ef3411ff6cc28",
+      "code/private_writer_binding.py": "c18f6f7b446a1363a7fbcfb1b7e5d62199e9e1cbbe72f0ddf9dcc02962db9601",
+      "code/runner_outputs.py": "4ddf84dc2fc75bc2b6b6a5523dfc5ea61d9356f1c6d64a0ca72967c8b95683c2",
+      "code/POLICY.json": "fd804b144793818b2a8b6fef3c799ca0e96ac595569f8fea6a608aae2fe00554",
+      "code/README_CN.md": "699130430bfe29ec16387d8a883c99c650069c0962e1f3ccb2887154010fd2ff",
+      "code/test_controlled_outputs.py": "efb94f3329b1d1a914e6a4cbd238f48f6bec5af07be392f37e453cf6235a3c24",
+      "code/test_real_watch_bridge.py": "c8d9a78eeb3e49a471b8851fd87eb38faa9b08b61b36e4f90fc0962d2f4d4d5f",
+      "code/test_policy.py": "71a86ac65f0208aba508b8e2c681ea4aec231d615a52b6c9097453e144c45d48",
+      "code/test_original_writer_cpu.py": "6a3d66265531ba88d31366c805a11b245f57ffcd27b3fc2dd58968402b19ecfa",
+      "code/observation_io.py": "7cd081d8d35b013f716637f52b91a7b7f9fad934202205199bcd06ca74de2e69",
+      "code/original_writer_pins.json": "50100f2cee4f449f4f7c06e53dbddce7f81f5c1249c2d9bdcd71649bcc1bd8b9",
+      "code/test_encoder_pipe_cpu.py": "48aad10670ca33643f8920acc92b8d8171603e623dc620e3e6be8014f3e26de3",
+      "code/benchmark_policy.py": "fafdce9af2cc7dc439867e936616f0e543def21cfca73fe0465708ad184e2ae0",
+      "evidence/AINav-source-observation/indexed-diff.txt": "605dcef8ade340f90784c1c6c5354abfca0647cad8c64700ca3b433da5c79a6e",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/AUDIT_POLICY.json": "c12123674163d7c8c1bceebc73822de2210a014abb80b42cea210a06510bc520",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/README_CN.md": "c5fe1e907825ec36f9aca3ebeea25e1c4d3433ec2cba097448b685d8a4569b8c",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/install_fresh_driver.py": "e83a8cbe4b778b4b1899041b6fd6b5435015bdce959cf298750d164a6bba6f21",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/complex_dual_route_v1/scene_driver.py": "cdf8ce964044066e89bf4edc360fc2e23085a9c4363bb593fe9b8d75b85c856f",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/tests/test_indexed_guard.py": "5db4919704396c739b29fe3ddcb7779888ea3090a47e22e9085b494b9ce9d522",
+      "evidence/AINav-reviewed-local-cpu-snapshot/development/indexed_identity_guard_v1/tests/test_install_fresh_driver.py": "f18ddefe32bd874ab9d9dfb58824e953c997a224dd0ed1b8ac8f7feed1caf9f7",
+      "evidence/AINav-source-observation/local/README_CN.md": "c5fe1e907825ec36f9aca3ebeea25e1c4d3433ec2cba097448b685d8a4569b8c",
+      "evidence/AINav-source-observation/local/indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+      "evidence/AINav-source-observation/local/SOURCE_PACKAGE_SHA256.json": "8cee8edbb8fbf2bd374ee1329e6ebc8f97b26c7b0a8fc03a957553439acb8ae7",
+      "evidence/AINav-source-observation/remote/README_CN.md": "06ac5b8e6827154e9c6b2a674196ca4e2084aa6d5e3775d35ece129375fec4c5",
+      "evidence/AINav-source-observation/remote/indexed_guard.py": "4e0157d99936053dff79ac6f4080dddca9da2e29d321f911ec845ca4ed2b2a63",
+      "evidence/AINav-source-observation/remote/SOURCE_PACKAGE_SHA256.json": "0e894959712d5710715654c91eaec74451bc5cc7752b8cb8b5a788af17dc9ca9"
+    },
+    "Data_actual_CPU_integration_assessment": {
+      "two_synthetic_original_public_acquisitions": {
+        "query_files": 8,
+        "intent_files": 2,
+        "all_ten_byte_identical": true,
+        "controlled_bytes": 3810,
+        "two_explicit_IO_source_sites_changed": true
+      },
+      "synthetic_raw_chunk": {
+        "frames": 4,
+        "original_npz_byte_identical": true,
+        "no_camera_or_renderer_called": true
+      },
+      "Data_reports": {
+        "progress_temp_replace": true,
+        "sealed_final_result": true,
+        "Pillow_file_object": true
+      },
+      "direct_child_PIPE": {
+        "cases": 8,
+        "dual_stream_exact_bytes": 409600,
+        "per_reader_chunk_bytes": 8192,
+        "cap_timeout_nonzero_fail_closed": true,
+        "actual_native_controller_not_bound": true
+      },
+      "pinned_FFmpeg": {
+        "synthetic_frames": 4,
+        "size": [
+          16,
+          16
+        ],
+        "Hz": 10,
+        "MP4_stdout_bytes": 1761,
+        "stderr_controlled": true,
+        "ffprobe_four_frames": true,
+        "native_already_sealed": true,
+        "actual_live_camera_encoder_call_site_pending": true
+      },
+      "actual_ResourceWatch_bridge": {
+        "cases": 7,
+        "no_duplicate_probe": true,
+        "no_fresh_timestamp_forgery": true,
+        "external_probe_is_SOFTWARE_NOT_REAL_LEASE": true
+      },
+      "full_fresh_adapter_composition": {
+        "cases": 6,
+        "actual_Data_watch": true,
+        "driver_is_SOFTWARE_NOT_NATIVE": true,
+        "foreign_runtime_session_queue_denied": true,
+        "revocation_and_native_seal_denied_before_issue": true,
+        "local_indexed_SHA": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+        "remote_same_exact_candidate_passed": true,
+        "earlier_remote_published_variant_passed_but_NOT_SAME_SHA": true
+      },
+      "regression": {
+        "policy_cases": 30,
+        "original_command_serializer_rows": 40,
+        "original_Journal_rows": 100,
+        "byte_identical": true
+      }
+    },
+    "Data_native_ready": false,
+    "Data_remaining_before_native": [
+      "Full fresh runner call-site binding, actual live recorder/camera/index lifecycle, all outputs and metadata ownership coverage",
+      "Controller stdout/stderr dedicated root with aggregate phase reservation or same-process capture; cannot parent/child-share this ScopeIO counter",
+      "Actual encoder call-site switch to controlled post-seal PIPE, no filename-only accounting claim",
+      "Actual cheap RSS/Torch health and held lease/H/disk watch plus frozen dependency/lazy-boundary/source selection",
+      "Then a separate preregistered same-condition performance scope; never reopen closed E20"
+    ],
+    "AINav_current_record_path": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-INDEXED-IDENTITY-PERFORMANCE-REVISION-20261116-v1/CURRENT_IMPLEMENTED_AND_MEASURED_SOURCE_NOT_NATIVE_SIGNOFF.json",
+    "AINav_current_record_sha256": "c5a67fd79480d39e878eabba2621fb203d1e94a2efb044e952a731ba7f87b9d0",
+    "AINav_source_commit": "87a5c4fbc7c52bbf1ed061769e7e17d1a1ef2109",
+    "AINav_package_sha256": "dc856dac91c4bc861b82218ef59dd36804087828f10c2f10b81abdb0da65a6b9",
+    "AINav7_source_pins": {
+      "AUDIT_POLICY.json": "a79d1f927ac8348bb4ced00bf4d929cec640b989b2e8fbee6600e98987443ee1",
+      "README_CN.md": "1be399145394f888cd20f1a5d56bb89f1b52917b7ef90b0f94e384b6c76a0811",
+      "benchmark_same_loaded_cpu.py": "6bbd7370644f26f59cada2eadc782dd4bd45ad631f2bfed29bfaa8e587d826d3",
+      "indexed_guard.py": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+      "install_fresh_driver.py": "2624944f5ea6a1a7352cf1445973ffe4b5c8eafeff2b3d0aca65d8b5e1d4ecff",
+      "tests/test_indexed_guard.py": "5db4919704396c739b29fe3ddcb7779888ea3090a47e22e9085b494b9ce9d522",
+      "tests/test_install_fresh_driver.py": "e4340884927dd3d86e1f79a33f5eca13e61ee25523776d66baf660900c25c5b4"
+    },
+    "AINav_actual_bridge_oldest_pair_required": true,
+    "AINav_actual_bridge_no_last_ok_attribute_fallback_statically_checked": true,
+    "AINav_overage_duration_refused": true,
+    "Data_latest_published_resource_watch_still_completion_only_SHA": "0c0eb1412b738496cd64bf527cede45afc1a06b16f7d0ec91c9e3f6812397815",
+    "Data_atomic_stamp_or_successful_pair_interface_still_required_before_native_composition": true,
+    "older7_and6_CPU_composition_checks_not_current17_bridge_qualification": true,
+    "benchmark_core_unchanged_no_need_rerun": true,
+    "no_Reach_peer_source_patch_or_test_rerun": true,
+    "no_new_native_or_5x_evidence": true
+  }
 }

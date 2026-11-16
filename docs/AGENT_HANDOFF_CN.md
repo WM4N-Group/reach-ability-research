@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 21:36：AINav原子最早观测桥已修，Data输出CPU接线增量；真实watch pair仍待组合
+
+- **21:11观测戳反馈已在AINav新桥落实，仍不冒Data整链完成：** 当前87a5c4f…/package dc856dac…逐SHA核7文件，bridge2624944f…要求同一次成功probe的原子(oldest,completed) pair，checked_at取oldest、过龄完成拒绝，AST核无last_ok fallback；原guard核心5aa与既有benchmark字节同，不重刷。此为源码边界闭合，不是native资格或额外Reach许可。
+- **Data输出接线已有CPU增量：** 正式release5d3eb95e…/53成员核同；合成2次观测10文件、4帧raw chunk、管理报告/PNG file-object、受控子进程双PIPE及4帧FFmpeg→stdout/stderr CPU证据到达。文件/编码字节证据不等真实camera/控制器/runner全写点已绑定，native_ready=false/dispatch=false，原5×/审计<10%仍未实测。
+- **剩余具体组合接缝已指出，不新增通用审计：** Data该发布的ResourceWatch仍0c0eb141…completion-only、没有last_observation_stamp；不能把其旧bridge7项/组合6项PASS倒贴到新17项bridge。Data应在既定接入任务内提供同probe原子最早观测pair或显式reader，再用当前准确源做组合资格；新桥会安全拒缺pair，而非以now伪fresh/重复外部probe。Data仍需真实lease/health、所有输出与最终同阶段原生性能验证，不热改closed E20。
+- **原性能结论与研究边界保持：** Data目录4.346×、AINav稀疏2.157×/完整5s周期1.077×均是局部CPU范围，不相乘或冒native5×。无新模型/Actor/physics/API/fit、未改peer源/H/锁，原E20失败/片/费用/用途均保；主effects/退出fresh/cost仍未完成。本增量写入既有`operations/PERF_CANDIDATE_CPU_INTAKE_AND_PROBE_AGE_REVIEW_20261116.json`，不再另造框架。
+
 ### 2026-11-16 21:11：吞吐候选CPU证据已接；完整周期仅1.077×，probe完成戳边界已反馈
 
 - **性能新候选已到，区分实现与native资格：** Data受控IO/周期resource候选release543af841…/19成员SHA核过；同93文件FUSE树、1000合成calls/3轮，旧parallel8对比目录扫描1000→101、paired组件median4.346×。query/intent/管理文件、controller输出、encoder等写入尚须完整接counter或预留，native_ready=false；不把CPU writer/journal字节相同冒实际全覆盖。
