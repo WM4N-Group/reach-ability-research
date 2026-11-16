@@ -1,0 +1,32 @@
+{
+  "schema": "Data-next-program-controlled-IO-periodic-resource-policy-v1",
+  "current_frozen_E20_modified": false,
+  "default_native_admission": false,
+  "normal_scope_cap_bytes": 1073741824,
+  "finalization_and_buffer_reserve_bytes": 67108864,
+  "max_controlled_open_files": 16,
+  "per_text_stream_buffer_bytes": 8192,
+  "periodic_external_probe_interval_s": 1.0,
+  "maximum_successful_probe_staleness_s": 2.0,
+  "detection_bound": "At next original guard boundary, no later than 2s after last successful probe if guard calls continue; blocked native/OS calls add their duration; existing hard process watchdog remains",
+  "owner_GPU_UUID_held_FD_binding_probe": "Existing real PerGpuLease.check(force=True), one composite call per probe; no extra direct authority call",
+  "directory_reconciliation": "Exact fresh scan once per probe and at explicit final boundary, not per step",
+  "hot_native_guard": "PID/token/latch/staleness plus mandatory bound cheap RSS/Torch high-water health; native runtime/session/queue/target/callback checks remain AINav responsibility",
+  "controlled_IO": "Precharge actual logical file growth before write; account temp replacement, seek rewrites, truncation, UTF8 and compressed chunks; no cross-process counter sharing",
+  "unknown_output": "Unknown/missing/resized/replaced file, alias/hardlink/symlink, observation loss or read error latches stop; never silently resync",
+  "out_of_band_write_risk": "Unknown writers may consume space before next probe; no absolute cap or true external high-water claim against arbitrary root writers. Disk-free fallback, ENOSPC errors and stop/new-dispatch refusal remain required",
+  "highwater_definition": "Controlled regular-file logical-byte high-water, not filesystem allocated bytes/provider quota/complete external-writer peak",
+  "finalization": "Irreversible shared native seal before bounded final buffer/report drain can use reserve; no native execution resumed",
+  "same_detection_latency_as_old_every_step_full_scan": false,
+  "required_before_native_qualification": [
+    "Bind all real recorder/raw/metadata writes, controller stdout/stderr and encoder output to controlled counters or separately bounded pre-reserved accounting",
+    "Bind cheap original RSS/Torch high-water and real held lease/registry/disk checks; no placeholder probe",
+    "Compose with AINav new identity/canonical-index policy and test module/alias/file mutation plus foreign runtime/session/queue",
+    "Measure real same-stage end-to-end performance, per-step quantiles, complete commands/receipts/frames and memory peaks in a separately registered performance scope"
+  ],
+  "not_end_to_end_5x_evidence": true,
+  "Runtime_Actor_model_training_GPU_physics_dispatches_by_this_package": 0,
+  "periodic_observation_stamp": "ONE immutable(oldest=probe_start,completed=probe_end) published after successful real probe; completion-only last_ok is metrics only",
+  "probe_too_old_at_completion": "If completed-oldest>2s, latch failure BEFORE publishing success; never rejuvenate from completion",
+  "same_process_stdout": "fd1/fd2 PIPE readers in SAME process and SAME aggregate scope budget; Python/OS/C stdio flush/drain, cap error explicitly censored+latched; no shared fork counter"
+}
