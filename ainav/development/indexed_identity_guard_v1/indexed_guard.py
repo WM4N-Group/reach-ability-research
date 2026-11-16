@@ -47,12 +47,16 @@ class OwnerStamp:
     valid:bool
 
 
+def _stat_fields(s):
+    return(s.st_dev,s.st_ino,s.st_mode,s.st_size,s.st_mtime_ns,s.st_ctime_ns)
+
+
 def _signature(path,*,follow=True,missing=False):
     try:s=os.stat(path,follow_symlinks=follow)
     except (FileNotFoundError,NotADirectoryError):
         if missing:return None
         raise
-    return(s.st_dev,s.st_ino,s.st_mode,s.st_size,s.st_mtime_ns,s.st_ctime_ns)
+    return _stat_fields(s)
 
 
 def _hash_file(path):
@@ -167,7 +171,7 @@ class IndexedIdentityGuard:
         self.policy=AuditPolicy()if policy is None else policy;self.clock=clock;self.state='NEW';self.failure=None
         self.host=None;self._depth=0;self._call_count=0;self._module_count_at_check=0
         self.metrics={k:0 for k in ('fast_checks','module_audits','metadata_audits','canonical_audits','boundaries',
-            'canonical_resolves','stat_calls','full_original_calls','owner_refresh_calls')}
+            'canonical_resolves','stat_calls','directory_reads','full_original_calls','owner_refresh_calls')}
         self.metrics.update({k:0. for k in ('owner_fast_wall_s','memory_wall_s','module_audit_wall_s',
             'metadata_audit_wall_s','canonical_audit_wall_s','boundary_wall_s','owner_refresh_wall_s')})
     def _timed(self,key,fn,*args,**kwargs):
@@ -222,11 +226,15 @@ class IndexedIdentityGuard:
                 need(_signature(raw)==pin.signature and _signature(canonical)==pin.signature,
                      'File metadata changed since owner-authorized SHA snapshot')
             index[raw]=canonical
-            for p,follow in ((raw,True),(raw,False),(canonical,True)):
-                monitored[p,follow]=_signature(p,follow=follow,missing=pin is None);self.metrics['stat_calls']+=1
+            # A single lstat for a regular canonical file covers both its file
+            # identity and replacement by a symlink. For aliases, retain the
+            # raw leaf and the canonical target separately. No duplicate
+            # follow=True/follow=False syscalls for the usual raw==canonical.
+            for p in dict.fromkeys((raw,canonical)):
+                monitored[p]=_signature(p,follow=False,missing=pin is None);self.metrics['stat_calls']+=1
         for path,pin in self.files.records.items():
             # Includes explicitly frozen weights/assets, not only module source.
-            monitored[path,True]=pin.signature
+            monitored[path]=pin.signature
         for key,module,raw in before:
             if raw is not None and Path(index[raw])in self.allowed:
                 canonical=index[raw];cb=vars(module).get(self.callback_name)
@@ -235,6 +243,11 @@ class IndexedIdentityGuard:
         after=self._capture_modules()
         need(len(before)==len(after)and all(a[0]==b[0]and a[1]is b[1]and a[2]==b[2]for a,b in zip(before,after)),
              'Module set changed while building frozen index')
+        groups={}
+        for path,expected in monitored.items():
+            parent,name=os.path.split(path)
+            groups.setdefault(parent or '.',{})[name]=(path,expected)
+        self.file_groups=groups
         self.modules=before;self.index=index;self.monitored=monitored;self.critical=tuple(critical)
         self.token_snapshot=_token_capture(self.tokens(host));self.module_map=self.registry.modules
     def seal(self,host,*,label='initial-loaded-snapshot'):
@@ -271,9 +284,27 @@ class IndexedIdentityGuard:
              for a,b in zip(current,self.modules)),'Module/path/alias metadata changed outside paused boundary')
         self.metrics['module_audits']+=1;self.last_module=self.clock();self._module_count_at_check=self._call_count
     def _metadata_check(self):
-        for (path,follow),expected in self.monitored.items():
-            actual=_signature(path,follow=follow,missing=expected is None);self.metrics['stat_calls']+=1
-            need(actual==expected,'Frozen file/symlink metadata changed: '+path)
+        # Fresh DirEntry objects EACH audit, no retained metadata cache. The
+        # filesystem can coalesce directory attributes; do not ask stat twice
+        # for the same regular raw/canonical file or walk any output tree.
+        for parent,wanted in self.file_groups.items():
+            found=set();self.metrics['directory_reads']+=1
+            try:
+                with os.scandir(parent)as entries:
+                    for entry in entries:
+                        row=wanted.get(entry.name)
+                        if row is None:continue
+                        path,expected=row
+                        need(entry.name not in found,'Duplicate watched name during non-atomic directory audit')
+                        found.add(entry.name)
+                        actual=_stat_fields(entry.stat(follow_symlinks=False));self.metrics['stat_calls']+=1
+                        need(actual==expected,'Frozen file/symlink metadata changed: '+path)
+                for name,(path,expected)in wanted.items():
+                    need(name in found or expected is None,'Frozen file disappeared: '+path)
+            except (FileNotFoundError,NotADirectoryError):
+                # Only explicitly absent paths may remain absent. A vanished
+                # existing source/parent or a mid-audit file removal fails.
+                need(all(expected is None for _,expected in wanted.values()),'Frozen source/parent disappeared')
         self.metrics['metadata_audits']+=1;self.last_metadata=self.clock()
     def _canonical_check(self):
         for raw,expected in self.index.items():

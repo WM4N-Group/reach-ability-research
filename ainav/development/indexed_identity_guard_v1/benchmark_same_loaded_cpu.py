@@ -41,6 +41,8 @@ traces={
  # Deliberately sparse scripted wall timeline exercises all production tiers.
  # These are NOT claims about native physics or captured step latencies.
  'bounded_periodic_audits_12_calls':(0.,.25,.5,1.,5.,6.,10.,20.,40.,59.,60.,61.),
+ # Added before final measurement to cover EVERY 5s audit, not just sparse gaps.
+ 'full_5s_audit_cadence_14_calls':tuple(float(i)for i in range(0,61,5))+(61.,),
 }
 rows=[];cold=[]
 def tokens(host):return dict(session=None,target=None,goal='FAKE_GOAL',config_epoch='FAKE_CONFIG')

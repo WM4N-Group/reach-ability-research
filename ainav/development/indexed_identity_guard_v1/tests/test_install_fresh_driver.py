@@ -97,6 +97,19 @@ class Tests(unittest.TestCase):
   with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):fast(self.driver)
   with self.assertRaisesRegex(RuntimeError,'supervisor revoked'):ack(self.driver)
 
+ def test_Data_watch_timestamp_sampled_once_under_background_refresh(self):
+  class ChangingWatch:
+   max_stale=2.
+   token=object()
+   reads=0
+   def check(self,token):pass
+   @property
+   def last_ok(self):
+    self.reads+=1;return 123.+self.reads
+  watch=ChangingWatch();fast,_=data_resource_watch_callbacks(watch,epoch='scope-epoch')
+  stamp=fast(self.driver)
+  self.assertEqual(watch.reads,1);self.assertEqual(stamp.valid_until-stamp.checked_at,2.)
+
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
  print(json.dumps(dict(role='FRESH_ADAPTER_EXPLICIT_SOFTWARE_NOT_NATIVE',checks=r.testsRun,failures=len(r.failures),errors=len(r.errors),blocked=blocked,native_Runtime_Actor_physics_GPU_API_calls=0)))

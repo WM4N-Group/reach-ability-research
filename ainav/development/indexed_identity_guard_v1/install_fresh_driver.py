@@ -92,8 +92,10 @@ def data_resource_watch_callbacks(watch,*,epoch):
     token=watch.token
     def fast(host):
         watch.check(token)
-        need(watch.last_ok is not None,'External watch never successfully checked')
-        return OwnerStamp(epoch,float(watch.last_ok),float(watch.last_ok)+watch.max_stale,True)
+        checked=watch.last_ok  # One atomic Python reference read; supervisor may refresh concurrently.
+        need(checked is not None,'External watch never successfully checked')
+        checked=float(checked)
+        return OwnerStamp(epoch,checked,checked+watch.max_stale,True)
     def acknowledge(host):
         watch.check(token)  # Do NOT run a duplicate full external probe here.
     return fast,acknowledge

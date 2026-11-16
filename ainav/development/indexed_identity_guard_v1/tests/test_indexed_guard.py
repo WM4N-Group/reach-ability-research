@@ -125,7 +125,7 @@ class Tests(unittest.TestCase):
   with self.assertRaisesRegex(GuardViolation,'Canonical alias'):self.g.check(self.host)
  def test_read_failure_not_suppressed(self):
   self.seal();self.advance(.51)
-  with patch.object(mod.os,'stat',side_effect=PermissionError('fixture')):
+  with patch.object(mod.os,'scandir',side_effect=PermissionError('fixture')):
    with self.assertRaises(PermissionError):self.g.check(self.host)
   self.assertEqual(self.g.state,'FAILED')
  def test_explicit_boundary_add_known_module_updates_tokens_no_step(self):
@@ -211,6 +211,14 @@ class Tests(unittest.TestCase):
   with self.assertRaises(GuardViolation):
    with self.g.boundary(self.host,'not-arbitrary-method-install'):
     self.host._stow_installed[str(self.owned)]=object()
+
+ def test_periodic_metadata_uses_fresh_directory_entries_not_retained_stats(self):
+  self.seal();self.advance(.51)
+  real=mod.os.scandir
+  with patch.object(mod.os,'scandir',wraps=real)as scan:self.g.check(self.host)
+  self.assertGreater(scan.call_count,0)
+  self.other.write_text('# fresh modification after successful audit\n');self.advance(.51)
+  with self.assertRaises(GuardViolation):self.g.check(self.host)
 
 if __name__=='__main__':
  r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))

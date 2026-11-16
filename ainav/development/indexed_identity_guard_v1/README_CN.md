@@ -79,7 +79,7 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 
 ## 当前证据/下一验收
 
-42新policy/失效/文件/owner/foreign identity纯软件＋12 fresh adapter/owner-bridge fixtures本机通过；
+43新policy/失效/文件/owner/foreign identity纯软件＋13 fresh adapter/owner-bridge fixtures本机通过；
 不是native/容量/真实lease/5倍系统资格。相同CPU loaded模块、文件树和相同合成call轨迹的
 旧batch32与本版配对benchmark由`benchmark_same_loaded_cpu.py`提供，cold SHA/边界成本
 分开、exclusive hot分项不相加重计。真实同阶段性能验证只由Data新scope实施，未达目标
@@ -93,3 +93,26 @@ body之前**；原step body/碰撞/足力/FF/effort/QP/FIFO/NN/STOW/4s/stop不�
 不以本次guard调用的now伪造freshness；refresh回调只是ACK现有有效结果，**不额外probe**，
 从而不与Data每1秒的外部监督重复检查。Data自行持有原lease并start/close监督线程，
 容量/磁盘/撤销失败由watch.check传播。本桥接器没有证明真实watch已通过资格，仍需Data测量。
+
+
+## 完整依赖范围不能混淆
+
+本索引自动覆盖loaded module.__file__，不自动发现ELF/DT_NEEDED、已dlopen但无module字段的
+native动态库、pyc来源、Actor权重或MJB。Data必须把真实依赖闭包/权重/资产以显式extra paths
+纳入同一授权inventory并按原source/环境manifest核SHA；CPU benchmark的约1300模块文件
+**不是完整可执行环境或native资格证明**。初始化测量root范围也不是外部真实性签名。
+
+owner桥接仅一次读取真实last_ok再构造同一stamp，避免后台线程更新时拼出虚假更长有效期；
+对应并发读fixture的修复前失败保留，不是物理失败或改变检查时限。
+
+
+## 周期审计也要测，不能只挑无I/O的快路径
+
+首版真实CPU loaded corpus成对测量：16次非到期hot check约4.747s→0.458ms，但稀疏周期
+12调用轨迹旧3.547s/新5.728s，**新策略反而更慢**，原负结果完整保留。定位为周期audit重复
+follow/nonfollow stat以及串行FUSE元数据开销。当前修为同raw/canonical regular路径只一次
+lstat语义，并按同parent目录一次scandir收取**本次新DirEntry**，只stat预登记名字；不扫描
+output tree、不跨audit留DirEntry，不降原5s/60s周期。原same-inode parent alias等失效测试仍在。
+最终基准保留原两条调用轨迹，并增加每5s都触发的完整周期轨迹，防止只挑稀疏区间报收益。
+文件系统缓存/可见性不由Python绝对控制；上表为应用poll上界，真实FUSE backend延迟仍须
+Data资格验证，不把新DirEntry或chmod说成即时防篡改证明。
