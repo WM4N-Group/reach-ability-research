@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 17:59：新E20+40mm候选静态geom查询失败；zero/main均0，旧E59保持
+
+- **新E20版本不是旧V4改标签：** 已读AINav记录的12:53用户环境适配授权原件；新scene08a260a4…以真实C箱顶.20m为终点，原三placement/技能权重/安全成功门保持，通路/辅助台变化明确。后续增加单点40mm提前进入原brake的DEV假设及I/O改动，均不当Reach新增算法收益、不冒旧.60m成功；未来对照必须同环境/同公共policy。旧“环境改动尚未获原则授权”口径被该原件覆盖，不再重复索批。
+- **新scope只有静态构造失败，zero0/main0：** Data release `6e9b4438…`＋10小成员SHA核同；source5a1a92b…/静态program c3e14456…。`complex_e_skill20_arrival_v3/v4_native_asset.py:97`在fresh spec查目标geom后返回None，访问rgba报错；尚未新场景compile/产新MJB，无Runtime/Actor/任务步/新E20视频。40mm动态效果未测，不补PUSH/CLIMB失败或新E main分母。
+- **费用与修复边界：** 原静态wall10.479544644s、task0/aux0、RSS1336918016bytes、usage_known=true/close0；GPU peak为null保未知。scope已closed/no retry，源spec引用/lookup接缝由AINav修，不猜缓存/生命周期唯一根因，不用dummy/跳色/旧MJB绕过，不改已失败spec后继续。未改他组源/门/H/进程，未做模型/physics/fit/重复测试。
+- **已有E59结论原样保留：** 原真实main1失败、1×原片、cold PASS、首次26.630 NN_STOP placement失格与旧费用/用途全保；E20降高/局部提速不会自行修复首次PUSH。Reach完整后继effects/cost仍未完成，不用新/旧已曝光末态查表训练或编造预测。新小记录：`operations/E20_PREARRIVAL40_STATIC_GEOM_LOOKUP_FAILURE_INTAKE_20261116.json`。
+
 ### 2026-11-16 16:59：E原流cold通过；首次placement失格26.630在NN_STOP，早于H/收臂
 
 - **新增cold正式补充已消费，原任务仍失败：** Data release `d7bd4be9…`/audit `45f2deed…`两成员SHA核同，原program/result/journal与上轮一致。owner报告515冻结成员、9719条200Hz/4步FIFO、原PD/clip误差0、486机载/31chunk486原RGB grid全过；本组只核正式metadata和新问题所需原journal7条记录，没有重跑cold/NPZ/模型或重复全链审计。原视频/zero1/main1/closed/全部费用不改，owner只读audit13.979637s另记，不当新任务或免费计算。

@@ -1,5 +1,9 @@
 # Reach repository rules
 
+## Environment revision intake: 2026-11-16 17:59
+
+AINav's recorded user instruction at12:53 authorizes environment parameters within existing skill capability. The separate E20 candidate ends on actual movable C at20cm, with explicit new geometry; it is NOT original V4/.60m success. Future comparisons must share the same environment and common brake policy. Old freezes/closed scopes, original safety/success predicates and weights remain immutable. E20+40mm source5a1a92b static compile failed before zero/main; no dynamic40mm result. This updates stale blanket "no environment authorization" wording, not permission for Reach to take physical ownership or hot-patch peer code. See the latest handoff and authorization-record pin.
+
 ## Latest resource clarification: 2026-11-16 14:08
 
 Shared plan `e56951c29f4b9827e27519c6e3a7bae1864b9a6e5229ab57ada16324dae4c68b` retains E-first and46308-only compute. Old46174 may now be inspected READ-ONLY for a specific missing historical file; no broad scanning, continuous polling, resumed launcher/closed run, training/simulation or old lease reuse. No need to reconnect when required data already exists locally/on46308.
