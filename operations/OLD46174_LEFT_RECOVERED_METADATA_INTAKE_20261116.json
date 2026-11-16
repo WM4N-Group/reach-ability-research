@@ -1,0 +1,81 @@
+{
+  "role": "RECOVERED_HISTORICAL_METADATA_NOT_NEW_TRIAL_OR_TRAINING",
+  "at": "2026-11-16T18:28:55.736666+08:00",
+  "release_path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-OLD46174-LEFT-RECOVERED-ORIGINAL-METADATA-PASS-NOT-NEW-RUN-20261116-v1/release.json",
+  "release_sha256": "dce8b55447c3fa3d8ff289ac231ea643c320e1ffa08f8e64db2abca8f316b0f2",
+  "verified_local_members_sha256": {
+    "recovery-assessment.json": "10ffdd2faa32b1c1331e1295d5cb76c4b3c338a9ea705b9ec6faf150d1699311",
+    "README_CN.md": "3d138d1a873bc0efa8ebb9de9a83fc47b245ae829595ab6ab1098f15ac8930cb",
+    "original/accounting/ledger.json": "5825aa3d97054de9c4796144bb7ff7de2a6d4d18ebbf3634acd4c34187f1abd1",
+    "original/main/result.json": "9a879643f89143078dd1fd55f468f16b27ecfd68329faf28b71c1f41088bffc5"
+  },
+  "previous_Reach_unknown_record": {
+    "path": "/home/yuanyue/reach-ability-research/protocols/2026-11-14/native-prefix/NEW_HOST_G1_PLAN_AND_OLD_ATTEMPT_PINS.json",
+    "sha256": "3bc1a2edf310278fe973fe36e9706d139872edf4a8df8c32c0d100ce742d2ede",
+    "original_outcome": "UNKNOWN_UNREACHABLE",
+    "unchanged": true
+  },
+  "recovered_result_identity": {
+    "scope_id": "data-native-prefix-left-PUSH-CLIMB-20261114-v1",
+    "program_sha256": "5472a8bb0709f2a4cce7a4354bdf99558d10ea06a9a30320261d798dbdf6193d",
+    "authorization_sha256": "c9787048453367833c4314f02399cefc6153cac86386d2277c3f86cfb67c165f",
+    "status": "REQUESTED_API0_PASS",
+    "passed": true,
+    "whole_task_success_claimed": false,
+    "method_benefit_or_distinct_algorithm_proven": false
+  },
+  "Data_recovery_assessment": {
+    "at": "2026-11-16T18:14:31.673806+08:00",
+    "old_scope_id": "data-native-prefix-left-PUSH-CLIMB-20261114-v1",
+    "old_program_sha256": "5472a8bb0709f2a4cce7a4354bdf99558d10ea06a9a30320261d798dbdf6193d",
+    "old_authorization_sha256": "c9787048453367833c4314f02399cefc6153cac86386d2277c3f86cfb67c165f",
+    "historical_H_sha256": "e3baa660de85ee22bb6c7dfc5625ba91a6b354b4e1f32ae1ca760f7b7a336aa9",
+    "old_H_still_reports_active_not_execution_authority": true,
+    "old_ledger_top_level_stopped_original": false,
+    "zero_and_main_rows_closed": true,
+    "main_result_report_sha_matches_final_ledger": true,
+    "reported_main_passed": true,
+    "reported_requested_semantic_successes": 3,
+    "reported_whole_task_success": false,
+    "reported_native_option_completions": 5,
+    "actual_task_commands_reported": 24217,
+    "actual_task_sim_s_reported": 121.08499999996236,
+    "actual_onboard_frames_reported": 1211,
+    "main_report_wall_s_original": 909.7993385328446,
+    "main_ledger_wall_s_original": 909.8905702219345,
+    "zero_ledger_wall_s_original": 42.51091388287023,
+    "zero_main_ledger_sum_wall_s": 952.4014841048047,
+    "zero_main_ledger_sum_sim_s_including_aux": 134.09499999996214,
+    "main_ledger_output_highwater_bytes_original": 177089038,
+    "main_result_output_bytes_original": 176989422,
+    "wall_report_vs_ledger_delta_s": 0.0912316890899092,
+    "output_ledger_vs_report_delta_bytes": 99616,
+    "original_main_result_file_bytes": 99616,
+    "close_errors_original": [],
+    "full_raw_streams_reaudited_on_recovery": false,
+    "previous_unknown_record_preserved_sha256": "a312c3e5b596d4c1d02e604cba471c75ca3a6f88f49026b5182172190bd0d866",
+    "new_physical_runs": 0,
+    "old_zero_main_counts_unchanged": [
+      1,
+      1
+    ],
+    "no_old_H_ledger_locks_process_or_source_writes": true,
+    "no_new_paired_or_holdout_sample_claim": true,
+    "model_input_allowed": false,
+    "training_allowed": false,
+    "purpose": "Need-based original historical result recovery under plan e56951c2; never an E20 admission gate"
+  },
+  "Reach_old_host_connections_this_turn": 0,
+  "Reach_independent_raw_or_journal_cold_audit": false,
+  "new_physical_runs": 0,
+  "old_zero_and_main_counts": [
+    1,
+    1
+  ],
+  "no_new_pairing_holdout_or_bulk_inventory": true,
+  "no_changes_to_old_purpose_or_model_inputs": true,
+  "training_allowed": false,
+  "model_input_allowed": false,
+  "E20_static_interface_fix_source_seen": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "E20_fix_native_dispatch_or_pass_not_claimed": true
+}

@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 18:28：E20 fresh-spec修复仅软件；旧46174 left原PASS元数据恢复但不增试验
+
+- **当前E20接缝已有新源，不把软件修复冒通过：** AINav04a9c0f…只在同fresh spec用现存geom句柄/原binding核三目标后写RGBA，scene08a/规则/40mm/原安全门不改；owner软件通过仍非Data新compile/zero/main资格。上一静态失败root保持closed，40mm动态main总上限仍1；本组不重刷owner套件、不改他组源/排额外前置。
+- **历史失联left原结果已恢复，但不是新运行：** 已核Data release `dce8b554…`及4成员SHA，原scope/program5472a8bb…/authorization与旧记录一致。原result9a879643…报告REQUESTED_API0_PASS：所请求NAV→PUSH→20cm CLIMB三项语义成功，24217命令/121.085sim/1211机载帧；whole_task_success=false、方法收益未证。仅恢复正式metadata，不冒新V4/E20成功或原流重新cold通过。
+- **UNKNOWN历史、管理状态和费用口径全部保留：** 本组11-15旧UNKNOWN原文件bytes不改，新增恢复记录；原zero/main行closed但账本顶层stopped=false/旧H仍active只是历史未收尾，不作当前lease/执行权威，不因此续派旧right。原main报告wall909.799338533与最终ledger909.890570222分别保留；zero+main ledger952.401484105wall/134.095sim含aux，非新端项目总费，不猜差值因果/补货币成本。
+- **用途与当前任务不串：** 旧zero1/main1不增加分母、不与新端right重配、不加入bulk/训练/未见TEST；本组本轮未连旧端或读大raw，所有旧结果/权限/成本不回写。E59原失败片/cold及26.630失格结论保持，E20静态阻塞不因历史PASS消失；完整后继effects/cost仍未完成。小记录`operations/OLD46174_LEFT_RECOVERED_METADATA_INTAKE_20261116.json`。
+
 ### 2026-11-16 17:59：新E20+40mm候选静态geom查询失败；zero/main均0，旧E59保持
 
 - **新E20版本不是旧V4改标签：** 已读AINav记录的12:53用户环境适配授权原件；新scene08a260a4…以真实C箱顶.20m为终点，原三placement/技能权重/安全成功门保持，通路/辅助台变化明确。后续增加单点40mm提前进入原brake的DEV假设及I/O改动，均不当Reach新增算法收益、不冒旧.60m成功；未来对照必须同环境/同公共policy。旧“环境改动尚未获原则授权”口径被该原件覆盖，不再重复索批。
