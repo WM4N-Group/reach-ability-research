@@ -1,0 +1,29 @@
+{
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v1",
+  "source_commit": "5a1a92b153a23a91a5ec79ef4355f36af2d3fe51",
+  "phase": "STATIC_COMPILE_ONLY",
+  "PID": 243226,
+  "passed": false,
+  "actual_task_steps": 0,
+  "actual_aux_sim_s": 0.0,
+  "Actor_forwards": 0,
+  "Runtime_calls": 0,
+  "automatic_retry": false,
+  "error_class": "AttributeError",
+  "error": "'NoneType' object has no attribute 'rgba'",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v1/compile_asset.py\", line 22, in <module>\n    asset=native_entry.compile_static_asset(source_root=SOURCE,bundle=SDK,output_model=out,scene_path=W/'inputs/ainav'/C['source_relative_path']/'scene.json',expected_scene_sha256=C['scene_sha256'],guard=guard,enabled=True);need(asset['actual_main_steps']==asset['Actor_forwards']==0 and asset['model_sha256']==sha(out),'Only true cold static model, no task/Actor');result.update(passed=True,asset=asset)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v1/inputs/ainav/development/complex_e_skill20_arrival_v3/native_entry.py\", line 54, in compile_static_asset\n    result=_bound_original('compile_static_asset')(enabled=True,**owner_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v1/inputs/ainav/development/complex_dual_route_v1/native_construction.py\", line 39, in compile_static_asset\n    scene=load_scene(scene_file);construction=construct_into_native_spec(sim,scene=scene,main_steps=0);model=sim.spec.compile();guard()\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v1/inputs/ainav/development/complex_e_skill20_arrival_v3/native_entry.py\", line 40, in _v4_construct\n    return v4.construct_into_native_spec(sim,scene=v4.load_scene()if scene is None else scene,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/workers/E20-prearrival40-direct-live-46308-20261116-v1/inputs/ainav/development/complex_e_skill20_arrival_v3/v4_native_asset.py\", line 97, in construct_into_native_spec\n    value=obj['review_color'];sim.spec.geom(obj['body_name']+'_geom').rgba=[*(int(value[i:i+2],16)/255. for i in (1,3,5)),1.]\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'rgba'\n",
+  "final_GPU": {
+    "UUID": "GPU-297c1146-bcec-a8ee-8437-d9603392a2e1",
+    "index": 0,
+    "free_MiB": 24080,
+    "utilization_percent": 0,
+    "PID": 243226,
+    "own_compute_bytes": null,
+    "own_observation_state": "CUDA_UNINITIALIZED_NO_PID_ROW",
+    "peak_own_compute_bytes": null
+  },
+  "wall_s": 10.479544644011185,
+  "peak_RSS_bytes": 1336918016,
+  "close_errors": [],
+  "usage_known": true
+}

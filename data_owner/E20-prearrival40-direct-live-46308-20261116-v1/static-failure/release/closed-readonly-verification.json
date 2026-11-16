@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-16T17:51:54.109170+08:00",
+  "H_sha256": "6857666451dc0e765eaced10337860a79b3572cb2c0d7f9b75d6acf1a07c67c4",
+  "scope": {
+    "active": false,
+    "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+    "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v1",
+    "phase": "CLOSED_STATIC_ASSET_FAILED_NO_ZERO_MAIN",
+    "source_commit": "5a1a92b153a23a91a5ec79ef4355f36af2d3fe51",
+    "plan_sha256": "e56951c29f4b9827e27519c6e3a7bae1864b9a6e5229ab57ada16324dae4c68b",
+    "asset_compile_freeze_sha256": "c3e14456694d99c376f9fa9aeabe4f1f18fbc8e8cde78a9a45f52d42938c5a4e",
+    "asset_compile_dispatch_count": 1,
+    "zero_dispatch_count": 0,
+    "main_dispatch_count": 0,
+    "automatic_retry": false,
+    "resources": {
+      "at": "2026-11-16T17:47:50.183794+08:00",
+      "owned_bytes": 26332526080,
+      "limit_bytes": 42949672960,
+      "provider_quota_unknown": true,
+      "GPU0_free_MiB": 24080,
+      "other_Data_workers0": true,
+      "canonical_original_inodes_free_not_new_lease": true
+    },
+    "asset_compile_exit": 1,
+    "asset_compile_result_sha256": "6deaffa398e7e43241e5984e75172fcbc52f4f99e9c6d20d026d19c35fde9b51"
+  },
+  "compile_PID_alive": false,
+  "MJB_exists": false,
+  "task_runtime_root_exists": false,
+  "GPU0_canonical_locks": [
+    {
+      "kind": "physics",
+      "device": 51,
+      "inode": 3428729629,
+      "free": true
+    },
+    {
+      "kind": "sdk",
+      "device": 51,
+      "inode": 3428729630,
+      "free": true
+    }
+  ],
+  "compile_frozen_members": 485,
+  "frozen_members_all_SHA_passed": true,
+  "only_static_SDK_spec_construction_task0_no_Runtime_Actor_forward_or_task_step": true,
+  "not_E20_main_failure_or_native_PUSH_CLIMB_failure": true,
+  "no_retry": true,
+  "H_mirror_equal": true
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-16T17:42:53.113344+08:00",
+  "provider_record_sha256": "80da85abb7f369249c63e4d448bcc0c69e31ffdcaeba7ed877f33d415f89e423",
+  "source_package_sha256": "fd922711404e566eb998dbd0227cc5e2f1b0de1398f4a49471a561d7db10c0e2",
+  "source_members": 28,
+  "source_all_pins_verified": true,
+  "fixed_E_rule_unchanged": true,
+  "new_geometry_and_common_brake_not_old_E59_comparison": true,
+  "new_main_not_dispatched": true,
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v1"
+}

@@ -1,0 +1,6 @@
+{
+  "remote_release": "/mnt/yuanyue/data-team/deployments/46308-20261114/workspace/consumer-deliveries/AINAV-DATA-E20-PREARRIVAL40-STATIC-ASSET-GEOM-LOOKUP-FAILED-NO-ZERO-MAIN-20261116-v1/release.json",
+  "release_sha256": "6e9b44381521ab05958ac62cbe937c9fcc8efcf847796f381df1f0f74a4170e4",
+  "all_files_SHA_match": true,
+  "no_frozen_source_runtime_H_or_old_release_change": true
+}

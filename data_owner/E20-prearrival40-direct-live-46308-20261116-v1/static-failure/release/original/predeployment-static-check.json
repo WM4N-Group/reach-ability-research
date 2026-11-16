@@ -1,0 +1,33 @@
+{
+  "all_literal_protocol_keys_present": true,
+  "keys": [
+    "GPU_UUID",
+    "appearance_revision",
+    "camera_candidates",
+    "cameras",
+    "compile_wall_cap_s",
+    "entry_policy",
+    "environment_revision",
+    "ffmpeg_path",
+    "ffmpeg_sha256",
+    "fixed_margin_m",
+    "main_task_sim_cap_s",
+    "main_task_step_cap",
+    "main_wall_cap_s",
+    "model_path",
+    "model_sha256",
+    "output_cap_bytes",
+    "own_GPU_cap_bytes",
+    "own_RSS_cap_bytes",
+    "plan_sha256",
+    "scene_sha256",
+    "scope_id",
+    "source_commit",
+    "source_relative_path",
+    "task_id",
+    "zero_wall_cap_s"
+  ],
+  "all_scripts_AST_valid": true,
+  "no_native_calls": true,
+  "helper_source_pin_verified": true
+}

@@ -1,0 +1,6 @@
+{
+  "error": "Local path assembly used development/development before any source copy, deployment, freeze, authority or native call",
+  "corrected": "Use provider entry_directory relative to provider root",
+  "physical_calls": 0,
+  "authority_changes": 0
+}

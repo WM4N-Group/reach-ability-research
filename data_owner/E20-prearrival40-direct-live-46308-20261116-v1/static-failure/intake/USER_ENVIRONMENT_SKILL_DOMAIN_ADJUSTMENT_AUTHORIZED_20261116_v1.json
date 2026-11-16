@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-16T12:53:33.323051+08:00",
+  "user_instruction": "继续推进，可以改变环境参数到目前技能适用的范围",
+  "latest_user_request": "三维场景的截图给我检查",
+  "environment_parameter_adjustment_authorized": true,
+  "old_claim_scope_change_not_authorized_superseded": true,
+  "specific_new_layout_selected_or_applied": false,
+  "new_MJB_or_physical_scope_not_created": true,
+  "Data_remains_only_physical_owner": true,
+  "all_original_safety_success_gates_retained": true,
+  "old_closed_roots_and_versions_not_modified": true,
+  "all_future_comparison_arms_same_new_environment_required": true,
+  "screenshot": {
+    "path": "/home/yuanyue/main/work/data-team/consumer-deliveries/AINAV-DATA-V4-NATIVE-ASSET-COLD-COMPONENT-PASS-NOT-TASK-20261116-v1/V4-world0-direct-live-1280x720.png",
+    "sha256": "34084be87f847725c32cd24d10c0a4ddb0e50268a60ef4339bcf606adebb3ca2",
+    "scope": "data-46308-V4-native-components-zero-20261116-v1",
+    "actual_direct_live_frame": true,
+    "original_V4_geometry": true,
+    "old_brown_palette": true,
+    "not_new_adjusted_environment": true,
+    "width": 1280,
+    "height": 720,
+    "task_sim_s": 0
+  }
+}

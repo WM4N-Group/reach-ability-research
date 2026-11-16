@@ -1,0 +1,10 @@
+{
+  "local_unfrozen_intake_path_error": "development/development corrected before deploy",
+  "local_unfrozen_wrapper_generator_error": "substring extraction then indentation caught in local AST/review before deployment; production collect_files explicitly corrected before freeze",
+  "remote_calls_during_these_local_errors": 0,
+  "H_or_scope_changes_during_these_local_errors": 0,
+  "physics_or_Actor_calls_during_these_local_errors": 0,
+  "local_elapsed_cost_not_recorded": null,
+  "actual_remote_static_failure_separately_recorded": true,
+  "archived_generator_now_refuses_execution": true
+}

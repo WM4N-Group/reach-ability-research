@@ -1,0 +1,11 @@
+{
+  "owner": "01a1d3aa-a0d5-7de0-b886-9d92ed5f1480",
+  "scope_id": "data-46308-E20-prearrival40-direct-live-20261116-v1",
+  "source_commit": "5a1a92b153a23a91a5ec79ef4355f36af2d3fe51",
+  "compile_max": 1,
+  "zero_max": 1,
+  "main_max": 1,
+  "task_steps_allowed_in_compile": 0,
+  "no_retry": true,
+  "compile_wall_cap_s": 300.0
+}
