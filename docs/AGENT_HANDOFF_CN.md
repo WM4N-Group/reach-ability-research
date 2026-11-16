@@ -2,6 +2,13 @@
 
 ## 新窗口快速接续｜2026-10-25（本节优先于下方历史）
 
+### 2026-11-16 11:54：v2新MJB静态delta实际通过；source53接共同先验，native组件仍在途
+
+- **新实际资产静态子资格已过，不是完整任务通过：** 已核Data release `8bcc837e…`及6小成员SHA，release/proof与46308原件SHA一致。af09/v2程序`aecec6eb…`实际编译新MJB `a8911921…`；proof给出398项nonRGBA及options/names/paths一致，只改箱85/86/87三条RGBA。本组仅独立核metadata/绑定，不重复读MJB或比较模型数组；同一component zero子交付不加样本/次数，不能称原brown同环境对照或B/D收益。
+- **共同public map已被AINav源码接收，尚非运行采用：** source53 `530dfeae…`已将本组固定map `802d3651…`逐byte接入typed声明＋driver observer/catalogue同一context；本组核5相关源码SHA与27 anchors坐标/不确定度/顺序未变、12 subject注释。此处关闭的是“只给A/B私有颜色先验/旧exact-map拒绝”的软件接缝；不是当前可见身份/target8/Native准入。当前Data仍af09，不热换source、不为53重跑，producer仍default OFF；原33及owner新软件套件不重刷。
+- **真实组件在途，后继仍不能填成功成本：** Data 11:49快照报告本root capture448命令/2.240sim完成，11:44 checkpoint总1200命令/6.000sim、native准备752命令；只是owner在途metadata，未独立重审journal/流，没有NAV终态、post-NAV fresh关联、PUSH_READY或PUSH/CLIMB/topNAV成功结论。完整result/ledger与费用仍待，不将checkpoint耗时补成功成本，也不相加重叠guard计时。
+- **研究未完成项保持明确：** 五main/真实WM预测仍0；合法modelled-owner/三帧/history/真实same-anchor plane、PUSH/CLIMB action映射、完整公共reference/三阶段effects/退出fresh可用性与terminal cost、.40m/static/后续owner均未闭合。原模型/阈值/固定NAV前缀/布局与全部dirty/closed/未知账保留；无新物理/推理/fit/测试。小记录：`/home/yuanyue/reach-ability-research/operations/V4_PALETTE_V2_STATIC_ASSET_AND_SOURCE53_INTAKE_20261116.json`。
+
 ### 2026-11-16 10:58：新palette源50在Runtime前失败；费用未知保持，修复receipt静态兼容未资格
 
 - **增量消费新真实失败，未重开程序：** formal release `d630264a…` 的10个小成员SHA全核，release/result/ledger与46308原件SHA一致。source50 `23cc1fe6…` / program `e74acd71…` 在新helper的全geom名字唯一假设处失败；Runtime/改RGBA/新MJB/render前已closed。不是视觉分色失败、NAV/PUSH/CLIMB失败或WM负样本，不能沿旧root重试。

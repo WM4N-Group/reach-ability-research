@@ -1,5 +1,12 @@
 # 原WM实际anchor的target8计算已接；语义关联与现场因果流仍需source接入
 
+## 2026-11-16 11:54 增量：source53已接本proposal的共同map；af09新asset仅静态delta资格
+
+AINav source53 `530dfeae69873d854481669bc4c84bf6e3fd0dd2`已将固定增强map `802d3651187052d46c4006717d21fd27f21a2fde61ecc7e93a857197dd894cb6`接入默认OFF的`shared_appearance_public.build_shared_appearance_declaration`，driver可选`shared_appearance=`使observe_public/intent_catalogue消费同一typed context。下方“未源采用”历史应拆分为：**源码软件接收已完成；当前物理程序与五方法运行均未采用**。27 anchors原几何/不确定度/顺序与12 subject关系不变；不改本组原proposal bytes/producer默认开关或原视觉门。
+
+Data af09/v2 `aecec6eb…`实际新asset `a8911921…`的398项nonRGBA一致/三RGBA行变化已获静态子交付，release `8bcc837e…`/6成员已独立核；本组未读MJB/帧或运行producer。当前在途af09保持原样，不能热换为53或为新map重跑；此子证据不等实际渲染分色、fresh关联、WM bootstrap/forward或完整任务资格。未来新五方法在原cold组件0步绑定同asset/map，才把`common.public_map()`作为本association的公开先验；仍需所有已有现场因果输入和原gate。见`operations/V4_PALETTE_V2_STATIC_ASSET_AND_SOURCE53_INTAKE_20261116.json`。
+
+
 2026-11-16。此增量是V4原WM必要输入的实现，不是新预测器、后继cost、native资格或优化收益。
 
 ## 修掉的实际缺口
