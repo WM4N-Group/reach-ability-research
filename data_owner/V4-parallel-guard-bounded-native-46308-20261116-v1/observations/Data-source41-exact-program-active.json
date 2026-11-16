@@ -1,0 +1,93 @@
+{
+  "at": "2026-11-16T08:27:40.496394+08:00",
+  "observed_capture_sample": {
+    "complete": false,
+    "event": "cold_capture_actual_sample",
+    "metrics": {
+      "arm_error": 0.03968511214735665,
+      "arm_speed": 0.34650326154505257,
+      "base_angular_speed": 0.015038538472567578,
+      "base_linear_speed": 0.008009004102468593,
+      "drift_m": 0.0007938908563913837,
+      "foot_normal_N": [
+        52.47468630919445,
+        52.486990597362514,
+        54.79784675170199,
+        54.8100658200761
+      ],
+      "hand_force_N": 0.0,
+      "max_foot_speed": 0.0010111603333157837,
+      "on_declared_support": true,
+      "reference_error": 0.035056140598600405,
+      "reference_speed": 0.2704029300171995,
+      "tilt_rad": 0.0046069154394865145
+    },
+    "model_input": false,
+    "phase": "COMPACT_TRANSFER",
+    "time_s": 1.4249999999999916
+  },
+  "role": "EXACT_SOURCE41_PARALLEL_CURRENT_GUARD_NEW_BOUNDED_COMPONENT_ACTUALLY_DISPATCHED_NOT_FIVE_ARM",
+  "source_commit": "2ab8b8aed166f74039db25e50fc7cabf1e0610cc",
+  "program_sha256": "edb78627482c639a1edb78e28683108dc976bce882f32c135b874f54c09e38fc",
+  "program_members": 498,
+  "authority_sha256": "b411f8d963f5454e6382d15d1dbaeeef0d5e89222de93d78b43077ec41694f36",
+  "scope_id": "data-46308-V4-parallel-guard-bounded-native-20261116-v1",
+  "actual_worker_PID": 167290,
+  "new_component_zero_dispatches": 1,
+  "five_arm_main_calls": 0,
+  "API_WM_fit_calls": 0,
+  "source41_native_qualified": false,
+  "latest_observation": "/home/yuanyue/main/work/data-team/manifests/V4-parallel-guard-bounded-native-46308-20261116-v1/readonly-20261116T082740.json",
+  "latest_observation_sha256": "9d796c3b503655af57a1edd3a82ade09ce4bed28e6557c0cb91fb2dd5b6d4c42",
+  "actual_timing_checkpoint": null,
+  "old_closed_programs_and_costs_unchanged": true,
+  "concrete_repair_not_just_39_plus_longer_wall": true,
+  "wall_capacity_design": {
+    "cap_s": 21600,
+    "teardown_reserve_s": 60,
+    "model": "Source1415-module CPU fixture .308-.395s/full double guard, not native guarantee. Allow conservative0.55wall/command*36000=19800s plus1800s initialization/cost reserve; hard cap21600s.",
+    "not_24h_example_or_old_scope_extension": true,
+    "actual_live_phase_costs_will_be_recorded": true,
+    "no_native_safety_time_extension": true
+  },
+  "caps": {
+    "task_world_steps_allowed": 36000,
+    "task_world_sim_cap_s": 180.0,
+    "wall_cap_s": 21600.0,
+    "output_cap_bytes": 1073741824,
+    "own_GPU_cap_bytes": 3221225472,
+    "own_RSS_cap_bytes": 4294967296,
+    "CPU_threads": 2,
+    "metadata_path_read_threads": 8
+  },
+  "resource_snapshot": {
+    "at": "2026-11-16T08:22:50.950380+08:00",
+    "GPU0_free_MiB": 24080,
+    "canonical_GPU0_locks": [
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-physics-gpu0.lock",
+        "device": 51,
+        "inode": 3428729629,
+        "free_snapshot_not_lease": true
+      },
+      {
+        "path": "/mnt/yuanyue/data-team/deployments/46308-20261114/resource-locks/native-observer-sdk-gpu0.lock",
+        "device": 51,
+        "inode": 3428729630,
+        "free_snapshot_not_lease": true
+      }
+    ],
+    "owned_bytes": 26136450560,
+    "conservative_reserve_bytes": 13421772800,
+    "owned_limit_bytes": 42949672960,
+    "provider_quota_unknown": true,
+    "available_RAM_bytes": 122348820480,
+    "legitimate_GPU1_native_PIDs_preserved": [],
+    "no_owned_GPU0_native": true,
+    "no_new_lease_from_snapshot": true
+  },
+  "no_cross_tick_cache_or_module_filter": true,
+  "original_native_rules_not_extended_or_weakened": true,
+  "no_layout_or_model_or_J_purpose_change": true,
+  "not_native_success_or_HD_task_video_or_method_gain": true
+}
