@@ -14,7 +14,7 @@
 
 ## 下一唯一工程动作与拒绝项
 
-在独立私有构建树解析并记录精确Python/pybind/C++ABI、依赖headers与原libmujoco链接身份，再编译仅含此差分的私有binding候选。不能覆盖现环境/SDK/冻结文件，不能强制谎报pybind ABI key或热换在途模块；新binary必须有独立build/source SHA、CPU导入/类型注册/析构/错误路径验证和完整新程序资格，才可作有界原生验证。当前仅查到c++/cmake/ninja；预期路径的Eigen/Abseil/pybind headers尚未解析，不能称构建完成或要求用户重下环境。
+在独立私有构建树解析并记录精确Python/pybind/C++ABI、依赖headers与原libmujoco链接身份，再编译仅含此差分的私有binding候选。不能覆盖现环境/SDK/冻结文件，不能强制谎报pybind ABI key或热换在途模块；新binary必须有独立build/source SHA、CPU导入/类型注册/析构/错误路径验证和完整新程序资格，才可作有界原生验证。实际已找到Torch前缀`/mnt/yuanyue/envs/go2-isaac/lib/python3.11/site-packages/torch/include/pybind11`的headers；原binary的pybind internals key为`v4_clang_libcpp_cxxabi1002`，当前PATH的c++为GCC11.4/`__GXX_ABI_VERSION=1016`，不能直接混编或伪报key。所查PATH及几个明确候选路径尚无clang++/libc++ headers，Eigen/Abseil headers亦未解析；这只是有界路径核查，不断言全机无工具链。构建未完成，不重下环境/安装整套依赖来冒解除。
 
 **拒绝ctypes裸调用`mjr_makeContext`的快捷旁路**：不能省掉原error interception、array-view构造或原capsule析构；不能先造default context后暗换native内存来冒同一对象语义。若私有构建无法正确复用ABI，保持未部署并明确具体缺项，不扩大代码或重装整套环境。
 
