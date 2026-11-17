@@ -40,10 +40,11 @@ def prepare(config_path=None,pin=None,*,enabled=False):
     need(os.environ.get('CUDA_VISIBLE_DEVICES')==UUID and os.environ.get('MUJOCO_GL')=='egl'and os.environ.get('MUJOCO_EGL_DEVICE_ID')=='0'and os.environ.get('LD_PRELOAD')==c['LD_PRELOAD'],'Original UUID/EGL/loader environment')
     sys.path[:0]=c['import_paths']
     import torch,mujoco
-    from plugins import Plugin
+    from plugins import Plugin, ROOT as plugin_root
     from ainav.native import scene_registry
     from mujoco_zyh.source_bundle import verify_bundle
     from camera_abi import install_original_camera,verify_compiled_camera
+    need(Path(plugin_root).resolve()==Path(c['SDK']).resolve(),'Actual imported original SDK plugin root')
     reg=declaration(scene_registry,enabled=True)
     need(list(reg.objects)==['sdk_box']and reg.objects['sdk_box'].size_m==(1.2,1.2,.2),'Actual generic registry accepts standard box without weakening V4')
     need(not torch.cuda.is_initialized(),'CPU prepare cannot initialize CUDA')

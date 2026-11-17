@@ -47,11 +47,12 @@ def build(c=None, budget=None, guard=None, counters=None, *, enabled=False):
     guard()
     import mujoco
     import numpy as np
-    from plugins import Plugin
+    from plugins import Plugin, ROOT as plugin_root
     from mujoco_zyh.source_bundle import verify_bundle
     from ainav.native import scene_registry
     from camera_abi import install_original_camera, verify_compiled_camera
     verification = verify_bundle(c['SDK'])
+    need(Path(plugin_root).resolve()==Path(c['SDK']).resolve(), 'Original selected SDK plugin root, no private/ambient alias')
     helper_path = Path(c['source_root'])/'build_transfer_scene_native.py'
     need(source(helper_path)==c['robot_signature_source_SHA'], 'Exact original robot signature helper')
     spec = importlib.util.spec_from_file_location('_data_std_original_robot_signature',helper_path)
