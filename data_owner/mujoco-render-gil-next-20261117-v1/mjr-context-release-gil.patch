@@ -1,0 +1,14 @@
+--- a/python/mujoco/render.cc
++++ b/python/mujoco/render.cc
+@@ -114,7 +114,10 @@
+     : WrapperBase([fontscale](const raw::MjModel* m) {
+         raw::MjrContext *const ctx = new raw::MjrContext;
+         mjr_defaultContext(ctx);
+-        InterceptMjErrors(mjr_makeContext)(m, ctx, fontscale);
++        {
++          py::gil_scoped_release no_gil;
++          InterceptMjErrors(mjr_makeContext)(m, ctx, fontscale);
++        }
+         return ctx;
+       }(model.get()), &MjrContextCapsuleDestructor),
+       X(fogRGBA),

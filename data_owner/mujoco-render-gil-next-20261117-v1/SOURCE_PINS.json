@@ -1,0 +1,70 @@
+{
+  "question": "FUTURE_ONLY_SINGLE_C_CALL_GIL_SCOPE_PATCH_NOT_OLD_D3_CAUSE_OR_REPAIR",
+  "upstream_version": "3.3.2",
+  "upstream_source": {
+    "errors.h": {
+      "URL": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.3.2/python/mujoco/errors.h",
+      "SHA256": "00f17575d860393b6feb607ea95f7d01e2066a04f08f8baffe0d80184a714325",
+      "bytes": 7571
+    },
+    "render.cc": {
+      "URL": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.3.2/python/mujoco/render.cc",
+      "SHA256": "9e49852775fa846a93504680cdfe98b30455b1f3c84d1f3ea239b2bfaabd51c3",
+      "bytes": 9195
+    },
+    "functions.h": {
+      "URL": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.3.2/python/mujoco/functions.h",
+      "SHA256": "cc5e643cd58cb5c5181f3f11323334076b571d920a9a081a741c4759e2246b2a",
+      "bytes": 7964
+    },
+    "renderer.py": {
+      "URL": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.3.2/python/mujoco/renderer.py",
+      "SHA256": "458ed1f75d3b19b328b7e251dc7a7318a97e2d41bca4627773cd6af764abfdd7",
+      "bytes": 11364
+    }
+  },
+  "installed_renderer_py_matches_upstream": true,
+  "installed_binary_selected_SHA256": {
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/mujoco/_render.cpython-311-x86_64-linux-gnu.so": {
+      "SHA256": "4a3edaa93c00c5eab4be28670d987126f07c9fc62ab9718024a313e6d66fb13d",
+      "bytes": 739752
+    },
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/mujoco/renderer.py": {
+      "SHA256": "458ed1f75d3b19b328b7e251dc7a7318a97e2d41bca4627773cd6af764abfdd7",
+      "bytes": 11364
+    },
+    "/mnt/yuanyue/envs/piper-zyh-mujoco-340d7d8-v1/lib/python3.11/site-packages/mujoco/libmujoco.so.3.3.2": {
+      "SHA256": "baa61a1215eaad20178faba899c6c8d2f530c408de55b5a9e1ba1c658716a10c",
+      "bytes": 4785936
+    }
+  },
+  "wheel_RECORD_rows": [
+    {
+      "path": "mujoco/_render.cpython-311-x86_64-linux-gnu.so",
+      "record_hash": "sha256=Sj7aqTwAxeq0vihnDZhxJvB8n8YquXGAJKMT5tZvsT0",
+      "actual_hash": "sha256=Sj7aqTwAxeq0vihnDZhxJvB8n8YquXGAJKMT5tZvsT0",
+      "matches": true
+    },
+    {
+      "path": "mujoco/libmujoco.so.3.3.2",
+      "record_hash": "sha256=uqYaEhXqrSAXj6uomcbI0vUwxAjeVbWp4bocZYcWoQw",
+      "actual_hash": "sha256=uqYaEhXqrSAXj6uomcbI0vUwxAjeVbWp4bocZYcWoQw",
+      "matches": true
+    },
+    {
+      "path": "mujoco/renderer.py",
+      "record_hash": "sha256=RY7R9107GbMot-JR3HpzGKl-LUG8pGJ3c81q92Sr_dc",
+      "actual_hash": "sha256=RY7R9107GbMot-JR3HpzGKl-LUG8pGJ3c81q92Sr_dc",
+      "matches": true
+    }
+  ],
+  "patch_base_SHA256": "9e49852775fa846a93504680cdfe98b30455b1f3c84d1f3ea239b2bfaabd51c3",
+  "patched_source_SHA256": "65b70a5c40549c9cec76041cf92ed144c17d90670f275b4a5b7b103425a03761",
+  "patch_SHA256": "5e64ad2d81203041f1c24988cb0b95f4ccb679de825eee740e245ff5b6961158",
+  "installed_binary_to_CPP_build_proven": false,
+  "compiled": false,
+  "deployed": false,
+  "native_validation": false,
+  "old_D3_cause_proven": false,
+  "new_native_qualification": false
+}
