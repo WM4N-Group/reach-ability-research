@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-18T02:24:21.265997+08:00",
+  "case_id": "PUSH-SDK-STANDARD-INDEPENDENT-L0-20261118-v1",
+  "case": {
+    "level": "L0_ORIGINAL_STANDARD_INITIALIZATION_NOT_NATURAL_PREDECESSOR",
+    "seed": 3701,
+    "delay_ms": 20,
+    "box_size_m": [
+      1.2,
+      1.2,
+      0.2
+    ],
+    "box_mass_kg": 1.0,
+    "fresh_robot_xyz_m": [
+      -0.08,
+      0.0,
+      0.33
+    ],
+    "box_initial_xyz_m": [
+      1.1,
+      0.0,
+      0.1
+    ],
+    "native_and_public_goal_xy_m": [
+      1.7,
+      0.0
+    ],
+    "push_distance_m": 0.6,
+    "mode": "uncompensated",
+    "original_pre_task_Z_adjustment_XY_restore_base_velocity_zero_explicit": true,
+    "original_controller_reset_applied_zero_history_none_before_first_Actor": true,
+    "forbidden_after_a_predecessor_or_any_Actor": true,
+    "extra_settle_until_success": false,
+    "registered12N_FF_FIFO_clocked_native_and_full_exit_still_required": true,
+    "execution_enabled": false,
+    "not_authority": true
+  },
+  "source_bounds_not_new_program_budgets": {
+    "original_settle_max_physics_steps": 2100,
+    "original_settle_max_sim_s": 10.5,
+    "original_play_PUSH_timeout_s": 48.0,
+    "original_play_finish_max_control_calls": 1300,
+    "original_play_finish_max_physics_steps": 5200
+  },
+  "registered12N_dwell_FF_FIFO_goal_clocked_native_and_full_exit_parent_not_yet_connected": true,
+  "actual_program_freeze_or_prepare": false,
+  "own_zero": 0,
+  "main": 0,
+  "source_stage_only": true,
+  "old_L1_program_zero_AUTH_or_budget_reuse": false,
+  "new_ninety_case_or_training_permission": false,
+  "original_initialization_writes_explicit_not_allowed_in_L1": true,
+  "complete_program_main_wall_sim_output_caps_not_frozen": true,
+  "next_only": "Connect a genuine measured L0 completion/12N witness and original registered PUSH/full exit plus existing IO/finally, never forge SupportedCapture count/type. No physical until new whole program qualification and safe handoff."
+}

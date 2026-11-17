@@ -13,6 +13,35 @@ sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 now=lambda:datetime.datetime.now().astimezone().isoformat()
 
 
+class ResourceNotReady(RuntimeError):
+    """PRE-authorization refusal, never an Actor outcome or owner freshness stamp."""
+
+
+def require_no_foreign_target_compute(gpu_inventory, compute_inventory, *, physical_index=0,
+                             uuid='GPU-297c1146-bcec-a8ee-8437-d9603392a2e1'):
+    """New future controller guard. Pure parser; does not query, lock or dispatch.
+
+    A different GPU may be busy. Empty /proc/locks is NOT proof of target idle.
+    A later race is still possible; the child's ORIGINAL PerGpuLease stays final.
+    """
+    if type(gpu_inventory) is not str or type(compute_inventory) is not str:
+        raise ResourceNotReady('Actual successful nvidia-smi text required')
+    rows=[tuple(part.strip() for part in line.split(','))for line in gpu_inventory.splitlines()if line.strip()]
+    if any(len(row)!=4 for row in rows):raise ResourceNotReady('Unknown GPU inventory schema')
+    target=[r for r in rows if r[1]==uuid]
+    if len(target)!=1 or target[0][0]!=str(physical_index):raise ResourceNotReady('Exact unique target index/UUID')
+    if not target[0][2].isdigit() or not target[0][3].isdigit():raise ResourceNotReady('Unknown target capacity/utilization')
+    if int(target[0][2])<4096:raise ResourceNotReady('Original own3GiB + shared1GiB initial headroom')
+    apps=[tuple(part.strip()for part in line.split(','))for line in compute_inventory.splitlines()if line.strip()]
+    if any(len(r)!=3 or not r[0].isdigit()or int(r[0])<=0 or not r[1].startswith('GPU-')for r in apps):
+        raise ResourceNotReady('Unknown compute PID/UUID schema, not zero')
+    target_pids=tuple(sorted(int(r[0])for r in apps if r[1]==uuid))
+    if target_pids:raise ResourceNotReady('Target has another compute PID; require owner safe-phase handoff')
+    return dict(target_GPU_UUID=uuid,physical_index=physical_index,foreign_target_compute_PIDs=[],
+        free_MiB=int(target[0][2]),later_race_not_excluded=True,
+        original_child_canonical_lease_still_required=True,not_an_OwnerStamp=True)
+
+
 def cas(transform):
     raw=H.read_bytes();before=json.loads(raw);after=transform(json.loads(raw));assert after['executing_thread_id']==OWNER
     assert all(after.get(k)==v for k,v in before.items()if k!=KEY), 'All peer/old H fields unchanged'
@@ -46,7 +75,9 @@ def execute(phase,pin):
     for name,ino in [('physics',3428729629),('sdk',3428729630)]:
         p=R/f'resource-locks/native-observer-{name}-gpu0.lock';st=p.stat();assert(st.st_dev,st.st_ino)==(51,ino);stats[str(p)]=(st.st_dev,st.st_ino)
     assert not any(len(row.split())>5 and row.split()[5].split(':')[-1]in {'3428729629','3428729630'}for row in Path('/proc/locks').read_text().splitlines())
-    gpu=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True);assert 'GPU-297c1146-bcec-a8ee-8437-d9603392a2e1'in gpu
+    gpu=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True,timeout=10)
+    apps=subprocess.check_output(['nvidia-smi','--query-compute-apps=pid,gpu_uuid,used_gpu_memory','--format=csv,noheader,nounits'],text=True,timeout=10)
+    target_preflight=require_no_foreign_target_compute(gpu,apps)  # SAME execution branch, before H CAS/child/count.
     for d in Path('/proc').iterdir():
         if not d.name.isdigit() or int(d.name)==os.getpid():continue
         try:cmd=(d/'cmdline').read_bytes().replace(b'\0',b' ').decode(errors='replace')
@@ -66,10 +97,10 @@ def execute(phase,pin):
         assert state['executing_thread_id']==OWNER
         if phase=='zero':
             assert KEY not in state
-            state[KEY]=dict(active=True,owner=OWNER,scope_id=SCOPE,phase='STANDARD_L1_ZERO_AUTHORIZED_ONCE',authorization_sha256=sha(A),whole_program_freeze_sha256=pin,zero_dispatch_count=1,main_dispatch_count=0,zero_passed=False,camera_sha256=None,automatic_retry=False,question=c['question'],plan_sha256=c['plan_sha256'],resources=dict(at=now(),owned_allocated_bytes=used,owned_limit_bytes=40*1024**3,provider_quota_unknown=True,reserved_total_new_outputs_bytes=(8<<30)+524288,canonical=stats,GPU_inventory=gpu),zero_PID=None)
+            state[KEY]=dict(active=True,owner=OWNER,scope_id=SCOPE,phase='STANDARD_L1_ZERO_AUTHORIZED_ONCE',authorization_sha256=sha(A),whole_program_freeze_sha256=pin,zero_dispatch_count=1,main_dispatch_count=0,zero_passed=False,camera_sha256=None,automatic_retry=False,question=c['question'],plan_sha256=c['plan_sha256'],resources=dict(at=now(),owned_allocated_bytes=used,owned_limit_bytes=40*1024**3,provider_quota_unknown=True,reserved_total_new_outputs_bytes=(8<<30)+524288,canonical=stats,GPU_inventory=gpu,target_compute_preflight=target_preflight),zero_PID=None)
         else:
             q=state[KEY];assert q['active']and q['whole_program_freeze_sha256']==pin and q['zero_passed']and q['main_dispatch_count']==0
-            q.update(main_dispatch_count=1,main_PID=None,phase='STANDARD_L1_MAIN_AUTHORIZED_ONCE')
+            q.update(main_dispatch_count=1,main_PID=None,phase='STANDARD_L1_MAIN_AUTHORIZED_ONCE',main_preflight=dict(at=now(),target_compute=target_preflight,canonical=stats,GPU_inventory=gpu))
         return state
     write_json(budget,L/'authorize-CAS-proof.json',cas(authorize))
     child=None;capture=None;error=None;started=time.monotonic()
