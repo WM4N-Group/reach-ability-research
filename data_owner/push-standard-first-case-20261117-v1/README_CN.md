@@ -17,3 +17,5 @@
 首case定义保留，但**下一直接接原`mujoco_zyh.runtime_adapter.construct_runtime(bundle, config)`的`scene_recipe='zyh_native_single_box'` camera-only源构造**，不再先跑另一轮独立asset。这条已有入口直接创建fresh标准Runtime/原模型，不要求外部MJB；已核`scene.configure_scene`此分支不做research三箱/20kg/地形替换。完整PUSH parent仍须接原注册安全、public/native目标及完整退出门、实际模块调用/原entry reset元数据、原片、partial与全部账、原真实lease/1s/2s。不是运行裸CLI、绕canonical、改Goal或跳自身zero；完整新程序尚未资格化。
 
 后继worker在现有异常报告加有上限的file/function/line traceback（不记locals/凭据），以免再次把不同EAGAIN叶段混为“GPU忙”；资源前检补进程/线程余量与安全phase交接。禁止用这次事后空闲换GPU/新ID盲重试、跨进程借FD/lease、放宽2s或让J停工。当前PUSH真实Actor激活/终态仍未取得，本次不计Actor物理失败。
+
+当前源实现接续：`/home/yuanyue/main/work/data-team/development/push-standard-parent-20261118-v1/README_CN.md`。已完成直接原构造/partial、原注册NAV/PUSH与真实Actor调用点的私有源码接线及实际私有Python CPU assembly；**不是完整parent prepare/冻结/zero/物理资格**。本目录asset历史不重跑。
