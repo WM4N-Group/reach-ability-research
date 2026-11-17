@@ -52,28 +52,52 @@ class BoundaryOnly(unittest.TestCase):
         self.assertFalse({'torch','mujoco','pynvml','OpenGL'} & set(sys.modules))
 
     def test_connection_override_stops_at_witness_without_original_skill_connect(self):
+        import ast
         calls = []
         marker = object()
         class Base:
             def __init__(self):
-                self.r = NS(sim=NS(data=NS(time=6.505)))
+                self.r = NS(step_count=2,sim=NS(data=NS(time=.01)))
                 self.loop = self.executor = self.factory = None
-                self.startup = NS(witness=marker, finish=lambda: calls.append('finish') or marker,
-                                  report=lambda: dict(software_fixture=True))
+                self.startup = NS(r=self.r,witness=None,arm_gate_attempts=0,arm_gate_audit=None,
+                    startup=NS(finished=True,failed=False,original_result=dict(stable=True),issued=2,last_two=[1,2]),
+                    report=lambda:dict(software_fixture=True))
             def _connect_execution(self):
                 raise AssertionError('Original skill connect must never be called')
-            def _write_boundary(self, row):
+            def _write_boundary(self,row):
                 calls.append(row['event'])
-        original = m._original_driver_class
+        def constructor(owner):
+            calls.append('constructor-once')
+            owner.arm_gate_attempts+=1
+            owner.arm_gate_audit=dict(original_guard_calls=1)
+            return marker
+        original,old_constructor=m._original_driver_class,m._OriginalL0Witness
         try:
-            m._original_driver_class = lambda **kwargs: Base
-            driver = m.driver_class(enabled=True)()
+            m._original_driver_class=lambda **kwargs:Base
+            m._OriginalL0Witness=constructor
+            driver=m.driver_class(enabled=True)()
             driver._connect_execution()
         finally:
-            m._original_driver_class = original
+            m._original_driver_class=original
+            m._OriginalL0Witness=old_constructor
         self.assertTrue(driver.boundary_reached)
-        self.assertEqual(calls, ['finish','original_arm_admission_boundary_reached_NO_SKILL_SELECTED'])
+        self.assertEqual(driver.startup.arm_gate_attempts,1)
+        self.assertEqual(calls,['constructor-once','original_arm_admission_boundary_reached_NO_SKILL_SELECTED'])
         self.assertIsNone(driver.executor)
+        tree=ast.parse((HERE/'boundary_driver.py').read_bytes())
+        connect=next(n for n in ast.walk(tree)if isinstance(n,ast.FunctionDef)and n.name=='_connect_execution')
+        self.assertFalse(any(isinstance(n,ast.Call)and isinstance(n.func,ast.Attribute)and n.func.attr in ('finish','validate')for n in ast.walk(connect)))
+        self.assertEqual(sum(isinstance(n,ast.Call)and isinstance(n.func,ast.Name)and n.func.id=='_OriginalL0Witness'for n in ast.walk(connect)),1)
+        original_tree=ast.parse((ROOT/'push-original-L0-parent-20261118-v1/l0_witness.py').read_bytes())
+        finish=next(n for n in ast.walk(original_tree)if isinstance(n,ast.FunctionDef)and n.name=='finish')
+        old_needs=[n.value for n in finish.body if isinstance(n,ast.Expr)and isinstance(n.value,ast.Call)and isinstance(n.value.func,ast.Name)and n.value.func.id=='need'][:2]
+        class Rename(ast.NodeTransformer):
+            def visit_Name(self,node):
+                return ast.copy_location(ast.Name(id='owner',ctx=node.ctx),node)if node.id=='self'else node
+        expected=[ast.dump(Rename().visit(n),include_attributes=False)for n in old_needs]
+        new_needs=[n.value for n in connect.body if isinstance(n,ast.Expr)and isinstance(n.value,ast.Call)and isinstance(n.value.func,ast.Name)and n.value.func.id=='need']
+        actual=[ast.dump(n,include_attributes=False)for n in new_needs]
+        self.assertTrue(all(n in actual for n in expected),'Both exact original finish preconditions retained')
 
     def test_boundary_completion_is_not_skill_success_or_additional_step(self):
         def step(driver):

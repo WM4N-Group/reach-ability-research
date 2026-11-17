@@ -6,6 +6,7 @@ Original startup/world/guards remain owned by the original bounded parent.
 import time
 from standard_runtime import need, bounded_exception
 from push_l0_driver import driver_class as _original_driver_class, CaseLoopError
+from l0_witness import OriginalL0Witness as _OriginalL0Witness
 
 
 def driver_class(*, source_root=None, legacy_base_dir=None, legacy_guard_dir=None,
@@ -24,9 +25,24 @@ def driver_class(*, source_root=None, legacy_base_dir=None, legacy_guard_dir=Non
         def _connect_execution(self):
             need(self.loop is None and self.executor is None and self.factory is None,
                  'No task session/query/Actor permitted in boundary diagnostic')
-            witness = self.startup.finish()  # SAME original checks, observer records ONE arm call.
-            need(witness is not None and witness is self.startup.witness,
-                 'Actual original complete witness, never a fabricated capture')
+            owner = self.startup
+            need(owner.r is self.r, 'Actual same startup/runtime owner')
+            # Exact original finish preconditions; constructor runs its whole
+            # original validate ONCE. Calling finish() would validate twice on PASS.
+            need(owner.startup.finished and not owner.startup.failed and
+                 owner.startup.original_result['stable'] is True,
+                 'Original standalone startup must ACTUALLY settle')
+            need(owner.startup.issued == owner.r.step_count >= 2 and len(owner.startup.last_two) == 2 and
+                 abs(float(owner.r.sim.data.time)-owner.r.step_count*.005) < 1e-7,
+                 'Every actual startup issue accounted; no count backfill')
+            need(owner.witness is None and owner.arm_gate_attempts == 0,
+                 'First boundary only, no repeated witness/guard')
+            owner.phase = 'ORIGINAL_STARTUP_FINISHED_AWAIT_REGISTERED_PUSH12N'
+            witness = _OriginalL0Witness(owner)  # All unchanged validation gates in the actual constructor.
+            owner.witness = witness
+            owner.phase = 'ORIGINAL_L0_SETTLED_CURRENT_PUSH12N_READY'
+            need(owner.arm_gate_attempts == 1 and owner.arm_gate_audit['original_guard_calls'] == 1,
+                 'Exactly ONE original arm guard invocation, never a second poll')
             self._write_boundary(dict(time_s=float(self.r.sim.data.time),
                 event='original_arm_admission_boundary_reached_NO_SKILL_SELECTED',
                 startup=self.startup.report(), task_or_Actor_authorized=False))

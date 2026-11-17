@@ -6,8 +6,8 @@ closed phase. Directory+file flock/SHA+inode CAS/atomic replace/mode preserved.
 from pathlib import Path
 import datetime,fcntl,gzip,hashlib,json,os,subprocess,sys,tempfile,time
 R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');B=R/'workspace'
-W=B/'workers/PUSH-L0-arm-gate-boundary-diagnostic-20261118-v1';M=B/'manifests/PUSH-L0-arm-gate-boundary-diagnostic-20261118-v1'
-H=B/'registry/handoff_current_status_20261115.json';A=B/'registry/PUSH_L0_ARM_GATE_BOUNDARY_DIAGNOSTIC_AUTHORITY_20261118_v1.json'
+W=B/'workers/PUSH-L0-arm-gate-boundary-diagnostic-20261118-v1-candidate2';M=B/'manifests/PUSH-L0-arm-gate-boundary-diagnostic-20261118-v1-candidate2'
+H=B/'registry/handoff_current_status_20261115.json';A=B/'registry/PUSH_L0_ARM_GATE_BOUNDARY_DIAGNOSTIC_AUTHORITY_20261118_v1_candidate2.json'
 KEY='active_PUSH_L0_arm_gate_boundary_diagnostic_20261118_v1_scope';SCOPE='data-46308-PUSH-L0-arm-gate-boundary-diagnostic-20261118-v1';OWNER='01a1e4e1-3037-7333-9019-a3f37effe5da'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 now=lambda:datetime.datetime.now().astimezone().isoformat()
