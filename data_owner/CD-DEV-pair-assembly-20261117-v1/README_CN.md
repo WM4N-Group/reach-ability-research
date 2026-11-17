@@ -33,8 +33,8 @@
 
 `task_loop.py`不建world/后端/lease/ResourceWatch，不构造或关闭父资源。调用方必须已使用原`cd_entry`、真实ScopeIO/ResourceWatch及直接live recorder，watch/health/ScopeIO必须是同一个stop-state对象。`make_cd_phase_health`每次恰调用原RSS/GPU/wall fast-health一次，只核新任务冻结skill子集；原ResourceWatch原子(oldest,completed)/1s-2s和真实lease probe均不改，不生成owner stamp。`run_task`要求传原watch及该匹配health，保原driver.step_one与pre-issue native guards；不把False step返回、单技能成功或forecast当任务终态。
 
-独立command/driver-call/sim/全scope wall有限cap；异常后按实际Runtime计数保最后直接live采集，视频错误不覆盖原错误，unknown usage保None不借旧zero。异常序列化只含类型/白名单整数counter，不dump backend身份/headers/异常参数。可用ScopeIO在所有退出只尝试一次不可逆begin_finalization，缺handle/失败明确记录；父watch/lease/writer/observer关闭、编码、报告仍由外层负责，组件不能抢其清理ownership。
+独立command/driver-call/sim/全scope wall有限cap；异常后按实际Runtime计数保最后直接live采集，视频错误不覆盖原错误，unknown usage保None不借旧zero，读数失效的call单列unknown，不冒no-step/0已用量。异常序列化只含类型/白名单整数counter，不dump backend身份/headers/异常参数。可用ScopeIO在所有退出只尝试一次不可逆begin_finalization，缺handle/失败明确记录；父watch/lease/writer/observer关闭、编码、报告仍由外层负责，组件不能抢其清理ownership。
 
-新22项CPU用假driver/物理时钟及**真实原ScopeIO/ResourceWatch＋synthetic probe**定向核：no-step/caps/原health与skill子集/无额外probe/last pair不刷新/异常实际读数/late completion/视频错误/敏感参数不入receipt/unknown/不可逆seal/父收尾权属。不是原生driver或GPU/backend资格，不重跑原17项与AINav旧套件。对阻塞step/API/内核，组件不能强行抢占；原全scope信号/watchdog仍必须由外层保留。loop与step wall排除父cleanup/encode/report，不冒all-inclusive/独占CPU；费用/整数counts是audit，不作模型输入或M1/算法收益证据。
+新23项CPU用假driver/物理时钟及**真实原ScopeIO/ResourceWatch＋synthetic probe**定向核：no-step/caps/原health与skill子集/无额外probe/last pair不刷新/异常实际读数/late completion/视频错误/敏感参数不入receipt/unknown/不可逆seal/父收尾权属。不是原生driver或GPU/backend资格，不重跑原17项与AINav旧套件。对阻塞step/API/内核，组件不能强行抢占；原全scope信号/watchdog仍必须由外层保留。loop与step wall排除父cleanup/encode/report，不冒all-inclusive/独占CPU；费用/整数counts是audit，不作模型输入或M1/算法收益证据。
 
 本轮定向命令：`python3 -B /home/yuanyue/main/work/data-team/development/cd-dev-pair-20261117-v1/test_task_loop.py`；新日志`/home/yuanyue/main/work/data-team/manifests/cd-task-loop-20261117-v1/`。整体程序仍未freeze/注册/部署/own-zero/main。

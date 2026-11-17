@@ -116,6 +116,13 @@ class Tests(unittest.TestCase):
         self.d.r=None;r=self.error_receipt()
         self.assertFalse(r['usage_known']);self.assertIsNone(r['actual_task_steps']);self.assertIsNone(r['actual_task_sim_s'])
 
+    def test_unreadable_after_call_not_misclassified_as_no_step_or_zero_usage(self):
+        def step():self.d.r.step_count=None
+        self.d.step_one=step;r=self.error_receipt()
+        self.assertFalse(r['usage_known']);self.assertIsNone(r['actual_task_steps'])
+        self.assertEqual(r['no_step_calls'],0);self.assertEqual(r['unknown_step_calls'],1)
+        self.assertTrue(r['issued_count_is_only_lower_bound'])
+
     def test_invalid_scope_clock_is_none_not_nan_negative_or_fake_wall(self):
         for index,value in enumerate([float('nan'),float('inf'),True,time.monotonic()+100]):
             with self.subTest(value=value):

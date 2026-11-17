@@ -126,7 +126,7 @@ def run_task(driver=None, *, budget=None, video=None, guard=None, limits=None,
     seal_attempted = False
     seal_completed = None
     video_error_types = []
-    calls = no_step_calls = issued = 0
+    calls = no_step_calls = unknown_step_calls = issued = 0
     step_wall = []
     task_complete = False
     stop_reason = None
@@ -188,8 +188,10 @@ def run_task(driver=None, *, budget=None, video=None, guard=None, limits=None,
                         video_error_types.append(type(exc).__name__)
                         if call_error is None:call_error = exc
                     step_wall.append(time.monotonic() - began)
-                else:
+                elif after['usage_known'] and after['actual_task_steps'] == before['actual_task_steps']:
                     no_step_calls += 1
+                else:
+                    unknown_step_calls += 1
             if call_error is not None:
                 raise call_error
             if (not after['usage_known'] or
@@ -221,7 +223,8 @@ def run_task(driver=None, *, budget=None, video=None, guard=None, limits=None,
         original_driver_complete_observed=observed_complete,
         accepted_task_complete=task_complete and primary is None and seal_error is None,
         censor_reason=stop_reason, native_failure_label=None, automatic_retry=False,
-        driver_calls=calls, no_step_calls=no_step_calls, observed_commands_issued=issued,
+        driver_calls=calls, no_step_calls=no_step_calls, unknown_step_calls=unknown_step_calls,
+        observed_commands_issued=issued, issued_count_is_only_lower_bound=unknown_step_calls > 0,
         loop_wall_s=finished-entered,
         scope_start_to_loop_exit_wall_s=(None if observed_scope_start is None else finished-observed_scope_start),
         excludes_parent_cleanup_encoding_report_wall=True, exclusive_CPU_or_physics_time=False,
