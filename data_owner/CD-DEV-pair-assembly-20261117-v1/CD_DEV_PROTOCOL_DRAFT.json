@@ -15,16 +15,130 @@
   "main_per_arm_max": 1,
   "automatic_retry": false,
   "source_paths": {
-    "method_entry": "/home/yuanyue/main/work/ainav/development/complex_v4_method_current_reach_v2/method_entry.py",
+    "method_entry": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/method_entry.py",
     "backbone_entry": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/backbone_entry.py",
     "live_driver": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/live_driver.py",
     "factor_scope": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/factor_scope.py",
-    "v4_native_asset": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/v4_native_asset.py"
+    "v4_native_asset": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/v4_native_asset.py",
+    "common_nav_prelude": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/common_nav_prelude.py",
+    "nav_query_boundary": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/nav_query_boundary.py"
   },
   "common": {
     "current_asset_reference": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/scene.json",
-    "supported_DEV_task_and_initialization": null,
-    "task_wall_sim_caps": null,
+    "supported_DEV_task_and_initialization": {
+      "independent_DEV_not_original_V4": true,
+      "public_domain": {
+        "goal": "{\"finish_ref\":\"v4-ground-nav-000\",\"required_visit_refs\":[\"v4-ground-nav-008\",\"v4-ground-nav-001\"],\"task\":\"DECLARED_GROUND_NAV_VISIT_AND_FINISH\"}",
+        "required_visit_refs": [
+          "v4-ground-nav-008",
+          "v4-ground-nav-001"
+        ],
+        "finish_ref": "v4-ground-nav-000",
+        "existing_public_refs": {
+          "prefix": "v4-ground-nav-007",
+          "near": "v4-ground-nav-008",
+          "far": "v4-ground-nav-001",
+          "finish": "v4-ground-nav-000"
+        },
+        "existing_public_points_xyz_m": {
+          "prefix": [
+            0.22,
+            0.0,
+            0.0
+          ],
+          "near": [
+            0.37,
+            0.0,
+            0.0
+          ],
+          "far": [
+            -0.08,
+            -2.6,
+            0.0
+          ],
+          "finish": [
+            -0.08,
+            2.6,
+            0.0
+          ]
+        },
+        "action_domain": "Only the SAME existing public NAV intents near/far/finish for BOTH C and D after identical common NAV prefix; no PUSH/CLIMB or new coordinates. This is a different explicit task, not weakening C within V4.",
+        "declared_bounds_xyxy": [
+          -1.0,
+          -3.4,
+          0.75,
+          3.4
+        ],
+        "declared_obstacles_xyxy": [],
+        "footprint_radius_m": 0.1,
+        "envelope_is_nominal_not_actual_robot_clearance_or_support": true,
+        "static_blueprint_object_boxes": {
+          "cuboid_a": [
+            0.8,
+            -0.7,
+            3.2,
+            0.7
+          ],
+          "cuboid_b": [
+            5.3,
+            1.9000000000000001,
+            7.7,
+            3.3
+          ],
+          "cuboid_c": [
+            9.8,
+            -3.3,
+            12.2,
+            -1.9000000000000001
+          ]
+        },
+        "empty_in_domain_obstacles_reason": "All declared initial box AABBs strictly outside this reference-domain rectangle; no PUSH is allowed. Not measured current pose or a dynamic collision certificate.",
+        "current_origin": "Only the actual common NAV succeeded receipt -> first new query within .100001sim via Reach helper, never blueprint/private base pose.",
+        "current_origin_reference_scope": "First immediate method query only; subsequent query provider UNKNOWN unless another qualified public reference source exists. Do not reuse old callback.",
+        "same_public_reference_completion_evidence_must_be_available_to_both_C_D": true
+      },
+      "initialization": {
+        "fresh_original_task_world_per_phase": true,
+        "original_scene_assets_Actor_dt_200Hz_and_aux_initialization_unchanged": true,
+        "no_mid_episode_reset_state_injection_or_archived_pose": true,
+        "same_own_zero_and_main_seed_configuration": true,
+        "Python_random_seed": 2026111701,
+        "numpy_legacy_random_seed": 2026111701,
+        "Torch_CPU_and_selected_CUDA_seed": 2026111701,
+        "PYTHONHASHSEED_child_startup_env": "2026111701",
+        "apply_only_in_new_owner_worker_at_original_initialization_before_task_components": true,
+        "no_existing_peer_global_environment_or_process_changes": true,
+        "common_prefix": "Original common NAV v4-ground-nav-007, original actual bound succeeded receipt then new same-query acquisition; no fake initial nominal origin",
+        "API_sampling": "Keep original unchanged provider/model sampling fields; do NOT invent unsupported API seed or claim repeatable VLM response",
+        "same_seed_not_proof_of_identical_hidden_state_or_counterfactual_pair": true,
+        "actual_RNG_implementation_and_initialization_evidence_to_be_frozen_by_Data": true
+      },
+      "fair_served_model": {
+        "original_models_capability_gate_required": true,
+        "record_actual_label_and_per_role_usage_in_live_FactorJournal": true,
+        "subsequent_arm_must_match_actual_first_arm_served_model_and_request_configuration": true,
+        "first_response_is_genuine_task_work_not_probe": true,
+        "mismatch_means_refuse_dispatch_and_report_actual_API_cost_no_retry": true
+      },
+      "physical_asset": {
+        "scene_id": "staggered-corridor-push-climb-v4-review",
+        "original_scene_file": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/scene.json",
+        "original_scene_SHA256": "6394740eb54b99ec0e0b4b35b0f804e7875dfc29255d9f897ba57b1ac0b48d20",
+        "scene_assets_or_Actor_or_original_V4_terminal_modified": false,
+        "DEV_completion_is_distinct_from_V4_completion": true
+      }
+    },
+    "task_wall_sim_caps": {
+      "main_wall_s_each": 1200,
+      "own_zero_wall_s_each": 180,
+      "task_sim_s_each": 60,
+      "total_main_and_zero_wall_s_max": 2760,
+      "each_main_task_issued_commands_max": 12000,
+      "output_bytes_each_main_max": 4294967296,
+      "total_new_outputs_max_bytes": 10737418240,
+      "Data_must_reconcile_aux_prepare_encoding_tail_RSS_GPU_and_actual_capacity_before_freeze": true,
+      "all_caps_may_tighten_before_registration_not_extend_after_start": true
+    },
     "original_Actor_dt_H_safety_unchanged": true,
     "backend_profile": "original V4 VLM_PROFILE, verified by original constructor not this draft",
     "Data_storage_limit_GiB": 40,
@@ -47,7 +161,7 @@
     "backend_profile_path": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/VLM_PROFILE.json",
     "backend_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
     "import_paths_ordered": [
-      "/home/yuanyue/main/work/ainav/development/complex_v4_method_current_reach_v2",
+      "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3",
       "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1"
     ],
     "source_root_reference": "/home/yuanyue/main/work/data-team/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source",
@@ -55,7 +169,23 @@
     "task_loop_entry": "task_loop.run_task",
     "phase_health_entry": "task_loop.make_cd_phase_health",
     "outer_worker_lifecycle_complete": false,
-    "task_loop_limits": null
+    "task_loop_limits": {
+      "max_commands": 12000,
+      "max_driver_calls": 12064,
+      "task_sim_cap_s": 60,
+      "scope_wall_cap_s": 1200,
+      "allowed_skills": [
+        "NAV"
+      ]
+    },
+    "task_loop_driver_call_cap_rationale": "Data finite extra 64 no-step/receipt transitions; may censor, never extend command/sim/wall or API budgets",
+    "method_query_and_role_limits": {
+      "max_method_queries_per_main": 6,
+      "max_roles_per_query": 8,
+      "outer_worker_enforcement_complete": false
+    },
+    "source_assembly_entry": "cd_entry.assemble_nav_dev_sources",
+    "DEV_acquisition_and_receipt_terminal_complete": false
   },
   "fairness": {
     "same_public_task": true,
@@ -100,5 +230,9 @@
     "bounded main EACH arm",
     "direct live video and complete same-policy fees"
   ],
-  "no_extra_baseline_or_old_scope_reopen": true
+  "no_extra_baseline_or_old_scope_reopen": true,
+  "declaration_sources": {
+    "NAV_DEV_DECLARATION.json": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CD-CURRENT-REACH-COMMON-REFERENCE-SEAM-20261117-v1/NAV_DEV_DECLARATION.json",
+    "INITIALIZATION_AND_RNG_ADDENDUM.json": "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-CD-CURRENT-REACH-COMMON-REFERENCE-SEAM-20261117-v1/INITIALIZATION_AND_RNG_ADDENDUM.json"
+  }
 }

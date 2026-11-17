@@ -1,40 +1,42 @@
-# 主线C/D首个DEV对照：Data装配组件与事前协议草案
+# 公平 C/D 独立 NAV DEV：Data 源装配与事前协议
 
-**这不是M1完成、native资格、新freeze/AUTH、GPU任务或优化收益。** 原PERF worker仍只允许NAV2000，不能改个arm直接运行；所有旧scope/冻结源/消费者发布不改。当前只交一个能被未来独立worker调用的默认关闭装配组件及两arm配置预览，不新建scheduler/签字平台。
+**未达到 M1/native 资格，未创建新 scope、AUTH、lease、own-zero 或 main。** 默认 OFF，不能改旧 PERF/E worker arm 后运行；不改原 Actor、V4 任务/成功门、guard87a 或任何 closed scope。当前代码是未执行开发候选，code-only 保管不等物理部署资格。
 
-## 唯一代码入口
+## 当前入口及精确源选择
 
-`cd_entry.build_cd_driver(..., enabled=False)`直接返回None，不读文件/导入AINav/调用guard/建world。未来独立新程序显式enabled后，先检查5份当前实际源码pin与模块解析路径，再委托原`method_entry.build_original_cd_method`＋`live_driver.driver_class`。保原C的roles/tree/replanning、D同技能底座/公共输入/共享B-D cost接口及统一legacy H；验证wrapper/baseline/roles/driver只用同一原FactorJournal。构造不得select/generate/step，不重置counter或二次评价cost。
+- `/home/yuanyue/main/work/data-team/development/cd-dev-pair-20261117-v1/cd_entry.py` 的 `build_cd_driver` 保原完整 `method_entry.build_original_cd_method`、`live_driver.driver_class`、C 原 roles/tree/replanning、D 同技能底座与共同 B/D cost；核一份最终原 FactorJournal 同时绑定 wrapper/baseline/roles/driver。不选择、不评价、不步进、不建后端/world。
+- 新 `assemble_nav_dev_sources` 选择 AINav **v3 b9a3960b…**、common prelude、actual-query boundary，以及原四个共同 driver/backbone/factor/asset。`source_selection.py` 额外核 **Reach 五模块**，不再误把旧 a33/v2/c931 当可接当前源。所有选定 bytes 在直接模块 import 前核验；这 **12 份选定源不是全部 native 导入闭包**，后者仍须全程序实际 prepare/inventory。
+- 装配顺序：D-only 创建同 episode、尚不可评价的 cost → 原 method/driver/最终 FactorJournal → C/D 同一 common NAV prelude → D-only 安装原 actual-select(batch) seam。C 无 cost/treatment，D 不换 planner 类型/身份；provider 留到真实首 query 才用真实 batch 和最终 journal 构造，不猜 query ID、不重采图、不注入 private pose。
+- 新函数返回只读 `NavDevSourceAssembly`，`dispatchable=false`、`DEV_acquisition_and_receipt_terminal_complete=false`，**不是 `task_loop` 可直接消费的 driver**。尚无 DEV acquisition/终态 adapter，不可把原 V4 driver.complete 冒 DEV 完成。异常不 retry/fallback；未来父 worker 仍负责 partial cleanup。
+- 两入口默认关闭直接返回 None，不读 source/protocol，不调用 guard 或 import AINav/Reach。
 
-原backend由AINav按原构造器安全生成并提供，本入口不读凭据/env/opener、不认证/探测/API；原backbone还会验证真实类型、profile/model的image+text能力/caps。profile声明deepseek-flash；AINav现已在一条历史记录query通过原认证/真实三role响应/选择，但actual served-model label、逐role usage/完整链未保留，不借此称live C/D或重跑旧query。original source caps从原run_full_course AST字面量保留：100 calls/8192单次tokens/900000总tokens、role timeout90s、plan_count5/terminal_bonus10，**不是新增API使用许可**。
+## 明确采用的事前 DEV（不是原 V4 降级/替代）
 
-调用者仍独占真实Runtime/observer/writer的构造、partial异常句柄、finally/费用/原lease/新root/真实video监督。本组件不创建或关闭world，不取lease，不接管peer进程；异常原样传播，不自动retry/换planner。它只支持当前原V4 scene身份，不能暗换更容易布局；更小支持域须明确声明并另冻结对应实现。
+`CD_DEV_PROTOCOL_DRAFT.json` 已采用并按 SHA 核 AINav `NAV_DEV_DECLARATION.json` 与 `INITIALIZATION_AND_RNG_ADDENDUM.json`：原物理场景不变；同 common prefix **007** 后，用原已有公共 NAV refs **008/001 两处访问，再 finish000**。不强制 VLM 树/首选顺序，不给 D 独占路线。名义矩形/半径是公开声明，不是实测 clearance 或隐藏 pose。
 
-## 结果前的DEV草案，不冒资格齐全
+事前 **C→D**，每 arm 最多 own-zero1/main1、retry0；seed **2026111701**，Python/NumPy/Torch/选定 CUDA/child PYTHONHASHSEED 原初始化前应用，**具体 RNG 实现尚未装入 worker**。同 seed 不冒隐藏态精确配对或可重现 VLM；API 原采样不臆造 seed。
 
-`CD_DEV_PROTOCOL_DRAFT.json`固定C→D、各最多1own-zero+1main、无retry，同公共任务/初始化生成机制/原技能安全/模型与预算/硬件负载政策；全尝试费用/失败/UNKNOWN/完整live 1×视频都保留。新鲜生成初态不冒隐藏状态精确配对；此第一DEV不是独立效果估计。方法必须记录真实优化调用、同query路径评价、KNOWN/UNKNOWN、baseline→最终决定、fallback与执行后再观察；全UNKNOWN回退不是M1完成，名义reference_travel_m不塞实测秒数。
+每 main **60 task-sim / 1200 scope-wall / 12000 issued commands**；Data 再限定 **12064 driver calls**（允许最多64额外 no-step/receipt transition，总 cap 可提前 censor，不能续 command/sim/wall/API）。每 own-zero wall180；每 main 输出≤4GiB，合计新输出≤10GiB。全部只是选定 prospective 上界，未实际预留或授权；freeze 前仍核 aux/prepare/编码/tail/RSS/GPU 与 fresh owned 容量。
 
-`prepare_pair.py`只核当前小源码/true-default-off并生成两份初始同配置预览，`dispatchable=false`。当前四项具体接线缺口（不是新审批，已接13:41接口新进展）：
-1. **AINav**：`backbone_entry._checked_backend`需要原profile/model image+text的新独立任务的实际served-model label/逐role usage/完整树与共同live caller；历史记录query真实API/选择已过，不再泛称从未有响应或缺key。
-2. **Reach**：`CompleteReferenceCost(initial_state, forecast, is_terminal)`已有`PublicNavReferenceCost`，只支持`DECLARED_GROUND_NAV_VISIT_AND_FINISH`。现缺准确独立DEV的Observation.goal与同query PUBLIC初始/真实receipt reference transport；现V4 goal和PUSH/CLIMB不在该域，不私改goal/用private base pose或旧J事实填预测，也不等全域模型完美。
-3. **Data**：本轮`task_loop.run_task`/`make_cd_phase_health`已补步进/预算终止/读数与seal；外层构造/partial finally、backend初始化费用、精确任务budget/IO/lease/导入闭包仍需接线并完整actual prepare，旧PERF NAV-only/2000cap绝不照搬。
-4. **共同任务**：具体受支持DEV任务/初始化/RNG与有限任务预算尚未选择，保留null，不静默降V4高台、不用看过的赢家路线。它们必须在首结果前进入新完整freeze；之后每arm自身zero/真实lease→main，不借旧zero。
+原 backend caps100 calls/8192单次tokens/900000总tokens、roles90s、planner5plans 继承，不是新 API 额度；DEV 另声明每 main≤6 method queries/每 query≤8 roles，**父 worker 尚待 enforcement**。首 arm 下个真正任务响应留 served-model/per-role usage/完整树；后 arm 同实际 served model/请求配置，不用 requested alias 代 actual，不重跑旧 query 补字段。
 
-## 定向验证范围
+共同公平信息/原安全/模型与预算/compute policy、全失败/UNKNOWN/censor/实际费用与直接 live 1×视频保留。名义 reference_travel_m 不塞实测秒数；全 UNKNOWN fallback 不算 M1、changed decision 不等收益、首 DEV 不作独立效果估计。
 
-`python3 -B test_cd_entry.py`：17项新Data检查。功能接线使用明确stub factories，仅验证本包装的参数、顺序、ledger身份、default-off、拒绝/无retry与协议公平性；**没有真正构造原FactorJournal/已验证backend或LiveDriver、没有证明机器人/C/D/优化有效**。原AINav6+5/旧63+14不重刷。真实5源码SHA/default-off source prepare是本机小文件检查，不是完整新程序prepare，更不是remote部署资格。
+## 已有步进组件与当前最短剩余路径
 
-本机source-prepare：
+`task_loop.py` 的有限 step/同 stop-state health/ScopeIO/watch、原 fast-health 每次一次、unknown 计数、最后 live capture、一次不可逆 seal 与费用边界保留。原 ResourceWatch oldest/completed 原子 pair、1s/2s、pre-issue guard 不改，不抢父 watch/lease/writer/observer/encoder 收尾。loop usage_known 只指 task 计数/时钟，不覆盖父 phase UNKNOWN；不能抢占阻塞 API/kernel，原信号/watchdog 不可省。
+
+1. **AINav/Data 任务 adapter**：同 C/D public goal/catalogue/prefix/visited 公开信息，原 accepted NAV receipts 驱动 visit/finish terminal；当前原 V4 acquisition/terminal 不能直接用。v3 actual-query seam 已存在，不再写成没实现。
+2. **Data 外层 worker**：受保护 backend 构造和完整 API/role/model 公平记账、query/role cap enforcement、初始化 RNG、partial finally、ScopeIO/FD/视频、aux/RSS/GPU/尾费、全源导入闭包与 actual prepare。
+3. 新完整 freeze/登记/实际容量预留、自身必要 zero/真实 canonical lease 后，才能固定 C→D main；不借任何旧 zero/AUTH，不抢 J 进程/锁。
+
+## 本轮定向验证与证据
+
+13 项新 Data source-delta/装配顺序 CPU 检查＋6 项受影响原 Data 回归通过。实际读 7 AINav/5 Reach 源和2声明 SHA；factory-order 用**明确 synthetic factory/driver**，没有构造真正 verified backend/原 FactorJournal/LiveDriver，不冒真正 API/query/机器人或优化结果。未重刷旧17/23全套、AINav7/63/14、Reach套件，未读 key/重下环境。
+
+证据：`/home/yuanyue/main/work/data-team/manifests/cd-actual-query-assembly-20261117-v1/`；历史首装配17项和task-loop23项保原独立证据，不双计。
+
+source-only prepare（始终 dispatchable=false，不 import 原方法/后端）：
 `python3 -B /home/yuanyue/main/work/data-team/development/cd-dev-pair-20261117-v1/prepare_pair.py /home/yuanyue/main/work/data-team/development/cd-dev-pair-20261117-v1/CD_DEV_PROTOCOL_DRAFT.json`
 
-实际日志与精确blockers：`/home/yuanyue/main/work/data-team/manifests/cd-dev-pair-assembly-20261117-v1/`。代码可先code-only同步；当前路径选择指向本机源，不能当远端worker配置直接执行。
-
-## 本轮续作：C/D步进、健康门、收束与费用组件
-
-`task_loop.py`不建world/后端/lease/ResourceWatch，不构造或关闭父资源。调用方必须已使用原`cd_entry`、真实ScopeIO/ResourceWatch及直接live recorder，watch/health/ScopeIO必须是同一个stop-state对象。`make_cd_phase_health`每次恰调用原RSS/GPU/wall fast-health一次，只核新任务冻结skill子集；原ResourceWatch原子(oldest,completed)/1s-2s和真实lease probe均不改，不生成owner stamp。`run_task`要求传原watch及该匹配health，保原driver.step_one与pre-issue native guards；不把False step返回、单技能成功或forecast当任务终态。
-
-独立command/driver-call/sim/全scope wall有限cap；异常后按实际Runtime计数保最后直接live采集，视频错误不覆盖原错误，unknown usage保None不借旧zero，读数失效的call单列unknown，不冒no-step/0已用量。异常序列化只含类型/白名单整数counter，不dump backend身份/headers/异常参数。可用ScopeIO在所有退出只尝试一次不可逆begin_finalization，缺handle/失败明确记录；父watch/lease/writer/observer关闭、编码、报告仍由外层负责，组件不能抢其清理ownership。
-
-新23项CPU用假driver/物理时钟及**真实原ScopeIO/ResourceWatch＋synthetic probe**定向核：no-step/caps/原health与skill子集/无额外probe/last pair不刷新/异常实际读数/late completion/视频错误/敏感参数不入receipt/unknown/不可逆seal/父收尾权属。不是原生driver或GPU/backend资格，不重跑原17项与AINav旧套件。对阻塞step/API/内核，组件不能强行抢占；原全scope信号/watchdog仍必须由外层保留。loop与step wall排除父cleanup/encode/report，不冒all-inclusive/独占CPU；费用/整数counts是audit，不作模型输入或M1/算法收益证据。
-
-本轮定向命令：`python3 -B /home/yuanyue/main/work/data-team/development/cd-dev-pair-20261117-v1/test_task_loop.py`；新日志`/home/yuanyue/main/work/data-team/manifests/cd-task-loop-20261117-v1/`。整体程序仍未freeze/注册/部署/own-zero/main。
+当前 protocol 指本机源路径，不能当远端 worker 配置运行。

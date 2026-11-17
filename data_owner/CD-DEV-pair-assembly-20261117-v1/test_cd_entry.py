@@ -131,7 +131,7 @@ class Tests(unittest.TestCase):
             p=self.protocol();mutate(p)
             with self.assertRaises(prepare_pair.ProtocolError):prepare_pair.preview(p,enabled=True)
 
-    def test_protocol_default_off_does_not_read_or_invent_task_caps(self):
+    def test_protocol_default_off_and_undeclared_task_refused(self):
         self.assertIsNone(prepare_pair.preview(None));p=self.protocol();p['common']['supported_DEV_task_and_initialization']={'invented':'scope'}
         with self.assertRaises(prepare_pair.ProtocolError):prepare_pair.preview(p,enabled=True)
 
