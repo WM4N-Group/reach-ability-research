@@ -103,10 +103,12 @@ def run(config_path=None,pin=None,phase=None,*,enabled=False):
         h=json.loads(H.read_bytes());q=h[c['authority_key']];a=json.loads(AUTH.read_bytes())
         need(h['executing_thread_id']==q['owner']==OWNER and q['active']and q['scope_id']==c['scope_id'],'Actual new performance owner/scope')
         need(not h['bulk24_collector_v1']['global_stop'],'Shared source/resource stop')
+        need(not q.get('stop_requested',False),'Current D3 scope was revoked; do not resume')
         need(q['authorization_sha256']==sha(AUTH)and a['owner']==OWNER and a['scope_id']==c['scope_id'] and a['question']==QUESTION and a['own_zero_max']==a['main_max']==1,'Exact new performance authority')
         need(all(not v['active']for k,v in h.items()if k.startswith('active_')and k!=c['authority_key']and isinstance(v,dict)and'active'in v),'No second active Data physical scope')
         need(q['zero_dispatch_count']==1 and (phase=='zero'and q['main_dispatch_count']==0 or phase=='main'and q['main_dispatch_count']==1 and q['zero_passed']and q['camera_sha256']is not None),'Own actual zero before one new main')
         need(q['whole_program_freeze_sha256']==pin,'Exact dispatched whole-program pin')
+        need(q.get(phase+'_PID')==os.getpid(),'Current authorized native phase PID, not historical binding/owner identity')
         return q
     q=authority();need(not ROOT.exists(),'Never reopen phase/root')
     if phase=='main':

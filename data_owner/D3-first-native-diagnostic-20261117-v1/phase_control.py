@@ -1,0 +1,105 @@
+"""One bounded D3 phase controller, not a scheduler; caller supplies exact PIN.
+
+New H scope only, own-zero then explicit separate main action; never resumes any
+closed phase. Directory+file flock/SHA+inode CAS/atomic replace/mode preserved.
+"""
+from pathlib import Path
+import datetime,fcntl,gzip,hashlib,json,os,subprocess,sys,tempfile,time
+R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');B=R/'workspace'
+W=B/'workers/D3-first-settled-flags-46308-20261117-v1';M=B/'manifests/D3-first-settled-flags-46308-20261117-v1'
+H=B/'registry/handoff_current_status_20261115.json';A=B/'registry/D3_FIRST_SETTLED_FLAGS_AUTHORITY_20261117_v1.json'
+KEY='active_D3_first_settled_flags_20261117_v1_scope';SCOPE='data-46308-D3-first-settled-flags-20261117-v1';OWNER='01a1e4e1-3037-7333-9019-a3f37effe5da'
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+now=lambda:datetime.datetime.now().astimezone().isoformat()
+
+
+def cas(transform):
+    raw=H.read_bytes();before=json.loads(raw);after=transform(json.loads(raw));assert after['executing_thread_id']==OWNER
+    assert all(after.get(k)==v for k,v in before.items()if k!=KEY), 'All peer/old H fields unchanged'
+    parent=os.open(H.parent,os.O_RDONLY|os.O_DIRECTORY)
+    try:
+        fcntl.flock(parent,fcntl.LOCK_EX)
+        with H.open('rb')as f:
+            fcntl.flock(f,fcntl.LOCK_EX);st=os.fstat(f.fileno());assert f.read()==raw and H.stat().st_ino==st.st_ino
+            fd,tmp=tempfile.mkstemp(prefix='.D3-authority-',dir=H.parent)
+            try:
+                os.fchmod(fd,st.st_mode&0o7777)
+                with os.fdopen(fd,'wb')as out:out.write((json.dumps(after,ensure_ascii=False,indent=2)+'\n').encode());out.flush();os.fsync(out.fileno())
+                assert H.read_bytes()==raw;os.replace(tmp,H);os.fsync(parent)
+            finally:
+                if os.path.exists(tmp):os.unlink(tmp)
+    finally:os.close(parent)
+    return dict(at=now(),before_H_SHA=hashlib.sha256(raw).hexdigest(),after_H_SHA=sha(H),all_peer_old_fields_preserved=True,mode_preserved=(H.stat().st_mode&0o7777)==(st.st_mode&0o7777))
+
+
+def execute(phase,pin):
+    assert phase in ('zero','main')and len(pin)==64
+    freeze=M/'program-freeze-final.json';assert sha(freeze)==pin;f=json.loads(freeze.read_bytes())
+    c=json.loads((W/'protocol-final.json').read_bytes());assert f['files'][str(W/'protocol-final.json')]==sha(W/'protocol-final.json')
+    assert f['files'][str(Path(__file__))]==sha(__file__)and f['files'][str(A)]==sha(A)
+    prepared=json.loads((M/'actual-final-prepare-receipt.json').read_bytes());assert prepared['program_sha256']==pin and prepared['CUDA_initialized']is False
+    assert prepared['stage']=='D3_FULL_PROGRAM_ACTUAL_CPU_PREPARE_PASS'
+    raw=H.read_bytes();h=json.loads(raw);assert h['executing_thread_id']==OWNER and not h['bulk24_collector_v1']['global_stop']
+    assert all(not v.get('active',False)for k,v in h.items()if isinstance(v,dict)and k!=KEY)
+    used=int(subprocess.check_output(['du','-s','-B1','/mnt/yuanyue/data-team'],text=True).split()[0]);assert used+(4<<30)+524288<40*1024**3
+    stats={}
+    for name,ino in [('physics',3428729629),('sdk',3428729630)]:
+        p=R/f'resource-locks/native-observer-{name}-gpu0.lock';st=p.stat();assert(st.st_dev,st.st_ino)==(51,ino);stats[str(p)]=(st.st_dev,st.st_ino)
+    assert not any(len(row.split())>5 and row.split()[5].split(':')[-1]in {'3428729629','3428729630'}for row in Path('/proc/locks').read_text().splitlines())
+    gpu=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True);assert 'GPU-297c1146-bcec-a8ee-8437-d9603392a2e1'in gpu
+    for d in Path('/proc').iterdir():
+        if not d.name.isdigit():continue
+        try:cmd=(d/'cmdline').read_bytes().replace(b'\0',b' ').decode(errors='replace')
+        except OSError:continue
+        assert not any(x in cmd for x in [str(B/'workers')+'/',str(R/'runtime/workers')+'/',str(R/'runtime/diagnostics')+'/']),(d.name,cmd[:200])
+    S=R/'runtime/workers'/SCOPE;root=S/phase
+    if phase=='zero':assert KEY not in h and not S.exists()
+    else:
+        q=h[KEY];assert q['active']and q['owner']==OWNER and q['whole_program_freeze_sha256']==pin and q['zero_passed']and q['zero_dispatch_count']==1 and q['main_dispatch_count']==0
+        assert not root.exists()and sha(S/'zero/result.json')==q['zero_result_sha256']
+    sys.path.insert(0,str(W/'policy'));from scoped_io import ScopeIO
+    from runner_outputs import write_json,finish_accounting
+    from controlled_process import ControlledProcess
+    L=M/('launcher-'+phase);L.mkdir();budget=ScopeIO(L,cap_bytes=262144,reserve_bytes=65536,max_open=4,text_buffer_bytes=8192)
+    with budget.open('H-before-authorize.json.gz','xb')as stream:stream.write(gzip.compress(raw,mtime=0))
+    def authorize(state):
+        assert state['executing_thread_id']==OWNER
+        if phase=='zero':
+            assert KEY not in state
+            state[KEY]=dict(active=True,owner=OWNER,scope_id=SCOPE,phase='D3_ZERO_AUTHORIZED_ONCE',authorization_sha256=sha(A),whole_program_freeze_sha256=pin,zero_dispatch_count=1,main_dispatch_count=0,zero_passed=False,camera_sha256=None,automatic_retry=False,question=c['question'],plan_sha256=c['plan_sha256'],resources=dict(at=now(),owned_allocated_bytes=used,owned_limit_bytes=40*1024**3,provider_quota_unknown=True,reserved_total_new_outputs_bytes=(4<<30)+524288,canonical=stats,GPU_inventory=gpu),zero_PID=None)
+        else:
+            q=state[KEY];assert q['active']and q['whole_program_freeze_sha256']==pin and q['zero_passed']and q['main_dispatch_count']==0
+            q.update(main_dispatch_count=1,main_PID=None,phase='D3_MAIN_AUTHORIZED_ONCE')
+        return state
+    write_json(budget,L/'authorize-CAS-proof.json',cas(authorize))
+    child=None;capture=None;error=None;started=time.monotonic()
+    try:
+        env=os.environ.copy();env.update(CUDA_VISIBLE_DEVICES=c['GPU_UUID'],MUJOCO_GL='egl',MUJOCO_EGL_DEVICE_ID='0',LD_PRELOAD=c['LD_PRELOAD'])
+        child=ControlledProcess(['/mnt/yuanyue/data-team/env-native-v1/bin/python','-I','-B',c['worker_path'],'--enabled','--phase',phase,'--config',str(W/'protocol-final.json'),'--program-sha256',pin],budget,stdout_path='startup.stdout',stderr_path='startup.stderr',env=env,cwd=str(W),enabled=True)
+        def bind_pid(state):
+            q=state[KEY];assert q['active']and q['whole_program_freeze_sha256']==pin and q.get(phase+'_PID')is None;q[phase+'_PID']=child.process.pid;return state
+        write_json(budget,L/'actual-PID-CAS-proof.json',cas(bind_pid))
+        capture=child.finish(timeout_s=330. if phase=='zero' else 1230.)
+    except BaseException as exc:
+        error=type(exc).__name__;capture=getattr(exc,'receipt',None)
+        if child is not None and child.process.poll()is None:
+            try:child.finish(timeout_s=.1)
+            except BaseException:pass
+    result_path=root/'result.json';result=json.loads(result_path.read_bytes())if result_path.is_file()else None
+    def finish(state):
+        q=state[KEY];assert q['active']and q['whole_program_freeze_sha256']==pin
+        if child is not None and child.process.poll()is None:
+            q.update(phase='D3_STOPPING_PROCESS_STILL_LIVE_NOT_CLOSED',stop_requested=True,live_PID=child.process.pid)
+            return state
+        if phase=='zero'and error is None and child is not None and child.process.returncode==0 and result is not None and result['passed']and result['program_sha256']==pin and result['actual_task_steps']==0:
+            q.update(zero_passed=True,zero_result_sha256=sha(result_path),camera_sha256=result['own_zero_camera']['spec_sha256'],phase='D3_OWN_ZERO_PASS_MAIN_NOT_AUTHORIZED')
+        else:
+            q.update(active=False,closed_at=now(),phase='D3_CLOSED_NO_RETRY',closed_phase=phase,result_exists=result is not None,result_sha256=sha(result_path)if result is not None else None,passed=None if result is None else result['passed'],usage_known=False if result is None else result.get('usage_known',False),actual_task_steps=None if result is None else result.get('actual_task_steps'),actual_task_sim_s=None if result is None else result.get('actual_task_sim_s'),actual_auxiliary_calibration=None if result is None else result.get('actual_auxiliary_calibration'),wall_s=None if result is None else result.get('wall_s'),D3_conclusion=None if result is None else result.get('D3_conclusion'),no_second_dispatch_or_control=True)
+        return state
+    write_json(budget,L/'result-CAS-proof.json',cas(finish));budget.begin_finalization()
+    write_json(budget,L/'launcher-result.json',dict(at=now(),phase=phase,program_sha256=pin,child_PID=None if child is None else child.process.pid,capture=capture,error_type=error,wall_s=time.monotonic()-started,result_exists=result is not None,worker_passed=None if result is None else result['passed']))
+    finish_accounting(budget,L/'final-accounting.json')
+    print(json.dumps(dict(at=now(),phase=phase,program_sha256=pin,child_PID=None if child is None else child.process.pid,worker_passed=None if result is None else result['passed'],result_exists=result is not None,H_SHA=sha(H),scope_active=json.loads(H.read_bytes())[KEY]['active'])))
+
+
+if __name__=='__main__':execute(sys.argv[1],sys.argv[2])

@@ -3,7 +3,7 @@
 遵循2026-11-17 15:47主计划，优先最多1main首条D3证据、18:00首结果或准确阻塞；不再等新场景、C/D/J或Sim2Real签字。复用已登记E20 prearrival40 DEV静态场景/原04a控制，fresh自然NAV→首PUSH；旧scope/未知seed/失败/费用保持，绝不恢复旧状态/借zero。新问题仅为原已确认之后首次false时，本次原predicate分项和当时原machine/finish phase；多flags不当唯一动力学因果或重训证据。
 
 ## 新差分
-- `source_revision.py`只接受已SHA固定的原strict bundle verifier与原selected context文件。新SDK是**独立完整复制**，不hardlink/写旧SDK（nlink也是共享元数据）；保published BASE SHA256SUMS/MANIFEST原bytes，在新verifier中只覆盖`push/controller/box_push.py`原399a→新a156这一固定pin。所有其它148基准清单项仍逐byte SHA/无symlink/无额外文件核验，不开放泛化skip。返回明确derived/Actor未改，绝不称未修改的发布SDK。
+- `source_revision.py`只接受已SHA固定的原strict bundle verifier与原selected context文件。新SDK是**独立完整复制**，不hardlink/写旧SDK（nlink也是共享元数据）；保published BASE SHA256SUMS/MANIFEST原bytes，在新verifier中只覆盖`push/controller/box_push.py`原399a→新a156这一固定pin。所有其它基准清单项仍逐byte SHA/无symlink/无额外文件核验，不开放泛化skip。返回明确derived/Actor未改，绝不称未修改的发布SDK。
 - 原selected view完成ClockedNativeSettled构造和refresh后、return之前，仅加owner sink绑定。缺sink/绑定失败抛RuntimeError，不被旧judge的ValueError→BLOCKED当可恢复。原controller/goal/Actor/clock及其它正文byte保留。
 - `target_sink.py`使用AINav bounded_sink99419941…；只读machine.phase和machine.finish.phase，不call termination/clock.report/measure；ScopeIO JSONL→flush/fsync→hash ACK，每task view4096行/8MiB，单次first PUSH。writer/序列化/上下文失败传播，不跳样/rollback/reset。辅助校准不能当task证据；实际原reference_stance→push.play.settle→physics_step/refresh调用链另记，不用空aux sink掩盖未知predicate路径。
 - `diagnostic_loop.py`保原driver/issued command、8000commands/40sim/8128calls/1200wall；第一条**原coordinator已经接受**的PUSH terminal立即停，不发后箱/CLIMB。原settled确认异常仍按原STOP退出，直接原片/本次rows保留；只观察flags不改成功门。loop不可抢占阻塞kernel，保原ResourceWatch/硬wall/有界launcher。

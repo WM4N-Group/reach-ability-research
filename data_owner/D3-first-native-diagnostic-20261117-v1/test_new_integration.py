@@ -84,6 +84,20 @@ class Tests(unittest.TestCase):
         d,w,b,v=self.fixture(fail)
         with self.assertRaises(loop.D3LoopError)as error:loop.run_diagnostic(d,watch=w,budget=b,video=v,scope_start_mono=loop.time.monotonic(),enabled=True)
         self.assertTrue(b.state.sealed);self.assertEqual(error.exception.receipt['primary_error_type'],'RuntimeError');self.assertNotIn('PRIVATE_TEST_SENTINEL',repr(error.exception.receipt))
+    def test_control_CAS_preserves_mode_peer_and_old_scope_counts(self):
+        import json,os,phase_control as control
+        with tempfile.TemporaryDirectory()as td:
+            p=Path(td)/'H.json';before=dict(executing_thread_id=control.OWNER,peer={'raw':['中文',7]},old_scope={'active':False,'owner':'OLD','main':1,'fee':None})
+            p.write_text(json.dumps(before,ensure_ascii=False));p.chmod(0o640)
+            def change(h):h[control.KEY]={'active':False};return h
+            with patch.object(control,'H',p):proof=control.cas(change)
+            after=json.loads(p.read_text());self.assertEqual(after['peer'],before['peer']);self.assertEqual(after['old_scope'],before['old_scope'])
+            self.assertEqual(p.stat().st_mode&0o777,0o640);self.assertTrue(proof['all_peer_old_fields_preserved'])
+    def test_authority_uses_actual_phase_PID_and_revocation_not_historical_binding(self):
+        text=(HERE/'worker.py').read_text()
+        self.assertIn("q.get(phase+'_PID')==os.getpid()",text)
+        self.assertIn("not q.get('stop_requested',False)",text)
+        self.assertIn("child.process.poll()is None",(HERE/'phase_control.py').read_text())
     def test_loop_and_receipt_hook_defaults_OFF(self):
         self.assertIsNone(loop.run_diagnostic('/NO_READ'));self.assertIsNone(loop.install_first_push_receipt_stop('/NO_READ'))
 
