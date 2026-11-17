@@ -1,0 +1,100 @@
+{
+  "classification": "DEV_ONLY_PROSPECTIVE_NOT_DISPATCH_AUTHORITY",
+  "actual_maintenance_owner": "01a1e4e1-3037-7333-9019-a3f37effe5da",
+  "plan_observed_sha256": "f93d770d99be50427c4c2af5722a4cedd570adb619a025fa276c03a5742ddd17",
+  "execution_enabled": false,
+  "arms": [
+    "C",
+    "D"
+  ],
+  "execution_order": [
+    "C",
+    "D"
+  ],
+  "own_zero_per_arm_max": 1,
+  "main_per_arm_max": 1,
+  "automatic_retry": false,
+  "source_paths": {
+    "method_entry": "/home/yuanyue/main/work/ainav/development/complex_v4_method_current_reach_v2/method_entry.py",
+    "backbone_entry": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/backbone_entry.py",
+    "live_driver": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/live_driver.py",
+    "factor_scope": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/factor_scope.py",
+    "v4_native_asset": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/v4_native_asset.py"
+  },
+  "common": {
+    "current_asset_reference": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/scene.json",
+    "supported_DEV_task_and_initialization": null,
+    "task_wall_sim_caps": null,
+    "original_Actor_dt_H_safety_unchanged": true,
+    "backend_profile": "original V4 VLM_PROFILE, verified by original constructor not this draft",
+    "Data_storage_limit_GiB": 40,
+    "private_key_or_opener_or_credentials_in_protocol": false,
+    "original_constructor_profile": {
+      "backend_caps": {
+        "max_calls": 100,
+        "max_tokens": 8192,
+        "max_total_tokens": 900000
+      },
+      "roles": {
+        "timeout_s": 90.0
+      },
+      "planner": {
+        "plan_count": 5,
+        "terminal_bonus": 10.0
+      }
+    },
+    "original_constructor_source_sha256": "038ce0455eba232755d6bf1354131a5c907964a9c084588c108e49bd9846b952",
+    "backend_profile_path": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/VLM_PROFILE.json",
+    "backend_profile_sha256": "87d38fefc86401a74de77933fe36d3d21c2fd047f61e897d37387df7f640f103",
+    "import_paths_ordered": [
+      "/home/yuanyue/main/work/ainav/development/complex_v4_method_current_reach_v2",
+      "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1"
+    ],
+    "source_root_reference": "/home/yuanyue/main/work/data-team/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source",
+    "reach_source_root_reference": "/home/yuanyue/reach-ability-research"
+  },
+  "fairness": {
+    "same_public_task": true,
+    "same_skill_tree_replanning_and_safety": true,
+    "same_backend_profile_and_caps": true,
+    "same_compute_policy": true,
+    "full_attempt_costs_and_failures_retained": true,
+    "direct_live_1x_video_each_arm": true,
+    "private_state_pair_claimed": false,
+    "DEV_is_independent_effect_estimate": false,
+    "cost_success_only_when_complete": true,
+    "missing_cost_is_not_zero": true,
+    "engineering_throughput_is_not_algorithm_gain": true
+  },
+  "optimizer_evidence": {
+    "required": [
+      "actual optimizer invocation",
+      "same-query candidate/path evaluations",
+      "known versus UNKNOWN branches",
+      "baseline proposal and final decision",
+      "fallback reason",
+      "post-execution re-observation and remaining-task outcome"
+    ],
+    "all_UNKNOWN_fallback_is_M1_complete": false,
+    "changed_decision_alone_is_benefit_proof": false,
+    "measured_J_seconds_not_reference_travel_m": true,
+    "unsupported_forecasts_remain_UNKNOWN": true
+  },
+  "all_result_denominators": [
+    "own-zero failed",
+    "not reached",
+    "native failed under original authority",
+    "resource/time censored",
+    "source error UNKNOWN",
+    "complete succeeded"
+  ],
+  "runtime_prerequisites_not_granted": [
+    "new whole-program freeze",
+    "actual full prepare",
+    "fresh original canonical PerGpuLease",
+    "own zero EACH arm",
+    "bounded main EACH arm",
+    "direct live video and complete same-policy fees"
+  ],
+  "no_extra_baseline_or_old_scope_reopen": true
+}
