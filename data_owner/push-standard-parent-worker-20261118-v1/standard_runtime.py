@@ -41,7 +41,16 @@ def bounded_exception(exc, *, max_frames=16):
     total = 0
     while tb is not None:
         code = tb.tb_frame.f_code
-        rows.append(dict(file=code.co_filename, function=code.co_name, line=tb.tb_lineno))
+        position = None
+        offset = tb.tb_lasti
+        if type(offset) is int and 0 <= offset <= 1000000:
+            for index, span in enumerate(code.co_positions()):
+                if index == offset // 2:
+                    position = dict(start_line=span[0], end_line=span[1],
+                                    start_column=span[2], end_column=span[3])
+                    break
+        rows.append(dict(file=code.co_filename, function=code.co_name, line=tb.tb_lineno,
+                         instruction_offset=offset, source_position=position))
         if len(rows) > max_frames:
             rows.pop(0)  # Keep the most specific leaf, including the actual errno site.
         total += 1
