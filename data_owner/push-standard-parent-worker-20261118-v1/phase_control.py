@@ -6,8 +6,8 @@ closed phase. Directory+file flock/SHA+inode CAS/atomic replace/mode preserved.
 from pathlib import Path
 import datetime,fcntl,gzip,hashlib,json,os,subprocess,sys,tempfile,time
 R=Path('/mnt/yuanyue/data-team/deployments/46308-20261114');B=R/'workspace'
-W=B/'workers/PUSH-standard-NAV-L1-20261118-v1';M=B/'manifests/PUSH-standard-NAV-L1-20261118-v1'
-H=B/'registry/handoff_current_status_20261115.json';A=B/'registry/PUSH_STANDARD_NAV_L1_AUTHORITY_20261118_v1.json'
+W=B/'workers/PUSH-standard-NAV-L1-20261118-v2';M=B/'manifests/PUSH-standard-NAV-L1-20261118-v2'
+H=B/'registry/handoff_current_status_20261115.json';A=B/'registry/PUSH_STANDARD_NAV_L1_AUTHORITY_20261118_v2.json'
 KEY='active_PUSH_standard_NAV_L1_20261118_v1_scope';SCOPE='data-46308-PUSH-standard-NAV-L1-20261118-v1';OWNER='01a1e4e1-3037-7333-9019-a3f37effe5da'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 now=lambda:datetime.datetime.now().astimezone().isoformat()
@@ -96,7 +96,9 @@ def execute(phase,pin):
         else:
             q.update(active=False,closed_at=now(),phase='STANDARD_L1_CLOSED_NO_RETRY',closed_phase=phase,result_exists=result is not None,result_sha256=sha(result_path)if result is not None else None,passed=None if result is None else result['passed'],usage_known=False if result is None else result.get('usage_known',False),actual_task_steps=None if result is None else result.get('actual_task_steps'),actual_task_sim_s=None if result is None else result.get('actual_task_sim_s'),actual_auxiliary_calibration=None if result is None else result.get('actual_auxiliary_calibration'),wall_s=None if result is None else result.get('wall_s'),case_loop=None if result is None else result.get('case_loop'),no_second_dispatch_or_control=True)
         return state
-    write_json(budget,L/'result-CAS-proof.json',cas(finish));budget.begin_finalization()
+    closure_proof=cas(finish)
+    budget.begin_finalization()  # Keep failure latch; allow bounded closure proof/tail accounting.
+    write_json(budget,L/'result-CAS-proof.json',closure_proof)
     write_json(budget,L/'launcher-result.json',dict(at=now(),phase=phase,program_sha256=pin,child_PID=None if child is None else child.process.pid,capture=capture,error_type=error,wall_s=time.monotonic()-started,result_exists=result is not None,worker_passed=None if result is None else result['passed']))
     finish_accounting(budget,L/'final-accounting.json')
     print(json.dumps(dict(at=now(),phase=phase,program_sha256=pin,child_PID=None if child is None else child.process.pid,worker_passed=None if result is None else result['passed'],result_exists=result is not None,H_SHA=sha(H),scope_active=json.loads(H.read_bytes())[KEY]['active'])))

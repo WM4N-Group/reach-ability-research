@@ -72,4 +72,16 @@ class FiniteLoopTests(unittest.TestCase):
         r=subprocess.run([sys.executable,'-I','-B',str(p)],capture_output=True,check=True)
         self.assertEqual((r.stdout,r.stderr),(b'',b''))
 
+    def test_new_controller_closes_then_finalizes_before_tail_proof(self):
+        # Specific new controller AST order, not rerunning the old D3 fixture.
+        import ast
+        text=Path(__file__).with_name('phase_control.py').read_text()
+        tree=ast.parse(text)
+        fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef)and n.name=='execute')
+        statements=[ast.unparse(n)for n in fn.body]
+        a=statements.index('closure_proof = cas(finish)')
+        self.assertEqual(statements[a+1],'budget.begin_finalization()')
+        self.assertEqual(statements[a+2],"write_json(budget, L / 'result-CAS-proof.json', closure_proof)")
+        self.assertNotIn("write_json(budget,L/'result-CAS-proof.json',cas(finish))",text)
+
 if __name__=='__main__':unittest.main()
