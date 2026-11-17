@@ -1,6 +1,8 @@
-# 新完整候选：严格原L0已登记case＋start锚定资源调度
+# 已执行closed：严格原L0已登记case＋start锚定资源调度
 
-**当前唯一候选为candidate2。** candidate1 code4a9023e…/program38263353…虽actual CPU prepare通过，但派前完整closure差分发现builder在EGL环境设置前导入MuJoCo、冻结了GLFW/cffi而非未来EGL模块，已在zero0/main0/H无新key时拒绝，原freeze/protocol/AUTH不改。candidate2同一尚未派发scope/问题，独立W/M/AUTH，builder进程启动前即固定EGL并断言实际backend；不是物理失败后换ID续试。
+**candidate2已执行并closed/no retry。** 实际code4ee5a249…/完整program3b405f3c…，1806文件freeze/实际CPU prepare通过，自身zero PID336786 PASS，唯一main PID337164在原startup1301步/6.505sim stable后，原当前PUSH12N/contact检查返回，但原CollisionGuard联合关节/碰撞安全门拒绝；具体reason未保存，PUSH Actor0，不定重训。28次owner probe/9121 guard无resource failure，但首body调度间隔2.56084s仍保留，不能冒全wall均匀1s/持续fresh证书。66帧1280×720/10Hz/1×原片与费用已保，原件入口看Data STATUS。旧closed不复开、本程序次数已用尽。
+
+ candidate1 code4a9023e…/program38263353…虽actual CPU prepare通过，但派前完整closure差分发现builder在EGL环境设置前导入MuJoCo、冻结了GLFW/cffi而非未来EGL模块，已在zero0/main0/H无新key时拒绝，原freeze/protocol/AUTH不改。candidate2同一尚未派发scope/问题，独立W/M/AUTH，builder进程启动前即固定EGL并断言实际backend；不是物理失败后换ID续试。
 
 事前问题：已定位completion后sleep(1)累计前次producer耗时后，把名义1s调度改为实际start锚定，原oldest≤2s与原子pair不改，能否真实保持原资源准入并到达原PUSH主体/完整退出？失败同样保留，不自动下一版追胜。主计划03:03明确允许复用已登记DEV case、新程序/问题/分项观测，不以找新场景阻塞；本程序复用原`PUSH-SDK-STANDARD-INDEPENDENT-L0-20261118-v1`case，不冒新场景/独立泛化或配对因果排名。
 
@@ -10,4 +12,4 @@
 - `probe_history.py`每次仅围绕原probe body＋ELF检查执行一次，保返回值/原异常；最多128尾行＋全程count/max，记录真实start/end及gap。它不发资源查询、不造owner freshness、不参与准入，不能用body计时替代ResourceWatch实际pair。metadata失败在成功路径必须使probe失败；已有主异常则保主异常并显式记录metadata失败。
 - 新5项CPU边界只核default-OFF、单callback/原值与异常/有限尾、坏metadata钟、probe body/控制源逆变换、worker disabled import不加载Torch/MuJoCo。不是重跑旧7项完整套件，更不是actual prepare/zero/main。
 
-事前预算：本新问题own-zero≤1/300wall、main≤1/1800wall/75sim/15000cmd/15200call，automatic retry0；native scope aggregate4GiB含64MiB尾reserve＋独立launcher总512KiB/raw2GiB，原RSS4GiB/GPU3GiB/owned40GiB，provider quota UNKNOWN。只PUSH，NAV/CLIMB不在本program发，原60s interval到期是censor，不冒Actor失败。完整冻结/真实CPU prepare、该程序自己的necessary zero和相机核、fresh authority/目标compute/四canonical/两UUID/容量及原lease缺一不可。当前仍待完整资格，README不授予物理许可；closed任何scope不复开，次数耗尽就收束新分项，下一NAV/CLIMB能力核对继续并行，不开90次/训练/真机。
+事前预算：本新问题own-zero≤1/300wall、main≤1/1800wall/75sim/15000cmd/15200call，automatic retry0；native scope aggregate4GiB含64MiB尾reserve＋独立launcher总512KiB/raw2GiB，原RSS4GiB/GPU3GiB/owned40GiB，provider quota UNKNOWN。只PUSH，NAV/CLIMB不在本program发，原60s interval到期是censor，不冒Actor失败。完整冻结/真实CPU prepare、该程序自己的necessary zero和相机核、fresh authority/目标compute/四canonical/两UUID/容量及原lease缺一不可。本程序已完成有限资格并耗尽次数，README不授予再次物理许可；closed任何scope不复开，次数耗尽就收束新分项，下一NAV/CLIMB能力核对继续并行，不开90次/训练/真机。
