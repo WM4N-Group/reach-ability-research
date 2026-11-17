@@ -9,3 +9,11 @@
 `asset_worker.py`/`asset_control.py`为一次独立静态asset操作（world constructor≤1/step0/Actor0，**不是own-zero/技能main**）：120wall、RSS4GiB/GPU3GiB、128MiB单buffer、256MiB controlled output＋1MiB launcher、disk floor2GiB。新全程序freeze/实际CPU prepare/当前owner-PID AUTH/H/原UUID锁与容量缺一不可；目录+file flock/SHA-inode CAS/atomic/mode，child失败先finalization再写闭合proof，无自动retry。失败asset不许当合格模型；旧scope/费用/UNKNOWN不改。
 
 静态asset有资格也**不等下一PUSH worker已完成或可dispatch**。还需真正同世界parent、原注册goal/force/FF/PD/FIFO/STOP/stow全部门、实际Actor接管/模块/entry reset/退出记录、完整原片/费用与新整程序冻结/自身zero。现PUSH leg/arm真实激活分母仍UNKNOWN，不以这个无Actor静态构造补0或新SR；C++ GIL候选不编译/不热换，也不借其名义改2s。case/asset/worker真实阶段只以Data STATUS/H/原件为准。
+
+## 当前最高接续：该asset操作已closed，移除额外资产前置
+
+2026-11-17 23:56实际program **f49854cbb52c…**在原`PerGpuLease.__enter__`返回前报`BlockingIOError errno11`；world构造0、Actor/命令0、task时钟未建立、MJB不存在，asset1/own-zero0/main0，已closed/no retry。原错误未保存栈帧，**不能断言具体是某个flock、NVML进程创建或J/GPU负载**；前后锁空也不授予重试。原件`/home/yuanyue/main/work/data-team/manifests/push-standard-first-case-20261117-v1/ACTUAL_STANDARD_ASSET_CONCLUSION.json`。上面的asset worker/controller现在只保历史，不再作为推荐待运行入口，不修改其冻结副本/结果。
+
+首case定义保留，但**下一直接接原`mujoco_zyh.runtime_adapter.construct_runtime(bundle, config)`的`scene_recipe='zyh_native_single_box'` camera-only源构造**，不再先跑另一轮独立asset。这条已有入口直接创建fresh标准Runtime/原模型，不要求外部MJB；已核`scene.configure_scene`此分支不做research三箱/20kg/地形替换。完整PUSH parent仍须接原注册安全、public/native目标及完整退出门、实际模块调用/原entry reset元数据、原片、partial与全部账、原真实lease/1s/2s。不是运行裸CLI、绕canonical、改Goal或跳自身zero；完整新程序尚未资格化。
+
+后继worker在现有异常报告加有上限的file/function/line traceback（不记locals/凭据），以免再次把不同EAGAIN叶段混为“GPU忙”；资源前检补进程/线程余量与安全phase交接。禁止用这次事后空闲换GPU/新ID盲重试、跨进程借FD/lease、放宽2s或让J停工。当前PUSH真实Actor激活/终态仍未取得，本次不计Actor物理失败。
