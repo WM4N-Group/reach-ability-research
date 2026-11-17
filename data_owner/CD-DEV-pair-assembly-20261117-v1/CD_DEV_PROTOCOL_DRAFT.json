@@ -51,7 +51,11 @@
       "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1"
     ],
     "source_root_reference": "/home/yuanyue/main/work/data-team/workers/new-critic-cohort-46308-20261115-v1/inputs/AINav/common-source",
-    "reach_source_root_reference": "/home/yuanyue/reach-ability-research"
+    "reach_source_root_reference": "/home/yuanyue/reach-ability-research",
+    "task_loop_entry": "task_loop.run_task",
+    "phase_health_entry": "task_loop.make_cd_phase_health",
+    "outer_worker_lifecycle_complete": false,
+    "task_loop_limits": null
   },
   "fairness": {
     "same_public_task": true,

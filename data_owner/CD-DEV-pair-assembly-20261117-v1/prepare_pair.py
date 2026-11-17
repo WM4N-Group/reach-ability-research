@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import cd_entry
+import task_loop
 
 
 class ProtocolError(ValueError):
@@ -47,6 +48,9 @@ def preview(protocol, *, enabled=False):
     # Exercise THIS entry's true disabled path, never original backend/driver/world.
     require(cd_entry.build_cd_driver('/DO_NOT_READ', enabled=False) is None,
             'True default-off entry required')
+    require(task_loop.run_task('/DO_NOT_READ', enabled=False) is None and
+            task_loop.make_cd_phase_health(enabled=False) is None,
+            'True default-off task-loop/health components required')
     # Common is cloned, rather than maintaining independently drifting arm copies.
     common = json.loads(json.dumps(protocol['common']))
     arms = {arm: dict(common=json.loads(json.dumps(common)), arm=arm,
@@ -57,11 +61,11 @@ def preview(protocol, *, enabled=False):
     # These are concrete missing executable inputs, NOT new approvals/signatures.
     blockers = [
         dict(owner='AINav', interface='backbone_entry._checked_backend(backend, backend_type, profile)',
-             missing='Fresh original backend identity with selected model image+text capability, original caps/counters; actual response/Selection and common live caller not yet supplied'),
+             missing='Historical recorded-query original backend/auth and 3 real role responses/Selection now exist. A fresh live C/D caller still needs retained actual served-model label, per-role usage/tree and original verified backend/caps; do not replay the old query to recover missing fields'),
         dict(owner='Reach', interface='CompleteReferenceCost(initial_state, forecast, is_terminal, journal)',
-             missing='A declared minimal supported multi-step public task: ReferenceState, same-query StepForecast prepare/execute/exit+next_state and terminal; at least one usable path, not global all-domain prediction or J measured-cost lookup'),
-        dict(owner='Data', interface='new C/D worker.run / phase_health / termination / budget',
-             missing='Original PERF worker is NAV-only/2000 commands. Do not reuse it as C/D: new arm entry, supported task termination and exact finite per-phase caps/IO/lease/video/import closure still need source assembly before freeze'),
+             missing='PublicNavReferenceCost now supplies DECLARED_GROUND_NAV_VISIT_AND_FINISH only. Missing is the explicit independent Observation.goal and same-query PUBLIC initial/receipt reference transport; V4 goal and PUSH/CLIMB are not supported. Do not require all-domain forecasts or substitute J measured costs'),
+        dict(owner='Data', interface='new C/D outer worker prepare / resources / task configuration',
+             missing='task_loop.run_task/make_cd_phase_health now implement bounded step/termination, sanitized usage and irreversible seal. Outer construction/partial cleanup, startup/backend accounting, exact task caps/IO/lease/video/import closure and whole-program actual prepare are still not assembled/qualified; old PERF NAV2000 is never a launcher substitute'),
         dict(owner='AINav+Reach+Data', interface='common.supported_DEV_task_and_initialization / result-before-freeze protocol',
              missing='Current V4 asset remains reference only. No supported smaller task is silently selected; actual domain/initialization generator/seed+global RNG policy/finite task budgets remain unresolved before any outcome')]
     require(common['supported_DEV_task_and_initialization'] is None and
@@ -69,6 +73,8 @@ def preview(protocol, *, enabled=False):
             'This specific draft reports unresolved task/caps, never invents a ready scene')
     return dict(stage='SOURCE_PREPARE_PASS_EXECUTION_NOT_READY', dispatchable=False,
                 source_pins=pins, arm_config_preview=arms, blockers=blockers,
+                stepping_and_phase_health_component_available=True,
+                whole_worker_lifecycle_or_runtime_qualification=False,
                 original_driver_or_method_factory_calls=0, backend_or_API_calls=0,
                 Runtime_Actor_renderer_or_GPU_calls=0, extra_research_signature_required=False)
 
