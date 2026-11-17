@@ -1,0 +1,69 @@
+{
+  "schema": "Data-D3-first-native-selected-case-PROSPECTIVE-NOT-AUTHORITY",
+  "at": "2026-11-17T16:31:35.393092+08:00",
+  "actual_owner": "01a1e4e1-3037-7333-9019-a3f37effe5da",
+  "main_plan_sha256": "b9c7046ff90d2ec14c339c14f6f0a537a89430445dc30dbd323087c981219a42",
+  "main_plan_version": "2026-11-17 15:47",
+  "priority": "D3 first native evidence before extra C/D interface work",
+  "selected_case": "Existing registered E20 prearrival40 DEV scene/control with fresh natural NAV -> first original PUSH",
+  "new_question": "At first original stateful false sample following confirmed true, which already-computed original settled flags are false and at which original stage? Multiple false flags are not a unique physical cause.",
+  "original_model_sha256": "ed6267bbaa7fa0e0dda0906f5e55f4abbf2c129d1b9ee5ffa0f17e54490934b1",
+  "original_scene_sha256": "08a260a4bda6de75e1f0012e12a4a3a04a5c682b0534f785a7b504af4a666381",
+  "control_source": "04a9c0fe82fdb7d619b7507d5b554c133572af40",
+  "SDK_original_SHA": "399aada0ee3b79af11014a22d8ba6f942e2df90f4658aa959139fc941bb59ed5",
+  "SDK_new_single_predicate_SHA": "a15634610b69c0d01b68d6c61bcced9f74d60c5ffc98ffb45de9d54745ba28af",
+  "clock_original_SHA": "fd1a49df4beb515308b9f146eac1ee260b818ddce39b7d556a14981ff1597180",
+  "bounded_sink_SHA": "9941994124d8e258ab322f558fddc922a615f317ea0f4b8a2767508c4013c745",
+  "limits": {
+    "main_max": 1,
+    "own_zero_max": 1,
+    "retry": 0,
+    "control_main_not_implicitly_registered": true,
+    "task_sim_s": 40,
+    "issued_commands": 8000,
+    "driver_calls": 8128,
+    "main_wall_s": 1200,
+    "zero_wall_s": 300,
+    "scope_output_bytes": 4294967296,
+    "sink_records_per_world": 4096,
+    "sink_payload_per_world": 8388608
+  },
+  "seed_policy": "Original constructor seed unchanged; old global/hidden-state seed unknown, no seed sweep or pair claim",
+  "stop_policy": [
+    "Original native safety/failure/resource STOP unchanged",
+    "Stop immediately at first accepted original PUSH terminal receipt; do not continue later boxes/CLIMB",
+    "Task/command/wall/sink cap -> censor/UNKNOWN, not native failure",
+    "Sink/context/ACK error propagates after original state update; no resume/rollback",
+    "If no confirmed/loss sample observed, publish NOT_OBSERVED/UNKNOWN, no replacement main"
+  ],
+  "video": {
+    "direct_live": true,
+    "rate_1x": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 10,
+    "lookat": [
+      7.5,
+      0,
+      0.4
+    ],
+    "distance": 20,
+    "azimuth": 110,
+    "elevation": -58
+  },
+  "accepted_source_releases": {
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-D3-SINGLE-CALL-PREDICATE-AUDIT-CANDIDATE-20261117-v1/release.json": "6efa07c7875953b17edbbfb4a0a0b3149d619b6887a85f00a3d0183e8cf29528",
+    "/home/yuanyue/main/work/ainav/consumer-deliveries/AINAV-D3-CLOCKED-SINGLE-CALL-BOUNDED-SINK-20261117-v1/release.json": "1477f6573abe06df85779dbe40b36e84e9eea4cf55fcd73d0a15e7d41ad102e3"
+  },
+  "closed_E20_not_reopened": true,
+  "old_E20_cause_not_recovered": true,
+  "Actor_retraining_not_authorized": true,
+  "execution_enabled": false,
+  "new_AUTH_or_H_scope_or_lease_or_native_dispatch": false,
+  "remaining_before_freeze": [
+    "Strict independent new SDK root/source-bundle verification: only exact original box_push.py -> a156 delta; all other sources/actors/weights unchanged. Old bundle is immutable; original verifier would correctly reject a156 without an explicit new verifier/pins",
+    "Selected target-context return boundary binder and read-only actual phase source; do not bind only root bridge or poll term/clock.report again",
+    "Explicit actual aux call-chain classification/binding if a predicate is reachable, never classify aux as task evidence",
+    "Data whole parent worker, finite original PUSH receipt stop, sink ScopeIO accounting/cleanup, new complete freeze/actual prepare/fresh capacity/canonical lease/own zero; no old PERF/E AUTH or zero reuse"
+  ]
+}
