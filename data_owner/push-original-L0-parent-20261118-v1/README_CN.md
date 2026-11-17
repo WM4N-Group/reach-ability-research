@@ -1,6 +1,8 @@
-# 当前完整候选：原独立PUSH L0 parent（待全程序freeze/actual prepare）
+# 已执行并closed：原独立PUSH L0 parent
 
-一个新问题：原standalone标准初始化之后，原注册PUSH主体与完整退出是否可完成。不是closed L1重试或删NAV改名；不借0fa40c…zero/AUTH，所有既有scope原状。
+本程序code a8a90e828fc7…/完整program947a4b250800…已完成1804文件freeze及真实CPU prepare，zero1 PASS；唯一main在原startup840步/4.2sim被原oldest≤2s资源门截断，PUSH Actor0、无技能终态，现closed/no retry。原43帧1280×720/10Hz/1×直录、费用和原件见Data STATUS的`push-original-L0-parent-20261118-v1`入口；本目录不再是可派发候选。
+
+事前问题：原standalone标准初始化之后，原注册PUSH主体与完整退出是否可完成。不是closed L1重试或删NAV改名；不借0fa40c…zero/AUTH，所有既有scope原状。
 
 - `standard_runtime.py`在原RuntimeAdapter私有loader中仅绑定“原fresh INITIAL X从−1→−.08”的一个可逆constructor差分，保原camera/calibration三hunk、Actor、Runtime.step/200Hz/QP/PD/FIFO；原SDK不改。原Runtime产生的nav-push Machine只作来源保管、绝不运行其NAV。task0仍有原独立aux calibration，另计费用；零相位不做task settle/Actor。
 - `l0_startup.py`沿上一a15源码，主相位逐步执行原独立`play.settle`，原Z/XY/基座速度与controller/history初始化显式登记。每条默认PD必须实际由原Runtime.step发出再ack，异常不能吞掉/续跑；原同钟视频/命令从task0开始，不抹掉startup的task sim或把它当aux。
@@ -12,4 +14,4 @@
 
 本候选事前预算：zero≤1/300wall；main≤1/1800wall、75sim/15000cmd/15200driver call；原init≤10.5sim＋单次原PUSH60s interval，retry0。native aggregate4GiB（含64MiB尾写reserve）＋独立launcher总512KiB、raw2GiB；原RSS4GiB/GPU3GiB/owned40GiB、provider quota UNKNOWN。预算需进入完整freeze/Auth后才有资格，不是本README即可派。
 
-5项新boundary CPU检查仅验证default-OFF、拒绝NAV/第二次选择、原interval censor、拒绝伪capture和不多发命令；不替代真实witness/Actor或原生资格。下一完成完整freeze/真实私有Pythonactual prepare，再fresh安全phase/原canonical/UUID/PID/容量与本程序自己的necessary zero；通过后才考虑唯一main，不开90次，不碰训练/真机。
+5项新boundary CPU检查仅验证default-OFF、拒绝NAV/第二次选择、原interval censor、拒绝伪capture和不多发命令；不替代真实witness/Actor或原生资格。本程序次数已用尽，不重新派发。未来`resource-start-cadence-20261118-v1`仅新的调度差分源码，非本scope热修/重试许可；下一有明确新问题与合法场景的完整程序必须独立资格，不借本zero，不开90次，不碰训练/真机。

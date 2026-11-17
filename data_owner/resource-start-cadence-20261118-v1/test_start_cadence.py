@@ -153,6 +153,22 @@ class StartCadenceTests(unittest.TestCase):
         self.assertIn('External resource/owner/disk probe failed', watch.state.reason)
         self.assertEqual(watch.probe_calls, 1)
 
+    def test_seal_during_bootstrap_or_before_wait_never_publishes_or_probes_again(self):
+        clock, state, calls = Clock(), StopState(), []
+        def seal():
+            calls.append(clock())
+            state.sealed = True
+        watch = new.ResourceWatch(seal, state=state, token=object(), clock=clock)
+        watch.stop = Event(clock, [0.])
+        with patch.object(new.threading, 'Thread', Thread):
+            watch.start()
+        watch.thread.target()
+        self.assertEqual(calls, [0.])
+        self.assertIsNone(watch.last_observation_stamp)
+        self.assertEqual(watch.probe_calls, 0)
+        with self.assertRaises(PolicyStop):
+            watch()
+
     def test_only_start_method_changed_all_safety_and_pair_code_identical(self):
         original = (ORIGINAL / 'resource_watch.py').read_bytes()
         self.assertEqual(hashlib.sha256(original).hexdigest(),

@@ -49,6 +49,8 @@ class ResourceWatch:
   self.probe_once()
 
   def run():
+   if self.state.sealed:
+    return
    deadline = self.last_observation_stamp[0] + self.interval
    while not self.state.sealed:
     delay = max(0., deadline - self.clock())
