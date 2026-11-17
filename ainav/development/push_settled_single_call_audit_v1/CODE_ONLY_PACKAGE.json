@@ -1,0 +1,25 @@
+{
+  "schema": "AINav-D3-code-only-scoped-export-v1",
+  "at": "2026-11-17T16:22:45.415906+08:00",
+  "parent_guard_commit": "87a5c4fbc7c52bbf1ed061769e7e17d1a1ef2109",
+  "core_guard_source_sha256": "5aa94c79e37315f9d62839b31ce7d421299b0971ec3f47c7fe4329f05bebf4a5",
+  "files": {
+    "source_candidate.py": "0fae6a0cd8e8f03d0318eac4c2144d2d318b473377a253b5bcb790da5fa80c3e",
+    "bounded_sink.py": "9941994124d8e258ab322f558fddc922a615f317ea0f4b8a2767508c4013c745",
+    "README_CN.md": "f1c0cd05fe04e42c3059862b0055e3c56e506421a408b8edc11f1f18bf6db06a",
+    "D3_CLOCKED_SINK_OWNER_CN.md": "5d44b399fc47df132066494b6505b2296e2de3401def198f39eef124ea9e1aad",
+    "tests/test_predicate_cpu.py": "85c8412967744716de403d0c901f9fc249c2a4c92cd264c51adb4bf79ba609b0",
+    "tests/test_clocked_sink_cpu.py": "b3fff63adf4b22bdf0372a6b5788ad724e6a1d57249af00d513ab813e554c7b1"
+  },
+  "original_SDK_sha256": "399aada0ee3b79af11014a22d8ba6f942e2df90f4658aa959139fc941bb59ed5",
+  "generated_SDK_candidate_sha256": "a15634610b69c0d01b68d6c61bcced9f74d60c5ffc98ffb45de9d54745ba28af",
+  "new_sink_sha256": "9941994124d8e258ab322f558fddc922a615f317ea0f4b8a2767508c4013c745",
+  "CPU_evidence": {
+    "original_predicate_cases": 9,
+    "new_clock_sink_cases": 7,
+    "counts_are_distinct_software_not_physics": true
+  },
+  "no_weights_assets_env_artifacts_or_credentials": true,
+  "global_CODE_SHA256SUMS_and_SOURCE_EXPORT_not_changed_or_claimed_regenerated": true,
+  "not_native_qualification_or_dispatch_authority": true
+}
