@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-17T23:35:40.068900+08:00",
+  "question": "First finite PUSH screening: original standard box, original natural NAV predecessor; Actor push versus full exit/strict placement recorded separately",
+  "stage": "PROSPECTIVE_CASE_STATIC_ASSET_FIRST_NOT_NATIVE_PERMISSION",
+  "case_id": "PUSH-SDK-STANDARD-NAV-L1-20261117-v1",
+  "source_plan": "switch/plans.py:nav-push",
+  "source_SHA256": {
+    "/home/yuanyue/main/work/ainav/manifests/three_skill_original_contract_intake_20261117_v1/original-SDK-source/switch/plans.py": "61a39db4dfdc29b6cd0261d3574296a4fe601f19d4d605dcef212a61e968d52f",
+    "/home/yuanyue/main/work/ainav/manifests/three_skill_original_contract_intake_20261117_v1/original-SDK-source/switch/runtime.py": "2e12846c7a7789b2f44953a12685b3d0221fbd0f9449cd704e8232916877aff5",
+    "/home/yuanyue/main/work/ainav/manifests/three_skill_original_contract_intake_20261117_v1/original-SDK-source/push/model.py": "69ebda10d20d3b41a1867d5c67eee6e3489818dc41efbf48abfdd2aee5572182",
+    "/home/yuanyue/main/work/ainav/manifests/three_skill_original_contract_intake_20261117_v1/original-SDK-source/push/bridge.py": "fafcc5c7f68db6d2a0a499316fd2707b1a98808d35913e1e847e65b4ae2c4cdc",
+    "/home/yuanyue/main/work/ainav/manifests/three_skill_original_contract_intake_20261117_v1/original-SDK-source/push/README.md": "837c9c53ed4752dbf3e6661515fae0cd81e2d7182e00fc1a15e81c663e1442c2"
+  },
+  "scenario": "nav-push",
+  "seed": 3701,
+  "delay_ms": 20,
+  "box_size_m": [
+    1.2,
+    1.2,
+    0.2
+  ],
+  "box_mass_kg": 1.0,
+  "box_initial_xyz_m": [
+    1.1,
+    0.0,
+    0.1
+  ],
+  "runtime_initial_robot_xyz_m": [
+    -1.0,
+    0.0,
+    0.33
+  ],
+  "NAV_goal_xy_m": [
+    -0.02,
+    0.0
+  ],
+  "push_distance_m": 0.6,
+  "native_drive_goal_xy_m": [
+    1.7,
+    0.0
+  ],
+  "public_goal_xy_m": [
+    1.7,
+    0.0
+  ],
+  "placement_mode": "uncompensated",
+  "native_and_public_and_full_exit_results_separate": true,
+  "public_XY_m": 0.02,
+  "dock_m": 0.01,
+  "native_settled_m": 0.12,
+  "source_SDK_not_D3_predicate_or_E20_control": true,
+  "existing_V4_scene_not_used_or_relabeled_L0": true,
+  "L0_is_still_unqualified_not_fabricated": true,
+  "proposed_future_main_max": 1,
+  "own_zero_per_final_program_max": 1,
+  "retry": 0,
+  "automatic_retry": false,
+  "new_ninety_case_authority": false,
+  "full_main_worker_freeze_prepare_and_own_zero_complete": false,
+  "Actor_training_allowed": false,
+  "execution_enabled": false,
+  "remaining": [
+    "Controlled static standard one-box MJB and signature/camera verification",
+    "New finite same-world parent worker with original registered safety/goal/stop/IO/watch and actual per-module Actor call/entry/reset records",
+    "Full program freeze, actual CPU prepare, fresh original lease and this final programs own zero; no D3/old authorization reuse"
+  ]
+}
