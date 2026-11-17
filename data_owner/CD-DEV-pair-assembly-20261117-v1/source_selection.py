@@ -4,11 +4,13 @@ Hashes bytes without importing AINav/Reach or touching a backend/world. Closed
 sources are never rewritten. Whole-program dependency inventory remains required.
 """
 from pathlib import Path
+import ast
 import hashlib
 import json
 
 REACH_PACKAGE = 'research.task_conditioned_reachability.execution_preparation'
 REACH_PINS = {
+    'finite_multistep_planner.py': '3a5eb184b9988371f0f05909bfa92e008b7eeb3b56eaef349b68416ef8a15bb9',
     'v4_common_nav_prelude.py': '3b6f37d653d3db0af882157bd3e7627faadd44d4aa246c927a82212d87a3343a',
     'v4_nav_reference_cost.py': '6f9dfdecfbd4eea1a0a96eeca9626560c058db1b40abf5b3c987c4972f67c266',
     'v4_reference_cost.py': '59b357d6c2dceb0a6bb51991c0c4b7b65aa37a99121a4fe7b63233b11c97bda9',
@@ -36,7 +38,13 @@ def verify_reach_sources(root):
     pins = {}
     for name, pin in REACH_PINS.items():
         path = base / name
-        checked_bytes(path, pin)
+        raw = checked_bytes(path, pin)
+        # Check eager relative module imports. Lazy A/B-only WM constructor imports
+        # are outside this selected C/D domain, not a request to stage WM.
+        for node in ast.parse(raw).body:
+            if isinstance(node, ast.ImportFrom) and node.level:
+                if node.level != 1 or node.module is None or node.module.split('.')[0] + '.py' not in REACH_PINS:
+                    raise ValueError('Unselected relative Reach source dependency: ' + name)
         pins[str(path)] = pin
     return pins
 

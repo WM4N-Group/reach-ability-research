@@ -81,16 +81,16 @@ def preview(protocol, *, enabled=False):
     # These are concrete missing executable inputs, NOT new approvals/signatures.
     blockers = [
         dict(owner='AINav/Data', interface='independent DEV public acquisition and terminal adapter',
-             missing='Selected v3 actual-query binding exists and Data task-zero seam now returns a non-dispatchable source-assembly handle, not a loop driver. Need same C/D public goal/catalogue/prefix/visited exposure and original accepted NAV receipt-driven visit/finish terminal; original V4 driver.complete is not DEV completion'),
+             missing='AINav nav_dev_task source and Data attachment are now implemented; common public acquisition and NAV receipt terminal are NOT yet native-qualified. The new parent candidate must pass its full freeze/prepare/own-zero; original V4 complete is not DEV completion'),
         dict(owner='Data', interface='fresh live backend / API fairness and accounting',
-             missing='Retain actual served-model/per-role usage/tree and original caps. Enforce 6 method queries/8 roles-per-query and same served model/request config across arms; do not replay historical API query or use requested alias as actual served identity'),
+             missing='New api_accounting source now enforces 6 method queries/8 roles per query and preserves safe served-model/per-role usage/transport attempts. Actual backend/query execution and D binding to pinned genuine C result remain unqualified; no old query replay'),
         dict(owner='Data', interface='new full outer worker / native import closure / runtime qualification',
-             missing='Construct/partial-finally, RNG implementation, startup/API/aux/resource/tail accounting, ScopeIO/FD/video/lease and whole-program freeze/actual prepare/own zeros remain required; finite stepping component is not a launcher'),
+             missing='New cd-native-worker parent candidate now connects partial-finally/RNG/API accounting/disjoint phase ScopeIO/FD/video/lease and task_loop. Actual CPU prepare is recorded separately; full native authority freeze/own zeros/cleanup and external bounded launcher still required'),
         dict(owner='Data', interface='actual capacity and finite outputs',
              missing='Prospective task/seed/60sim-1200wall and output caps are selected, not null. Reconcile actual output reservation, aux/encoding/tail/RSS/GPU with fresh owned capacity before freeze; observed idle GPUs are not a lease')]
     return dict(stage='SOURCE_PREPARE_PASS_EXECUTION_NOT_READY', dispatchable=False,
                 source_pins=pins, arm_config_preview=arms, blockers=blockers,
-                selected_Reach_source_count=5, selected_direct_source_count=len(selected),
+                selected_Reach_source_count=len(source_selection.REACH_PINS), selected_direct_source_count=len(selected),
                 DEV_task_and_RNG_and_caps_prospectively_selected=True,
                 full_native_import_closure_qualified=False,
                 stepping_and_phase_health_component_available=True,

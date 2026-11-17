@@ -11,7 +11,7 @@ import importlib
 import importlib.util
 from source_selection import verify_reach_sources, provider_config
 
-SOURCE_PINS = {'common_nav_prelude': 'c29fe523309299c35ed0620aed285559bde27245a8641b5a6f05b4a1d6c9d202', 'nav_query_boundary': '0dde4a690655507fda0a40f75c84d9a5d64f449851607f42ccdfb333ca46fcf6', 'method_entry': 'b9a3960b56e8c4247d206229fffd65da66e4e29f1591d2f1cacb89a67d10d80a', 'backbone_entry': 'bd3622d0e0c67278e2aa86c155e557a9ec085661c3700ef601a1aa0ce3e7b81c', 'live_driver': 'ca2e147d5c959fbaed533d20feb900cde91f1e57256d2e1073160aea95282475', 'factor_scope': '9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424', 'v4_native_asset': '41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71'}
+SOURCE_PINS = {'nav_dev_task': '742a59a3f7abf67e352a377934d245b6b6c46bdc6602ad479fdf76164c66170d', 'common_nav_prelude': 'c29fe523309299c35ed0620aed285559bde27245a8641b5a6f05b4a1d6c9d202', 'nav_query_boundary': '0dde4a690655507fda0a40f75c84d9a5d64f449851607f42ccdfb333ca46fcf6', 'method_entry': 'b9a3960b56e8c4247d206229fffd65da66e4e29f1591d2f1cacb89a67d10d80a', 'backbone_entry': 'bd3622d0e0c67278e2aa86c155e557a9ec085661c3700ef601a1aa0ce3e7b81c', 'live_driver': 'ca2e147d5c959fbaed533d20feb900cde91f1e57256d2e1073160aea95282475', 'factor_scope': '9c063a391dfb9c44dfa91d0de0f44bc98adb31e3f34639c3c60cb5fd4f39f424', 'v4_native_asset': '41f29eba2c877f8c5ecbdbf5f526f613cd09f2bf0957665210e4c3db833a0d71'}
 
 
 class AssemblyError(RuntimeError):
@@ -117,6 +117,7 @@ class NavDevSourceAssembly:
     driver: object
     common_caller: object
     cost: object
+    task_layer_installed: bool = False
 
     @property
     def dispatchable(self):
@@ -124,14 +125,14 @@ class NavDevSourceAssembly:
 
     @property
     def DEV_acquisition_and_receipt_terminal_complete(self):
-        return False
+        return self.task_layer_installed
 
 
 def assemble_nav_dev_sources(components=None, *, protocol=None, arm=None, enabled=False, **kwargs):
     """Task-zero source assembly in the v3-required order, default OFF.
 
-    This is NOT the independent DEV acquisition/receipt terminal adapter or an
-    executable worker. Original V4 driver success is NOT DEV success. Parent must
+    Installs the selected independent DEV task source, but is NOT an
+    executable worker or native qualification. Original V4 driver success is NOT DEV success. Parent must
     finish that adapter and full qualification before any loop may execute.
     No cost evaluation/query/step occurs here; partial failure is never retried.
     """
@@ -158,5 +159,8 @@ def assemble_nav_dev_sources(components=None, *, protocol=None, arm=None, enable
         bound = seam.bind_original_d_query_boundary(enabled=True, planner=driver.planner,
                                                    path_cost=cost, common_caller=caller)
         need(bound is driver.planner, 'Original D planner identity retained')
+    installed = modules['nav_dev_task'].install_nav_dev_task(enabled=True,
+        driver=driver, common_caller=caller, software_fixture=False)
+    need(installed is driver, 'Original driver retained by independent DEV task layer')
     need(driver.owner_guard() is not False, 'Final source assembly owner guard')
-    return NavDevSourceAssembly(driver, caller, cost)
+    return NavDevSourceAssembly(driver, caller, cost, task_layer_installed=True)

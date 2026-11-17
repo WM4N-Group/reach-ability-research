@@ -1,7 +1,7 @@
 {
   "classification": "DEV_ONLY_PROSPECTIVE_NOT_DISPATCH_AUTHORITY",
   "actual_maintenance_owner": "01a1e4e1-3037-7333-9019-a3f37effe5da",
-  "plan_observed_sha256": "f93d770d99be50427c4c2af5722a4cedd570adb619a025fa276c03a5742ddd17",
+  "plan_observed_sha256": "935e5a6c51f340490d51f711813d652a360d0fde18e661a1d03347ecc53a17c3",
   "execution_enabled": false,
   "arms": [
     "C",
@@ -21,7 +21,8 @@
     "factor_scope": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/factor_scope.py",
     "v4_native_asset": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/v4_native_asset.py",
     "common_nav_prelude": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/common_nav_prelude.py",
-    "nav_query_boundary": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/nav_query_boundary.py"
+    "nav_query_boundary": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/nav_query_boundary.py",
+    "nav_dev_task": "/home/yuanyue/main/work/ainav/development/complex_v4_method_receipt_reference_v3/nav_dev_task.py"
   },
   "common": {
     "current_asset_reference": "/home/yuanyue/main/work/ainav/development/complex_v4_four_arm_v1/scene.json",
@@ -185,7 +186,8 @@
       "outer_worker_enforcement_complete": false
     },
     "source_assembly_entry": "cd_entry.assemble_nav_dev_sources",
-    "DEV_acquisition_and_receipt_terminal_complete": false
+    "DEV_acquisition_and_receipt_terminal_complete": true,
+    "DEV_task_layer_source_installed_not_native_qualified": true
   },
   "fairness": {
     "same_public_task": true,

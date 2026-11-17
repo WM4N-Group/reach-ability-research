@@ -24,10 +24,10 @@ def protocol():
 
 
 class SourceDelta(unittest.TestCase):
-    def test_selected_real_7_plus_5_bytes_and_declarations_without_import(self):
+    def test_selected_real_8_plus_6_bytes_and_declarations_without_import(self):
         with patch.object(entry.importlib, 'import_module', side_effect=AssertionError('no import')):
             r = prepare_pair.preview(protocol(), enabled=True)
-        self.assertEqual(len(r['source_pins']), 12)
+        self.assertEqual(len(r['source_pins']), 14)
         self.assertFalse(r['dispatchable'])
         self.assertFalse(r['full_native_import_closure_qualified'])
         self.assertTrue(r['DEV_task_and_RNG_and_caps_prospectively_selected'])
@@ -37,7 +37,7 @@ class SourceDelta(unittest.TestCase):
         with patch.object(entry.importlib, 'import_module', side_effect=AssertionError), self.assertRaises(prepare_pair.ProtocolError):
             prepare_pair.preview(p, enabled=True)
 
-    def test_Reach_drift_refused_even_all_seven_direct_sources_match(self):
+    def test_Reach_drift_refused_even_all_eight_direct_sources_match(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); base=root/selection.REACH_PACKAGE.replace('.', '/');base.mkdir(parents=True)
             real = Path(protocol()['common']['reach_source_root_reference'])/selection.REACH_PACKAGE.replace('.', '/')
@@ -91,8 +91,11 @@ class OrderDelta(unittest.TestCase):
             log.append(('prelude',kw));return caller
         def bind(**kw):
             log.append(('boundary',kw));return planner
+        def task(**kw):
+            log.append(('task',kw));return driver
         modules={'nav_query_boundary':NS(build_query_bound_nav_cost=cost_factory,bind_original_d_query_boundary=bind),
-                 'common_nav_prelude':NS(attach_common_nav_prelude=attach)}
+                 'common_nav_prelude':NS(attach_common_nav_prelude=attach),
+                 'nav_dev_task':NS(install_nav_dev_task=task)}
         kwargs=dict(protocol=p,arm=arm,enabled=True,reach_source_root=p['common']['reach_source_root_reference'])
         return log, cost, driver, caller, modules, kwargs, original_driver
 
@@ -106,12 +109,12 @@ class OrderDelta(unittest.TestCase):
             result=entry.assemble_nav_dev_sources({},**kw)
             self.assertIs(result.driver,driver)
             self.assertFalse(result.dispatchable)
-            self.assertFalse(result.DEV_acquisition_and_receipt_terminal_complete)
-        self.assertEqual([x[0]for x in log],['cost','driver','prelude','boundary'])
+            self.assertTrue(result.DEV_acquisition_and_receipt_terminal_complete)
+        self.assertEqual([x[0]for x in log],['cost','driver','prelude','boundary','task'])
         self.assertIs(log[1][1]['shared_path_cost'],cost)
-        self.assertIs(log[-1][1]['path_cost'],cost)
-        self.assertIs(log[-1][1]['common_caller'],caller)
-        self.assertIs(log[-1][1]['planner'],driver.planner)
+        self.assertIs(log[3][1]['path_cost'],cost)
+        self.assertIs(log[3][1]['common_caller'],caller)
+        self.assertIs(log[3][1]['planner'],driver.planner)
         self.assertFalse(log[0][1]['software_fixture']);self.assertFalse(log[2][1]['software_fixture'])
 
     def test_C_same_common_prelude_no_cost_no_boundary(self):
@@ -120,8 +123,8 @@ class OrderDelta(unittest.TestCase):
             result=entry.assemble_nav_dev_sources({},**kw)
             self.assertIs(result.driver,driver)
             self.assertFalse(result.dispatchable)
-            self.assertFalse(result.DEV_acquisition_and_receipt_terminal_complete)
-        self.assertEqual([x[0]for x in log],['driver','prelude'])
+            self.assertTrue(result.DEV_acquisition_and_receipt_terminal_complete)
+        self.assertEqual([x[0]for x in log],['driver','prelude','task'])
         self.assertIsNone(log[0][1]['shared_path_cost'])
 
     def test_boundary_error_propagates_once_no_C_fallback_or_counter_reset(self):
