@@ -1,5 +1,7 @@
 # 新完整候选：严格原L0已登记case＋start锚定资源调度
 
+**当前唯一候选为candidate2。** candidate1 code4a9023e…/program38263353…虽actual CPU prepare通过，但派前完整closure差分发现builder在EGL环境设置前导入MuJoCo、冻结了GLFW/cffi而非未来EGL模块，已在zero0/main0/H无新key时拒绝，原freeze/protocol/AUTH不改。candidate2同一尚未派发scope/问题，独立W/M/AUTH，builder进程启动前即固定EGL并断言实际backend；不是物理失败后换ID续试。
+
 事前问题：已定位completion后sleep(1)累计前次producer耗时后，把名义1s调度改为实际start锚定，原oldest≤2s与原子pair不改，能否真实保持原资源准入并到达原PUSH主体/完整退出？失败同样保留，不自动下一版追胜。主计划03:03明确允许复用已登记DEV case、新程序/问题/分项观测，不以找新场景阻塞；本程序复用原`PUSH-SDK-STANDARD-INDEPENDENT-L0-20261118-v1`case，不冒新场景/独立泛化或配对因果排名。
 
 - 旧program947a4b25…/原L0 scope已zero1 PASS/main1 resource-censor closed；本候选不重开它、不用其zero/AUTH/lease或保存状态。严格原fresh[-.08,0,.33]/seed3701/20ms/1kg箱/+.6m/目标[1.7,0]、原startup显式初始化与真实12N/FIFO/goal/EntryJudge/NN/卸载/4s/完整STOW不改；沿已执行L0 parent完整资源/identity/IO/原片/finally，原Actor/dt不改。

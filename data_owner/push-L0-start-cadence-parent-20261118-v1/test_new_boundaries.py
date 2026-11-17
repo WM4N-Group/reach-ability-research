@@ -96,6 +96,8 @@ class NewBoundaries(unittest.TestCase):
         self.assertEqual(ast.unparse(new_probe.body[1]), 'return probe_history.call(original_composite_and_ELF)')
         controller = (HERE/'phase_control.py').read_text()
         for a, b in [
+            ('PUSH-L0-resource-start-cadence-20261118-v1-candidate2', 'PUSH-original-independent-L0-20261118-v1'),
+            ('PUSH_L0_RESOURCE_START_CADENCE_AUTHORITY_20261118_v1_candidate2', 'PUSH_ORIGINAL_INDEPENDENT_L0_AUTHORITY_20261118_v1'),
             ('PUSH-L0-resource-start-cadence-20261118-v1', 'PUSH-original-independent-L0-20261118-v1'),
             ('PUSH_L0_RESOURCE_START_CADENCE_AUTHORITY_20261118_v1', 'PUSH_ORIGINAL_INDEPENDENT_L0_AUTHORITY_20261118_v1'),
             ('active_PUSH_L0_resource_start_cadence_20261118_v1_scope', 'active_PUSH_original_independent_L0_20261118_v1_scope'),
