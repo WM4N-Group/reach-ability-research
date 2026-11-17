@@ -1,3 +1,7 @@
+# 本程序已zero1原锁拒绝/main0/closed，不可运行
+
+实际code db5508db…/program f0738235…/1808文件＋actual CPU prepare（24-helper门）通过，PID347474已越过旧KeyError，但在原PerGpuLease第一次GPU0 physics canonical非阻塞flock返回errno11，Runtime/world/Actor未构造；main0/closed/no retry。竞争者/当刻holder未知，不归因J或空闲卡，更不换卡/借锁/新ID盲retry。FF物理假设仍未测试。原错误/尾账/None/UNKNOWN与早期错SRC的zero0/main0派前拒绝均保留。实际状态/后续非GPUCLIMB源见Data STATUS；下方为本程序事前设计，不授后继资格。
+
 # PREPARED L0 FF-only完整后继：只修已明确的helper预载/CPU承接，再做自身资格
 
 b7f09967…程序已zero1失败/main0/closed，KeyError发生于实际run helper门之前未预载`registered_arm_ff`；Runtime/world/原FF实验未到，旧计数/费用/None/UNKNOWN保留。**本v2不是恢复旧根或换ID盲试**：只兑现已定点验证的导入顺序修正，并将同一24-helper集合真实纳入actual CPU prepare；原FF-only物理假设与此前唯一选案不变。
