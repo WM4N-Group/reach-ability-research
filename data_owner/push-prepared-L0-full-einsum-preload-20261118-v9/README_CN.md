@@ -1,0 +1,1 @@
+固定 PREPARED L0。仅预载原 clearance einsum 所需现存精确 torch.backends.opt_einsum 模块，默认无可选优化包，不安装、切换或替原原算式。原身份hook/租约/控制门不动；所有旧scope保持关闭。
