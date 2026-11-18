@@ -1,0 +1,1 @@
+固定 PREPARED L0，唯一任务改动是 selected PUSH 公共 option 不带私有 XY；原私有 approach/goal、原安全门和有序 zero 保留。实际 prepare 复用同一 helper 调原 resolver 做 CPU 正反检验，不等原生准入。
