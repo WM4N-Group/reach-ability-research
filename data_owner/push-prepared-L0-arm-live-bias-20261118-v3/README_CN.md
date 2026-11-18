@@ -1,3 +1,7 @@
+# 本程序zero1 PASS/main1完整首witness边界PASS，已closed/no retry
+
+实际codec751afb6…/program83607640…/1810-file＋真实25-helper prepare，自身zero350472 PASS/当前相机目视审后，唯一main350861在原settle1301步/6.505sim后一次完整原witness通过，guard空、joint3=-.005504116mrad、六轴均在原bounds+slack内。最后issued/delayed arm FF均非零，原12N/contact/geometry/velocity/effort/FIFO/identity门无拒绝；该次PREPARED L0入口兼容通过，不是未改原L0/自然L1/Actor/完整PUSH或可靠域结论。task query/Actor/完整退出按设计均0、full_task_success=false；原片/费用/门结果保留，不能续此scope/借zero。下方为事前合同，不授后继资格。
+
 # FF-only首arm有限v3：真实租约交接证据后独立资格，不借已释放resource lease
 
 08:03主计划要求实际ownership/safe phase。资源程序73e82b22…/PID349876已原PerGpuLease一次取得GPU0两FD并原样释放、zero0/main0/world0。J V57当前正式terminal/release证据齐，v58无scope；本v3还在派发分支核当前无Data/J collector/controller、目标无foreign compute，先自己的完整CPU prepare/zero/审图/原真实PerGpuLease再main。历史resource成功不自动授本次准入，不借本FD或f073/b7/bef zero/AUTH，不重开closed。
