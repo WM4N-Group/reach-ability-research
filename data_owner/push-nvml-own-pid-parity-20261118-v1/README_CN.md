@@ -1,0 +1,1 @@
+独立、限一次、一元素CUDA的实际自PID显存读数对照。旧原PerGpuLease/双FD/0.5s START/最早2s Watch继续唯一资源权威；直接NVML只读一次，不写stamp。不建World/EGL/Actor、不借闭合scope或zero。
