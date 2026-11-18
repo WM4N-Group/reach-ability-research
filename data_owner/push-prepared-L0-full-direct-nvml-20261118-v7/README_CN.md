@@ -1,0 +1,1 @@
+延续固定PREPARED L0公共选项，仅原持有检查内部的GPU读取改用经实际自PID正例的direct NVML；原租约enter/final仍CLI，其他安全/冷构造/碰撞及原0.5s/2s保留。AUTH解析和散列使用同一次fresh读。不得借v6/诊断资格、自动retry或修改冻结旧scope。
