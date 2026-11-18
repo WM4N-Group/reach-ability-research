@@ -1,5 +1,7 @@
 # 新完整PREPARED PUSH：.5s真实串行START，原oldest≤2s不变（默认关闭）
 
+> **已closed/no retry，且半秒干预未落到runtime**：programfb73075b…/actual code148107e…，自身zero1PASS/main1原startup6.505sim/3次witness与真实resolver/factory构造通过，第一query在原publisher descriptor schema拒绝，Actor0。冻结runner漏传interval_s，实际仍默认1s/2s；无half-S验证或通用资源修复主张。另发现旧phase_health禁止全部option的额外diagnostic门，本scope未触发。下一仅source三项必要接线修正/原Publisher全Observation CPU合同见相邻push-L0-public-descriptor-projection-20261118-v1，不是新完整资格；不能续此scope或借zero。
+
 cdf2473b已closed：真实26-helper/原metadata constructor prepare和自身zero通过，main325step/1.625sim原资源oldest过龄censor，未达witness/query/Actor。本新工程问题只把名义START1s→.5s，不改ResourceWatch通用默认1s、真实原子(oldest,completed)/2s门/一次原owner composite/串行无queued catch-up，不暂停clock/补now/改完成时刻权威/加epsilon，不借cdf/50ef/836的zero/AUTH/FD/world。
 
 原push_l0_driver/FF/witness/geometry provenance/metadata prepare/lease observer字节与cdf一致，26helper同表；固定fresh/seed3701/20ms/.6m/1kg/原pose/reference/gains/腿/目标/200Hz和初始化6臂live bias FF不变；原12N/contact/effort/FIFO/Actor/history/NN/卸载/STOW/4s/完整终态不改。本程序自己的actual prepare须重新核完整冻结源和原constructor metadata资格（不是重做FF入口/扩fixture），原native compiled/物理support不mock。

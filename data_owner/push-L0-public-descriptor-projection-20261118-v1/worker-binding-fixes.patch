@@ -1,0 +1,22 @@
+--- a/worker.py
++++ b/worker.py
+@@ -227,9 +227,17 @@
+             health()
+             option=None if driver is None or driver.executor is None else driver.executor.option
+             if option is not None:
+-                state.fail('Boundary-only diagnostic forbids every native task option')
++                need(phase=='main' and c['full_original_task_execution'] is True
++                     and c['boundary_only_no_task_skill'] is False and option.skill=='PUSH',
++                     'Only the explicitly authorized full PUSH main may own a task option')
+             return True
+-        watch=ResourceWatch(probe,state=state,token=object(),fast_health=phase_health).start()
++        watch=ResourceWatch(probe,state=state,token=object(),fast_health=phase_health,
++            interval_s=c['resource_poll_s'],max_stale_s=c['resource_oldest_max_age_s'])
++        need(watch.interval==c['resource_poll_s'] and watch.max_stale==2.,
++             'Actual ResourceWatch constructor binding, not a config label')
++        result['resource_watch_actual_configuration']=dict(interval_s=watch.interval,
++            max_oldest_age_s=watch.max_stale,read_from_actual_object_before_start=True)
++        watch.start()
+         import importlib
+         for module_name in c['reviewed_preload_modules']:importlib.import_module(module_name)
+         source=Path(c['common_source'])
