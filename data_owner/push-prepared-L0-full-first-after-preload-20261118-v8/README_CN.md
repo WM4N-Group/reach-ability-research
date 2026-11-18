@@ -1,0 +1,1 @@
+独立全程固定 L0，唯一执行依赖差分是原首post-step所需的精确stop_actor_trace在seal前预载；只读记录有界原异常链。不修改原callback/guard/资源/安全门，不借旧FREEZE/zero。
