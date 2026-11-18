@@ -1,0 +1,9 @@
+# 下一FULL接线最小修正：声明public geometry的真实源SHA，不降原predicate
+
+50efcc22…新FULL scope已zero1PASS/main1在原resolver.__init__line96 public geometry provenance门停止并closed。3次原witness validate通过、1301step/6.505sim，query/admit/Actor未达；原caller把同registry的geometry传入却漏public_task_geometry SHA。原typed stack与当前冻源输入证明见Data本scope manifest，不拿它追填旧cause。
+
+此目录只是未来connector候选，不是可执行worker/完整program/freeze/AUTH/zero资格。原connect唯一新差分是验证standard_runtime.py真实固定SHA f4f05e11…的registry声明和当前public cuboid尺寸逐值相等，再将该真正声明源的SHA传原RegisteredBindingResolver；不是任填64hex、删public_geometry或降原guard。helper无Model/MjData/Actor/world/physics，原resolver仍完整复核compiled model、public body集合/size/source SHA及全部callable。
+
+下一actual CPU prepare必须额外覆盖当前遗漏的原resolver metadata构造谓词（明确fake model verifier只是软件fixture，不冒真实compiled资格），同时完整source/ABI审阅factory后继接线。未来再装独立完整程序、freeze/actual prepare/own-zero审图/当前peer phase/原lease，不能复用已closed50ef的zero或836边界world。不以此源码修正宣主体或完整PUSH通过。
+
+新5项stdlib provenance fixtures已过；真实私有解释器进一步执行原SHA576e9589…Resolver.__init__两次metadata fixture：缺public pin原谓词拒绝、传真实f4f05e11…声明源SHA原构造返回。只fake model verifier2次，真实compiled验证false、无Runtime/Model/MjData/Actor/renderer/lease/world、CUDA未初始化；样本6.024207300wall/RSS497467392B。不是完整CPU prepare或原生准入。

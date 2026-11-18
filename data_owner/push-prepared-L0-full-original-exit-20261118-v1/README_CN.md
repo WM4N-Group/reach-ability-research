@@ -1,5 +1,7 @@
 # 当前候选：独立FF-only PREPARED L0完整原PUSH（默认关闭）
 
+> **已实际closed/no retry**：program50efcc22…/actual code0ca014b4…，自身zero1PASS/main1在原resolver公共几何source provenance门拒绝；3次witness通过，但query/Actor/完整PUSH未达。不得运行/续此程序。未来仅最小source候选见相邻push-l0-public-geometry-provenance-20261118-v1；非新资格。正式原件看Data STATUS。
+
 目的：在固定fresh/seed3701/20ms/.6m/1kg、六臂reference全0/原gains/腿/相机不变且唯一初始化FF0→原live qfrc_bias后，测原task query/entry/双Actor/接触推送/NN/FF卸载/STOW/连续4s完整退出。前scope83607640仅首witness通过已closed；不得续world/借zero、AUTH、FD或资源成功。
 
 worker.py复用原push_l0_driver.py/connect_l0.py（字节不变）；l0_witness.py、registered_arm_ff.py、lease_site_observer.py与已closed v3字节不变。全任务保原合法多次validate，每次observer仍恰一次原CollisionGuard，绝不套边界程序whole-path一次检查限制。identity boundary_install原支持full分支，明确boundary_only=False，不删原guard。原Actor/历史初始化与命令FIFO/goal/12N/effort/NN/STOW/4s/终态不改，不做NAV或CLIMB。
